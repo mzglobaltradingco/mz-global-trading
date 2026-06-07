@@ -38,15 +38,15 @@ export default function Navbar() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-[70px] md:h-[90px] lg:h-[120px]">
+        <div className="flex items-center justify-between py-3">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/images/logo/logo-light.png"
+              src="/images/logo/Master_Logo.png"
               alt="MZ Global Trading"
-              width={400}
+              width={220}
               height={120}
-              className="h-[70px] md:h-[90px] lg:h-[120px] w-auto"
+              className="w-[160px] md:w-[220px] h-auto"
               priority
             />
           </Link>
