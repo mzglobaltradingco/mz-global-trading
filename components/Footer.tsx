@@ -2,20 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 
 const products = [
-  { label: "Apparel", href: "/products/apparel" },
-  { label: "Home Textiles", href: "/products/home-textiles" },
-  { label: "Towels", href: "/products/towels" },
-  { label: "Fabric", href: "/products/fabric" },
-  { label: "Ihrams", href: "/products/ihrams" },
+  { label: "Apparel", href: "/apparel/knittedgarments/tshirts/" },
+  { label: "Home Textiles", href: "/hometextile/bathlinen/towels/" },
+  { label: "Towels", href: "/hometextile/bathlinen/towels/" },
+  { label: "Fabric", href: "/fabric/apparelfabric/" },
+  { label: "Ihram", href: "/hometextile/ihram/" },
 ];
 
 const company = [
-  { label: "Our Company", href: "/our-company" },
-  { label: "Quality & Suppliers", href: "/quality-suppliers" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "About Us", href: "/our-company/" },
+  { label: "Why Choose Us", href: "/whychooseus/" },
+  { label: "Our Process", href: "/ourprocess/" },
+  { label: "Quality & Compliance", href: "/qualitycompliance/certifications/" },
+  { label: "Contact Us", href: "/contact-us/" },
 ];
 
-const certifications = ["GOTS", "OEKO-TEX", "BSCI", "ISO 9001", "Sedex", "GRS"];
+const certifications = ["GOTS", "OEKO-TEX", "BSCI", "ISO 9001", "Sedex", "GRS", "SA8000", "WRAP"];
 
 export default function Footer() {
   return (
@@ -27,7 +29,6 @@ export default function Footer() {
             <img
               src="/images/logo/Master_Logo.png"
               alt="MZ Global Trading"
-              style={{ width: "240px", height: "auto" }}
               className="w-[180px] md:w-[210px] lg:w-[240px] h-auto mb-4"
             />
             <p className="text-sm text-gray-400 leading-relaxed mb-4">
@@ -60,7 +61,7 @@ export default function Footer() {
             <h3 className="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Products</h3>
             <ul className="space-y-2">
               {products.map((p) => (
-                <li key={p.href}>
+                <li key={p.label}>
                   <Link href={p.href} className="text-gray-400 hover:text-gold text-sm transition-colors">
                     {p.label}
                   </Link>
@@ -81,7 +82,7 @@ export default function Footer() {
                 </li>
               ))}
               <li>
-                <span className="text-gray-500 text-xs">Certifications: {certifications.join(", ")}</span>
+                <span className="text-gray-500 text-xs">Certs: {certifications.join(" · ")}</span>
               </li>
             </ul>
           </div>
@@ -91,16 +92,13 @@ export default function Footer() {
             <h3 className="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Contact</h3>
             <ul className="space-y-3 text-sm text-gray-400">
               <li>
-                <p className="text-gray-500 text-xs uppercase mb-0.5">Pakistan</p>
-                <p>Office G20, Columbus Tower</p>
-                <p>Karachi 75600</p>
-                <a href="tel:+923008256203" className="hover:text-gold transition-colors">+92 300 8256203</a>
-              </li>
-              <li>
-                <p className="text-gray-500 text-xs uppercase mb-0.5">United States</p>
-                <p>1178 Broadway, 3rd Floor</p>
-                <p>#1308, New York, NY 10001</p>
-                <a href="tel:+13322827138" className="hover:text-gold transition-colors">+1 332 2827138</a>
+                <p className="text-gray-500 text-xs uppercase mb-1">Pakistan Office</p>
+                <p>Office G20, Ground Floor</p>
+                <p>Columbus Tower, Main Clifton Road</p>
+                <p>Karachi 75600, Pakistan</p>
+                <a href="tel:+923008256203" className="hover:text-gold transition-colors mt-1 block">
+                  +92 300 8256203
+                </a>
               </li>
               <li>
                 <a href="mailto:info@mzglobaltrading.com" className="hover:text-gold transition-colors">

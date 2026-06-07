@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/Navbar";
+import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TowelsContent from "./TowelsContent";
 
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 export default function TowelsPage() {
   return (
     <>
-      <Navbar />
+      <MegaMenu />
       <main>
         <TowelsContent />
       </main>

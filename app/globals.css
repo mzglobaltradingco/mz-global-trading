@@ -55,3 +55,13 @@ body {
 .float-animate {
   animation: floatAnim 5s ease-in-out infinite;
 }
+
+/* ── Certification marquee ── */
+@keyframes marqueeLeft {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes marqueeRight {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}

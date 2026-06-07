@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import CertificationsStrip from "@/components/CertificationsStrip";
 
 const towelCategories = [
   {
@@ -81,14 +82,6 @@ const specs = [
   { label: "Size Standards", value: "USA · EU · UK · Custom" },
 ];
 
-const certBadges = [
-  { src: "/images/certs/cert-oeko-tex.webp", alt: "OEKO-TEX Standard 100" },
-  { src: "/images/certs/cert-gots.webp", alt: "GOTS" },
-  { src: "/images/certs/cert-bsci.webp", alt: "BSCI" },
-  { src: "/images/certs/cert-iso-9001.webp", alt: "ISO 9001" },
-  { src: "/images/certs/cert-sedex.webp", alt: "Sedex" },
-  { src: "/images/certs/cert-global-recycled-standard.webp", alt: "GRS" },
-];
 
 export default function TowelsContent() {
   return (
@@ -330,34 +323,7 @@ export default function TowelsContent() {
         </div>
       </section>
 
-      {/* Certifications */}
-      <section className="py-12 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-gray-400 text-xs font-semibold tracking-[0.2em] uppercase mb-8">
-            Certified Factories & Compliance Standards
-          </p>
-          <div className="grid grid-cols-3 sm:grid-cols-6 gap-6 items-center">
-            {certBadges.map((cert, i) => (
-              <motion.div
-                key={cert.alt}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.06 }}
-                className="flex items-center justify-center"
-              >
-                <Image
-                  src={cert.src}
-                  alt={cert.alt}
-                  width={100}
-                  height={60}
-                  className="object-contain max-h-14 w-auto grayscale hover:grayscale-0 transition-all duration-300"
-                />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CertificationsStrip />
 
       {/* CTA */}
       <section className="py-16 sm:py-20 bg-navy-900">
