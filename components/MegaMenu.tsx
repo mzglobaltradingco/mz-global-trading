@@ -195,7 +195,7 @@ export default function MegaMenu() {
             {/* Logo */}
             <Link href="/" className="flex-shrink-0" onClick={() => setActiveMenu(null)}>
               <img
-                src="/images/logo/Master_Logo.png"
+                src="/images/logo/Master_Logo.webp"
                 alt="MZ Global Trading"
                 className="w-[150px] md:w-[180px] lg:w-[210px] h-auto"
               />

@@ -41,7 +41,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <img
-              src="/images/logo/Master_Logo.png"
+              src="/images/logo/Master_Logo.webp"
               alt="MZ Global Trading"
               style={{ width: "220px", height: "auto" }}
               className="w-[160px] md:w-[190px] lg:w-[220px] h-auto"

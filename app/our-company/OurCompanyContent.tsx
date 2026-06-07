@@ -225,7 +225,7 @@ export default function OurCompanyContent() {
           >
             <div className="flex-shrink-0 w-40 h-40 rounded-2xl overflow-hidden bg-navy-900 relative">
               <Image
-                src="/images/team/Muhammad-Muzammil.png"
+                src="/images/team/Muhammad-Muzammil.webp"
                 alt="Muhammad Muzammil — CEO"
                 fill
                 className="object-cover"
