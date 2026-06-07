@@ -32,3 +32,26 @@ body {
 @layer utilities {
   .text-balance { text-wrap: balance; }
 }
+
+/* ── Glow pulse — add class "glow-hover" to any button or card ── */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 160, 23, 0); }
+  50%       { box-shadow: 0 0 20px 6px rgba(212, 160, 23, 0.38); }
+}
+
+.glow-hover {
+  transition: box-shadow 0.3s ease;
+}
+.glow-hover:hover {
+  animation: glowPulse 1.8s ease-in-out infinite;
+}
+
+/* ── Float — add class "float-animate" to hero decorative elements ── */
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+.float-animate {
+  animation: floatAnim 5s ease-in-out infinite;
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import PageTransitionWrapper from "./PageTransitionWrapper";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -52,7 +53,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={geistSans.variable}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <PageTransitionWrapper>{children}</PageTransitionWrapper>
+      </body>
     </html>
   );
 }
