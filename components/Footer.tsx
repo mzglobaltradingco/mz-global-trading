@@ -27,9 +27,9 @@ export default function Footer() {
             <Image
               src="/images/logo/logo-light.png"
               alt="MZ Global Trading"
-              width={150}
-              height={48}
-              className="h-12 w-auto mb-4"
+              width={240}
+              height={80}
+              className="h-[80px] w-auto mb-4"
             />
             <p className="text-sm text-gray-400 leading-relaxed mb-4">
               Your trusted sourcing partner for apparel, home textiles, and fabric. Connecting international buyers with Pakistan&apos;s finest manufacturers.

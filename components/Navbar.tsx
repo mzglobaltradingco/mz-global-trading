@@ -44,9 +44,9 @@ export default function Navbar() {
             <Image
               src="/images/logo/logo-light.png"
               alt="MZ Global Trading"
-              width={160}
-              height={50}
-              className="h-10 md:h-12 w-auto"
+              width={200}
+              height={60}
+              className="h-[60px] w-auto"
               priority
             />
           </Link>
