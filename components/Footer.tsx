@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="sm:col-span-2 lg:col-span-1">
             <img
-              src="/images/logo/master-logo.png"
+              src="/images/logo/Master_Logo.png"
               alt="MZ Global Trading"
               style={{ width: "240px", height: "auto" }}
               className="w-[180px] md:w-[240px] h-auto mb-4"
