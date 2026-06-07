@@ -24,11 +24,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand column */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Image
+            <img
               src="/images/logo/master-logo.png"
               alt="MZ Global Trading"
-              width={240}
-              height={120}
+              style={{ width: "240px", height: "auto" }}
               className="w-[180px] md:w-[240px] h-auto mb-4"
             />
             <p className="text-sm text-gray-400 leading-relaxed mb-4">

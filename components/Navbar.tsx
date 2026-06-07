@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -41,13 +40,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between py-3">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <Image
-              src="/images/logo/mz-global-trading-logo-header.webp"
+            <img
+              src="/images/logo/master-logo.png"
               alt="MZ Global Trading"
-              width={220}
-              height={120}
+              style={{ width: "220px", height: "auto" }}
               className="w-[160px] md:w-[220px] h-auto"
-              priority
             />
           </Link>
 
