@@ -42,7 +42,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/images/logo/Master_Logo.png"
+              src="/images/logo/mz-global-trading-logo-header.webp"
               alt="MZ Global Trading"
               width={220}
               height={120}
