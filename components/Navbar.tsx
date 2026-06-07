@@ -38,7 +38,7 @@ export default function Navbar() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-[120px]">
+        <div className="flex items-center justify-between h-[70px] md:h-[90px] lg:h-[120px]">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
@@ -46,7 +46,7 @@ export default function Navbar() {
               alt="MZ Global Trading"
               width={400}
               height={120}
-              className="h-[120px] w-auto"
+              className="h-[70px] md:h-[90px] lg:h-[120px] w-auto"
               priority
             />
           </Link>

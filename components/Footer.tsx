@@ -29,7 +29,7 @@ export default function Footer() {
               alt="MZ Global Trading"
               width={400}
               height={120}
-              className="h-[120px] w-auto mb-4"
+              className="h-[70px] md:h-[90px] lg:h-[120px] w-auto mb-4"
             />
             <p className="text-sm text-gray-400 leading-relaxed mb-4">
               Your trusted sourcing partner for apparel, home textiles, and fabric. Connecting international buyers with Pakistan&apos;s finest manufacturers.
