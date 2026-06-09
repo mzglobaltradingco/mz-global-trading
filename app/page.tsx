@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Hero from "@/components/Hero";
 import StatsBar from "@/components/StatsBar";
@@ -8,11 +9,50 @@ import CertificationsStrip from "@/components/CertificationsStrip";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
 
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en": "https://mzglobaltrading.com/",
+      "x-default": "https://mzglobaltrading.com/",
+    },
+  },
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://mzglobaltrading.com/#website",
+  url: "https://mzglobaltrading.com/",
+  name: "MZ Global Trading",
+  publisher: { "@id": "https://mzglobaltrading.com/#organization" },
+};
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://mzglobaltrading.com/#webpage",
+  url: "https://mzglobaltrading.com/",
+  name: "MZ Global Trading | Pakistan Textile Sourcing — Apparel, Home Textiles & Fabric",
+  description:
+    "B2B textile sourcing partner for brands and importers in USA, UK and Europe. 50+ certified factories across apparel, home textiles and fabric.",
+  isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
+  about: { "@id": "https://mzglobaltrading.com/#organization" },
+  inLanguage: "en",
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    contentUrl: "https://mzglobaltrading.com/images/og/homepage-og-image.webp",
+    width: 1200,
+    height: 630,
+    name: "MZ Global Trading — Pakistan Textile Sourcing Partner",
+  },
+};
+
 export default function HomePage() {
   return (
     <>
       <MegaMenu />
-      <main>
+      <main id="main-content">
         <Hero />
         <StatsBar />
         <SourcingCapabilities />
@@ -22,6 +62,14 @@ export default function HomePage() {
         <CTABanner />
       </main>
       <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
     </>
   );
 }

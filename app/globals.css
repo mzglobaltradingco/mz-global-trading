@@ -33,12 +33,40 @@ body {
   .text-balance { text-wrap: balance; }
 }
 
-/* ── Glow pulse — add class "glow-hover" to any button or card ── */
-@keyframes glowPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 160, 23, 0); }
-  50%       { box-shadow: 0 0 20px 6px rgba(212, 160, 23, 0.38); }
+/* ── Smooth transitions on all interactive elements ── */
+a, button, [role="button"] {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.25s ease, transform 0.2s ease;
 }
 
+/* ── Glow pulse keyframe ── */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 160, 23, 0); }
+  50%       { box-shadow: 0 0 22px 7px rgba(212, 160, 23, 0.4); }
+}
+
+/* ── Button glow on hover ── */
+.btn-gold,
+a[class*="bg-gold"],
+button[class*="bg-gold"] {
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+.btn-gold:hover,
+a[class*="bg-gold"]:hover,
+button[class*="bg-gold"]:hover {
+  animation: glowPulse 1.8s ease-in-out infinite;
+  transform: scale(1.02);
+}
+
+/* ── Card glow on hover ── */
+.card-hover {
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.2s ease;
+}
+.card-hover:hover {
+  box-shadow: 0 0 20px 4px rgba(212, 160, 23, 0.18);
+  transform: scale(1.03);
+}
+
+/* ── Utility class for manual glow ── */
 .glow-hover {
   transition: box-shadow 0.3s ease;
 }
@@ -46,7 +74,7 @@ body {
   animation: glowPulse 1.8s ease-in-out infinite;
 }
 
-/* ── Float — add class "float-animate" to hero decorative elements ── */
+/* ── Float — hero decorative elements ── */
 @keyframes floatAnim {
   0%, 100% { transform: translateY(0px); }
   50%       { transform: translateY(-12px); }
@@ -56,11 +84,12 @@ body {
   animation: floatAnim 5s ease-in-out infinite;
 }
 
-/* ── Certification marquee ── */
+/* ── Certification marquee — single row ── */
 @keyframes marqueeLeft {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
+
 @keyframes marqueeRight {
   from { transform: translateX(-50%); }
   to   { transform: translateX(0); }

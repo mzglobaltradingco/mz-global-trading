@@ -90,7 +90,7 @@ export default function TowelsContent() {
       <section className="relative h-[55vh] min-h-[420px] overflow-hidden">
         <Image
           src="/images/thumbnails/thumb-towels.webp"
-          alt="Towels by MZ Global Trading"
+          alt="Pakistan terry cotton towel manufacturer — wholesale bath towels for hotels, hospitality and retail buyers in USA, UK and Europe"
           fill
           className="object-cover"
           priority
@@ -107,6 +107,10 @@ export default function TowelsContent() {
               <div className="flex items-center gap-2 text-gray-300 text-xs mb-4">
                 <Link href="/" className="hover:text-gold transition-colors">Home</Link>
                 <span>›</span>
+                <Link href="/hometextile/" className="hover:text-gold transition-colors">Home Textiles</Link>
+                <span>›</span>
+                <Link href="/hometextile/bathlinen/" className="hover:text-gold transition-colors">Bath Linen</Link>
+                <span>›</span>
                 <span className="text-gold">Towels</span>
               </div>
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">
@@ -120,7 +124,7 @@ export default function TowelsContent() {
               </p>
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
                 <Link
-                  href="/contact"
+                  href="/contact-us/"
                   className="inline-flex items-center justify-center px-6 py-3 bg-gold text-navy-900 font-bold text-sm rounded hover:bg-gold-light transition-colors"
                 >
                   Request a Quote
@@ -344,7 +348,7 @@ export default function TowelsContent() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                href="/contact-us/"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gold text-navy-900 font-bold text-sm rounded hover:bg-gold-light transition-colors"
               >
                 Request a Quote →

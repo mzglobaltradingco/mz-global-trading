@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function CTABanner() {
   return (
-    <section className="py-14 sm:py-20 bg-navy-900">
+    <section className="py-12 sm:py-16 bg-navy-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -17,19 +17,15 @@ export default function CTABanner() {
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
             Ready to Source?
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5">
-            Looking for a Reliable <br className="hidden sm:block" />
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">
+            Looking for a Reliable{" "}
             <span className="text-gold">Sourcing Partner?</span>
           </h2>
-          <p className="text-gray-400 text-base sm:text-lg max-w-xl mx-auto mb-8">
-            Tell us what you need. Our team will respond within 24 hours with a
-            tailored sourcing proposal.
-          </p>
           <Link
-            href="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-gold text-navy-900 text-base font-bold rounded hover:bg-gold-light transition-colors shadow-lg shadow-gold/20"
+            href="/rfq/"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-gold text-navy-900 text-sm font-bold rounded hover:bg-yellow-400 transition-colors shadow-lg shadow-gold/20"
           >
-            Request a Quote Now →
+            Request a Quote →
           </Link>
         </motion.div>
       </div>

@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const productLinks = [
   { label: "Apparel", href: "/products/apparel" },
   { label: "Home Textiles", href: "/products/home-textiles" },
-  { label: "Towels", href: "/products/towels" },
+  { label: "Towels", href: "/hometextile/bathlinen/towels/" },
   { label: "Fabric", href: "/products/fabric" },
   { label: "Ihrams", href: "/products/ihrams" },
 ];
