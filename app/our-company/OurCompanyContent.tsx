@@ -107,6 +107,41 @@ const glanceItems = [
   { label: "Languages",        value: "English · Urdu" },
 ];
 
+const hubCards = [
+  {
+    title: "Why Choose Us",
+    desc: "Certified factories, in-house QC, and a single accountable partner from enquiry to shipment.",
+    image: "/images/menu/menu-whychooseus.webp",
+    alt: "Why choose MZ Global Trading as your Pakistan textile sourcing partner",
+    href: "/whychooseus/",
+    cta: "See Why We're Different",
+  },
+  {
+    title: "Our Process",
+    desc: "From factory shortlisting and sampling through production oversight and export documentation.",
+    image: "/images/menu/menu-ourprocess.webp",
+    alt: "MZ Global Trading sourcing process — how we manage orders from start to shipment",
+    href: "/ourprocess/",
+    cta: "Explore Our Process",
+  },
+  {
+    title: "Blog",
+    desc: "Insights on Pakistan textile sourcing, compliance, market trends, and supply chain best practices.",
+    image: "/images/menu/menu-blog.webp",
+    alt: "MZ Global Trading blog — Pakistan textile sourcing insights and industry articles",
+    href: "/blog/",
+    cta: "Read the Blog",
+  },
+  {
+    title: "Careers",
+    desc: "Join a growing team dedicated to connecting global buyers with Pakistan's best textile manufacturers.",
+    image: "/images/menu/menu-careers.webp",
+    alt: "Careers at MZ Global Trading — join our textile sourcing team in Karachi",
+    href: "/careers/",
+    cta: "View Open Roles",
+  },
+];
+
 // ── Animation variants ────────────────────────────────────────────────────────
 
 const fadeUp = {
@@ -604,10 +639,65 @@ export default function OurCompanyContent() {
         </div>
       </section>
 
-      {/* ── 8. Certifications ─────────────────────────────────────────────── */}
+      {/* ── 8. Explore More ───────────────────────────────────────────────── */}
+      <section className="py-20 sm:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            className="text-center mb-12"
+          >
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
+              Learn More
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore Our Company</h2>
+          </motion.div>
+
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            className="grid sm:grid-cols-2 gap-6"
+          >
+            {hubCards.map((card) => (
+              <motion.div
+                key={card.title}
+                variants={cardVariants}
+                whileHover="hover"
+                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+              >
+                <Link href={card.href} className="block">
+                  <div className="relative h-64 overflow-hidden">
+                    <Image
+                      src={card.image}
+                      alt={card.alt}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="text-white font-bold text-xl mb-1.5">{card.title}</h3>
+                    <p className="text-gray-300 text-sm leading-relaxed mb-3">{card.desc}</p>
+                    <span className="inline-flex items-center gap-1.5 text-gold text-sm font-semibold group-hover:gap-3 transition-all duration-200">
+                      {card.cta} →
+                    </span>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── 9. Certifications ─────────────────────────────────────────────── */}
       <CertificationsStrip />
 
-      {/* ── 9. CTA ────────────────────────────────────────────────────────── */}
+      {/* ── 10. CTA ───────────────────────────────────────────────────────── */}
       <section className="py-16 sm:py-20 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div

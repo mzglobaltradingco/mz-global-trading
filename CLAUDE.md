@@ -600,6 +600,7 @@ Combined slide panel labels use frosted pill `bg-navy-950/60 backdrop-blur-sm bo
 | Homepage | `app/page.tsx` | Complete |
 | About Us | `app/our-company/page.tsx` | Complete |
 | Why Choose Us | `app/whychooseus/page.tsx` | Complete |
+| Our Process | `app/ourprocess/page.tsx` | Complete |
 | Towels | `app/hometextile/bathlinen/towels/page.tsx` | Complete |
 
 ---

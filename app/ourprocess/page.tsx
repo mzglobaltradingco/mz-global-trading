@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
-import HowWeSourceContent from "./HowWeSourceContent";
+import OurProcessContent from "./OurProcessContent";
 
 export const metadata: Metadata = {
-  title: "How We Source | MZ Global Trading",
+  title: "Our Process | MZ Global Trading",
   description:
     "See how MZ Global Trading sources textiles from Pakistan to 25+ countries — factory matching, production oversight, QC inspection and global export.",
   keywords: [
@@ -15,17 +15,17 @@ export const metadata: Metadata = {
     "textile export Pakistan USA UK Europe",
   ],
   alternates: {
-    canonical: "/how-we-source/",
+    canonical: "/ourprocess/",
     languages: {
-      "en": "https://mzglobaltrading.com/how-we-source/",
+      "en": "https://mzglobaltrading.com/ourprocess/",
       "x-default": "https://mzglobaltrading.com/",
     },
   },
   openGraph: {
-    title: "How We Source | MZ Global Trading",
+    title: "Our Process | MZ Global Trading",
     description:
       "Factory matching, production oversight, QC inspection and global export — the MZ Global Trading sourcing process.",
-    url: "https://mzglobaltrading.com/how-we-source/",
+    url: "https://mzglobaltrading.com/ourprocess/",
     images: [
       {
         url: "/images/og/homepage-og-image.webp",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "How We Source | MZ Global Trading",
+    title: "Our Process | MZ Global Trading",
     description:
       "Factory matching, production oversight, QC and global export from Pakistan.",
   },
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://mzglobaltrading.com/how-we-source/",
-  url: "https://mzglobaltrading.com/how-we-source/",
-  name: "How We Source | MZ Global Trading",
+  "@id": "https://mzglobaltrading.com/ourprocess/",
+  url: "https://mzglobaltrading.com/ourprocess/",
+  name: "Our Process | MZ Global Trading",
   description:
     "The MZ Global Trading sourcing process — factory matching, production oversight, QC inspection and export to 25+ countries.",
   inLanguage: "en",
@@ -59,17 +59,17 @@ const pageSchema = {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-      { "@type": "ListItem", position: 2, name: "How We Source", item: "https://mzglobaltrading.com/how-we-source/" },
+      { "@type": "ListItem", position: 2, name: "Our Process", item: "https://mzglobaltrading.com/ourprocess/" },
     ],
   },
 };
 
-export default function HowWeSourcePage() {
+export default function OurProcessPage() {
   return (
     <>
       <MegaMenu />
       <main id="main-content">
-        <HowWeSourceContent />
+        <OurProcessContent />
       </main>
       <Footer />
       <script

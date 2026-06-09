@@ -9,6 +9,7 @@ import {
   fadeUpVariants,
   staggerContainerVariants,
   staggerItemVariants,
+  cardVariant,
   viewportOnce,
 } from "@/lib/animations";
 
@@ -180,8 +181,8 @@ const pakistanStats = [
     ),
   },
   {
-    label: "70+ Years of Manufacturing",
-    desc: "Pakistan's textile industry has operated continuously since independence in 1947 — seven decades of institutional expertise.",
+    label: "75+ Years of Manufacturing",
+    desc: "Pakistan's textile industry has operated continuously since independence in 1947 — 75+ years of unbroken institutional expertise.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.7} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -298,6 +299,41 @@ const processSteps = [
   { num: "03", title: "Sample & Approve",      desc: "Pre-production samples shipped for your sign-off before bulk begins."       },
   { num: "04", title: "Production & QC",       desc: "Bulk production with milestone updates and in-line quality inspections."    },
   { num: "05", title: "Export & Deliver",      desc: "Full documentation, compliance checks and real-time shipment tracking."    },
+];
+
+const hubCards = [
+  {
+    title: "About Us",
+    desc: "Learn who we are, how MZ Global Trading was founded, and the team behind every order.",
+    image: "/images/menu/menu-aboutus.webp",
+    alt: "About MZ Global Trading — Pakistan textile sourcing company founded by Muhammad Muzammil",
+    href: "/our-company/",
+    cta: "Our Story",
+  },
+  {
+    title: "Our Process",
+    desc: "Step-by-step: how we match factories, manage production, inspect quality and handle export.",
+    image: "/images/menu/menu-ourprocess.webp",
+    alt: "MZ Global Trading sourcing process — factory matching, QC inspection and export documentation",
+    href: "/ourprocess/",
+    cta: "See How It Works",
+  },
+  {
+    title: "Blog",
+    desc: "Pakistan textile sourcing insights, compliance guides and supply chain best practices.",
+    image: "/images/menu/menu-blog.webp",
+    alt: "MZ Global Trading blog — textile sourcing insights and Pakistan manufacturing guides",
+    href: "/blog/",
+    cta: "Read the Blog",
+  },
+  {
+    title: "Careers",
+    desc: "Join a team dedicated to connecting global buyers with Pakistan's best textile manufacturers.",
+    image: "/images/menu/menu-careers.webp",
+    alt: "Careers at MZ Global Trading — textile sourcing jobs in Karachi Pakistan",
+    href: "/careers/",
+    cta: "View Open Roles",
+  },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -642,8 +678,8 @@ export default function WhyChooseUsContent() {
                     <div className="px-4 py-3 border-b border-gray-100 bg-navy-900/[0.02]">
                       <p className="text-gold text-[11px] font-bold uppercase tracking-widest mb-2">MZ Global Trading</p>
                       <div className="flex items-start gap-2.5">
-                        <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-gold/15 flex items-center justify-center">
-                          <svg className="w-3 h-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
+                          <svg className="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.8} d="M5 13l4 4L19 7" />
                           </svg>
                         </span>
@@ -656,22 +692,14 @@ export default function WhyChooseUsContent() {
                         {activeTab === "manufacturer" ? "Direct Manufacturer" : "Sourcing Agent"}
                       </p>
                       <div className="flex items-start gap-2.5">
-                        {row.themType === "loss" ? (
+                        {row.themType !== "win" ? (
                           <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center">
-                            <svg className="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-3 h-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.8} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                           </span>
-                        ) : (
-                          <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-amber-50 flex items-center justify-center">
-                            <svg className="w-3 h-3 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
-                            </svg>
-                          </span>
-                        )}
-                        <p className={`text-sm leading-relaxed ${row.themType === "loss" ? "text-gray-500" : "text-amber-600 font-medium"}`}>
-                          {row.them}
-                        </p>
+                        ) : null}
+                        <p className="text-sm leading-relaxed text-gray-500">{row.them}</p>
                       </div>
                     </div>
                   </div>
@@ -686,8 +714,8 @@ export default function WhyChooseUsContent() {
 
                     {/* MZ Global cell */}
                     <div className="py-5 px-5 flex items-start gap-3 bg-navy-900/[0.03] border-l border-navy-900/8">
-                      <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-gold/20 flex items-center justify-center">
-                        <svg className="w-3 h-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
+                        <svg className="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.8} d="M5 13l4 4L19 7" />
                         </svg>
                       </span>
@@ -696,22 +724,14 @@ export default function WhyChooseUsContent() {
 
                     {/* Competitor cell */}
                     <div className="py-5 px-5 flex items-start gap-3 border-l border-gray-200">
-                      {row.themType === "loss" ? (
+                      {row.themType !== "win" && (
                         <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center">
-                          <svg className="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-3 h-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.8} d="M6 18L18 6M6 6l12 12" />
                           </svg>
                         </span>
-                      ) : (
-                        <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-amber-50 flex items-center justify-center">
-                          <svg className="w-3 h-3 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
-                          </svg>
-                        </span>
                       )}
-                      <p className={`text-sm leading-relaxed ${row.themType === "loss" ? "text-gray-500" : "text-amber-600 font-medium"}`}>
-                        {row.them}
-                      </p>
+                      <p className="text-sm leading-relaxed text-gray-500">{row.them}</p>
                     </div>
                   </div>
 
@@ -935,10 +955,65 @@ export default function WhyChooseUsContent() {
         </div>
       </section>
 
-      {/* ── 7. Certifications ────────────────────────────────────────────────── */}
+      {/* ── 7. Explore More ──────────────────────────────────────────────────── */}
+      <section className="py-20 sm:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            variants={fadeUpVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            className="text-center mb-12"
+          >
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
+              Learn More
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore Our Company</h2>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            className="grid sm:grid-cols-2 gap-6"
+          >
+            {hubCards.map((card) => (
+              <motion.div
+                key={card.title}
+                variants={cardVariant}
+                whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+              >
+                <Link href={card.href} className="block">
+                  <div className="relative h-64 overflow-hidden">
+                    <Image
+                      src={card.image}
+                      alt={card.alt}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="text-white font-bold text-xl mb-1.5">{card.title}</h3>
+                    <p className="text-gray-300 text-sm leading-relaxed mb-3">{card.desc}</p>
+                    <span className="inline-flex items-center gap-1.5 text-gold text-sm font-semibold group-hover:gap-3 transition-all duration-200">
+                      {card.cta} →
+                    </span>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── 8. Certifications ────────────────────────────────────────────────── */}
       <CertificationsStrip />
 
-      {/* ── 8. CTA ───────────────────────────────────────────────────────────── */}
+      {/* ── 9. CTA ───────────────────────────────────────────────────────────── */}
       <section className="py-16 sm:py-20 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
