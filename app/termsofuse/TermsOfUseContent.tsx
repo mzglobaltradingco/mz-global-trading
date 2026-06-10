@@ -130,8 +130,8 @@ export default function TermsOfUseContent() {
   return (
     <>
       <PageHero
-        image="/images/hero/hero-about.webp"
-        imageAlt="MZ Global Trading terms of use — legal terms for international B2B textile sourcing buyers"
+        image="/images/hero/hero-terms-of-use.webp"
+        imageAlt="Professional business agreement — MZ Global Trading terms of use for international B2B textile sourcing"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Terms of Use" },

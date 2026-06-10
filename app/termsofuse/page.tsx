@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/termsofuse/",
     images: [
       {
-        url: "/images/og/homepage-og.webp",
+        url: "/images/og/termsofuse-og.webp",
         width: 1200,
         height: 630,
         alt: "MZ Global Trading — Terms of Use",

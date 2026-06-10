@@ -143,8 +143,8 @@ export default function PrivacyPolicyContent() {
   return (
     <>
       <PageHero
-        image="/images/hero/hero-about.webp"
-        imageAlt="MZ Global Trading privacy policy — data protection for international textile sourcing buyers in USA, UK and Europe"
+        image="/images/hero/hero-privacy-policy.webp"
+        imageAlt="Secure professional workspace — MZ Global Trading privacy policy for international textile sourcing buyers"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Privacy Policy" },
