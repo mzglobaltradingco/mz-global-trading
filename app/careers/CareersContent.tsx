@@ -241,8 +241,8 @@ export default function CareersContent() {
 
       {/* ── 1. Hero ──────────────────────────────────────────────────────────── */}
       <PageHero
-        image="/images/hero/hero-about.webp"
-        imageAlt="MZ Global Trading team — build a career in Pakistan's B2B textile sourcing industry"
+        image="/images/hero/hero-careers.webp"
+        imageAlt="MZ Global Trading office — build a career in Pakistan's B2B textile sourcing industry"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Corporate" },

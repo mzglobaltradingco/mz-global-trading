@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/contact-us/",
     images: [
       {
-        url: "/images/og/homepage-og.webp",
+        url: "/images/og/contact-us-og.webp",
         width: 1200,
         height: 630,
         alt: "Contact MZ Global Trading — Pakistan B2B Textile Sourcing",

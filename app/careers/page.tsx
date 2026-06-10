@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/careers/",
     images: [
       {
-        url: "/images/og/hero-about.webp",
+        url: "/images/og/hero-careers.webp",
         width: 1200,
         height: 630,
         alt: "Careers at MZ Global Trading — textile sourcing jobs in Karachi, Pakistan",

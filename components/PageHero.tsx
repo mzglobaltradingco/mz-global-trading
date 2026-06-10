@@ -41,7 +41,7 @@ export default function PageHero({
   pills,
 }: PageHeroProps) {
   return (
-    <section className="relative bg-navy-900 min-h-[520px] sm:min-h-[640px] pt-20 pb-24 sm:pt-24 sm:pb-32 overflow-hidden">
+    <section className="relative bg-navy-900 min-h-[360px] sm:min-h-[460px] pt-14 pb-16 sm:pt-16 sm:pb-20 overflow-hidden">
       <Image
         src={image}
         alt={imageAlt}

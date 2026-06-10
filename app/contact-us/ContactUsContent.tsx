@@ -3,27 +3,22 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import PageHero from "@/components/PageHero";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-type FormStatus = "idle" | "submitting" | "success" | "error";
+type FormStatus = "idle" | "sent";
 
-interface FormData {
+interface ContactForm {
   name: string;
   company: string;
   email: string;
   subject: string;
   message: string;
-  botcheck: boolean;
 }
 
-const INITIAL_FORM: FormData = {
-  name: "",
-  company: "",
-  email: "",
-  subject: "",
-  message: "",
-  botcheck: false,
+const INITIAL: ContactForm = {
+  name: "", company: "", email: "", subject: "", message: "",
 };
 
 const SUBJECTS = [
@@ -34,6 +29,17 @@ const SUBJECTS = [
   "Quality & Certifications",
   "Other",
 ];
+
+const RECIPIENT = "info@mzglobaltrading.com";
+
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+
+const ic = (err?: string) =>
+  `w-full px-4 py-3 border rounded-lg text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 transition-colors bg-white ${
+    err
+      ? "border-red-400 focus:ring-red-300/40 focus:border-red-400"
+      : "border-gray-200 focus:ring-gold/40 focus:border-gold"
+  }`;
 
 // ─── Icons ────────────────────────────────────────────────────────────────────
 
@@ -84,15 +90,9 @@ function IconMapPin() {
 // ─── Field component ──────────────────────────────────────────────────────────
 
 function Field({
-  id,
-  label,
-  required,
-  children,
+  id, label, required, error, children,
 }: {
-  id: string;
-  label: string;
-  required?: boolean;
-  children: React.ReactNode;
+  id: string; label: string; required?: boolean; error?: string; children: React.ReactNode;
 }) {
   return (
     <div className="flex flex-col gap-1.5">
@@ -101,17 +101,20 @@ function Field({
         {required && <span className="text-gold ml-0.5" aria-hidden="true">*</span>}
       </label>
       {children}
+      {error && (
+        <p className="text-red-500 text-xs mt-0.5 flex items-center gap-1" role="alert">
+          <span aria-hidden="true">↑</span> {error}
+        </p>
+      )}
     </div>
   );
 }
 
-const inputClass =
-  "w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-colors";
-
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function ContactUsContent() {
-  const [formData, setFormData] = useState<FormData>(INITIAL_FORM);
+  const [formData, setFormData] = useState<ContactForm>(INITIAL);
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const [status, setStatus] = useState<FormStatus>("idle");
   const [mapLoaded, setMapLoaded] = useState(false);
 
@@ -120,322 +123,242 @@ export default function ContactUsContent() {
   ) {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    if (errors[name]) setErrors((prev) => ({ ...prev, [name]: "" }));
   }
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    if (formData.botcheck) return;
-    setStatus("submitting");
-
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
-          name: formData.name,
-          email: formData.email,
-          subject: `[MZ Global Trading Contact] ${formData.subject || "General Enquiry"} — ${formData.name} at ${formData.company}`,
-          message: `Company: ${formData.company}\n\n${formData.message}`,
-          botcheck: formData.botcheck,
-        }),
-      });
-
-      const data: { success: boolean } = await res.json();
-      if (data.success) {
-        setStatus("success");
-        setFormData(INITIAL_FORM);
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
+  function validate(): boolean {
+    const e: Record<string, string> = {};
+    if (!formData.name.trim())
+      e.name = "Full name is required";
+    if (!formData.company.trim())
+      e.company = "Company name is required";
+    if (!formData.email.trim())
+      e.email = "Business email is required";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim()))
+      e.email = "Enter a valid email address";
+    if (!formData.message.trim())
+      e.message = "Please describe your enquiry";
+    setErrors(e);
+    const firstKey = Object.keys(e)[0];
+    if (firstKey) {
+      setTimeout(() => {
+        const el = document.getElementById(firstKey);
+        if (el) { el.scrollIntoView({ behavior: "smooth", block: "center" }); el.focus(); }
+      }, 50);
     }
+    return Object.keys(e).length === 0;
+  }
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (!validate()) return;
+
+    const subject = encodeURIComponent(
+      `[MZ Global Trading] ${formData.subject || "General Enquiry"} — ${formData.name} at ${formData.company}`
+    );
+    const body = encodeURIComponent(
+      [
+        `From:    ${formData.name}`,
+        `Company: ${formData.company}`,
+        `Email:   ${formData.email}`,
+        `Subject: ${formData.subject || "General Enquiry"}`,
+        "",
+        "Message:",
+        "--------",
+        formData.message,
+        "",
+        "--------",
+        "Sent via mzglobaltrading.com/contact-us/",
+      ].join("\n")
+    );
+
+    window.location.href = `mailto:${RECIPIENT}?subject=${subject}&body=${body}`;
+    setStatus("sent");
   }
 
   return (
     <>
-      {/* ── Split section ─────────────────────────────────────────────────── */}
-      <div className="flex flex-col lg:flex-row min-h-screen">
+      {/* ── Hero ──────────────────────────────────────────────────────────── */}
+      <PageHero
+        image="/images/hero/hero-contact-us.webp"
+        imageAlt="MZ Global Trading office — contact our B2B textile sourcing team in Karachi, Pakistan"
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact Us" }]}
+        label="Get In Touch"
+        title="Contact"
+        titleGold="Us"
+        description="Reach our sourcing team for product enquiries, supplier information, or general questions. We respond to all email enquiries within one business day."
+        pills={["Reply Within 1 Business Day", "B2B Enquiries Only", "Karachi, Pakistan"]}
+      />
 
-        {/* ── Left — navy panel ──────────────────────────────────────────── */}
-        <div className="lg:w-5/12 bg-navy-900 relative overflow-hidden flex flex-col justify-center px-8 sm:px-12 lg:px-14 py-20 lg:py-28">
+      {/* ── Contact + Form ────────────────────────────────────────────────── */}
+      <div className="bg-white py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:grid lg:grid-cols-5 lg:gap-16 items-start">
 
-          {/* Decorative glows */}
-          <div className="absolute -top-32 -right-32 w-80 h-80 bg-gold/5 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
-          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-gold/4 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
-
-          {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-gray-500 text-xs mb-10 flex-wrap relative">
-            <Link href="/" className="hover:text-gold transition-colors">Home</Link>
-            <span aria-hidden="true">›</span>
-            <span className="text-gold">Contact Us</span>
-          </nav>
-
-          <div className="relative">
-            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">
-              Get In Touch
-            </p>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
-              Let&apos;s talk about<br />
-              <span className="text-gold">your sourcing</span><br />
-              requirements.
-            </h1>
-            <p className="text-gray-400 text-base leading-relaxed mb-12 max-w-sm">
-              Our team responds to all enquiries within one business day.
-              For formal quotation requests, use our dedicated{" "}
-              <Link href="/rfq/" className="text-gold hover:underline">
-                RFQ form
-              </Link>
-              .
-            </p>
-
-            {/* Contact details */}
-            <ul className="space-y-5 mb-12">
-              <li className="flex items-start gap-4">
-                <span className="mt-0.5 text-gold flex-shrink-0">
-                  <IconEmail />
-                </span>
-                <div>
-                  <p className="text-gray-500 text-xs uppercase tracking-wider mb-0.5">Email</p>
-                  <a
-                    href="mailto:info@mzglobaltrading.com"
-                    className="text-white hover:text-gold transition-colors text-sm font-medium"
-                  >
-                    info@mzglobaltrading.com
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start gap-4">
-                <span className="mt-0.5 text-gold flex-shrink-0">
-                  <IconPhone />
-                </span>
-                <div>
-                  <p className="text-gray-500 text-xs uppercase tracking-wider mb-0.5">Phone / WhatsApp</p>
-                  <a
-                    href="tel:+923008256203"
-                    className="text-white hover:text-gold transition-colors text-sm font-medium"
-                  >
-                    +92 300 8256203
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start gap-4">
-                <span className="mt-0.5 text-gold flex-shrink-0">
-                  <IconPin />
-                </span>
-                <div>
-                  <p className="text-gray-500 text-xs uppercase tracking-wider mb-0.5">Office</p>
-                  <p className="text-white text-sm font-medium leading-relaxed">
-                    Office G20, Ground Floor<br />
-                    Columbus Tower, Main Clifton Road<br />
-                    Karachi 75600, Pakistan
-                  </p>
-                </div>
-              </li>
-              <li className="flex items-start gap-4">
-                <span className="mt-0.5 text-gold flex-shrink-0">
-                  <IconClock />
-                </span>
-                <div>
-                  <p className="text-gray-500 text-xs uppercase tracking-wider mb-0.5">Business Hours</p>
-                  <p className="text-white text-sm font-medium">
-                    Monday – Friday<br />
-                    9:00 AM – 6:00 PM PKT (UTC +5)
-                  </p>
-                </div>
-              </li>
-            </ul>
-
-            {/* Social links */}
-            <div className="flex items-center gap-3">
-              <a
-                href="https://www.facebook.com/mzglobaltradingco/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="MZ Global Trading on Facebook"
-                className="p-2.5 bg-white/5 hover:bg-gold/20 border border-white/10 rounded-lg transition-colors"
-              >
-                <Image
-                  src="/images/icons/social/icon-social-facebook.svg"
-                  alt="Facebook"
-                  width={18}
-                  height={18}
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/mzglobaltrading"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="MZ Global Trading on LinkedIn"
-                className="p-2.5 bg-white/5 hover:bg-gold/20 border border-white/10 rounded-lg transition-colors"
-              >
-                <Image
-                  src="/images/icons/social/icon-social-linkedin.svg"
-                  alt="LinkedIn"
-                  width={18}
-                  height={18}
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* ── Right — form panel ─────────────────────────────────────────── */}
-        <div className="lg:w-7/12 bg-white flex items-center px-8 sm:px-12 lg:px-16 py-20 lg:py-28">
-          <div className="w-full max-w-xl">
-
-            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
-              Send a Message
-            </p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 mb-2">
-              How can we help?
-            </h2>
-            <p className="text-gray-500 text-sm mb-8">
-              Fill in the form below and we&apos;ll get back to you within one business day.
-            </p>
-
-            {status === "success" ? (
-              <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-600" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-                <h3 className="text-navy-900 font-bold text-lg mb-2">Message sent</h3>
-                <p className="text-gray-600 text-sm mb-6">
-                  Thank you for reaching out. We&apos;ll respond within one business day.
+            {/* ── Left — contact details ──────────────────────────────────── */}
+            <div className="lg:col-span-2 mb-12 lg:mb-0">
+              <div className="bg-gray-50 border border-gray-100 rounded-2xl p-8">
+                <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">
+                  Contact Details
                 </p>
-                <button
-                  onClick={() => setStatus("idle")}
-                  className="text-sm text-gold hover:underline font-medium"
-                >
-                  Send another message
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} noValidate className="space-y-5">
-                {/* Honeypot */}
-                <input
-                  type="checkbox"
-                  name="botcheck"
-                  className="hidden"
-                  aria-hidden="true"
-                  tabIndex={-1}
-                  checked={formData.botcheck}
-                  onChange={(e) =>
-                    setFormData((prev) => ({ ...prev, botcheck: e.target.checked }))
-                  }
-                />
-
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <Field id="name" label="Full Name" required>
-                    <input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      autoComplete="name"
-                      placeholder="Jane Smith"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className={inputClass}
-                    />
-                  </Field>
-                  <Field id="company" label="Company Name" required>
-                    <input
-                      id="company"
-                      name="company"
-                      type="text"
-                      required
-                      autoComplete="organization"
-                      placeholder="Acme Retail Ltd."
-                      value={formData.company}
-                      onChange={handleChange}
-                      className={inputClass}
-                    />
-                  </Field>
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4">
+                    <span className="mt-0.5 text-gold flex-shrink-0"><IconEmail /></span>
+                    <div>
+                      <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Email</p>
+                      <a href="mailto:info@mzglobaltrading.com"
+                        className="text-navy-900 hover:text-gold transition-colors text-sm font-medium">
+                        info@mzglobaltrading.com
+                      </a>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="mt-0.5 text-gold flex-shrink-0"><IconPhone /></span>
+                    <div>
+                      <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Phone</p>
+                      <a href="tel:+923008256203"
+                        className="text-navy-900 hover:text-gold transition-colors text-sm font-medium">
+                        +92 300 8256203
+                      </a>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="mt-0.5 text-gold flex-shrink-0"><IconPin /></span>
+                    <div>
+                      <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Office</p>
+                      <p className="text-navy-900 text-sm font-medium leading-relaxed">
+                        Office G20, Ground Floor<br />
+                        Columbus Tower, Main Clifton Road<br />
+                        Karachi 75600, Pakistan
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="mt-0.5 text-gold flex-shrink-0"><IconClock /></span>
+                    <div>
+                      <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Business Hours</p>
+                      <p className="text-navy-900 text-sm font-medium leading-relaxed">
+                        Monday – Friday<br />
+                        9:00 AM – 6:00 PM PKT (UTC +5)
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                <div className="border-t border-gray-200 mt-8 pt-6 flex items-center gap-3">
+                  <a href="https://www.facebook.com/mzglobaltradingco/" target="_blank"
+                    rel="noopener noreferrer" aria-label="MZ Global Trading on Facebook"
+                    className="p-2.5 bg-white hover:bg-gold/10 border border-gray-200 rounded-lg transition-colors">
+                    <Image src="/images/icons/social/icon-social-facebook.svg" alt="Facebook" width={18} height={18} />
+                  </a>
+                  <a href="https://www.linkedin.com/company/mzglobaltrading" target="_blank"
+                    rel="noopener noreferrer" aria-label="MZ Global Trading on LinkedIn"
+                    className="p-2.5 bg-white hover:bg-gold/10 border border-gray-200 rounded-lg transition-colors">
+                    <Image src="/images/icons/social/icon-social-linkedin.svg" alt="LinkedIn" width={18} height={18} />
+                  </a>
                 </div>
+              </div>
+            </div>
 
-                <Field id="email" label="Business Email" required>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    autoComplete="email"
-                    placeholder="jane@acmeretail.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className={inputClass}
-                  />
-                </Field>
+            {/* ── Right — form ───────────────────────────────────────────── */}
+            <div className="lg:col-span-3">
+              <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
+                Send a Message
+              </p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 mb-2">
+                How can we help?
+              </h2>
+              <p className="text-gray-500 text-sm mb-8">
+                Fill in the form and click <strong>Send Message</strong> — your default email app will open with everything pre-filled. Review and send to reach us.
+              </p>
 
-                <Field id="subject" label="Subject">
-                  <select
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className={`${inputClass} bg-white`}
-                  >
-                    <option value="">Select a topic…</option>
-                    {SUBJECTS.map((s) => (
-                      <option key={s} value={s}>{s}</option>
-                    ))}
-                  </select>
-                </Field>
-
-                <Field id="message" label="Message" required>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={5}
-                    placeholder="Tell us about your enquiry…"
-                    value={formData.message}
-                    onChange={handleChange}
-                    className={`${inputClass} resize-none`}
-                  />
-                </Field>
-
-                {status === "error" && (
-                  <p className="text-red-600 text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-3">
-                    Something went wrong. Please try again or email us directly at{" "}
-                    <a href="mailto:info@mzglobaltrading.com" className="underline">
-                      info@mzglobaltrading.com
-                    </a>
+              {status === "sent" ? (
+                <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-600" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </div>
+                  <h3 className="text-navy-900 font-bold text-lg mb-2">Email client opened</h3>
+                  <p className="text-gray-600 text-sm mb-4">
+                    Your message is pre-filled in your email app. Review and click <strong>Send</strong> to reach us.
+                  </p>
+                  <p className="text-gray-500 text-xs mb-6">
+                    Email did not open?{" "}
+                    <a href="mailto:info@mzglobaltrading.com" className="text-gold hover:underline font-medium">
+                      Email us directly
+                    </a>{" "}
+                    or{" "}
+                    <button type="button" onClick={() => { setStatus("idle"); setFormData(INITIAL); }}
+                      className="text-gold hover:underline font-medium">
+                      try again
+                    </button>
                     .
                   </p>
-                )}
-
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-1">
-                  <button
-                    type="submit"
-                    disabled={status === "submitting"}
-                    className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 disabled:opacity-60 disabled:cursor-not-allowed transition-colors min-w-[160px]"
-                  >
-                    {status === "submitting" ? (
-                      <>
-                        <svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
-                        </svg>
-                        Sending…
-                      </>
-                    ) : (
-                      "Send Message →"
-                    )}
+                  <button type="button" onClick={() => { setStatus("idle"); setFormData(INITIAL); }}
+                    className="text-sm text-gold hover:underline font-medium">
+                    Send another message
                   </button>
-                  <p className="text-gray-400 text-xs leading-relaxed">
-                    Need a formal quote?{" "}
-                    <Link href="/rfq/" className="text-gold hover:underline">
-                      Use the RFQ form →
-                    </Link>
-                  </p>
                 </div>
-              </form>
-            )}
+              ) : (
+                <form onSubmit={handleSubmit} noValidate className="space-y-5">
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <Field id="name" label="Full Name" required error={errors.name}>
+                      <input id="name" name="name" type="text" required autoComplete="name"
+                        aria-invalid={!!errors.name}
+                        placeholder="Jane Smith" value={formData.name}
+                        onChange={handleChange} className={ic(errors.name)} />
+                    </Field>
+                    <Field id="company" label="Company Name" required error={errors.company}>
+                      <input id="company" name="company" type="text" required autoComplete="organization"
+                        aria-invalid={!!errors.company}
+                        placeholder="Acme Retail Ltd." value={formData.company}
+                        onChange={handleChange} className={ic(errors.company)} />
+                    </Field>
+                  </div>
+
+                  <Field id="email" label="Business Email" required error={errors.email}>
+                    <input id="email" name="email" type="email" required autoComplete="email"
+                      aria-invalid={!!errors.email}
+                      placeholder="jane@acmeretail.com" value={formData.email}
+                      onChange={handleChange} className={ic(errors.email)} />
+                  </Field>
+
+                  <Field id="subject" label="Subject">
+                    <select id="subject" name="subject" value={formData.subject}
+                      onChange={handleChange} className={ic()}>
+                      <option value="">Select a topic…</option>
+                      {SUBJECTS.map((s) => (
+                        <option key={s} value={s}>{s}</option>
+                      ))}
+                    </select>
+                  </Field>
+
+                  <Field id="message" label="Message" required error={errors.message}>
+                    <textarea id="message" name="message" required rows={5}
+                      aria-invalid={!!errors.message}
+                      placeholder="Tell us about your enquiry…" value={formData.message}
+                      onChange={handleChange} className={`${ic(errors.message)} resize-none`} />
+                  </Field>
+
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-1">
+                    <button type="submit"
+                      className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                      </svg>
+                      Send Message
+                    </button>
+                    <p className="text-gray-400 text-xs leading-relaxed">
+                      Need a formal quote?{" "}
+                      <Link href="/rfq/" className="text-gold hover:underline">
+                        Use the RFQ form →
+                      </Link>
+                    </p>
+                  </div>
+                </form>
+              )}
+            </div>
 
           </div>
         </div>
@@ -445,12 +368,8 @@ export default function ContactUsContent() {
       <div className="bg-gray-50 py-14 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
-              Our Location
-            </p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-navy-900">
-              Based in Karachi, Pakistan
-            </h2>
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Our Location</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy-900">Based in Karachi, Pakistan</h2>
             <p className="text-gray-500 text-sm mt-2">
               Columbus Tower, Main Clifton Road — Pakistan&apos;s leading commercial district.
             </p>
@@ -460,56 +379,36 @@ export default function ContactUsContent() {
             {mapLoaded ? (
               <iframe
                 src="https://maps.google.com/maps?q=Columbus+Tower+Clifton+Karachi+Pakistan&output=embed&z=15"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
+                width="100%" height="100%" style={{ border: 0 }}
+                allowFullScreen loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="MZ Global Trading office location — Columbus Tower, Clifton, Karachi"
               />
             ) : (
               <div className="w-full h-full bg-navy-900 flex flex-col items-center justify-center gap-5 relative overflow-hidden">
-                {/* Subtle dot grid */}
                 <div
                   className="absolute inset-0 opacity-10"
-                  style={{
-                    backgroundImage: "radial-gradient(circle, #D4A017 1px, transparent 1px)",
-                    backgroundSize: "28px 28px",
-                  }}
+                  style={{ backgroundImage: "radial-gradient(circle, #D4A017 1px, transparent 1px)", backgroundSize: "28px 28px" }}
                   aria-hidden="true"
                 />
                 <div className="relative text-center">
-                  <span className="text-gold mb-3 block">
-                    <IconMapPin />
-                  </span>
-                  <p className="text-white font-semibold text-base mb-1">
-                    Columbus Tower, Clifton
-                  </p>
-                  <p className="text-gray-400 text-sm mb-6">
-                    Main Clifton Road, Karachi 75600, Pakistan
-                  </p>
-                  <button
-                    onClick={() => setMapLoaded(true)}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors"
-                  >
+                  <span className="text-gold mb-3 block"><IconMapPin /></span>
+                  <p className="text-white font-semibold text-base mb-1">Columbus Tower, Clifton</p>
+                  <p className="text-gray-400 text-sm mb-6">Main Clifton Road, Karachi 75600, Pakistan</p>
+                  <button onClick={() => setMapLoaded(true)}
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors">
                     Load Map
                   </button>
-                  <p className="text-gray-600 text-xs mt-3">
-                    Loads Google Maps — no data shared until clicked
-                  </p>
+                  <p className="text-gray-600 text-xs mt-3">Loads Google Maps — no data shared until clicked</p>
                 </div>
               </div>
             )}
           </div>
 
           <div className="mt-4 text-center">
-            <a
-              href="https://maps.google.com/maps?q=Columbus+Tower+Clifton+Karachi+Pakistan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gold hover:underline text-sm font-medium"
-            >
+            <a href="https://maps.google.com/maps?q=Columbus+Tower+Clifton+Karachi+Pakistan"
+              target="_blank" rel="noopener noreferrer"
+              className="text-gold hover:underline text-sm font-medium">
               Open in Google Maps →
             </a>
           </div>
@@ -520,18 +419,13 @@ export default function ContactUsContent() {
       <div className="bg-navy-900 py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
-            <p className="text-white font-bold text-lg">
-              Have a specific product in mind?
-            </p>
+            <p className="text-white font-bold text-lg">Have a specific product in mind?</p>
             <p className="text-gray-400 text-sm mt-1">
-              Our structured RFQ form covers material specs, certifications, quantities, and
-              delivery terms — and gets you a formal quote faster.
+              Our structured RFQ form covers material specs, certifications, quantities, and delivery terms — and gets you a formal quote faster.
             </p>
           </div>
-          <Link
-            href="/rfq/"
-            className="flex-shrink-0 inline-flex items-center gap-2 px-7 py-3.5 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors whitespace-nowrap"
-          >
+          <Link href="/rfq/"
+            className="flex-shrink-0 inline-flex items-center gap-2 px-7 py-3.5 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors whitespace-nowrap">
             Request a Quote →
           </Link>
         </div>
