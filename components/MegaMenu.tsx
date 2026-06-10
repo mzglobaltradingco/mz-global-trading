@@ -66,7 +66,7 @@ const navItems: NavItem[] = [
             { label: "Why Choose Us",  href: "/whychooseus/",   img: "/images/menu/menu-whychooseus.webp",   imgAlt: "Why source with MZ Global Trading — certified factories, QC and on-time delivery guarantee" },
             { label: "Our Process",    href: "/ourprocess/",    img: "/images/menu/menu-ourprocess.webp",    imgAlt: "MZ Global Trading sourcing process — factory selection, sampling, QC and shipment" },
             { label: "Careers",        href: "/careers/",       img: "/images/menu/menu-careers.webp",       imgAlt: "Careers at MZ Global Trading — join Pakistan's trusted B2B textile sourcing team" },
-            { label: "Blogs",          href: "/blog/",          img: "/images/menu/menu-blog.webp",          imgAlt: "Textile industry blog by MZ Global Trading — sourcing insights for international buyers" },
+            { label: "Knowledge Hub",  href: "/knowledge/",     img: "/images/menu/menu-blog.webp",          imgAlt: "Textile sourcing insights and trade guides by MZ Global Trading — knowledge hub for international buyers" },
           ],
         },
         {

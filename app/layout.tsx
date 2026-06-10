@@ -30,6 +30,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/",
+    types: {
+      "application/rss+xml": [
+        { url: "/rss.xml", title: "MZ Global Trading — Knowledge Hub" },
+      ],
+    },
   },
   openGraph: {
     title: "MZ Global Trading | Apparel, Home Textile & Fabric Sourcing",

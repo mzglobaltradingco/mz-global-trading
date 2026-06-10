@@ -33,7 +33,7 @@ const company = [
   { label: "Our Process",          href: "/ourprocess/" },
   { label: "Quality & Compliance", href: "/qualitycompliance/certifications/" },
   { label: "Careers",              href: "/careers/" },
-  { label: "Blog",                 href: "/blog/" },
+  { label: "Knowledge Hub",        href: "/knowledge/" },
 ];
 
 const support = [

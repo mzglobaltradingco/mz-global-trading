@@ -12,6 +12,7 @@ import {
   viewportOnce,
 } from "@/lib/animations";
 import CertificationsStrip from "@/components/CertificationsStrip";
+import PageHero from "@/components/PageHero";
 
 // ─── Map Data ─────────────────────────────────────────────────────────────────
 
@@ -325,12 +326,12 @@ const hubCards = [
     cta: "See Why We're Different",
   },
   {
-    title: "Blog",
-    desc: "Pakistan textile sourcing insights, compliance guides and supply chain best practices.",
+    title: "Knowledge Hub",
+    desc: "Trade guides, sourcing insights and compliance resources for international textile buyers.",
     image: "/images/menu/menu-blog.webp",
-    alt: "MZ Global Trading blog — textile sourcing insights and Pakistan manufacturing industry articles",
-    href: "/blog/",
-    cta: "Read the Blog",
+    alt: "MZ Global Trading Knowledge Hub — textile sourcing guides and trade insights for international buyers",
+    href: "/knowledge/",
+    cta: "Visit Knowledge Hub",
   },
   {
     title: "Careers",
@@ -354,82 +355,20 @@ export default function OurProcessContent() {
     <>
 
       {/* ── 1. Hero ──────────────────────────────────────────────────────── */}
-      <section className="relative bg-navy-900 pt-20 pb-24 sm:pt-24 sm:pb-32 overflow-hidden">
-        {/* Hero image */}
-        <Image
-          src="/images/hero/hero-our-process.webp"
-          alt="Pakistan textile sourcing process — factory matching, production oversight and global export"
-          fill
-          className="object-cover object-center"
-          priority
-          sizes="100vw"
-        />
-        {/* Dark overlay — keeps text readable */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/90 via-navy-950/75 to-navy-950/50" />
-        {/* Gold glow — bottom left */}
-        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="flex items-center gap-2 text-gray-500 text-xs mb-8"
-          >
-            <Link href="/" className="hover:text-gold transition-colors">Home</Link>
-            <span>›</span>
-            <span className="text-gray-400">Corporate</span>
-            <span>›</span>
-            <span className="text-gold">Our Process</span>
-          </motion.div>
-
-          <div className="max-w-3xl">
-            <motion.p
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.08 }}
-              className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4"
-            >
-              The Sourcing Process
-            </motion.p>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.16 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5"
-            >
-              From Pakistan.{" "}
-              <span className="text-gold">To Everywhere.</span>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.26 }}
-              className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl"
-            >
-              We connect international buyers in 25+ countries with Pakistan&apos;s most capable
-              textile manufacturers — managing every step from factory matching through
-              production, QC and delivery to your door.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.36 }}
-              className="flex flex-wrap gap-3"
-            >
-              {["50+ Vetted Factories", "25+ Export Markets", "End-to-End Managed"].map((pill) => (
-                <span
-                  key={pill}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
-                  {pill}
-                </span>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        image="/images/hero/hero-our-process.webp"
+        imageAlt="Pakistan textile sourcing process — factory matching, production oversight and global export"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Corporate" },
+          { label: "Our Process" },
+        ]}
+        label="The Sourcing Process"
+        title="From Pakistan."
+        titleGold="To Everywhere."
+        description="We connect international buyers in 25+ countries with Pakistan's most capable textile manufacturers — managing every step from factory matching through production, QC and delivery to your door."
+        pills={["50+ Vetted Factories", "25+ Export Markets", "End-to-End Managed"]}
+      />
 
       {/* ── 2. Sourcing Network Map ───────────────────────────────────────── */}
       <section className="py-20 sm:py-24 bg-white overflow-hidden">

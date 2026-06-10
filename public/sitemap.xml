@@ -68,10 +68,50 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <!-- Knowledge Hub -->
   <url>
-    <loc>https://mzglobaltrading.com/blog/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <loc>https://mzglobaltrading.com/knowledge/</loc>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mzglobaltrading.com/images/hero/hero-knowledge.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mzglobaltrading.com/knowledge/understanding-gsm-fabric-weight-sourcing/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mzglobaltrading.com/knowledge/incoterms-fob-cif-pakistan-textile-exports/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mzglobaltrading.com/knowledge/mz-global-expands-sialkot-technical-textiles/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mzglobaltrading.com/knowledge/iso-9001-certification-quality-management/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mzglobaltrading.com/knowledge/pre-shipment-inspection-checklist-textile-buyers/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mzglobaltrading.com/knowledge/how-to-read-textile-tech-pack-international-buyers/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>

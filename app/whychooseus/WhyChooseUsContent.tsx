@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import CertificationsStrip from "@/components/CertificationsStrip";
+import PageHero from "@/components/PageHero";
 import {
   fadeUpVariants,
   staggerContainerVariants,
@@ -319,12 +320,12 @@ const hubCards = [
     cta: "See How It Works",
   },
   {
-    title: "Blog",
-    desc: "Pakistan textile sourcing insights, compliance guides and supply chain best practices.",
+    title: "Knowledge Hub",
+    desc: "Trade guides, sourcing insights and compliance resources for international textile buyers.",
     image: "/images/menu/menu-blog.webp",
-    alt: "MZ Global Trading blog — textile sourcing insights and Pakistan manufacturing guides",
-    href: "/blog/",
-    cta: "Read the Blog",
+    alt: "MZ Global Trading Knowledge Hub — textile sourcing guides and trade insights for international buyers",
+    href: "/knowledge/",
+    cta: "Visit Knowledge Hub",
   },
   {
     title: "Careers",
@@ -345,83 +346,20 @@ export default function WhyChooseUsContent() {
     <>
 
       {/* ── 1. Hero ──────────────────────────────────────────────────────────── */}
-      <section className="relative bg-navy-900 pt-20 pb-24 sm:pt-24 sm:pb-32 overflow-hidden">
-        {/* Background image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/images/hero/hero-why-choose-us.webp"
-            alt="Pakistan textile factory quality inspection — MZ Global Trading sourcing partner"
-            fill
-            priority
-            className="object-cover object-center"
-            sizes="100vw"
-          />
-          {/* Dark navy overlay — keeps text readable */}
-          <div className="absolute inset-0 bg-navy-900/80" />
-          {/* Gold vignette bottom-left for depth */}
-          <div className="absolute bottom-0 left-0 w-96 h-64 bg-gold/5 blur-3xl pointer-events-none" />
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="flex items-center gap-2 text-gray-500 text-xs mb-8"
-          >
-            <Link href="/" className="hover:text-gold transition-colors">Home</Link>
-            <span>›</span>
-            <span className="text-gray-400">Corporate</span>
-            <span>›</span>
-            <span className="text-gold">Why Choose Us</span>
-          </motion.div>
-
-          <div className="max-w-3xl">
-            <motion.p
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.08 }}
-              className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4"
-            >
-              Why Choose Us
-            </motion.p>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.16 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5"
-            >
-              Why Choose{" "}
-              <span className="text-gold">MZ Global Trading</span>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.26 }}
-              className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl"
-            >
-              In a market of sourcing agents and trading companies, the difference
-              is accountability. We treat every order as if our own business depends on it.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.36 }}
-              className="flex flex-wrap gap-3"
-            >
-              {["50+ Vetted Factories", "95% On-Time Delivery", "10+ Certifications"].map((pill) => (
-                <span
-                  key={pill}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
-                  {pill}
-                </span>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        image="/images/hero/hero-why-choose-us.webp"
+        imageAlt="Pakistan textile factory quality inspection — MZ Global Trading sourcing partner"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Corporate" },
+          { label: "Why Choose Us" },
+        ]}
+        label="Why Choose Us"
+        title="Why Choose"
+        titleGold="MZ Global Trading"
+        description="In a market of sourcing agents and trading companies, the difference is accountability. We treat every order as if our own business depends on it."
+        pills={["50+ Vetted Factories", "95% On-Time Delivery", "10+ Certifications"]}
+      />
 
       {/* ── 2. Bento Grid — at-a-glance proof points ─────────────────────────── */}
       <section className="py-16 sm:py-20 bg-gray-50">

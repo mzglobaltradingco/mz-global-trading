@@ -17,11 +17,11 @@ export default function NotFound() {
       >
         <Link href="/" aria-label="MZ Global Trading — Return to homepage">
           <Image
-            src="/images/logo/logo-dark.png"
+            src="/images/logo/mz-global-trading-logo-header.webp"
             alt="MZ Global Trading — Pakistan Textile Sourcing Partner"
-            width={520}
-            height={148}
-            className="w-full max-w-[340px] sm:max-w-[420px] lg:max-w-[480px] h-auto"
+            width={695}
+            height={335}
+            className="w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[400px] h-auto"
             priority
           />
         </Link>

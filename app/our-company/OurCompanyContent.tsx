@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, useInView, animate, useScroll, useTransform } from "framer-motion";
 import CertificationsStrip from "@/components/CertificationsStrip";
+import PageHero from "@/components/PageHero";
 
 // ── Animated counter ──────────────────────────────────────────────────────────
 
@@ -125,12 +126,12 @@ const hubCards = [
     cta: "Explore Our Process",
   },
   {
-    title: "Blog",
-    desc: "Insights on Pakistan textile sourcing, compliance, market trends, and supply chain best practices.",
+    title: "Knowledge Hub",
+    desc: "Trade guides, sourcing insights and compliance resources for international textile buyers.",
     image: "/images/menu/menu-blog.webp",
-    alt: "MZ Global Trading blog — Pakistan textile sourcing insights and industry articles",
-    href: "/blog/",
-    cta: "Read the Blog",
+    alt: "MZ Global Trading Knowledge Hub — textile sourcing guides and trade insights for international buyers",
+    href: "/knowledge/",
+    cta: "Visit Knowledge Hub",
   },
   {
     title: "Careers",
@@ -180,16 +181,6 @@ const glanceItemVariants = {
   visible: { opacity: 1, transition: { duration: 0.3 } },
 };
 
-const pillContainerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.1, delayChildren: 0.36 } },
-};
-
-const pillVariants = {
-  hidden: { opacity: 0, y: 10 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.35 } },
-};
-
 // ── Page ──────────────────────────────────────────────────────────────────────
 
 export default function OurCompanyContent() {
@@ -204,83 +195,20 @@ export default function OurCompanyContent() {
     <>
 
       {/* ── 1. Hero ──────────────────────────────────────────────────────── */}
-      <section className="relative bg-navy-900 pt-20 pb-24 sm:pt-24 sm:pb-32 overflow-hidden">
-        {/* Hero image */}
-        <Image
-          src="/images/hero/hero-about.webp"
-          alt="Textile factory floor in Pakistan — MZ Global Trading vetted sourcing network for international buyers in USA, UK and Europe"
-          fill
-          className="object-cover object-center"
-          priority
-          sizes="100vw"
-        />
-        {/* Dark overlay — keeps text readable */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/90 via-navy-950/75 to-navy-950/50" />
-        {/* Gold glow — bottom left */}
-        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumb */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="flex items-center gap-2 text-gray-500 text-xs mb-8"
-          >
-            <Link href="/" className="hover:text-gold transition-colors">Home</Link>
-            <span>›</span>
-            <span className="text-gray-400">Corporate</span>
-            <span>›</span>
-            <span className="text-gold">About Us</span>
-          </motion.div>
-
-          <div className="max-w-3xl">
-            <motion.p
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.08 }}
-              className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4"
-            >
-              Our Company
-            </motion.p>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.16 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5"
-            >
-              About{" "}
-              <span className="text-gold">MZ Global Trading</span>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.26 }}
-              className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl"
-            >
-              Pakistan&apos;s trusted B2B textile sourcing partner — connecting international brands,
-              importers, and retailers with certified manufacturers across apparel, home textiles, and fabric.
-            </motion.p>
-            <motion.div
-              variants={pillContainerVariants}
-              initial="hidden"
-              animate="visible"
-              className="flex flex-wrap gap-3"
-            >
-              {["50+ Vetted Factories", "25+ Export Markets", "10+ Factory Certifications"].map((pill) => (
-                <motion.span
-                  key={pill}
-                  variants={pillVariants}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
-                  {pill}
-                </motion.span>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        image="/images/hero/hero-about.webp"
+        imageAlt="Textile factory floor in Pakistan — MZ Global Trading vetted sourcing network for international buyers in USA, UK and Europe"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Corporate" },
+          { label: "About Us" },
+        ]}
+        label="Our Company"
+        title="About"
+        titleGold="MZ Global Trading"
+        description="Pakistan's trusted B2B textile sourcing partner — connecting international brands, importers, and retailers with certified manufacturers across apparel, home textiles, and fabric."
+        pills={["50+ Vetted Factories", "25+ Export Markets", "10+ Factory Certifications"]}
+      />
 
       {/* ── 2. Who We Are ────────────────────────────────────────────────── */}
       <section className="py-20 sm:py-24 bg-white">
