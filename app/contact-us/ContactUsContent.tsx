@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
+import { PhoneInputField, validatePhone } from "@/components/PhoneInputField";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -13,12 +14,13 @@ interface ContactForm {
   name: string;
   company: string;
   email: string;
+  phone: string;
   subject: string;
   message: string;
 }
 
 const INITIAL: ContactForm = {
-  name: "", company: "", email: "", subject: "", message: "",
+  name: "", company: "", email: "", phone: "", subject: "", message: "",
 };
 
 const SUBJECTS = [
@@ -114,6 +116,7 @@ function Field({
 
 export default function ContactUsContent() {
   const [formData, setFormData] = useState<ContactForm>(INITIAL);
+  const [phoneCountry, setPhoneCountry] = useState("us");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [status, setStatus] = useState<FormStatus>("idle");
   const [mapLoaded, setMapLoaded] = useState(false);
@@ -136,6 +139,8 @@ export default function ContactUsContent() {
       e.email = "Business email is required";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim()))
       e.email = "Enter a valid email address";
+    const phoneErr = validatePhone(formData.phone, phoneCountry);
+    if (phoneErr) e.phone = phoneErr;
     if (!formData.message.trim())
       e.message = "Please describe your enquiry";
     setErrors(e);
@@ -161,6 +166,7 @@ export default function ContactUsContent() {
         `From:    ${formData.name}`,
         `Company: ${formData.company}`,
         `Email:   ${formData.email}`,
+        `Mobile:  ${formData.phone}`,
         `Subject: ${formData.subject || "General Enquiry"}`,
         "",
         "Message:",
@@ -316,12 +322,29 @@ export default function ContactUsContent() {
                     </Field>
                   </div>
 
-                  <Field id="email" label="Business Email" required error={errors.email}>
-                    <input id="email" name="email" type="email" required autoComplete="email"
-                      aria-invalid={!!errors.email}
-                      placeholder="jane@acmeretail.com" value={formData.email}
-                      onChange={handleChange} className={ic(errors.email)} />
-                  </Field>
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <Field id="email" label="Business Email" required error={errors.email}>
+                      <input id="email" name="email" type="email" required autoComplete="email"
+                        aria-invalid={!!errors.email}
+                        placeholder="jane@acmeretail.com" value={formData.email}
+                        onChange={handleChange} className={ic(errors.email)} />
+                    </Field>
+                    <PhoneInputField
+                      id="phone"
+                      label="Mobile Number"
+                      required
+                      value={formData.phone}
+                      countryIso2={phoneCountry}
+                      onChange={(e164, iso2) => {
+                        setFormData((prev) => ({ ...prev, phone: e164 }));
+                        setPhoneCountry(iso2);
+                      }}
+                      error={errors.phone}
+                      onClearError={() =>
+                        setErrors((prev) => ({ ...prev, phone: "" }))
+                      }
+                    />
+                  </div>
 
                   <Field id="subject" label="Subject">
                     <select id="subject" name="subject" value={formData.subject}

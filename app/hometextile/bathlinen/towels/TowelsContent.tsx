@@ -104,15 +104,15 @@ export default function TowelsContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center gap-2 text-gray-300 text-xs mb-4">
+              <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-gray-300 text-xs mb-4">
                 <Link href="/" className="hover:text-gold transition-colors">Home</Link>
-                <span>›</span>
+                <span aria-hidden="true">›</span>
                 <Link href="/hometextile/" className="hover:text-gold transition-colors">Home Textiles</Link>
-                <span>›</span>
+                <span aria-hidden="true">›</span>
                 <Link href="/hometextile/bathlinen/" className="hover:text-gold transition-colors">Bath Linen</Link>
-                <span>›</span>
+                <span aria-hidden="true">›</span>
                 <span className="text-gold">Towels</span>
-              </div>
+              </nav>
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">
                 Home Textiles
               </p>

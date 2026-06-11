@@ -134,6 +134,7 @@ export default function TermsOfUseContent() {
         imageAlt="Professional business agreement — MZ Global Trading terms of use for international B2B textile sourcing"
         breadcrumbs={[
           { label: "Home", href: "/" },
+          { label: "Legal" },
           { label: "Terms of Use" },
         ]}
         label="Legal"

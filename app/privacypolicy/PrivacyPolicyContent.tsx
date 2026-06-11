@@ -147,6 +147,7 @@ export default function PrivacyPolicyContent() {
         imageAlt="Secure professional workspace — MZ Global Trading privacy policy for international textile sourcing buyers"
         breadcrumbs={[
           { label: "Home", href: "/" },
+          { label: "Legal" },
           { label: "Privacy Policy" },
         ]}
         label="Legal"

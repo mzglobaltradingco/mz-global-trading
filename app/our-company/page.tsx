@@ -83,6 +83,11 @@ export default function OurCompanyPage() {
                 {
                   "@type": "ListItem",
                   "position": 2,
+                  "name": "Corporate",
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
                   "name": "About Us",
                   "item": "https://mzglobaltrading.com/our-company/",
                 },

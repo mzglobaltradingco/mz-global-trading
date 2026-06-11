@@ -110,6 +110,7 @@ export default function KnowledgeHubContent() {
         imageAlt="Pakistan textile knowledge hub — sourcing guides and trade insights for international buyers"
         breadcrumbs={[
           { label: "Home", href: "/" },
+          { label: "Resources" },
           { label: "Knowledge Hub" },
         ]}
         label="Knowledge Hub"

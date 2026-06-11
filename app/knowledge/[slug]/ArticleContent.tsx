@@ -42,6 +42,8 @@ export default function ArticleContent({ post }: ArticleContentProps) {
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
             <Link href="/" className="hover:text-gold transition-colors">Home</Link>
             <span aria-hidden="true">›</span>
+            <span className="text-gray-400">Resources</span>
+            <span aria-hidden="true">›</span>
             <Link href="/knowledge/" className="hover:text-gold transition-colors">Knowledge Hub</Link>
             <span aria-hidden="true">›</span>
             <span className="text-gold line-clamp-1">{post.category}</span>

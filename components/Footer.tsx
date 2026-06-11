@@ -33,14 +33,14 @@ const company = [
   { label: "Our Process",          href: "/ourprocess/" },
   { label: "Quality & Compliance", href: "/qualitycompliance/certifications/" },
   { label: "Careers",              href: "/careers/" },
-  { label: "Knowledge Hub",        href: "/knowledge/" },
 ];
 
 const support = [
-  { label: "Contact Us", href: "/contact-us/" },
-  { label: "FAQs",       href: "/faqs/" },
-  { label: "Downloads",  href: "/downloads/" },
-  { label: "Guides",     href: "/guides/" },
+  { label: "Contact Us",    href: "/contact-us/" },
+  { label: "Knowledge Hub", href: "/knowledge/" },
+  { label: "FAQs",          href: "/faqs/" },
+  { label: "Downloads",     href: "/downloads/" },
+  { label: "Guides",        href: "/guides/" },
 ];
 
 const certifications = ["GOTS", "OEKO-TEX", "BSCI", "ISO 9001", "Sedex", "GRS", "SA8000", "WRAP"];

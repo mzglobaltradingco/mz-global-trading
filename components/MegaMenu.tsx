@@ -66,7 +66,6 @@ const navItems: NavItem[] = [
             { label: "Why Choose Us",  href: "/whychooseus/",   img: "/images/menu/menu-whychooseus.webp",   imgAlt: "Why source with MZ Global Trading — certified factories, QC and on-time delivery guarantee" },
             { label: "Our Process",    href: "/ourprocess/",    img: "/images/menu/menu-ourprocess.webp",    imgAlt: "MZ Global Trading sourcing process — factory selection, sampling, QC and shipment" },
             { label: "Careers",        href: "/careers/",       img: "/images/menu/menu-careers.webp",       imgAlt: "Careers at MZ Global Trading — join Pakistan's trusted B2B textile sourcing team" },
-            { label: "Knowledge Hub",  href: "/knowledge/",     img: "/images/menu/menu-blog.webp",          imgAlt: "Textile sourcing insights and trade guides by MZ Global Trading — knowledge hub for international buyers" },
           ],
         },
         {
@@ -75,6 +74,7 @@ const navItems: NavItem[] = [
           imgAlt: "Textile sourcing resources and tools from MZ Global Trading",
           items: [
             { label: "Textile Tools Calculator", href: "/textile-tools-calculator/", img: "/images/menu/menu-calculator.webp",   imgAlt: "Textile tools calculator — GSM, yardage and production cost estimator for buyers" },
+            { label: "Knowledge Hub", href: "/knowledge/",   img: "/images/menu/menu-blog.webp",          imgAlt: "Textile sourcing insights and trade guides by MZ Global Trading — knowledge hub for international buyers" },
             { label: "FAQs",       href: "/faqs/",       img: "/images/menu/menu-faqs.webp",       imgAlt: "Frequently asked questions about textile sourcing from Pakistan — MZ Global Trading" },
             { label: "Downloads",  href: "/downloads/",  img: "/images/menu/menu-downloads.webp",  imgAlt: "Textile sourcing downloads — specifications, certificates and guides from MZ Global Trading" },
             { label: "Guides",     href: "/guides/",     img: "/images/menu/menu-guides.webp",     imgAlt: "Textile sourcing guides — how to source apparel and home textiles from Pakistan" },

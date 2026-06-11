@@ -60,7 +60,8 @@ const pageSchema = {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-      { "@type": "ListItem", position: 2, name: "Why Choose Us", item: "https://mzglobaltrading.com/whychooseus/" },
+      { "@type": "ListItem", position: 2, name: "Corporate" },
+      { "@type": "ListItem", position: 3, name: "Why Choose Us", item: "https://mzglobaltrading.com/whychooseus/" },
     ],
   },
 };

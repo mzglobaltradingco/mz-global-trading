@@ -58,6 +58,34 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
 
+  const imageUrl = post.image
+    ? `https://mzglobaltrading.com${post.image}`
+    : "https://mzglobaltrading.com/images/og/hero-about.webp";
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `https://mzglobaltrading.com/knowledge/${post.slug}/`,
+    url: `https://mzglobaltrading.com/knowledge/${post.slug}/`,
+    headline: post.title,
+    description: post.excerpt,
+    inLanguage: "en",
+    image: imageUrl,
+    datePublished: post.date,
+    isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
+    author: { "@id": "https://mzglobaltrading.com/#organization" },
+    publisher: { "@id": "https://mzglobaltrading.com/#organization" },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
+        { "@type": "ListItem", position: 2, name: "Resources" },
+        { "@type": "ListItem", position: 3, name: "Knowledge Hub", item: "https://mzglobaltrading.com/knowledge/" },
+        { "@type": "ListItem", position: 4, name: post.title, item: `https://mzglobaltrading.com/knowledge/${post.slug}/` },
+      ],
+    },
+  };
+
   return (
     <>
       <MegaMenu />
@@ -65,6 +93,10 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         <ArticleContent post={post} />
       </main>
       <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
     </>
   );
 }
