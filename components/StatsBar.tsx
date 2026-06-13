@@ -12,17 +12,17 @@ import {
 const stats = [
   {
     icon: "/images/icons/stats/icon-sourcing-experience.svg",
-    value: "15+",
-    label: "Years Experience",
+    value: "10+",
+    label: "Certifications",
   },
   {
     icon: "/images/icons/stats/icon-global-quality.svg",
-    value: "30+",
+    value: "25+",
     label: "Countries Served",
   },
   {
     icon: "/images/icons/stats/icon-trusted-factories.svg",
-    value: "500+",
+    value: "50+",
     label: "Trusted Factories",
   },
   {

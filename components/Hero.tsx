@@ -59,6 +59,7 @@ type SlideData = {
   image?: string;
   imageAlt?: string;
   exploreHref: string;
+  exploreLabel: string;
 };
 
 const slides: SlideData[] = [
@@ -67,6 +68,7 @@ const slides: SlideData[] = [
     category: "APPAREL · HOME TEXTILES · FABRIC",
     tagline: "Complete Textile Sourcing — One Partner",
     exploreHref: "#sourcing-capabilities",
+    exploreLabel: "Explore Products",
   },
   {
     id: "apparel",
@@ -75,6 +77,7 @@ const slides: SlideData[] = [
     category: "APPAREL SOURCING",
     tagline: "T-Shirts · Hoodies · Denim · Workwear",
     exploreHref: "/apparel/",
+    exploreLabel: "Explore Apparel",
   },
   {
     id: "home-textiles",
@@ -83,6 +86,7 @@ const slides: SlideData[] = [
     category: "HOME TEXTILES",
     tagline: "Towels · Bed Linen · Bathrobes · Bath Mats",
     exploreHref: "/hometextile/",
+    exploreLabel: "Explore Home Textiles",
   },
   {
     id: "fabric",
@@ -91,6 +95,7 @@ const slides: SlideData[] = [
     category: "FABRIC EXPORTS",
     tagline: "Knitted · Woven · Denim · Specialty Fabrics",
     exploreHref: "/fabric/",
+    exploreLabel: "Explore Fabric",
   },
 ];
 
@@ -232,7 +237,12 @@ export default function Hero() {
               </p>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
                 Your Trusted Partner in{" "}
-                <span className="text-gold">Textile Sourcing</span>
+                <span className="text-gold">Apparel</span>
+                {", "}
+                <span className="text-gold">Home Textiles</span>
+                {" & "}
+                <span className="text-gold">Fabric</span>
+                {" Sourcing"}
               </h1>
               <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-7">
                 Apparel, Home Textiles and Fabric — certified manufacturers,
@@ -249,7 +259,7 @@ export default function Hero() {
                   href={slide.exploreHref}
                   className="inline-flex items-center justify-center px-7 py-3.5 border border-white/30 text-white font-semibold text-sm rounded hover:border-gold hover:text-gold transition-colors"
                 >
-                  Explore Products
+                  {slide.exploreLabel}
                 </Link>
               </div>
             </motion.div>
@@ -273,8 +283,12 @@ export default function Hero() {
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
                 Your Trusted Partner in{" "}
-                <span className="text-gold">Apparel, Home Textiles</span>
-                {" "}and Fabric Sourcing
+                <span className={slide.id === "apparel" ? "text-gold" : "text-white"}>Apparel</span>
+                {", "}
+                <span className={slide.id === "home-textiles" ? "text-gold" : "text-white"}>Home Textiles</span>
+                {" and "}
+                <span className={slide.id === "fabric" ? "text-gold" : "text-white"}>Fabric</span>
+                {" Sourcing"}
               </h1>
 
               <AnimatePresence mode="wait">
@@ -306,7 +320,7 @@ export default function Hero() {
                   href={slide.exploreHref}
                   className="inline-flex items-center justify-center px-7 py-3.5 border border-white/30 text-white font-semibold text-sm rounded hover:border-gold hover:text-gold transition-colors"
                 >
-                  Explore Products
+                  {slide.exploreLabel}
                 </Link>
               </div>
             </div>

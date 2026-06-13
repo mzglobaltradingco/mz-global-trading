@@ -137,6 +137,7 @@ interface RFQData {
   sizeRangeNotes: string;
   fitType: string;
   sizeStandard: string;
+  sizeStandardOther: string;
   style: string;
   styleOther: string;
   borderType: string;
@@ -168,12 +169,14 @@ interface RFQData {
   individualPack: string;
   setComposition: string;
   masterCarton: string;
+  masterCartonOther: string;
   packingNotes: string;
   fabricSubType: string;
   fabricSubTypeOther: string;
   fabricState: string;
   colorFastnessNotes: string;
   rollLength: string;
+  rollLengthOther: string;
   rollCore: string;
   rollNotes: string;
   certifications: string[];
@@ -211,7 +214,7 @@ const INITIAL: RFQData = {
   fiberContent: "", fiberContentOther: "", compositionNotes: "",
   yarnType: "", yarnTypeOther: "", sustainability: "",
   construction: "", constructionOther: "", weight: "",
-  sizeRange: [], sizeRangeNotes: "", fitType: "", sizeStandard: "",
+  sizeRange: [], sizeRangeNotes: "", fitType: "", sizeStandard: "", sizeStandardOther: "",
   style: "", styleOther: "",
   borderType: "", borderTypeOther: "",
   pocketDepth: "", closureType: "", closureTypeOther: "",
@@ -222,9 +225,9 @@ const INITIAL: RFQData = {
   printType: "", printPlacement: "", printDetail: "",
   finishing: [], finishingOther: "",
   brandLabel: "", careLabel: "", stitchType: "", labelNotes: "",
-  individualPack: "", setComposition: "", masterCarton: "", packingNotes: "",
+  individualPack: "", setComposition: "", masterCarton: "", masterCartonOther: "", packingNotes: "",
   fabricSubType: "", fabricSubTypeOther: "", fabricState: "",
-  colorFastnessNotes: "", rollLength: "", rollCore: "", rollNotes: "",
+  colorFastnessNotes: "", rollLength: "", rollLengthOther: "", rollCore: "", rollNotes: "",
   certifications: [], certOther: "",
   warpYarn: "", weftYarn: "", pileYarn: "", groundYarn: "", picksPerCm: "",
   embellishments: [], embellishmentsOther: "", accessories: [], accessoriesOther: "",
@@ -238,7 +241,7 @@ const SPEC_RESET: Partial<RFQData> = {
   fiberContent: "", fiberContentOther: "", compositionNotes: "",
   yarnType: "", yarnTypeOther: "", sustainability: "",
   construction: "", constructionOther: "", weight: "",
-  sizeRange: [], sizeRangeNotes: "", fitType: "", sizeStandard: "",
+  sizeRange: [], sizeRangeNotes: "", fitType: "", sizeStandard: "", sizeStandardOther: "",
   style: "", styleOther: "",
   borderType: "", borderTypeOther: "",
   pocketDepth: "", closureType: "", closureTypeOther: "",
@@ -249,9 +252,9 @@ const SPEC_RESET: Partial<RFQData> = {
   printType: "", printPlacement: "", printDetail: "",
   finishing: [], finishingOther: "",
   brandLabel: "", careLabel: "", stitchType: "", labelNotes: "",
-  individualPack: "", setComposition: "", masterCarton: "", packingNotes: "",
+  individualPack: "", setComposition: "", masterCarton: "", masterCartonOther: "", packingNotes: "",
   fabricSubType: "", fabricSubTypeOther: "", fabricState: "",
-  colorFastnessNotes: "", rollLength: "", rollCore: "", rollNotes: "",
+  colorFastnessNotes: "", rollLength: "", rollLengthOther: "", rollCore: "", rollNotes: "",
   certifications: [], certOther: "",
   warpYarn: "", weftYarn: "", pileYarn: "", groundYarn: "", picksPerCm: "",
   embellishments: [], embellishmentsOther: "", accessories: [], accessoriesOther: "",
@@ -284,8 +287,8 @@ function getProductTypes(category: string): string[] {
 // ─── Email builder ────────────────────────────────────────────────────────────
 
 function buildEmailBody(f: RFQData): string {
-  const BORDER  = "═".repeat(62);
-  const DIVIDER = "─".repeat(62);
+  const BORDER  = "=".repeat(62);
+  const DIVIDER = "-".repeat(62);
   const submittedAt = new Date().toLocaleString("en-US", {
     day: "numeric", month: "long", year: "numeric",
     hour: "2-digit", minute: "2-digit", timeZoneName: "short",
@@ -296,7 +299,7 @@ function buildEmailBody(f: RFQData): string {
   function block(title: string, rows: string[]): string {
     const populated = rows.filter(Boolean);
     if (populated.length === 0) return "";
-    return [`  ── ${title}`, ...populated].join("\n");
+    return [`  -- ${title}`, ...populated].join("\n");
   }
 
   const certText = f.certifications.length > 0
@@ -348,7 +351,7 @@ function buildEmailBody(f: RFQData): string {
         ]),
         block("STATE & DESIGN", [row("Fabric State", f.printType), row("Color / Pattern", f.pantoneRef), row("Color Fastness Notes", f.colorFastnessNotes)]),
         block("FINISHING", [row("Finish", finishVal)]),
-        block("ROLL PACKING", [row("Roll Length", f.rollLength), row("Roll Core", f.rollCore), row("Notes", f.rollNotes)]),
+        block("ROLL PACKING", [row("Roll Length", f.rollLength.startsWith("Custom") && f.rollLengthOther ? `Custom — ${f.rollLengthOther}` : f.rollLength), row("Roll Core", f.rollCore), row("Notes", f.rollNotes)]),
       ].filter(Boolean).join("\n\n");
     }
 
@@ -370,13 +373,13 @@ function buildEmailBody(f: RFQData): string {
         block("COMPOSITION", [row("Fiber Content", fiberVal), row("Yarn Type", yarnVal), row("Notes", f.compositionNotes)]),
         block("CONSTRUCTION", [row(constructionLabel, constrVal), row(weightLabel, f.weight)]),
         warpWeftNeeded ? block("YARN SPECIFICATION", [row("Warp Yarn", f.warpYarn), row("Weft Yarn", f.weftYarn), row("Picks / Thread Density", f.picksPerCm)]) : "",
-        block("SIZING & STYLE", [row(sizeLabel, sizeDisplay), row("Fit", f.fitType), row("Style", styleVal), row("Size Standard", f.sizeStandard)]),
+        block("SIZING & STYLE", [row(sizeLabel, sizeDisplay), row("Fit", f.fitType), row("Style", styleVal), row("Size Standard", f.sizeStandard === "Custom" && f.sizeStandardOther ? `Custom — ${f.sizeStandardOther}` : f.sizeStandard)]),
         block("COLOR & DYEING", [row("Dyeing Method", f.dyeingMethod), row("No. of Colors", f.numberOfColors), row("Pantone / Color Ref", f.pantoneRef)]),
         block("PRINT & DESIGN", [row("Type", f.printType), row("Placement", f.printPlacement), row("Detail / Notes", f.printDetail)]),
         block("EMBELLISHMENTS & ACCESSORIES", [row("Embellishments", embDisplay), row("Accessories / Trims", accDisplay)]),
         block("FINISHING", [row("Finish", finishVal), row("Stitch Type", f.stitchType)]),
         block("LABELS & BRANDING", [row("Brand Label", f.brandLabel), row("Care Label", f.careLabel), row("Notes", f.labelNotes)]),
-        block("PACKING", [row("Individual Pack", f.individualPack), row("Set Composition", f.setComposition), row("Master Carton", f.masterCarton), row("Notes", f.packingNotes)]),
+        block("PACKING", [row("Individual Pack", f.individualPack), row("Set Composition", f.setComposition), row("Master Carton", f.masterCarton.startsWith("Custom") && f.masterCartonOther ? `Custom — ${f.masterCartonOther}` : f.masterCarton), row("Notes", f.packingNotes)]),
       ].filter(Boolean).join("\n\n");
     }
 
@@ -430,7 +433,8 @@ function buildEmailBody(f: RFQData): string {
     ...(f.notes ? ["", "[4]  ADDITIONAL NOTES", DIVIDER, `  ${f.notes}`] : []),
     "", BORDER,
     "  The buyer confirms they have read and agreed to the Terms of Use",
-    "  at: mzglobaltrading.com/termsofuse/",
+    "  at: mzglobaltrading.com/termsofuse/ and the Privacy Policy",
+    "  at: mzglobaltrading.com/privacypolicy/",
     BORDER,
   ];
   return lines.filter(l => l !== null && l !== undefined).join("\n");
@@ -561,6 +565,7 @@ export default function RFQContent() {
   const [phoneCountry, setPhoneCountry] = useState("us");
   const [errors, setErrors]     = useState<Record<string, string>>({});
   const [status, setStatus]     = useState<Status>("idle");
+  const [clipboardCopied, setClipboardCopied] = useState(false);
   const formRef  = useRef<HTMLDivElement>(null);
   const hasMounted = useRef(false);
 
@@ -658,6 +663,10 @@ export default function RFQContent() {
     if (formData.category && !formData.productType) e.productType = "Please select a product type";
     if (formData.productType === "Other / Multiple" && !formData.productTypeOther.trim())
       e.productTypeOther = "Please describe your product type";
+    if (formData.productType && formData.productType !== "Other / Multiple" && !formData.weight.trim()) {
+      const opts = getProductOptions(formData.productType);
+      e.weight = `${opts?.weightLabel ?? "GSM"} is required`;
+    }
     setErrors(e); focusFirstError(e);
     return Object.keys(e).length === 0;
   }
@@ -700,11 +709,23 @@ export default function RFQContent() {
     setErrors({}); setStep(s => s - 1); scrollToForm();
   }
 
-  function handleSubmit() {
+  async function handleSubmit() {
     const body = buildEmailBody(formData);
-    const subject = encodeURIComponent(`[RFQ] ${formData.category} — ${formData.productType} — ${formData.company}`);
-    window.location.href = `mailto:${RECIPIENT}?subject=${subject}&body=${encodeURIComponent(body)}`;
+    const subject = `[RFQ] ${formData.category} - ${formData.productType} - ${formData.company}`;
+
+    // Copy full body to clipboard before opening mailto.
+    // Mobile email apps silently truncate long mailto URLs — clipboard is the reliable fallback.
+    let copied = false;
+    try {
+      await navigator.clipboard.writeText(body);
+      copied = true;
+    } catch {
+      // Clipboard API blocked or unavailable — mailto still fires, no action needed
+    }
+
+    window.location.href = `mailto:${RECIPIENT}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     try { localStorage.removeItem("rfq_wizard_draft"); } catch { /* ignore */ }
+    setClipboardCopied(copied);
     setStatus("sent");
     scrollToForm();
   }
@@ -865,10 +886,11 @@ export default function RFQContent() {
                           className={`mt-2 ${ic()}`} />
                       )}
                     </div>
-                    <Field id="weight" label={opts.weightLabel}>
+                    <Field id="weight" label={opts.weightLabel} required error={errors.weight}>
                       <input id="weight" name="weight" type="text"
+                        aria-invalid={!!errors.weight}
                         placeholder={opts.weightPlaceholder}
-                        value={formData.weight} onChange={handleChange} className={ic()} />
+                        value={formData.weight} onChange={handleChange} className={ic(errors.weight)} />
                     </Field>
                   </div>
                   {/* Fabric sub-type */}
@@ -901,15 +923,20 @@ export default function RFQContent() {
                     </div>
                   )}
                   {opts.isFabricRoll && (
-                    <Field id="sizeRange0" label="Fabric Width">
-                      <select id="sizeRange0"
-                        value={formData.sizeRange[0] ?? ""}
-                        onChange={e => setFormData(p => ({ ...p, sizeRange: e.target.value ? [e.target.value] : [] }))}
-                        className={ic()}>
-                        <option value="">Select width…</option>
-                        {FABRIC_WIDTHS_FABRIC.map(o => <option key={o} value={o}>{o}</option>)}
-                      </select>
-                    </Field>
+                    <div>
+                      <Field id="sizeRange0" label="Fabric Width">
+                        <select id="sizeRange0"
+                          value={formData.sizeRange[0] ?? ""}
+                          onChange={e => setFormData(p => ({ ...p, sizeRange: e.target.value ? [e.target.value] : [] }))}
+                          className={ic()}>
+                          <option value="">Select width…</option>
+                          {FABRIC_WIDTHS_FABRIC.map(o => <option key={o} value={o}>{o}</option>)}
+                        </select>
+                      </Field>
+                      <OtherInput id="fabricWidthCustom" show={formData.sizeRange[0] === "Custom"}
+                        value={formData.sizeRangeNotes} onChange={v => set("sizeRangeNotes", v)}
+                        placeholder={'e.g. 64" / 163 cm usable width'} />
+                    </div>
                   )}
                 </SpecSection>
               )}
@@ -1001,13 +1028,18 @@ export default function RFQContent() {
                       </div>
                     )}
                     {opts.showSizeStandard && (
-                      <Field id="sizeStandard" label="Size Standard">
-                        <select id="sizeStandard" name="sizeStandard"
-                          value={formData.sizeStandard} onChange={handleChange} className={ic()}>
-                          <option value="">Select…</option>
-                          {SIZE_STANDARDS.map(o => <option key={o} value={o}>{o}</option>)}
-                        </select>
-                      </Field>
+                      <div>
+                        <Field id="sizeStandard" label="Size Standard">
+                          <select id="sizeStandard" name="sizeStandard"
+                            value={formData.sizeStandard} onChange={handleChange} className={ic()}>
+                            <option value="">Select…</option>
+                            {SIZE_STANDARDS.map(o => <option key={o} value={o}>{o}</option>)}
+                          </select>
+                        </Field>
+                        <OtherInput id="sizeStandardOther" show={formData.sizeStandard === "Custom"}
+                          value={formData.sizeStandardOther} onChange={v => set("sizeStandardOther", v)}
+                          placeholder="Describe your custom size standard / size chart" />
+                      </div>
                     )}
                     {opts.showCollarType && (
                       <div>
@@ -1289,13 +1321,18 @@ export default function RFQContent() {
                 <SpecSection title="Packing">
                   {opts.isFabricRoll ? (
                     <div className="grid sm:grid-cols-2 gap-4">
-                      <Field id="rollLength" label="Roll Length">
-                        <select id="rollLength" name="rollLength"
-                          value={formData.rollLength} onChange={handleChange} className={ic()}>
-                          <option value="">Select…</option>
-                          {ROLL_LENGTHS.map(o => <option key={o} value={o}>{o}</option>)}
-                        </select>
-                      </Field>
+                      <div>
+                        <Field id="rollLength" label="Roll Length">
+                          <select id="rollLength" name="rollLength"
+                            value={formData.rollLength} onChange={handleChange} className={ic()}>
+                            <option value="">Select…</option>
+                            {ROLL_LENGTHS.map(o => <option key={o} value={o}>{o}</option>)}
+                          </select>
+                        </Field>
+                        <OtherInput id="rollLengthOther" show={formData.rollLength.startsWith("Custom")}
+                          value={formData.rollLengthOther} onChange={v => set("rollLengthOther", v)}
+                          placeholder="e.g. 120m per roll" />
+                      </div>
                       <Field id="rollCore" label="Roll Core">
                         <select id="rollCore" name="rollCore"
                           value={formData.rollCore} onChange={handleChange} className={ic()}>
@@ -1327,13 +1364,18 @@ export default function RFQContent() {
                           </select>
                         </Field>
                         {formData.category === "Apparel" && (
-                          <Field id="masterCarton" label="Master Carton">
-                            <select id="masterCarton" name="masterCarton"
-                              value={formData.masterCarton} onChange={handleChange} className={ic()}>
-                              <option value="">Select…</option>
-                              {MASTER_CARTONS.map(o => <option key={o} value={o}>{o}</option>)}
-                            </select>
-                          </Field>
+                          <div>
+                            <Field id="masterCarton" label="Master Carton">
+                              <select id="masterCarton" name="masterCarton"
+                                value={formData.masterCarton} onChange={handleChange} className={ic()}>
+                                <option value="">Select…</option>
+                                {MASTER_CARTONS.map(o => <option key={o} value={o}>{o}</option>)}
+                              </select>
+                            </Field>
+                            <OtherInput id="masterCartonOther" show={formData.masterCarton.startsWith("Custom")}
+                              value={formData.masterCartonOther} onChange={v => set("masterCartonOther", v)}
+                              placeholder="e.g. 30 pcs per carton, max 18 kg gross" />
+                          </div>
                         )}
                       </div>
                       <Field id="packingNotes" label="Packing Notes">
@@ -1581,7 +1623,7 @@ export default function RFQContent() {
               {accReviewDisplay && <ReviewRow label="Accessories / Trims" value={accReviewDisplay} />}
               {f.finishing.length > 0 && <ReviewRow label="Finishing" value={finishDisplay} />}
               {f.individualPack && <ReviewRow label="Individual Pack" value={f.individualPack} />}
-              {f.rollLength && <ReviewRow label="Roll Length" value={f.rollLength} />}
+              {f.rollLength && <ReviewRow label="Roll Length" value={f.rollLength.startsWith("Custom") && f.rollLengthOther ? `Custom — ${f.rollLengthOther}` : f.rollLength} />}
             </div>
           </div>
           <div>
@@ -1647,6 +1689,19 @@ export default function RFQContent() {
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 Your email app should now be open with your RFQ pre-filled and addressed to <strong>info@mzglobaltrading.com</strong>. Review it and click <strong>Send</strong> to submit.
               </p>
+
+              {clipboardCopied && (
+                <div className="bg-green-50 border border-green-200 rounded-xl p-4 text-sm mb-4 text-left flex items-start gap-3">
+                  <svg className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5} aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <div>
+                    <p className="text-green-800 font-semibold">Full RFQ copied to clipboard</p>
+                    <p className="text-green-700 text-xs mt-0.5">
+                      If your email app shows incomplete content, click inside the email body and paste (<strong>Ctrl+V</strong> on Windows · <strong>⌘V</strong> on Mac · long-press &rarr; Paste on mobile).
+                    </p>
+                  </div>
+                </div>
+              )}
+
               <div className="bg-gold/8 border border-gold/20 rounded-xl p-4 text-sm text-gray-700 mb-7 text-left">
                 <strong className="text-navy-900">Email did not open?</strong> Compose an email to{" "}
                 <a href={`mailto:${RECIPIENT}`} className="text-gold hover:underline font-medium">{RECIPIENT}</a> with your requirements, or{" "}
@@ -1718,7 +1773,16 @@ export default function RFQContent() {
                 {step === 4 && renderStep4()}
               </AnimatePresence>
 
-              <div className={`flex items-center mt-8 pt-6 border-t border-gray-100 ${step > 1 ? "justify-between" : "justify-end"}`}>
+              {step === 4 && (
+                <p className="text-gray-400 text-xs text-center mt-8 pt-6 border-t border-gray-100">
+                  By submitting you confirm you have read our{" "}
+                  <Link href="/termsofuse/" className="underline underline-offset-2 hover:text-gold transition-colors">Terms of Use</Link>
+                  {" "}and{" "}
+                  <Link href="/privacypolicy/" className="underline underline-offset-2 hover:text-gold transition-colors">Privacy Policy</Link>
+                  . Your details are used solely to process this enquiry.
+                </p>
+              )}
+              <div className={`flex items-center mt-4 ${step === 4 ? "" : "mt-8 pt-6 border-t border-gray-100"} ${step > 1 ? "justify-between" : "justify-end"}`}>
                 {step > 1 && (
                   <button type="button" onClick={handleBack}
                     className="inline-flex items-center gap-2 px-6 py-3 border border-gray-200 text-gray-600 text-sm font-semibold rounded-lg hover:border-gray-300 hover:text-navy-900 transition-colors">

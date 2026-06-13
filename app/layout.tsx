@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 import PageTransitionWrapper from "./PageTransitionWrapper";
+import CookieConsent from "@/components/CookieConsent";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -110,14 +112,7 @@ const organizationSchema = {
     "https://www.facebook.com/mzglobaltradingco/",
     "https://www.linkedin.com/company/mzglobaltrading",
   ],
-  areaServed: [
-    // Primary markets
-    "US", "CA", "GB",
-    "DE", "FR", "NL", "IT", "ES", "BE", "SE", "NO", "DK", "FI",
-    "CH", "AT", "PL", "PT", "IE", "CZ", "HU", "RO", "GR",
-    // South America
-    "BR", "AR", "CL", "CO", "PE", "MX",
-  ],
+  areaServed: "Worldwide",
   knowsAbout: [
     "Apparel Manufacturing",
     "Home Textile Sourcing",
@@ -134,6 +129,48 @@ export default function RootLayout({
   return (
     <html lang="en" className={geistSans.variable}>
       <body className="antialiased">
+        {/* ── Google Consent Mode v2 defaults ─────────────────────────────────
+            beforeInteractive: Next.js injects this into <head> before any JS.
+            Reads the consent cookie so returning visitors never see a flicker. */}
+        <Script id="consent-init" strategy="beforeInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          var _ck = document.cookie.match(/(?:^|; )mz_cookie_consent=([^;]*)/);
+          var _cv = _ck ? _ck[1] : null;
+          gtag('consent', 'default', {
+            analytics_storage:    _cv === 'all' ? 'granted' : 'denied',
+            ad_storage:           'denied',
+            ad_user_data:         'denied',
+            ad_personalization:   'denied',
+            functionality_storage:'granted',
+            security_storage:     'granted',
+            wait_for_update:      _cv ? 0 : 500
+          });
+        `}</Script>
+
+        {/* ── Google Tag Manager ───────────────────────────────────────────────
+            GA4 property G-BEG0E64X9E must be configured as a tag inside GTM.  */}
+        <Script id="gtm-loader" strategy="afterInteractive">{`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+          f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-WS77N5C5');
+        `}</Script>
+
+        {/* GTM noscript fallback — for browsers with JavaScript disabled */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WS77N5C5"
+            height={0}
+            width={0}
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
+
         {/* Skip to main content — keyboard / screen reader navigation */}
         <a
           href="#main-content"
@@ -148,6 +185,9 @@ export default function RootLayout({
         />
 
         <PageTransitionWrapper>{children}</PageTransitionWrapper>
+
+        {/* Cookie consent banner — renders after hydration, z-40 */}
+        <CookieConsent />
       </body>
     </html>
   );

@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 import { fadeUpVariants, viewportOnce } from "@/lib/animations";
 import { formatDate, renderMarkdown, getRelatedPosts } from "@/lib/knowledge";
 import ReadingProgress from "@/components/knowledge/ReadingProgress";
-import ShareButtons from "@/components/knowledge/ShareButtons";
+import ShareBar from "@/components/ShareBar";
+import ContentDisclaimer from "@/components/ContentDisclaimer";
 import RelatedPosts from "@/components/knowledge/RelatedPosts";
 import type { KnowledgePost } from "@/types/knowledge";
 
@@ -132,9 +133,11 @@ export default function ArticleContent({ post }: ArticleContentProps) {
             />
           </motion.div>
 
+          <ContentDisclaimer className="mt-10" />
+
           {/* Share */}
-          <div className="mt-12 pt-8 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
-            <ShareButtons title={post.title} />
+          <div className="mt-8 pt-8 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+            <ShareBar path={`/knowledge/${post.slug}/`} title={post.title} />
 
             <Link
               href="/knowledge/"

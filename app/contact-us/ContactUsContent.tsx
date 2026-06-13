@@ -372,13 +372,20 @@ export default function ContactUsContent() {
                       </svg>
                       Send Message
                     </button>
-                    <p className="text-gray-400 text-xs leading-relaxed">
+                    <p className="text-gray-500 text-sm leading-relaxed animate-pulse">
                       Need a formal quote?{" "}
-                      <Link href="/rfq/" className="text-gold hover:underline">
+                      <Link href="/rfq/" className="text-gold font-bold hover:underline">
                         Use the RFQ form →
                       </Link>
                     </p>
                   </div>
+                  <p className="text-gray-400 text-xs pt-1">
+                    By submitting this form you agree that MZ Global Trading may use your details to respond to your enquiry.{" "}
+                    <Link href="/privacypolicy/" className="underline underline-offset-2 hover:text-gold transition-colors">
+                      Privacy Policy
+                    </Link>
+                    .
+                  </p>
                 </form>
               )}
             </div>

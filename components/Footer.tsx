@@ -47,7 +47,7 @@ const certifications = ["GOTS", "OEKO-TEX", "BSCI", "ISO 9001", "Sedex", "GRS", 
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-gray-700 border-t border-gray-200">
+    <footer className="bg-white text-gray-700 border-t border-gray-200" data-pagefind-ignore>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
 
@@ -173,7 +173,7 @@ export default function Footer() {
                 <li className="text-gray-500 text-xs leading-relaxed pt-1">
                   Office G20, Ground Floor<br />
                   Columbus Tower, Clifton<br />
-                  Karachi, Pakistan
+                  Karachi 75600, Pakistan
                 </li>
               </ul>
             </div>
