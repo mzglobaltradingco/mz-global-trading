@@ -10,8 +10,8 @@
 - **Address:** Office G20, Ground Floor, Columbus Tower, Main Clifton Road, Karachi 75600, Pakistan
 - **Domain:** https://mzglobaltrading.com
 - **Business:** Pakistan-based B2B textile sourcing — apparel, home textiles, fabric
-- **Customers:** Procurement managers, import directors, brand owners, retail buyers in USA, UK, Canada, Europe, South America
-- **NOT targeting:** Pakistan domestic, Middle East, Southeast Asia, Australia
+- **Customers:** Procurement managers, import directors, brand owners, retail buyers in USA, UK, Canada, Europe, South America, Middle East, Southeast Asia, Australia, East Asia (Japan, South Korea), Russia and CIS
+- **NOT targeting:** Pakistan domestic only
 - **Facebook:** https://www.facebook.com/mzglobaltradingco/
 - **LinkedIn:** https://www.linkedin.com/company/mzglobaltrading
 
@@ -25,7 +25,7 @@
 
 3. **WebP for all content images** — product images, hero images, OG images, menu images, card images must be `.webp`. Exception: favicons (`favicon-*.png`, `apple-touch-icon.png`) must remain PNG — browsers and iOS require PNG for system icons.
 
-4. **SEO primary targets: USA, Canada, UK, Europe, South America** — all keyword strategy, copy, and metadata must address international procurement buyers in these markets. Never write content targeting Pakistan-domestic buyers. "Pakistan" appears only as the manufacturing origin, never as the target audience.
+4. **SEO primary targets: USA, Canada, UK, Europe, South America, Middle East, Southeast Asia, Australia, East Asia, Russia/CIS** — all keyword strategy, copy, and metadata must address international procurement buyers in these markets. Never write content targeting Pakistan-domestic buyers. "Pakistan" appears only as the manufacturing origin, never as the target audience.
 
 5. **No scope changes without approval** — never alter navigation structure, page hierarchy, section names, or URL patterns without explicit user instruction.
 
@@ -482,12 +482,13 @@ Fixed `140×80px` containers per cert — `style={{ width: 140, height: 80 }}` w
 ## SEO Strategy
 
 ### Geographic Targeting
-- **Primary:** USA, Canada, UK, all of Europe (EU + non-EU), South America (BR, AR, CL, CO, PE, MX)
-- **Do not target:** Pakistan domestic, Middle East, Southeast Asia, Australia
-- **Mechanism:** `areaServed` in Organization JSON-LD, meta descriptions referencing international buyers, English-language content
+- **Primary:** USA, Canada, UK, all of Europe (EU + non-EU), South America (BR, AR, CL, CO, PE, MX), Middle East (AE, SA, QA, KW, BH, OM, EG, TR, JO), Southeast Asia (SG, MY, TH, ID, PH, VN), Australia, New Zealand, East Asia (JP, KR), Russia and CIS (RU, KZ, UA, UZ, AZ, GE)
+- **Do not target:** Pakistan domestic only
+- **Mechanism:** `areaServed: "Worldwide"` in Organization JSON-LD, meta descriptions referencing international buyers, English-language content
 
 ### `areaServed` Countries (Organization JSON-LD in layout.tsx)
-US, CA, GB, DE, FR, NL, IT, ES, BE, SE, NO, DK, FI, CH, AT, PL, PT, IE, CZ, HU, RO, GR, BR, AR, CL, CO, PE, MX
+Currently set to `"Worldwide"` — covers all target markets. Country-level breakdown for reference:
+North America: US, CA | Europe: GB, DE, FR, NL, IT, ES, BE, SE, NO, DK, FI, CH, AT, PL, PT, IE, CZ, HU, RO, GR | South America: BR, AR, CL, CO, PE, MX | Middle East: AE, SA, QA, KW, BH, OM, EG, TR, JO | SE Asia: SG, MY, TH, ID, PH, VN | Oceania: AU, NZ | East Asia: JP, KR | Russia/CIS: RU, KZ, UA, UZ, AZ, GE
 
 ### Keyword Tiers
 **Tier 1 — Category level:**
@@ -595,13 +596,49 @@ Combined slide panel labels use frosted pill `bg-navy-950/60 backdrop-blur-sm bo
 
 ## Pages Built
 
+### Phase 1 — Authority Foundation (Complete ✓)
+| Page | File |
+|---|---|
+| Homepage | `app/page.tsx` |
+| About Us | `app/our-company/page.tsx` |
+| Why Choose Us | `app/whychooseus/page.tsx` |
+| Our Process | `app/ourprocess/page.tsx` |
+| Quality Policy | `app/quality-policy/page.tsx` |
+| Certifications | `app/qualitycompliance/certifications/page.tsx` |
+| Supplier Evaluation | `app/qualitycompliance/supplierevaluation/page.tsx` |
+| Quality Control | `app/qualitycompliance/qualitycontrol/page.tsx` |
+| Inspection Process | `app/qualitycompliance/inspectionprocess/page.tsx` |
+| Careers | `app/careers/page.tsx` |
+| FAQs | `app/faqs/page.tsx` |
+| Downloads | `app/downloads/page.tsx` |
+| Guides | `app/guides/page.tsx` |
+| Textile Tools Calculator | `app/textile-tools-calculator/page.tsx` |
+| Knowledge Hub | `app/knowledge/page.tsx` |
+| Contact Us | `app/contact-us/page.tsx` |
+| RFQ | `app/rfq/page.tsx` |
+| Privacy Policy | `app/privacypolicy/page.tsx` |
+| Terms of Use | `app/termsofuse/page.tsx` |
+| Search | `app/search/page.tsx` |
+
+### Phase 1 — First Product Leaf (Complete ✓)
+| Page | File |
+|---|---|
+| Towels | `app/hometextile/bathlinen/towels/page.tsx` |
+
+### Phase 2 — Pillar Pages (Next)
 | Page | File | Status |
 |---|---|---|
-| Homepage | `app/page.tsx` | Complete |
-| About Us | `app/our-company/page.tsx` | Complete |
-| Why Choose Us | `app/whychooseus/page.tsx` | Complete |
-| Our Process | `app/ourprocess/page.tsx` | Complete |
-| Towels | `app/hometextile/bathlinen/towels/page.tsx` | Complete |
+| Apparel | `app/apparel/page.tsx` | Pending |
+| Home Textiles | `app/hometextile/page.tsx` | Pending |
+| Fabric | `app/fabric/page.tsx` | Pending |
+
+### Phase 3 — Cluster Pages (After Pillars)
+/apparel/knittedgarments/, /apparel/wovengarments/, /apparel/babyandkids/
+/hometextile/bathlinen/, /hometextile/bedlinen/, /hometextile/kitchenlinen/
+/hometextile/tablelinen/, /hometextile/thermalblankets/, /hometextile/hospitallinen/, /hometextile/industriallinen/
+
+### Phase 4 — Product Leaf Pages (54 remaining)
+All remaining sitemap URLs under /apparel/*/* and /hometextile/*/* and /fabric/*/
 
 ---
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -453,16 +453,31 @@ export default function MegaMenu() {
 
   const openMenu = (id: string) => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
-    if (id !== activeMenu) setPreview(null); // reset preview when switching menus
+    if (id !== activeMenu) setPreview(null);
     setActiveMenu(id);
   };
   const startClose = () => {
-    closeTimer.current = setTimeout(() => setActiveMenu(null), 120);
+    // Always clear the previous timer before scheduling a new one —
+    // without this, rapid re-entry creates orphaned timers that fire
+    // and close the panel even after the mouse has re-entered.
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setActiveMenu(null), 280);
   };
   const cancelClose = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
   };
-  const closeAll = () => setActiveMenu(null);
+  const closeAll = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setActiveMenu(null);
+  };
+
+  // Close on Escape key and on any click outside the header
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") closeAll(); };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const activeItem = navItems.find((n) => n.id === activeMenu);
 
@@ -485,6 +500,7 @@ export default function MegaMenu() {
             className="fixed inset-0 bg-black/50 z-40 hidden lg:block"
             style={{ top: 128 }}
             onMouseEnter={startClose}
+            onClick={closeAll}
           />
         )}
       </AnimatePresence>

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | MZ Global Trading",
   },
   description:
-    "B2B textile sourcing partner for brands and retailers in the USA, UK, Canada, and Europe. Source apparel, home textiles, and fabric from Pakistan's certified manufacturers.",
+    "Pakistan textile sourcing for brands in USA, UK, Canada, Europe and South America. Certified apparel, home textiles and fabric manufacturers.",
   keywords: [
     "apparel manufacturer Pakistan",
     "home textile supplier wholesale",
