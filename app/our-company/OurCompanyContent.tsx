@@ -31,7 +31,7 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 
 const stats = [
   { value: 50,  suffix: "+", label: "Vetted Factories",      desc: "Across Pakistan's textile hubs" },
-  { value: 25,  suffix: "+", label: "Export Markets",        desc: "USA, UK, Europe, South America" },
+  { value: 35,  suffix: "+", label: "Export Markets",        desc: "USA, UK, Europe, Middle East, Asia, Australia" },
   { value: 10,  suffix: "+", label: "Factory Certifications", desc: "Held across our vetted factory network" },
   { value: 95,  suffix: "%", label: "On-Time Delivery",      desc: "Consistent, trackable performance" },
 ];
@@ -207,7 +207,7 @@ export default function OurCompanyContent() {
         title="About"
         titleGold="MZ Global Trading"
         description="Pakistan's trusted B2B textile sourcing partner — connecting international brands, importers, and retailers with certified manufacturers across apparel, home textiles, and fabric."
-        pills={["50+ Vetted Factories", "25+ Export Markets", "10+ Factory Certifications"]}
+        pills={["50+ Vetted Factories", "35+ Export Markets", "10+ Factory Certifications"]}
       />
 
       {/* ── 2. Who We Are ────────────────────────────────────────────────── */}

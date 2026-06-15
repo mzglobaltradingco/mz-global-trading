@@ -366,8 +366,8 @@ export default function OurProcessContent() {
         label="The Sourcing Process"
         title="From Pakistan."
         titleGold="To Everywhere."
-        description="We connect international buyers in 25+ countries with Pakistan's most capable textile manufacturers — managing every step from factory matching through production, QC and delivery to your door."
-        pills={["50+ Vetted Factories", "25+ Export Markets", "End-to-End Managed"]}
+        description="We connect international buyers in 35+ countries with Pakistan's most capable textile manufacturers — managing every step from factory matching through production, QC and delivery to your door."
+        pills={["50+ Vetted Factories", "35+ Export Markets", "End-to-End Managed"]}
       />
 
       {/* ── 2. Sourcing Network Map ───────────────────────────────────────── */}

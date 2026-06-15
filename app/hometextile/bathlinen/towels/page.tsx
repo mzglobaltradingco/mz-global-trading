@@ -4,77 +4,73 @@ import Footer from "@/components/Footer";
 import TowelsContent from "./TowelsContent";
 
 export const metadata: Metadata = {
-  title: "Towels Manufacturer & Exporter Pakistan | MZ Global Trading",
+  title: "Towel Manufacturer Pakistan | Bath Towels Wholesale OEM",
   description:
-    "Source premium towels from Pakistan — bath, beach, hand, kitchen, institutional & more. 44 towel types, 20+ yarn options, 12 weaving techniques. Request a quote today.",
+    "Source OEM bath towels from Pakistan — 6 weave constructions, terry loop to zero twist, OEKO-TEX & GOTS certified. Hotel, retail and hospitality programmes for USA, UK, Europe and worldwide.",
   keywords: [
-    "towels manufacturer Pakistan",
-    "bath towels wholesale",
-    "beach towels exporter Pakistan",
-    "custom towels B2B",
-    "terry towels Pakistan",
-    "hotel towels supplier Pakistan",
-    "cotton towels OEM export",
-    "towel manufacturer USA UK Europe",
+    "towel manufacturer Pakistan",
+    "bath towel wholesale OEM Pakistan",
+    "terry towel manufacturer exporter",
+    "hotel towels bulk supplier Pakistan",
+    "GOTS certified towel manufacturer",
+    "custom towels OEM Pakistan USA UK Europe",
+    "cotton bath towel supplier",
+    "home textile manufacturer Pakistan",
   ],
-  alternates: {
-    canonical: "/hometextile/bathlinen/towels/",
-    languages: {
-      "en": "https://mzglobaltrading.com/hometextile/bathlinen/towels/",
-      "x-default": "https://mzglobaltrading.com/",
-    },
-  },
+  alternates: { canonical: "/hometextile/bathlinen/towels/" },
   openGraph: {
-    title: "Towels Manufacturer & Exporter Pakistan | MZ Global Trading",
+    title: "Towel Manufacturer Pakistan | Bath Towels Wholesale OEM | MZ Global Trading",
     description:
-      "44 towel types sourced from Pakistan's certified mills. Competitive pricing, custom branding, global shipping to USA, UK and Europe.",
+      "Pakistan OEM bath towel manufacturer. 6 weave constructions, OEKO-TEX and GOTS certified terry. Hotel, retail and hospitality supply for USA, UK, Europe and Middle East.",
     url: "https://mzglobaltrading.com/hometextile/bathlinen/towels/",
     images: [
       {
         url: "/images/thumbnails/thumb-towels.webp",
         width: 1200,
         height: 630,
-        alt: "Pakistan terry cotton towel manufacturer — wholesale bath towels for hotels and retailers in USA, UK and Europe",
-        type: "image/webp",
+        alt: "Pakistan bath towel manufacturer — OEM terry cotton towels for hotels and retailers in USA, UK and Europe",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Towels Manufacturer & Exporter Pakistan | MZ Global Trading",
+    title: "Towel Manufacturer Pakistan | Bath Towels Wholesale OEM | MZ Global Trading",
     description:
-      "44 towel types sourced from Pakistan's certified mills. Competitive pricing, custom branding, global shipping to USA, UK and Europe.",
-  },
-};
-
-const towelsSchema = {
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "@id": "https://mzglobaltrading.com/hometextile/bathlinen/towels/",
-  url: "https://mzglobaltrading.com/hometextile/bathlinen/towels/",
-  name: "Towels Manufacturer & Exporter Pakistan | MZ Global Trading",
-  description:
-    "Source premium towels from Pakistan — bath, beach, hand, kitchen, institutional and more. 44 towel types, 20+ yarn options, 12 weaving techniques.",
-  inLanguage: "en",
-  isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
-  about: { "@id": "https://mzglobaltrading.com/#organization" },
-  primaryImageOfPage: {
-    "@type": "ImageObject",
-    contentUrl: "https://mzglobaltrading.com/images/thumbnails/thumb-towels.webp",
-    name: "Pakistan terry cotton towel manufacturer — wholesale bath towels for hotels and retailers in USA, UK and Europe",
-  },
-  breadcrumb: {
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-      { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://mzglobaltrading.com/hometextile/" },
-      { "@type": "ListItem", position: 3, name: "Bath Linen", item: "https://mzglobaltrading.com/hometextile/bathlinen/" },
-      { "@type": "ListItem", position: 4, name: "Towels", item: "https://mzglobaltrading.com/hometextile/bathlinen/towels/" },
-    ],
+      "Pakistan OEM bath towel manufacturer. 6 weave constructions, OEKO-TEX & GOTS certified. Hotel, retail and hospitality supply for USA, UK and Europe.",
   },
 };
 
 export default function TowelsPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Bath Towels — OEM Manufacturing Pakistan",
+    description:
+      "Pakistan OEM bath towel manufacturer producing terry loop, velour, zero twist, waffle, jacquard and dobby border towels in certified cotton for hotels, retailers and hospitality brands in USA, UK and Europe.",
+    image: "https://mzglobaltrading.com/images/thumbnails/thumb-towels.webp",
+    brand: { "@type": "Brand", name: "MZ Global Trading" },
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      seller: { "@type": "Organization", name: "MZ Global Trading" },
+    },
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      contentUrl: "https://mzglobaltrading.com/images/thumbnails/thumb-towels.webp",
+      name: "Pakistan bath towel manufacturer — OEM terry cotton towels for hotels and retailers in USA, UK and Europe",
+    },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
+        { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://mzglobaltrading.com/hometextile/" },
+        { "@type": "ListItem", position: 3, name: "Bath Linen", item: "https://mzglobaltrading.com/hometextile/bathlinen/" },
+        { "@type": "ListItem", position: 4, name: "Towels", item: "https://mzglobaltrading.com/hometextile/bathlinen/towels/" },
+      ],
+    },
+  };
+
   return (
     <>
       <MegaMenu />
@@ -82,10 +78,7 @@ export default function TowelsPage() {
         <TowelsContent />
       </main>
       <Footer />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(towelsSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </>
   );
 }
