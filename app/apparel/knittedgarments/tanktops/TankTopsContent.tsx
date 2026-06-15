@@ -489,15 +489,21 @@ export default function TankTopsContent() {
           {/* Row 3: Markets + Certifications + Export */}
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-6">
             <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
-              className="md:col-span-2 bg-indigo-50 border border-indigo-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
+              className="md:col-span-2 bg-indigo-50 border border-indigo-100 rounded-2xl p-6 flex flex-col gap-4 min-h-[260px]"
             >
-              <span className="text-2xl mb-3" aria-hidden="true">🌍</span>
-              <h3 className="text-lg font-bold text-navy-900 mb-3">Markets &amp; Buyer Sectors</h3>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl" aria-hidden="true">🌍</span>
+                <div>
+                  <p className="text-indigo-600 text-xs font-semibold tracking-[0.2em] uppercase">Markets</p>
+                  <h3 className="text-lg font-bold text-navy-900 mt-0.5">Buyer Sectors</h3>
+                </div>
+              </div>
               <div className="grid grid-cols-2 gap-2 flex-1">
                 {SECTORS.slice(0, 4).map((s) => (
-                  <div key={s.abbr} className="bg-white rounded-lg p-2.5 border border-indigo-100">
+                  <div key={s.abbr} className="bg-white rounded-xl p-3 border border-indigo-100">
                     <p className="text-[10px] font-bold text-indigo-600">{s.abbr}</p>
                     <p className="text-xs font-semibold text-navy-900 leading-tight">{s.name}</p>
+                    <p className="text-[10px] text-gray-400 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -505,14 +511,19 @@ export default function TankTopsContent() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.05 }}
-              className="md:col-span-2 bg-amber-50 border border-amber-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
+              className="md:col-span-2 bg-amber-50 border border-amber-100 rounded-2xl p-6 flex flex-col gap-4 min-h-[260px]"
             >
-              <span className="text-2xl mb-3" aria-hidden="true">🏅</span>
-              <h3 className="text-lg font-bold text-navy-900 mb-3">Certifications</h3>
-              <div className="grid grid-cols-3 gap-2 flex-1">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl" aria-hidden="true">🏅</span>
+                <div>
+                  <p className="text-amber-600 text-xs font-semibold tracking-[0.2em] uppercase">Standards</p>
+                  <h3 className="text-lg font-bold text-navy-900 mt-0.5">Certifications</h3>
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-2 flex-1 content-start">
                 {CERTIFICATIONS.slice(0, 6).map((c) => (
-                  <div key={c.name} className="bg-white rounded-xl border-2 border-amber-100 flex items-center justify-center p-2 aspect-square">
-                    <p className="text-[10px] font-bold text-navy-900 text-center leading-tight">{c.name}</p>
+                  <div key={c.name} className="bg-white rounded-xl border border-amber-100 flex items-center justify-center p-2" style={{ height: 52 }}>
+                    <Image src={c.img} alt={`${c.name} — ${c.full}`} width={72} height={40} className="object-contain w-full h-full" />
                   </div>
                 ))}
               </div>
@@ -520,15 +531,25 @@ export default function TankTopsContent() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}
-              className="md:col-span-1 bg-orange-50 border border-orange-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
+              className="md:col-span-1 bg-orange-50 border border-orange-100 rounded-2xl p-6 flex flex-col gap-4 min-h-[260px]"
             >
-              <span className="text-2xl mb-3" aria-hidden="true">🚢</span>
-              <h3 className="text-lg font-bold text-navy-900 mb-3">Export Terms</h3>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl" aria-hidden="true">🚢</span>
+                <div>
+                  <p className="text-orange-500 text-xs font-semibold tracking-[0.2em] uppercase">Export</p>
+                  <h3 className="text-base font-bold text-navy-900 mt-0.5">Export Terms</h3>
+                </div>
+              </div>
               <div className="flex flex-col gap-2 flex-1">
                 {EXPORT_TERMS.map((e) => (
-                  <div key={e.term} className="bg-white rounded-lg px-3 py-2 border border-orange-100">
-                    <p className="text-xs font-bold text-navy-900">{e.term}</p>
-                    <p className="text-[10px] text-gray-400">{e.port}</p>
+                  <div key={e.term} className="flex items-center gap-2.5 bg-white rounded-lg px-3 py-2 border border-orange-100">
+                    <span className="w-9 h-9 rounded-lg bg-orange-100 text-orange-600 text-[10px] font-bold flex items-center justify-center shrink-0">
+                      {e.term}
+                    </span>
+                    <div>
+                      <p className="text-xs font-semibold text-navy-900">{e.full}</p>
+                      <p className="text-[10px] text-gray-400">{e.port}</p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -539,15 +560,23 @@ export default function TankTopsContent() {
           {/* Row 4: Sustainability + Process */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
-              className="md:col-span-1 bg-lime-50 border border-lime-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
+              className="md:col-span-1 bg-lime-50 border border-lime-100 rounded-2xl p-6 flex flex-col gap-4 min-h-[260px]"
             >
-              <span className="text-2xl mb-3" aria-hidden="true">🌿</span>
-              <h3 className="text-lg font-bold text-navy-900 mb-3">Sustainability</h3>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl" aria-hidden="true">🌿</span>
+                <div>
+                  <p className="text-lime-700 text-xs font-semibold tracking-[0.2em] uppercase">Ethics</p>
+                  <h3 className="text-lg font-bold text-navy-900 mt-0.5">Sustainability</h3>
+                </div>
+              </div>
               <div className="flex flex-col gap-2 flex-1">
                 {SUSTAINABILITY_ITEMS.slice(0, 3).map((s) => (
-                  <div key={s.title} className="flex items-start gap-2">
-                    <span className="shrink-0" aria-hidden="true">{s.icon}</span>
-                    <p className="text-xs text-gray-600 leading-tight">{s.title}</p>
+                  <div key={s.title} className="bg-white rounded-xl px-3 py-2.5 border border-lime-100 flex items-center gap-2.5">
+                    <span className="text-base shrink-0" aria-hidden="true">{s.icon}</span>
+                    <div className="min-w-0">
+                      <p className="text-xs font-semibold text-navy-900 leading-tight">{s.title}</p>
+                      <span className="text-[10px] font-semibold text-lime-700 bg-lime-100 px-1.5 py-0.5 rounded-full">{s.tag}</span>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -555,16 +584,21 @@ export default function TankTopsContent() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}
-              className="md:col-span-2 bg-white border border-gray-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
+              className="md:col-span-2 bg-white border border-gray-100 rounded-2xl p-6 flex flex-col gap-4 min-h-[260px]"
             >
-              <span className="text-2xl mb-3" aria-hidden="true">⚙️</span>
-              <h3 className="text-lg font-bold text-navy-900 mb-3">Sourcing Process</h3>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl" aria-hidden="true">⚙️</span>
+                <div>
+                  <p className="text-gray-400 text-xs font-semibold tracking-[0.2em] uppercase">Process</p>
+                  <h3 className="text-lg font-bold text-navy-900 mt-0.5">Sourcing Process</h3>
+                </div>
+              </div>
               <div className="grid grid-cols-3 gap-3 flex-1">
                 {PROCESS_STEPS.map((p) => (
-                  <div key={p.num} className="flex flex-col">
-                    <p className="text-2xl font-black text-gray-100 leading-none">{p.num}</p>
-                    <p className="text-xs font-bold text-navy-900 mt-1">{p.short}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5 leading-tight">{p.desc.slice(0, 50)}…</p>
+                  <div key={p.num} className="bg-gray-50 rounded-xl p-3 border border-gray-100 flex flex-col gap-1">
+                    <p className="text-xl font-black text-gray-200 leading-none">{p.num}</p>
+                    <p className="text-xs font-bold text-navy-900">{p.short}</p>
+                    <p className="text-[10px] text-gray-400 leading-tight">{p.desc.slice(0, 48)}…</p>
                   </div>
                 ))}
               </div>
@@ -826,12 +860,12 @@ export default function TankTopsContent() {
               ))}
             </div>
 
-            <div className="bg-white rounded-2xl overflow-hidden border border-teal-100">
+            <div className="bg-white rounded-2xl overflow-hidden border border-teal-100 flex flex-col">
               <div className="bg-[#0D1B2A] px-6 py-4">
                 <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase">Decoration × Construction Compatibility</p>
                 <p className="text-white text-sm mt-1">Which decoration methods work with each tank top fabric</p>
               </div>
-              <div className="overflow-x-auto">
+              <div className="overflow-x-auto flex-1">
                 <table className="w-full min-w-[520px] text-xs border-collapse">
                   <thead>
                     <tr className="bg-gray-50 border-b border-gray-100">
