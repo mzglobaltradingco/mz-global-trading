@@ -488,7 +488,6 @@ export default function BathrobesContent() {
               <div className="flex items-start gap-3">
                 <span className="text-2xl" aria-hidden="true">🛁</span>
                 <div>
-                  <p className="text-indigo-400 text-xs font-semibold tracking-[0.2em] uppercase">Cinematic</p>
                   <h3 className="text-xl font-bold text-white mt-0.5">Bathrobe Constructions</h3>
                 </div>
               </div>
@@ -519,7 +518,6 @@ export default function BathrobesContent() {
               <div className="flex items-start gap-3">
                 <span className="text-2xl" aria-hidden="true">👗</span>
                 <div>
-                  <p className="text-rose-600 text-xs font-semibold tracking-[0.2em] uppercase">Editorial</p>
                   <h3 className="text-xl font-bold text-navy-900 mt-0.5">Collar Styles</h3>
                 </div>
               </div>

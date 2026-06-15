@@ -380,8 +380,7 @@ export default function TankTopsContent() {
               <div className="flex items-start gap-3">
                 <span className="text-2xl" aria-hidden="true">🧵</span>
                 <div>
-                  <p className="text-sky-600 text-xs font-semibold tracking-[0.2em] uppercase">Product Showcase</p>
-                  <h3 className="text-xl font-bold text-navy-900 mt-0.5">Fabric Constructions</h3>
+                  <h3 className="text-xl font-bold text-navy-900">Fabric Constructions</h3>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-3 flex-1">
@@ -429,7 +428,6 @@ export default function TankTopsContent() {
               className="bg-slate-50 border border-slate-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
             >
               <span className="text-2xl mb-3" aria-hidden="true">⚖️</span>
-              <p className="text-slate-500 text-xs font-semibold tracking-[0.2em] uppercase mb-1">Dashboard</p>
               <h3 className="text-lg font-bold text-navy-900 mb-3">GSM Weight Guide</h3>
               <div className="flex flex-col gap-2 flex-1">
                 {GSM_TIERS.map((t) => (
@@ -446,7 +444,6 @@ export default function TankTopsContent() {
               className="bg-fuchsia-50 border border-fuchsia-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
             >
               <span className="text-2xl mb-3" aria-hidden="true">🎨</span>
-              <p className="text-fuchsia-600 text-xs font-semibold tracking-[0.2em] uppercase mb-1">Maximalist</p>
               <h3 className="text-lg font-bold text-navy-900 mb-3">Decoration Methods</h3>
               <div className="flex flex-col gap-1.5 flex-1">
                 {DECO_METHODS.map((d) => (
@@ -463,7 +460,6 @@ export default function TankTopsContent() {
               className="bg-gray-100 border border-gray-200 rounded-2xl p-6 flex flex-col min-h-[220px]"
             >
               <span className="text-2xl mb-3" aria-hidden="true">🎨</span>
-              <p className="text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase mb-1">Monochrome</p>
               <h3 className="text-lg font-bold text-navy-900 mb-3">Colour &amp; Dye Options</h3>
               <div className="grid grid-cols-5 gap-1 flex-1">
                 {DYE_OPTIONS.flatMap((d) => d.swatches).slice(0, 10).map((sw, i) => (
@@ -477,7 +473,6 @@ export default function TankTopsContent() {
               className="bg-teal-50 border border-teal-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
             >
               <span className="text-2xl mb-3" aria-hidden="true">🏭</span>
-              <p className="text-teal-600 text-xs font-semibold tracking-[0.2em] uppercase mb-1">Split-Screen</p>
               <h3 className="text-lg font-bold text-navy-900 mb-3">OEM Capabilities</h3>
               <div className="flex flex-col gap-1.5 flex-1">
                 {OEM_FEATURES.slice(0, 4).map((f) => (
@@ -497,7 +492,6 @@ export default function TankTopsContent() {
               className="md:col-span-2 bg-indigo-50 border border-indigo-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
             >
               <span className="text-2xl mb-3" aria-hidden="true">🌍</span>
-              <p className="text-indigo-600 text-xs font-semibold tracking-[0.2em] uppercase mb-1">Card-Based</p>
               <h3 className="text-lg font-bold text-navy-900 mb-3">Markets &amp; Buyer Sectors</h3>
               <div className="grid grid-cols-2 gap-2 flex-1">
                 {SECTORS.slice(0, 4).map((s) => (
@@ -514,7 +508,6 @@ export default function TankTopsContent() {
               className="md:col-span-2 bg-amber-50 border border-amber-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
             >
               <span className="text-2xl mb-3" aria-hidden="true">🏅</span>
-              <p className="text-amber-600 text-xs font-semibold tracking-[0.2em] uppercase mb-1">Skeuomorphic</p>
               <h3 className="text-lg font-bold text-navy-900 mb-3">Certifications</h3>
               <div className="grid grid-cols-3 gap-2 flex-1">
                 {CERTIFICATIONS.slice(0, 6).map((c) => (
@@ -530,7 +523,6 @@ export default function TankTopsContent() {
               className="md:col-span-1 bg-orange-50 border border-orange-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
             >
               <span className="text-2xl mb-3" aria-hidden="true">🚢</span>
-              <p className="text-orange-600 text-xs font-semibold tracking-[0.2em] uppercase mb-1">Editorial</p>
               <h3 className="text-lg font-bold text-navy-900 mb-3">Export Terms</h3>
               <div className="flex flex-col gap-2 flex-1">
                 {EXPORT_TERMS.map((e) => (
@@ -550,7 +542,6 @@ export default function TankTopsContent() {
               className="md:col-span-1 bg-lime-50 border border-lime-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
             >
               <span className="text-2xl mb-3" aria-hidden="true">🌿</span>
-              <p className="text-lime-600 text-xs font-semibold tracking-[0.2em] uppercase mb-1">Flat Design</p>
               <h3 className="text-lg font-bold text-navy-900 mb-3">Sustainability</h3>
               <div className="flex flex-col gap-2 flex-1">
                 {SUSTAINABILITY_ITEMS.slice(0, 3).map((s) => (
@@ -567,7 +558,6 @@ export default function TankTopsContent() {
               className="md:col-span-2 bg-white border border-gray-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
             >
               <span className="text-2xl mb-3" aria-hidden="true">⚙️</span>
-              <p className="text-gray-400 text-xs font-semibold tracking-[0.2em] uppercase mb-1">Swiss Design</p>
               <h3 className="text-lg font-bold text-navy-900 mb-3">Sourcing Process</h3>
               <div className="grid grid-cols-3 gap-3 flex-1">
                 {PROCESS_STEPS.map((p) => (
@@ -810,7 +800,7 @@ export default function TankTopsContent() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════════════
-          SECTION 6 — OEM (Split-Screen UI + Comparison Table)
+          SECTION 6 — OEM
       ════════════════════════════════════════════════════════════════════════ */}
       <section id="section-oem" className="bg-teal-50 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -838,33 +828,88 @@ export default function TankTopsContent() {
 
             <div className="bg-white rounded-2xl overflow-hidden border border-teal-100">
               <div className="bg-[#0D1B2A] px-6 py-4">
-                <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase">Programme Size Guide</p>
-                <p className="text-white text-sm mt-1">Order quantities by construction and decoration type</p>
+                <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase">Decoration × Construction Compatibility</p>
+                <p className="text-white text-sm mt-1">Which decoration methods work with each tank top fabric</p>
               </div>
-              <div className="overflow-x-auto -mx-0">
-                <div className="min-w-[400px]">
-                  <div className="grid grid-cols-3 bg-gray-50 border-b border-gray-100 text-xs font-bold text-gray-500 uppercase tracking-wider">
-                    <div className="px-4 py-3">Construction</div>
-                    <div className="px-4 py-3">Plain / Basic</div>
-                    <div className="px-4 py-3">With Decoration</div>
-                  </div>
-                  {[
-                    { fabric: "Single Jersey", plain: "Consult RFQ", decorated: "Consult RFQ" },
-                    { fabric: "Rib (1×1)", plain: "Consult RFQ", decorated: "Consult RFQ" },
-                    { fabric: "Mesh / Eyelet", plain: "Consult RFQ", decorated: "Consult RFQ" },
-                    { fabric: "Bamboo Jersey", plain: "Consult RFQ", decorated: "Consult RFQ" },
-                    { fabric: "Slub Jersey", plain: "Consult RFQ", decorated: "Consult RFQ" },
-                  ].map((r, i) => (
-                    <div key={r.fabric} className={`grid grid-cols-3 border-b border-gray-50 text-sm ${i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}`}>
-                      <div className="px-4 py-3 font-semibold text-navy-900 text-xs">{r.fabric}</div>
-                      <div className="px-4 py-3 text-teal-600 text-xs font-medium">{r.plain}</div>
-                      <div className="px-4 py-3 text-teal-600 text-xs font-medium">{r.decorated}</div>
-                    </div>
-                  ))}
-                </div>
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[520px] text-xs border-collapse">
+                  <thead>
+                    <tr className="bg-gray-50 border-b border-gray-100">
+                      <th className="px-4 py-3 text-left font-bold text-gray-500 uppercase tracking-wider w-[28%]">Construction</th>
+                      <th className="px-3 py-3 text-center font-bold text-gray-500 uppercase tracking-wider">Screen Print</th>
+                      <th className="px-3 py-3 text-center font-bold text-gray-500 uppercase tracking-wider">Embroidery</th>
+                      <th className="px-3 py-3 text-center font-bold text-gray-500 uppercase tracking-wider">DTG</th>
+                      <th className="px-3 py-3 text-center font-bold text-gray-500 uppercase tracking-wider">Sublimation</th>
+                      <th className="px-3 py-3 text-center font-bold text-gray-500 uppercase tracking-wider">Heat Transfer</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      {
+                        fabric: "Single Jersey",
+                        cols: [
+                          { label: "✓ Best", cls: "text-emerald-700 font-bold" },
+                          { label: "✓", cls: "text-emerald-600 font-semibold" },
+                          { label: "✓", cls: "text-emerald-600 font-semibold" },
+                          { label: "✓ (poly blend)", cls: "text-amber-600 font-medium" },
+                          { label: "✓", cls: "text-emerald-600 font-semibold" },
+                        ],
+                      },
+                      {
+                        fabric: "Rib (1×1)",
+                        cols: [
+                          { label: "✓ (flat-bed)", cls: "text-amber-600 font-medium" },
+                          { label: "✓ Best", cls: "text-emerald-700 font-bold" },
+                          { label: "✗", cls: "text-red-400 font-medium" },
+                          { label: "✗", cls: "text-red-400 font-medium" },
+                          { label: "✓", cls: "text-emerald-600 font-semibold" },
+                        ],
+                      },
+                      {
+                        fabric: "Mesh / Eyelet",
+                        cols: [
+                          { label: "✗", cls: "text-red-400 font-medium" },
+                          { label: "✗", cls: "text-red-400 font-medium" },
+                          { label: "✗", cls: "text-red-400 font-medium" },
+                          { label: "✓ Best (poly)", cls: "text-emerald-700 font-bold" },
+                          { label: "✓", cls: "text-emerald-600 font-semibold" },
+                        ],
+                      },
+                      {
+                        fabric: "Slub Jersey",
+                        cols: [
+                          { label: "✓ (soft-hand)", cls: "text-amber-600 font-medium" },
+                          { label: "✓", cls: "text-emerald-600 font-semibold" },
+                          { label: "✗", cls: "text-red-400 font-medium" },
+                          { label: "✗", cls: "text-red-400 font-medium" },
+                          { label: "✓", cls: "text-emerald-600 font-semibold" },
+                        ],
+                      },
+                      {
+                        fabric: "Bamboo Jersey",
+                        cols: [
+                          { label: "✓ (water-based)", cls: "text-amber-600 font-medium" },
+                          { label: "✓", cls: "text-emerald-600 font-semibold" },
+                          { label: "✗", cls: "text-red-400 font-medium" },
+                          { label: "✗", cls: "text-red-400 font-medium" },
+                          { label: "✓", cls: "text-emerald-600 font-semibold" },
+                        ],
+                      },
+                    ].map((r, i) => (
+                      <tr key={r.fabric} className={i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}>
+                        <td className="px-4 py-3 font-semibold text-navy-900">{r.fabric}</td>
+                        {r.cols.map((c, j) => (
+                          <td key={j} className={`px-3 py-3 text-center ${c.cls}`}>{c.label}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
-              <div className="px-5 py-4 bg-amber-50 border-t border-amber-100">
-                <p className="text-xs text-amber-700">⚠ Order quantities are programme-specific and depend on construction, colour count, decoration method and factory scheduling. Submit your RFQ for a tailored quantity structure.</p>
+              <div className="px-5 py-4 bg-teal-50 border-t border-teal-100 flex flex-wrap gap-4 text-xs text-gray-600">
+                <span><span className="font-bold text-emerald-700">✓ Best</span> — Optimal result for this construction</span>
+                <span><span className="font-bold text-amber-600">✓ (note)</span> — Works with specific technique or ink type</span>
+                <span><span className="font-bold text-red-400">✗</span> — Not recommended (poor adhesion or distortion)</span>
               </div>
             </div>
           </div>

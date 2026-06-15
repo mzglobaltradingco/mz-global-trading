@@ -785,6 +785,12 @@ export default function HoodiesContent() {
                     : "bg-white text-navy-900 border-navy-900 hover:shadow-[4px_4px_0_#0D1B2A]"
                 }`}
               >
+                {activeConstruction !== c.id && (
+                  <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5" aria-hidden="true">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-60" />
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold" />
+                  </span>
+                )}
                 {c.name}
               </button>
             ))}

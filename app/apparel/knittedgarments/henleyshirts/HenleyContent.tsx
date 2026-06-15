@@ -822,12 +822,18 @@ export default function HenleyContent() {
                 role="tab"
                 aria-selected={activeConstruction === c.id}
                 onClick={() => setActiveConstruction(c.id)}
-                className={`px-5 py-2.5 rounded-lg text-sm font-semibold border transition-all ${
+                className={`relative px-5 py-2.5 rounded-lg text-sm font-semibold border transition-all ${
                   activeConstruction === c.id
                     ? "bg-gold text-navy-900 border-gold"
                     : "bg-white/5 text-gray-300 border-white/10 hover:border-gold/40"
                 }`}
               >
+                {activeConstruction !== c.id && (
+                  <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5" aria-hidden="true">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-60" />
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold" />
+                  </span>
+                )}
                 {c.name}
               </button>
             ))}

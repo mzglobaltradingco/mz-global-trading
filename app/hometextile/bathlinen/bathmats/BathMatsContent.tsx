@@ -376,7 +376,6 @@ export default function BathMatsContent() {
               <div className="flex items-start gap-3">
                 <span className="text-2xl" aria-hidden="true">🔲</span>
                 <div>
-                  <p className="text-slate-600 text-xs font-semibold tracking-[0.2em] uppercase">Technical</p>
                   <h3 className="text-xl font-bold text-navy-900 mt-0.5">Construction Types</h3>
                 </div>
               </div>
@@ -398,7 +397,6 @@ export default function BathMatsContent() {
               <div className="flex items-start gap-3">
                 <span className="text-2xl" aria-hidden="true">🏥</span>
                 <div>
-                  <p className="text-gray-600 text-xs font-semibold tracking-[0.2em] uppercase">Minimal</p>
                   <h3 className="text-xl font-bold text-navy-900 mt-0.5">Anti-Slip Backing Guide</h3>
                 </div>
               </div>
@@ -424,7 +422,6 @@ export default function BathMatsContent() {
               className="bg-amber-50 border border-amber-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
             >
               <span className="text-2xl mb-3" aria-hidden="true">⚖️</span>
-              <p className="text-amber-600 text-xs font-semibold tracking-[0.2em] uppercase mb-1">Infographic</p>
               <h3 className="text-lg font-bold text-navy-900 mb-3">GSM Weight Tiers</h3>
               <div className="flex flex-col gap-2 flex-1">
                 {GSM_TIERS.map((t) => (
@@ -441,7 +438,6 @@ export default function BathMatsContent() {
               className="bg-gray-50 border border-gray-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
             >
               <span className="text-2xl mb-3" aria-hidden="true">🖼️</span>
-              <p className="text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase mb-1">Industrial</p>
               <h3 className="text-lg font-bold text-navy-900 mb-3">Design &amp; Pattern</h3>
               <div className="flex flex-col gap-1.5 flex-1">
                 {PATTERN_OPTIONS.map((p) => (
@@ -458,7 +454,6 @@ export default function BathMatsContent() {
               className="bg-rose-50 border border-rose-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
             >
               <span className="text-2xl mb-3" aria-hidden="true">📐</span>
-              <p className="text-rose-500 text-xs font-semibold tracking-[0.2em] uppercase mb-1">Moodboard</p>
               <h3 className="text-lg font-bold text-navy-900 mb-3">Standard Sizes</h3>
               <div className="flex flex-col gap-2 flex-1">
                 {SIZES.map((s) => (
@@ -475,7 +470,6 @@ export default function BathMatsContent() {
               className="bg-sky-50 border border-sky-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
             >
               <span className="text-2xl mb-3" aria-hidden="true">🏅</span>
-              <p className="text-sky-600 text-xs font-semibold tracking-[0.2em] uppercase mb-1">Corporate</p>
               <h3 className="text-lg font-bold text-navy-900 mb-3">Certifications</h3>
               <div className="grid grid-cols-2 gap-2 flex-1">
                 {CERTIFICATIONS.slice(0, 4).map((c) => (
@@ -511,7 +505,6 @@ export default function BathMatsContent() {
               className="bg-purple-50 border border-purple-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
             >
               <span className="text-2xl mb-3" aria-hidden="true">🔬</span>
-              <p className="text-purple-600 text-xs font-semibold tracking-[0.2em] uppercase mb-1">Glassmorphism</p>
               <h3 className="text-lg font-bold text-navy-900 mb-3">Packaging Options</h3>
               <div className="flex flex-col gap-2 flex-1">
                 {PACK_OPTIONS.slice(0, 4).map((p) => (
@@ -531,7 +524,6 @@ export default function BathMatsContent() {
               className="bg-orange-50 border border-orange-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
             >
               <span className="text-2xl mb-3" aria-hidden="true">📊</span>
-              <p className="text-orange-600 text-xs font-semibold tracking-[0.2em] uppercase mb-1">Data Visualization</p>
               <h3 className="text-lg font-bold text-navy-900 mb-3">Cost-per-Wash Lifecycle</h3>
               <div className="flex flex-col gap-3 flex-1">
                 {[
@@ -557,7 +549,6 @@ export default function BathMatsContent() {
               className="bg-lime-50 border border-lime-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
             >
               <span className="text-2xl mb-3" aria-hidden="true">⚙️</span>
-              <p className="text-lime-600 text-xs font-semibold tracking-[0.2em] uppercase mb-1">Flat Design</p>
               <h3 className="text-lg font-bold text-navy-900 mb-3">Programme Timeline</h3>
               <div className="flex flex-col gap-2 flex-1">
                 {LEAD_STAGES.slice(0, 4).map((s, i) => (

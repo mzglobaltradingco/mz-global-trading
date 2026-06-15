@@ -875,54 +875,24 @@ export default function SweatpantsContent() {
                 role="tab"
                 aria-selected={activeConstruction === c.id}
                 onClick={() => setActiveConstruction(c.id)}
-                className={`px-5 py-2.5 rounded-lg text-sm font-semibold border transition-all ${
+                className={`relative px-5 py-2.5 rounded-lg text-sm font-semibold border transition-all ${
                   activeConstruction === c.id
                     ? "bg-gold text-navy-900 border-gold"
                     : "bg-white/5 text-gray-300 border-white/10 hover:border-gold/40"
                 }`}
               >
+                {activeConstruction !== c.id && (
+                  <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5" aria-hidden="true">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-60" />
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold" />
+                  </span>
+                )}
                 {c.name}
               </button>
             ))}
           </div>
 
-          {/* Comparison table — always visible, active row highlighted */}
-          <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0 mb-8">
-            <div className="min-w-[600px]">
-              <div className="grid grid-cols-5 bg-white/5 border border-white/10 rounded-t-2xl text-[11px] font-mono font-bold text-gray-400 uppercase tracking-widest px-4 py-3 gap-2">
-                <span>Construction</span>
-                <span>GSM Range</span>
-                <span>Hand Feel</span>
-                <span>Programme Fit</span>
-                <span>Suitability</span>
-              </div>
-              {CONSTRUCTIONS.map((c) => (
-                <button
-                  key={c.id}
-                  onClick={() => setActiveConstruction(c.id)}
-                  className={`w-full grid grid-cols-5 gap-2 px-4 py-4 border-b border-white/5 text-left transition-all ${
-                    activeConstruction === c.id ? "bg-gold/10 border-l-2 border-l-gold" : "hover:bg-white/5"
-                  }`}
-                >
-                  <span className={`text-sm font-semibold ${activeConstruction === c.id ? "text-gold" : "text-white"}`}>
-                    {c.name}
-                    {c.badge && <span className="ml-2 text-[10px] text-gold/70">★</span>}
-                  </span>
-                  <span className="text-sm text-gray-300">{c.gsm}</span>
-                  <span className="text-xs text-gray-400 leading-snug">{c.hand.split(" — ")[0]}</span>
-                  <span className="text-xs text-gray-400">{c.best[0]}</span>
-                  <span className={`text-xs font-semibold px-2 py-0.5 rounded-full w-fit ${
-                    c.suitability === "Premium" ? "text-gold bg-gold/15" :
-                    c.suitability === "Performance" ? "text-blue-400 bg-blue-400/15" :
-                    c.suitability === "Value" ? "text-green-400 bg-green-400/15" :
-                    "text-gray-400 bg-white/10"
-                  }`}>{c.suitability}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Active construction detail */}
+          {/* Active construction detail — shown first so the click change is immediately visible */}
           <AnimatePresence mode="wait">
             <motion.div
               key={activeConstruction}
@@ -930,7 +900,7 @@ export default function SweatpantsContent() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.2 }}
-              className="grid lg:grid-cols-3 gap-6"
+              className="grid lg:grid-cols-3 gap-6 mb-10"
             >
               <div className="lg:col-span-2 bg-white/5 border border-white/10 rounded-2xl p-8">
                 <div className="flex items-center gap-3 flex-wrap mb-6">
@@ -986,6 +956,44 @@ export default function SweatpantsContent() {
               </div>
             </motion.div>
           </AnimatePresence>
+
+          {/* Comparison table — reference overview below the detail panel */}
+          <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0 mt-10">
+            <p className="text-gold/70 font-mono text-[10px] tracking-[0.3em] uppercase mb-3">[CONSTRUCTION OVERVIEW — ALL FIVE]</p>
+            <div className="min-w-[600px]">
+              <div className="grid grid-cols-5 bg-white/5 border border-white/10 rounded-t-2xl text-[11px] font-mono font-bold text-gray-400 uppercase tracking-widest px-4 py-3 gap-2">
+                <span>Construction</span>
+                <span>GSM Range</span>
+                <span>Hand Feel</span>
+                <span>Programme Fit</span>
+                <span>Suitability</span>
+              </div>
+              {CONSTRUCTIONS.map((c) => (
+                <button
+                  key={c.id}
+                  onClick={() => setActiveConstruction(c.id)}
+                  className={`w-full grid grid-cols-5 gap-2 px-4 py-4 border-b border-white/5 text-left transition-all ${
+                    activeConstruction === c.id ? "bg-gold/10 border-l-2 border-l-gold" : "hover:bg-white/5"
+                  }`}
+                >
+                  <span className={`text-sm font-semibold ${activeConstruction === c.id ? "text-gold" : "text-white"}`}>
+                    {c.name}
+                    {c.badge && <span className="ml-2 text-[10px] text-gold/70">★</span>}
+                  </span>
+                  <span className="text-sm text-gray-300">{c.gsm}</span>
+                  <span className="text-xs text-gray-400 leading-snug">{c.hand.split(" — ")[0]}</span>
+                  <span className="text-xs text-gray-400">{c.best[0]}</span>
+                  <span className={`text-xs font-semibold px-2 py-0.5 rounded-full w-fit ${
+                    c.suitability === "Premium" ? "text-gold bg-gold/15" :
+                    c.suitability === "Performance" ? "text-blue-400 bg-blue-400/15" :
+                    c.suitability === "Value" ? "text-green-400 bg-green-400/15" :
+                    "text-gray-400 bg-white/10"
+                  }`}>{c.suitability}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
           <BackToTop dark />
         </div>
       </section>

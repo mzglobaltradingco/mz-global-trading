@@ -554,8 +554,14 @@ export default function PoloContent() {
               <button
                 key={c.id}
                 onClick={() => setActiveConstruction(c.id)}
-                className={`px-5 py-2.5 rounded-full text-sm font-bold border-2 transition-all ${activeConstruction === c.id ? "bg-navy-900 text-white border-navy-900" : "bg-white text-gray-500 border-gray-200 hover:border-navy-900/30"}`}
+                className={`relative px-5 py-2.5 rounded-full text-sm font-bold border-2 transition-all ${activeConstruction === c.id ? "bg-navy-900 text-white border-navy-900" : "bg-white text-gray-500 border-gray-200 hover:border-navy-900/30"}`}
               >
+                {activeConstruction !== c.id && (
+                  <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5" aria-hidden="true">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-60" />
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold" />
+                  </span>
+                )}
                 {c.name}
                 {c.badge && <span className="ml-2 text-[10px] font-semibold text-gold">— {c.badge}</span>}
               </button>
