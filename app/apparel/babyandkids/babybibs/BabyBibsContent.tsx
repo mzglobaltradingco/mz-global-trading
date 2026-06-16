@@ -193,7 +193,7 @@ function ExploreBtn({ label, targetId }: { label: string; targetId: string }) {
   );
 }
 
-function BackToTop({ dark }: { dark?: boolean }) {
+function BackToTop() {
   return (
     <div className="flex justify-center pt-6">
       <motion.button
@@ -591,7 +591,7 @@ export default function BabyBibsContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop dark /></div>
+          <div className="mt-8 text-center"><BackToTop /></div>
         </div>
       </section>
 
@@ -701,7 +701,7 @@ export default function BabyBibsContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-10 text-center"><BackToTop dark /></div>
+          <div className="mt-10 text-center"><BackToTop /></div>
         </div>
       </section>
 

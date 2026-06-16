@@ -173,7 +173,7 @@ function ExploreBtn({ label, targetId }: { label: string; targetId: string }) {
   );
 }
 
-function BackToTop({ dark }: { dark?: boolean }) {
+function BackToTop() {
   return (
     <div className="flex justify-center pt-6">
       <motion.button
@@ -276,7 +276,7 @@ export default function BabyHoodedTowelsContent() {
             <p className="text-[#D4A017] text-xs font-semibold tracking-widest uppercase mb-2">What We Produce</p>
             <h2 className="text-2xl font-bold mb-4">OEM Baby Hooded Bath Towels</h2>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Soft terry loop and velour hooded bath towels for infants and toddlers. Produced in GOTS certified organic cotton and OEKO-TEX Class 1 certified velour from Pakistan's certified mills. Animal hood designs with custom ear detailing, embroidery and appliqué. Available newborn to 4 years in single pieces, gift boxes and multi-pack sets.
+              Soft terry loop and velour hooded bath towels for infants and toddlers. Produced in GOTS certified organic cotton and OEKO-TEX Class 1 certified velour from Pakistan&apos;s certified mills. Animal hood designs with custom ear detailing, embroidery and appliqu&eacute;. Available newborn to 4 years in single pieces, gift boxes and multi-pack sets.
             </p>
           </motion.div>
           <motion.div
@@ -479,7 +479,7 @@ export default function BabyHoodedTowelsContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop dark /></div>
+          <div className="mt-8 text-center"><BackToTop /></div>
         </div>
       </section>
 
@@ -656,7 +656,7 @@ export default function BabyHoodedTowelsContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop dark /></div>
+          <div className="mt-8 text-center"><BackToTop /></div>
         </div>
       </section>
 
@@ -736,7 +736,7 @@ export default function BabyHoodedTowelsContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-10 text-center"><BackToTop dark /></div>
+          <div className="mt-10 text-center"><BackToTop /></div>
         </div>
       </section>
 

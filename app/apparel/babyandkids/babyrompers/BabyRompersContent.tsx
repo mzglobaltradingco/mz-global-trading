@@ -286,7 +286,6 @@ function BackToTop() {
 }
 
 export default function BabyRompersContent() {
-  const [activeCard, setActiveCard] = useState<string | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
@@ -712,7 +711,7 @@ export default function BabyRompersContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop dark /></div>
+          <div className="mt-8 text-center"><BackToTop /></div>
         </div>
       </section>
 
@@ -818,7 +817,7 @@ export default function BabyRompersContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-10 text-center"><BackToTop dark /></div>
+          <div className="mt-10 text-center"><BackToTop /></div>
         </div>
       </section>
 
