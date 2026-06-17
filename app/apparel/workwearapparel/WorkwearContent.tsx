@@ -17,27 +17,22 @@ function scrollToId(id: string) {
 /* ─── BackToTop ─── */
 function BackToTop({ dark }: { dark?: boolean }) {
   return (
-    <div className="mt-10 flex justify-center">
+    <div className="flex justify-center mt-16">
       <button
-        onClick={() => scrollToId("ww-top")}
-        aria-label="Back to top of page"
-        className="group relative flex h-11 w-11 items-center justify-center rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+        onClick={() => scrollToId("ww-bento")}
+        className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
+          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+        }`}
+        style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
-        <span className="absolute inset-0 rounded-full border-2 border-gold opacity-40 group-hover:opacity-70 transition-opacity" />
-        <span className="absolute inset-0 rounded-full border-2 border-gold animate-ping opacity-20" />
-        <svg
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          className={`relative h-5 w-5 ${dark ? "text-gold" : "text-navy-900"}`}
-          aria-hidden="true"
-        >
-          <path
-            fillRule="evenodd"
-            d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04L10.75 5.612V16.25A.75.75 0 0110 17z"
-            clipRule="evenodd"
-          />
-        </svg>
+        <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75" />
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-gold" />
+        </span>
+        <motion.span animate={{ y: [0, -3, 0] }} transition={{ repeat: Infinity, duration: 1.4, ease: "easeInOut" }} aria-hidden="true">↑</motion.span>
+        Move back to top
       </button>
+      <style>{`@keyframes btt-pulse{0%{box-shadow:0 0 0 0 rgba(212,160,23,.45)}70%{box-shadow:0 0 0 10px rgba(212,160,23,0)}100%{box-shadow:0 0 0 0 rgba(212,160,23,0)}}`}</style>
     </div>
   );
 }
@@ -399,6 +394,7 @@ const FAQS = [
   },
 ];
 
+
 /* ─── Bento data ─── */
 const BENTO_ROWS = [
   /* Row 1: 2-col equal */
@@ -523,45 +519,6 @@ const BENTO_ROWS = [
       col: "md:col-span-1",
     },
   ],
-];
-
-/* ─── Workwear-specific bento row (product bentos) ─── */
-const WORKWEAR_BENTOS = [
-  {
-    icon: "🛡️",
-    label: "Safety Compliance Standards",
-    title: "FR · Hi-Vis · Anti-Static — Tested on Bulk",
-    body: "Every safety-critical programme ships with test reports: EN ISO 11612, EN ISO 20471, EN 1149-3. Certification is validated on bulk fabric before shipment — not just on pre-production samples.",
-    accent: "bg-red-50 border-red-200",
-    labelClr: "text-red-700",
-    linkId: "ww-certifications",
-  },
-  {
-    icon: "👷",
-    label: "Fleet Ordering Programme",
-    title: "500–50,000 Pieces · Personalisation · Annual Replenishment",
-    body: "Per-size ratio planning, individual employee name and number embroidery, and repeat-order infrastructure holding your approved colour and trim specification across annual fleet cycles.",
-    accent: "bg-orange-50 border-orange-200",
-    labelClr: "text-orange-700",
-    linkId: "ww-oem",
-  },
-  {
-    icon: "📄",
-    label: "Export Document Pack",
-    title: "Full Compliance File with Every Workwear Shipment",
-    body: "Commercial invoice, packing list, certificate of origin, AQL inspection results, and safety certificates travel with every shipment. Complete compliance file for EU, UK, and Australian import clearance.",
-    accent: "bg-yellow-50 border-yellow-200",
-    labelClr: "text-yellow-700",
-    linkId: "ww-export",
-  },
-];
-
-const SIBLINGS = [
-  { href: "/apparel/wovengarments/denimjeans/", label: "Denim Jeans" },
-  { href: "/apparel/wovengarments/formalcasualshirts/", label: "Formal & Casual Shirts" },
-  { href: "/apparel/wovengarments/pantsandtrousers/", label: "Pants & Trousers" },
-  { href: "/apparel/wovengarments/cargopants/", label: "Cargo Pants" },
-  { href: "/apparel/socks/", label: "Socks" },
 ];
 
 /* ─── animation presets ─── */
@@ -787,32 +744,6 @@ export default function WorkwearContent() {
                 <ExploreBtn sectionId={`ww-${cell.id}`} label={`Explore ${cell.label}`} />
               </motion.div>
             ))}
-          </div>
-
-          {/* Row 5: Workwear-specific product bentos */}
-          <div className="mt-2">
-            <p className="text-xs font-semibold text-gold uppercase tracking-[0.18em] mb-3">Workwear-Specific</p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {WORKWEAR_BENTOS.map((cell, i) => (
-                <motion.div
-                  key={cell.linkId}
-                  custom={i + 11}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeUp}
-                  className={`rounded-2xl border p-6 flex flex-col justify-between ${cell.accent}`}
-                >
-                  <div>
-                    <span className="text-3xl mb-3 block" aria-hidden="true">{cell.icon}</span>
-                    <p className={`text-xs font-semibold tracking-[0.18em] uppercase mb-2 ${cell.labelClr}`}>{cell.label}</p>
-                    <h3 className="text-lg font-bold text-navy-900 mb-2">{cell.title}</h3>
-                    <p className="text-sm text-gray-600">{cell.body}</p>
-                  </div>
-                  <ExploreBtn sectionId={cell.linkId} label={`Explore ${cell.label}`} />
-                </motion.div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -1729,38 +1660,6 @@ export default function WorkwearContent() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══ SAME-TIER NAVIGATION ═══ */}
-      <section className="py-16 bg-gray-50 border-t border-gray-100" aria-label="Related apparel products">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="mb-8">
-            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Also in Apparel</p>
-            <h2 className="text-2xl font-bold text-navy-900">Explore Other Apparel Categories</h2>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-            {SIBLINGS.map((s, i) => (
-              <motion.div
-                key={s.href}
-                custom={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-              >
-                <Link
-                  href={s.href}
-                  className="group flex items-center justify-between gap-2 rounded-xl border border-gray-200 bg-white px-5 py-4 text-sm font-semibold text-navy-900 hover:border-gold hover:text-gold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-                >
-                  {s.label}
-                  <svg viewBox="0 0 16 16" fill="currentColor" className="h-4 w-4 shrink-0 text-gray-300 group-hover:text-gold transition-colors" aria-hidden="true">
-                    <path fillRule="evenodd" d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L11.44 8.75H2.75a.75.75 0 010-1.5h8.69L8.22 4.03a.75.75 0 010-1.06z" clipRule="evenodd" />
-                  </svg>
-                </Link>
               </motion.div>
             ))}
           </div>

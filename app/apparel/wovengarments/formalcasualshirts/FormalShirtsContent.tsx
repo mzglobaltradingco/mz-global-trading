@@ -1236,7 +1236,7 @@ export default function FormalShirtsContent() {
       ════════════════════════════════════════════════════════════════════════ */}
       <section id="section-process" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">How It Works</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Our Sourcing Process</h2>
             <p className="text-gray-500 mt-3 max-w-lg mx-auto">Six structured steps from specification to shipment — transparent, tracked and managed throughout.</p>

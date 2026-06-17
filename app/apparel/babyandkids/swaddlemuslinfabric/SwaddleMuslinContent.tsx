@@ -453,22 +453,39 @@ export default function SwaddleMuslinContent() {
         </div>
       </section>
 
-      {/* ══ RESOURCES ROW ═══════════════════════════════════════════════════════ */}
-      <section className="bg-gray-50 py-12 lg:py-16">
+      {/* ══ RESOURCES ════════════════════════════════════════════════════════════ */}
+      <section className="bg-gray-50 py-12 lg:py-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { icon: "📚", title: "Knowledge Hub", desc: "Textile buying guides", href: "/knowledge/" },
-              { icon: "📋", title: "Guides", desc: "Sourcing and compliance", href: "/guides/" },
-              { icon: "⬇️", title: "Downloads", desc: "Spec sheets and certs", href: "/downloads/" },
-              { icon: "📝", title: "Request a Quote", desc: "Start your muslin programme", href: "/rfq/" },
-            ].map((r) => (
-              <Link key={r.title} href={r.href} className="bg-white border border-gray-100 rounded-2xl p-5 hover:border-gold/40 hover:shadow-md transition-all group">
-                <span className="text-2xl mb-3 block" aria-hidden="true">{r.icon}</span>
-                <p className="text-sm font-bold text-navy-900 group-hover:text-gold transition-colors">{r.title}</p>
-                <p className="text-xs text-gray-500 mt-1">{r.desc}</p>
-              </Link>
-            ))}
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link href="/knowledge/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📚</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
+              <p className="font-semibold text-navy-900">Muslin &amp; Baby Textile Buying Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Construction guide for single and double gauze, GOTS compliance and market positioning for baby retailers.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Explore Hub →</span>
+            </Link>
+            <Link href="/guides/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📄</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Guides</p>
+              <p className="font-semibold text-navy-900">Organic Baby Textiles Export Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Sourcing process, OEKO-TEX Class 1 and GOTS documentation for baby programme development.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guides →</span>
+            </Link>
+            <Link href="/downloads/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">⬇️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
+              <p className="font-semibold text-navy-900">Muslin Spec Sheets &amp; Size Charts</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Swaddle construction specs, size grade charts and certification documentation.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Downloads →</span>
+            </Link>
+            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">✉️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
+              <p className="font-semibold text-white">Ready to Source Swaddle Muslin?</p>
+              <p className="text-xs text-gray-300 leading-relaxed">Specify construction, size range, print and certification requirements. Factory match and quotation in 3–5 working days.</p>
+              <span className="text-xs font-semibold text-gold group-hover:text-yellow-300 transition-colors mt-auto">Request a Quote →</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -834,6 +851,36 @@ export default function SwaddleMuslinContent() {
                   )}
                 </AnimatePresence>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ SAME-TIER PAGES ══════════════════════════════════════════════════════ */}
+      <section className="bg-gray-50 py-16 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-1">Baby &amp; Kids Apparel</p>
+            <h2 className="text-2xl font-bold text-navy-900">More Baby &amp; Kids Products</h2>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { name: "T-Shirts for Kids", desc: "Combed cotton jersey for infants and children. Screen print, appliqué and embroidery programmes.", href: "/apparel/babyandkids/tshirtsforkids/", img: "/images/menu/menu-tshirtsforkids.webp", alt: "Pakistan kids t-shirt manufacturer — OEM combed cotton children's apparel for baby boutiques worldwide" },
+              { name: "Overalls", desc: "Infant denim, canvas and corduroy overalls with snap hardware and OEKO-TEX compliance.", href: "/apparel/babyandkids/overalls/", img: "/images/menu/menu-overalls.webp", alt: "Pakistan baby overalls manufacturer — OEM infant denim and canvas overalls for kids brands worldwide" },
+              { name: "Baby Rompers", desc: "Short and long-sleeve rompers in organic cotton jersey. Snap crotch and envelope neck options.", href: "/apparel/babyandkids/babyrompers/", img: "/images/menu/menu-babyrompers.webp", alt: "Pakistan baby romper manufacturer — OEM organic cotton infant rompers for baby boutiques worldwide" },
+              { name: "Baby Bibs", desc: "Terry, velour and silicone bib constructions for newborn to toddler programmes.", href: "/apparel/babyandkids/babybibs/", img: "/images/menu/menu-babybibs.webp", alt: "Pakistan baby bib manufacturer — OEM terry and silicone bibs for infant product brands worldwide" },
+              { name: "Baby Hooded Towels", desc: "OEKO-TEX terry hooded towels for infants and toddlers. Embroidery and appliqué options.", href: "/apparel/babyandkids/babyhoodedtowels/", img: "/images/menu/menu-babyhoodedtowels.webp", alt: "Pakistan baby hooded towel manufacturer — OEM OEKO-TEX terry hooded towels for infant brands worldwide" },
+            ].filter(p => !p.href.includes("swaddlemuslinfabric")).map((p) => (
+              <Link href={p.href} key={p.name} className="group bg-white border border-gray-100 hover:border-gold rounded-2xl overflow-hidden flex flex-col hover:shadow-md transition-all">
+                <div className="relative h-36 overflow-hidden">
+                  <Image src={p.img} alt={p.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 33vw" />
+                </div>
+                <div className="p-4 flex flex-col gap-1.5 flex-1">
+                  <p className="font-bold text-navy-900 group-hover:text-gold transition-colors text-sm leading-tight">{p.name}</p>
+                  <p className="text-xs text-gray-500 leading-relaxed flex-1">{p.desc}</p>
+                  <span className="text-xs font-semibold text-gray-400 group-hover:text-gold transition-colors mt-1">View →</span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

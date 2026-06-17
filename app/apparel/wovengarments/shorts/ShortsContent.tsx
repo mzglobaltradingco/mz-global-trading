@@ -560,7 +560,7 @@ export default function ShortsContent() {
       {/* ── Bento Grid ────────────────────────────────────────────────────── */}
       <section id="bento-grid" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
+          <div className="mb-10">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Specification</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects of Shorts Sourcing</h2>
           </div>
@@ -738,7 +738,7 @@ export default function ShortsContent() {
       {/* ── Section 1: Constructions — Split-Screen UI ────────────────────── */}
       <section id="sec-constructions" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Section 01</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
               Shorts Fabric Constructions — Seven Build Options
@@ -843,7 +843,7 @@ export default function ShortsContent() {
       {/* ── Section 2: Fit Profiles — Minimal UI ─────────────────────────── */}
       <section id="sec-fits" className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="mb-16">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Section 02</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
               Fit Profiles for Shorts Programmes
@@ -892,7 +892,7 @@ export default function ShortsContent() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.08),transparent_60%)]" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="mb-12">
             <p className="text-white/60 text-xs font-semibold tracking-[0.2em] uppercase mb-2">Section 03</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Fabric Weight Guide for Shorts — 160 to 280 GSM
@@ -936,7 +936,7 @@ export default function ShortsContent() {
       {/* ── Section 4: Decoration & Print — Product Showcase UI ──────────── */}
       <section id="sec-decoration" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Section 04</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
               Print &amp; Decoration Options for Shorts
@@ -981,7 +981,7 @@ export default function ShortsContent() {
       {/* ── Section 5: Colours — Maximalist UI ───────────────────────────── */}
       <section id="sec-colours" className="py-20 bg-[#0D1B2A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Section 05</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Colour &amp; Dye Options
@@ -1041,7 +1041,7 @@ export default function ShortsContent() {
       {/* ── Section 6: OEM — Bento UI ─────────────────────────────────────── */}
       <section id="sec-oem" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Section 06</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
               OEM Custom Development for Shorts
@@ -1088,7 +1088,7 @@ export default function ShortsContent() {
       {/* ── Section 7: Markets — Dark Mode UI ────────────────────────────── */}
       <section id="sec-markets" className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Section 07</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Export Markets — USA, UK, Europe &amp; Beyond
@@ -1136,7 +1136,7 @@ export default function ShortsContent() {
       {/* ── Section 8: Certifications — Card-Based UI ─────────────────────── */}
       <section id="sec-certs" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Section 08</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
               Certifications Available for Shorts Programmes
@@ -1182,7 +1182,7 @@ export default function ShortsContent() {
       {/* ── Section 9: Export & Packaging — Flat Design UI ────────────────── */}
       <section id="sec-export" className="py-20 bg-sky-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Section 09</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
               Export Terms, Packing &amp; Lead Times
@@ -1321,7 +1321,7 @@ export default function ShortsContent() {
       {/* ── Section 11: Sourcing Process — Material Design ───────────────── */}
       <section id="sec-process" className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <div className="mb-14">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Section 11</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
               Sourcing Process — Enquiry to Shipment
@@ -1371,7 +1371,7 @@ export default function ShortsContent() {
       {/* ── FAQ ───────────────────────────────────────────────────────────── */}
       <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Frequently Asked</p>
             <h2 className="text-3xl font-bold text-navy-900">Shorts Sourcing — Common Questions</h2>
           </div>
@@ -1411,24 +1411,34 @@ export default function ShortsContent() {
       </section>
 
       {/* ── Same-tier Navigation ──────────────────────────────────────────── */}
-      <section className="py-14 bg-gray-50 border-t border-gray-100">
+      <section className="bg-gray-50 py-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-wider mb-6">
-            More Woven Garments
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="mb-8">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-1">Woven Garments</p>
+            <h2 className="text-2xl font-bold text-navy-900">More Woven Garments</h2>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { label: "Denim Jeans", href: "/apparel/wovengarments/denimjeans/" },
-              { label: "Formal & Casual Shirts", href: "/apparel/wovengarments/formalcasualshirts/" },
-              { label: "Pants & Trousers", href: "/apparel/wovengarments/pantsandtrousers/" },
-              { label: "Cargo Pants", href: "/apparel/wovengarments/cargopants/" },
-            ].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm font-semibold text-navy-900 hover:border-gold hover:text-gold transition-colors text-center"
-              >
-                {link.label}
+              { name: "Denim Jeans", desc: "Rigid, stretch, raw and recycled cotton denim. 8–14 oz. Six wash techniques.", href: "/apparel/wovengarments/denimjeans/", img: "/images/menu/menu-denimjeans.webp", alt: "Pakistan denim jeans manufacturer — OEM rigid and stretch denim for fashion brands in USA, UK and Europe" },
+              { name: "Formal & Casual Shirts", desc: "Poplin, oxford, twill and linen. Corporate, fashion and hospitality programmes.", href: "/apparel/wovengarments/formalcasualshirts/", img: "/images/menu/menu-formalshirts.webp", alt: "Pakistan formal and casual shirts manufacturer — OEM woven shirts for corporate and fashion brands worldwide" },
+              { name: "Pants & Trousers", desc: "Twill, chino and stretch ponte. Business-casual to formal tailored programmes.", href: "/apparel/wovengarments/pantsandtrousers/", img: "/images/menu/menu-pantsandtrousers.webp", alt: "Pakistan pants and trousers manufacturer — OEM twill and chino trousers for fashion and workwear brands" },
+              { name: "Cargo Pants", desc: "Ripstop, canvas and stretch ripstop. Tactical, outdoor and workwear programmes.", href: "/apparel/wovengarments/cargopants/", img: "/images/menu/menu-cargopants.webp", alt: "Pakistan cargo pants manufacturer — OEM ripstop and canvas cargo trousers for outdoor brands worldwide" },
+            ].map((p) => (
+              <Link href={p.href} key={p.name} className="group bg-white border border-gray-100 hover:border-gold rounded-2xl overflow-hidden flex flex-col hover:shadow-md transition-all">
+                <div className="relative h-36 overflow-hidden">
+                  <Image
+                    src={p.img}
+                    alt={p.alt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                  />
+                </div>
+                <div className="p-4 flex flex-col gap-1.5 flex-1">
+                  <p className="font-bold text-navy-900 group-hover:text-gold transition-colors text-sm leading-tight">{p.name}</p>
+                  <p className="text-xs text-gray-500 leading-relaxed flex-1">{p.desc}</p>
+                  <span className="text-xs font-semibold text-gray-400 group-hover:text-gold transition-colors mt-1">View →</span>
+                </div>
               </Link>
             ))}
           </div>

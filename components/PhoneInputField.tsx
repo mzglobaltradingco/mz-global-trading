@@ -21,9 +21,11 @@ import { isValidPhoneNumber, parsePhoneNumber } from "libphonenumber-js/mobile";
 
 // ─── Sorted country list (computed once at module level) ──────────────────────
 
-const SORTED_COUNTRIES: CountryData[] = [...defaultCountries].sort((a, b) =>
-  parseCountry(a).name.localeCompare(parseCountry(b).name)
-);
+const EXCLUDED_ISO2 = new Set(["in", "il"]);
+
+const SORTED_COUNTRIES: CountryData[] = [...defaultCountries]
+  .filter(c => !EXCLUDED_ISO2.has(parseCountry(c).iso2))
+  .sort((a, b) => parseCountry(a).name.localeCompare(parseCountry(b).name));
 
 // ─── Validation utility (exported for parent form use) ────────────────────────
 
@@ -147,6 +149,7 @@ export function PhoneInputField({
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
+  const [liveValid, setLiveValid] = useState<boolean | null>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const debounceTimer = useRef<ReturnType<typeof setTimeout>>();
@@ -157,9 +160,16 @@ export function PhoneInputField({
       defaultCountry: countryIso2 || "us",
       value,
       countries: defaultCountries,
-      forceDialCode: true,
       onChange: (data) => {
         onChange(data.phone, data.country.iso2);
+        // Live validation
+        const digits = data.phone.replace(/\D/g, "");
+        if (digits.length < 8) {
+          setLiveValid(null);
+        } else {
+          const err = validatePhone(data.phone, data.country.iso2);
+          setLiveValid(!err);
+        }
       },
       inputRef: phoneInputRef,
     });
@@ -173,6 +183,7 @@ export function PhoneInputField({
 
   const handleSelectCountry = useCallback(
     (iso2: string) => {
+      setLiveValid(null);
       setCountry(iso2, { focusOnInput: true });
       setOpen(false);
       setSearch("");
@@ -183,6 +194,15 @@ export function PhoneInputField({
   );
 
   function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const raw = e.target.value;
+    // Normalize IDD prefix 00XX → +XX (used in many countries instead of + prefix)
+    if (/^00\d/.test(raw.replace(/[\s\-()]/g, ""))) {
+      const normalized = "+" + raw.replace(/^00/, "").replace(/[\s\-()]/g, "");
+      const fakeEvent = { target: { value: normalized } } as React.ChangeEvent<HTMLInputElement>;
+      handlePhoneValueChange(fakeEvent);
+      if (onClearError) onClearError();
+      return;
+    }
     handlePhoneValueChange(e);
     if (onClearError) onClearError();
   }
@@ -213,6 +233,8 @@ export function PhoneInputField({
   const hasErr = !!error;
   const borderClass = hasErr
     ? "border-red-400 focus-within:ring-red-300/40 focus-within:border-red-400"
+    : liveValid === true
+    ? "border-emerald-400 focus-within:ring-emerald-300/40 focus-within:border-emerald-400"
     : "border-gray-200 focus-within:ring-gold/40 focus-within:border-gold";
 
   return (
@@ -321,11 +343,20 @@ export function PhoneInputField({
         )}
       </div>
 
-      {/* Persistent amber warning — always visible */}
-      <p className="text-amber-700 text-sm font-bold">
-        A mobile number is mandatory. Landlines and VOIP numbers will not be
-        accepted.
-      </p>
+      {/* Dynamic phone hint */}
+      {!error && (
+        liveValid === true ? (
+          <p className="text-sm flex items-center gap-1 text-emerald-600">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+            Valid mobile number
+          </p>
+        ) : (
+          <p className="text-base flex items-center gap-1 text-red-500">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Mobile only — landlines and VoIP not accepted
+          </p>
+        )
+      )}
     </div>
   );
 }

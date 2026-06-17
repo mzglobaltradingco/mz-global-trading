@@ -372,12 +372,21 @@ export default function ContactUsContent() {
                       </svg>
                       Send Message
                     </button>
-                    <p className="text-gray-500 text-sm leading-relaxed animate-pulse">
-                      Need a formal quote?{" "}
-                      <Link href="/rfq/" className="text-gold font-bold hover:underline">
+                    <div className="flex items-center gap-2.5 flex-wrap">
+                      <span className="text-gray-500 text-sm">Need a formal quote?</span>
+                      <Link href="/rfq/"
+                        className="inline-flex items-center gap-1.5 bg-gold text-navy-900 font-bold text-xs px-4 py-2 rounded-full hover:bg-yellow-400 transition-colors whitespace-nowrap"
+                        style={{ animation: "rfqGlow 2s ease-in-out infinite" }}
+                      >
                         Use the RFQ form →
                       </Link>
-                    </p>
+                      <style>{`
+                        @keyframes rfqGlow {
+                          0%,100% { box-shadow: 0 0 0 0 rgba(212,160,23,0.65); }
+                          50%     { box-shadow: 0 0 0 9px rgba(212,160,23,0); }
+                        }
+                      `}</style>
+                    </div>
                   </div>
                   <p className="text-gray-400 text-xs pt-1">
                     By submitting this form you agree that MZ Global Trading may use your details to respond to your enquiry.{" "}

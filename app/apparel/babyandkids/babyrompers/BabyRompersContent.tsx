@@ -253,34 +253,42 @@ const FAQS = [
 function ExploreBtn({ label, targetId }: { label: string; targetId: string }) {
   return (
     <button
-      onClick={() => {
-        const el = document.getElementById(targetId);
-        if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 160, behavior: "smooth" });
-      }}
-      className="inline-flex items-center gap-2 px-6 py-3 bg-[#D4A017] text-[#0D1B2A] font-semibold rounded-full hover:bg-[#b8891a] transition-colors"
+      onClick={() => scrollToId(targetId)}
+      className="group self-start inline-flex items-center gap-1.5 text-sm font-semibold text-navy-900 hover:text-gold transition-colors mt-auto pt-4"
     >
       {label}
-      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-      </svg>
+      <span className="group-hover:translate-x-1 transition-transform block" aria-hidden="true">
+        →
+      </span>
     </button>
   );
 }
 
-function BackToTop() {
+function scrollToId(id: string) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const y = el.getBoundingClientRect().top + window.scrollY - 160;
+  window.scrollTo({ top: y, behavior: "smooth" });
+}
+
+function BackToTop({ dark = false }: { dark?: boolean }) {
   return (
-    <div className="flex justify-center pt-6">
-      <motion.button
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        animate={{ scale: [1, 1.08, 1] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        className="w-11 h-11 rounded-full bg-[#D4A017] text-[#0D1B2A] flex items-center justify-center shadow-md hover:bg-[#b8891a] transition-colors"
-        aria-label="Back to top"
+    <div className="flex justify-center mt-16">
+      <button
+        onClick={() => scrollToId("bento-grid")}
+        className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
+          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+        }`}
+        style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
-        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-        </svg>
-      </motion.button>
+        <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75" />
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-gold" />
+        </span>
+        <motion.span animate={{ y: [0, -3, 0] }} transition={{ repeat: Infinity, duration: 1.4, ease: "easeInOut" }} aria-hidden="true">↑</motion.span>
+        Move back to top
+      </button>
+      <style>{`@keyframes btt-pulse{0%{box-shadow:0 0 0 0 rgba(212,160,23,.45)}70%{box-shadow:0 0 0 10px rgba(212,160,23,0)}100%{box-shadow:0 0 0 0 rgba(212,160,23,0)}}`}</style>
     </div>
   );
 }
@@ -364,127 +372,260 @@ export default function BabyRompersContent() {
       </nav>
 
       {/* Bento Grid */}
-      <section id="bento-grid" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-4">
-        {/* Row 1 — 2 equal */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 text-white"
-          >
-            <p className="text-[#D4A017] text-xs font-semibold tracking-widest uppercase mb-2">What We Produce</p>
-            <h2 className="text-2xl font-bold mb-4">OEM Baby Rompers & Infant Bodysuits</h2>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              One-piece infant bodysuits with snap crotch closures, envelope/cross-over necklines and short or long sleeves. Produced in organic cotton and combed jersey from GOTS and OEKO-TEX Class 1 certified Pakistan mills. Available newborn through 24 months, in single pieces, 2-packs, 3-packs and gift sets.
-            </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-            className="bg-pink-50 rounded-2xl p-8"
-          >
-            <p className="text-pink-700 text-xs font-semibold tracking-widest uppercase mb-2">Key Romper Features</p>
-            <h2 className="text-2xl font-bold text-[#0D1B2A] mb-4">Built for Infant Practicality</h2>
-            <ul className="space-y-2 text-sm text-gray-700">
-              {[
-                "Snap crotch — nickel-free KAM or metal snaps",
-                "Envelope neckline — no pulling over head",
-                "Short, long or raglan sleeves",
-                "Footed / sleepsuit versions available",
-                "Double-needle stitching on all seams",
-                "Flat inner seams — no rubbing on newborn skin",
-              ].map((f) => (
-                <li key={f} className="flex items-start gap-2">
-                  <span className="text-pink-500 mt-0.5">✓</span>
-                  <span>{f}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        </div>
+      <section id="bento-grid" className="bg-white py-12 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0D1B2A]">Explore All Aspects</h2>
+            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+          </div>
 
-        {/* Row 2 — 4 equal */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            { label: "Closure", value: "Snap Crotch", sub: "3–5 snaps depending on size", icon: "🔘" },
-            { label: "Neckline", value: "Envelope", sub: "Cross-over for easy dressing", icon: "🔄" },
-            { label: "Stitching", value: "Overlock + Cover", sub: "Flat seam on all inner panels", icon: "🧵" },
-            { label: "Certifications", value: "OEKO-TEX Class 1", sub: "Baby-grade standard", icon: "✅" },
-          ].map((item, i) => (
-            <motion.div
-              key={item.label}
-              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
-              className="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm text-center"
+          {/* Row 1: Constructions + Age Size Guide */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+              className="bg-green-50 border border-green-100 rounded-2xl p-7 flex flex-col gap-4 min-h-[300px]"
             >
-              <div className="text-3xl mb-2">{item.icon}</div>
-              <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">{item.label}</p>
-              <p className="font-bold text-[#0D1B2A] text-sm">{item.value}</p>
-              <p className="text-gray-400 text-xs mt-1">{item.sub}</p>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl" aria-hidden="true">🧵</span>
+                <div>
+                  <p className="text-green-600 text-xs font-semibold tracking-[0.2em] uppercase">Fabrics</p>
+                  <h3 className="text-xl font-bold text-[#0D1B2A] mt-0.5">Fabric Constructions</h3>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-2.5 flex-1">
+                {CONSTRUCTIONS.map((c) => (
+                  <div key={c.id} className="bg-white rounded-xl p-3 border border-green-100">
+                    <p className="text-sm font-semibold text-[#0D1B2A]">{c.name}</p>
+                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                    {c.tag && <span className="mt-1.5 inline-block text-[10px] font-semibold text-[#D4A017] bg-[#D4A017]/10 px-2 py-0.5 rounded-full">{c.tag}</span>}
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="Explore Constructions" targetId="s1-constructions" />
             </motion.div>
-          ))}
-        </div>
 
-        {/* Row 3 — 5-col grid (2+2+1) */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-          <div className="md:col-span-2 bg-[#D4A017]/10 rounded-2xl p-7">
-            <p className="text-[#D4A017] text-xs font-semibold tracking-widest uppercase mb-2">Fabric Portfolio</p>
-            <h3 className="text-xl font-bold text-[#0D1B2A] mb-3">6 Construction Options</h3>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              From ultra-breathable muslin for newborns to insulating French terry for cool-season programmes. All constructions available in GOTS organic or conventional combed cotton.
-            </p>
-            <ExploreBtn label="View Fabrics" targetId="s1-constructions" />
-          </div>
-          <div className="md:col-span-2 bg-blue-50 rounded-2xl p-7">
-            <p className="text-blue-700 text-xs font-semibold tracking-widest uppercase mb-2">Sizing</p>
-            <h3 className="text-xl font-bold text-[#0D1B2A] mb-3">Preemie to 24 Months</h3>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              8 age/size groups from premature (&lt;2.5 kg) through 18–24 months. Custom size grading available with buyer-supplied spec sheets.
-            </p>
-            <ExploreBtn label="Size Guide" targetId="s2-size" />
-          </div>
-          <div className="md:col-span-1 bg-[#0D1B2A] rounded-2xl p-6 flex flex-col items-center justify-center text-center">
-            <p className="text-[#D4A017] text-4xl font-bold">50+</p>
-            <p className="text-white text-sm font-semibold mt-1">Partner Factories</p>
-            <p className="text-gray-400 text-xs mt-2">Pakistan certified mills</p>
-          </div>
-        </div>
-
-        {/* Row 4 — 3-col grid (2+1) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="md:col-span-2 bg-emerald-50 rounded-2xl p-7">
-            <p className="text-emerald-700 text-xs font-semibold tracking-widest uppercase mb-2">Certifications</p>
-            <h3 className="text-xl font-bold text-[#0D1B2A] mb-3">GOTS · OEKO-TEX Class 1 · BSCI · 4 more</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              All 7 baby-relevant certifications available from partner factories. GOTS and OEKO-TEX Class 1 are the primary requirements for USA, European and UK baby market listings.
-            </p>
-          </div>
-          <div className="bg-gray-900 rounded-2xl p-6 flex flex-col justify-between">
-            <div>
-              <p className="text-[#D4A017] text-xs font-semibold tracking-widest uppercase mb-1">Start Your Order</p>
-              <p className="text-white text-lg font-bold leading-snug mb-3">Ready to source OEM baby rompers?</p>
-            </div>
-            <Link
-              href="/rfq/"
-              className="block text-center py-3 px-4 bg-[#D4A017] text-[#0D1B2A] font-bold rounded-xl hover:bg-[#b8891a] transition-colors text-sm"
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-blue-50 border border-blue-100 rounded-2xl p-7 flex flex-col gap-4 min-h-[300px]"
             >
-              Request a Quote
-            </Link>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl" aria-hidden="true">📏</span>
+                <div>
+                  <p className="text-blue-600 text-xs font-semibold tracking-[0.2em] uppercase">Sizing</p>
+                  <h3 className="text-xl font-bold text-[#0D1B2A] mt-0.5">Age &amp; Size Guide</h3>
+                </div>
+              </div>
+              <div className="flex flex-col gap-1.5 flex-1">
+                {AGE_SIZE_GUIDE.map((a) => (
+                  <div key={a.age} className="flex items-center gap-3">
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs font-semibold text-[#0D1B2A]">{a.age}</p>
+                      <p className="text-xs text-gray-400 truncate">{a.weight} · {a.height}</p>
+                    </div>
+                    <span className="text-xs text-gray-400 whitespace-nowrap hidden sm:block">{a.chest}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="Full Size Guide" targetId="s2-size" />
+            </motion.div>
+          </div>
+
+          {/* Row 2: Weight + Decoration + Colours + OEM */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+              className="bg-purple-50 border border-purple-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">⚖️</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">GSM Weight Guide</h3>
+              <div className="flex flex-col gap-2.5 flex-1">
+                {WEIGHT_CARDS.map((t) => (
+                  <div key={t.range}>
+                    <div className="flex justify-between text-xs mb-1">
+                      <span className="font-medium text-[#0D1B2A]">{t.range}</span>
+                      <span className="text-gray-400 truncate ml-1">{t.label}</span>
+                    </div>
+                    <div className="h-1.5 bg-gray-100 rounded-full" />
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="GSM Details" targetId="s3-weight" />
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.05 }}
+              className="bg-rose-50 border border-rose-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">🎨</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">Decoration Methods</h3>
+              <div className="flex flex-col gap-1.5 flex-1">
+                {DECORATION.map((d) => (
+                  <div key={d.method} className="flex items-start gap-2">
+                    <span className="text-base shrink-0 mt-0.5">{d.icon}</span>
+                    <span className="text-xs font-medium text-[#0D1B2A] leading-tight">{d.method}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="Decoration Guide" targetId="s4-decoration" />
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-yellow-50 border border-yellow-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">🌈</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">Colour Options</h3>
+              <div className="flex flex-wrap gap-x-3 gap-y-2 flex-1">
+                {COLOUR_OPTIONS.slice(0, 8).map((c) => (
+                  <div key={c.label} className="flex items-center gap-1.5">
+                    <div
+                      className="w-3.5 h-3.5 rounded-full border border-gray-200 shrink-0"
+                      style={{ backgroundColor: c.hex === "custom" ? undefined : c.hex }}
+                      aria-label={c.label}
+                    >
+                      {c.hex === "custom" && <div className="w-full h-full rounded-full bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200" />}
+                    </div>
+                    <span className="text-[10px] text-gray-500">{c.label}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="Colour Options" targetId="s5-colours" />
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.15 }}
+              className="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col min-h-[220px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">🏭</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">OEM Programme</h3>
+              <div className="flex flex-col gap-1.5 flex-1">
+                {OEM_STEPS.map((s) => (
+                  <div key={s.n} className="flex items-start gap-2">
+                    <span className="text-[10px] font-bold text-[#D4A017] mt-0.5 shrink-0">{s.n}</span>
+                    <span className="text-xs font-medium text-[#0D1B2A] leading-tight">{s.title}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="OEM Details" targetId="s6-oem" />
+            </motion.div>
+          </div>
+
+          {/* Row 3: Markets + Certifications + Export */}
+          <div className="grid grid-cols-5 gap-6 mb-6">
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+              className="col-span-5 lg:col-span-2 bg-indigo-50 border border-indigo-100 rounded-2xl p-6 flex flex-col min-h-[200px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">🌍</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">Export Markets</h3>
+              <div className="grid grid-cols-2 gap-2 flex-1">
+                {MARKETS.map((m) => (
+                  <div key={m.region} className="flex items-center gap-2">
+                    <span className="text-sm shrink-0">{m.flag}</span>
+                    <span className="text-xs font-medium text-[#0D1B2A] truncate">{m.region}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="Market Detail" targetId="s7-markets" />
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.07 }}
+              className="col-span-5 lg:col-span-2 bg-teal-50 border border-teal-100 rounded-2xl p-6 flex flex-col min-h-[200px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">🏅</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">Certifications</h3>
+              <div className="grid grid-cols-2 gap-2 flex-1">
+                {CERTIFICATIONS.map((c) => (
+                  <div key={c.name} className="flex items-center gap-2">
+                    <span className={`text-xs font-bold px-2 py-0.5 rounded ${c.tier === "ESSENTIAL" ? "text-teal-700 bg-teal-100" : "text-gray-500 bg-gray-100"}`}>{c.name}</span>
+                    {c.tier === "ESSENTIAL" && <span className="text-[10px] text-[#D4A017]">★</span>}
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="View Certifications" targetId="s8-certifications" />
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.12 }}
+              className="col-span-5 lg:col-span-1 bg-amber-50 border border-amber-100 rounded-2xl p-6 flex flex-col min-h-[200px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">🚢</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">Export</h3>
+              <div className="flex flex-col gap-2 flex-1">
+                {EXPORT_DATA.slice(0, 4).map((t) => (
+                  <div key={t.label}>
+                    <p className="text-[10px] text-gray-400 uppercase tracking-wide">{t.label}</p>
+                    <p className="text-xs font-semibold text-[#0D1B2A]">{t.value}</p>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="Export Detail" targetId="s9-export" />
+            </motion.div>
+          </div>
+
+          {/* Row 4: Sustainability + Process */}
+          <div className="grid grid-cols-3 gap-6">
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+              className="col-span-3 lg:col-span-2 bg-lime-50 border border-lime-100 rounded-2xl p-6 flex flex-col min-h-[200px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">🌱</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">Sustainability &amp; Safety</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 flex-1">
+                {SUSTAINABILITY.map((s) => (
+                  <div key={s.title}>
+                    <p className="text-xs font-semibold text-[#0D1B2A]">{s.title}</p>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="Sustainability Detail" targetId="s10-sustainability" />
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}
+              className="col-span-3 lg:col-span-1 bg-sky-50 border border-sky-100 rounded-2xl p-6 flex flex-col min-h-[200px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">⚙️</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">Sourcing Process</h3>
+              <div className="flex flex-col gap-2 flex-1">
+                {PROCESS.map((p) => (
+                  <div key={p.step} className="flex items-center gap-2">
+                    <span className="w-5 h-5 rounded-full bg-sky-200 text-sky-800 text-[10px] font-bold flex items-center justify-center shrink-0">{p.step}</span>
+                    <span className="text-xs font-medium text-[#0D1B2A]">{p.title}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="Full Process" targetId="s11-process" />
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Resources row */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {[
-            { label: "T-Shirts for Kids", href: "/apparel/babyandkids/tshirtsforkids/", icon: "👕" },
-            { label: "Swaddle Muslin", href: "/apparel/babyandkids/swaddlemuslinfabric/", icon: "🌿" },
-            { label: "Overalls", href: "/apparel/babyandkids/overalls/", icon: "🦺" },
-            { label: "Baby Bibs", href: "/apparel/babyandkids/babybibs/", icon: "🍼" },
-          ].map((r) => (
-            <Link key={r.href} href={r.href} className="flex items-center gap-2 p-3 bg-gray-50 rounded-xl hover:bg-[#D4A017]/10 transition-colors text-sm font-medium text-[#0D1B2A]">
-              <span>{r.icon}</span>{r.label}
+      {/* ══ RESOURCES ════════════════════════════════════════════════════════════ */}
+      <section className="bg-gray-50 py-12 lg:py-16 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link href="/knowledge/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📚</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
+              <p className="font-semibold text-navy-900">Baby Romper Buying Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Construction guide for organic cotton jersey rompers, OEKO-TEX Class 1 compliance and pack format options.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Explore Hub →</span>
             </Link>
-          ))}
+            <Link href="/guides/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📄</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Guides</p>
+              <p className="font-semibold text-navy-900">Baby Apparel Export Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Sourcing process, OEKO-TEX and GOTS requirements for baby and infant apparel programmes.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guides →</span>
+            </Link>
+            <Link href="/downloads/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">⬇️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
+              <p className="font-semibold text-navy-900">Romper Spec Sheets &amp; Size Charts</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Infant romper construction specs, size grade charts and certification documentation.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Downloads →</span>
+            </Link>
+            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">✉️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
+              <p className="font-semibold text-white">Ready to Source Baby Rompers?</p>
+              <p className="text-xs text-gray-300 leading-relaxed">Specify construction, size range, certifications and pack format. Factory match and quotation in 3–5 working days.</p>
+              <span className="text-xs font-semibold text-gold group-hover:text-yellow-300 transition-colors mt-auto">Request a Quote →</span>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -518,7 +659,7 @@ export default function BabyRompersContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop /></div>
+          <BackToTop />
         </div>
       </section>
 
@@ -555,7 +696,7 @@ export default function BabyRompersContent() {
             </table>
           </div>
           <p className="text-gray-500 text-xs mt-4">All measurements are body measurements in cm. Finished garment measurements will include ease allowances per construction type.</p>
-          <div className="mt-8 text-center"><BackToTop /></div>
+          <BackToTop dark />
         </div>
       </section>
 
@@ -587,7 +728,7 @@ export default function BabyRompersContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop /></div>
+          <BackToTop />
         </div>
       </section>
 
@@ -624,14 +765,14 @@ export default function BabyRompersContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop /></div>
+          <BackToTop />
         </div>
       </section>
 
       {/* S5 — Colours: Hero-Centered UI */}
       <section id="s5-colours" className="py-20 bg-gradient-to-br from-[#FFF9F5] via-[#F8F0F8] to-[#F0F5FF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Colour Palette</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0D1B2A]">Soft Baby Tones & Neutral Collections</h2>
             <p className="text-gray-600 mt-3 text-sm max-w-xl mx-auto">Standard palette shown. Pantone matching available for brand-specific colours. All dyes OEKO-TEX Class 1 certified — azo-free and formaldehyde-free.</p>
@@ -657,7 +798,7 @@ export default function BabyRompersContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-10 text-center"><BackToTop /></div>
+          <BackToTop />
         </div>
       </section>
 
@@ -686,7 +827,7 @@ export default function BabyRompersContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-10 text-center"><BackToTop /></div>
+          <BackToTop />
         </div>
       </section>
 
@@ -711,7 +852,7 @@ export default function BabyRompersContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop /></div>
+          <BackToTop dark />
         </div>
       </section>
 
@@ -743,7 +884,7 @@ export default function BabyRompersContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop /></div>
+          <BackToTop />
         </div>
       </section>
 
@@ -766,7 +907,7 @@ export default function BabyRompersContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop /></div>
+          <BackToTop />
         </div>
       </section>
 
@@ -791,14 +932,14 @@ export default function BabyRompersContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop /></div>
+          <BackToTop />
         </div>
       </section>
 
       {/* S11 — Process: Collage UI */}
       <section id="s11-process" className="py-20 bg-[#0D1B2A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12 text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Production Process</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">6-Stage Safety-First Workflow</h2>
             <p className="text-gray-400 mt-3 text-sm max-w-xl mx-auto">From fabric certification to final pre-shipment audit — every baby romper programme follows a documented safety protocol.</p>
@@ -817,7 +958,7 @@ export default function BabyRompersContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-10 text-center"><BackToTop /></div>
+          <BackToTop dark />
         </div>
       </section>
 
@@ -855,6 +996,36 @@ export default function BabyRompersContent() {
                   )}
                 </AnimatePresence>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ SAME-TIER PAGES ══════════════════════════════════════════════════════ */}
+      <section className="bg-gray-50 py-16 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-1">Baby &amp; Kids Apparel</p>
+            <h2 className="text-2xl font-bold text-navy-900">More Baby &amp; Kids Products</h2>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { name: "T-Shirts for Kids", desc: "Combed cotton jersey for infants and children. Screen print, appliqué and embroidery programmes.", href: "/apparel/babyandkids/tshirtsforkids/", img: "/images/menu/menu-tshirtsforkids.webp", alt: "Pakistan kids t-shirt manufacturer — OEM combed cotton children's apparel for baby boutiques worldwide" },
+              { name: "Swaddle Muslin Fabric", desc: "Single muslin, double gauze and bamboo blends. GOTS and OEKO-TEX Class 1 certified.", href: "/apparel/babyandkids/swaddlemuslinfabric/", img: "/images/menu/menu-swaddlemuslinfabric.webp", alt: "Pakistan swaddle muslin manufacturer — OEM organic cotton muslin fabric for baby brands worldwide" },
+              { name: "Overalls", desc: "Infant denim, canvas and corduroy overalls with snap hardware and OEKO-TEX compliance.", href: "/apparel/babyandkids/overalls/", img: "/images/menu/menu-overalls.webp", alt: "Pakistan baby overalls manufacturer — OEM infant denim and canvas overalls for kids brands worldwide" },
+              { name: "Baby Bibs", desc: "Terry, velour and silicone bib constructions for newborn to toddler programmes.", href: "/apparel/babyandkids/babybibs/", img: "/images/menu/menu-babybibs.webp", alt: "Pakistan baby bib manufacturer — OEM terry and silicone bibs for infant product brands worldwide" },
+              { name: "Baby Hooded Towels", desc: "OEKO-TEX terry hooded towels for infants and toddlers. Embroidery and appliqué options.", href: "/apparel/babyandkids/babyhoodedtowels/", img: "/images/menu/menu-babyhoodedtowels.webp", alt: "Pakistan baby hooded towel manufacturer — OEM OEKO-TEX terry hooded towels for infant brands worldwide" },
+            ].filter(p => !p.href.includes("babyrompers")).map((p) => (
+              <Link href={p.href} key={p.name} className="group bg-white border border-gray-100 hover:border-gold rounded-2xl overflow-hidden flex flex-col hover:shadow-md transition-all">
+                <div className="relative h-36 overflow-hidden">
+                  <Image src={p.img} alt={p.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 33vw" />
+                </div>
+                <div className="p-4 flex flex-col gap-1.5 flex-1">
+                  <p className="font-bold text-navy-900 group-hover:text-gold transition-colors text-sm leading-tight">{p.name}</p>
+                  <p className="text-xs text-gray-500 leading-relaxed flex-1">{p.desc}</p>
+                  <span className="text-xs font-semibold text-gray-400 group-hover:text-gold transition-colors mt-1">View →</span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

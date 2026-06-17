@@ -821,385 +821,385 @@ export default function RFQContent() {
           </SpecSection>
 
           {formData.productType && (
-            <>
-              {/* Composition */}
-              <SpecSection title="Composition">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <Field id="fiberContent" label="Fiber Content">
-                      <select id="fiberContent" name="fiberContent"
-                        value={formData.fiberContent} onChange={handleChange} className={ic()}>
-                        <option value="">Select fiber…</option>
-                        {fiberOptions.map(o => <option key={o} value={o}>{o}</option>)}
-                      </select>
-                    </Field>
-                    <OtherInput id="fiberContentOther" show={formData.fiberContent === "Other"}
-                      value={formData.fiberContentOther} onChange={v => set("fiberContentOther", v)}
-                      placeholder="Specify fiber content (e.g. Bamboo-Linen blend)" />
-                  </div>
-                  {formData.category === "Apparel" && (
+            <div className="space-y-6">
+
+              {/* ── Row 1: Composition (left) | Construction & Weight (right) ── */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
+                {/* 1 — Composition */}
+                <SpecSection title="1 — Composition">
+                  <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <Field id="yarnType" label="Yarn Type">
-                        <select id="yarnType" name="yarnType"
-                          value={formData.yarnType} onChange={handleChange} className={ic()}>
-                          <option value="">Select…</option>
-                          {YARN_TYPES.map(o => <option key={o} value={o}>{o}</option>)}
+                      <Field id="fiberContent" label="Fiber Content">
+                        <select id="fiberContent" name="fiberContent"
+                          value={formData.fiberContent} onChange={handleChange} className={ic()}>
+                          <option value="">Select fiber…</option>
+                          {fiberOptions.map(o => <option key={o} value={o}>{o}</option>)}
                         </select>
                       </Field>
-                      <OtherInput id="yarnTypeOther" show={formData.yarnType === "Other"}
-                        value={formData.yarnTypeOther} onChange={v => set("yarnTypeOther", v)}
-                        placeholder="Specify yarn type" />
+                      <OtherInput id="fiberContentOther" show={formData.fiberContent === "Other"}
+                        value={formData.fiberContentOther} onChange={v => set("fiberContentOther", v)}
+                        placeholder="Specify fiber content (e.g. Bamboo-Linen blend)" />
                     </div>
+                    {formData.category === "Apparel" && (
+                      <div>
+                        <Field id="yarnType" label="Yarn Type">
+                          <select id="yarnType" name="yarnType"
+                            value={formData.yarnType} onChange={handleChange} className={ic()}>
+                            <option value="">Select…</option>
+                            {YARN_TYPES.map(o => <option key={o} value={o}>{o}</option>)}
+                          </select>
+                        </Field>
+                        <OtherInput id="yarnTypeOther" show={formData.yarnType === "Other"}
+                          value={formData.yarnTypeOther} onChange={v => set("yarnTypeOther", v)}
+                          placeholder="Specify yarn type" />
+                      </div>
+                    )}
+                    {opts?.isFabricRoll && (
+                      <Field id="sustainability" label="Sustainability Requirement">
+                        <select id="sustainability" name="sustainability"
+                          value={formData.sustainability} onChange={handleChange} className={ic()}>
+                          <option value="">Select…</option>
+                          {SUSTAINABILITY_OPTIONS.map(o => <option key={o} value={o}>{o}</option>)}
+                        </select>
+                      </Field>
+                    )}
+                  </div>
+                  <Field id="compositionNotes" label="Composition Notes">
+                    <input id="compositionNotes" name="compositionNotes" type="text"
+                      placeholder="e.g. 100% ring spun combed cotton"
+                      value={formData.compositionNotes} onChange={handleChange} className={ic()} />
+                  </Field>
+                </SpecSection>
+
+                {/* 2 — Construction & Weight */}
+                <div className="space-y-4">
+                  {opts && (
+                    <SpecSection title={opts.isFabricRoll ? "2 — Construction & Width" : "2 — Construction & Weight"}>
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <div>
+                          <Field id="construction" label={opts.constructionLabel}>
+                            <select id="construction" name="construction"
+                              value={formData.construction} onChange={handleChange} className={ic()}>
+                              <option value="">Select…</option>
+                              {opts.constructionOptions.map(o => <option key={o} value={o}>{o}</option>)}
+                            </select>
+                          </Field>
+                          {formData.construction === "Other" && (
+                            <input type="text" placeholder={opts.constructionOtherPlaceholder}
+                              value={formData.constructionOther} onChange={e => set("constructionOther", e.target.value)}
+                              className={`mt-2 ${ic()}`} />
+                          )}
+                        </div>
+                        <Field id="weight" label={opts.weightLabel} required error={errors.weight}>
+                          <input id="weight" name="weight" type="text"
+                            aria-invalid={!!errors.weight}
+                            placeholder={opts.weightPlaceholder}
+                            value={formData.weight} onChange={handleChange} className={ic(errors.weight)} />
+                        </Field>
+                      </div>
+                      {opts.isFabricRoll && formData.construction === "Knitted" && (
+                        <div>
+                          <Field id="fabricSubType" label="Knit Type">
+                            <select id="fabricSubType" name="fabricSubType"
+                              value={formData.fabricSubType} onChange={handleChange} className={ic()}>
+                              <option value="">Select…</option>
+                              {KNIT_TYPES_FABRIC.map(o => <option key={o} value={o}>{o}</option>)}
+                            </select>
+                          </Field>
+                          <OtherInput id="fabricSubTypeOther" show={formData.fabricSubType === "Other"}
+                            value={formData.fabricSubTypeOther} onChange={v => set("fabricSubTypeOther", v)}
+                            placeholder="Specify knit type" />
+                        </div>
+                      )}
+                      {opts.isFabricRoll && formData.construction === "Woven" && (
+                        <div>
+                          <Field id="fabricSubType" label="Woven Type">
+                            <select id="fabricSubType" name="fabricSubType"
+                              value={formData.fabricSubType} onChange={handleChange} className={ic()}>
+                              <option value="">Select…</option>
+                              {WOVEN_TYPES_FABRIC.map(o => <option key={o} value={o}>{o}</option>)}
+                            </select>
+                          </Field>
+                          <OtherInput id="fabricSubTypeOther" show={formData.fabricSubType === "Other"}
+                            value={formData.fabricSubTypeOther} onChange={v => set("fabricSubTypeOther", v)}
+                            placeholder="Specify woven type" />
+                        </div>
+                      )}
+                      {opts.isFabricRoll && (
+                        <div>
+                          <Field id="sizeRange0" label="Fabric Width">
+                            <select id="sizeRange0"
+                              value={formData.sizeRange[0] ?? ""}
+                              onChange={e => setFormData(p => ({ ...p, sizeRange: e.target.value ? [e.target.value] : [] }))}
+                              className={ic()}>
+                              <option value="">Select width…</option>
+                              {FABRIC_WIDTHS_FABRIC.map(o => <option key={o} value={o}>{o}</option>)}
+                            </select>
+                          </Field>
+                          <OtherInput id="fabricWidthCustom" show={formData.sizeRange[0] === "Custom"}
+                            value={formData.sizeRangeNotes} onChange={v => set("sizeRangeNotes", v)}
+                            placeholder={'e.g. 64" / 163 cm usable width'} />
+                        </div>
+                      )}
+                    </SpecSection>
                   )}
-                  {opts?.isFabricRoll && (
-                    <Field id="sustainability" label="Sustainability Requirement">
-                      <select id="sustainability" name="sustainability"
-                        value={formData.sustainability} onChange={handleChange} className={ic()}>
-                        <option value="">Select…</option>
-                        {SUSTAINABILITY_OPTIONS.map(o => <option key={o} value={o}>{o}</option>)}
-                      </select>
-                    </Field>
+                  {shouldShowWarpWeft && (
+                    <SpecSection title="Yarn Specification — Warp &amp; Weft">
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <Field id="warpYarn" label="Warp Yarn">
+                          <input id="warpYarn" name="warpYarn" type="text"
+                            placeholder="e.g. 30/1 Ne Ring Spun Cotton"
+                            value={formData.warpYarn} onChange={handleChange} className={ic()} />
+                        </Field>
+                        <Field id="weftYarn" label="Weft Yarn">
+                          <input id="weftYarn" name="weftYarn" type="text"
+                            placeholder="e.g. 20/1 OE Cotton"
+                            value={formData.weftYarn} onChange={handleChange} className={ic()} />
+                        </Field>
+                      </div>
+                      <Field id="picksPerCm" label="Picks per cm / Thread Density">
+                        <input id="picksPerCm" name="picksPerCm" type="text"
+                          placeholder="e.g. Warp 40 × Weft 30 per cm"
+                          value={formData.picksPerCm} onChange={handleChange} className={ic()} />
+                      </Field>
+                    </SpecSection>
+                  )}
+                  {shouldShowPileGround && (
+                    <SpecSection title="Yarn Specification — Pile &amp; Ground">
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <Field id="pileYarn" label="Pile Yarn">
+                          <input id="pileYarn" name="pileYarn" type="text"
+                            placeholder="e.g. 16/1 Ne Ring Spun Cotton"
+                            value={formData.pileYarn} onChange={handleChange} className={ic()} />
+                        </Field>
+                        <Field id="groundYarn" label="Ground Yarn">
+                          <input id="groundYarn" name="groundYarn" type="text"
+                            placeholder="e.g. 20/1 Ne Ring Spun Cotton"
+                            value={formData.groundYarn} onChange={handleChange} className={ic()} />
+                        </Field>
+                      </div>
+                      <Field id="picksPerCm" label="Picks per cm / Loop Density">
+                        <input id="picksPerCm" name="picksPerCm" type="text"
+                          placeholder="e.g. 8 pile rows per cm"
+                          value={formData.picksPerCm} onChange={handleChange} className={ic()} />
+                      </Field>
+                    </SpecSection>
                   )}
                 </div>
-                <Field id="compositionNotes" label="Composition Notes">
-                  <input id="compositionNotes" name="compositionNotes" type="text"
-                    placeholder="e.g. 100% ring spun combed cotton"
-                    value={formData.compositionNotes} onChange={handleChange} className={ic()} />
-                </Field>
-              </SpecSection>
+              </div>
 
-              {/* Construction & Weight */}
-              {opts && (
-                <SpecSection title={opts.isFabricRoll ? "Construction & Width" : "Construction & Weight"}>
-                  <div className="grid sm:grid-cols-2 gap-4">
+              {/* ── Row 2a: Dimensions (left) | Color & Design (right) — non-fabric ── */}
+              {opts && !opts.isFabricRoll && (
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
+                  {/* 3 — Dimensions & Sizing */}
+                  <SpecSection title="3 — Dimensions &amp; Sizing">
                     <div>
-                      <Field id="construction" label={opts.constructionLabel}>
-                        <select id="construction" name="construction"
-                          value={formData.construction} onChange={handleChange} className={ic()}>
-                          <option value="">Select…</option>
-                          {opts.constructionOptions.map(o => <option key={o} value={o}>{o}</option>)}
-                        </select>
-                      </Field>
-                      {formData.construction === "Other" && (
-                        <input type="text" placeholder={opts.constructionOtherPlaceholder}
-                          value={formData.constructionOther} onChange={e => set("constructionOther", e.target.value)}
-                          className={`mt-2 ${ic()}`} />
+                      <p className="text-sm font-medium text-navy-900 mb-2">
+                        {opts.sizeLabel} <span className="text-gray-400 font-normal text-xs">(select all that apply)</span>
+                      </p>
+                      <CheckboxGrid options={opts.sizeOptions} selected={formData.sizeRange} onToggle={toggleSize} />
+                      {formData.sizeRange.includes("Custom") && (
+                        <input type="text" placeholder="Describe your custom size requirement"
+                          value={formData.sizeRangeNotes} onChange={e => set("sizeRangeNotes", e.target.value)}
+                          className={`mt-3 ${ic()}`} />
                       )}
                     </div>
-                    <Field id="weight" label={opts.weightLabel} required error={errors.weight}>
-                      <input id="weight" name="weight" type="text"
-                        aria-invalid={!!errors.weight}
-                        placeholder={opts.weightPlaceholder}
-                        value={formData.weight} onChange={handleChange} className={ic(errors.weight)} />
-                    </Field>
-                  </div>
-                  {/* Fabric sub-type */}
-                  {opts.isFabricRoll && formData.construction === "Knitted" && (
-                    <div>
-                      <Field id="fabricSubType" label="Knit Type">
-                        <select id="fabricSubType" name="fabricSubType"
-                          value={formData.fabricSubType} onChange={handleChange} className={ic()}>
-                          <option value="">Select…</option>
-                          {KNIT_TYPES_FABRIC.map(o => <option key={o} value={o}>{o}</option>)}
-                        </select>
-                      </Field>
-                      <OtherInput id="fabricSubTypeOther" show={formData.fabricSubType === "Other"}
-                        value={formData.fabricSubTypeOther} onChange={v => set("fabricSubTypeOther", v)}
-                        placeholder="Specify knit type" />
-                    </div>
-                  )}
-                  {opts.isFabricRoll && formData.construction === "Woven" && (
-                    <div>
-                      <Field id="fabricSubType" label="Woven Type">
-                        <select id="fabricSubType" name="fabricSubType"
-                          value={formData.fabricSubType} onChange={handleChange} className={ic()}>
-                          <option value="">Select…</option>
-                          {WOVEN_TYPES_FABRIC.map(o => <option key={o} value={o}>{o}</option>)}
-                        </select>
-                      </Field>
-                      <OtherInput id="fabricSubTypeOther" show={formData.fabricSubType === "Other"}
-                        value={formData.fabricSubTypeOther} onChange={v => set("fabricSubTypeOther", v)}
-                        placeholder="Specify woven type" />
-                    </div>
-                  )}
-                  {opts.isFabricRoll && (
-                    <div>
-                      <Field id="sizeRange0" label="Fabric Width">
-                        <select id="sizeRange0"
-                          value={formData.sizeRange[0] ?? ""}
-                          onChange={e => setFormData(p => ({ ...p, sizeRange: e.target.value ? [e.target.value] : [] }))}
-                          className={ic()}>
-                          <option value="">Select width…</option>
-                          {FABRIC_WIDTHS_FABRIC.map(o => <option key={o} value={o}>{o}</option>)}
-                        </select>
-                      </Field>
-                      <OtherInput id="fabricWidthCustom" show={formData.sizeRange[0] === "Custom"}
-                        value={formData.sizeRangeNotes} onChange={v => set("sizeRangeNotes", v)}
-                        placeholder={'e.g. 64" / 163 cm usable width'} />
-                    </div>
-                  )}
-                </SpecSection>
-              )}
-
-              {/* Warp & Weft yarn specification */}
-              {shouldShowWarpWeft && (
-                <SpecSection title="Yarn Specification — Warp &amp; Weft">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <Field id="warpYarn" label="Warp Yarn">
-                      <input id="warpYarn" name="warpYarn" type="text"
-                        placeholder="e.g. 30/1 Ne Ring Spun Cotton"
-                        value={formData.warpYarn} onChange={handleChange} className={ic()} />
-                    </Field>
-                    <Field id="weftYarn" label="Weft Yarn">
-                      <input id="weftYarn" name="weftYarn" type="text"
-                        placeholder="e.g. 20/1 OE Cotton"
-                        value={formData.weftYarn} onChange={handleChange} className={ic()} />
-                    </Field>
-                  </div>
-                  <Field id="picksPerCm" label="Picks per cm / Thread Density">
-                    <input id="picksPerCm" name="picksPerCm" type="text"
-                      placeholder="e.g. Warp 40 × Weft 30 per cm"
-                      value={formData.picksPerCm} onChange={handleChange} className={ic()} />
-                  </Field>
-                </SpecSection>
-              )}
-
-              {/* Pile & Ground yarn specification */}
-              {shouldShowPileGround && (
-                <SpecSection title="Yarn Specification — Pile &amp; Ground">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <Field id="pileYarn" label="Pile Yarn">
-                      <input id="pileYarn" name="pileYarn" type="text"
-                        placeholder="e.g. 16/1 Ne Ring Spun Cotton"
-                        value={formData.pileYarn} onChange={handleChange} className={ic()} />
-                    </Field>
-                    <Field id="groundYarn" label="Ground Yarn">
-                      <input id="groundYarn" name="groundYarn" type="text"
-                        placeholder="e.g. 20/1 Ne Ring Spun Cotton"
-                        value={formData.groundYarn} onChange={handleChange} className={ic()} />
-                    </Field>
-                  </div>
-                  <Field id="picksPerCm" label="Picks per cm / Loop Density">
-                    <input id="picksPerCm" name="picksPerCm" type="text"
-                      placeholder="e.g. 8 pile rows per cm"
-                      value={formData.picksPerCm} onChange={handleChange} className={ic()} />
-                  </Field>
-                </SpecSection>
-              )}
-
-              {/* Dimensions — apparel & HT */}
-              {opts && !opts.isFabricRoll && (
-                <SpecSection title="Dimensions & Sizing">
-                  {/* Multi-select sizes */}
-                  <div>
-                    <p className="text-sm font-medium text-navy-900 mb-2">
-                      {opts.sizeLabel} <span className="text-gray-400 font-normal text-xs">(select all that apply)</span>
-                    </p>
-                    <CheckboxGrid options={opts.sizeOptions} selected={formData.sizeRange} onToggle={toggleSize} />
-                    {formData.sizeRange.includes("Custom") && (
-                      <input type="text" placeholder="Describe your custom size requirement"
-                        value={formData.sizeRangeNotes} onChange={e => set("sizeRangeNotes", e.target.value)}
-                        className={`mt-3 ${ic()}`} />
-                    )}
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    {opts.showFitType && (
-                      <Field id="fitType" label="Fit">
-                        <select id="fitType" name="fitType"
-                          value={formData.fitType} onChange={handleChange} className={ic()}>
-                          <option value="">Select…</option>
-                          {opts.fitOptions.map(o => <option key={o} value={o}>{o}</option>)}
-                        </select>
-                      </Field>
-                    )}
-                    {opts.styleOptions.length > 0 && (
-                      <div>
-                        <Field id="style" label={opts.styleLabel}>
-                          <select id="style" name="style"
-                            value={formData.style} onChange={handleChange} className={ic()}>
-                            <option value="">Select…</option>
-                            {opts.styleOptions.map(o => <option key={o} value={o}>{o}</option>)}
-                          </select>
-                        </Field>
-                        <OtherInput id="styleOther" show={formData.style === "Other"}
-                          value={formData.styleOther} onChange={v => set("styleOther", v)}
-                          placeholder={`Specify ${opts.styleLabel.toLowerCase()}`} />
-                      </div>
-                    )}
-                    {opts.showSizeStandard && (
-                      <div>
-                        <Field id="sizeStandard" label="Size Standard">
-                          <select id="sizeStandard" name="sizeStandard"
-                            value={formData.sizeStandard} onChange={handleChange} className={ic()}>
-                            <option value="">Select…</option>
-                            {SIZE_STANDARDS.map(o => <option key={o} value={o}>{o}</option>)}
-                          </select>
-                        </Field>
-                        <OtherInput id="sizeStandardOther" show={formData.sizeStandard === "Custom"}
-                          value={formData.sizeStandardOther} onChange={v => set("sizeStandardOther", v)}
-                          placeholder="Describe your custom size standard / size chart" />
-                      </div>
-                    )}
-                    {opts.showCollarType && (
-                      <div>
-                        <Field id="collarType" label="Collar Type">
-                          <select id="collarType" name="collarType"
-                            value={formData.collarType} onChange={handleChange} className={ic()}>
-                            <option value="">Select…</option>
-                            {opts.collarOptions!.map(o => <option key={o} value={o}>{o}</option>)}
-                          </select>
-                        </Field>
-                        <OtherInput id="collarTypeOther" show={formData.collarType === "Other"}
-                          value={formData.collarTypeOther} onChange={v => set("collarTypeOther", v)}
-                          placeholder="Specify collar type" />
-                      </div>
-                    )}
-                    {opts.showBackingType && (
-                      <div>
-                        <Field id="backingType" label="Backing">
-                          <select id="backingType" name="backingType"
-                            value={formData.backingType} onChange={handleChange} className={ic()}>
-                            <option value="">Select…</option>
-                            {opts.backingOptions!.map(o => <option key={o} value={o}>{o}</option>)}
-                          </select>
-                        </Field>
-                        <OtherInput id="backingTypeOther" show={formData.backingType === "Other"}
-                          value={formData.backingTypeOther} onChange={v => set("backingTypeOther", v)}
-                          placeholder="Specify backing type" />
-                      </div>
-                    )}
-                    {opts.showClosureType && (
-                      <div>
-                        <Field id="closureType" label="Closure Type">
-                          <select id="closureType" name="closureType"
-                            value={formData.closureType} onChange={handleChange} className={ic()}>
-                            <option value="">Select…</option>
-                            {opts.closureOptions!.map(o => <option key={o} value={o}>{o}</option>)}
-                          </select>
-                        </Field>
-                        <OtherInput id="closureTypeOther" show={formData.closureType === "Other"}
-                          value={formData.closureTypeOther} onChange={v => set("closureTypeOther", v)}
-                          placeholder="Specify closure type" />
-                      </div>
-                    )}
-                    {opts.showPocketDepth && (
-                      <Field id="pocketDepth" label="Pocket Depth">
-                        <select id="pocketDepth" name="pocketDepth"
-                          value={formData.pocketDepth} onChange={handleChange} className={ic()}>
-                          <option value="">Select…</option>
-                          {opts.pocketDepthOptions!.map(o => <option key={o} value={o}>{o}</option>)}
-                        </select>
-                      </Field>
-                    )}
-                    {opts.showHeadingType && (
-                      <div>
-                        <Field id="headingType" label="Heading Type">
-                          <select id="headingType" name="headingType"
-                            value={formData.headingType} onChange={handleChange} className={ic()}>
-                            <option value="">Select…</option>
-                            {opts.headingOptions!.map(o => <option key={o} value={o}>{o}</option>)}
-                          </select>
-                        </Field>
-                        <OtherInput id="headingTypeOther" show={formData.headingType === "Other"}
-                          value={formData.headingTypeOther} onChange={v => set("headingTypeOther", v)}
-                          placeholder="Specify heading type" />
-                      </div>
-                    )}
-                    {opts.showLiningType && (
-                      <div>
-                        <Field id="liningType" label="Lining">
-                          <select id="liningType" name="liningType"
-                            value={formData.liningType} onChange={handleChange} className={ic()}>
-                            <option value="">Select…</option>
-                            {opts.liningOptions!.map(o => <option key={o} value={o}>{o}</option>)}
-                          </select>
-                        </Field>
-                        <OtherInput id="liningTypeOther" show={formData.liningType === "Other"}
-                          value={formData.liningTypeOther} onChange={v => set("liningTypeOther", v)}
-                          placeholder="Specify lining type" />
-                      </div>
-                    )}
-                    {opts.showHeatingRating && (
-                      <Field id="heatRating" label="Heat Rating">
-                        <select id="heatRating" name="heatRating"
-                          value={formData.heatRating} onChange={handleChange} className={ic()}>
-                          <option value="">Select…</option>
-                          {opts.heatingOptions!.map(o => <option key={o} value={o}>{o}</option>)}
-                        </select>
-                      </Field>
-                    )}
-                    {opts.showBorderField && (
-                      <div>
-                        <Field id="borderType" label="Border / Selvedge">
-                          <select id="borderType" name="borderType"
-                            value={formData.borderType} onChange={handleChange} className={ic()}>
-                            <option value="">Select…</option>
-                            {BORDER_TYPES.map(o => <option key={o} value={o}>{o}</option>)}
-                          </select>
-                        </Field>
-                        <OtherInput id="borderTypeOther" show={formData.borderType === "Other"}
-                          value={formData.borderTypeOther} onChange={v => set("borderTypeOther", v)}
-                          placeholder="Specify border / selvedge type" />
-                      </div>
-                    )}
-                  </div>
-                </SpecSection>
-              )}
-
-              {/* Color & Design */}
-              {opts && !opts.isFabricRoll && (
-                <SpecSection title="Color & Design">
-                  {formData.category === "Apparel" && (
                     <div className="grid sm:grid-cols-2 gap-4">
-                      <Field id="dyeingMethod" label="Dyeing Method">
-                        <select id="dyeingMethod" name="dyeingMethod"
-                          value={formData.dyeingMethod} onChange={handleChange} className={ic()}>
+                      {opts.showFitType && (
+                        <Field id="fitType" label="Fit">
+                          <select id="fitType" name="fitType"
+                            value={formData.fitType} onChange={handleChange} className={ic()}>
+                            <option value="">Select…</option>
+                            {opts.fitOptions.map(o => <option key={o} value={o}>{o}</option>)}
+                          </select>
+                        </Field>
+                      )}
+                      {opts.styleOptions.length > 0 && (
+                        <div>
+                          <Field id="style" label={opts.styleLabel}>
+                            <select id="style" name="style"
+                              value={formData.style} onChange={handleChange} className={ic()}>
+                              <option value="">Select…</option>
+                              {opts.styleOptions.map(o => <option key={o} value={o}>{o}</option>)}
+                            </select>
+                          </Field>
+                          <OtherInput id="styleOther" show={formData.style === "Other"}
+                            value={formData.styleOther} onChange={v => set("styleOther", v)}
+                            placeholder={`Specify ${opts.styleLabel.toLowerCase()}`} />
+                        </div>
+                      )}
+                      {opts.showSizeStandard && (
+                        <div>
+                          <Field id="sizeStandard" label="Size Standard">
+                            <select id="sizeStandard" name="sizeStandard"
+                              value={formData.sizeStandard} onChange={handleChange} className={ic()}>
+                              <option value="">Select…</option>
+                              {SIZE_STANDARDS.map(o => <option key={o} value={o}>{o}</option>)}
+                            </select>
+                          </Field>
+                          <OtherInput id="sizeStandardOther" show={formData.sizeStandard === "Custom"}
+                            value={formData.sizeStandardOther} onChange={v => set("sizeStandardOther", v)}
+                            placeholder="Describe your custom size standard / size chart" />
+                        </div>
+                      )}
+                      {opts.showCollarType && (
+                        <div>
+                          <Field id="collarType" label="Collar Type">
+                            <select id="collarType" name="collarType"
+                              value={formData.collarType} onChange={handleChange} className={ic()}>
+                              <option value="">Select…</option>
+                              {opts.collarOptions!.map(o => <option key={o} value={o}>{o}</option>)}
+                            </select>
+                          </Field>
+                          <OtherInput id="collarTypeOther" show={formData.collarType === "Other"}
+                            value={formData.collarTypeOther} onChange={v => set("collarTypeOther", v)}
+                            placeholder="Specify collar type" />
+                        </div>
+                      )}
+                      {opts.showBackingType && (
+                        <div>
+                          <Field id="backingType" label="Backing">
+                            <select id="backingType" name="backingType"
+                              value={formData.backingType} onChange={handleChange} className={ic()}>
+                              <option value="">Select…</option>
+                              {opts.backingOptions!.map(o => <option key={o} value={o}>{o}</option>)}
+                            </select>
+                          </Field>
+                          <OtherInput id="backingTypeOther" show={formData.backingType === "Other"}
+                            value={formData.backingTypeOther} onChange={v => set("backingTypeOther", v)}
+                            placeholder="Specify backing type" />
+                        </div>
+                      )}
+                      {opts.showClosureType && (
+                        <div>
+                          <Field id="closureType" label="Closure Type">
+                            <select id="closureType" name="closureType"
+                              value={formData.closureType} onChange={handleChange} className={ic()}>
+                              <option value="">Select…</option>
+                              {opts.closureOptions!.map(o => <option key={o} value={o}>{o}</option>)}
+                            </select>
+                          </Field>
+                          <OtherInput id="closureTypeOther" show={formData.closureType === "Other"}
+                            value={formData.closureTypeOther} onChange={v => set("closureTypeOther", v)}
+                            placeholder="Specify closure type" />
+                        </div>
+                      )}
+                      {opts.showPocketDepth && (
+                        <Field id="pocketDepth" label="Pocket Depth">
+                          <select id="pocketDepth" name="pocketDepth"
+                            value={formData.pocketDepth} onChange={handleChange} className={ic()}>
+                            <option value="">Select…</option>
+                            {opts.pocketDepthOptions!.map(o => <option key={o} value={o}>{o}</option>)}
+                          </select>
+                        </Field>
+                      )}
+                      {opts.showHeadingType && (
+                        <div>
+                          <Field id="headingType" label="Heading Type">
+                            <select id="headingType" name="headingType"
+                              value={formData.headingType} onChange={handleChange} className={ic()}>
+                              <option value="">Select…</option>
+                              {opts.headingOptions!.map(o => <option key={o} value={o}>{o}</option>)}
+                            </select>
+                          </Field>
+                          <OtherInput id="headingTypeOther" show={formData.headingType === "Other"}
+                            value={formData.headingTypeOther} onChange={v => set("headingTypeOther", v)}
+                            placeholder="Specify heading type" />
+                        </div>
+                      )}
+                      {opts.showLiningType && (
+                        <div>
+                          <Field id="liningType" label="Lining">
+                            <select id="liningType" name="liningType"
+                              value={formData.liningType} onChange={handleChange} className={ic()}>
+                              <option value="">Select…</option>
+                              {opts.liningOptions!.map(o => <option key={o} value={o}>{o}</option>)}
+                            </select>
+                          </Field>
+                          <OtherInput id="liningTypeOther" show={formData.liningType === "Other"}
+                            value={formData.liningTypeOther} onChange={v => set("liningTypeOther", v)}
+                            placeholder="Specify lining type" />
+                        </div>
+                      )}
+                      {opts.showHeatingRating && (
+                        <Field id="heatRating" label="Heat Rating">
+                          <select id="heatRating" name="heatRating"
+                            value={formData.heatRating} onChange={handleChange} className={ic()}>
+                            <option value="">Select…</option>
+                            {opts.heatingOptions!.map(o => <option key={o} value={o}>{o}</option>)}
+                          </select>
+                        </Field>
+                      )}
+                      {opts.showBorderField && (
+                        <div>
+                          <Field id="borderType" label="Border / Selvedge">
+                            <select id="borderType" name="borderType"
+                              value={formData.borderType} onChange={handleChange} className={ic()}>
+                              <option value="">Select…</option>
+                              {BORDER_TYPES.map(o => <option key={o} value={o}>{o}</option>)}
+                            </select>
+                          </Field>
+                          <OtherInput id="borderTypeOther" show={formData.borderType === "Other"}
+                            value={formData.borderTypeOther} onChange={v => set("borderTypeOther", v)}
+                            placeholder="Specify border / selvedge type" />
+                        </div>
+                      )}
+                    </div>
+                  </SpecSection>
+
+                  {/* 4 — Color & Design */}
+                  <SpecSection title="4 — Color &amp; Design">
+                    {formData.category === "Apparel" && (
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <Field id="dyeingMethod" label="Dyeing Method">
+                          <select id="dyeingMethod" name="dyeingMethod"
+                            value={formData.dyeingMethod} onChange={handleChange} className={ic()}>
+                            <option value="">Select…</option>
+                            {DYEING_METHODS.map(o => <option key={o} value={o}>{o}</option>)}
+                          </select>
+                        </Field>
+                        <Field id="numberOfColors" label="Number of Colors">
+                          <select id="numberOfColors" name="numberOfColors"
+                            value={formData.numberOfColors} onChange={handleChange} className={ic()}>
+                            <option value="">Select…</option>
+                            {NUMBER_OF_COLORS.map(o => <option key={o} value={o}>{o}</option>)}
+                          </select>
+                        </Field>
+                      </div>
+                    )}
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <Field id="printType" label={opts.designLabel}>
+                        <select id="printType" name="printType"
+                          value={formData.printType} onChange={handleChange} className={ic()}>
                           <option value="">Select…</option>
-                          {DYEING_METHODS.map(o => <option key={o} value={o}>{o}</option>)}
+                          {opts.printTypeOptions.map(o => <option key={o} value={o}>{o}</option>)}
                         </select>
                       </Field>
-                      <Field id="numberOfColors" label="Number of Colors">
-                        <select id="numberOfColors" name="numberOfColors"
-                          value={formData.numberOfColors} onChange={handleChange} className={ic()}>
+                      <Field id="printPlacement" label={opts.printPlacementLabel}>
+                        <select id="printPlacement" name="printPlacement"
+                          value={formData.printPlacement} onChange={handleChange} className={ic()}>
                           <option value="">Select…</option>
-                          {NUMBER_OF_COLORS.map(o => <option key={o} value={o}>{o}</option>)}
+                          {opts.printPlacementOptions.map(o => <option key={o} value={o}>{o}</option>)}
                         </select>
                       </Field>
                     </div>
-                  )}
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <Field id="printType" label={opts.designLabel}>
-                      <select id="printType" name="printType"
-                        value={formData.printType} onChange={handleChange} className={ic()}>
-                        <option value="">Select…</option>
-                        {opts.printTypeOptions.map(o => <option key={o} value={o}>{o}</option>)}
-                      </select>
+                    <Field id="pantoneRef" label="Pantone / Color Reference">
+                      <input id="pantoneRef" name="pantoneRef" type="text"
+                        placeholder="e.g. PMS 286C or describe colors"
+                        value={formData.pantoneRef} onChange={handleChange} className={ic()} />
                     </Field>
-                    <Field id="printPlacement" label={opts.printPlacementLabel}>
-                      <select id="printPlacement" name="printPlacement"
-                        value={formData.printPlacement} onChange={handleChange} className={ic()}>
-                        <option value="">Select…</option>
-                        {opts.printPlacementOptions.map(o => <option key={o} value={o}>{o}</option>)}
-                      </select>
+                    <Field id="printDetail" label="Print / Design Detail">
+                      <input id="printDetail" name="printDetail" type="text"
+                        placeholder="e.g. Brand logo, 8×4 cm, 2 spot colors"
+                        value={formData.printDetail} onChange={handleChange} className={ic()} />
                     </Field>
-                  </div>
-                  <Field id="pantoneRef" label="Pantone / Color Reference">
-                    <input id="pantoneRef" name="pantoneRef" type="text"
-                      placeholder="e.g. PMS 286C or describe colors"
-                      value={formData.pantoneRef} onChange={handleChange} className={ic()} />
-                  </Field>
-                  <Field id="printDetail" label="Print / Design Detail">
-                    <input id="printDetail" name="printDetail" type="text"
-                      placeholder="e.g. Brand logo, 8×4 cm, 2 spot colors"
-                      value={formData.printDetail} onChange={handleChange} className={ic()} />
-                  </Field>
-                </SpecSection>
+                  </SpecSection>
+                </div>
               )}
 
-              {/* Fabric state & design */}
+              {/* ── Row 2b: State & Design — fabric rolls only ── */}
               {opts?.isFabricRoll && (
-                <SpecSection title="State & Design">
+                <SpecSection title="3 — State &amp; Design">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <Field id="printType" label="Fabric State">
                       <select id="printType" name="printType"
@@ -1229,168 +1229,180 @@ export default function RFQContent() {
                 </SpecSection>
               )}
 
-              {/* Embellishments & Accessories — apparel only */}
-              {formData.category === "Apparel" && opts?.embellishmentOptions && opts.embellishmentOptions.length > 0 && (
-                <SpecSection title="Embellishments &amp; Accessories / Trims">
-                  <div className="space-y-5">
-                    <div>
-                      <p className="text-sm font-medium text-navy-900 mb-2">
-                        Embellishments <span className="text-gray-400 font-normal text-xs">(select all that apply)</span>
-                      </p>
-                      <CheckboxGrid
-                        options={opts.embellishmentOptions}
-                        selected={formData.embellishments}
-                        onToggle={toggleEmbellishment}
-                      />
-                      {formData.embellishments.includes("Other") && (
-                        <input type="text" placeholder="Describe other embellishment"
-                          value={formData.embellishmentsOther} onChange={e => set("embellishmentsOther", e.target.value)}
-                          className={`mt-3 ${ic()}`} />
-                      )}
-                    </div>
-                    {opts.accessoryOptions && opts.accessoryOptions.length > 0 && (
-                      <div>
-                        <p className="text-sm font-medium text-navy-900 mb-2">
-                          Accessories &amp; Trims <span className="text-gray-400 font-normal text-xs">(select all that apply)</span>
-                        </p>
-                        <CheckboxGrid
-                          options={opts.accessoryOptions}
-                          selected={formData.accessories}
-                          onToggle={toggleAccessory}
-                        />
-                        {formData.accessories.includes("Other") && (
-                          <input type="text" placeholder="Describe other accessories / trims"
-                            value={formData.accessoriesOther} onChange={e => set("accessoriesOther", e.target.value)}
-                            className={`mt-3 ${ic()}`} />
-                        )}
-                      </div>
-                    )}
-                  </div>
-                </SpecSection>
-              )}
-
-              {/* Finishing */}
+              {/* ── Row 3: Embellishments (left) | Finishing (right) ── */}
               {opts && (
-                <SpecSection title="Finishing">
-                  <p className="text-xs text-gray-500 mb-3">Select all that apply</p>
-                  <CheckboxGrid options={finishingOpts} selected={formData.finishing} onToggle={toggleFinish} />
-                  {formData.finishing.includes("Other (specify below)") && (
-                    <input type="text" placeholder="Describe other finishing requirement"
-                      value={formData.finishingOther} onChange={e => set("finishingOther", e.target.value)}
-                      className={`mt-3 ${ic()}`} />
-                  )}
-                </SpecSection>
-              )}
-
-              {/* Labels — apparel only */}
-              {formData.category === "Apparel" && (
-                <SpecSection title="Labels & Branding">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <Field id="brandLabel" label="Brand Label">
-                      <select id="brandLabel" name="brandLabel"
-                        value={formData.brandLabel} onChange={handleChange} className={ic()}>
-                        <option value="">Select…</option>
-                        {BRAND_LABELS.map(o => <option key={o} value={o}>{o}</option>)}
-                      </select>
-                    </Field>
-                    <Field id="careLabel" label="Care Label">
-                      <select id="careLabel" name="careLabel"
-                        value={formData.careLabel} onChange={handleChange} className={ic()}>
-                        <option value="">Select…</option>
-                        {CARE_LABELS.map(o => <option key={o} value={o}>{o}</option>)}
-                      </select>
-                    </Field>
-                    <Field id="stitchType" label="Stitch Type">
-                      <select id="stitchType" name="stitchType"
-                        value={formData.stitchType} onChange={handleChange} className={ic()}>
-                        <option value="">Select…</option>
-                        {STITCH_TYPES.map(o => <option key={o} value={o}>{o}</option>)}
-                      </select>
-                    </Field>
-                  </div>
-                  <Field id="labelNotes" label="Label Placement / Artwork Notes">
-                    <input id="labelNotes" name="labelNotes" type="text"
-                      placeholder="e.g. Neck label, buyer-supplied artwork PDF"
-                      value={formData.labelNotes} onChange={handleChange} className={ic()} />
-                  </Field>
-                </SpecSection>
-              )}
-
-              {/* Packing */}
-              {opts && (
-                <SpecSection title="Packing">
-                  {opts.isFabricRoll ? (
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div>
-                        <Field id="rollLength" label="Roll Length">
-                          <select id="rollLength" name="rollLength"
-                            value={formData.rollLength} onChange={handleChange} className={ic()}>
-                            <option value="">Select…</option>
-                            {ROLL_LENGTHS.map(o => <option key={o} value={o}>{o}</option>)}
-                          </select>
-                        </Field>
-                        <OtherInput id="rollLengthOther" show={formData.rollLength.startsWith("Custom")}
-                          value={formData.rollLengthOther} onChange={v => set("rollLengthOther", v)}
-                          placeholder="e.g. 120m per roll" />
-                      </div>
-                      <Field id="rollCore" label="Roll Core">
-                        <select id="rollCore" name="rollCore"
-                          value={formData.rollCore} onChange={handleChange} className={ic()}>
-                          <option value="">Select…</option>
-                          {ROLL_CORES.map(o => <option key={o} value={o}>{o}</option>)}
-                        </select>
-                      </Field>
-                      <Field id="rollNotes" label="Roll Packing Notes">
-                        <input id="rollNotes" name="rollNotes" type="text"
-                          placeholder="e.g. Polybag per roll, 50 rolls per pallet"
-                          value={formData.rollNotes} onChange={handleChange} className={ic()} />
-                      </Field>
-                    </div>
-                  ) : (
-                    <div className="space-y-4">
-                      <div className="grid sm:grid-cols-2 gap-4">
-                        <Field id="individualPack" label="Individual Pack">
-                          <select id="individualPack" name="individualPack"
-                            value={formData.individualPack} onChange={handleChange} className={ic()}>
-                            <option value="">Select…</option>
-                            {opts.individualPackOptions.map(o => <option key={o} value={o}>{o}</option>)}
-                          </select>
-                        </Field>
-                        <Field id="setComposition" label="Set Composition">
-                          <select id="setComposition" name="setComposition"
-                            value={formData.setComposition} onChange={handleChange} className={ic()}>
-                            <option value="">Select…</option>
-                            {opts.setCompositionOptions.map(o => <option key={o} value={o}>{o}</option>)}
-                          </select>
-                        </Field>
-                        {formData.category === "Apparel" && (
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
+                  {formData.category === "Apparel" && opts.embellishmentOptions && opts.embellishmentOptions.length > 0 ? (
+                    <SpecSection title="5 — Embellishments &amp; Accessories / Trims">
+                      <div className="space-y-5">
+                        <div>
+                          <p className="text-sm font-medium text-navy-900 mb-2">
+                            Embellishments <span className="text-gray-400 font-normal text-xs">(select all that apply)</span>
+                          </p>
+                          <CheckboxGrid
+                            options={opts.embellishmentOptions}
+                            selected={formData.embellishments}
+                            onToggle={toggleEmbellishment}
+                          />
+                          {formData.embellishments.includes("Other") && (
+                            <input type="text" placeholder="Describe other embellishment"
+                              value={formData.embellishmentsOther} onChange={e => set("embellishmentsOther", e.target.value)}
+                              className={`mt-3 ${ic()}`} />
+                          )}
+                        </div>
+                        {opts.accessoryOptions && opts.accessoryOptions.length > 0 && (
                           <div>
-                            <Field id="masterCarton" label="Master Carton">
-                              <select id="masterCarton" name="masterCarton"
-                                value={formData.masterCarton} onChange={handleChange} className={ic()}>
-                                <option value="">Select…</option>
-                                {MASTER_CARTONS.map(o => <option key={o} value={o}>{o}</option>)}
-                              </select>
-                            </Field>
-                            <OtherInput id="masterCartonOther" show={formData.masterCarton.startsWith("Custom")}
-                              value={formData.masterCartonOther} onChange={v => set("masterCartonOther", v)}
-                              placeholder="e.g. 30 pcs per carton, max 18 kg gross" />
+                            <p className="text-sm font-medium text-navy-900 mb-2">
+                              Accessories &amp; Trims <span className="text-gray-400 font-normal text-xs">(select all that apply)</span>
+                            </p>
+                            <CheckboxGrid
+                              options={opts.accessoryOptions}
+                              selected={formData.accessories}
+                              onToggle={toggleAccessory}
+                            />
+                            {formData.accessories.includes("Other") && (
+                              <input type="text" placeholder="Describe other accessories / trims"
+                                value={formData.accessoriesOther} onChange={e => set("accessoriesOther", e.target.value)}
+                                className={`mt-3 ${ic()}`} />
+                            )}
                           </div>
                         )}
                       </div>
-                      <Field id="packingNotes" label="Packing Notes">
-                        <input id="packingNotes" name="packingNotes" type="text"
-                          placeholder="e.g. Retail-ready, buyer barcodes required"
-                          value={formData.packingNotes} onChange={handleChange} className={ic()} />
-                      </Field>
-                    </div>
-                  )}
-                </SpecSection>
+                    </SpecSection>
+                  ) : <div />}
+                  <SpecSection title={
+                    formData.category === "Apparel" ? "6 — Finishing"
+                    : opts.isFabricRoll ? "4 — Finishing"
+                    : "5 — Finishing"
+                  }>
+                    <p className="text-xs text-gray-500 mb-3">Select all that apply</p>
+                    <CheckboxGrid options={finishingOpts} selected={formData.finishing} onToggle={toggleFinish} />
+                    {formData.finishing.includes("Other (specify below)") && (
+                      <input type="text" placeholder="Describe other finishing requirement"
+                        value={formData.finishingOther} onChange={e => set("finishingOther", e.target.value)}
+                        className={`mt-3 ${ic()}`} />
+                    )}
+                  </SpecSection>
+                </div>
               )}
 
-              {/* Certifications */}
+              {/* ── Row 4: Labels (left) | Packing (right) ── */}
               {opts && (
-                <SpecSection title="Certifications Required">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
+                  {formData.category === "Apparel" ? (
+                    <SpecSection title="7 — Labels &amp; Branding">
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <Field id="brandLabel" label="Brand Label">
+                          <select id="brandLabel" name="brandLabel"
+                            value={formData.brandLabel} onChange={handleChange} className={ic()}>
+                            <option value="">Select…</option>
+                            {BRAND_LABELS.map(o => <option key={o} value={o}>{o}</option>)}
+                          </select>
+                        </Field>
+                        <Field id="careLabel" label="Care Label">
+                          <select id="careLabel" name="careLabel"
+                            value={formData.careLabel} onChange={handleChange} className={ic()}>
+                            <option value="">Select…</option>
+                            {CARE_LABELS.map(o => <option key={o} value={o}>{o}</option>)}
+                          </select>
+                        </Field>
+                        <Field id="stitchType" label="Stitch Type">
+                          <select id="stitchType" name="stitchType"
+                            value={formData.stitchType} onChange={handleChange} className={ic()}>
+                            <option value="">Select…</option>
+                            {STITCH_TYPES.map(o => <option key={o} value={o}>{o}</option>)}
+                          </select>
+                        </Field>
+                      </div>
+                      <Field id="labelNotes" label="Label Placement / Artwork Notes">
+                        <input id="labelNotes" name="labelNotes" type="text"
+                          placeholder="e.g. Neck label, buyer-supplied artwork PDF"
+                          value={formData.labelNotes} onChange={handleChange} className={ic()} />
+                      </Field>
+                    </SpecSection>
+                  ) : <div />}
+                  <SpecSection title={
+                    formData.category === "Apparel" ? "8 — Packing"
+                    : opts.isFabricRoll ? "5 — Packing"
+                    : "6 — Packing"
+                  }>
+                    {opts.isFabricRoll ? (
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <div>
+                          <Field id="rollLength" label="Roll Length">
+                            <select id="rollLength" name="rollLength"
+                              value={formData.rollLength} onChange={handleChange} className={ic()}>
+                              <option value="">Select…</option>
+                              {ROLL_LENGTHS.map(o => <option key={o} value={o}>{o}</option>)}
+                            </select>
+                          </Field>
+                          <OtherInput id="rollLengthOther" show={formData.rollLength.startsWith("Custom")}
+                            value={formData.rollLengthOther} onChange={v => set("rollLengthOther", v)}
+                            placeholder="e.g. 120m per roll" />
+                        </div>
+                        <Field id="rollCore" label="Roll Core">
+                          <select id="rollCore" name="rollCore"
+                            value={formData.rollCore} onChange={handleChange} className={ic()}>
+                            <option value="">Select…</option>
+                            {ROLL_CORES.map(o => <option key={o} value={o}>{o}</option>)}
+                          </select>
+                        </Field>
+                        <Field id="rollNotes" label="Roll Packing Notes">
+                          <input id="rollNotes" name="rollNotes" type="text"
+                            placeholder="e.g. Polybag per roll, 50 rolls per pallet"
+                            value={formData.rollNotes} onChange={handleChange} className={ic()} />
+                        </Field>
+                      </div>
+                    ) : (
+                      <div className="space-y-4">
+                        <div className="grid sm:grid-cols-2 gap-4">
+                          <Field id="individualPack" label="Individual Pack">
+                            <select id="individualPack" name="individualPack"
+                              value={formData.individualPack} onChange={handleChange} className={ic()}>
+                              <option value="">Select…</option>
+                              {opts.individualPackOptions.map(o => <option key={o} value={o}>{o}</option>)}
+                            </select>
+                          </Field>
+                          <Field id="setComposition" label="Set Composition">
+                            <select id="setComposition" name="setComposition"
+                              value={formData.setComposition} onChange={handleChange} className={ic()}>
+                              <option value="">Select…</option>
+                              {opts.setCompositionOptions.map(o => <option key={o} value={o}>{o}</option>)}
+                            </select>
+                          </Field>
+                          {formData.category === "Apparel" && (
+                            <div>
+                              <Field id="masterCarton" label="Master Carton">
+                                <select id="masterCarton" name="masterCarton"
+                                  value={formData.masterCarton} onChange={handleChange} className={ic()}>
+                                  <option value="">Select…</option>
+                                  {MASTER_CARTONS.map(o => <option key={o} value={o}>{o}</option>)}
+                                </select>
+                              </Field>
+                              <OtherInput id="masterCartonOther" show={formData.masterCarton.startsWith("Custom")}
+                                value={formData.masterCartonOther} onChange={v => set("masterCartonOther", v)}
+                                placeholder="e.g. 30 pcs per carton, max 18 kg gross" />
+                            </div>
+                          )}
+                        </div>
+                        <Field id="packingNotes" label="Packing Notes">
+                          <input id="packingNotes" name="packingNotes" type="text"
+                            placeholder="e.g. Retail-ready, buyer barcodes required"
+                            value={formData.packingNotes} onChange={handleChange} className={ic()} />
+                        </Field>
+                      </div>
+                    )}
+                  </SpecSection>
+                </div>
+              )}
+
+              {/* ── Row 5: Certifications (full width) ── */}
+              {opts && (
+                <SpecSection title={
+                  formData.category === "Apparel" ? "9 — Certifications Required"
+                  : opts.isFabricRoll ? "6 — Certifications Required"
+                  : "7 — Certifications Required"
+                }>
                   <p className="text-xs text-gray-500 mb-3">Select all that apply</p>
                   <CheckboxGrid options={opts.certifications} selected={formData.certifications} onToggle={toggleCert} />
                   {formData.certifications.includes("Other (specify below)") && (
@@ -1400,7 +1412,8 @@ export default function RFQContent() {
                   )}
                 </SpecSection>
               )}
-            </>
+
+            </div>
           )}
         </div>
       </motion.div>
@@ -1735,7 +1748,7 @@ export default function RFQContent() {
           className="sticky left-0 right-0 z-40 bg-white border-b border-gray-100 shadow-sm"
           style={{ top: 128, height: 48 }}
         >
-          <div className="max-w-2xl mx-auto h-full px-4 sm:px-6 flex items-center">
+          <div className="max-w-[1600px] mx-auto h-full px-4 sm:px-6 lg:px-10 flex items-center">
             {STEPS.map((label, idx) => {
               const num = idx + 1;
               const done   = num < step;
@@ -1763,9 +1776,9 @@ export default function RFQContent() {
           </div>
         </div>
 
-        <div className="py-14 sm:py-20">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6">
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm px-7 py-8 sm:px-10 sm:py-10">
+        <div className="py-6 sm:py-8">
+          <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10">
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm px-6 py-6 sm:px-8 sm:py-8">
               <AnimatePresence mode="wait">
                 {step === 1 && renderStep1()}
                 {step === 2 && renderStep2()}
@@ -1811,7 +1824,7 @@ export default function RFQContent() {
       </div>
 
       <section className="bg-white py-14 sm:py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">After You Submit</p>
             <h2 className="text-2xl sm:text-3xl font-bold text-navy-900">What happens next?</h2>

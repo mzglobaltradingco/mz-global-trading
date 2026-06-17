@@ -1219,35 +1219,6 @@ export default function SocksContent() {
         </div>
       </section>
 
-      {/* ══ SAME-TIER NAVIGATION ══════════════════════════════════════════════ */}
-      <section className="bg-gray-50 py-16 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-1">Apparel</p>
-            <h2 className="text-2xl font-bold text-navy-900">More Apparel Products</h2>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { name: "T-Shirts", desc: "Single jersey, pique, rib and waffle knit. OEM screen print and embroidery.", href: "/apparel/knittedgarments/tshirts/", img: "/images/menu/menu-tshirts.webp", alt: "Pakistan T-shirt manufacturer — OEM knitted T-shirts for fashion brands worldwide" },
-              { name: "Polo Shirts", desc: "Pique polo, mini pique and waffle. Embroidery and woven badge programmes.", href: "/apparel/knittedgarments/poloshirts/", img: "/images/menu/menu-poloshirts.webp", alt: "Pakistan polo shirts manufacturer — OEM pique polo for corporate and fashion brands" },
-              { name: "Sweatshirts & Hoodies", desc: "French terry, fleece and bonded. OEM embroidery and screen print.", href: "/apparel/knittedgarments/sweatshirtshoodies/", img: "/images/menu/menu-sweatshirtshoodies.webp", alt: "Pakistan sweatshirts and hoodies manufacturer — OEM fleece for fashion brands worldwide" },
-              { name: "Workwear Apparel", desc: "Canvas, ripstop, FR cotton and hi-vis. Safety-critical programmes.", href: "/apparel/workwearapparel/", img: "/images/menu/menu-workwear.webp", alt: "Pakistan workwear apparel manufacturer — OEM safety workwear for industrial sectors" },
-            ].map((p) => (
-              <Link href={p.href} key={p.name} className="group bg-white border border-gray-100 hover:border-gold rounded-2xl overflow-hidden flex flex-col hover:shadow-md transition-all">
-                <div className="relative h-36 overflow-hidden bg-gray-100">
-                  <Image src={p.img} alt={p.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw" />
-                </div>
-                <div className="p-4 flex flex-col gap-1.5 flex-1">
-                  <p className="font-bold text-navy-900 group-hover:text-gold transition-colors text-sm leading-tight">{p.name}</p>
-                  <p className="text-xs text-gray-500 leading-relaxed flex-1">{p.desc}</p>
-                  <span className="text-xs font-semibold text-gray-400 group-hover:text-gold transition-colors mt-1">View →</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ══ FINAL CTA ════════════════════════════════════════════════════════ */}
       <section className="bg-indigo-950 py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

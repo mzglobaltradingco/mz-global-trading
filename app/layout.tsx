@@ -149,27 +149,17 @@ export default function RootLayout({
           });
         `}</Script>
 
-        {/* ── Google Tag Manager ───────────────────────────────────────────────
-            GA4 property G-BEG0E64X9E must be configured as a tag inside GTM.  */}
-        <Script id="gtm-loader" strategy="afterInteractive">{`
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;
-          f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-WS77N5C5');
+        {/* ── Google Analytics 4 (G-BEG0E64X9E) ─────────────────────────────
+            Loads after interactive so it never blocks render.
+            Consent state is already applied by consent-init above. */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BEG0E64X9E"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-config" strategy="afterInteractive">{`
+          gtag('js', new Date());
+          gtag('config', 'G-BEG0E64X9E');
         `}</Script>
-
-        {/* GTM noscript fallback — for browsers with JavaScript disabled */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-WS77N5C5"
-            height={0}
-            width={0}
-            style={{ display: "none", visibility: "hidden" }}
-            title="Google Tag Manager"
-          />
-        </noscript>
 
         {/* Skip to main content — keyboard / screen reader navigation */}
         <a

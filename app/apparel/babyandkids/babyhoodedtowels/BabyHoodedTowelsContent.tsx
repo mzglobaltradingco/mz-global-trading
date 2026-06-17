@@ -159,34 +159,42 @@ const FAQS = [
 function ExploreBtn({ label, targetId }: { label: string; targetId: string }) {
   return (
     <button
-      onClick={() => {
-        const el = document.getElementById(targetId);
-        if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 160, behavior: "smooth" });
-      }}
-      className="inline-flex items-center gap-2 px-6 py-3 bg-[#D4A017] text-[#0D1B2A] font-semibold rounded-full hover:bg-[#b8891a] transition-colors"
+      onClick={() => scrollToId(targetId)}
+      className="group self-start inline-flex items-center gap-1.5 text-sm font-semibold text-navy-900 hover:text-gold transition-colors mt-auto pt-4"
     >
       {label}
-      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-      </svg>
+      <span className="group-hover:translate-x-1 transition-transform block" aria-hidden="true">
+        →
+      </span>
     </button>
   );
 }
 
-function BackToTop() {
+function scrollToId(id: string) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const y = el.getBoundingClientRect().top + window.scrollY - 160;
+  window.scrollTo({ top: y, behavior: "smooth" });
+}
+
+function BackToTop({ dark = false }: { dark?: boolean }) {
   return (
-    <div className="flex justify-center pt-6">
-      <motion.button
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        animate={{ scale: [1, 1.08, 1] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        className="w-11 h-11 rounded-full bg-[#D4A017] text-[#0D1B2A] flex items-center justify-center shadow-md hover:bg-[#b8891a] transition-colors"
-        aria-label="Back to top"
+    <div className="flex justify-center mt-16">
+      <button
+        onClick={() => scrollToId("bento-grid")}
+        className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
+          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+        }`}
+        style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
-        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-        </svg>
-      </motion.button>
+        <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75" />
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-gold" />
+        </span>
+        <motion.span animate={{ y: [0, -3, 0] }} transition={{ repeat: Infinity, duration: 1.4, ease: "easeInOut" }} aria-hidden="true">↑</motion.span>
+        Move back to top
+      </button>
+      <style>{`@keyframes btt-pulse{0%{box-shadow:0 0 0 0 rgba(212,160,23,.45)}70%{box-shadow:0 0 0 10px rgba(212,160,23,0)}100%{box-shadow:0 0 0 0 rgba(212,160,23,0)}}`}</style>
     </div>
   );
 }
@@ -265,127 +273,273 @@ export default function BabyHoodedTowelsContent() {
         </ol>
       </nav>
 
-      {/* Bento Grid */}
-      <section id="bento-grid" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-4">
-        {/* Row 1 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 text-white"
-          >
-            <p className="text-[#D4A017] text-xs font-semibold tracking-widest uppercase mb-2">What We Produce</p>
-            <h2 className="text-2xl font-bold mb-4">OEM Baby Hooded Bath Towels</h2>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Soft terry loop and velour hooded bath towels for infants and toddlers. Produced in GOTS certified organic cotton and OEKO-TEX Class 1 certified velour from Pakistan&apos;s certified mills. Animal hood designs with custom ear detailing, embroidery and appliqu&eacute;. Available newborn to 4 years in single pieces, gift boxes and multi-pack sets.
-            </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-            className="bg-teal-50 rounded-2xl p-8"
-          >
-            <p className="text-teal-700 text-xs font-semibold tracking-widest uppercase mb-2">Construction Highlights</p>
-            <h2 className="text-2xl font-bold text-[#0D1B2A] mb-4">Hood & Body — Full OEM Spec</h2>
-            <ul className="space-y-2 text-sm text-gray-700">
-              {[
-                "Hood sewn into corner — double-stitched overlock",
-                "Mitered corner construction available (premium)",
-                "Animal ears — rounded tips, stuffed or flat panel",
-                "All ear seams tested to 30N pull strength",
-                "OEKO-TEX Class 1 embroidery thread — no backing on skin",
-                "Size-graded hood depth from 18–26 cm",
-              ].map((f) => (
-                <li key={f} className="flex items-start gap-2">
-                  <span className="text-teal-500 mt-0.5">✓</span>
-                  <span>{f}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        </div>
+      {/* ══ BENTO GRID ══════════════════════════════════════════════════════════ */}
+      <section id="bento-grid" className="bg-white py-12 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0D1B2A]">Explore All Aspects</h2>
+            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+          </div>
 
-        {/* Row 2 */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            { label: "GSM Range", value: "200–600 gsm", sub: "Waffle to ultra-plush", icon: "⚖️" },
-            { label: "Hood Styles", value: "8 Designs", sub: "Animal + plain + custom", icon: "🐰" },
-            { label: "Certifications", value: "GOTS + Class 1", sub: "All components tested", icon: "✅" },
-            { label: "Packing", value: "Gift Box Option", sub: "Ribbon, poly, gift bag", icon: "🎁" },
-          ].map((item, i) => (
-            <motion.div
-              key={item.label}
-              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
-              className="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm text-center"
+          {/* Row 1: Constructions + Size Guide */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+              className="bg-teal-50 border border-teal-100 rounded-2xl p-7 flex flex-col gap-4 min-h-[300px]"
             >
-              <div className="text-3xl mb-2">{item.icon}</div>
-              <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">{item.label}</p>
-              <p className="font-bold text-[#0D1B2A] text-sm">{item.value}</p>
-              <p className="text-gray-400 text-xs mt-1">{item.sub}</p>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl" aria-hidden="true">🧶</span>
+                <div>
+                  <p className="text-teal-600 text-xs font-semibold tracking-[0.2em] uppercase">Terry Constructions</p>
+                  <h3 className="text-xl font-bold text-[#0D1B2A] mt-0.5">4 Fabric Options</h3>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2.5 flex-1">
+                {CONSTRUCTIONS.map((c) => (
+                  <div key={c.name} className="bg-white rounded-xl p-3 border border-teal-100">
+                    <div className="flex items-center justify-between gap-2">
+                      <p className="text-sm font-semibold text-[#0D1B2A]">{c.name}</p>
+                      {c.tag && <span className={`shrink-0 text-[10px] font-semibold px-2 py-0.5 rounded-full ${c.tagColor}`}>{c.tag}</span>}
+                    </div>
+                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="Explore Constructions" targetId="s1-constructions" />
             </motion.div>
-          ))}
-        </div>
 
-        {/* Row 3 */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-          <div className="md:col-span-2 bg-[#D4A017]/10 rounded-2xl p-7">
-            <p className="text-[#D4A017] text-xs font-semibold tracking-widest uppercase mb-2">Terry Constructions</p>
-            <h3 className="text-xl font-bold text-[#0D1B2A] mb-3">4 Fabric Options</h3>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              Terry loop, velour, zero-twist and waffle weave — from lightweight summer towels to premium gift-set plush.
-            </p>
-            <ExploreBtn label="View Fabrics" targetId="s1-constructions" />
-          </div>
-          <div className="md:col-span-2 bg-orange-50 rounded-2xl p-7">
-            <p className="text-orange-700 text-xs font-semibold tracking-widest uppercase mb-2">Hood Designs</p>
-            <h3 className="text-xl font-bold text-[#0D1B2A] mb-3">8 Animal Styles</h3>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              Bunny, bear, lion, elephant, duck, fox, plain and custom character designs from buyer artwork.
-            </p>
-            <ExploreBtn label="Hood Gallery" targetId="s4-decoration" />
-          </div>
-          <div className="md:col-span-1 bg-[#0D1B2A] rounded-2xl p-6 flex flex-col items-center justify-center text-center">
-            <p className="text-[#D4A017] text-4xl font-bold">50+</p>
-            <p className="text-white text-sm font-semibold mt-1">Partner Factories</p>
-            <p className="text-gray-400 text-xs mt-2">Pakistan certified</p>
-          </div>
-        </div>
-
-        {/* Row 4 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="md:col-span-2 bg-purple-50 rounded-2xl p-7">
-            <p className="text-purple-700 text-xs font-semibold tracking-widest uppercase mb-2">Gift Set Programmes</p>
-            <h3 className="text-xl font-bold text-[#0D1B2A] mb-3">Hooded Towel + Wash Cloth + Bib Sets</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Baby gift set programmes combining hooded towel, wash cloth and bib in matching fabric and colour. Gift box with tissue paper or ribbon-wrap packing. Popular for baby shower gifting, registry and boutique retail.
-            </p>
-          </div>
-          <div className="bg-gray-900 rounded-2xl p-6 flex flex-col justify-between">
-            <div>
-              <p className="text-[#D4A017] text-xs font-semibold tracking-widest uppercase mb-1">Get Samples</p>
-              <p className="text-white text-lg font-bold leading-snug mb-3">Start with a sample set today</p>
-            </div>
-            <Link
-              href="/rfq/"
-              className="block text-center py-3 px-4 bg-[#D4A017] text-[#0D1B2A] font-bold rounded-xl hover:bg-[#b8891a] transition-colors text-sm"
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-blue-50 border border-blue-100 rounded-2xl p-7 flex flex-col gap-4 min-h-[300px]"
             >
-              Request a Quote
-            </Link>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl" aria-hidden="true">📐</span>
+                <div>
+                  <p className="text-blue-600 text-xs font-semibold tracking-[0.2em] uppercase">Sizing</p>
+                  <h3 className="text-xl font-bold text-[#0D1B2A] mt-0.5">Age &amp; Size Guide</h3>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 flex-1">
+                {SIZE_GUIDE.map((a) => (
+                  <div key={a.ageGroup} className="flex items-center gap-3">
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs font-semibold text-[#0D1B2A]">{a.ageGroup}</p>
+                      <p className="text-xs text-gray-400">{a.towelSize}</p>
+                    </div>
+                    <span className="text-xs text-gray-400 whitespace-nowrap hidden sm:block">Hood {a.hoodDepth}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="Full Size Guide" targetId="s2-size" />
+            </motion.div>
+          </div>
+
+          {/* Row 2: GSM Tiers + Hood Designs + Colours + OEM */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+              className="bg-amber-50 border border-amber-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">⚖️</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">GSM Weight Guide</h3>
+              <div className="flex flex-col gap-2.5 flex-1">
+                {GSM_TIERS.map((t) => (
+                  <div key={t.range}>
+                    <div className="flex justify-between text-xs mb-1">
+                      <span className="font-medium text-[#0D1B2A] truncate mr-1">{t.label}</span>
+                      <span className="text-gray-400 whitespace-nowrap">{t.range} gsm</span>
+                    </div>
+                    <div className="h-1.5 bg-amber-100 rounded-full" />
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="Weight Details" targetId="s3-weight" />
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.05 }}
+              className="bg-orange-50 border border-orange-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">🐰</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">Hood Designs</h3>
+              <div className="flex flex-wrap gap-2 flex-1 content-start">
+                {HOOD_DESIGNS.map((d) => (
+                  <div key={d.animal} className="flex items-center gap-1.5 bg-white rounded-lg px-2 py-1 border border-orange-100">
+                    <span className="text-sm">{d.icon}</span>
+                    <span className="text-[10px] font-medium text-[#0D1B2A]">{d.animal}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="Hood Gallery" targetId="s4-decoration" />
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-pink-50 border border-pink-100 rounded-2xl p-6 flex flex-col min-h-[220px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">🌈</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">Colour Range</h3>
+              <div className="flex flex-wrap gap-x-3 gap-y-2 flex-1">
+                {[
+                  { name: "Natural White", hex: "#FAFAF7" },
+                  { name: "Soft Pink", hex: "#FADADD" },
+                  { name: "Sky Blue", hex: "#B8D4E8" },
+                  { name: "Mint", hex: "#B8D8CC" },
+                  { name: "Butter Yellow", hex: "#FFF3B0" },
+                  { name: "Lavender", hex: "#D8CCE8" },
+                  { name: "Sage", hex: "#B8C8B8" },
+                  { name: "Warm Grey", hex: "#D0D0CC" },
+                ].map((c) => (
+                  <div key={c.name} className="flex items-center gap-1.5">
+                    <div className="w-3.5 h-3.5 rounded-full border border-gray-200 shrink-0" style={{ backgroundColor: c.hex }} aria-label={c.name} />
+                    <span className="text-[10px] text-gray-500">{c.name}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="Colour Options" targetId="s5-colours" />
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.15 }}
+              className="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col min-h-[220px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">🏭</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">OEM Programme</h3>
+              <div className="flex flex-col gap-1.5 flex-1">
+                {[
+                  "Custom animal hood characters",
+                  "Embroidery & appliqué on hood",
+                  "GOTS organic cotton available",
+                  "Gift box & ribbon packing",
+                  "OEKO-TEX Class 1 all components",
+                  "Newborn to 4 years size range",
+                ].map((f) => (
+                  <div key={f} className="flex items-start gap-2">
+                    <span className="text-[10px] font-bold text-[#D4A017] mt-0.5 shrink-0">→</span>
+                    <span className="text-xs font-medium text-[#0D1B2A] leading-tight">{f}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="OEM Details" targetId="s6-oem" />
+            </motion.div>
+          </div>
+
+          {/* Row 3: Markets + Certifications + Export */}
+          <div className="grid grid-cols-5 gap-6 mb-6">
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+              className="col-span-5 lg:col-span-2 bg-indigo-50 border border-indigo-100 rounded-2xl p-6 flex flex-col min-h-[200px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">🌍</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">Export Markets</h3>
+              <div className="grid grid-cols-2 gap-2 flex-1">
+                {MARKETS.map((m) => (
+                  <div key={m.region} className="flex items-center gap-2">
+                    <span className="text-sm shrink-0">{m.flag}</span>
+                    <span className="text-xs font-medium text-[#0D1B2A] truncate">{m.region}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="Market Detail" targetId="s7-markets" />
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.07 }}
+              className="col-span-5 lg:col-span-2 bg-teal-50 border border-teal-100 rounded-2xl p-6 flex flex-col min-h-[200px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">🏅</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">Certifications</h3>
+              <div className="grid grid-cols-2 gap-2 flex-1">
+                {CERTIFICATIONS.map((c) => (
+                  <div key={c.name} className="flex items-center gap-2">
+                    <span className={`text-xs font-bold px-2 py-0.5 rounded ${c.tier === "ESSENTIAL" ? "text-teal-700 bg-teal-100" : "text-gray-500 bg-gray-100"}`}>{c.name}</span>
+                    {c.tier === "ESSENTIAL" && <span className="text-[10px] text-[#D4A017]">★</span>}
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="View Certifications" targetId="s8-certifications" />
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.12 }}
+              className="col-span-5 lg:col-span-1 bg-amber-50 border border-amber-100 rounded-2xl p-6 flex flex-col min-h-[200px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">🚢</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">Export Details</h3>
+              <div className="flex flex-col gap-2 flex-1">
+                {EXPORT_SPECS.slice(0, 4).map((s) => (
+                  <div key={s.label}>
+                    <p className="text-[10px] text-gray-400 uppercase tracking-wide">{s.label.replace(" — New Development", "").replace(" — Repeat Order", " — Repeat")}</p>
+                    <p className="text-xs font-semibold text-[#0D1B2A]">{s.value}</p>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="Export Detail" targetId="s9-export" />
+            </motion.div>
+          </div>
+
+          {/* Row 4: Sustainability + Process */}
+          <div className="grid grid-cols-3 gap-6">
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+              className="col-span-3 lg:col-span-2 bg-lime-50 border border-lime-100 rounded-2xl p-6 flex flex-col min-h-[200px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">🌱</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">Sustainability &amp; Safety</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 flex-1">
+                {SUSTAINABILITY.map((s) => (
+                  <div key={s.title}>
+                    <p className="text-xs font-semibold text-[#0D1B2A]">{s.title}</p>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="Sustainability Detail" targetId="s10-sustainability" />
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}
+              className="col-span-3 lg:col-span-1 bg-sky-50 border border-sky-100 rounded-2xl p-6 flex flex-col min-h-[200px]"
+            >
+              <span className="text-2xl mb-3" aria-hidden="true">⚙️</span>
+              <h3 className="text-lg font-bold text-[#0D1B2A] mb-3">Sourcing Process</h3>
+              <div className="flex flex-col gap-2 flex-1">
+                {PROCESS.map((p) => (
+                  <div key={p.n} className="flex items-center gap-2">
+                    <span className="w-5 h-5 rounded-full bg-sky-200 text-sky-800 text-[10px] font-bold flex items-center justify-center shrink-0">{p.n}</span>
+                    <span className="text-xs font-medium text-[#0D1B2A]">{p.title}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn label="Full Process" targetId="s11-process" />
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Resources row */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {[
-            { label: "Baby Bibs", href: "/apparel/babyandkids/babybibs/", icon: "🍼" },
-            { label: "Baby Rompers", href: "/apparel/babyandkids/babyrompers/", icon: "👶" },
-            { label: "Swaddle Muslin", href: "/apparel/babyandkids/swaddlemuslinfabric/", icon: "🌿" },
-            { label: "Towels (Home)", href: "/hometextile/bathlinen/towels/", icon: "🛁" },
-          ].map((r) => (
-            <Link key={r.href} href={r.href} className="flex items-center gap-2 p-3 bg-gray-50 rounded-xl hover:bg-[#D4A017]/10 transition-colors text-sm font-medium text-[#0D1B2A]">
-              <span>{r.icon}</span>{r.label}
+      {/* ══ RESOURCES ════════════════════════════════════════════════════════════ */}
+      <section className="bg-gray-50 py-12 lg:py-16 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link href="/knowledge/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📚</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
+              <p className="font-semibold text-navy-900">Baby Hooded Towel Buying Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Terry construction guide, GSM selection, OEKO-TEX Class 1 requirements and embroidery options for hooded towels.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Explore Hub →</span>
             </Link>
-          ))}
+            <Link href="/guides/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📄</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Guides</p>
+              <p className="font-semibold text-navy-900">Baby Textile Export Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Sourcing process, OEKO-TEX and GOTS requirements for baby linen and towel programmes.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guides →</span>
+            </Link>
+            <Link href="/downloads/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">⬇️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
+              <p className="font-semibold text-navy-900">Hooded Towel Spec Sheets</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Baby hooded towel construction specs, GSM options and OEKO-TEX certification documentation.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Downloads →</span>
+            </Link>
+            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">✉️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
+              <p className="font-semibold text-white">Ready to Source Baby Hooded Towels?</p>
+              <p className="text-xs text-gray-300 leading-relaxed">Specify GSM range, hood design, certifications and pack format. Factory match in 3–5 working days.</p>
+              <span className="text-xs font-semibold text-gold group-hover:text-yellow-300 transition-colors mt-auto">Request a Quote →</span>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -418,7 +572,7 @@ export default function BabyHoodedTowelsContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop /></div>
+          <BackToTop />
         </div>
       </section>
 
@@ -454,14 +608,14 @@ export default function BabyHoodedTowelsContent() {
               </tbody>
             </table>
           </div>
-          <div className="mt-8 text-center"><BackToTop /></div>
+          <BackToTop />
         </div>
       </section>
 
       {/* S3 — GSM: Product Showcase UI — dark bg, feature cards */}
       <section id="s3-weight" className="py-20 bg-[#0D1B2A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12 text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">GSM / Weight</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">Choosing the Right Weight</h2>
             <p className="text-gray-400 mt-3 text-sm max-w-xl mx-auto">From lightweight waffle for warm markets to ultra-plush velour for premium gift programmes.</p>
@@ -479,7 +633,7 @@ export default function BabyHoodedTowelsContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop /></div>
+          <BackToTop dark />
         </div>
       </section>
 
@@ -521,7 +675,7 @@ export default function BabyHoodedTowelsContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop /></div>
+          <BackToTop />
         </div>
       </section>
 
@@ -565,7 +719,7 @@ export default function BabyHoodedTowelsContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop /></div>
+          <BackToTop />
         </div>
       </section>
 
@@ -601,7 +755,7 @@ export default function BabyHoodedTowelsContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-10 text-center"><BackToTop /></div>
+          <BackToTop />
         </div>
       </section>
 
@@ -628,7 +782,7 @@ export default function BabyHoodedTowelsContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop /></div>
+          <BackToTop />
         </div>
       </section>
 
@@ -656,7 +810,7 @@ export default function BabyHoodedTowelsContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop /></div>
+          <BackToTop dark />
         </div>
       </section>
 
@@ -679,7 +833,7 @@ export default function BabyHoodedTowelsContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop /></div>
+          <BackToTop />
         </div>
       </section>
 
@@ -706,14 +860,14 @@ export default function BabyHoodedTowelsContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 text-center"><BackToTop /></div>
+          <BackToTop />
         </div>
       </section>
 
       {/* S11 — Process: Hero-Centered UI + large type steps */}
       <section id="s11-process" className="py-20 bg-[#0D1B2A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-14 text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-14">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Production Process</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">How We Build Your Programme</h2>
             <p className="text-gray-400 text-sm max-w-lg mx-auto">From yarn certification to gift-wrapped shipment — a documented 6-stage workflow for every baby hooded towel order.</p>
@@ -736,7 +890,7 @@ export default function BabyHoodedTowelsContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-10 text-center"><BackToTop /></div>
+          <BackToTop dark />
         </div>
       </section>
 
@@ -773,6 +927,36 @@ export default function BabyHoodedTowelsContent() {
                   )}
                 </AnimatePresence>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ SAME-TIER PAGES ══════════════════════════════════════════════════════ */}
+      <section className="bg-gray-50 py-16 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-1">Baby &amp; Kids Apparel</p>
+            <h2 className="text-2xl font-bold text-navy-900">More Baby &amp; Kids Products</h2>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { name: "T-Shirts for Kids", desc: "Combed cotton jersey for infants and children. Screen print, appliqué and embroidery programmes.", href: "/apparel/babyandkids/tshirtsforkids/", img: "/images/menu/menu-tshirtsforkids.webp", alt: "Pakistan kids t-shirt manufacturer — OEM combed cotton children's apparel for baby boutiques worldwide" },
+              { name: "Swaddle Muslin Fabric", desc: "Single muslin, double gauze and bamboo blends. GOTS and OEKO-TEX Class 1 certified.", href: "/apparel/babyandkids/swaddlemuslinfabric/", img: "/images/menu/menu-swaddlemuslinfabric.webp", alt: "Pakistan swaddle muslin manufacturer — OEM organic cotton muslin fabric for baby brands worldwide" },
+              { name: "Overalls", desc: "Infant denim, canvas and corduroy overalls with snap hardware and OEKO-TEX compliance.", href: "/apparel/babyandkids/overalls/", img: "/images/menu/menu-overalls.webp", alt: "Pakistan baby overalls manufacturer — OEM infant denim and canvas overalls for kids brands worldwide" },
+              { name: "Baby Rompers", desc: "Short and long-sleeve rompers in organic cotton jersey. Snap crotch and envelope neck options.", href: "/apparel/babyandkids/babyrompers/", img: "/images/menu/menu-babyrompers.webp", alt: "Pakistan baby romper manufacturer — OEM organic cotton infant rompers for baby boutiques worldwide" },
+              { name: "Baby Bibs", desc: "Terry, velour and silicone bib constructions for newborn to toddler programmes.", href: "/apparel/babyandkids/babybibs/", img: "/images/menu/menu-babybibs.webp", alt: "Pakistan baby bib manufacturer — OEM terry and silicone bibs for infant product brands worldwide" },
+            ].filter(p => !p.href.includes("babyhoodedtowels")).map((p) => (
+              <Link href={p.href} key={p.name} className="group bg-white border border-gray-100 hover:border-gold rounded-2xl overflow-hidden flex flex-col hover:shadow-md transition-all">
+                <div className="relative h-36 overflow-hidden">
+                  <Image src={p.img} alt={p.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 33vw" />
+                </div>
+                <div className="p-4 flex flex-col gap-1.5 flex-1">
+                  <p className="font-bold text-navy-900 group-hover:text-gold transition-colors text-sm leading-tight">{p.name}</p>
+                  <p className="text-xs text-gray-500 leading-relaxed flex-1">{p.desc}</p>
+                  <span className="text-xs font-semibold text-gray-400 group-hover:text-gold transition-colors mt-1">View →</span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
