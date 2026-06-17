@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import HoodiesContent from "./HoodiesContent";
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/apparel/knittedgarments/sweatshirtshoodies/",
     images: [
       {
-        url: "/images/menu/menu-sweatshirtshoodies.webp",
+        url: "/images/og/sweatshirts-hoodies-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan sweatshirt and hoodie manufacturer — OEM French terry and fleece hoodies for sportswear and retail brands worldwide",
@@ -47,7 +47,7 @@ export default function SweatshirtsHoodiesPage() {
     name: "Sweatshirts & Hoodies — OEM Manufacturing Pakistan",
     description:
       "Pakistan OEM sweatshirt and hoodie manufacturer producing French terry, loop-back fleece, brushed fleece, polar fleece and bonded fleece mid-layer garments for sportswear, streetwear and corporate programmes in USA, UK and Europe.",
-    image: "https://mzglobaltrading.com/images/menu/menu-sweatshirtshoodies.webp",
+    image: "https://mzglobaltrading.com/images/og/sweatshirts-hoodies-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     offers: {
       "@type": "Offer",
@@ -57,7 +57,7 @@ export default function SweatshirtsHoodiesPage() {
     },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/menu/menu-sweatshirtshoodies.webp",
+      contentUrl: "https://mzglobaltrading.com/images/og/sweatshirts-hoodies-og.webp",
       name: "Pakistan sweatshirt and hoodie manufacturer — OEM French terry and fleece hoodies for sportswear and retail brands worldwide",
     },
     breadcrumb: {

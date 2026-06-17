@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TowelsContent from "./TowelsContent";
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/bathlinen/towels/",
     images: [
       {
-        url: "/images/thumbnails/thumb-towels.webp",
+        url: "/images/og/towels-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan bath towel manufacturer — OEM terry cotton towels for hotels and retailers in USA, UK and Europe",
@@ -47,7 +47,7 @@ export default function TowelsPage() {
     name: "Bath Towels — OEM Manufacturing Pakistan",
     description:
       "Pakistan OEM bath towel manufacturer producing terry loop, velour, zero twist, waffle, jacquard and dobby border towels in certified cotton for hotels, retailers and hospitality brands in USA, UK and Europe.",
-    image: "https://mzglobaltrading.com/images/thumbnails/thumb-towels.webp",
+    image: "https://mzglobaltrading.com/images/og/towels-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     offers: {
       "@type": "Offer",
@@ -57,7 +57,7 @@ export default function TowelsPage() {
     },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/thumbnails/thumb-towels.webp",
+      contentUrl: "https://mzglobaltrading.com/images/og/towels-og.webp",
       name: "Pakistan bath towel manufacturer — OEM terry cotton towels for hotels and retailers in USA, UK and Europe",
     },
     breadcrumb: {

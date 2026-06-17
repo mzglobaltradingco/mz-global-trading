@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BeachTowelsContent from "./BeachTowelsContent";
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/bathlinen/beachpooltowel/",
     images: [
       {
-        url: "/images/menu/menu-beachpooltowels.webp",
+        url: "/images/og/beach-pool-towels-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan beach towel manufacturer — OEM velour and sublimation print pool towels for resorts and retailers worldwide",
@@ -48,7 +48,7 @@ export default function BeachPoolTowelPage() {
     description:
       "Pakistan OEM beach and pool towel manufacturer. Velour one-sided and both-sided, terry loop, microfiber and fouta/pestemal. 350–500 GSM. Sublimation all-over print, reactive print and yarn-dyed stripe. GOTS and OEKO-TEX certified.",
     image:
-      "https://mzglobaltrading.com/images/menu/menu-beachpooltowels.webp",
+      "https://mzglobaltrading.com/images/og/beach-pool-towels-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     offers: {
       "@type": "Offer",
@@ -59,7 +59,7 @@ export default function BeachPoolTowelPage() {
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl:
-        "https://mzglobaltrading.com/images/menu/menu-beachpooltowels.webp",
+        "https://mzglobaltrading.com/images/og/beach-pool-towels-og.webp",
       name: "Pakistan beach towel manufacturer — OEM velour and sublimation print pool towels for resorts and retailers worldwide",
     },
     breadcrumb: {

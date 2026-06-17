@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import FAQsContent from "./FAQsContent";
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/faqs/",
     images: [
       {
-        url: "/images/og/hero-why-choose-us.webp",
+        url: "/images/og/faqs-og.webp",
         width: 1200,
         height: 630,
         alt: "MZ Global Trading FAQ — textile sourcing questions answered for international buyers",

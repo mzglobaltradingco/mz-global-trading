@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -263,7 +263,7 @@ export default function BathMatsContent() {
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/menu/menu-bathmats.webp"
+            src="/images/hero/hero-bath-mats.webp"
             fill
             alt="Pakistan bath mat manufacturer — OEM anti-slip tufted and chenille bath mats for hotels and retailers worldwide"
             className="object-cover"
@@ -1189,19 +1189,20 @@ export default function BathMatsContent() {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { name: "Towels", desc: "Terry loop, velour, zero twist, waffle and jacquard. 450–600 GSM. Bath, hand and gym towels.", href: "/hometextile/bathlinen/towels/", img: "/images/menu/menu-towels.webp", alt: "Pakistan towel manufacturer — OEM terry and velour bath towels for hotels and retailers in USA, UK and Europe" },
-              { name: "Institutional Towels", desc: "Hotel and healthcare terry. White dobby border. 400–550 GSM. Case and bulk supply.", href: "/hometextile/bathlinen/institutionaltowels/", img: "/images/menu/menu-institutionaltowels.webp", alt: "Pakistan institutional towel manufacturer — OEM hotel and healthcare terry towels for contract supply" },
-              { name: "Bathrobes", desc: "Terry loop, velour, waffle and microfleece. Shawl, kimono and hooded collars.", href: "/hometextile/bathlinen/bathrobes/", img: "/images/menu/menu-bathrobes.webp", alt: "Pakistan bathrobe manufacturer — OEM terry and velour bathrobes for hotels and retail brands worldwide" },
-              { name: "Beach & Pool Towels", desc: "Velour, fouta and sublimation print. 350–500 GSM. All-over print and yarn-dyed stripe.", href: "/hometextile/bathlinen/beachpooltowel/", img: "/images/menu/menu-beachpooltowel.webp", alt: "Pakistan beach towel manufacturer — OEM velour and fouta beach towels for retail and resort brands" },
+              { name: "Towels", desc: "Terry loop, velour, zero twist, waffle and jacquard. 450–600 GSM. Bath, hand and gym towels.", href: "/hometextile/bathlinen/towels/", img: "/images/hero/hero-towels.webp", alt: "Pakistan towel manufacturer — OEM terry and velour bath towels for hotels and retailers in USA, UK and Europe" },
+              { name: "Institutional Towels", desc: "Hotel and healthcare terry. White dobby border. 400–550 GSM. Case and bulk supply.", href: "/hometextile/bathlinen/institutionaltowels/", img: "/images/hero/hero-institutional-towels.webp", alt: "Pakistan institutional towel manufacturer — OEM hotel and healthcare terry towels for contract supply" },
+              { name: "Bathrobes", desc: "Terry loop, velour, waffle and microfleece. Shawl, kimono and hooded collars.", href: "/hometextile/bathlinen/bathrobes/", img: "/images/hero/hero-bathrobes.webp", alt: "Pakistan bathrobe manufacturer — OEM terry and velour bathrobes for hotels and retail brands worldwide" },
+              { name: "Beach & Pool Towels", desc: "Velour, fouta and sublimation print. 350–500 GSM. All-over print and yarn-dyed stripe.", href: "/hometextile/bathlinen/beachpooltowel/", img: "/images/hero/hero-beach-pool-towels.webp", alt: "Pakistan beach towel manufacturer — OEM velour and fouta beach towels for retail and resort brands" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group bg-white border border-gray-100 hover:border-gold rounded-2xl overflow-hidden flex flex-col hover:shadow-md transition-all">
-                <div className="relative h-36 overflow-hidden">
-                  <Image src={p.img} alt={p.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                <div className="relative h-64 overflow-hidden">
+                  <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
                 </div>
-                <div className="p-4 flex flex-col gap-1.5 flex-1">
-                  <p className="font-bold text-navy-900 group-hover:text-gold transition-colors text-sm leading-tight">{p.name}</p>
-                  <p className="text-xs text-gray-500 leading-relaxed flex-1">{p.desc}</p>
-                  <span className="text-xs font-semibold text-gray-400 group-hover:text-gold transition-colors mt-1">View →</span>
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <p className="font-bold text-white text-sm leading-tight mb-1">{p.name}</p>
+                  <p className="text-gray-300 text-xs leading-relaxed mb-2">{p.desc}</p>
+                  <span className="text-xs font-semibold text-gold transition-all duration-200">View →</span>
                 </div>
               </Link>
             ))}

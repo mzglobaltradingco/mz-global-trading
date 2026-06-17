@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -235,7 +235,7 @@ export default function PoloContent() {
       {/* HERO */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/images/hero/hero-apparel.webp" fill alt="Pakistan polo shirt manufacturer — OEM piqué and corporate polo shirts for brands in USA, UK and Europe" className="object-cover" priority sizes="100vw" />
+          <Image src="/images/hero/hero-polo-shirts.webp" fill alt="Pakistan polo shirt manufacturer — OEM piqué and corporate polo shirts for brands in USA, UK and Europe" className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-navy-900/80" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
@@ -653,7 +653,7 @@ export default function PoloContent() {
       {/* SECTION 3 — GSM — CINEMATIC UI */}
       <section id="section-gsm" className="relative py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/hero/hero-apparel.webp" fill alt="Pakistan polo shirt weight guide — GSM selection for corporate and retail programmes" className="object-cover" sizes="100vw" />
+          <Image src="/images/hero/hero-polo-shirts.webp" fill alt="Pakistan polo shirt weight guide — GSM selection for corporate and retail programmes" className="object-cover" sizes="100vw" />
           <div className="absolute inset-0 bg-navy-900/90" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1004,20 +1004,21 @@ export default function PoloContent() {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
             {[
-              { name: "T-Shirts", desc: "Seven constructions — 160 to 280 GSM. Single jersey, interlock, piqué, rib, waffle, mesh.", href: "/apparel/knittedgarments/tshirts/", img: "/images/menu/menu-tshirts.webp", alt: "Pakistan t-shirt manufacturer — OEM single jersey and piqué tees for retail and fashion brands in USA, UK and Europe" },
-              { name: "Henley Shirts", desc: "Single jersey, waffle knit and French terry henley. Casual and workwear programmes.", href: "/apparel/knittedgarments/henleyshirts/", img: "/images/menu/menu-henleyshirts.webp", alt: "Pakistan henley shirt manufacturer — OEM single jersey and waffle knit henleys for casual and workwear programmes" },
-              { name: "Sweatshirts & Hoodies", desc: "French terry, loop back and bonded fleece. 300–420 GSM. Embroidery and print.", href: "/apparel/knittedgarments/sweatshirtshoodies/", img: "/images/menu/menu-sweatshirtshoodies.webp", alt: "Pakistan sweatshirt and hoodie manufacturer — OEM French terry and fleece hoodies for sportswear and retail brands" },
-              { name: "Sweatpants & Joggers", desc: "French terry and brushed fleece. Coordinated set and standalone programmes.", href: "/apparel/knittedgarments/sweatpantsjoggers/", img: "/images/menu/menu-sweatpantsjoggers.webp", alt: "Pakistan sweatpants manufacturer — OEM French terry and brushed fleece bottoms for activewear programmes" },
-              { name: "Tank Tops", desc: "Single jersey, rib and mesh. Athletic and casual lifestyle programmes.", href: "/apparel/knittedgarments/tanktops/", img: "/images/menu/menu-tanktops.webp", alt: "Pakistan tank top manufacturer — OEM single jersey, rib and mesh tanks for athletic and lifestyle brands" },
+              { name: "T-Shirts", desc: "Seven constructions — 160 to 280 GSM. Single jersey, interlock, piqué, rib, waffle, mesh.", href: "/apparel/knittedgarments/tshirts/", img: "/images/hero/hero-t-shirts.webp", alt: "Pakistan t-shirt manufacturer — OEM single jersey and piqué tees for retail and fashion brands in USA, UK and Europe" },
+              { name: "Henley Shirts", desc: "Single jersey, waffle knit and French terry henley. Casual and workwear programmes.", href: "/apparel/knittedgarments/henleyshirts/", img: "/images/hero/hero-henley-shirts.webp", alt: "Pakistan henley shirt manufacturer — OEM single jersey and waffle knit henleys for casual and workwear programmes" },
+              { name: "Sweatshirts & Hoodies", desc: "French terry, loop back and bonded fleece. 300–420 GSM. Embroidery and print.", href: "/apparel/knittedgarments/sweatshirtshoodies/", img: "/images/hero/hero-sweatshirts-hoodies.webp", alt: "Pakistan sweatshirt and hoodie manufacturer — OEM French terry and fleece hoodies for sportswear and retail brands" },
+              { name: "Sweatpants & Joggers", desc: "French terry and brushed fleece. Coordinated set and standalone programmes.", href: "/apparel/knittedgarments/sweatpantsjoggers/", img: "/images/hero/hero-sweatpants-joggers.webp", alt: "Pakistan sweatpants manufacturer — OEM French terry and brushed fleece bottoms for activewear programmes" },
+              { name: "Tank Tops", desc: "Single jersey, rib and mesh. Athletic and casual lifestyle programmes.", href: "/apparel/knittedgarments/tanktops/", img: "/images/hero/hero-tank-tops.webp", alt: "Pakistan tank top manufacturer — OEM single jersey, rib and mesh tanks for athletic and lifestyle brands" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group bg-white border border-gray-100 hover:border-gold rounded-2xl overflow-hidden flex flex-col hover:shadow-md transition-all">
-                <div className="relative h-36 overflow-hidden">
-                  <Image src={p.img} alt={p.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw" />
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                <div className="relative h-64 overflow-hidden">
+                  <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
                 </div>
-                <div className="p-4 flex flex-col gap-1.5 flex-1">
-                  <p className="font-bold text-navy-900 group-hover:text-gold transition-colors text-sm leading-tight">{p.name}</p>
-                  <p className="text-xs text-gray-500 leading-relaxed flex-1">{p.desc}</p>
-                  <span className="text-xs font-semibold text-gray-400 group-hover:text-gold transition-colors mt-1">View →</span>
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <p className="font-bold text-white text-sm leading-tight mb-1">{p.name}</p>
+                  <p className="text-gray-300 text-xs leading-relaxed mb-2">{p.desc}</p>
+                  <span className="text-xs font-semibold text-gold transition-all duration-200">View →</span>
                 </div>
               </Link>
             ))}

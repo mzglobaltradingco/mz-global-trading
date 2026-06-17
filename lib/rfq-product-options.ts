@@ -2230,5 +2230,5 @@ export const HOME_TEXTILE_TYPES: string[] = [
 ];
 
 export const FABRIC_TYPES: string[] = [
-  "Apparel Fabric", "Home Textile Fabric", "Other / Multiple",
+  "Apparel Fabric", "Home Textile Fabric",
 ];

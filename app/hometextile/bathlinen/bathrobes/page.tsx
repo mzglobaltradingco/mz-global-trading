@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BathrobesContent from "./BathrobesContent";
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/bathlinen/bathrobes/",
     images: [
       {
-        url: "/images/menu/menu-bathrobes.webp",
+        url: "/images/og/bathrobes-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan bathrobe manufacturer — OEM terry and velour bathrobes for hotels and spas in USA, UK and Europe",
@@ -48,7 +48,7 @@ export default function BathrobesPage() {
     name: "Bathrobes — OEM Hotel & Spa Manufacturing Pakistan",
     description:
       "Pakistan OEM bathrobe manufacturer producing shawl collar, kimono and hooded styles in terry loop, velour, waffle and microfleece. 350–500 GSM. OEKO-TEX and GOTS certified for hotel, spa and resort programmes in USA, UK and Europe.",
-    image: "https://mzglobaltrading.com/images/menu/menu-bathrobes.webp",
+    image: "https://mzglobaltrading.com/images/og/bathrobes-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     offers: {
       "@type": "Offer",
@@ -58,7 +58,7 @@ export default function BathrobesPage() {
     },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/menu/menu-bathrobes.webp",
+      contentUrl: "https://mzglobaltrading.com/images/og/bathrobes-og.webp",
       name: "Pakistan bathrobe manufacturer — OEM terry and velour bathrobes for hotels and spas in USA, UK and Europe",
     },
     breadcrumb: {

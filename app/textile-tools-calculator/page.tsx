@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TextileToolsContent from "./TextileToolsContent";
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/textile-tools-calculator/",
     images: [
       {
-        url: "/images/og/hero-why-choose-us.webp",
+        url: "/images/og/textile-tools-calculator-og.webp",
         width: 1200,
         height: 630,
         alt: "MZ Global Trading textile tools calculator — free online tools for buyers",

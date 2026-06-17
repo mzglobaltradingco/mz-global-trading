@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import RFQContent from "./RFQContent";
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/rfq/",
     images: [
       {
-        url: "/images/og/homepage-og.webp",
+        url: "/images/og/rfq-og.webp",
         width: 1200,
         height: 630,
         alt: "Request a Quote — MZ Global Trading Pakistan Textile Sourcing",

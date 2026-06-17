@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
@@ -436,7 +436,7 @@ export default function FAQsContent() {
     <>
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
       <PageHero
-        image="/images/hero/hero-why-choose-us.webp"
+        image="/images/hero/hero-faqs.webp"
         imageAlt="MZ Global Trading frequently asked questions — textile sourcing guidance for international buyers"
         breadcrumbs={[
           { label: "Home", href: "/" },
@@ -699,7 +699,7 @@ export default function FAQsContent() {
                 label: "Apparel",
                 desc: "Knitted and woven garments, baby & kids, workwear and socks — from Pakistan's certified garment factories.",
                 href: "/apparel/",
-                image: "/images/cards/cat-banner-apparel.webp",
+                image: "/images/hero/hero-apparel.webp",
                 alt: "Pakistan apparel manufacturer — knitted and woven garments for retail buyers in USA, UK and Europe",
                 cta: "Browse Apparel →",
               },
@@ -707,7 +707,7 @@ export default function FAQsContent() {
                 label: "Home Textiles",
                 desc: "Bath linen, bed linen, kitchen and table linen, blankets, hospital and industrial linen.",
                 href: "/hometextile/",
-                image: "/images/cards/cat-banner-home-textiles.webp",
+                image: "/images/hero/hero-home-textiles.webp",
                 alt: "Pakistan home textile manufacturer — towels, bed linen and institutional textiles for international buyers",
                 cta: "Browse Home Textiles →",
               },
@@ -715,7 +715,7 @@ export default function FAQsContent() {
                 label: "Fabric",
                 desc: "Knitted, woven and terry fabric by the roll — apparel fabric and home textile fabric.",
                 href: "/fabric/",
-                image: "/images/cards/cat-banner-fabric.webp",
+                image: "/images/hero/hero-fabric.webp",
                 alt: "Pakistan fabric manufacturer — knitted and woven fabric rolls for garment and home textile production",
                 cta: "Browse Fabric →",
               },
@@ -729,22 +729,22 @@ export default function FAQsContent() {
               >
                 <Link
                   href={item.href}
-                  className="group block bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-gold hover:shadow-lg transition-all h-full"
+                  className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow block"
                 >
-                  <div className="relative h-44 overflow-hidden">
+                  <div className="relative h-64 overflow-hidden">
                     <Image
                       src={item.image}
                       alt={item.alt}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy-900/70 to-transparent" aria-hidden="true" />
-                    <p className="absolute bottom-4 left-5 text-white font-bold text-lg">{item.label}</p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" aria-hidden="true" />
                   </div>
-                  <div className="p-5">
-                    <p className="text-gray-600 text-sm leading-relaxed mb-4">{item.desc}</p>
-                    <span className="inline-flex items-center text-navy-900 text-sm font-bold group-hover:text-gold transition-colors">
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="text-white font-bold text-xl mb-1.5">{item.label}</h3>
+                    <p className="text-gray-300 text-sm leading-relaxed mb-3">{item.desc}</p>
+                    <span className="inline-flex items-center gap-1.5 text-gold text-sm font-semibold group-hover:gap-3 transition-all duration-200">
                       {item.cta}
                     </span>
                   </div>

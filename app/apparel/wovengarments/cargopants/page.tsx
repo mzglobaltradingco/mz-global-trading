@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import CargoPantsContent from "./CargoPantsContent";
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/apparel/wovengarments/cargopants/",
     images: [
       {
-        url: "/images/og/hero-apparel.webp",
+        url: "/images/og/cargo-pants-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan cargo pants manufacturer — OEM ripstop and canvas cargo for outdoor, tactical and workwear brands worldwide",
@@ -52,7 +52,7 @@ export default function CargoPantsPage() {
             description:
               "Custom cargo pants sourced from Pakistan's certified woven factories. Ripstop, canvas, TC poly-cotton, stretch ripstop and FR cotton constructions. 200–300 GSM. OEKO-TEX and BSCI available.",
             image:
-              "https://mzglobaltrading.com/images/hero/hero-apparel.webp",
+              "https://mzglobaltrading.com/images/og/cargo-pants-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -91,7 +91,7 @@ export default function CargoPantsPage() {
             },
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/hero/hero-apparel.webp",
+              contentUrl: "https://mzglobaltrading.com/images/og/cargo-pants-og.webp",
               name: "Pakistan cargo pants manufacturer — ripstop and canvas cargo for outdoor and workwear brands",
             },
           }),

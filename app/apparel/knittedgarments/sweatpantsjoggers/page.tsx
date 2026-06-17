@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import SweatpantsContent from "./SweatpantsContent";
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/apparel/knittedgarments/sweatpantsjoggers/",
     images: [
       {
-        url: "/images/menu/menu-sweatpantsjoggers.webp",
+        url: "/images/og/sweatpants-joggers-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan sweatpants and jogger manufacturer — OEM French terry and fleece bottoms for activewear programmes worldwide",
@@ -53,7 +53,7 @@ export default function SweatpantsJoggersPage() {
             description:
               "Pakistan OEM sweatpants and jogger manufacturer producing French terry, loop back fleece, brushed fleece, cotton-spandex and polar fleece bottoms. Co-ord set capability. GOTS and OEKO-TEX certified mills for USA, UK, Europe and worldwide.",
             image:
-              "https://mzglobaltrading.com/images/menu/menu-sweatpantsjoggers.webp",
+              "https://mzglobaltrading.com/images/og/sweatpants-joggers-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -64,7 +64,7 @@ export default function SweatpantsJoggersPage() {
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/menu/menu-sweatpantsjoggers.webp",
+                "https://mzglobaltrading.com/images/og/sweatpants-joggers-og.webp",
               name: "Pakistan sweatpants and jogger manufacturer — OEM French terry and fleece bottoms for activewear programmes worldwide",
             },
             breadcrumb: {

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useMemo, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
@@ -244,7 +244,7 @@ export default function TextileToolsContent() {
     <>
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
       <PageHero
-        image="/images/hero/hero-why-choose-us.webp"
+        image="/images/hero/hero-textile-tools-calculator.webp"
         imageAlt="MZ Global Trading textile tools calculator — costing, GSM, AQL, CBM and planning tools for textile buyers and factory teams"
         breadcrumbs={[
           { label: "Home", href: "/" },

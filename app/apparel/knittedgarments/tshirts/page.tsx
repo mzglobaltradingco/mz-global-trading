@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TShirtsContent from "./TShirtsContent";
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/apparel/knittedgarments/tshirts/",
     images: [
       {
-        url: "/images/og/hero-apparel.webp",
+        url: "/images/og/t-shirts-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan t-shirt manufacturer — OEM cotton t-shirts wholesale for brands in USA, UK and Europe",
@@ -47,7 +47,7 @@ export default function TShirtsPage() {
     name: "T-Shirts — OEM Manufacturing Pakistan",
     description:
       "Pakistan OEM t-shirt manufacturer producing single jersey, pique, interlock, rib, waffle knit and mesh t-shirts in certified cotton for brands and retailers in USA, UK and Europe.",
-    image: "https://mzglobaltrading.com/images/og/hero-apparel.webp",
+    image: "https://mzglobaltrading.com/images/og/t-shirts-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     offers: {
       "@type": "Offer",
@@ -57,7 +57,7 @@ export default function TShirtsPage() {
     },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/og/hero-apparel.webp",
+      contentUrl: "https://mzglobaltrading.com/images/og/t-shirts-og.webp",
       name: "Pakistan t-shirt manufacturer — OEM cotton t-shirts for brands in USA, UK and Europe",
     },
     breadcrumb: {

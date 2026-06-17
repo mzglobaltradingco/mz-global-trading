@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -305,7 +305,7 @@ export default function DenimJeansContent() {
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-apparel.webp"
+            src="/images/hero/hero-denim-jeans.webp"
             fill
             alt="Pakistan denim jeans manufacturer — OEM rigid and stretch denim jeans for fashion brands in USA, UK and Europe"
             className="object-cover"
@@ -1481,25 +1481,20 @@ export default function DenimJeansContent() {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { name: "Formal & Casual Shirts", desc: "Poplin, oxford, twill and linen. Corporate, fashion and hospitality programmes.", href: "/apparel/wovengarments/formalcasualshirts/", img: "/images/menu/menu-formalshirts.webp", alt: "Pakistan formal and casual shirt manufacturer — OEM poplin, oxford and twill shirts for corporate and fashion brands worldwide" },
-              { name: "Pants & Trousers", desc: "Twill, chino and stretch ponte. Business-casual to formal tailored programmes.", href: "/apparel/wovengarments/pantsandtrousers/", img: "/images/menu/menu-pantsandtrousers.webp", alt: "Pakistan pants and trousers manufacturer — OEM twill, chino and stretch tailored trousers for fashion and workwear brands" },
-              { name: "Cargo Pants", desc: "Ripstop, canvas and stretch ripstop. Tactical, outdoor and workwear programmes.", href: "/apparel/wovengarments/cargopants/", img: "/images/menu/menu-cargopants.webp", alt: "Pakistan cargo pants manufacturer — OEM ripstop and canvas cargo trousers for outdoor and tactical brands worldwide" },
-              { name: "Shorts", desc: "Chino, canvas, linen and ripstop. Casual, athletic and resort wear programmes.", href: "/apparel/wovengarments/shorts/", img: "/images/menu/menu-shorts.webp", alt: "Pakistan shorts manufacturer — OEM chino, canvas and linen shorts for casual, athletic and resort wear brands" },
+              { name: "Formal & Casual Shirts", desc: "Poplin, oxford, twill and linen. Corporate, fashion and hospitality programmes.", href: "/apparel/wovengarments/formalcasualshirts/", img: "/images/hero/hero-formal-casual-shirts.webp", alt: "Pakistan formal and casual shirt manufacturer — OEM poplin, oxford and twill shirts for corporate and fashion brands worldwide" },
+              { name: "Pants & Trousers", desc: "Twill, chino and stretch ponte. Business-casual to formal tailored programmes.", href: "/apparel/wovengarments/pantsandtrousers/", img: "/images/hero/hero-pants-trousers.webp", alt: "Pakistan pants and trousers manufacturer — OEM twill, chino and stretch tailored trousers for fashion and workwear brands" },
+              { name: "Cargo Pants", desc: "Ripstop, canvas and stretch ripstop. Tactical, outdoor and workwear programmes.", href: "/apparel/wovengarments/cargopants/", img: "/images/hero/hero-cargo-pants.webp", alt: "Pakistan cargo pants manufacturer — OEM ripstop and canvas cargo trousers for outdoor and tactical brands worldwide" },
+              { name: "Shorts", desc: "Chino, canvas, linen and ripstop. Casual, athletic and resort wear programmes.", href: "/apparel/wovengarments/shorts/", img: "/images/hero/hero-shorts.webp", alt: "Pakistan shorts manufacturer — OEM chino, canvas and linen shorts for casual, athletic and resort wear brands" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group bg-white border border-gray-100 hover:border-gold rounded-2xl overflow-hidden flex flex-col hover:shadow-md transition-all">
-                <div className="relative h-36 overflow-hidden">
-                  <Image
-                    src={p.img}
-                    alt={p.alt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                  />
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                <div className="relative h-64 overflow-hidden">
+                  <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
                 </div>
-                <div className="p-4 flex flex-col gap-1.5 flex-1">
-                  <p className="font-bold text-navy-900 group-hover:text-gold transition-colors text-sm leading-tight">{p.name}</p>
-                  <p className="text-xs text-gray-500 leading-relaxed flex-1">{p.desc}</p>
-                  <span className="text-xs font-semibold text-gray-400 group-hover:text-gold transition-colors mt-1">View →</span>
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <p className="font-bold text-white text-sm leading-tight mb-1">{p.name}</p>
+                  <p className="text-gray-300 text-xs leading-relaxed mb-2">{p.desc}</p>
+                  <span className="text-xs font-semibold text-gold transition-all duration-200">View →</span>
                 </div>
               </Link>
             ))}

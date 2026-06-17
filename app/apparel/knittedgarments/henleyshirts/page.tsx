@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import HenleyContent from "./HenleyContent";
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/apparel/knittedgarments/henleyshirts/",
     images: [
       {
-        url: "/images/og/hero-apparel.webp",
+        url: "/images/og/henley-shirts-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan henley shirt manufacturer — OEM henley shirts wholesale for brands in USA, UK and Europe",
@@ -54,7 +54,7 @@ export default function HenleyShritsPage() {
             description:
               "Custom henley shirts sourced from Pakistan's certified knitwear factories. Single jersey, waffle knit, rib and French terry constructions. 160–240 GSM. GOTS and OEKO-TEX available.",
             image:
-              "https://mzglobaltrading.com/images/thumbnails/thumb-tshirts.webp",
+              "https://mzglobaltrading.com/images/og/henley-shirts-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",

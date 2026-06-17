@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import DenimJeansContent from "./DenimJeansContent";
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/apparel/wovengarments/denimjeans/",
     images: [
       {
-        url: "/images/og/hero-apparel.webp",
+        url: "/images/og/denim-jeans-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan denim jeans manufacturer — OEM rigid and stretch denim for fashion brands in USA, UK and Europe",
@@ -53,7 +53,7 @@ export default function DenimJeansPage() {
             description:
               "Custom denim jeans sourced from Pakistan's certified woven garment factories. Rigid 3×1 twill, stretch 98/2 cotton-elastane, raw and recycled cotton denim. 8–14 oz. Stone wash, acid wash, enzyme wash available.",
             image:
-              "https://mzglobaltrading.com/images/hero/hero-apparel.webp",
+              "https://mzglobaltrading.com/images/og/denim-jeans-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -92,7 +92,7 @@ export default function DenimJeansPage() {
             },
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/hero/hero-apparel.webp",
+              contentUrl: "https://mzglobaltrading.com/images/og/denim-jeans-og.webp",
               name: "Pakistan denim jeans manufacturer — OEM woven denim garments for brands in USA, UK and Europe",
             },
           }),

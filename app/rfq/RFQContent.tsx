@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
@@ -13,10 +13,10 @@ import {
   FABRIC_TYPES,
 } from "@/lib/rfq-product-options";
 
-// ─── Constants ────────────────────────────────────────────────────────────────
+// ── Constants ─────────────────────────────────────────────────────────────────
 
 const RECIPIENT = "info@mzglobaltrading.com";
-const STEPS = ["Product Requirements", "Commercial & Logistics", "Your Details", "Review & Submit"];
+const STEPS = ["Products", "Delivery", "Your Details", "Review & Submit"];
 
 const COUNTRIES = [
   "United States", "United Kingdom", "Canada", "Germany", "France",
@@ -43,6 +43,7 @@ const COUNTRIES = [
 ];
 
 const INCOTERMS = [
+  "EXW – Ex Works (factory)",
   "FOB – Free on Board (Karachi)",
   "CIF – Cost, Insurance & Freight",
   "CFR – Cost & Freight",
@@ -72,8 +73,8 @@ const DYEING_METHODS = [
   "Space Dyed", "Raw / Undyed", "To be discussed",
 ];
 const NUMBER_OF_COLORS = [
-  "1 color (solid)", "2 colors", "3 colors", "4 colors", "5+ colors",
-  "Multicolor / All-over print", "To be confirmed",
+  "1 color", "2 colors", "3 colors", "4 colors", "5+ colors",
+  "All-over / Multicolor", "TBC",
 ];
 const BRAND_LABELS = [
   "Woven label", "Printed label", "Heat transfer label", "Hang tag",
@@ -90,7 +91,7 @@ const MASTER_CARTONS = [
   "48 pcs per carton", "60 pcs per carton", "Custom / To be confirmed",
 ];
 const SUSTAINABILITY_OPTIONS = [
-  "Conventional", "GOTS Organic Cotton", "BCI Cotton", "GRS Recycled", "No preference / Standard",
+  "Conventional", "GOTS Organic Cotton", "BCI Cotton", "GRS Recycled", "No preference",
 ];
 const KNIT_TYPES_FABRIC = [
   "Single Jersey", "Double Jersey", "Interlock", "Pique", "Rib",
@@ -104,7 +105,7 @@ const FABRIC_STATES = [
   "Greige / Raw", "Bleached", "Piece Dyed (Solid)", "Yarn Dyed", "Printed", "To be discussed",
 ];
 const ROLL_LENGTHS = [
-  "50m per roll", "100m per roll", "150m per roll", "200m per roll", "Custom / To be confirmed",
+  "50m per roll", "100m per roll", "150m per roll", "200m per roll", "Custom / TBC",
 ];
 const ROLL_CORES = [
   "Paper tube core", "Plastic tube core", "No core / Bulk roll", "To be confirmed",
@@ -116,11 +117,33 @@ const FABRIC_WIDTHS_FABRIC = [
 const BORDER_TYPES = [
   "Plain border / hem", "Satin border", "Jacquard woven border", "Dobby border", "No border", "Other",
 ];
+const SAMPLE_OPTIONS = [
+  "Pre-production sample",
+  "Counter sample (match our reference)",
+  "No sample needed",
+];
+const SAMPLE_NOTES: Record<string, { note: string; sub?: string }> = {
+  "Pre-production sample": {
+    note: "We will produce a pre-production sample for your approval before bulk manufacturing begins.",
+    sub: "A confirmed order (PO or signed PI) is required before PP sample production.",
+  },
+  "Counter sample (match our reference)": {
+    note: "Please courier your reference sample to our Karachi office. We will produce a counter sample for your approval.",
+    sub: "Sample + courier cost is at buyer's account and will be credited against the bulk order upon approval.",
+  },
+  "No sample needed": {
+    note: "Bulk production will proceed once product specifications, pricing, and payment terms are agreed in writing.",
+  },
+};
+const TECH_PACK_OPTIONS = [
+  "Yes — I have artwork / tech pack",
+  "No — will provide later",
+];
 
-// ─── Types ────────────────────────────────────────────────────────────────────
+// ── Types ─────────────────────────────────────────────────────────────────────
 
-interface RFQData {
-  // Step 1
+interface ProductSpec {
+  id: string;
   category: string;
   productType: string;
   productTypeOther: string;
@@ -133,6 +156,8 @@ interface RFQData {
   construction: string;
   constructionOther: string;
   weight: string;
+  fabricSubType: string;
+  fabricSubTypeOther: string;
   sizeRange: string[];
   sizeRangeNotes: string;
   fitType: string;
@@ -154,14 +179,25 @@ interface RFQData {
   headingTypeOther: string;
   liningType: string;
   liningTypeOther: string;
+  warpYarn: string;
+  weftYarn: string;
+  pileYarn: string;
+  groundYarn: string;
+  picksPerCm: string;
   dyeingMethod: string;
   numberOfColors: string;
   pantoneRef: string;
   printType: string;
   printPlacement: string;
   printDetail: string;
+  fabricState: string;
+  colorFastnessNotes: string;
   finishing: string[];
   finishingOther: string;
+  embellishments: string[];
+  embellishmentsOther: string;
+  accessories: string[];
+  accessoriesOther: string;
   brandLabel: string;
   careLabel: string;
   stitchType: string;
@@ -171,35 +207,26 @@ interface RFQData {
   masterCarton: string;
   masterCartonOther: string;
   packingNotes: string;
-  fabricSubType: string;
-  fabricSubTypeOther: string;
-  fabricState: string;
-  colorFastnessNotes: string;
   rollLength: string;
   rollLengthOther: string;
   rollCore: string;
   rollNotes: string;
   certifications: string[];
   certOther: string;
-  warpYarn: string;
-  weftYarn: string;
-  pileYarn: string;
-  groundYarn: string;
-  picksPerCm: string;
-  embellishments: string[];
-  embellishmentsOther: string;
-  accessories: string[];
-  accessoriesOther: string;
-  // Step 2
   quantity: string;
   unitOfMeasure: string;
   targetPrice: string;
+  sampleRequired: string;
+  hasTechPack: string;
+}
+
+interface RFQFormState {
+  products: ProductSpec[];
   destinationCountry: string;
   incoterm: string;
   portOfDestination: string;
   deliveryDate: string;
-  notes: string;
-  // Step 3
+  logisticsNotes: string;
   name: string;
   position: string;
   company: string;
@@ -209,60 +236,91 @@ interface RFQData {
   howHear: string;
 }
 
-const INITIAL: RFQData = {
-  category: "", productType: "", productTypeOther: "",
-  fiberContent: "", fiberContentOther: "", compositionNotes: "",
-  yarnType: "", yarnTypeOther: "", sustainability: "",
-  construction: "", constructionOther: "", weight: "",
-  sizeRange: [], sizeRangeNotes: "", fitType: "", sizeStandard: "", sizeStandardOther: "",
-  style: "", styleOther: "",
-  borderType: "", borderTypeOther: "",
-  pocketDepth: "", closureType: "", closureTypeOther: "",
-  collarType: "", collarTypeOther: "",
-  heatRating: "", backingType: "", backingTypeOther: "",
-  headingType: "", headingTypeOther: "", liningType: "", liningTypeOther: "",
-  dyeingMethod: "", numberOfColors: "", pantoneRef: "",
-  printType: "", printPlacement: "", printDetail: "",
-  finishing: [], finishingOther: "",
-  brandLabel: "", careLabel: "", stitchType: "", labelNotes: "",
-  individualPack: "", setComposition: "", masterCarton: "", masterCartonOther: "", packingNotes: "",
-  fabricSubType: "", fabricSubTypeOther: "", fabricState: "",
-  colorFastnessNotes: "", rollLength: "", rollLengthOther: "", rollCore: "", rollNotes: "",
-  certifications: [], certOther: "",
-  warpYarn: "", weftYarn: "", pileYarn: "", groundYarn: "", picksPerCm: "",
-  embellishments: [], embellishmentsOther: "", accessories: [], accessoriesOther: "",
-  quantity: "", unitOfMeasure: "", targetPrice: "",
-  destinationCountry: "", incoterm: "", portOfDestination: "",
-  deliveryDate: "", notes: "",
-  name: "", position: "", company: "", email: "", phone: "", country: "", howHear: "",
-};
+function mkProduct(): ProductSpec {
+  return {
+    id: Math.random().toString(36).slice(2, 10),
+    category: "", productType: "", productTypeOther: "",
+    fiberContent: "", fiberContentOther: "", compositionNotes: "",
+    yarnType: "", yarnTypeOther: "", sustainability: "",
+    construction: "", constructionOther: "", weight: "",
+    fabricSubType: "", fabricSubTypeOther: "",
+    sizeRange: [], sizeRangeNotes: "",
+    fitType: "", sizeStandard: "", sizeStandardOther: "",
+    style: "", styleOther: "",
+    borderType: "", borderTypeOther: "", pocketDepth: "",
+    closureType: "", closureTypeOther: "",
+    collarType: "", collarTypeOther: "",
+    heatRating: "", backingType: "", backingTypeOther: "",
+    headingType: "", headingTypeOther: "",
+    liningType: "", liningTypeOther: "",
+    warpYarn: "", weftYarn: "", pileYarn: "", groundYarn: "", picksPerCm: "",
+    dyeingMethod: "", numberOfColors: "", pantoneRef: "",
+    printType: "", printPlacement: "", printDetail: "",
+    fabricState: "", colorFastnessNotes: "",
+    finishing: [], finishingOther: "",
+    embellishments: [], embellishmentsOther: "",
+    accessories: [], accessoriesOther: "",
+    brandLabel: "", careLabel: "", stitchType: "", labelNotes: "",
+    individualPack: "", setComposition: "",
+    masterCarton: "", masterCartonOther: "", packingNotes: "",
+    rollLength: "", rollLengthOther: "", rollCore: "", rollNotes: "",
+    certifications: [], certOther: "",
+    quantity: "", unitOfMeasure: "", targetPrice: "",
+    sampleRequired: "", hasTechPack: "",
+  };
+}
 
-const SPEC_RESET: Partial<RFQData> = {
-  fiberContent: "", fiberContentOther: "", compositionNotes: "",
-  yarnType: "", yarnTypeOther: "", sustainability: "",
-  construction: "", constructionOther: "", weight: "",
-  sizeRange: [], sizeRangeNotes: "", fitType: "", sizeStandard: "", sizeStandardOther: "",
-  style: "", styleOther: "",
-  borderType: "", borderTypeOther: "",
-  pocketDepth: "", closureType: "", closureTypeOther: "",
-  collarType: "", collarTypeOther: "",
-  heatRating: "", backingType: "", backingTypeOther: "",
-  headingType: "", headingTypeOther: "", liningType: "", liningTypeOther: "",
-  dyeingMethod: "", numberOfColors: "", pantoneRef: "",
-  printType: "", printPlacement: "", printDetail: "",
-  finishing: [], finishingOther: "",
-  brandLabel: "", careLabel: "", stitchType: "", labelNotes: "",
-  individualPack: "", setComposition: "", masterCarton: "", masterCartonOther: "", packingNotes: "",
-  fabricSubType: "", fabricSubTypeOther: "", fabricState: "",
-  colorFastnessNotes: "", rollLength: "", rollLengthOther: "", rollCore: "", rollNotes: "",
-  certifications: [], certOther: "",
-  warpYarn: "", weftYarn: "", pileYarn: "", groundYarn: "", picksPerCm: "",
-  embellishments: [], embellishmentsOther: "", accessories: [], accessoriesOther: "",
+function specReset(p: ProductSpec): ProductSpec {
+  const fresh = mkProduct();
+  return {
+    ...p, ...{
+      fiberContent: fresh.fiberContent, fiberContentOther: fresh.fiberContentOther,
+      compositionNotes: fresh.compositionNotes, yarnType: fresh.yarnType,
+      yarnTypeOther: fresh.yarnTypeOther, sustainability: fresh.sustainability,
+      construction: fresh.construction, constructionOther: fresh.constructionOther,
+      weight: fresh.weight, fabricSubType: fresh.fabricSubType,
+      fabricSubTypeOther: fresh.fabricSubTypeOther, sizeRange: fresh.sizeRange,
+      sizeRangeNotes: fresh.sizeRangeNotes, fitType: fresh.fitType,
+      sizeStandard: fresh.sizeStandard, sizeStandardOther: fresh.sizeStandardOther,
+      style: fresh.style, styleOther: fresh.styleOther,
+      borderType: fresh.borderType, borderTypeOther: fresh.borderTypeOther,
+      pocketDepth: fresh.pocketDepth, closureType: fresh.closureType,
+      closureTypeOther: fresh.closureTypeOther, collarType: fresh.collarType,
+      collarTypeOther: fresh.collarTypeOther, heatRating: fresh.heatRating,
+      backingType: fresh.backingType, backingTypeOther: fresh.backingTypeOther,
+      headingType: fresh.headingType, headingTypeOther: fresh.headingTypeOther,
+      liningType: fresh.liningType, liningTypeOther: fresh.liningTypeOther,
+      warpYarn: fresh.warpYarn, weftYarn: fresh.weftYarn,
+      pileYarn: fresh.pileYarn, groundYarn: fresh.groundYarn, picksPerCm: fresh.picksPerCm,
+      dyeingMethod: fresh.dyeingMethod, numberOfColors: fresh.numberOfColors,
+      pantoneRef: fresh.pantoneRef, printType: fresh.printType,
+      printPlacement: fresh.printPlacement, printDetail: fresh.printDetail,
+      fabricState: fresh.fabricState, colorFastnessNotes: fresh.colorFastnessNotes,
+      finishing: fresh.finishing, finishingOther: fresh.finishingOther,
+      embellishments: fresh.embellishments, embellishmentsOther: fresh.embellishmentsOther,
+      accessories: fresh.accessories, accessoriesOther: fresh.accessoriesOther,
+      brandLabel: fresh.brandLabel, careLabel: fresh.careLabel,
+      stitchType: fresh.stitchType, labelNotes: fresh.labelNotes,
+      individualPack: fresh.individualPack, setComposition: fresh.setComposition,
+      masterCarton: fresh.masterCarton, masterCartonOther: fresh.masterCartonOther,
+      packingNotes: fresh.packingNotes, rollLength: fresh.rollLength,
+      rollLengthOther: fresh.rollLengthOther, rollCore: fresh.rollCore,
+      rollNotes: fresh.rollNotes, certifications: fresh.certifications, certOther: fresh.certOther,
+    },
+  };
+}
+
+const INITIAL_FORM: RFQFormState = {
+  products: [mkProduct()],
+  destinationCountry: "", incoterm: "", portOfDestination: "",
+  deliveryDate: "", logisticsNotes: "",
+  name: "", position: "", company: "",
+  email: "", phone: "", country: "", howHear: "",
 };
 
 type Status = "idle" | "sent";
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
+// ── Helpers ───────────────────────────────────────────────────────────────────
 
 function needsPort(incoterm: string) {
   return incoterm.startsWith("CIF") || incoterm.startsWith("CFR");
@@ -284,163 +342,311 @@ function getProductTypes(category: string): string[] {
   return [];
 }
 
-// ─── Email builder ────────────────────────────────────────────────────────────
+function getProductTabLabel(p: ProductSpec): string {
+  if (p.productType && p.productType !== "Other / Multiple") return p.productType;
+  if (p.productType === "Other / Multiple" && p.productTypeOther) return p.productTypeOther;
+  if (p.category) return p.category;
+  return "New Product";
+}
 
-function buildEmailBody(f: RFQData): string {
-  const BORDER  = "=".repeat(62);
-  const DIVIDER = "-".repeat(62);
-  const submittedAt = new Date().toLocaleString("en-US", {
+// ── Email builder ─────────────────────────────────────────────────────────────
+
+function buildEmailBody(f: RFQFormState): string {
+  // All separators use plain ASCII only — Unicode chars (U+2550, U+2500, U+00B7) each encode
+  // to 9/9/6 chars in a mailto: URL, inflating a 2 KB body to 15+ KB and causing truncation.
+  const LINE  = "=".repeat(64);
+  const DIV   = "-".repeat(64);
+  const SUB   = ".".repeat(48);
+  const submittedAt = new Date().toLocaleString("en-GB", {
     day: "numeric", month: "long", year: "numeric",
     hour: "2-digit", minute: "2-digit", timeZoneName: "short",
   });
 
-  const row = (label: string, value: string) => value ? `  ${label}: ${value}` : "";
+  const row = (label: string, value: string | null | undefined, pad = 24): string => {
+    if (!value) return "";
+    const fill = ".".repeat(Math.max(2, pad - label.length));
+    return `${label} ${fill} ${value}`;
+  };
 
-  function block(title: string, rows: string[]): string {
-    const populated = rows.filter(Boolean);
-    if (populated.length === 0) return "";
-    return [`  -- ${title}`, ...populated].join("\n");
-  }
+  const subHead = (title: string) => `\n${title}\n${SUB}`;
 
-  const certText = f.certifications.length > 0
-    ? (f.certOther
-        ? [...f.certifications.filter(c => c !== "Other (specify below)"), `Other: ${f.certOther}`].join(", ")
-        : f.certifications.join(", "))
-    : "None specified";
+  const validProducts = f.products.filter(p => p.category && p.productType);
 
-  const productDisplay = f.productType === "Other / Multiple" && f.productTypeOther
-    ? `${f.productType} — ${f.productTypeOther}` : f.productType;
+  function productBlock(p: ProductSpec, idx: number, total: number): string {
+    const opts = getProductOptions(p.productType);
+    const name = p.productType === "Other / Multiple" && p.productTypeOther
+      ? `${p.productType} — ${p.productTypeOther}` : p.productType;
+    const qty = p.quantity ? `${p.quantity}${p.unitOfMeasure ? " " + p.unitOfMeasure : ""}` : "";
+    const price = p.targetPrice ? `USD ${p.targetPrice}/unit` : "";
+    const qtyLine = [qty, price].filter(Boolean).join(" | ");
 
-  const opts = f.productType ? getProductOptions(f.productType) : null;
+    const header = [
+      DIV,
+      `PRODUCT ${idx + 1} OF ${total} -- ${name.toUpperCase()}`,
+      qtyLine || "",
+      DIV,
+    ].filter(Boolean).join("\n");
 
-  const constrVal = f.construction === "Other" && f.constructionOther
-    ? `Other — ${f.constructionOther}` : f.construction;
-  const fiberVal = f.fiberContent === "Other" && f.fiberContentOther
-    ? `Other — ${f.fiberContentOther}` : f.fiberContent;
-  const yarnVal = f.yarnType === "Other" && f.yarnTypeOther
-    ? `Other — ${f.yarnTypeOther}` : f.yarnType;
-  const subTypeVal = f.fabricSubType === "Other" && f.fabricSubTypeOther
-    ? `Other — ${f.fabricSubTypeOther}` : f.fabricSubType;
-  const styleVal = f.style === "Other" && f.styleOther
-    ? `Other — ${f.styleOther}` : f.style;
-  const finishVal = (() => {
-    const arr = f.finishing.includes("Other (specify below)") && f.finishingOther
-      ? [...f.finishing.filter(x => x !== "Other (specify below)"), `Other: ${f.finishingOther}`]
-      : f.finishing;
-    return arr.join(", ");
-  })();
-  const sizeDisplay = f.sizeRange.length > 0
-    ? (f.sizeRangeNotes ? `${f.sizeRange.join(", ")} (${f.sizeRangeNotes})` : f.sizeRange.join(", "))
-    : "";
+    const certText = p.certifications.length > 0
+      ? (p.certOther
+          ? [...p.certifications.filter(c => c !== "Other (specify below)"), `Other: ${p.certOther}`].join(", ")
+          : p.certifications.join(", "))
+      : "";
 
-  function specBlocks(): string {
-    if (!f.category) return "";
-    const sizeLabel = opts?.sizeLabel ?? "Size Range";
-    const constructionLabel = opts?.constructionLabel ?? "Fabric Type";
-    const weightLabel = opts?.weightLabel ?? "GSM";
+    const finishVal = (() => {
+      const arr = p.finishing.includes("Other (specify below)") && p.finishingOther
+        ? [...p.finishing.filter(x => x !== "Other (specify below)"), `Other: ${p.finishingOther}`]
+        : p.finishing;
+      return arr.join(", ");
+    })();
+
+    const constrVal = p.construction === "Other" && p.constructionOther
+      ? `Other — ${p.constructionOther}` : p.construction;
+    const fiberVal = p.fiberContent === "Other" && p.fiberContentOther
+      ? `Other — ${p.fiberContentOther}` : p.fiberContent;
+    const styleVal = p.style === "Other" && p.styleOther
+      ? `Other — ${p.styleOther}` : p.style;
+    const sizeDisplay = p.sizeRange.length > 0
+      ? (p.sizeRangeNotes ? `${p.sizeRange.join(", ")} (${p.sizeRangeNotes})` : p.sizeRange.join(", "))
+      : "";
+
+    const lines: string[] = [header, ""];
 
     if (opts?.isFabricRoll) {
-      return [
-        block("COMPOSITION", [row("Fiber Content", fiberVal), row("Sustainability", f.sustainability), row("Notes", f.compositionNotes)]),
-        block("CONSTRUCTION", [
-          row("Fabric Category", constrVal),
-          f.construction === "Knitted" ? row("Knit Type", subTypeVal) : "",
-          f.construction === "Woven" ? row("Woven Type", subTypeVal) : "",
-          row("GSM / Thread Count", f.weight),
-          row("Fabric Width", f.sizeRange[0] ?? ""),
-        ]),
-        block("STATE & DESIGN", [row("Fabric State", f.printType), row("Color / Pattern", f.pantoneRef), row("Color Fastness Notes", f.colorFastnessNotes)]),
-        block("FINISHING", [row("Finish", finishVal)]),
-        block("ROLL PACKING", [row("Roll Length", f.rollLength.startsWith("Custom") && f.rollLengthOther ? `Custom — ${f.rollLengthOther}` : f.rollLength), row("Roll Core", f.rollCore), row("Notes", f.rollNotes)]),
-      ].filter(Boolean).join("\n\n");
-    }
+      const subTypeVal = p.fabricSubType === "Other" && p.fabricSubTypeOther
+        ? `Other — ${p.fabricSubTypeOther}` : p.fabricSubType;
+      const compRows = [
+        row("Fiber Content", fiberVal), row("Sustainability", p.sustainability),
+        row("Composition Notes", p.compositionNotes),
+      ].filter(Boolean);
+      if (compRows.length) lines.push(subHead("COMPOSITION"), ...compRows);
 
-    if (f.category === "Apparel") {
+      const conRows = [
+        row("Category", constrVal),
+        p.construction === "Knitted" ? row("Knit Type", subTypeVal) : "",
+        p.construction === "Woven" ? row("Woven Type", subTypeVal) : "",
+        row(opts.weightLabel ?? "GSM", p.weight),
+        row("Fabric Width", p.sizeRange[0] ?? ""),
+      ].filter(Boolean);
+      if (conRows.length) lines.push(subHead("CONSTRUCTION"), ...conRows);
+
+      const stateRows = [
+        row("Fabric State", p.printType), row("Pattern / Color Type", p.fabricState),
+        row("Pantone / Color Ref", p.pantoneRef), row("Color Fastness", p.colorFastnessNotes),
+      ].filter(Boolean);
+      if (stateRows.length) lines.push(subHead("STATE & DESIGN"), ...stateRows);
+
+      if (p.warpYarn || p.weftYarn || (p.construction !== "Terry" && p.picksPerCm)) {
+        const yarnRows = [
+          row("Warp Yarn", p.warpYarn), row("Weft Yarn", p.weftYarn),
+          row("Picks / Thread Density", p.picksPerCm),
+        ].filter(Boolean);
+        if (yarnRows.length) lines.push(subHead("WARP & WEFT SPECIFICATION"), ...yarnRows);
+      }
+      if (p.pileYarn || p.groundYarn || (p.construction === "Terry" && p.picksPerCm)) {
+        const pileRows = [
+          row("Pile Yarn", p.pileYarn), row("Ground Yarn", p.groundYarn),
+          row("Loop Density", p.picksPerCm),
+        ].filter(Boolean);
+        if (pileRows.length) lines.push(subHead("PILE YARN SPECIFICATION"), ...pileRows);
+      }
+
+      if (finishVal) lines.push(subHead("FINISHING"), row("Applied", finishVal));
+
+      const rollRows = [
+        row("Roll Length", p.rollLength.startsWith("Custom") && p.rollLengthOther ? `Custom — ${p.rollLengthOther}` : p.rollLength),
+        row("Roll Core", p.rollCore), row("Notes", p.rollNotes),
+      ].filter(Boolean);
+      if (rollRows.length) lines.push(subHead("ROLL PACKING"), ...rollRows);
+
+    } else if (p.category === "Apparel") {
+      const yarnVal = p.yarnType === "Other" && p.yarnTypeOther ? `Other — ${p.yarnTypeOther}` : p.yarnType;
       const embDisplay = (() => {
-        const arr = f.embellishments.includes("Other") && f.embellishmentsOther
-          ? [...f.embellishments.filter(x => x !== "Other"), `Other: ${f.embellishmentsOther}`]
-          : f.embellishments;
+        const arr = p.embellishments.includes("Other") && p.embellishmentsOther
+          ? [...p.embellishments.filter(x => x !== "Other"), `Other: ${p.embellishmentsOther}`]
+          : p.embellishments;
         return arr.join(", ");
       })();
       const accDisplay = (() => {
-        const arr = f.accessories.includes("Other") && f.accessoriesOther
-          ? [...f.accessories.filter(x => x !== "Other"), `Other: ${f.accessoriesOther}`]
-          : f.accessories;
+        const arr = p.accessories.includes("Other") && p.accessoriesOther
+          ? [...p.accessories.filter(x => x !== "Other"), `Other: ${p.accessoriesOther}`]
+          : p.accessories;
         return arr.join(", ");
       })();
-      const warpWeftNeeded = opts?.showWarpWeft && (f.warpYarn || f.weftYarn || f.picksPerCm);
-      return [
-        block("COMPOSITION", [row("Fiber Content", fiberVal), row("Yarn Type", yarnVal), row("Notes", f.compositionNotes)]),
-        block("CONSTRUCTION", [row(constructionLabel, constrVal), row(weightLabel, f.weight)]),
-        warpWeftNeeded ? block("YARN SPECIFICATION", [row("Warp Yarn", f.warpYarn), row("Weft Yarn", f.weftYarn), row("Picks / Thread Density", f.picksPerCm)]) : "",
-        block("SIZING & STYLE", [row(sizeLabel, sizeDisplay), row("Fit", f.fitType), row("Style", styleVal), row("Size Standard", f.sizeStandard === "Custom" && f.sizeStandardOther ? `Custom — ${f.sizeStandardOther}` : f.sizeStandard)]),
-        block("COLOR & DYEING", [row("Dyeing Method", f.dyeingMethod), row("No. of Colors", f.numberOfColors), row("Pantone / Color Ref", f.pantoneRef)]),
-        block("PRINT & DESIGN", [row("Type", f.printType), row("Placement", f.printPlacement), row("Detail / Notes", f.printDetail)]),
-        block("EMBELLISHMENTS & ACCESSORIES", [row("Embellishments", embDisplay), row("Accessories / Trims", accDisplay)]),
-        block("FINISHING", [row("Finish", finishVal), row("Stitch Type", f.stitchType)]),
-        block("LABELS & BRANDING", [row("Brand Label", f.brandLabel), row("Care Label", f.careLabel), row("Notes", f.labelNotes)]),
-        block("PACKING", [row("Individual Pack", f.individualPack), row("Set Composition", f.setComposition), row("Master Carton", f.masterCarton.startsWith("Custom") && f.masterCartonOther ? `Custom — ${f.masterCartonOther}` : f.masterCarton), row("Notes", f.packingNotes)]),
-      ].filter(Boolean).join("\n\n");
+
+      const fabricRows = [
+        row(opts?.constructionLabel ?? "Fabric Type", constrVal),
+        row(opts?.weightLabel ?? "GSM", p.weight),
+        row("Fiber Content", fiberVal), row("Yarn Type", yarnVal),
+        row("Composition Notes", p.compositionNotes),
+      ].filter(Boolean);
+      if (fabricRows.length) lines.push(subHead("FABRIC & CONSTRUCTION"), ...fabricRows);
+
+      if (opts?.showWarpWeft && (p.warpYarn || p.weftYarn || p.picksPerCm)) {
+        const yarnRows = [
+          row("Warp Yarn", p.warpYarn), row("Weft Yarn", p.weftYarn),
+          row("Picks / Density", p.picksPerCm),
+        ].filter(Boolean);
+        if (yarnRows.length) lines.push(subHead("YARN SPECIFICATION"), ...yarnRows);
+      }
+
+      const sizeRows = [
+        row(opts?.sizeLabel ?? "Size Range", sizeDisplay),
+        row("Fit", p.fitType),
+        row(opts?.styleLabel ?? "Style", styleVal),
+        row("Size Standard", p.sizeStandard === "Custom" && p.sizeStandardOther ? `Custom — ${p.sizeStandardOther}` : p.sizeStandard),
+      ].filter(Boolean);
+      if (sizeRows.length) lines.push(subHead("SIZING"), ...sizeRows);
+
+      const colorRows = [
+        row("Dyeing Method", p.dyeingMethod), row("Colors", p.numberOfColors),
+        row("Pantone / Color Ref", p.pantoneRef),
+        row(opts?.designLabel ?? "Print Type", p.printType),
+        row(opts?.printPlacementLabel ?? "Placement", p.printPlacement),
+        row("Print / Design Detail", p.printDetail),
+      ].filter(Boolean);
+      if (colorRows.length) lines.push(subHead("COLOR & DESIGN"), ...colorRows);
+
+      if (embDisplay || accDisplay) {
+        const embRows = [row("Embellishments", embDisplay), row("Accessories / Trims", accDisplay)].filter(Boolean);
+        if (embRows.length) lines.push(subHead("EMBELLISHMENTS & ACCESSORIES"), ...embRows);
+      }
+
+      if (finishVal) lines.push(subHead("FINISHING"), row("Applied", finishVal));
+
+      const labelRows = [
+        row("Brand Label", p.brandLabel), row("Care Label", p.careLabel),
+        row("Stitch Type", p.stitchType), row("Label Notes", p.labelNotes),
+      ].filter(Boolean);
+      if (labelRows.length) lines.push(subHead("LABELS & BRANDING"), ...labelRows);
+
+      const cartonVal = p.masterCarton.startsWith("Custom") && p.masterCartonOther
+        ? `Custom — ${p.masterCartonOther}` : p.masterCarton;
+      const packRows = [
+        row("Individual Pack", p.individualPack), row("Set Composition", p.setComposition),
+        row("Master Carton", cartonVal), row("Packing Notes", p.packingNotes),
+      ].filter(Boolean);
+      if (packRows.length) lines.push(subHead("PACKING"), ...packRows);
+
+    } else {
+      // Home Textiles
+      const closureVal = p.closureType === "Other" && p.closureTypeOther ? `Other — ${p.closureTypeOther}` : p.closureType;
+      const collarVal  = p.collarType === "Other"  && p.collarTypeOther  ? `Other — ${p.collarTypeOther}`  : p.collarType;
+      const backVal    = p.backingType === "Other"  && p.backingTypeOther ? `Other — ${p.backingTypeOther}` : p.backingType;
+      const headVal    = p.headingType === "Other"  && p.headingTypeOther ? `Other — ${p.headingTypeOther}` : p.headingType;
+      const liningVal  = p.liningType === "Other"   && p.liningTypeOther  ? `Other — ${p.liningTypeOther}`  : p.liningType;
+      const borderVal  = p.borderType === "Other"   && p.borderTypeOther  ? `Other — ${p.borderTypeOther}`  : p.borderType;
+
+      const conRows = [
+        row(opts?.constructionLabel ?? "Weave / Structure", constrVal),
+        row(opts?.weightLabel ?? "GSM", p.weight),
+        row("Fiber Content", fiberVal), row("Composition Notes", p.compositionNotes),
+      ].filter(Boolean);
+      if (conRows.length) lines.push(subHead("CONSTRUCTION & COMPOSITION"), ...conRows);
+
+      if (opts?.showWarpWeft && (p.warpYarn || p.weftYarn || p.picksPerCm)) {
+        const warpRows = [
+          row("Warp Yarn", p.warpYarn), row("Weft Yarn", p.weftYarn),
+          row("Picks / Thread Density", p.picksPerCm),
+        ].filter(Boolean);
+        if (warpRows.length) lines.push(subHead("YARN SPECIFICATION — WARP & WEFT"), ...warpRows);
+      }
+
+      if (opts?.showPileGround && (p.pileYarn || p.groundYarn || p.picksPerCm)) {
+        const pileRows = [
+          row("Pile Yarn", p.pileYarn), row("Ground Yarn", p.groundYarn),
+          row("Loop Density", p.picksPerCm),
+        ].filter(Boolean);
+        if (pileRows.length) lines.push(subHead("YARN SPECIFICATION — PILE & GROUND"), ...pileRows);
+      }
+
+      const dimRows = [
+        row(opts?.sizeLabel ?? "Size", sizeDisplay),
+        row(opts?.styleLabel ?? "Style", styleVal),
+        row("Border / Selvedge", borderVal), row("Collar Type", collarVal),
+        row("Backing", backVal), row("Closure", closureVal),
+        row("Pocket Depth", p.pocketDepth), row("Heading Type", headVal),
+        row("Lining", liningVal), row("Heat Rating", p.heatRating),
+      ].filter(Boolean);
+      if (dimRows.length) lines.push(subHead("DIMENSIONS & SPECIFICATIONS"), ...dimRows);
+
+      const colorRows = [
+        row("Dyeing Method", p.dyeingMethod), row("Colors", p.numberOfColors),
+        row(opts?.designLabel ?? "Design", p.printType),
+        row(opts?.printPlacementLabel ?? "Placement", p.printPlacement),
+        row("Pantone / Color Ref", p.pantoneRef), row("Design Detail", p.printDetail),
+      ].filter(Boolean);
+      if (colorRows.length) lines.push(subHead("COLOR & DESIGN"), ...colorRows);
+
+      if (finishVal) lines.push(subHead("FINISHING"), row("Applied", finishVal));
+
+      const packRows = [
+        row("Individual Pack", p.individualPack), row("Set Composition", p.setComposition),
+        row("Packing Notes", p.packingNotes),
+      ].filter(Boolean);
+      if (packRows.length) lines.push(subHead("PACKING"), ...packRows);
     }
 
-    // Home Textiles
-    const closureVal = f.closureType === "Other" && f.closureTypeOther ? `Other — ${f.closureTypeOther}` : f.closureType;
-    const collarVal  = f.collarType === "Other" && f.collarTypeOther ? `Other — ${f.collarTypeOther}` : f.collarType;
-    const backVal    = f.backingType === "Other" && f.backingTypeOther ? `Other — ${f.backingTypeOther}` : f.backingType;
-    const headVal    = f.headingType === "Other" && f.headingTypeOther ? `Other — ${f.headingTypeOther}` : f.headingType;
-    const liningVal  = f.liningType === "Other" && f.liningTypeOther ? `Other — ${f.liningTypeOther}` : f.liningType;
-    const borderVal  = f.borderType === "Other" && f.borderTypeOther ? `Other — ${f.borderTypeOther}` : f.borderType;
-    const htIsTerry = /terry|velour/i.test(f.construction);
-    const htWarpWeftNeeded = opts?.showWarpWeft && !htIsTerry && (f.warpYarn || f.weftYarn || f.picksPerCm);
-    const htPileGroundNeeded = opts?.showPileGround && htIsTerry && (f.pileYarn || f.groundYarn || f.picksPerCm);
-    return [
-      block("COMPOSITION", [row("Fiber Content", fiberVal), row("Notes", f.compositionNotes)]),
-      block("CONSTRUCTION", [
-        row(constructionLabel, constrVal), row(weightLabel, f.weight),
-        row("Style", styleVal),
-        row("Border / Selvedge", borderVal), row("Collar Type", collarVal),
-        row("Backing", backVal), row("Closure", closureVal), row("Pocket Depth", f.pocketDepth),
-        row("Heat Rating", f.heatRating), row("Heading Type", headVal), row("Lining", liningVal),
-      ]),
-      htWarpWeftNeeded ? block("YARN SPECIFICATION", [row("Warp Yarn", f.warpYarn), row("Weft Yarn", f.weftYarn), row("Picks / Thread Density", f.picksPerCm)]) : "",
-      htPileGroundNeeded ? block("YARN SPECIFICATION", [row("Pile Yarn", f.pileYarn), row("Ground Yarn", f.groundYarn), row("Picks per cm / Loop Density", f.picksPerCm)]) : "",
-      block("DIMENSIONS", [row(sizeLabel, sizeDisplay)]),
-      block("COLOR & DESIGN", [row("Print / Design", f.printType), row("Placement", f.printPlacement), row("Pantone / Color Ref", f.pantoneRef), row("Detail / Notes", f.printDetail)]),
-      block("FINISHING", [row("Finish", finishVal)]),
-      block("PACKING", [row("Individual Pack", f.individualPack), row("Set Composition", f.setComposition), row("Notes", f.packingNotes)]),
-    ].filter(Boolean).join("\n\n");
+    if (certText) lines.push(subHead("CERTIFICATIONS"), row("Required", certText));
+
+    const docRows = [row("Sample Required", p.sampleRequired), row("Tech Pack / Artwork", p.hasTechPack)].filter(Boolean);
+    if (docRows.length) lines.push(subHead("SAMPLES & DOCUMENTATION"), ...docRows);
+
+    lines.push("");
+    return lines.filter(l => l !== null && l !== undefined).join("\n");
   }
 
-  const lines = [
-    BORDER,
-    "  RFQ SUBMISSION — MZ GLOBAL TRADING",
-    "  Source:     mzglobaltrading.com/rfq/",
-    `  Submitted:  ${submittedAt}`,
-    BORDER, "",
-    "[1]  CONTACT DETAILS", DIVIDER,
-    row("Name", f.name), row("Position", f.position), row("Company", f.company),
-    row("Email", f.email), row("Phone", f.phone), row("Country", f.country),
-    f.howHear ? row("How Did You Hear About Us", f.howHear) : "",
-    "", "[2]  PRODUCT REQUIREMENTS & SPECIFICATIONS", DIVIDER,
-    row("Category", f.category), row("Product Type", productDisplay), row("Certifications", certText),
-    "", specBlocks() || "  No additional specifications provided.",
-    "", "[3]  COMMERCIAL & LOGISTICS", DIVIDER,
-    row("Quantity", f.quantity + (f.unitOfMeasure ? ` ${f.unitOfMeasure}` : "")),
-    row("Target Price", f.targetPrice ? `USD ${f.targetPrice} per unit` : ""),
-    row("Destination", f.destinationCountry), row("Incoterm", f.incoterm),
-    ...(needsPort(f.incoterm) ? [row("Port of Destination", f.portOfDestination)] : []),
+  const parts = [
+    LINE,
+    "REQUEST FOR QUOTATION",
+    `MZ Global Trading - mzglobaltrading.com - info@mzglobaltrading.com`,
+    `Submitted: ${submittedAt}`,
+    LINE,
+    "",
+    "BUYER",
+    DIV,
+    [f.name, f.position].filter(Boolean).join(" - "),
+    f.company,
+    `${f.email}${f.phone ? " | " + f.phone : ""}`,
+    f.country,
+    f.howHear ? `Via: ${f.howHear}` : "",
+    "",
+    ...validProducts.map((p, i) => productBlock(p, i, validProducts.length)),
+    LINE,
+    "SHIPPING & DELIVERY",
+    LINE,
+    row("Destination", f.destinationCountry),
+    row("Incoterm", f.incoterm),
+    needsPort(f.incoterm) ? row("Port of Destination", f.portOfDestination) : "",
     row("Required Delivery", f.deliveryDate),
-    ...(f.notes ? ["", "[4]  ADDITIONAL NOTES", DIVIDER, `  ${f.notes}`] : []),
-    "", BORDER,
-    "  The buyer confirms they have read and agreed to the Terms of Use",
-    "  at: mzglobaltrading.com/termsofuse/ and the Privacy Policy",
-    "  at: mzglobaltrading.com/privacypolicy/",
-    BORDER,
+    f.logisticsNotes ? `\nAdditional Notes\n${f.logisticsNotes}` : "",
+    "",
+    LINE,
+    "The buyer confirms they have read and agreed to the Terms of Use",
+    "at: mzglobaltrading.com/termsofuse/ and the Privacy Policy",
+    "at: mzglobaltrading.com/privacypolicy/",
+    LINE,
   ];
-  return lines.filter(l => l !== null && l !== undefined).join("\n");
+
+  return parts.filter(l => l !== null && l !== undefined).join("\n");
 }
 
-// ─── Sub-components ───────────────────────────────────────────────────────────
+// ── UI helpers ────────────────────────────────────────────────────────────────
+
+const ic = (err?: string) =>
+  `w-full px-3 py-2 border rounded-lg text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 transition-colors bg-white ${
+    err ? "border-red-400 focus:ring-red-300/40 focus:border-red-400"
+        : "border-gray-200 focus:ring-gold/40 focus:border-gold"
+  }`;
+
+const stepAnim = {
+  initial: { opacity: 0, x: 20 },
+  animate: { opacity: 1, x: 0 },
+  exit:    { opacity: 0, x: -20 },
+  transition: { duration: 0.2 },
+};
+
+// ── Sub-components ────────────────────────────────────────────────────────────
 
 function Field({
   id, label, required, error, hint, children,
@@ -448,63 +654,147 @@ function Field({
   id: string; label: string; required?: boolean; error?: string; hint?: string; children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col gap-1.5">
-      <label htmlFor={id} className="text-sm font-medium text-navy-900">
+    <div className="flex flex-col gap-1">
+      <label htmlFor={id} className="text-xs font-semibold text-navy-900/80">
         {label}{required && <span className="text-gold ml-0.5" aria-hidden="true">*</span>}
       </label>
       {children}
-      {hint && !error && <p className="text-gray-400 text-xs">{hint}</p>}
-      {error && <p className="text-red-500 text-xs mt-0.5 flex items-center gap-1" role="alert"><span aria-hidden="true">↑</span> {error}</p>}
+      {hint && !error && <p className="text-gray-400 text-[11px]">{hint}</p>}
+      {error && <p className="text-red-500 text-[11px] mt-0.5 flex items-center gap-1" role="alert"><span aria-hidden="true">↑</span> {error}</p>}
     </div>
   );
 }
 
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-5">{children}</p>;
+type SectionColor = "blue" | "amber" | "green" | "purple" | "teal" | "indigo" | "gold";
+
+function sectionBorder(c?: SectionColor) {
+  if (c === "blue")   return "border-blue-400";
+  if (c === "amber")  return "border-amber-500";
+  if (c === "green")  return "border-green-500";
+  if (c === "purple") return "border-purple-400";
+  if (c === "teal")   return "border-teal-400";
+  if (c === "indigo") return "border-indigo-400";
+  if (c === "gold")   return "border-gold";
+  return "border-gray-300";
+}
+function sectionBg(c?: SectionColor) {
+  if (c === "blue")   return "bg-blue-50/70";
+  if (c === "amber")  return "bg-amber-50/70";
+  if (c === "green")  return "bg-green-50/70";
+  if (c === "purple") return "bg-purple-50/70";
+  if (c === "teal")   return "bg-teal-50/70";
+  if (c === "indigo") return "bg-indigo-50/70";
+  if (c === "gold")   return "bg-gold/5";
+  return "bg-gray-50/70";
+}
+function sectionBadge(c?: SectionColor) {
+  if (c === "blue")   return "bg-blue-100 text-blue-700";
+  if (c === "amber")  return "bg-amber-100 text-amber-700";
+  if (c === "green")  return "bg-green-100 text-green-700";
+  if (c === "purple") return "bg-purple-100 text-purple-700";
+  if (c === "teal")   return "bg-teal-100 text-teal-700";
+  if (c === "indigo") return "bg-indigo-100 text-indigo-700";
+  if (c === "gold")   return "bg-gold/15 text-yellow-700";
+  return "bg-gray-100 text-gray-500";
+}
+function sectionText(c?: SectionColor) {
+  if (c === "blue")   return "text-blue-700";
+  if (c === "amber")  return "text-amber-700";
+  if (c === "green")  return "text-green-700";
+  if (c === "purple") return "text-purple-700";
+  if (c === "teal")   return "text-teal-700";
+  if (c === "indigo") return "text-indigo-700";
+  if (c === "gold")   return "text-yellow-700";
+  return "text-navy-900/60";
 }
 
-function SpecSection({ title, children }: { title: string; children: React.ReactNode }) {
+function SpecSection({ title, number, color, children }: {
+  title: string; number?: number; color?: SectionColor; children: React.ReactNode;
+}) {
   return (
     <div className="border border-gray-100 rounded-xl overflow-hidden">
-      <div className="bg-navy-900 px-5 py-2.5">
-        <p className="text-[10px] font-bold tracking-[0.18em] uppercase text-gold/80">{title}</p>
+      <div className={`border-l-[3px] ${sectionBorder(color)} px-4 py-2.5 ${sectionBg(color)}`}>
+        <div className="flex items-center gap-2">
+          {number !== undefined && (
+            <span className={`w-[18px] h-[18px] rounded-full text-[9px] font-bold flex items-center justify-center flex-shrink-0 ${sectionBadge(color)}`}>
+              {number}
+            </span>
+          )}
+          <p className={`text-[10px] font-bold tracking-[0.18em] uppercase ${sectionText(color)}`}>{title}</p>
+        </div>
       </div>
-      <div className="px-5 py-5 space-y-4">{children}</div>
+      <div className="px-4 py-3 space-y-3">{children}</div>
+    </div>
+  );
+}
+
+function ReviewSection({ title, onEdit, children }: {
+  title: string; onEdit: () => void; children: React.ReactNode;
+}) {
+  return (
+    <div>
+      <div className="flex items-center justify-between mb-2.5">
+        <h3 className="text-navy-900 font-bold text-sm">{title}</h3>
+        <button type="button" onClick={onEdit}
+          className="text-xs font-semibold text-gold hover:text-yellow-600 transition-colors"
+          aria-label={`Edit ${title}`}>
+          Edit
+        </button>
+      </div>
+      <div className="bg-gray-50 rounded-xl border border-gray-100 px-4 py-1">{children}</div>
     </div>
   );
 }
 
 function ReviewRow({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex gap-3 py-2.5 border-b border-gray-100 last:border-0">
-      <span className="text-gray-400 text-sm w-44 flex-shrink-0">{label}</span>
-      <span className="text-navy-900 text-sm font-medium break-words min-w-0">{value || "—"}</span>
+    <div className="flex gap-3 py-2 border-b border-gray-100 last:border-0">
+      <span className="text-gray-400 text-xs w-36 flex-shrink-0">{label}</span>
+      <span className="text-navy-900 text-xs font-medium break-words min-w-0">{value || "—"}</span>
     </div>
   );
 }
 
-const ic = (err?: string) =>
-  `w-full px-4 py-3 border rounded-lg text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 transition-colors bg-white disabled:bg-gray-50 ${
-    err ? "border-red-400 focus:ring-red-300/40 focus:border-red-400"
-        : "border-gray-200 focus:ring-gold/40 focus:border-gold"
-  }`;
+function ChipSelect({
+  id, options, value, onChange, error,
+}: {
+  id?: string; options: string[]; value: string;
+  onChange: (v: string) => void; error?: string;
+}) {
+  return (
+    <div id={id}>
+      <div className="flex flex-wrap gap-2">
+        {options.map((opt) => {
+          const active = value === opt;
+          return (
+            <button key={opt} type="button"
+              onClick={() => onChange(active ? "" : opt)}
+              className={`px-3 py-1.5 rounded-lg border text-xs font-medium transition-colors ${
+                active
+                  ? "border-gold bg-gold/8 text-navy-900"
+                  : error
+                  ? "border-red-200 text-gray-500 hover:border-red-300"
+                  : "border-gray-200 text-gray-600 hover:border-gray-300 hover:text-navy-900"
+              }`}>
+              {opt}
+            </button>
+          );
+        })}
+      </div>
+      {error && <p className="text-red-500 text-[11px] mt-1.5 flex items-center gap-1" role="alert"><span aria-hidden="true">↑</span> {error}</p>}
+    </div>
+  );
+}
 
-const stepAnim = {
-  initial: { opacity: 0, x: 24 },
-  animate: { opacity: 1, x: 0 },
-  exit:    { opacity: 0, x: -24 },
-  transition: { duration: 0.22 },
-};
-
-function CheckboxGrid({
-  options, selected, onToggle,
-}: { options: string[]; selected: string[]; onToggle: (val: string) => void }) {
+function CheckboxGrid({ options, selected, onToggle }: {
+  options: string[]; selected: string[]; onToggle: (val: string) => void;
+}) {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
       {options.map((opt) => {
         const checked = selected.includes(opt);
         return (
-          <label key={opt} className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg border cursor-pointer transition-colors select-none ${
+          <label key={opt} className={`flex items-center gap-2 px-3 py-2 rounded-lg border cursor-pointer transition-colors select-none ${
             checked ? "border-gold bg-gold/5 text-navy-900" : "border-gray-200 hover:border-gray-300 text-gray-600"
           }`}>
             <input type="checkbox" className="accent-[#D4A017] w-3.5 h-3.5 flex-shrink-0"
@@ -517,38 +807,9 @@ function CheckboxGrid({
   );
 }
 
-// ─── Category icons ───────────────────────────────────────────────────────────
-
-function IconApparel() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.57a2 2 0 0 0-1.34-2.23z" />
-    </svg>
-  );
-}
-function IconHomeTextile() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M2 9V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3" />
-      <path d="M2 11v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-8a2 2 0 0 0-4 0v1H6v-1a2 2 0 0 0-4 0z" />
-    </svg>
-  );
-}
-function IconFabric() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <circle cx="12" cy="12" r="10" />
-      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-      <path d="M2 12h20" />
-    </svg>
-  );
-}
-
-// ─── OtherInput helper ────────────────────────────────────────────────────────
-
-function OtherInput({
-  id, show, value, onChange, placeholder,
-}: { id: string; show: boolean; value: string; onChange: (v: string) => void; placeholder: string }) {
+function OtherInput({ id, show, value, onChange, placeholder }: {
+  id: string; show: boolean; value: string; onChange: (v: string) => void; placeholder: string;
+}) {
   if (!show) return null;
   return (
     <input id={id} type="text" placeholder={placeholder} value={value}
@@ -557,22 +818,57 @@ function OtherInput({
   );
 }
 
-// ─── Main component ───────────────────────────────────────────────────────────
+// ── Category icons ────────────────────────────────────────────────────────────
+
+function IconApparel({ size = 20 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.57a2 2 0 0 0-1.34-2.23z" />
+    </svg>
+  );
+}
+function IconHomeTextile({ size = 20 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M2 9V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3" />
+      <path d="M2 11v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-8a2 2 0 0 0-4 0v1H6v-1a2 2 0 0 0-4 0z" />
+    </svg>
+  );
+}
+function IconFabric({ size = 20 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /><path d="M2 12h20" />
+    </svg>
+  );
+}
+
+function getCategoryIcon(cat: string) {
+  if (cat === "Apparel") return <IconApparel size={14} />;
+  if (cat === "Home Textiles") return <IconHomeTextile size={14} />;
+  if (cat === "Fabric") return <IconFabric size={14} />;
+  return null;
+}
+
+// ── Main component ────────────────────────────────────────────────────────────
 
 export default function RFQContent() {
-  const [step, setStep]         = useState(1);
-  const [formData, setFormData] = useState<RFQData>(INITIAL);
-  const [phoneCountry, setPhoneCountry] = useState("us");
-  const [errors, setErrors]     = useState<Record<string, string>>({});
-  const [status, setStatus]     = useState<Status>("idle");
-  const [clipboardCopied, setClipboardCopied] = useState(false);
+  const [step, setStep]               = useState(1);
+  const [formState, setFormState]     = useState<RFQFormState>(INITIAL_FORM);
+  const [activeProduct, setActiveProduct] = useState(0);
+  const [phoneCountry, setPhoneCountry]   = useState("us");
+  const [errors, setErrors]           = useState<Record<string, string>>({});
+  const [status, setStatus]           = useState<Status>("idle");
   const formRef  = useRef<HTMLDivElement>(null);
   const hasMounted = useRef(false);
 
   useEffect(() => {
     try {
-      const saved = localStorage.getItem("rfq_wizard_draft");
-      if (saved) setFormData(JSON.parse(saved) as RFQData);
+      const saved = localStorage.getItem("rfq_wizard_draft_v2");
+      if (saved) {
+        const parsed = JSON.parse(saved) as Partial<RFQFormState>;
+        setFormState(prev => ({ ...prev, ...parsed }));
+      }
     } catch { /* ignore */ }
     hasMounted.current = true;
   }, []);
@@ -580,107 +876,90 @@ export default function RFQContent() {
   useEffect(() => {
     if (!hasMounted.current) return;
     const t = setTimeout(() => {
-      try { localStorage.setItem("rfq_wizard_draft", JSON.stringify(formData)); } catch { /* ignore */ }
+      try { localStorage.setItem("rfq_wizard_draft_v2", JSON.stringify(formState)); } catch { /* ignore */ }
     }, 500);
     return () => clearTimeout(t);
-  }, [formData]);
+  }, [formState]);
 
   function scrollToForm() {
     if (!formRef.current) return;
-    const y = formRef.current.getBoundingClientRect().top + window.scrollY - 176;
+    const y = formRef.current.getBoundingClientRect().top + window.scrollY - 180;
     window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
   }
 
-  function set(field: keyof RFQData, value: string) {
-    setFormData(prev => ({ ...prev, [field]: value }));
+  function updateProduct(index: number, updates: Partial<ProductSpec>) {
+    setFormState(prev => ({
+      ...prev,
+      products: prev.products.map((p, i) => i === index ? { ...p, ...updates } : p),
+    }));
+  }
+
+  function setGlobal(field: keyof RFQFormState, value: string) {
+    setFormState(prev => ({ ...prev, [field]: value }));
     if (errors[field]) setErrors(prev => ({ ...prev, [field]: "" }));
   }
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
-    set(e.target.name as keyof RFQData, e.target.value);
+  function addProduct() {
+    setFormState(prev => ({ ...prev, products: [...prev.products, mkProduct()] }));
+    setActiveProduct(formState.products.length);
+    setErrors({});
+    scrollToForm();
   }
 
-  function toggleCategory(cat: string) {
-    setFormData(prev => ({ ...prev, ...SPEC_RESET, category: cat, productType: "", productTypeOther: "" }));
+  function removeProduct(index: number) {
+    if (formState.products.length <= 1) return;
+    setFormState(prev => ({
+      ...prev,
+      products: prev.products.filter((_, i) => i !== index),
+    }));
+    setActiveProduct(prev => Math.min(prev, formState.products.length - 2));
     setErrors({});
   }
 
-  function handleProductTypeChange(e: React.ChangeEvent<HTMLSelectElement>) {
-    setFormData(prev => ({ ...prev, ...SPEC_RESET, productType: e.target.value, productTypeOther: "" }));
-    if (errors.productType) setErrors(prev => ({ ...prev, productType: "" }));
-  }
+  // ── Validation ──────────────────────────────────────────────────────────────
 
-  function toggleCert(cert: string) {
-    setFormData(prev => ({
-      ...prev,
-      certifications: prev.certifications.includes(cert)
-        ? prev.certifications.filter(c => c !== cert)
-        : [...prev.certifications, cert],
-    }));
-  }
-
-  function toggleFinish(finish: string) {
-    setFormData(prev => ({
-      ...prev,
-      finishing: prev.finishing.includes(finish)
-        ? prev.finishing.filter(f => f !== finish)
-        : [...prev.finishing, finish],
-    }));
-  }
-
-  function toggleSize(size: string) {
-    setFormData(prev => ({
-      ...prev,
-      sizeRange: prev.sizeRange.includes(size)
-        ? prev.sizeRange.filter(s => s !== size)
-        : [...prev.sizeRange, size],
-    }));
-  }
-
-  function toggleEmbellishment(val: string) {
-    setFormData(prev => ({
-      ...prev,
-      embellishments: prev.embellishments.includes(val)
-        ? prev.embellishments.filter(e => e !== val)
-        : [...prev.embellishments, val],
-    }));
-  }
-
-  function toggleAccessory(val: string) {
-    setFormData(prev => ({
-      ...prev,
-      accessories: prev.accessories.includes(val)
-        ? prev.accessories.filter(a => a !== val)
-        : [...prev.accessories, val],
-    }));
-  }
-
-  // ── Validation ────────────────────────────────────────────────────────────
-
-  function validateStep1(): boolean {
+  function validateCurrentProduct(): boolean {
+    const p = formState.products[activeProduct];
     const e: Record<string, string> = {};
-    if (!formData.category) e.category = "Please select a product category";
-    if (formData.category && !formData.productType) e.productType = "Please select a product type";
-    if (formData.productType === "Other / Multiple" && !formData.productTypeOther.trim())
-      e.productTypeOther = "Please describe your product type";
-    if (formData.productType && formData.productType !== "Other / Multiple" && !formData.weight.trim()) {
-      const opts = getProductOptions(formData.productType);
-      e.weight = `${opts?.weightLabel ?? "GSM"} is required`;
-    }
+    if (!p.category) e.category = "Please select a product category";
+    if (p.category && !p.productType) e.productType = "Please select a product type";
+    if (p.productType === "Other / Multiple" && !p.productTypeOther.trim())
+      e.productTypeOther = "Please describe your product";
+    const opts = p.productType ? getProductOptions(p.productType) : undefined;
+    if (p.productType && p.productType !== "Other / Multiple" && !p.weight.trim())
+      e.weight = `${opts?.weightLabel ?? "GSM / Weight"} is required`;
+    if (opts?.isFabricRoll && !p.sizeRange[0])
+      e.sizeRange0 = "Fabric width is required";
+    if (!p.quantity.trim()) e.quantity = "Quantity is required";
+    else if (!/\d/.test(p.quantity)) e.quantity = "Enter a numeric quantity";
+    if (p.targetPrice && !/\d/.test(p.targetPrice)) e.targetPrice = "Enter a valid price (e.g. 3.50)";
     setErrors(e); focusFirstError(e);
     return Object.keys(e).length === 0;
   }
 
+  function validateAllProducts(): boolean {
+    for (let i = 0; i < formState.products.length; i++) {
+      const p = formState.products[i];
+      if (!p.category && !p.productType) continue;
+      if (!p.category || !p.productType || !p.quantity.trim()) {
+        setActiveProduct(i);
+        setErrors({
+          ...(!p.category ? { category: "Please select a product category" } : {}),
+          ...(!p.productType && p.category ? { productType: "Please select a product type" } : {}),
+          ...(!p.quantity.trim() ? { quantity: "Quantity is required" } : {}),
+        });
+        return false;
+      }
+    }
+    return true;
+  }
+
   function validateStep2(): boolean {
     const e: Record<string, string> = {};
-    if (!formData.quantity.trim()) e.quantity = "Quantity is required";
-    else if (!/\d/.test(formData.quantity)) e.quantity = "Enter a numeric quantity (e.g. 5000)";
-    if (formData.targetPrice && !/\d/.test(formData.targetPrice))
-      e.targetPrice = "Enter a valid price (e.g. 3.50)";
-    if (!formData.destinationCountry) e.destinationCountry = "Please select a destination country";
-    if (!formData.deliveryDate) e.deliveryDate = "Required delivery date is required";
-    else if (new Date(formData.deliveryDate) <= new Date()) e.deliveryDate = "Delivery date must be in the future";
-    if (needsPort(formData.incoterm) && !formData.portOfDestination.trim())
+    if (!formState.destinationCountry) e.destinationCountry = "Please select a destination country";
+    if (!formState.deliveryDate) e.deliveryDate = "Required delivery date is required";
+    else if (new Date(formState.deliveryDate) <= new Date()) e.deliveryDate = "Delivery date must be in the future";
+    if (needsPort(formState.incoterm) && !formState.portOfDestination.trim())
       e.portOfDestination = "Port of destination is required for CIF / CFR";
     setErrors(e); focusFirstError(e);
     return Object.keys(e).length === 0;
@@ -688,20 +967,24 @@ export default function RFQContent() {
 
   function validateStep3(): boolean {
     const e: Record<string, string> = {};
-    if (!formData.name.trim()) e.name = "Full name is required";
-    if (!formData.position.trim()) e.position = "Position / job title is required";
-    if (!formData.company.trim()) e.company = "Company name is required";
-    if (!formData.email.trim()) e.email = "Business email is required";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) e.email = "Enter a valid email address";
-    const phoneErr = validatePhone(formData.phone, phoneCountry);
+    if (!formState.name.trim()) e.name = "Full name is required";
+    if (!formState.position.trim()) e.position = "Position / job title is required";
+    if (!formState.company.trim()) e.company = "Company name is required";
+    if (!formState.email.trim()) e.email = "Business email is required";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formState.email.trim())) e.email = "Enter a valid email";
+    const phoneErr = validatePhone(formState.phone, phoneCountry);
     if (phoneErr) e.phone = phoneErr;
-    if (!formData.country) e.country = "Please select your country";
+    if (!formState.country) e.country = "Please select your country";
     setErrors(e); focusFirstError(e);
     return Object.keys(e).length === 0;
   }
 
   function handleNext() {
-    const valid = step === 1 ? validateStep1() : step === 2 ? validateStep2() : step === 3 ? validateStep3() : true;
+    let valid = false;
+    if (step === 1) { valid = validateCurrentProduct() && validateAllProducts(); }
+    else if (step === 2) { valid = validateStep2(); }
+    else if (step === 3) { valid = validateStep3(); }
+    else { valid = true; }
     if (valid) { setErrors({}); setStep(s => s + 1); scrollToForm(); }
   }
 
@@ -710,154 +993,203 @@ export default function RFQContent() {
   }
 
   async function handleSubmit() {
-    const body = buildEmailBody(formData);
-    const subject = `[RFQ] ${formData.category} - ${formData.productType} - ${formData.company}`;
-
-    // Copy full body to clipboard before opening mailto.
-    // Mobile email apps silently truncate long mailto URLs — clipboard is the reliable fallback.
-    let copied = false;
-    try {
-      await navigator.clipboard.writeText(body);
-      copied = true;
-    } catch {
-      // Clipboard API blocked or unavailable — mailto still fires, no action needed
-    }
-
+    const validProducts = formState.products.filter(p => p.category && p.productType);
+    const subject = `[RFQ] ${validProducts.map(p => p.productType || p.category).join(" + ")} — ${formState.company}`;
+    const body = buildEmailBody(formState);
+    try { await navigator.clipboard.writeText(body); } catch { /* ignore — clipboard is a silent backup */ }
+    // Full body in mailto — desktop email clients (Outlook, Thunderbird, Mail) handle it.
+    // Gmail web ignores body; clipboard copy is the fallback for those users.
     window.location.href = `mailto:${RECIPIENT}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    try { localStorage.removeItem("rfq_wizard_draft"); } catch { /* ignore */ }
-    setClipboardCopied(copied);
+    try { localStorage.removeItem("rfq_wizard_draft_v2"); } catch { /* ignore */ }
     setStatus("sent");
     scrollToForm();
   }
 
-  // ── Back button ───────────────────────────────────────────────────────────
-
-  function BackBtn({ className = "" }: { className?: string }) {
-    if (step === 1) return null;
-    return (
-      <button type="button" onClick={handleBack}
-        className={`inline-flex items-center gap-2 px-5 py-2.5 border border-gray-200 text-gray-600 text-sm font-semibold rounded-lg hover:border-gray-300 hover:text-navy-900 transition-colors ${className}`}>
-        ← Back
-      </button>
-    );
-  }
-
-  // ── Step 1 ────────────────────────────────────────────────────────────────
+  // ── Step 1: Product(s) ──────────────────────────────────────────────────────
 
   function renderStep1() {
-    const opts = formData.productType ? getProductOptions(formData.productType) : null;
-    const productTypes = getProductTypes(formData.category);
+    const product = formState.products[activeProduct];
+    const opts = product.productType ? getProductOptions(product.productType) : null;
+    const productTypes = getProductTypes(product.category);
     const fiberOptions =
-      formData.category === "Apparel" ? FIBER_CONTENT_APPAREL :
-      formData.category === "Home Textiles" ? FIBER_CONTENT_HT : FIBER_CONTENT_FABRIC;
+      product.category === "Apparel" ? FIBER_CONTENT_APPAREL :
+      product.category === "Home Textiles" ? FIBER_CONTENT_HT : FIBER_CONTENT_FABRIC;
+
+    function setP(field: keyof ProductSpec, value: string) {
+      updateProduct(activeProduct, { [field]: value });
+      if (errors[field]) setErrors(prev => ({ ...prev, [field]: "" }));
+    }
+
+    function toggleArr(field: "finishing" | "certifications" | "embellishments" | "accessories" | "sizeRange", val: string) {
+      const arr = (product[field] as string[]) || [];
+      const next = arr.includes(val) ? arr.filter(v => v !== val) : [...arr, val];
+      updateProduct(activeProduct, { [field]: next } as Partial<ProductSpec>);
+    }
 
     const finishingOpts = opts ? [...opts.finishingOptions, "Other (specify below)"] : [];
-
-    const isTerrySelected = formData.construction !== "" && /terry|velour/i.test(formData.construction);
+    const isTerrySelected = product.construction !== "" && /terry|velour/i.test(product.construction);
     const shouldShowWarpWeft = !!(opts?.showWarpWeft && (
-      opts.isFabricRoll
-        ? formData.construction === "Woven"
+      opts.isFabricRoll ? product.construction === "Woven"
         : !opts.showPileGround || !isTerrySelected
     ));
     const shouldShowPileGround = !!(opts?.showPileGround && (
-      opts.isFabricRoll
-        ? formData.construction === "Terry"
+      opts.isFabricRoll ? product.construction === "Terry"
         : !opts.showWarpWeft || isTerrySelected
     ));
 
     return (
       <motion.div key="step1" {...stepAnim}>
-        <div className="flex items-center justify-between mb-5">
-          <SectionLabel>Step 1 — Product Requirements</SectionLabel>
-          <BackBtn />
+        {/* Product tab strip */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-2 mb-5 scrollbar-none">
+          {formState.products.map((p, idx) => {
+            const isActive = idx === activeProduct;
+            const label = getProductTabLabel(p);
+            const cat = p.category;
+            return (
+              <button key={p.id} type="button"
+                onClick={() => { setActiveProduct(idx); setErrors({}); }}
+                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg border text-xs font-semibold flex-shrink-0 transition-colors ${
+                  isActive
+                    ? "bg-navy-900 border-navy-900 text-white"
+                    : "border-gray-200 text-gray-600 hover:border-gray-300 hover:text-navy-900"
+                }`}>
+                <span className={isActive ? "text-gold" : "text-gray-400"}>{getCategoryIcon(cat)}</span>
+                <span className="max-w-[110px] truncate">{label}</span>
+                {formState.products.length > 1 && (
+                  <span
+                    onClick={(e) => { e.stopPropagation(); removeProduct(idx); }}
+                    className={`ml-0.5 text-sm leading-none transition-opacity ${isActive ? "text-white/60 hover:text-white" : "text-gray-400 hover:text-red-400"}`}
+                    aria-label={`Remove ${label}`}>
+                    ×
+                  </span>
+                )}
+              </button>
+            );
+          })}
+          {formState.products.length < 6 && (
+            <button type="button" onClick={addProduct}
+              className="flex items-center gap-1 px-3 py-2 rounded-lg border border-navy-900 bg-navy-900 text-white text-xs font-medium flex-shrink-0 hover:bg-navy-900/85 transition-colors">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+              Add Product
+            </button>
+          )}
         </div>
-        <div className="space-y-4">
 
+        <div className="space-y-3">
           {/* Category */}
-          <SpecSection title="Product Category">
+          <SpecSection title="Product Category" number={1} color="blue">
             <div>
               <div className="grid grid-cols-3 gap-3">
-                {[
-                  { id: "Apparel", icon: <IconApparel /> },
-                  { id: "Home Textiles", icon: <IconHomeTextile /> },
-                  { id: "Fabric", icon: <IconFabric /> },
-                ].map(({ id, icon }) => (
-                  <button key={id} type="button" onClick={() => toggleCategory(id)}
+                {([
+                  {
+                    id: "Apparel",
+                    icon: <IconApparel size={26} />,
+                    selClass: "border-indigo-500 bg-indigo-50 text-indigo-900",
+                    selIcon: "text-indigo-500",
+                    hoverClass: "hover:border-indigo-300 hover:bg-indigo-50/50",
+                    idleIcon: "text-indigo-300",
+                  },
+                  {
+                    id: "Home Textiles",
+                    icon: <IconHomeTextile size={26} />,
+                    selClass: "border-teal-500 bg-teal-50 text-teal-900",
+                    selIcon: "text-teal-500",
+                    hoverClass: "hover:border-teal-300 hover:bg-teal-50/50",
+                    idleIcon: "text-teal-300",
+                  },
+                  {
+                    id: "Fabric",
+                    icon: <IconFabric size={26} />,
+                    selClass: "border-amber-500 bg-amber-50 text-amber-900",
+                    selIcon: "text-amber-500",
+                    hoverClass: "hover:border-amber-300 hover:bg-amber-50/50",
+                    idleIcon: "text-amber-300",
+                  },
+                ] as const).map(({ id, icon, selClass, selIcon, hoverClass, idleIcon }) => (
+                  <button key={id} type="button"
+                    onClick={() => {
+                      updateProduct(activeProduct, { ...specReset(product), category: id, productType: "", productTypeOther: "" });
+                      setErrors({});
+                    }}
                     className={`flex flex-col items-center gap-2 p-4 rounded-xl border-2 text-center transition-all ${
-                      formData.category === id ? "border-gold bg-gold/5 text-navy-900"
-                      : errors.category ? "border-red-300 hover:border-red-400 text-gray-500"
-                      : "border-gray-200 hover:border-gray-300 text-gray-500"
+                      product.category === id ? selClass
+                      : errors.category ? `border-red-300 hover:border-red-400 text-gray-500 ${hoverClass}`
+                      : `border-gray-200 text-gray-500 ${hoverClass}`
                     }`}>
-                    <span className={formData.category === id ? "text-gold" : "text-gray-400"}>{icon}</span>
+                    <span className={product.category === id ? selIcon : idleIcon}>{icon}</span>
                     <span className="text-xs font-semibold leading-tight">{id}</span>
                   </button>
                 ))}
               </div>
               {errors.category && (
-                <p className="text-red-500 text-xs mt-1.5 flex items-center gap-1" role="alert">
+                <p className="text-red-500 text-[11px] mt-1.5 flex items-center gap-1" role="alert">
                   <span aria-hidden="true">↑</span> {errors.category}
                 </p>
               )}
             </div>
 
-            {formData.category && (
+            {product.category && (
               <Field id="productType" label="Product Type" required error={errors.productType}>
                 <select id="productType" name="productType" aria-invalid={!!errors.productType}
-                  value={formData.productType} onChange={handleProductTypeChange} className={ic(errors.productType)}>
+                  value={product.productType}
+                  onChange={(e) => {
+                    updateProduct(activeProduct, { ...specReset(product), productType: e.target.value, productTypeOther: "" });
+                    if (errors.productType) setErrors(prev => ({ ...prev, productType: "" }));
+                  }}
+                  className={ic(errors.productType)}>
                   <option value="">Select product type…</option>
                   {productTypes.map(t => <option key={t} value={t}>{t}</option>)}
                 </select>
               </Field>
             )}
 
-            {formData.productType === "Other / Multiple" && (
-              <Field id="productTypeOther" label="Please describe your product(s)" required error={errors.productTypeOther}>
-                <input id="productTypeOther" name="productTypeOther" type="text" required
-                  aria-invalid={!!errors.productTypeOther}
+            {product.productType === "Other / Multiple" && (
+              <Field id="productTypeOther" label="Describe your product(s)" required error={errors.productTypeOther}>
+                <input id="productTypeOther" type="text" required aria-invalid={!!errors.productTypeOther}
                   placeholder="e.g. Compression sportswear, cycling jerseys"
-                  value={formData.productTypeOther} onChange={handleChange} className={ic(errors.productTypeOther)} />
+                  value={product.productTypeOther} onChange={e => setP("productTypeOther", e.target.value)}
+                  className={ic(errors.productTypeOther)} />
               </Field>
             )}
           </SpecSection>
 
-          {formData.productType && (
-            <div className="space-y-6">
+          {product.productType && (
+            <div className="space-y-3">
 
-              {/* ── Row 1: Composition (left) | Construction & Weight (right) ── */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
-                {/* 1 — Composition */}
-                <SpecSection title="1 — Composition">
-                  <div className="grid sm:grid-cols-2 gap-4">
+              {/* Row 1: Composition | Construction */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 items-start">
+                <SpecSection title="Composition" number={2} color="teal">
+                  <div className="grid sm:grid-cols-2 gap-3">
                     <div>
                       <Field id="fiberContent" label="Fiber Content">
-                        <select id="fiberContent" name="fiberContent"
-                          value={formData.fiberContent} onChange={handleChange} className={ic()}>
-                          <option value="">Select fiber…</option>
+                        <select id="fiberContent" value={product.fiberContent}
+                          onChange={e => setP("fiberContent", e.target.value)} className={ic()}>
+                          <option value="">Select…</option>
                           {fiberOptions.map(o => <option key={o} value={o}>{o}</option>)}
                         </select>
                       </Field>
-                      <OtherInput id="fiberContentOther" show={formData.fiberContent === "Other"}
-                        value={formData.fiberContentOther} onChange={v => set("fiberContentOther", v)}
-                        placeholder="Specify fiber content (e.g. Bamboo-Linen blend)" />
+                      <OtherInput id="fiberContentOther" show={product.fiberContent === "Other"}
+                        value={product.fiberContentOther} onChange={v => setP("fiberContentOther", v)}
+                        placeholder="Specify fiber (e.g. Bamboo-Linen)" />
                     </div>
-                    {formData.category === "Apparel" && (
+                    {product.category === "Apparel" && (
                       <div>
                         <Field id="yarnType" label="Yarn Type">
-                          <select id="yarnType" name="yarnType"
-                            value={formData.yarnType} onChange={handleChange} className={ic()}>
+                          <select id="yarnType" value={product.yarnType}
+                            onChange={e => setP("yarnType", e.target.value)} className={ic()}>
                             <option value="">Select…</option>
                             {YARN_TYPES.map(o => <option key={o} value={o}>{o}</option>)}
                           </select>
                         </Field>
-                        <OtherInput id="yarnTypeOther" show={formData.yarnType === "Other"}
-                          value={formData.yarnTypeOther} onChange={v => set("yarnTypeOther", v)}
+                        <OtherInput id="yarnTypeOther" show={product.yarnType === "Other"}
+                          value={product.yarnTypeOther} onChange={v => setP("yarnTypeOther", v)}
                           placeholder="Specify yarn type" />
                       </div>
                     )}
                     {opts?.isFabricRoll && (
-                      <Field id="sustainability" label="Sustainability Requirement">
-                        <select id="sustainability" name="sustainability"
-                          value={formData.sustainability} onChange={handleChange} className={ic()}>
+                      <Field id="sustainability" label="Sustainability">
+                        <select id="sustainability" value={product.sustainability}
+                          onChange={e => setP("sustainability", e.target.value)} className={ic()}>
                           <option value="">Select…</option>
                           {SUSTAINABILITY_OPTIONS.map(o => <option key={o} value={o}>{o}</option>)}
                         </select>
@@ -865,150 +1197,148 @@ export default function RFQContent() {
                     )}
                   </div>
                   <Field id="compositionNotes" label="Composition Notes">
-                    <input id="compositionNotes" name="compositionNotes" type="text"
+                    <input id="compositionNotes" type="text"
                       placeholder="e.g. 100% ring spun combed cotton"
-                      value={formData.compositionNotes} onChange={handleChange} className={ic()} />
+                      value={product.compositionNotes} onChange={e => setP("compositionNotes", e.target.value)}
+                      className={ic()} />
                   </Field>
                 </SpecSection>
 
-                {/* 2 — Construction & Weight */}
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {opts && (
-                    <SpecSection title={opts.isFabricRoll ? "2 — Construction & Width" : "2 — Construction & Weight"}>
-                      <div className="grid sm:grid-cols-2 gap-4">
+                    <SpecSection title={opts.isFabricRoll ? "Construction & Width" : "Construction & Weight"} number={3} color="amber">
+                      <div className="grid sm:grid-cols-2 gap-3">
                         <div>
                           <Field id="construction" label={opts.constructionLabel}>
-                            <select id="construction" name="construction"
-                              value={formData.construction} onChange={handleChange} className={ic()}>
+                            <select id="construction" value={product.construction}
+                              onChange={e => setP("construction", e.target.value)} className={ic()}>
                               <option value="">Select…</option>
                               {opts.constructionOptions.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
                           </Field>
-                          {formData.construction === "Other" && (
+                          {product.construction === "Other" && (
                             <input type="text" placeholder={opts.constructionOtherPlaceholder}
-                              value={formData.constructionOther} onChange={e => set("constructionOther", e.target.value)}
+                              value={product.constructionOther} onChange={e => setP("constructionOther", e.target.value)}
                               className={`mt-2 ${ic()}`} />
                           )}
                         </div>
                         <Field id="weight" label={opts.weightLabel} required error={errors.weight}>
-                          <input id="weight" name="weight" type="text"
-                            aria-invalid={!!errors.weight}
+                          <input id="weight" type="text" aria-invalid={!!errors.weight}
                             placeholder={opts.weightPlaceholder}
-                            value={formData.weight} onChange={handleChange} className={ic(errors.weight)} />
+                            value={product.weight} onChange={e => { setP("weight", e.target.value); }}
+                            className={ic(errors.weight)} />
                         </Field>
                       </div>
-                      {opts.isFabricRoll && formData.construction === "Knitted" && (
+
+                      {opts.isFabricRoll && product.construction === "Knitted" && (
                         <div>
                           <Field id="fabricSubType" label="Knit Type">
-                            <select id="fabricSubType" name="fabricSubType"
-                              value={formData.fabricSubType} onChange={handleChange} className={ic()}>
+                            <select id="fabricSubType" value={product.fabricSubType}
+                              onChange={e => setP("fabricSubType", e.target.value)} className={ic()}>
                               <option value="">Select…</option>
                               {KNIT_TYPES_FABRIC.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
                           </Field>
-                          <OtherInput id="fabricSubTypeOther" show={formData.fabricSubType === "Other"}
-                            value={formData.fabricSubTypeOther} onChange={v => set("fabricSubTypeOther", v)}
+                          <OtherInput id="fabricSubTypeOther" show={product.fabricSubType === "Other"}
+                            value={product.fabricSubTypeOther} onChange={v => setP("fabricSubTypeOther", v)}
                             placeholder="Specify knit type" />
                         </div>
                       )}
-                      {opts.isFabricRoll && formData.construction === "Woven" && (
+                      {opts.isFabricRoll && product.construction === "Woven" && (
                         <div>
                           <Field id="fabricSubType" label="Woven Type">
-                            <select id="fabricSubType" name="fabricSubType"
-                              value={formData.fabricSubType} onChange={handleChange} className={ic()}>
+                            <select id="fabricSubType" value={product.fabricSubType}
+                              onChange={e => setP("fabricSubType", e.target.value)} className={ic()}>
                               <option value="">Select…</option>
                               {WOVEN_TYPES_FABRIC.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
                           </Field>
-                          <OtherInput id="fabricSubTypeOther" show={formData.fabricSubType === "Other"}
-                            value={formData.fabricSubTypeOther} onChange={v => set("fabricSubTypeOther", v)}
+                          <OtherInput id="fabricSubTypeOther" show={product.fabricSubType === "Other"}
+                            value={product.fabricSubTypeOther} onChange={v => setP("fabricSubTypeOther", v)}
                             placeholder="Specify woven type" />
                         </div>
                       )}
                       {opts.isFabricRoll && (
                         <div>
-                          <Field id="sizeRange0" label="Fabric Width">
-                            <select id="sizeRange0"
-                              value={formData.sizeRange[0] ?? ""}
-                              onChange={e => setFormData(p => ({ ...p, sizeRange: e.target.value ? [e.target.value] : [] }))}
-                              className={ic()}>
+                          <Field id="sizeRange0" label="Fabric Width" required error={errors.sizeRange0}>
+                            <select id="sizeRange0" aria-invalid={!!errors.sizeRange0}
+                              value={product.sizeRange[0] ?? ""}
+                              onChange={e => {
+                                updateProduct(activeProduct, { sizeRange: e.target.value ? [e.target.value] : [] });
+                                if (errors.sizeRange0) setErrors(prev => ({ ...prev, sizeRange0: "" }));
+                              }}
+                              className={ic(errors.sizeRange0)}>
                               <option value="">Select width…</option>
                               {FABRIC_WIDTHS_FABRIC.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
                           </Field>
-                          <OtherInput id="fabricWidthCustom" show={formData.sizeRange[0] === "Custom"}
-                            value={formData.sizeRangeNotes} onChange={v => set("sizeRangeNotes", v)}
+                          <OtherInput id="fabricWidthCustom" show={product.sizeRange[0] === "Custom"}
+                            value={product.sizeRangeNotes} onChange={v => setP("sizeRangeNotes", v)}
                             placeholder={'e.g. 64" / 163 cm usable width'} />
                         </div>
                       )}
                     </SpecSection>
                   )}
+
                   {shouldShowWarpWeft && (
-                    <SpecSection title="Yarn Specification — Warp &amp; Weft">
-                      <div className="grid sm:grid-cols-2 gap-4">
+                    <SpecSection title="Yarn Specification — Warp & Weft" color="teal">
+                      <div className="grid sm:grid-cols-2 gap-3">
                         <Field id="warpYarn" label="Warp Yarn">
-                          <input id="warpYarn" name="warpYarn" type="text"
-                            placeholder="e.g. 30/1 Ne Ring Spun Cotton"
-                            value={formData.warpYarn} onChange={handleChange} className={ic()} />
+                          <input id="warpYarn" type="text" placeholder="e.g. 30/1 Ne Ring Spun Cotton"
+                            value={product.warpYarn} onChange={e => setP("warpYarn", e.target.value)} className={ic()} />
                         </Field>
                         <Field id="weftYarn" label="Weft Yarn">
-                          <input id="weftYarn" name="weftYarn" type="text"
-                            placeholder="e.g. 20/1 OE Cotton"
-                            value={formData.weftYarn} onChange={handleChange} className={ic()} />
+                          <input id="weftYarn" type="text" placeholder="e.g. 20/1 OE Cotton"
+                            value={product.weftYarn} onChange={e => setP("weftYarn", e.target.value)} className={ic()} />
                         </Field>
                       </div>
                       <Field id="picksPerCm" label="Picks per cm / Thread Density">
-                        <input id="picksPerCm" name="picksPerCm" type="text"
-                          placeholder="e.g. Warp 40 × Weft 30 per cm"
-                          value={formData.picksPerCm} onChange={handleChange} className={ic()} />
+                        <input id="picksPerCm" type="text" placeholder="e.g. Warp 40 × Weft 30 per cm"
+                          value={product.picksPerCm} onChange={e => setP("picksPerCm", e.target.value)} className={ic()} />
                       </Field>
                     </SpecSection>
                   )}
                   {shouldShowPileGround && (
-                    <SpecSection title="Yarn Specification — Pile &amp; Ground">
-                      <div className="grid sm:grid-cols-2 gap-4">
+                    <SpecSection title="Yarn Specification — Pile & Ground" color="teal">
+                      <div className="grid sm:grid-cols-2 gap-3">
                         <Field id="pileYarn" label="Pile Yarn">
-                          <input id="pileYarn" name="pileYarn" type="text"
-                            placeholder="e.g. 16/1 Ne Ring Spun Cotton"
-                            value={formData.pileYarn} onChange={handleChange} className={ic()} />
+                          <input id="pileYarn" type="text" placeholder="e.g. 16/1 Ne Ring Spun Cotton"
+                            value={product.pileYarn} onChange={e => setP("pileYarn", e.target.value)} className={ic()} />
                         </Field>
                         <Field id="groundYarn" label="Ground Yarn">
-                          <input id="groundYarn" name="groundYarn" type="text"
-                            placeholder="e.g. 20/1 Ne Ring Spun Cotton"
-                            value={formData.groundYarn} onChange={handleChange} className={ic()} />
+                          <input id="groundYarn" type="text" placeholder="e.g. 20/1 Ne Ring Spun Cotton"
+                            value={product.groundYarn} onChange={e => setP("groundYarn", e.target.value)} className={ic()} />
                         </Field>
                       </div>
-                      <Field id="picksPerCm" label="Picks per cm / Loop Density">
-                        <input id="picksPerCm" name="picksPerCm" type="text"
-                          placeholder="e.g. 8 pile rows per cm"
-                          value={formData.picksPerCm} onChange={handleChange} className={ic()} />
+                      <Field id="picksPerCm" label="Loop Density">
+                        <input id="picksPerCm" type="text" placeholder="e.g. 8 pile rows per cm"
+                          value={product.picksPerCm} onChange={e => setP("picksPerCm", e.target.value)} className={ic()} />
                       </Field>
                     </SpecSection>
                   )}
                 </div>
               </div>
 
-              {/* ── Row 2a: Dimensions (left) | Color & Design (right) — non-fabric ── */}
+              {/* Row 2: Dimensions | Color & Design */}
               {opts && !opts.isFabricRoll && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
-                  {/* 3 — Dimensions & Sizing */}
-                  <SpecSection title="3 — Dimensions &amp; Sizing">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 items-start">
+                  <SpecSection title="Dimensions & Sizing" number={4} color="green">
                     <div>
-                      <p className="text-sm font-medium text-navy-900 mb-2">
-                        {opts.sizeLabel} <span className="text-gray-400 font-normal text-xs">(select all that apply)</span>
+                      <p className="text-xs font-semibold text-navy-900/80 mb-2">
+                        {opts.sizeLabel} <span className="text-gray-400 font-normal text-[11px]">(select all that apply)</span>
                       </p>
-                      <CheckboxGrid options={opts.sizeOptions} selected={formData.sizeRange} onToggle={toggleSize} />
-                      {formData.sizeRange.includes("Custom") && (
+                      <CheckboxGrid options={opts.sizeOptions} selected={product.sizeRange} onToggle={v => toggleArr("sizeRange", v)} />
+                      {product.sizeRange.includes("Custom") && (
                         <input type="text" placeholder="Describe your custom size requirement"
-                          value={formData.sizeRangeNotes} onChange={e => set("sizeRangeNotes", e.target.value)}
+                          value={product.sizeRangeNotes} onChange={e => setP("sizeRangeNotes", e.target.value)}
                           className={`mt-3 ${ic()}`} />
                       )}
                     </div>
-                    <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="grid sm:grid-cols-2 gap-3">
                       {opts.showFitType && (
-                        <Field id="fitType" label="Fit">
-                          <select id="fitType" name="fitType"
-                            value={formData.fitType} onChange={handleChange} className={ic()}>
+                        <Field id="fitType" label="Fit Type">
+                          <select id="fitType" value={product.fitType}
+                            onChange={e => setP("fitType", e.target.value)} className={ic()}>
                             <option value="">Select…</option>
                             {opts.fitOptions.map(o => <option key={o} value={o}>{o}</option>)}
                           </select>
@@ -1017,77 +1347,77 @@ export default function RFQContent() {
                       {opts.styleOptions.length > 0 && (
                         <div>
                           <Field id="style" label={opts.styleLabel}>
-                            <select id="style" name="style"
-                              value={formData.style} onChange={handleChange} className={ic()}>
+                            <select id="style" value={product.style}
+                              onChange={e => setP("style", e.target.value)} className={ic()}>
                               <option value="">Select…</option>
                               {opts.styleOptions.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
                           </Field>
-                          <OtherInput id="styleOther" show={formData.style === "Other"}
-                            value={formData.styleOther} onChange={v => set("styleOther", v)}
+                          <OtherInput id="styleOther" show={product.style === "Other"}
+                            value={product.styleOther} onChange={v => setP("styleOther", v)}
                             placeholder={`Specify ${opts.styleLabel.toLowerCase()}`} />
                         </div>
                       )}
                       {opts.showSizeStandard && (
                         <div>
                           <Field id="sizeStandard" label="Size Standard">
-                            <select id="sizeStandard" name="sizeStandard"
-                              value={formData.sizeStandard} onChange={handleChange} className={ic()}>
+                            <select id="sizeStandard" value={product.sizeStandard}
+                              onChange={e => setP("sizeStandard", e.target.value)} className={ic()}>
                               <option value="">Select…</option>
                               {SIZE_STANDARDS.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
                           </Field>
-                          <OtherInput id="sizeStandardOther" show={formData.sizeStandard === "Custom"}
-                            value={formData.sizeStandardOther} onChange={v => set("sizeStandardOther", v)}
-                            placeholder="Describe your custom size standard / size chart" />
+                          <OtherInput id="sizeStandardOther" show={product.sizeStandard === "Custom"}
+                            value={product.sizeStandardOther} onChange={v => setP("sizeStandardOther", v)}
+                            placeholder="Describe your size chart" />
                         </div>
                       )}
                       {opts.showCollarType && (
                         <div>
                           <Field id="collarType" label="Collar Type">
-                            <select id="collarType" name="collarType"
-                              value={formData.collarType} onChange={handleChange} className={ic()}>
+                            <select id="collarType" value={product.collarType}
+                              onChange={e => setP("collarType", e.target.value)} className={ic()}>
                               <option value="">Select…</option>
                               {opts.collarOptions!.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
                           </Field>
-                          <OtherInput id="collarTypeOther" show={formData.collarType === "Other"}
-                            value={formData.collarTypeOther} onChange={v => set("collarTypeOther", v)}
+                          <OtherInput id="collarTypeOther" show={product.collarType === "Other"}
+                            value={product.collarTypeOther} onChange={v => setP("collarTypeOther", v)}
                             placeholder="Specify collar type" />
                         </div>
                       )}
                       {opts.showBackingType && (
                         <div>
                           <Field id="backingType" label="Backing">
-                            <select id="backingType" name="backingType"
-                              value={formData.backingType} onChange={handleChange} className={ic()}>
+                            <select id="backingType" value={product.backingType}
+                              onChange={e => setP("backingType", e.target.value)} className={ic()}>
                               <option value="">Select…</option>
                               {opts.backingOptions!.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
                           </Field>
-                          <OtherInput id="backingTypeOther" show={formData.backingType === "Other"}
-                            value={formData.backingTypeOther} onChange={v => set("backingTypeOther", v)}
+                          <OtherInput id="backingTypeOther" show={product.backingType === "Other"}
+                            value={product.backingTypeOther} onChange={v => setP("backingTypeOther", v)}
                             placeholder="Specify backing type" />
                         </div>
                       )}
                       {opts.showClosureType && (
                         <div>
                           <Field id="closureType" label="Closure Type">
-                            <select id="closureType" name="closureType"
-                              value={formData.closureType} onChange={handleChange} className={ic()}>
+                            <select id="closureType" value={product.closureType}
+                              onChange={e => setP("closureType", e.target.value)} className={ic()}>
                               <option value="">Select…</option>
                               {opts.closureOptions!.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
                           </Field>
-                          <OtherInput id="closureTypeOther" show={formData.closureType === "Other"}
-                            value={formData.closureTypeOther} onChange={v => set("closureTypeOther", v)}
+                          <OtherInput id="closureTypeOther" show={product.closureType === "Other"}
+                            value={product.closureTypeOther} onChange={v => setP("closureTypeOther", v)}
                             placeholder="Specify closure type" />
                         </div>
                       )}
                       {opts.showPocketDepth && (
                         <Field id="pocketDepth" label="Pocket Depth">
-                          <select id="pocketDepth" name="pocketDepth"
-                            value={formData.pocketDepth} onChange={handleChange} className={ic()}>
+                          <select id="pocketDepth" value={product.pocketDepth}
+                            onChange={e => setP("pocketDepth", e.target.value)} className={ic()}>
                             <option value="">Select…</option>
                             {opts.pocketDepthOptions!.map(o => <option key={o} value={o}>{o}</option>)}
                           </select>
@@ -1096,35 +1426,35 @@ export default function RFQContent() {
                       {opts.showHeadingType && (
                         <div>
                           <Field id="headingType" label="Heading Type">
-                            <select id="headingType" name="headingType"
-                              value={formData.headingType} onChange={handleChange} className={ic()}>
+                            <select id="headingType" value={product.headingType}
+                              onChange={e => setP("headingType", e.target.value)} className={ic()}>
                               <option value="">Select…</option>
                               {opts.headingOptions!.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
                           </Field>
-                          <OtherInput id="headingTypeOther" show={formData.headingType === "Other"}
-                            value={formData.headingTypeOther} onChange={v => set("headingTypeOther", v)}
+                          <OtherInput id="headingTypeOther" show={product.headingType === "Other"}
+                            value={product.headingTypeOther} onChange={v => setP("headingTypeOther", v)}
                             placeholder="Specify heading type" />
                         </div>
                       )}
                       {opts.showLiningType && (
                         <div>
                           <Field id="liningType" label="Lining">
-                            <select id="liningType" name="liningType"
-                              value={formData.liningType} onChange={handleChange} className={ic()}>
+                            <select id="liningType" value={product.liningType}
+                              onChange={e => setP("liningType", e.target.value)} className={ic()}>
                               <option value="">Select…</option>
                               {opts.liningOptions!.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
                           </Field>
-                          <OtherInput id="liningTypeOther" show={formData.liningType === "Other"}
-                            value={formData.liningTypeOther} onChange={v => set("liningTypeOther", v)}
+                          <OtherInput id="liningTypeOther" show={product.liningType === "Other"}
+                            value={product.liningTypeOther} onChange={v => setP("liningTypeOther", v)}
                             placeholder="Specify lining type" />
                         </div>
                       )}
                       {opts.showHeatingRating && (
                         <Field id="heatRating" label="Heat Rating">
-                          <select id="heatRating" name="heatRating"
-                            value={formData.heatRating} onChange={handleChange} className={ic()}>
+                          <select id="heatRating" value={product.heatRating}
+                            onChange={e => setP("heatRating", e.target.value)} className={ic()}>
                             <option value="">Select…</option>
                             {opts.heatingOptions!.map(o => <option key={o} value={o}>{o}</option>)}
                           </select>
@@ -1133,136 +1463,122 @@ export default function RFQContent() {
                       {opts.showBorderField && (
                         <div>
                           <Field id="borderType" label="Border / Selvedge">
-                            <select id="borderType" name="borderType"
-                              value={formData.borderType} onChange={handleChange} className={ic()}>
+                            <select id="borderType" value={product.borderType}
+                              onChange={e => setP("borderType", e.target.value)} className={ic()}>
                               <option value="">Select…</option>
                               {BORDER_TYPES.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
                           </Field>
-                          <OtherInput id="borderTypeOther" show={formData.borderType === "Other"}
-                            value={formData.borderTypeOther} onChange={v => set("borderTypeOther", v)}
-                            placeholder="Specify border / selvedge type" />
+                          <OtherInput id="borderTypeOther" show={product.borderType === "Other"}
+                            value={product.borderTypeOther} onChange={v => setP("borderTypeOther", v)}
+                            placeholder="Specify border type" />
                         </div>
                       )}
                     </div>
                   </SpecSection>
 
-                  {/* 4 — Color & Design */}
-                  <SpecSection title="4 — Color &amp; Design">
-                    {formData.category === "Apparel" && (
-                      <div className="grid sm:grid-cols-2 gap-4">
+                  <SpecSection title="Color & Design" number={5} color="purple">
+                    {(product.category === "Apparel" || product.category === "Home Textiles") && (
+                      <div className="grid sm:grid-cols-2 gap-3">
                         <Field id="dyeingMethod" label="Dyeing Method">
-                          <select id="dyeingMethod" name="dyeingMethod"
-                            value={formData.dyeingMethod} onChange={handleChange} className={ic()}>
+                          <select id="dyeingMethod" value={product.dyeingMethod}
+                            onChange={e => setP("dyeingMethod", e.target.value)} className={ic()}>
                             <option value="">Select…</option>
                             {DYEING_METHODS.map(o => <option key={o} value={o}>{o}</option>)}
                           </select>
                         </Field>
                         <Field id="numberOfColors" label="Number of Colors">
-                          <select id="numberOfColors" name="numberOfColors"
-                            value={formData.numberOfColors} onChange={handleChange} className={ic()}>
+                          <select id="numberOfColors" value={product.numberOfColors}
+                            onChange={e => setP("numberOfColors", e.target.value)} className={ic()}>
                             <option value="">Select…</option>
                             {NUMBER_OF_COLORS.map(o => <option key={o} value={o}>{o}</option>)}
                           </select>
                         </Field>
                       </div>
                     )}
-                    <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="grid sm:grid-cols-2 gap-3">
                       <Field id="printType" label={opts.designLabel}>
-                        <select id="printType" name="printType"
-                          value={formData.printType} onChange={handleChange} className={ic()}>
+                        <select id="printType" value={product.printType}
+                          onChange={e => setP("printType", e.target.value)} className={ic()}>
                           <option value="">Select…</option>
                           {opts.printTypeOptions.map(o => <option key={o} value={o}>{o}</option>)}
                         </select>
                       </Field>
                       <Field id="printPlacement" label={opts.printPlacementLabel}>
-                        <select id="printPlacement" name="printPlacement"
-                          value={formData.printPlacement} onChange={handleChange} className={ic()}>
+                        <select id="printPlacement" value={product.printPlacement}
+                          onChange={e => setP("printPlacement", e.target.value)} className={ic()}>
                           <option value="">Select…</option>
                           {opts.printPlacementOptions.map(o => <option key={o} value={o}>{o}</option>)}
                         </select>
                       </Field>
                     </div>
                     <Field id="pantoneRef" label="Pantone / Color Reference">
-                      <input id="pantoneRef" name="pantoneRef" type="text"
+                      <input id="pantoneRef" type="text"
                         placeholder="e.g. PMS 286C or describe colors"
-                        value={formData.pantoneRef} onChange={handleChange} className={ic()} />
+                        value={product.pantoneRef} onChange={e => setP("pantoneRef", e.target.value)} className={ic()} />
                     </Field>
-                    <Field id="printDetail" label="Print / Design Detail">
-                      <input id="printDetail" name="printDetail" type="text"
-                        placeholder="e.g. Brand logo, 8×4 cm, 2 spot colors"
-                        value={formData.printDetail} onChange={handleChange} className={ic()} />
+                    <Field id="printDetail" label="Design Detail">
+                      <input id="printDetail" type="text"
+                        placeholder="e.g. Brand logo 8×4 cm, 2 spot colors"
+                        value={product.printDetail} onChange={e => setP("printDetail", e.target.value)} className={ic()} />
                     </Field>
                   </SpecSection>
                 </div>
               )}
 
-              {/* ── Row 2b: State & Design — fabric rolls only ── */}
+              {/* Fabric roll: State & Design */}
               {opts?.isFabricRoll && (
-                <SpecSection title="3 — State &amp; Design">
-                  <div className="grid sm:grid-cols-2 gap-4">
+                <SpecSection title="State & Design" number={4} color="purple">
+                  <div className="grid sm:grid-cols-2 gap-3">
                     <Field id="printType" label="Fabric State">
-                      <select id="printType" name="printType"
-                        value={formData.printType} onChange={handleChange} className={ic()}>
+                      <select id="printType" value={product.printType}
+                        onChange={e => setP("printType", e.target.value)} className={ic()}>
                         <option value="">Select…</option>
                         {FABRIC_STATES.map(o => <option key={o} value={o}>{o}</option>)}
                       </select>
                     </Field>
                     <Field id="fabricState" label="Pattern / Color Type">
-                      <select id="fabricState" name="fabricState"
-                        value={formData.fabricState} onChange={handleChange} className={ic()}>
+                      <select id="fabricState" value={product.fabricState}
+                        onChange={e => setP("fabricState", e.target.value)} className={ic()}>
                         <option value="">Select…</option>
                         {opts.printPlacementOptions.map(o => <option key={o} value={o}>{o}</option>)}
                       </select>
                     </Field>
                   </div>
                   <Field id="pantoneRef" label="Pantone / Color Reference">
-                    <input id="pantoneRef" name="pantoneRef" type="text"
-                      placeholder="e.g. PMS 286C or describe colors"
-                      value={formData.pantoneRef} onChange={handleChange} className={ic()} />
+                    <input id="pantoneRef" type="text" placeholder="e.g. PMS 286C or describe colors"
+                      value={product.pantoneRef} onChange={e => setP("pantoneRef", e.target.value)} className={ic()} />
                   </Field>
                   <Field id="colorFastnessNotes" label="Color Fastness Notes">
-                    <input id="colorFastnessNotes" name="colorFastnessNotes" type="text"
+                    <input id="colorFastnessNotes" type="text"
                       placeholder="e.g. ISO 105-C06 grade 4 minimum"
-                      value={formData.colorFastnessNotes} onChange={handleChange} className={ic()} />
+                      value={product.colorFastnessNotes} onChange={e => setP("colorFastnessNotes", e.target.value)} className={ic()} />
                   </Field>
                 </SpecSection>
               )}
 
-              {/* ── Row 3: Embellishments (left) | Finishing (right) ── */}
+              {/* Row 3: Embellishments | Finishing */}
               {opts && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
-                  {formData.category === "Apparel" && opts.embellishmentOptions && opts.embellishmentOptions.length > 0 ? (
-                    <SpecSection title="5 — Embellishments &amp; Accessories / Trims">
-                      <div className="space-y-5">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 items-start">
+                  {product.category === "Apparel" && opts.embellishmentOptions && opts.embellishmentOptions.length > 0 ? (
+                    <SpecSection title="Embellishments & Accessories / Trims" number={6} color="indigo">
+                      <div className="space-y-3">
                         <div>
-                          <p className="text-sm font-medium text-navy-900 mb-2">
-                            Embellishments <span className="text-gray-400 font-normal text-xs">(select all that apply)</span>
-                          </p>
-                          <CheckboxGrid
-                            options={opts.embellishmentOptions}
-                            selected={formData.embellishments}
-                            onToggle={toggleEmbellishment}
-                          />
-                          {formData.embellishments.includes("Other") && (
+                          <p className="text-xs font-semibold text-navy-900/80 mb-2">Embellishments <span className="text-gray-400 font-normal text-[11px]">(select all that apply)</span></p>
+                          <CheckboxGrid options={opts.embellishmentOptions} selected={product.embellishments} onToggle={v => toggleArr("embellishments", v)} />
+                          {product.embellishments.includes("Other") && (
                             <input type="text" placeholder="Describe other embellishment"
-                              value={formData.embellishmentsOther} onChange={e => set("embellishmentsOther", e.target.value)}
+                              value={product.embellishmentsOther} onChange={e => setP("embellishmentsOther", e.target.value)}
                               className={`mt-3 ${ic()}`} />
                           )}
                         </div>
                         {opts.accessoryOptions && opts.accessoryOptions.length > 0 && (
                           <div>
-                            <p className="text-sm font-medium text-navy-900 mb-2">
-                              Accessories &amp; Trims <span className="text-gray-400 font-normal text-xs">(select all that apply)</span>
-                            </p>
-                            <CheckboxGrid
-                              options={opts.accessoryOptions}
-                              selected={formData.accessories}
-                              onToggle={toggleAccessory}
-                            />
-                            {formData.accessories.includes("Other") && (
+                            <p className="text-xs font-semibold text-navy-900/80 mb-2">Accessories & Trims <span className="text-gray-400 font-normal text-[11px]">(select all that apply)</span></p>
+                            <CheckboxGrid options={opts.accessoryOptions} selected={product.accessories} onToggle={v => toggleArr("accessories", v)} />
+                            {product.accessories.includes("Other") && (
                               <input type="text" placeholder="Describe other accessories / trims"
-                                value={formData.accessoriesOther} onChange={e => set("accessoriesOther", e.target.value)}
+                                value={product.accessoriesOther} onChange={e => setP("accessoriesOther", e.target.value)}
                                 className={`mt-3 ${ic()}`} />
                             )}
                           </div>
@@ -1270,125 +1586,119 @@ export default function RFQContent() {
                       </div>
                     </SpecSection>
                   ) : <div />}
-                  <SpecSection title={
-                    formData.category === "Apparel" ? "6 — Finishing"
-                    : opts.isFabricRoll ? "4 — Finishing"
-                    : "5 — Finishing"
-                  }>
-                    <p className="text-xs text-gray-500 mb-3">Select all that apply</p>
-                    <CheckboxGrid options={finishingOpts} selected={formData.finishing} onToggle={toggleFinish} />
-                    {formData.finishing.includes("Other (specify below)") && (
+
+                  <SpecSection title="Finishing" number={6} color="teal">
+                    <p className="text-[11px] text-gray-500">Select all that apply</p>
+                    <CheckboxGrid options={finishingOpts} selected={product.finishing} onToggle={v => toggleArr("finishing", v)} />
+                    {product.finishing.includes("Other (specify below)") && (
                       <input type="text" placeholder="Describe other finishing requirement"
-                        value={formData.finishingOther} onChange={e => set("finishingOther", e.target.value)}
+                        value={product.finishingOther} onChange={e => setP("finishingOther", e.target.value)}
                         className={`mt-3 ${ic()}`} />
                     )}
                   </SpecSection>
                 </div>
               )}
 
-              {/* ── Row 4: Labels (left) | Packing (right) ── */}
+              {/* Row 4: Labels | Packing */}
               {opts && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
-                  {formData.category === "Apparel" ? (
-                    <SpecSection title="7 — Labels &amp; Branding">
-                      <div className="grid sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 items-start">
+                  {product.category === "Apparel" ? (
+                    <SpecSection title="Labels & Branding" number={7} color="indigo">
+                      <div className="grid sm:grid-cols-2 gap-3">
                         <Field id="brandLabel" label="Brand Label">
-                          <select id="brandLabel" name="brandLabel"
-                            value={formData.brandLabel} onChange={handleChange} className={ic()}>
+                          <select id="brandLabel" value={product.brandLabel}
+                            onChange={e => setP("brandLabel", e.target.value)} className={ic()}>
                             <option value="">Select…</option>
                             {BRAND_LABELS.map(o => <option key={o} value={o}>{o}</option>)}
                           </select>
                         </Field>
                         <Field id="careLabel" label="Care Label">
-                          <select id="careLabel" name="careLabel"
-                            value={formData.careLabel} onChange={handleChange} className={ic()}>
+                          <select id="careLabel" value={product.careLabel}
+                            onChange={e => setP("careLabel", e.target.value)} className={ic()}>
                             <option value="">Select…</option>
                             {CARE_LABELS.map(o => <option key={o} value={o}>{o}</option>)}
                           </select>
                         </Field>
                         <Field id="stitchType" label="Stitch Type">
-                          <select id="stitchType" name="stitchType"
-                            value={formData.stitchType} onChange={handleChange} className={ic()}>
+                          <select id="stitchType" value={product.stitchType}
+                            onChange={e => setP("stitchType", e.target.value)} className={ic()}>
                             <option value="">Select…</option>
                             {STITCH_TYPES.map(o => <option key={o} value={o}>{o}</option>)}
                           </select>
                         </Field>
                       </div>
                       <Field id="labelNotes" label="Label Placement / Artwork Notes">
-                        <input id="labelNotes" name="labelNotes" type="text"
+                        <input id="labelNotes" type="text"
                           placeholder="e.g. Neck label, buyer-supplied artwork PDF"
-                          value={formData.labelNotes} onChange={handleChange} className={ic()} />
+                          value={product.labelNotes} onChange={e => setP("labelNotes", e.target.value)} className={ic()} />
                       </Field>
                     </SpecSection>
                   ) : <div />}
-                  <SpecSection title={
-                    formData.category === "Apparel" ? "8 — Packing"
-                    : opts.isFabricRoll ? "5 — Packing"
-                    : "6 — Packing"
-                  }>
+
+                  <SpecSection title="Packing" number={8} color="blue">
                     {opts.isFabricRoll ? (
-                      <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="grid sm:grid-cols-2 gap-3">
                         <div>
                           <Field id="rollLength" label="Roll Length">
-                            <select id="rollLength" name="rollLength"
-                              value={formData.rollLength} onChange={handleChange} className={ic()}>
+                            <select id="rollLength" value={product.rollLength}
+                              onChange={e => setP("rollLength", e.target.value)} className={ic()}>
                               <option value="">Select…</option>
                               {ROLL_LENGTHS.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
                           </Field>
-                          <OtherInput id="rollLengthOther" show={formData.rollLength.startsWith("Custom")}
-                            value={formData.rollLengthOther} onChange={v => set("rollLengthOther", v)}
+                          <OtherInput id="rollLengthOther" show={product.rollLength.startsWith("Custom")}
+                            value={product.rollLengthOther} onChange={v => setP("rollLengthOther", v)}
                             placeholder="e.g. 120m per roll" />
                         </div>
                         <Field id="rollCore" label="Roll Core">
-                          <select id="rollCore" name="rollCore"
-                            value={formData.rollCore} onChange={handleChange} className={ic()}>
+                          <select id="rollCore" value={product.rollCore}
+                            onChange={e => setP("rollCore", e.target.value)} className={ic()}>
                             <option value="">Select…</option>
                             {ROLL_CORES.map(o => <option key={o} value={o}>{o}</option>)}
                           </select>
                         </Field>
                         <Field id="rollNotes" label="Roll Packing Notes">
-                          <input id="rollNotes" name="rollNotes" type="text"
+                          <input id="rollNotes" type="text"
                             placeholder="e.g. Polybag per roll, 50 rolls per pallet"
-                            value={formData.rollNotes} onChange={handleChange} className={ic()} />
+                            value={product.rollNotes} onChange={e => setP("rollNotes", e.target.value)} className={ic()} />
                         </Field>
                       </div>
                     ) : (
-                      <div className="space-y-4">
-                        <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="space-y-3.5">
+                        <div className="grid sm:grid-cols-2 gap-3">
                           <Field id="individualPack" label="Individual Pack">
-                            <select id="individualPack" name="individualPack"
-                              value={formData.individualPack} onChange={handleChange} className={ic()}>
+                            <select id="individualPack" value={product.individualPack}
+                              onChange={e => setP("individualPack", e.target.value)} className={ic()}>
                               <option value="">Select…</option>
                               {opts.individualPackOptions.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
                           </Field>
                           <Field id="setComposition" label="Set Composition">
-                            <select id="setComposition" name="setComposition"
-                              value={formData.setComposition} onChange={handleChange} className={ic()}>
+                            <select id="setComposition" value={product.setComposition}
+                              onChange={e => setP("setComposition", e.target.value)} className={ic()}>
                               <option value="">Select…</option>
                               {opts.setCompositionOptions.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
                           </Field>
-                          {formData.category === "Apparel" && (
+                          {product.category === "Apparel" && (
                             <div>
                               <Field id="masterCarton" label="Master Carton">
-                                <select id="masterCarton" name="masterCarton"
-                                  value={formData.masterCarton} onChange={handleChange} className={ic()}>
+                                <select id="masterCarton" value={product.masterCarton}
+                                  onChange={e => setP("masterCarton", e.target.value)} className={ic()}>
                                   <option value="">Select…</option>
                                   {MASTER_CARTONS.map(o => <option key={o} value={o}>{o}</option>)}
                                 </select>
                               </Field>
-                              <OtherInput id="masterCartonOther" show={formData.masterCarton.startsWith("Custom")}
-                                value={formData.masterCartonOther} onChange={v => set("masterCartonOther", v)}
+                              <OtherInput id="masterCartonOther" show={product.masterCarton.startsWith("Custom")}
+                                value={product.masterCartonOther} onChange={v => setP("masterCartonOther", v)}
                                 placeholder="e.g. 30 pcs per carton, max 18 kg gross" />
                             </div>
                           )}
                         </div>
                         <Field id="packingNotes" label="Packing Notes">
-                          <input id="packingNotes" name="packingNotes" type="text"
+                          <input id="packingNotes" type="text"
                             placeholder="e.g. Retail-ready, buyer barcodes required"
-                            value={formData.packingNotes} onChange={handleChange} className={ic()} />
+                            value={product.packingNotes} onChange={e => setP("packingNotes", e.target.value)} className={ic()} />
                         </Field>
                       </div>
                     )}
@@ -1396,20 +1706,80 @@ export default function RFQContent() {
                 </div>
               )}
 
-              {/* ── Row 5: Certifications (full width) ── */}
+              {/* Certifications */}
               {opts && (
-                <SpecSection title={
-                  formData.category === "Apparel" ? "9 — Certifications Required"
-                  : opts.isFabricRoll ? "6 — Certifications Required"
-                  : "7 — Certifications Required"
-                }>
-                  <p className="text-xs text-gray-500 mb-3">Select all that apply</p>
-                  <CheckboxGrid options={opts.certifications} selected={formData.certifications} onToggle={toggleCert} />
-                  {formData.certifications.includes("Other (specify below)") && (
-                    <input type="text" placeholder="e.g. USDA Organic, Fairtrade, Responsible Down Standard"
-                      value={formData.certOther} onChange={e => set("certOther", e.target.value)}
+                <SpecSection title="Certifications Required" number={9} color="gold">
+                  <p className="text-[11px] text-gray-500">Select all that apply — or skip if no preference</p>
+                  <CheckboxGrid options={opts.certifications} selected={product.certifications} onToggle={v => toggleArr("certifications", v)} />
+                  {product.certifications.includes("Other (specify below)") && (
+                    <input type="text" placeholder="e.g. USDA Organic, Fairtrade"
+                      value={product.certOther} onChange={e => setP("certOther", e.target.value)}
                       className={`mt-3 ${ic()}`} />
                   )}
+                </SpecSection>
+              )}
+
+              {/* Order Details — per product */}
+              {opts && (
+                <SpecSection title="Order Details" number={10} color="gold">
+                  <div className="flex flex-wrap gap-4 items-start">
+                    <div className="w-36 flex-shrink-0">
+                      <Field id="quantity" label="Quantity" required error={errors.quantity}>
+                        <input id="quantity" type="text" aria-invalid={!!errors.quantity}
+                          placeholder="e.g. 5000"
+                          value={product.quantity}
+                          onChange={e => { setP("quantity", e.target.value); }}
+                          className={ic(errors.quantity)} />
+                      </Field>
+                    </div>
+                    <div className="flex-shrink-0">
+                      <Field id="unitOfMeasure" label="Unit">
+                        <ChipSelect
+                          id="unitOfMeasure"
+                          options={opts.unitOfMeasure}
+                          value={product.unitOfMeasure}
+                          onChange={v => setP("unitOfMeasure", v)}
+                        />
+                      </Field>
+                    </div>
+                    <div className="w-44 flex-shrink-0">
+                      <Field id="targetPrice" label="Target Price (USD / unit)">
+                        <input id="targetPrice" type="text"
+                          placeholder="e.g. 3.50 (optional)"
+                          value={product.targetPrice}
+                          onChange={e => setP("targetPrice", e.target.value)}
+                          className={ic(errors.targetPrice)} />
+                        {errors.targetPrice && <p className="text-red-500 text-[11px] mt-0.5" role="alert">{errors.targetPrice}</p>}
+                      </Field>
+                    </div>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-4 pt-1 border-t border-gray-100">
+                    <Field id="sampleRequired" label="Sample Required?">
+                      <ChipSelect
+                        id="sampleRequired"
+                        options={SAMPLE_OPTIONS}
+                        value={product.sampleRequired}
+                        onChange={v => setP("sampleRequired", v)}
+                      />
+                      {product.sampleRequired && SAMPLE_NOTES[product.sampleRequired] && (
+                        <div className="mt-2 rounded-lg bg-amber-50 border border-amber-200 px-3.5 py-2.5 text-xs text-amber-900 leading-relaxed">
+                          <p className="font-semibold mb-0.5">{SAMPLE_NOTES[product.sampleRequired].note}</p>
+                          {SAMPLE_NOTES[product.sampleRequired].sub && (
+                            <p className="text-amber-700">{SAMPLE_NOTES[product.sampleRequired].sub}</p>
+                          )}
+                        </div>
+                      )}
+                    </Field>
+                    <Field id="hasTechPack" label="Tech Pack / Artwork?">
+                      <ChipSelect
+                        id="hasTechPack"
+                        options={TECH_PACK_OPTIONS}
+                        value={product.hasTechPack}
+                        onChange={v => setP("hasTechPack", v)}
+                      />
+                    </Field>
+                  </div>
                 </SpecSection>
               )}
 
@@ -1420,75 +1790,56 @@ export default function RFQContent() {
     );
   }
 
-  // ── Step 2 ────────────────────────────────────────────────────────────────
+  // ── Step 2: Delivery ────────────────────────────────────────────────────────
 
   function renderStep2() {
-    const opts = formData.productType ? getProductOptions(formData.productType) : null;
-    const uomOptions = opts?.unitOfMeasure ?? ["Pieces", "Dozens", "Sets", "Meters", "Kg"];
     return (
       <motion.div key="step2" {...stepAnim}>
-        <div className="flex items-center justify-between mb-5">
-          <SectionLabel>Step 2 — Commercial &amp; Logistics</SectionLabel>
-          <BackBtn />
-        </div>
-        <div className="space-y-4">
-          <SpecSection title="Order Details">
-            <div className="grid grid-cols-3 gap-3">
-              <div className="col-span-2">
-                <Field id="quantity" label="Quantity" required error={errors.quantity}>
-                  <input id="quantity" name="quantity" type="text" required aria-invalid={!!errors.quantity}
-                    placeholder="e.g. 5000"
-                    value={formData.quantity} onChange={handleChange} className={ic(errors.quantity)} />
-                </Field>
-              </div>
-              <Field id="unitOfMeasure" label="Unit">
-                <select id="unitOfMeasure" name="unitOfMeasure"
-                  value={formData.unitOfMeasure} onChange={handleChange} className={ic()}>
-                  <option value="">Unit…</option>
-                  {uomOptions.map(o => <option key={o} value={o}>{o}</option>)}
-                </select>
-              </Field>
-            </div>
-            <Field id="targetPrice" label="Target Price per Unit (USD)" error={errors.targetPrice}>
-              <input id="targetPrice" name="targetPrice" type="text"
-                placeholder="e.g. 3.50 (leave blank to discuss)"
-                value={formData.targetPrice} onChange={handleChange} className={ic(errors.targetPrice)} />
-            </Field>
-          </SpecSection>
-          <SpecSection title="Logistics & Timeline">
-            <div className="grid sm:grid-cols-2 gap-4">
+        <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-5">Step 2 — Shipping & Delivery</p>
+        <div className="space-y-3">
+          <SpecSection title="Destination & Incoterm" number={1} color="blue">
+            <div className="grid sm:grid-cols-2 gap-3">
               <Field id="destinationCountry" label="Destination Country" required error={errors.destinationCountry}>
-                <select id="destinationCountry" name="destinationCountry" required aria-invalid={!!errors.destinationCountry}
-                  value={formData.destinationCountry} onChange={handleChange} className={ic(errors.destinationCountry)}>
+                <select id="destinationCountry" required aria-invalid={!!errors.destinationCountry}
+                  value={formState.destinationCountry}
+                  onChange={e => setGlobal("destinationCountry", e.target.value)}
+                  className={ic(errors.destinationCountry)}>
                   <option value="">Select country…</option>
                   {COUNTRIES.map(c => <option key={c} value={c}>{c}</option>)}
                 </select>
               </Field>
-              <Field id="incoterm" label="Incoterm">
-                <select id="incoterm" name="incoterm"
-                  value={formData.incoterm} onChange={handleChange} className={ic()}>
-                  <option value="">Select…</option>
-                  {INCOTERMS.map(o => <option key={o} value={o}>{o}</option>)}
-                </select>
-              </Field>
-              {needsPort(formData.incoterm) && (
-                <Field id="portOfDestination" label="Port of Destination" required error={errors.portOfDestination}>
-                  <input id="portOfDestination" name="portOfDestination" type="text" required aria-invalid={!!errors.portOfDestination}
-                    placeholder="e.g. Port of Los Angeles"
-                    value={formData.portOfDestination} onChange={handleChange} className={ic(errors.portOfDestination)} />
-                </Field>
-              )}
               <Field id="deliveryDate" label="Required Delivery Date" required error={errors.deliveryDate}>
-                <input id="deliveryDate" name="deliveryDate" type="date" required aria-invalid={!!errors.deliveryDate}
-                  value={formData.deliveryDate} onChange={handleChange} className={ic(errors.deliveryDate)} />
+                <input id="deliveryDate" type="date" required aria-invalid={!!errors.deliveryDate}
+                  value={formState.deliveryDate}
+                  onChange={e => setGlobal("deliveryDate", e.target.value)}
+                  className={`${ic(errors.deliveryDate)} max-w-[180px]`} />
               </Field>
             </div>
+            <Field id="incoterm" label="Incoterm">
+              <ChipSelect
+                id="incoterm"
+                options={INCOTERMS}
+                value={formState.incoterm}
+                onChange={v => setGlobal("incoterm", v)}
+              />
+            </Field>
+            {needsPort(formState.incoterm) && (
+              <Field id="portOfDestination" label="Port of Destination" required error={errors.portOfDestination}>
+                <input id="portOfDestination" type="text" required aria-invalid={!!errors.portOfDestination}
+                  placeholder="e.g. Port of Los Angeles, Port of Hamburg"
+                  value={formState.portOfDestination}
+                  onChange={e => setGlobal("portOfDestination", e.target.value)}
+                  className={ic(errors.portOfDestination)} />
+              </Field>
+            )}
           </SpecSection>
-          <SpecSection title="Additional Notes">
-            <Field id="notes" label="Notes / Special Requirements">
-              <textarea id="notes" name="notes" rows={4}
-                placeholder="Tech pack reference, special requirements, or any other relevant details"
-                value={formData.notes} onChange={handleChange}
+
+          <SpecSection title="Additional Notes" number={2} color="green">
+            <Field id="logisticsNotes" label="Special Requirements or Notes">
+              <textarea id="logisticsNotes" rows={2}
+                placeholder="Tech pack reference, special delivery requirements, or any other relevant details"
+                value={formState.logisticsNotes}
+                onChange={e => setGlobal("logisticsNotes", e.target.value)}
                 className={`${ic()} resize-none`} />
             </Field>
           </SpecSection>
@@ -1497,194 +1848,264 @@ export default function RFQContent() {
     );
   }
 
-  // ── Step 3 ────────────────────────────────────────────────────────────────
+  // ── Step 3: Your Details ────────────────────────────────────────────────────
 
   function renderStep3() {
     return (
       <motion.div key="step3" {...stepAnim}>
-        <div className="flex items-center justify-between mb-5">
-          <SectionLabel>Step 3 — Your Details</SectionLabel>
-          <BackBtn />
-        </div>
-        <div className="space-y-4">
-          <SpecSection title="Contact Information">
-            <div className="grid sm:grid-cols-2 gap-4">
+        <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-5">Step 3 — Your Details</p>
+        <div className="space-y-3">
+          <SpecSection title="Contact Information" number={1} color="blue">
+            <div className="grid sm:grid-cols-2 gap-3">
               <Field id="name" label="Full Name" required error={errors.name}>
-                <input id="name" name="name" type="text" required autoComplete="name"
-                  aria-invalid={!!errors.name} placeholder="Jane Smith"
-                  value={formData.name} onChange={handleChange} className={ic(errors.name)} />
+                <input id="name" type="text" required autoComplete="name" aria-invalid={!!errors.name}
+                  placeholder="Jane Smith"
+                  value={formState.name} onChange={e => setGlobal("name", e.target.value)}
+                  className={ic(errors.name)} />
               </Field>
+              <Field id="company" label="Company Name" required error={errors.company}>
+                <input id="company" type="text" required autoComplete="organization" aria-invalid={!!errors.company}
+                  placeholder="Acme Retail Ltd."
+                  value={formState.company} onChange={e => setGlobal("company", e.target.value)}
+                  className={ic(errors.company)} />
+              </Field>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-3">
               <Field id="position" label="Position / Job Title" required error={errors.position}>
-                <input id="position" name="position" type="text" required
-                  aria-invalid={!!errors.position} placeholder="Procurement Manager"
-                  value={formData.position} onChange={handleChange} className={ic(errors.position)} />
+                <input id="position" type="text" required aria-invalid={!!errors.position}
+                  placeholder="Procurement Manager"
+                  value={formState.position} onChange={e => setGlobal("position", e.target.value)}
+                  className={ic(errors.position)} />
               </Field>
-            </div>
-            <Field id="company" label="Company Name" required error={errors.company}>
-              <input id="company" name="company" type="text" required autoComplete="organization"
-                aria-invalid={!!errors.company} placeholder="Acme Retail Ltd."
-                value={formData.company} onChange={handleChange} className={ic(errors.company)} />
-            </Field>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <Field id="email" label="Business Email" required error={errors.email}>
-                <input id="email" name="email" type="email" required autoComplete="email"
-                  aria-invalid={!!errors.email} placeholder="jane@acmeretail.com"
-                  value={formData.email} onChange={handleChange} className={ic(errors.email)} />
-              </Field>
-              <PhoneInputField
-                id="phone"
-                label="Phone Number"
-                required
-                value={formData.phone}
-                countryIso2={phoneCountry}
-                onChange={(e164, iso2) => {
-                  setFormData((prev) => ({ ...prev, phone: e164 }));
-                  setPhoneCountry(iso2);
-                }}
-                error={errors.phone}
-                onClearError={() =>
-                  setErrors((prev) => ({ ...prev, phone: "" }))
-                }
-                disabledStyle
-              />
-            </div>
-            <div className="grid sm:grid-cols-2 gap-4">
               <Field id="country" label="Country" required error={errors.country}>
-                <select id="country" name="country" required aria-invalid={!!errors.country}
-                  value={formData.country} onChange={handleChange} className={ic(errors.country)}>
+                <select id="country" required aria-invalid={!!errors.country}
+                  value={formState.country} onChange={e => setGlobal("country", e.target.value)}
+                  className={ic(errors.country)}>
                   <option value="">Select your country…</option>
                   {COUNTRIES.map(c => <option key={c} value={c}>{c}</option>)}
                 </select>
               </Field>
-              <Field id="howHear" label="How Did You Hear About Us">
-                <select id="howHear" name="howHear"
-                  value={formData.howHear} onChange={handleChange} className={ic()}>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-3">
+              <Field id="email" label="Business Email" required error={errors.email}>
+                <input id="email" type="email" required autoComplete="email" aria-invalid={!!errors.email}
+                  placeholder="jane@acmeretail.com"
+                  value={formState.email} onChange={e => setGlobal("email", e.target.value)}
+                  className={ic(errors.email)} />
+              </Field>
+              <PhoneInputField
+                id="phone" label="Phone Number" required
+                value={formState.phone} countryIso2={phoneCountry}
+                onChange={(e164, iso2) => {
+                  setFormState(prev => ({ ...prev, phone: e164 }));
+                  setPhoneCountry(iso2);
+                }}
+                error={errors.phone}
+                onClearError={() => setErrors(prev => ({ ...prev, phone: "" }))}
+              />
+            </div>
+            <Field id="howHear" label="How Did You Hear About Us">
+              <div className="sm:max-w-xs">
+                <select id="howHear"
+                  value={formState.howHear} onChange={e => setGlobal("howHear", e.target.value)}
+                  className={ic()}>
                   <option value="">Select…</option>
                   {HOW_HEAR_OPTIONS.map(o => <option key={o} value={o}>{o}</option>)}
                 </select>
-              </Field>
-            </div>
+              </div>
+            </Field>
           </SpecSection>
         </div>
       </motion.div>
     );
   }
 
-  // ── Step 4 ────────────────────────────────────────────────────────────────
+  // ── Step 4: Review & Submit ─────────────────────────────────────────────────
 
   function renderStep4() {
-    const f = formData;
-    const opts = f.productType ? getProductOptions(f.productType) : null;
-    const productDisplay = f.productType === "Other / Multiple" && f.productTypeOther
-      ? `${f.productType} — ${f.productTypeOther}` : f.productType;
-    const certDisplay = f.certifications.length > 0
-      ? (f.certOther ? [...f.certifications.filter(c => c !== "Other (specify below)"), `Other: ${f.certOther}`].join(", ") : f.certifications.join(", "))
-      : "—";
-    const sizeDisplay = f.sizeRange.length > 0
-      ? (f.sizeRangeNotes ? `${f.sizeRange.join(", ")} (${f.sizeRangeNotes})` : f.sizeRange.join(", "))
-      : "—";
-    const finishDisplay = (() => {
-      const arr = f.finishing.includes("Other (specify below)") && f.finishingOther
-        ? [...f.finishing.filter(x => x !== "Other (specify below)"), `Other: ${f.finishingOther}`]
-        : f.finishing;
-      return arr.length > 0 ? arr.join(", ") : "—";
-    })();
-    const styleDisplay = f.style === "Other" && f.styleOther ? `Other — ${f.styleOther}` : f.style;
-    const constrDisplay = f.construction === "Other" && f.constructionOther ? `Other — ${f.constructionOther}` : f.construction;
-    const embReviewDisplay = (() => {
-      const arr = f.embellishments.includes("Other") && f.embellishmentsOther
-        ? [...f.embellishments.filter(x => x !== "Other"), `Other: ${f.embellishmentsOther}`]
-        : f.embellishments;
-      return arr.length > 0 ? arr.join(", ") : "";
-    })();
-    const accReviewDisplay = (() => {
-      const arr = f.accessories.includes("Other") && f.accessoriesOther
-        ? [...f.accessories.filter(x => x !== "Other"), `Other: ${f.accessoriesOther}`]
-        : f.accessories;
-      return arr.length > 0 ? arr.join(", ") : "";
-    })();
+    const validProducts = formState.products.filter(p => p.category && p.productType);
 
     return (
       <motion.div key="step4" {...stepAnim}>
-        <div className="flex items-center justify-between mb-5">
-          <SectionLabel>Step 4 — Review &amp; Submit</SectionLabel>
-          <BackBtn />
-        </div>
-        <div className="space-y-4">
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <h3 className="text-navy-900 font-semibold text-sm">1. Product Requirements</h3>
-              <button type="button" onClick={() => { setStep(1); scrollToForm(); }} className="text-gold text-xs hover:underline">Edit</button>
-            </div>
-            <div className="bg-gray-50 rounded-xl px-5 py-1">
-              <ReviewRow label="Category" value={f.category} />
-              <ReviewRow label="Product Type" value={productDisplay} />
-              <ReviewRow label="Certifications" value={certDisplay} />
-              {f.fiberContent && <ReviewRow label="Fiber Content" value={f.fiberContent === "Other" ? `Other — ${f.fiberContentOther}` : f.fiberContent} />}
-              {f.construction && <ReviewRow label={opts?.constructionLabel ?? "Construction"} value={constrDisplay} />}
-              {f.weight && <ReviewRow label={opts?.weightLabel ?? "Weight"} value={f.weight} />}
-              {f.sizeRange.length > 0 && <ReviewRow label={opts?.sizeLabel ?? "Size"} value={sizeDisplay} />}
-              {styleDisplay && <ReviewRow label={opts?.styleLabel ?? "Style"} value={styleDisplay} />}
-              {f.fitType && <ReviewRow label="Fit" value={f.fitType} />}
-              {f.warpYarn && <ReviewRow label="Warp Yarn" value={f.warpYarn} />}
-              {f.weftYarn && <ReviewRow label="Weft Yarn" value={f.weftYarn} />}
-              {f.pileYarn && <ReviewRow label="Pile Yarn" value={f.pileYarn} />}
-              {f.groundYarn && <ReviewRow label="Ground Yarn" value={f.groundYarn} />}
-              {f.picksPerCm && <ReviewRow label="Picks / Density" value={f.picksPerCm} />}
-              {f.printType && <ReviewRow label={opts?.designLabel ?? "Print"} value={f.printType} />}
-              {embReviewDisplay && <ReviewRow label="Embellishments" value={embReviewDisplay} />}
-              {accReviewDisplay && <ReviewRow label="Accessories / Trims" value={accReviewDisplay} />}
-              {f.finishing.length > 0 && <ReviewRow label="Finishing" value={finishDisplay} />}
-              {f.individualPack && <ReviewRow label="Individual Pack" value={f.individualPack} />}
-              {f.rollLength && <ReviewRow label="Roll Length" value={f.rollLength.startsWith("Custom") && f.rollLengthOther ? `Custom — ${f.rollLengthOther}` : f.rollLength} />}
-            </div>
-          </div>
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <h3 className="text-navy-900 font-semibold text-sm">2. Commercial &amp; Logistics</h3>
-              <button type="button" onClick={() => { setStep(2); scrollToForm(); }} className="text-gold text-xs hover:underline">Edit</button>
-            </div>
-            <div className="bg-gray-50 rounded-xl px-5 py-1">
-              <ReviewRow label="Quantity" value={f.quantity + (f.unitOfMeasure ? ` ${f.unitOfMeasure}` : "")} />
-              <ReviewRow label="Target Price" value={f.targetPrice ? `USD ${f.targetPrice} per unit` : ""} />
-              <ReviewRow label="Destination" value={f.destinationCountry} />
-              <ReviewRow label="Incoterm" value={f.incoterm} />
-              {needsPort(f.incoterm) && <ReviewRow label="Port of Destination" value={f.portOfDestination} />}
-              <ReviewRow label="Required Delivery" value={f.deliveryDate} />
-              {f.notes && <ReviewRow label="Notes" value={f.notes} />}
-            </div>
-          </div>
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <h3 className="text-navy-900 font-semibold text-sm">3. Your Details</h3>
-              <button type="button" onClick={() => { setStep(3); scrollToForm(); }} className="text-gold text-xs hover:underline">Edit</button>
-            </div>
-            <div className="bg-gray-50 rounded-xl px-5 py-1">
-              <ReviewRow label="Name" value={f.name} />
-              <ReviewRow label="Position" value={f.position} />
-              <ReviewRow label="Company" value={f.company} />
-              <ReviewRow label="Email" value={f.email} />
-              <ReviewRow label="Phone" value={f.phone} />
-              <ReviewRow label="Country" value={f.country} />
-              {f.howHear && <ReviewRow label="How Did You Hear" value={f.howHear} />}
-            </div>
-          </div>
-          <div className="bg-amber-50 border border-amber-100 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
+        <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-5">Step 4 — Review & Submit</p>
+        <div className="space-y-3">
+
+          {/* Products */}
+          {validProducts.map((p, idx) => {
+            const opts = getProductOptions(p.productType);
+            const productName = p.productType === "Other / Multiple" && p.productTypeOther
+              ? `${p.productType} — ${p.productTypeOther}` : p.productType;
+            const qtyStr = [
+              p.quantity + (p.unitOfMeasure ? " " + p.unitOfMeasure : ""),
+              p.targetPrice ? `USD ${p.targetPrice}/unit` : "",
+            ].filter(Boolean).join(" · ");
+            const sizeDisplay = p.sizeRange.length > 0
+              ? (p.sizeRangeNotes ? `${p.sizeRange.join(", ")} (${p.sizeRangeNotes})` : p.sizeRange.join(", ")) : "";
+            const finishDisplay = (() => {
+              const arr = p.finishing.includes("Other (specify below)") && p.finishingOther
+                ? [...p.finishing.filter(x => x !== "Other (specify below)"), `Other: ${p.finishingOther}`]
+                : p.finishing;
+              return arr.length > 0 ? arr.join(", ") : "";
+            })();
+            const certDisplay = p.certifications.length > 0
+              ? (p.certOther ? [...p.certifications.filter(c => c !== "Other (specify below)"), `Other: ${p.certOther}`].join(", ") : p.certifications.join(", "))
+              : "";
+            const yarnVal = p.yarnType === "Other" && p.yarnTypeOther ? `Other — ${p.yarnTypeOther}` : p.yarnType;
+            const sizeStdVal = p.sizeStandard === "Custom" && p.sizeStandardOther ? `Custom — ${p.sizeStandardOther}` : p.sizeStandard;
+            const cartonVal = p.masterCarton.startsWith("Custom") && p.masterCartonOther ? `Custom — ${p.masterCartonOther}` : p.masterCarton;
+            const rollVal = p.rollLength.startsWith("Custom") && p.rollLengthOther ? `Custom — ${p.rollLengthOther}` : p.rollLength;
+            const subTypeLabel = p.construction === "Knitted" ? "Knit Type" : p.construction === "Woven" ? "Woven Type" : "Weave / Knit Type";
+            const subTypeVal = p.fabricSubType === "Other" && p.fabricSubTypeOther ? `Other — ${p.fabricSubTypeOther}` : p.fabricSubType;
+            const embDisplay = (() => {
+              const arr = p.embellishments.includes("Other") && p.embellishmentsOther
+                ? [...p.embellishments.filter(x => x !== "Other"), `Other: ${p.embellishmentsOther}`]
+                : p.embellishments;
+              return arr.length > 0 ? arr.join(", ") : "";
+            })();
+            const accDisplay = (() => {
+              const arr = p.accessories.includes("Other") && p.accessoriesOther
+                ? [...p.accessories.filter(x => x !== "Other"), `Other: ${p.accessoriesOther}`]
+                : p.accessories;
+              return arr.length > 0 ? arr.join(", ") : "";
+            })();
+
+            return (
+              <ReviewSection
+                key={p.id}
+                title={`${idx + 1}. ${productName}`}
+                onEdit={() => { setActiveProduct(idx); setStep(1); scrollToForm(); }}>
+                <div className="pt-1">
+                  {qtyStr && (
+                    <div className="flex items-center gap-2 py-2 border-b border-gray-100">
+                      <span className="text-gray-400 text-xs w-36 flex-shrink-0">Order</span>
+                      <span className="text-navy-900 text-xs font-semibold">{qtyStr}</span>
+                    </div>
+                  )}
+
+                  {/* Composition */}
+                  {p.fiberContent && <ReviewRow label="Fiber Content" value={p.fiberContent === "Other" ? `Other — ${p.fiberContentOther}` : p.fiberContent} />}
+                  {opts?.isFabricRoll && p.sustainability && <ReviewRow label="Sustainability" value={p.sustainability} />}
+                  {p.category === "Apparel" && yarnVal && <ReviewRow label="Yarn Type" value={yarnVal} />}
+                  {p.compositionNotes && <ReviewRow label="Composition Notes" value={p.compositionNotes} />}
+
+                  {/* Construction */}
+                  {p.construction && <ReviewRow label={opts?.constructionLabel ?? "Construction"} value={p.construction === "Other" ? `Other — ${p.constructionOther}` : p.construction} />}
+                  {opts?.isFabricRoll && subTypeVal && <ReviewRow label={subTypeLabel} value={subTypeVal} />}
+                  {p.weight && <ReviewRow label={opts?.weightLabel ?? "Weight"} value={p.weight} />}
+                  {opts?.isFabricRoll && p.sizeRange[0] && <ReviewRow label="Fabric Width" value={p.sizeRange[0]} />}
+
+                  {/* Yarn Specs */}
+                  {opts?.showWarpWeft && p.warpYarn && <ReviewRow label="Warp Yarn" value={p.warpYarn} />}
+                  {opts?.showWarpWeft && p.weftYarn && <ReviewRow label="Weft Yarn" value={p.weftYarn} />}
+                  {opts?.showWarpWeft && p.picksPerCm && <ReviewRow label="Picks / Thread Density" value={p.picksPerCm} />}
+                  {opts?.showPileGround && p.pileYarn && <ReviewRow label="Pile Yarn" value={p.pileYarn} />}
+                  {opts?.showPileGround && p.groundYarn && <ReviewRow label="Ground Yarn" value={p.groundYarn} />}
+                  {opts?.showPileGround && p.picksPerCm && !opts?.showWarpWeft && <ReviewRow label="Loop Density" value={p.picksPerCm} />}
+
+                  {/* Sizing */}
+                  {sizeDisplay && <ReviewRow label={opts?.sizeLabel ?? "Size"} value={sizeDisplay} />}
+                  {p.fitType && <ReviewRow label="Fit" value={p.fitType} />}
+                  {p.style && <ReviewRow label={opts?.styleLabel ?? "Style"} value={p.style === "Other" ? `Other — ${p.styleOther}` : p.style} />}
+                  {opts?.showSizeStandard && sizeStdVal && <ReviewRow label="Size Standard" value={sizeStdVal} />}
+
+                  {/* HT conditional dimension fields */}
+                  {opts?.showBorderField && p.borderType && <ReviewRow label="Border / Selvedge" value={p.borderType === "Other" && p.borderTypeOther ? `Other — ${p.borderTypeOther}` : p.borderType} />}
+                  {opts?.showCollarType && p.collarType && <ReviewRow label="Collar Type" value={p.collarType === "Other" && p.collarTypeOther ? `Other — ${p.collarTypeOther}` : p.collarType} />}
+                  {opts?.showBackingType && p.backingType && <ReviewRow label="Backing" value={p.backingType === "Other" && p.backingTypeOther ? `Other — ${p.backingTypeOther}` : p.backingType} />}
+                  {opts?.showClosureType && p.closureType && <ReviewRow label="Closure" value={p.closureType === "Other" && p.closureTypeOther ? `Other — ${p.closureTypeOther}` : p.closureType} />}
+                  {opts?.showPocketDepth && p.pocketDepth && <ReviewRow label="Pocket Depth" value={p.pocketDepth} />}
+                  {opts?.showHeadingType && p.headingType && <ReviewRow label="Heading Type" value={p.headingType === "Other" && p.headingTypeOther ? `Other — ${p.headingTypeOther}` : p.headingType} />}
+                  {opts?.showLiningType && p.liningType && <ReviewRow label="Lining" value={p.liningType === "Other" && p.liningTypeOther ? `Other — ${p.liningTypeOther}` : p.liningType} />}
+                  {opts?.showHeatingRating && p.heatRating && <ReviewRow label="Heat Rating" value={p.heatRating} />}
+
+                  {/* Color & Design */}
+                  {p.dyeingMethod && <ReviewRow label="Dyeing Method" value={p.dyeingMethod} />}
+                  {p.numberOfColors && <ReviewRow label="No. of Colors" value={p.numberOfColors} />}
+                  {opts?.isFabricRoll ? (
+                    <>
+                      {p.printType && <ReviewRow label="Fabric State" value={p.printType} />}
+                      {p.fabricState && <ReviewRow label="Pattern / Color Type" value={p.fabricState} />}
+                    </>
+                  ) : (
+                    <>
+                      {p.printType && <ReviewRow label={opts?.designLabel ?? "Design"} value={p.printType} />}
+                      {p.printPlacement && <ReviewRow label={opts?.printPlacementLabel ?? "Placement"} value={p.printPlacement} />}
+                    </>
+                  )}
+                  {p.pantoneRef && <ReviewRow label="Pantone / Color Ref" value={p.pantoneRef} />}
+                  {p.printDetail && <ReviewRow label="Design Detail" value={p.printDetail} />}
+                  {opts?.isFabricRoll && p.colorFastnessNotes && <ReviewRow label="Color Fastness" value={p.colorFastnessNotes} />}
+
+                  {/* Embellishments (Apparel) */}
+                  {embDisplay && <ReviewRow label="Embellishments" value={embDisplay} />}
+                  {accDisplay && <ReviewRow label="Accessories / Trims" value={accDisplay} />}
+
+                  {/* Finishing */}
+                  {finishDisplay && <ReviewRow label="Finishing" value={finishDisplay} />}
+
+                  {/* Labels (Apparel) */}
+                  {p.brandLabel && <ReviewRow label="Brand Label" value={p.brandLabel} />}
+                  {p.careLabel && <ReviewRow label="Care Label" value={p.careLabel} />}
+                  {p.stitchType && <ReviewRow label="Stitch Type" value={p.stitchType} />}
+                  {p.labelNotes && <ReviewRow label="Label Notes" value={p.labelNotes} />}
+
+                  {/* Packing */}
+                  {p.individualPack && <ReviewRow label="Individual Pack" value={p.individualPack} />}
+                  {p.setComposition && <ReviewRow label="Set Composition" value={p.setComposition} />}
+                  {cartonVal && <ReviewRow label="Master Carton" value={cartonVal} />}
+                  {p.packingNotes && <ReviewRow label="Packing Notes" value={p.packingNotes} />}
+
+                  {/* Fabric Roll Packing */}
+                  {opts?.isFabricRoll && rollVal && <ReviewRow label="Roll Length" value={rollVal} />}
+                  {opts?.isFabricRoll && p.rollCore && <ReviewRow label="Roll Core" value={p.rollCore} />}
+                  {opts?.isFabricRoll && p.rollNotes && <ReviewRow label="Roll Packing Notes" value={p.rollNotes} />}
+
+                  {/* Certifications & Docs */}
+                  {certDisplay && <ReviewRow label="Certifications" value={certDisplay} />}
+                  {p.sampleRequired && <ReviewRow label="Sample" value={p.sampleRequired} />}
+                  {p.hasTechPack && <ReviewRow label="Tech Pack" value={p.hasTechPack} />}
+                </div>
+              </ReviewSection>
+            );
+          })}
+
+          {/* Delivery */}
+          <ReviewSection title="Shipping & Delivery" onEdit={() => { setStep(2); scrollToForm(); }}>
+            <ReviewRow label="Destination" value={formState.destinationCountry} />
+            <ReviewRow label="Incoterm" value={formState.incoterm} />
+            {needsPort(formState.incoterm) && <ReviewRow label="Port" value={formState.portOfDestination} />}
+            <ReviewRow label="Delivery Date" value={formState.deliveryDate} />
+            {formState.logisticsNotes && <ReviewRow label="Notes" value={formState.logisticsNotes} />}
+          </ReviewSection>
+
+          {/* Contact */}
+          <ReviewSection title="Your Details" onEdit={() => { setStep(3); scrollToForm(); }}>
+            <ReviewRow label="Name" value={`${formState.name}${formState.position ? " · " + formState.position : ""}`} />
+            <ReviewRow label="Company" value={formState.company} />
+            <ReviewRow label="Email" value={formState.email} />
+            <ReviewRow label="Phone" value={formState.phone} />
+            <ReviewRow label="Country" value={formState.country} />
+          </ReviewSection>
+
+          <div className="bg-amber-50 border border-amber-100 rounded-xl p-4 text-xs text-gray-700 leading-relaxed">
             By clicking <strong>Submit RFQ</strong>, you confirm you have read and agreed to the{" "}
-            <Link href="/termsofuse/" className="text-gold hover:underline font-medium" target="_blank" rel="noopener noreferrer">Terms of Use</Link>.
+            <Link href="/termsofuse/" className="text-gold hover:underline font-semibold" target="_blank" rel="noopener noreferrer">Terms of Use</Link>
+            {" "}and{" "}
+            <Link href="/privacypolicy/" className="text-gold hover:underline font-semibold" target="_blank" rel="noopener noreferrer">Privacy Policy</Link>.
+            Submitting opens your email app with the full RFQ pre-filled and addressed to <strong>{RECIPIENT}</strong>.
           </div>
         </div>
       </motion.div>
     );
   }
 
-  // ── Sent state ────────────────────────────────────────────────────────────
+  // ── Sent state ──────────────────────────────────────────────────────────────
 
   if (status === "sent") {
     return (
       <>
         <PageHero
-          image="/images/hero/hero-about.webp"
+          image="/images/hero/hero-rfq.webp"
           imageAlt="MZ Global Trading — request a quote for B2B textile sourcing from Pakistan"
           breadcrumbs={[{ label: "Home", href: "/" }, { label: "Request a Quote" }]}
           label="Request a Quote"
@@ -1695,30 +2116,28 @@ export default function RFQContent() {
         <div className="bg-gray-50 py-20">
           <div className="max-w-lg mx-auto px-4 text-center">
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-10">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-green-600" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+              <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-green-600" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
               </div>
-              <h2 className="text-navy-900 font-bold text-2xl mb-3">Almost done</h2>
-              <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                Your email app should now be open with your RFQ pre-filled and addressed to <strong>info@mzglobaltrading.com</strong>. Review it and click <strong>Send</strong> to submit.
+              <h2 className="text-navy-900 font-bold text-2xl mb-3">RFQ submitted — check your email app</h2>
+              <p className="text-gray-600 text-sm leading-relaxed mb-5">
+                Your email app has opened with the full RFQ pre-filled and addressed to <strong>info@mzglobaltrading.com</strong>. Review and click <strong>Send</strong>.
               </p>
-
-              {clipboardCopied && (
-                <div className="bg-green-50 border border-green-200 rounded-xl p-4 text-sm mb-4 text-left flex items-start gap-3">
-                  <svg className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5} aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
-                  <div>
-                    <p className="text-green-800 font-semibold">Full RFQ copied to clipboard</p>
-                    <p className="text-green-700 text-xs mt-0.5">
-                      If your email app shows incomplete content, click inside the email body and paste (<strong>Ctrl+V</strong> on Windows · <strong>⌘V</strong> on Mac · long-press &rarr; Paste on mobile).
-                    </p>
-                  </div>
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm mb-4 text-left flex items-start gap-3">
+                <svg className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2} aria-hidden="true"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
+                <div>
+                  <p className="text-amber-800 font-bold text-sm">If the email body appears empty</p>
+                  <p className="text-amber-700 text-xs mt-1">
+                    This happens with Gmail web or some browsers. Your full RFQ is also in your clipboard — press <strong>Ctrl+V</strong> (Windows) or <strong>⌘V</strong> (Mac) to paste it into the email body.
+                  </p>
                 </div>
-              )}
-
+              </div>
               <div className="bg-gold/8 border border-gold/20 rounded-xl p-4 text-sm text-gray-700 mb-7 text-left">
-                <strong className="text-navy-900">Email did not open?</strong> Compose an email to{" "}
-                <a href={`mailto:${RECIPIENT}`} className="text-gold hover:underline font-medium">{RECIPIENT}</a> with your requirements, or{" "}
-                <button type="button" onClick={() => { setStatus("idle"); setStep(4); scrollToForm(); }} className="text-gold hover:underline font-medium">go back and try again</button>.
+                <strong className="text-navy-900 text-xs">Email did not open?</strong><br />
+                <span className="text-xs">Compose a new email to{" "}
+                <a href={`mailto:${RECIPIENT}`} className="text-gold hover:underline font-medium">{RECIPIENT}</a>, or{" "}
+                <button type="button" onClick={() => { setStatus("idle"); setStep(4); scrollToForm(); }}
+                  className="text-gold hover:underline font-medium">go back and try again</button>.</span>
               </div>
               <Link href="/" className="inline-flex items-center gap-2 px-7 py-3 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors">Back to Home</Link>
             </div>
@@ -1728,26 +2147,25 @@ export default function RFQContent() {
     );
   }
 
-  // ── Main render ───────────────────────────────────────────────────────────
+  // ── Main render ─────────────────────────────────────────────────────────────
 
   return (
     <>
       <PageHero
-        image="/images/hero/hero-about.webp"
+        image="/images/hero/hero-rfq.webp"
         imageAlt="MZ Global Trading — request a quote for B2B textile sourcing from Pakistan"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Request a Quote" }]}
         label="Request a Quote"
         title="Start Your" titleGold="Sourcing Request"
-        description="Tell us what you need — product type, quantity, certifications, and timeline. We match your requirements with the right factory and respond within 3–5 business days."
+        description="Tell us what you need — product type, quantity, certifications, and delivery timeline. We match your requirements with the right factory and respond within 3–5 business days."
         pills={["Response Within 3–5 Business Days", "No Obligation", "All Categories"]}
       />
 
-      {/* Progress bar — sticky inside the form section so it never overlaps the hero */}
       <div ref={formRef} className="bg-gray-50">
+        {/* Sticky progress bar */}
         <div
           className="sticky left-0 right-0 z-40 bg-white border-b border-gray-100 shadow-sm"
-          style={{ top: 128, height: 48 }}
-        >
+          style={{ top: 128, height: 48 }}>
           <div className="max-w-[1600px] mx-auto h-full px-4 sm:px-6 lg:px-10 flex items-center">
             {STEPS.map((label, idx) => {
               const num = idx + 1;
@@ -1777,8 +2195,8 @@ export default function RFQContent() {
         </div>
 
         <div className="py-6 sm:py-8">
-          <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10">
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm px-6 py-6 sm:px-8 sm:py-8">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm px-5 py-5 sm:px-7 sm:py-6">
               <AnimatePresence mode="wait">
                 {step === 1 && renderStep1()}
                 {step === 2 && renderStep2()}
@@ -1786,43 +2204,48 @@ export default function RFQContent() {
                 {step === 4 && renderStep4()}
               </AnimatePresence>
 
-              {step === 4 && (
-                <p className="text-gray-400 text-xs text-center mt-8 pt-6 border-t border-gray-100">
-                  By submitting you confirm you have read our{" "}
-                  <Link href="/termsofuse/" className="underline underline-offset-2 hover:text-gold transition-colors">Terms of Use</Link>
-                  {" "}and{" "}
-                  <Link href="/privacypolicy/" className="underline underline-offset-2 hover:text-gold transition-colors">Privacy Policy</Link>
-                  . Your details are used solely to process this enquiry.
-                </p>
-              )}
-              <div className={`flex items-center mt-4 ${step === 4 ? "" : "mt-8 pt-6 border-t border-gray-100"} ${step > 1 ? "justify-between" : "justify-end"}`}>
+              {/* Bottom navigation */}
+              <div className={`flex items-center mt-6 pt-5 border-t border-gray-100 ${step > 1 ? "justify-between" : "justify-end"}`}>
                 {step > 1 && (
                   <button type="button" onClick={handleBack}
-                    className="inline-flex items-center gap-2 px-6 py-3 border border-gray-200 text-gray-600 text-sm font-semibold rounded-lg hover:border-gray-300 hover:text-navy-900 transition-colors">
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-navy-900 border border-navy-900 text-white text-sm font-semibold rounded-lg hover:bg-navy-900/85 transition-colors">
                     ← Back
                   </button>
                 )}
-                {step < 4 ? (
-                  <button type="button" onClick={handleNext}
-                    className="inline-flex items-center gap-2 px-8 py-3 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors">
-                    Next →
-                  </button>
-                ) : (
-                  <button type="button" onClick={handleSubmit}
-                    className="inline-flex items-center gap-2 px-8 py-3 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
-                    Submit RFQ — Open Email
-                  </button>
-                )}
+                <div className="flex items-center gap-3">
+                  {step <= 2 && formState.products.length < 6 && formState.products[activeProduct].productType && (
+                    <button type="button" onClick={addProduct}
+                      className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-navy-900 border border-navy-900 text-white text-sm font-semibold rounded-lg hover:bg-navy-900/85 transition-colors">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                      Add Product
+                    </button>
+                  )}
+                  {step < 4 ? (
+                    <button type="button" onClick={handleNext}
+                      className="inline-flex items-center gap-2 px-8 py-2.5 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors">
+                      {step === 1 && formState.products.length > 1
+                        ? `Continue with ${formState.products.filter(p => p.category).length} Products →`
+                        : "Continue →"}
+                    </button>
+                  ) : (
+                    <button type="button" onClick={handleSubmit}
+                      className="inline-flex items-center gap-2 px-8 py-2.5 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                      Submit RFQ →
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
-            <p className="text-center text-gray-400 text-xs mt-5">
-              Step {step} of {STEPS.length} · Submitting opens your email app with all details pre-filled.
+
+            <p className="text-center text-navy-900/60 text-xs mt-4">
+              Step {step} of {STEPS.length} · Submitting opens your email app with the full RFQ pre-filled.
             </p>
           </div>
         </div>
       </div>
 
+      {/* What happens next */}
       <section className="bg-white py-14 sm:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -1833,8 +2256,8 @@ export default function RFQContent() {
             <div className="absolute top-7 left-[20%] right-[20%] h-0.5 bg-gray-100 hidden sm:block" aria-hidden="true" />
             {[
               { s: "01", title: "Requirements Review", time: "1–3 Business Days", body: "Our sourcing team reviews your submission and identifies suitable factories from our vetted network. We may reach out for clarification if required." },
-              { s: "02", title: "Quotation",          time: "3–5 Business Days", body: "Once requirements are confirmed, we provide an initial quotation covering unit pricing, MOQ, lead times, and payment terms." },
-              { s: "03", title: "Samples",            time: "Upon Confirmation",  body: "Pre-production samples are arranged once the quotation is accepted. Sample costs and courier charges are borne by the buyer and credited against the confirmed order." },
+              { s: "02", title: "Quotation",           time: "3–5 Business Days", body: "Once requirements are confirmed, we provide an initial quotation covering unit pricing, MOQ, lead times, and payment terms." },
+              { s: "03", title: "Samples",             time: "Upon Confirmation", body: "Pre-production samples are arranged once the quotation is accepted. Sample costs and courier charges are borne by the buyer and credited against the confirmed order." },
             ].map(({ s, title, time, body }) => (
               <div key={s} className="flex flex-col items-center text-center relative">
                 <div className="w-14 h-14 rounded-full bg-navy-900 flex items-center justify-center mb-5 relative z-10">

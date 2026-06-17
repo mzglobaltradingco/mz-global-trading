@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import PantsTrousersContent from "./PantsTrousersContent";
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/apparel/wovengarments/pantsandtrousers/",
     images: [
       {
-        url: "/images/og/hero-apparel.webp",
+        url: "/images/og/pants-trousers-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan pants and trousers manufacturer — OEM woven trousers for fashion and corporate brands in USA, UK and Europe",
@@ -53,7 +53,7 @@ export default function PantsTrousersPage() {
             description:
               "Custom pants and trousers sourced from Pakistan's certified woven garment factories. Twill chino, canvas, linen, sateen stretch and ponte constructions. 140–350 GSM. OEKO-TEX, BSCI and Sedex certified.",
             image:
-              "https://mzglobaltrading.com/images/hero/hero-apparel.webp",
+              "https://mzglobaltrading.com/images/og/pants-trousers-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",

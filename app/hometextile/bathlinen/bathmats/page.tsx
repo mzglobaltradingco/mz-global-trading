@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BathMatsContent from "./BathMatsContent";
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/bathlinen/bathmats/",
     images: [
       {
-        url: "/images/menu/menu-bathmats.webp",
+        url: "/images/og/bath-mats-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan bath mat manufacturer — OEM anti-slip tufted and chenille bath mats for hotels and retailers worldwide",
@@ -47,7 +47,7 @@ export default function BathMatsPage() {
     name: "Bath Mats — OEM Anti-Slip Manufacturing Pakistan",
     description:
       "Pakistan OEM bath mat manufacturer producing tufted terry, chenille, memory foam and microfiber bath mats with latex and rubber spray anti-slip backing. 800–1500 GSM. Hotel, healthcare and retail programmes for USA, UK, Europe and worldwide.",
-    image: "https://mzglobaltrading.com/images/menu/menu-bathmats.webp",
+    image: "https://mzglobaltrading.com/images/og/bath-mats-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     offers: {
       "@type": "Offer",
@@ -57,7 +57,7 @@ export default function BathMatsPage() {
     },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/menu/menu-bathmats.webp",
+      contentUrl: "https://mzglobaltrading.com/images/og/bath-mats-og.webp",
       name: "Pakistan bath mat manufacturer — OEM anti-slip tufted and chenille bath mats for hotels and retailers worldwide",
     },
     breadcrumb: {

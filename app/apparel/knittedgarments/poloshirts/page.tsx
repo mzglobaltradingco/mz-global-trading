@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import PoloContent from "./PoloContent";
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/apparel/knittedgarments/poloshirts/",
     images: [
       {
-        url: "/images/og/hero-apparel.webp",
+        url: "/images/og/polo-shirts-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan polo shirt manufacturer — OEM piqué polo shirts for corporate and sports brands in USA and UK",
@@ -47,7 +47,7 @@ export default function PoloShirtsPage() {
     name: "Polo Shirts — OEM Manufacturing Pakistan",
     description:
       "Pakistan OEM polo shirt manufacturer producing classic piqué, mini piqué, jersey and performance polo shirts for corporate buyers, hospitality groups and sports brands in USA, UK and Europe.",
-    image: "https://mzglobaltrading.com/images/og/hero-apparel.webp",
+    image: "https://mzglobaltrading.com/images/og/polo-shirts-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     offers: {
       "@type": "Offer",
@@ -57,7 +57,7 @@ export default function PoloShirtsPage() {
     },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/og/hero-apparel.webp",
+      contentUrl: "https://mzglobaltrading.com/images/og/polo-shirts-og.webp",
       name: "Pakistan polo shirt manufacturer — OEM piqué polo shirts for corporate and sports brands",
     },
     breadcrumb: {
