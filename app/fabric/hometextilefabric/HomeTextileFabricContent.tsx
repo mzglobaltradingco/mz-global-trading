@@ -1152,29 +1152,9 @@ export default function HomeTextileFabricContent() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-4 gap-6">
-            {/* Left: selector */}
-            <div className="lg:col-span-1 flex flex-col gap-1.5">
-              {WOVEN_OPTIONS.map((o) => (
-                <button
-                  key={o.id}
-                  onClick={() => setActiveWoven(o.id)}
-                  className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold border transition-all flex items-center gap-2 ${
-                    activeWoven === o.id
-                      ? "bg-navy-900 text-white border-navy-900"
-                      : "bg-white text-navy-900 border-gray-200 hover:border-gold/60"
-                  }`}
-                >
-                  <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${activeWoven === o.id ? "bg-white/10 text-white" : o.category === "Knitted" ? "bg-orange-100 text-orange-700" : "bg-amber-100 text-amber-700"}`}>
-                    {o.category.slice(0, 4)}
-                  </span>
-                  {o.name}
-                </button>
-              ))}
-            </div>
-
-            {/* Right: detail panel */}
-            <div className="lg:col-span-3">
+          <div className="flex flex-col gap-6 lg:grid lg:grid-cols-4 lg:gap-6 lg:items-start">
+            {/* Detail panel — mobile: first so changes are immediately visible; desktop: right 3/4 */}
+            <div className="lg:order-2 lg:col-span-3">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeWoven}
@@ -1182,7 +1162,7 @@ export default function HomeTextileFabricContent() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -8 }}
                   transition={{ duration: 0.22 }}
-                  className="bg-gray-50 rounded-2xl p-8 border border-gray-100 h-full"
+                  className="bg-gray-50 rounded-2xl p-8 border border-gray-100"
                 >
                   <div className="flex items-center gap-3 flex-wrap mb-6">
                     <h3 className="text-2xl font-bold text-navy-900">{aw.name}</h3>
@@ -1229,6 +1209,25 @@ export default function HomeTextileFabricContent() {
                   </div>
                 </motion.div>
               </AnimatePresence>
+            </div>
+            {/* Selector — mobile: below panel with internal scroll; desktop: left 1/4 with internal scroll */}
+            <div className="lg:order-1 lg:col-span-1 flex flex-col gap-1.5 max-h-[260px] lg:max-h-[480px] overflow-y-auto pr-1">
+              {WOVEN_OPTIONS.map((o) => (
+                <button
+                  key={o.id}
+                  onClick={() => setActiveWoven(o.id)}
+                  className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold border transition-all flex items-center gap-2 shrink-0 ${
+                    activeWoven === o.id
+                      ? "bg-navy-900 text-white border-navy-900"
+                      : "bg-white text-navy-900 border-gray-200 hover:border-gold/60"
+                  }`}
+                >
+                  <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded shrink-0 ${activeWoven === o.id ? "bg-white/10 text-white" : o.category === "Knitted" ? "bg-orange-100 text-orange-700" : "bg-amber-100 text-amber-700"}`}>
+                    {o.category.slice(0, 4)}
+                  </span>
+                  {o.name}
+                </button>
+              ))}
             </div>
           </div>
 

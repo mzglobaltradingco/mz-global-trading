@@ -1181,29 +1181,9 @@ export default function ApparelFabricContent() {
           <p className="text-gray-500 max-w-2xl leading-relaxed mb-12">
             From lightweight plain weave shirting to heavyweight canvas for workwear, Pakistan&rsquo;s woven mills produce the full spectrum of apparel fabric constructions for international garment programmes.
           </p>
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Left — type selector */}
-            <div className="flex flex-col gap-2">
-              {WOVEN_CONSTRUCTIONS.map((c) => (
-                <button
-                  key={c.id}
-                  onClick={() => setActiveWoven(c.id)}
-                  className={`w-full text-left px-4 py-3.5 rounded-xl border transition-all text-sm font-semibold ${
-                    activeWoven === c.id
-                      ? "bg-navy-900 text-white border-navy-900"
-                      : "bg-gray-50 text-navy-900 border-gray-200 hover:border-gold"
-                  }`}
-                >
-                  <span className="flex items-center justify-between">
-                    {c.name}
-                    {activeWoven === c.id && <span className="text-gold text-xs" aria-hidden="true">→</span>}
-                  </span>
-                  <span className="text-xs font-normal mt-0.5 block opacity-60">{c.gsm}</span>
-                </button>
-              ))}
-            </div>
-            {/* Right — animated details */}
-            <div className="lg:col-span-2">
+          <div className="flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:gap-8 lg:items-start">
+            {/* Detail panel — mobile: first so changes are immediately visible; desktop: right 2/3 */}
+            <div className="lg:order-2 lg:col-span-2">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeWoven}
@@ -1211,7 +1191,7 @@ export default function ApparelFabricContent() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -10 }}
                   transition={{ duration: 0.25 }}
-                  className="bg-gray-50 rounded-2xl p-8 border border-gray-100 h-full"
+                  className="bg-gray-50 rounded-2xl p-8 border border-gray-100"
                 >
                   <div className="flex items-center gap-3 flex-wrap mb-6">
                     <h3 className="text-2xl font-bold text-navy-900">{aw.name}</h3>
@@ -1245,6 +1225,26 @@ export default function ApparelFabricContent() {
                   </div>
                 </motion.div>
               </AnimatePresence>
+            </div>
+            {/* Type selector — mobile: below panel with internal scroll; desktop: left 1/3 with internal scroll */}
+            <div className="lg:order-1 flex flex-col gap-2 max-h-[260px] lg:max-h-[520px] overflow-y-auto pr-1">
+              {WOVEN_CONSTRUCTIONS.map((c) => (
+                <button
+                  key={c.id}
+                  onClick={() => setActiveWoven(c.id)}
+                  className={`w-full text-left px-4 py-3.5 rounded-xl border transition-all text-sm font-semibold shrink-0 ${
+                    activeWoven === c.id
+                      ? "bg-navy-900 text-white border-navy-900"
+                      : "bg-gray-50 text-navy-900 border-gray-200 hover:border-gold"
+                  }`}
+                >
+                  <span className="flex items-center justify-between">
+                    {c.name}
+                    {activeWoven === c.id && <span className="text-gold text-xs" aria-hidden="true">→</span>}
+                  </span>
+                  <span className="text-xs font-normal mt-0.5 block opacity-60">{c.gsm}</span>
+                </button>
+              ))}
             </div>
           </div>
           <p className="text-amber-600/80 text-xs mt-8 leading-relaxed">
