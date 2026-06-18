@@ -149,7 +149,12 @@ export function PhoneInputField({
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
-  const [liveValid, setLiveValid] = useState<boolean | null>(null);
+  const [liveValid, setLiveValid] = useState<boolean | null>(() => {
+    if (!value) return null;
+    const digits = value.replace(/\D/g, "");
+    if (digits.length < 8) return null;
+    return !validatePhone(value, countryIso2 || "us");
+  });
   const wrapperRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const debounceTimer = useRef<ReturnType<typeof setTimeout>>();
@@ -350,11 +355,13 @@ export function PhoneInputField({
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
             Valid mobile number
           </p>
-        ) : (
-          <p className="text-base flex items-center gap-1 text-red-500">
+        ) : liveValid === false ? (
+          <p className="text-sm flex items-center gap-1 text-red-500">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
             Mobile only — landlines and VoIP not accepted
           </p>
+        ) : (
+          <p className="text-xs text-gray-400">Mobile number — include country code</p>
         )
       )}
     </div>

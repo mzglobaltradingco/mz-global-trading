@@ -347,16 +347,16 @@ const TC_TIERS = [
 ];
 
 const FINISHING_TREATMENTS = [
-  { name: "Soft Hand / Silicone", icon: "✋", desc: "Reduces surface friction, improves drape and softness. Standard on terry loop, zero twist and bamboo-cotton.", badge: "Standard" },
-  { name: "Anti-Bacterial", icon: "🛡️", desc: "Silver-ion technology or natural antimicrobial agents. Hospital linen, healthcare, institutional and sports towel programmes.", badge: "Healthcare" },
-  { name: "Anti-Shrink", icon: "📐", desc: "Pre-shrunk finishing. Residual shrinkage ≤3% warp and weft after 5 wash cycles per ISO 6330.", badge: "Performance" },
-  { name: "Velour / Shearing", icon: "✂️", desc: "Pile shearing on one face of terry — velvet-smooth premium surface. Enables sublimation printing on towel face.", badge: "Premium" },
-  { name: "Quick-Dry Treatment", icon: "⚡", desc: "Hydrophilic finish accelerates moisture release from fabric — standard for microfiber terry and sports towel programmes.", badge: "Performance" },
-  { name: "Moisture Wicking", icon: "💧", desc: "Hydrophilic treatment draws moisture away from skin — performance claim supported with ISO 20743 test report.", badge: "Performance" },
-  { name: "Wrinkle Resistant", icon: "🧹", desc: "Cross-linking chemistry reduces crease recovery angle — easy-care for woven bedding, table linen and duvet covers.", badge: "Easy Care" },
-  { name: "Flame Retardant (FR)", icon: "🔥", desc: "Phosphorus-based FR treatment meeting BS 5867 / EN 13501. Required for contract hospitality and institutional programmes in UK and EU.", badge: "Compliance" },
-  { name: "Chlorine Resistant", icon: "🏊", desc: "Colour-fast treatment for pool and beach towels exposed to chlorinated water — prevents colour bleeding and fabric degradation.", badge: "Outdoor" },
-  { name: "Zero-Twist (PVA Size)", icon: "🌀", desc: "Temporary PVA or silicone size holds untwisted pile during production — washes out after first launder cycle; fabric softens dramatically.", badge: "Luxury" },
+  { name: "Soft Hand / Silicone", icon: "✋", desc: "Reduces surface friction, improves drape and softness. Standard on terry loop, zero twist and bamboo-cotton.", badge: "Standard", applies: "All terry towels, velour, bamboo-cotton terry, woven bedding" },
+  { name: "Anti-Bacterial", icon: "🛡️", desc: "Silver-ion technology or natural antimicrobial agents. Hospital linen, healthcare, institutional and sports towel programmes.", badge: "Healthcare", applies: "Hospital linen, kitchen linen, gym & sports towels, institutional supply" },
+  { name: "Anti-Shrink", icon: "📐", desc: "Pre-shrunk finishing. Residual shrinkage ≤3% warp and weft after 5 wash cycles per ISO 6330.", badge: "Performance", applies: "All terry constructions, woven bedding, table linen" },
+  { name: "Velour / Shearing", icon: "✂️", desc: "Pile shearing on one face of terry — velvet-smooth premium surface. Enables sublimation printing on towel face.", badge: "Premium", applies: "Velour terry only — beach towels, premium bath towels, hotel premium tier" },
+  { name: "Quick-Dry Treatment", icon: "⚡", desc: "Hydrophilic finish accelerates moisture release from fabric — standard for microfiber terry and sports towel programmes.", badge: "Performance", applies: "Microfiber terry, sports & gym towels, beach & pool towels, travel towels" },
+  { name: "Moisture Wicking", icon: "💧", desc: "Hydrophilic treatment draws moisture away from skin — performance claim supported with ISO 20743 test report.", badge: "Performance", applies: "Sports & gym towels, microfiber terry, performance bath linen" },
+  { name: "Wrinkle Resistant", icon: "🧹", desc: "Cross-linking chemistry reduces crease recovery angle — easy-care for woven bedding, table linen and duvet covers.", badge: "Easy Care", applies: "Woven bedding (duvet covers, pillow covers, fitted sheets), table linen, curtains" },
+  { name: "Flame Retardant (FR)", icon: "🔥", desc: "Phosphorus-based FR treatment meeting BS 5867 / EN 13501. Required for contract hospitality and institutional programmes in UK and EU.", badge: "Compliance", applies: "Institutional & hospital curtains, hospitality drapery — not bath or kitchen linen" },
+  { name: "Chlorine Resistant", icon: "🏊", desc: "Colour-fast treatment for pool and beach towels exposed to chlorinated water — prevents colour bleeding and fabric degradation.", badge: "Outdoor", applies: "Beach & pool towels only" },
+  { name: "Zero-Twist (PVA Size)", icon: "🌀", desc: "Temporary PVA or silicone size holds untwisted pile during production — washes out after first launder cycle; fabric softens dramatically.", badge: "Luxury", applies: "Zero twist terry only" },
 ];
 
 const DYE_METHODS = [
@@ -1377,6 +1377,7 @@ export default function HomeTextileFabricContent() {
                 </div>
                 <h3 className="font-bold text-navy-900 text-sm leading-snug">{f.name}</h3>
                 <p className="text-xs text-gray-500 leading-relaxed flex-1">{f.desc}</p>
+                <p className="text-xs text-gray-400 font-medium border-t border-gray-100 pt-2">Applies to: {f.applies}</p>
               </motion.div>
             ))}
           </div>
@@ -1772,13 +1773,13 @@ export default function HomeTextileFabricContent() {
       {/* ════════════════════════════════════════════════════════════════════════
           PAGE BOXES — RELATED PRODUCTS
       ════════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-gray-50 py-16 border-t border-gray-100">
+      <section className="py-20 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-1">Explore Related Products</p>
-            <h2 className="text-2xl font-bold text-navy-900">Related Fabric &amp; Home Textiles</h2>
+          <div className="text-center mb-12">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Explore Related Products</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Related Fabric &amp; Home Textiles</h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {PAGE_BOXES.map((card, i) => (
               <motion.div
                 key={card.title}
@@ -1801,7 +1802,7 @@ export default function HomeTextileFabricContent() {
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <h3 className="text-white font-bold text-base leading-tight mb-1">{card.title}</h3>
+                    <h3 className="text-white font-bold text-lg mb-1">{card.title}</h3>
                     <p className="text-gray-300 text-xs leading-relaxed mb-2">{card.desc}</p>
                     <span className="inline-flex items-center gap-1.5 text-gold text-xs font-semibold group-hover:gap-3 transition-all duration-200">
                       {card.cta} →

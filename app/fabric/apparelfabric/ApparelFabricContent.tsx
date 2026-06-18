@@ -372,19 +372,19 @@ const GSM_TIERS = [
 ];
 
 const FINISHING_OPTIONS = [
-  { code: "SH", name: "Soft Hand / Silicone", desc: "Reduces surface friction, improves drape for knits and wovens", color: "bg-sky-100 text-sky-700" },
-  { code: "AP", name: "Anti-Pill", desc: "Prevents pilling on fleece, knits and wool blends in wear", color: "bg-blue-100 text-blue-700" },
-  { code: "AS", name: "Anti-Shrink / Compacted", desc: "Pre-shrunk finishing, residual shrinkage <3% per ISO 6330", color: "bg-indigo-100 text-indigo-700" },
-  { code: "EZ", name: "Enzyme / Bio-Finish", desc: "Bio-polishing removes surface fibres for smoother, cleaner hand", color: "bg-violet-100 text-violet-700" },
-  { code: "PS", name: "Peached / Sueded", desc: "Micro-sanding raises short fibres for velvety, soft surface texture", color: "bg-purple-100 text-purple-700" },
-  { code: "BR", name: "Brushed", desc: "Mechanical brushing raises fleece back fibres for improved insulation", color: "bg-fuchsia-100 text-fuchsia-700" },
-  { code: "MW", name: "Moisture Wicking", desc: "Hydrophilic treatment for performance fabrics — moisture transport away from skin", color: "bg-teal-100 text-teal-700" },
-  { code: "MC", name: "Mercerized", desc: "Caustic soda treatment swells cotton fibres — increased lustre and dye uptake", color: "bg-emerald-100 text-emerald-700" },
-  { code: "WR", name: "Wrinkle Resistant", desc: "Cross-linking agents reduce crease angle recovery for easy-care programmes", color: "bg-green-100 text-green-700" },
-  { code: "AN", name: "Anti-Static", desc: "Conductive fibre treatment prevents static charge build-up in synthetic blends", color: "bg-lime-100 text-lime-700" },
-  { code: "AO", name: "Anti-Odor / Antimicrobial", desc: "Silver-ion or zinc pyrithione treatment inhibits bacterial growth and odour formation — standard for performance activewear", color: "bg-cyan-100 text-cyan-700" },
-  { code: "DW", name: "DWR / Water Repellent", desc: "C6 or C8 fluorocarbon-free DWR treatment causes water to bead and roll off — standard for outerwear, workwear and cargo fabric", color: "bg-blue-100 text-blue-700" },
-  { code: "FR", name: "Flame Retardant (FR)", desc: "Phosphorus-based FR treatment to BS EN ISO 15025 / NFPA 2112 for industrial and protective workwear programmes", color: "bg-red-100 text-red-700" },
+  { code: "SH", name: "Soft Hand / Silicone", desc: "Reduces surface friction, improves drape for knits and wovens", color: "bg-sky-100 text-sky-700", applies: "All apparel fabrics" },
+  { code: "AP", name: "Anti-Pill", desc: "Prevents pilling on fleece, knits and wool blends in wear", color: "bg-blue-100 text-blue-700", applies: "Sweatshirts, hoodies, sweatpants, fleece fabrics" },
+  { code: "AS", name: "Anti-Shrink / Compacted", desc: "Pre-shrunk finishing, residual shrinkage <3% per ISO 6330", color: "bg-indigo-100 text-indigo-700", applies: "All knitted garments — T-shirts, polo, jersey, knitwear" },
+  { code: "EZ", name: "Enzyme / Bio-Finish", desc: "Bio-polishing removes surface fibres for smoother, cleaner hand", color: "bg-violet-100 text-violet-700", applies: "Cotton jerseys, woven shirts, denim" },
+  { code: "PS", name: "Peached / Sueded", desc: "Micro-sanding raises short fibres for velvety, soft surface texture", color: "bg-purple-100 text-purple-700", applies: "Casual shirts, trousers, outerwear, chinos" },
+  { code: "BR", name: "Brushed", desc: "Mechanical brushing raises fleece back fibres for improved insulation", color: "bg-fuchsia-100 text-fuchsia-700", applies: "Sweatshirts, hoodies, sweatpants — brushed fleece back" },
+  { code: "MW", name: "Moisture Wicking", desc: "Hydrophilic treatment for performance fabrics — moisture transport away from skin", color: "bg-teal-100 text-teal-700", applies: "Activewear, polo shirts, sports T-shirts, performance knits" },
+  { code: "MC", name: "Mercerized", desc: "Caustic soda treatment swells cotton fibres — increased lustre and dye uptake", color: "bg-emerald-100 text-emerald-700", applies: "Formal & dress shirts, polo shirts, premium cotton wovens" },
+  { code: "WR", name: "Wrinkle Resistant", desc: "Cross-linking agents reduce crease angle recovery for easy-care programmes", color: "bg-green-100 text-green-700", applies: "Formal shirts, casual shirts, trousers, chinos, woven fabrics" },
+  { code: "AN", name: "Anti-Static", desc: "Conductive fibre treatment prevents static charge build-up in synthetic blends", color: "bg-lime-100 text-lime-700", applies: "Workwear, uniforms, synthetic & poly-blend fabrics" },
+  { code: "AO", name: "Anti-Odor / Antimicrobial", desc: "Silver-ion or zinc pyrithione treatment inhibits bacterial growth and odour formation", color: "bg-cyan-100 text-cyan-700", applies: "Activewear, socks, sports garments, workwear" },
+  { code: "DW", name: "DWR / Water Repellent", desc: "C6 fluorocarbon-free DWR treatment causes water to bead and roll off — tested to EN 14360", color: "bg-blue-100 text-blue-700", applies: "Workwear jackets, cargo pants, shorts, outdoor apparel" },
+  { code: "FR", name: "Flame Retardant (FR)", desc: "Phosphorus-based FR treatment to BS EN ISO 15025 / NFPA 2112 for industrial and protective programmes", color: "bg-red-100 text-red-700", applies: "Workwear only — not applicable to general apparel" },
 ];
 
 const DYE_METHODS = [
@@ -1352,12 +1352,13 @@ export default function ApparelFabricContent() {
                 className="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex flex-col gap-3"
               >
                 <div className="flex items-center gap-3">
-                  <span className={`w-10 h-10 rounded-xl text-sm font-bold flex items-center justify-center ${f.color}`}>
+                  <span className={`w-10 h-10 rounded-xl text-sm font-bold flex items-center justify-center shrink-0 ${f.color}`}>
                     {f.code}
                   </span>
                   <h3 className="font-bold text-navy-900 text-base leading-tight">{f.name}</h3>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">{f.desc}</p>
+                <p className="text-xs text-gray-400 font-medium border-t border-gray-200 pt-2">Applies to: {f.applies}</p>
               </motion.div>
             ))}
           </div>
@@ -1751,13 +1752,13 @@ export default function ApparelFabricContent() {
       </section>
 
       {/* PAGE BOXES */}
-      <section className="bg-gray-50 py-16 border-t border-gray-100">
+      <section className="py-20 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-1">Explore Related Products</p>
-            <h2 className="text-2xl font-bold text-navy-900">Related Fabric &amp; Apparel</h2>
+          <div className="text-center mb-12">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Explore Related Products</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Related Fabric &amp; Apparel</h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {PAGE_BOXES.map((card, i) => (
               <motion.div
                 key={card.title}
@@ -1780,7 +1781,7 @@ export default function ApparelFabricContent() {
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <h3 className="text-white font-bold text-base leading-tight mb-1">{card.title}</h3>
+                    <h3 className="text-white font-bold text-lg mb-1">{card.title}</h3>
                     <p className="text-gray-300 text-xs leading-relaxed mb-2">{card.desc}</p>
                     <span className="inline-flex items-center gap-1.5 text-gold text-xs font-semibold group-hover:gap-3 transition-all duration-200">
                       {card.cta} →
