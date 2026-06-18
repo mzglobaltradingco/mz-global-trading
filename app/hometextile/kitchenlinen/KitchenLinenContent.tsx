@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 const PRODUCTS = [
   {
     href: "/hometextile/kitchenlinen/kitchentowels/",
+    img: "/images/hero/hero-home-textiles.webp",
     emoji: "🧺",
     name: "Kitchen Towels",
     tagline: "Waffle, Huck & Terry Weave",
@@ -18,6 +19,7 @@ const PRODUCTS = [
   },
   {
     href: "/hometextile/kitchenlinen/barmops/",
+    img: "/images/hero/hero-home-textiles.webp",
     emoji: "🍽️",
     name: "Bar Mops",
     tagline: "Heavy Terry — Commercial Grade",
@@ -29,6 +31,7 @@ const PRODUCTS = [
   },
   {
     href: "/hometextile/kitchenlinen/aprons/",
+    img: "/images/hero/hero-apparel.webp",
     emoji: "👨‍🍳",
     name: "Aprons",
     tagline: "Canvas, Denim & Terry Constructions",
@@ -40,6 +43,7 @@ const PRODUCTS = [
   },
   {
     href: "/hometextile/kitchenlinen/potholders/",
+    img: "/images/hero/hero-home-textiles.webp",
     emoji: "🔥",
     name: "Pot Holders",
     tagline: "Heat-Resistant, Silicone-Lined Options",
@@ -250,8 +254,18 @@ export default function KitchenLinenContent() {
               >
                 <Link
                   href={p.href}
-                  className={`group flex flex-col gap-4 bg-gradient-to-br ${p.color} border ${p.border} rounded-2xl p-7 hover:shadow-lg transition-all duration-300 h-full`}
+                  className={`group flex flex-col bg-gradient-to-br ${p.color} border ${p.border} rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full`}
                 >
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={p.img}
+                      fill
+                      alt={`Pakistan ${p.name.toLowerCase()} manufacturer — OEM supplier for international buyers`}
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                  <div className="p-7 flex flex-col gap-4 flex-1">
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex items-center gap-3">
                       <span className="text-3xl" aria-hidden="true">{p.emoji}</span>
@@ -281,6 +295,7 @@ export default function KitchenLinenContent() {
                     <span className="text-sm font-semibold text-navy-900 group-hover:text-gold transition-colors whitespace-nowrap ml-3">
                       View Details →
                     </span>
+                  </div>
                   </div>
                 </Link>
               </motion.div>

@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 const PRODUCTS = [
   {
     href: "/hometextile/industriallinen/shoptowels/",
+    img: "/images/hero/hero-home-textiles.webp",
     title: "Shop Towels",
     subtitle: "Heavy Cotton Terry & Huck Weave",
     desc: "The workhorse of automotive and industrial maintenance. Heavy cotton terry loop absorbs oil, grease and solvent residues in workshops, print shops and food processing facilities. 300–450 GSM. ISO 9001, BSCI, WRAP.",
@@ -21,6 +22,7 @@ const PRODUCTS = [
   },
   {
     href: "/hometextile/industriallinen/fendercovers/",
+    img: "/images/hero/hero-home-textiles.webp",
     title: "Fender Covers",
     subtitle: "Knitted Terry Stretch & Non-Scratch",
     desc: "Precision-fit automotive protection textile. Knitted terry stretch construction forms over any fender profile without slippage — protecting vehicle paintwork during mechanical, suspension and brake work. 300–400 GSM.",
@@ -93,7 +95,17 @@ export default function IndustrialLinenContent() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {PRODUCTS.map((p, i) => (
               <motion.div key={p.href} initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55, delay: i * 0.1 }}
-                className={`bg-gradient-to-br ${p.color} border ${p.border} rounded-2xl p-8 flex flex-col gap-5`}>
+                className={`bg-gradient-to-br ${p.color} border ${p.border} rounded-2xl overflow-hidden flex flex-col`}>
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={p.img}
+                    fill
+                    alt={`Pakistan ${p.title.toLowerCase()} manufacturer — OEM supplier for international buyers`}
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+                <div className="p-8 flex flex-col gap-5 flex-1">
                 <div className="flex items-start gap-4">
                   <span className="text-3xl" aria-hidden="true">{p.icon}</span>
                   <div className="flex-1">
@@ -115,6 +127,7 @@ export default function IndustrialLinenContent() {
                   <Link href={p.href} className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy-900 hover:text-gold transition-colors">
                     View Full Spec <span aria-hidden="true">→</span>
                   </Link>
+                </div>
                 </div>
               </motion.div>
             ))}

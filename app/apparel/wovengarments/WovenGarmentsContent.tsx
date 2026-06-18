@@ -8,6 +8,7 @@ const PRODUCTS = [
   {
     name: "Denim Jeans",
     slug: "denimjeans",
+    img: "/images/hero/hero-denim-jeans.webp",
     desc: "3×1 twill denim in 8–14 oz weights. Rigid, stretch (elastane) and sustainable selvedge options. All washes and treatments.",
     spec: "8–14 oz Denim · Rigid & Stretch",
     badge: "High Demand",
@@ -17,6 +18,7 @@ const PRODUCTS = [
   {
     name: "Formal & Casual Shirts",
     slug: "formalcasualshirts",
+    img: "/images/hero/hero-formal-casual-shirts.webp",
     desc: "Poplin, Oxford weave, end-on-end and twill shirting. Dress, classic and slim fit silhouettes for retail and corporate.",
     spec: "100–160 GSM · Poplin · Oxford",
     badge: "",
@@ -26,6 +28,7 @@ const PRODUCTS = [
   {
     name: "Pants & Trousers",
     slug: "pantsandtrousers",
+    img: "/images/hero/hero-pants-trousers.webp",
     desc: "Chino twill, canvas and ponte constructions. Flat-front and pleated options. Retail, workwear and corporate programmes.",
     spec: "200–320 GSM · Twill · Canvas",
     badge: "",
@@ -35,6 +38,7 @@ const PRODUCTS = [
   {
     name: "Cargo Pants",
     slug: "cargopants",
+    img: "/images/hero/hero-cargo-pants.webp",
     desc: "Heavy canvas and ripstop constructions with multi-pocket configurations. Workwear, tactical and outdoor market applications.",
     spec: "280–420 GSM · Canvas · Ripstop",
     badge: "Workwear Leader",
@@ -44,6 +48,7 @@ const PRODUCTS = [
   {
     name: "Shorts",
     slug: "shorts",
+    img: "/images/hero/hero-shorts.webp",
     desc: "Chino, cargo, swim and athletic woven shorts. Multiple inseam lengths and closure options for seasonal programmes.",
     spec: "160–300 GSM · Chino · Canvas",
     badge: "S/S Favourite",
@@ -212,22 +217,33 @@ export default function WovenGarmentsContent() {
               >
                 <Link
                   href={`/apparel/wovengarments/${p.slug}/`}
-                  className={`group block border rounded-2xl p-6 h-full transition-all hover:shadow-md hover:-translate-y-0.5 ${p.color}`}
+                  className={`group block border rounded-2xl overflow-hidden h-full transition-all hover:shadow-md hover:-translate-y-0.5 ${p.color}`}
                 >
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-bold text-navy-900 group-hover:text-gold transition-colors">{p.name}</h3>
-                    {p.badge && (
-                      <span className="text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full shrink-0 ml-2">
-                        {p.badge}
-                      </span>
-                    )}
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={p.img}
+                      fill
+                      alt={`Pakistan ${p.name.toLowerCase()} manufacturer — OEM supplier for international buyers`}
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
                   </div>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">{p.desc}</p>
-                  <p className={`text-xs font-semibold ${p.accent} mb-4`}>{p.spec}</p>
-                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-navy-900 group-hover:text-gold transition-colors">
-                    Explore {p.name}
-                    <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
-                  </span>
+                  <div className="p-6 flex flex-col">
+                    <div className="flex items-start justify-between mb-3">
+                      <h3 className="text-lg font-bold text-navy-900 group-hover:text-gold transition-colors">{p.name}</h3>
+                      {p.badge && (
+                        <span className="text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full shrink-0 ml-2">
+                          {p.badge}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4">{p.desc}</p>
+                    <p className={`text-xs font-semibold ${p.accent} mb-4`}>{p.spec}</p>
+                    <span className="inline-flex items-center gap-1 text-sm font-semibold text-navy-900 group-hover:text-gold transition-colors">
+                      Explore {p.name}
+                      <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
+                    </span>
+                  </div>
                 </Link>
               </motion.div>
             ))}

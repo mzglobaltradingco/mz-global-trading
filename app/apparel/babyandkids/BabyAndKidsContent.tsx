@@ -8,6 +8,7 @@ const PRODUCTS = [
   {
     name: "T-Shirts for Kids",
     slug: "tshirtsforkids",
+    img: "/images/hero/hero-t-shirts.webp",
     desc: "Soft combed cotton single jersey. Crew neck and V-neck. Sizes 0–12 years. GOTS organic option. Safe for sensitive skin.",
     spec: "140–180 GSM · Combed Jersey · 0–12 yrs",
     badge: "Best Seller",
@@ -17,6 +18,7 @@ const PRODUCTS = [
   {
     name: "Swaddle Muslin Fabric",
     slug: "swaddlemuslinfabric",
+    img: "/images/hero/hero-home-textiles.webp",
     desc: "4-layer muslin gauze in 100% GOTS organic cotton. Pre-washed, ultra-soft. Swaddle blankets, wraps and bedding.",
     spec: "100–140 GSM · 4-Layer Muslin · GOTS",
     badge: "GOTS Certified",
@@ -26,6 +28,7 @@ const PRODUCTS = [
   {
     name: "Overalls",
     slug: "overalls",
+    img: "/images/hero/hero-apparel.webp",
     desc: "100% cotton interlock and rib. Snap closures for easy nappy changes. Sizes 0–24 months and 2–6 years.",
     spec: "180–220 GSM · Interlock · Snap Closure",
     badge: "",
@@ -35,6 +38,7 @@ const PRODUCTS = [
   {
     name: "Baby Rompers",
     slug: "babyrompers",
+    img: "/images/hero/hero-apparel.webp",
     desc: "Envelope neck, kimono wrap and snap-front styles. Interlock and jersey constructions. 0–24 months.",
     spec: "160–200 GSM · Jersey · Interlock",
     badge: "Retail Favourite",
@@ -44,6 +48,7 @@ const PRODUCTS = [
   {
     name: "Baby Bibs",
     slug: "babybibs",
+    img: "/images/hero/hero-home-textiles.webp",
     desc: "Terry-backed cotton bibs in snap and tie closures. Drool, feeding and bandana styles. Embroidery and print options.",
     spec: "200–280 GSM · Terry Backed · Cotton",
     badge: "",
@@ -53,6 +58,7 @@ const PRODUCTS = [
   {
     name: "Baby Hooded Towels",
     slug: "babyhoodedtowels",
+    img: "/images/hero/hero-towels.webp",
     desc: "Premium terry loop with woven hood panel. 300–500 GSM. Reactive print, embroidery and plain options. Newborn to 4 years.",
     spec: "300–500 GSM · Terry · Hood Panel",
     badge: "",
@@ -222,8 +228,18 @@ export default function BabyAndKidsContent() {
               >
                 <Link
                   href={`/apparel/babyandkids/${p.slug}/`}
-                  className={`group block border rounded-2xl p-6 h-full transition-all hover:shadow-md hover:-translate-y-0.5 ${p.color}`}
+                  className={`group block border rounded-2xl overflow-hidden h-full transition-all hover:shadow-md hover:-translate-y-0.5 ${p.color}`}
                 >
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={p.img}
+                      fill
+                      alt={`Pakistan ${p.name.toLowerCase()} manufacturer — OEM supplier for international buyers`}
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                  <div className="p-6 flex flex-col">
                   <div className="flex items-start justify-between mb-3">
                     <h3 className="text-lg font-bold text-navy-900 group-hover:text-gold transition-colors">{p.name}</h3>
                     {p.badge && (
@@ -238,6 +254,7 @@ export default function BabyAndKidsContent() {
                     Explore {p.name}
                     <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
                   </span>
+                  </div>
                 </Link>
               </motion.div>
             ))}

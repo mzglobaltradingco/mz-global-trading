@@ -8,6 +8,7 @@ const PRODUCTS = [
   {
     name: "Table Covers",
     href: "/hometextile/tablelinen/tablecovers/",
+    img: "/images/hero/hero-home-textiles.webp",
     desc: "Cotton damask, jacquard, satin weave and poly-cotton easy-care. Standard and custom rectangular, round and square dimensions. Wrinkle-resistant and stain-repellent finish options.",
     constructions: ["Cotton Damask", "Jacquard Woven", "Satin Weave", "Poly-Cotton"],
     markets: "Hotels · Restaurants · Events · Airlines",
@@ -164,8 +165,18 @@ export default function TableLinenContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-amber-50 border border-amber-100 rounded-2xl p-8 flex flex-col md:flex-row gap-6"
+                className="bg-amber-50 border border-amber-100 rounded-2xl overflow-hidden"
               >
+                <div className="relative h-56 overflow-hidden">
+                  <Image
+                    src={p.img}
+                    fill
+                    alt={`Pakistan ${p.name.toLowerCase()} manufacturer — OEM supplier for international buyers`}
+                    className="object-cover"
+                    sizes="100vw"
+                  />
+                </div>
+                <div className="p-8 flex flex-col md:flex-row gap-6">
                 <div className="flex-1">
                   <span className="inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full mb-3">
                     {p.tag}
@@ -188,6 +199,7 @@ export default function TableLinenContent() {
                   >
                     Explore {p.name} <span aria-hidden="true">&#8594;</span>
                   </Link>
+                </div>
                 </div>
               </motion.div>
             ))}

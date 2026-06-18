@@ -8,6 +8,7 @@ const PRODUCTS = [
   {
     name: "T-Shirts",
     slug: "tshirts",
+    img: "/images/hero/hero-t-shirts.webp",
     desc: "Single jersey, pique and slub jersey constructions. 160–220 GSM. Retail, promotional and corporate programmes.",
     spec: "160–220 GSM · Single Jersey · Pique",
     badge: "High Volume",
@@ -17,6 +18,7 @@ const PRODUCTS = [
   {
     name: "Polo Shirts",
     slug: "poloshirts",
+    img: "/images/hero/hero-polo-shirts.webp",
     desc: "Pique polo and stretch performance constructions. Rib collar and cuffs. Corporate, sport and retail programmes.",
     spec: "180–240 GSM · Pique · Performance",
     badge: "Corporate Favourite",
@@ -26,6 +28,7 @@ const PRODUCTS = [
   {
     name: "Henley Shirts",
     slug: "henleyshirts",
+    img: "/images/hero/hero-henley-shirts.webp",
     desc: "Single jersey, waffle knit, rib and French terry. 2–4 button placket. Fashion retail and workwear.",
     spec: "160–320 GSM · 4 Constructions",
     badge: "",
@@ -35,6 +38,7 @@ const PRODUCTS = [
   {
     name: "Sweatshirts & Hoodies",
     slug: "sweatshirtshoodies",
+    img: "/images/hero/hero-sweatshirts-hoodies.webp",
     desc: "Loop back fleece, French terry and brushed 3-end fleece. Pullover, zip-front and half-zip options.",
     spec: "280–450 GSM · French Terry · Fleece",
     badge: "A/W Leader",
@@ -44,6 +48,7 @@ const PRODUCTS = [
   {
     name: "Sweatpants & Joggers",
     slug: "sweatpantsjoggers",
+    img: "/images/hero/hero-sweatpants-joggers.webp",
     desc: "Loop back and French terry bottoms with elasticated waistband. Regular, slim and athletic fits.",
     spec: "280–380 GSM · Loop Back · French Terry",
     badge: "",
@@ -53,6 +58,7 @@ const PRODUCTS = [
   {
     name: "Tank Tops",
     slug: "tanktops",
+    img: "/images/hero/hero-tank-tops.webp",
     desc: "Single jersey, rib and athletic mesh constructions. Racerback, Y-back and standard silhouettes.",
     spec: "140–200 GSM · Jersey · Rib · Mesh",
     badge: "",
@@ -221,22 +227,33 @@ export default function KnittedGarmentsContent() {
               >
                 <Link
                   href={`/apparel/knittedgarments/${p.slug}/`}
-                  className={`group block border rounded-2xl p-6 h-full transition-all hover:shadow-md hover:-translate-y-0.5 ${p.color}`}
+                  className={`group block border rounded-2xl overflow-hidden h-full transition-all hover:shadow-md hover:-translate-y-0.5 ${p.color}`}
                 >
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-bold text-navy-900 group-hover:text-gold transition-colors">{p.name}</h3>
-                    {p.badge && (
-                      <span className="text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full shrink-0 ml-2">
-                        {p.badge}
-                      </span>
-                    )}
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={p.img}
+                      fill
+                      alt={`Pakistan ${p.name.toLowerCase()} manufacturer — OEM supplier for international buyers`}
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
                   </div>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">{p.desc}</p>
-                  <p className={`text-xs font-semibold ${p.accent} mb-4`}>{p.spec}</p>
-                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-navy-900 group-hover:text-gold transition-colors">
-                    Explore {p.name}
-                    <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
-                  </span>
+                  <div className="p-6 flex flex-col">
+                    <div className="flex items-start justify-between mb-3">
+                      <h3 className="text-lg font-bold text-navy-900 group-hover:text-gold transition-colors">{p.name}</h3>
+                      {p.badge && (
+                        <span className="text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full shrink-0 ml-2">
+                          {p.badge}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4">{p.desc}</p>
+                    <p className={`text-xs font-semibold ${p.accent} mb-4`}>{p.spec}</p>
+                    <span className="inline-flex items-center gap-1 text-sm font-semibold text-navy-900 group-hover:text-gold transition-colors">
+                      Explore {p.name}
+                      <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
+                    </span>
+                  </div>
                 </Link>
               </motion.div>
             ))}

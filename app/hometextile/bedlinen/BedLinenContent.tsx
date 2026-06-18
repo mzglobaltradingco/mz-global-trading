@@ -8,6 +8,7 @@ const PRODUCTS = [
   {
     name: "Bedsheets",
     slug: "bedsheets",
+    img: "/images/hero/hero-bedsheets.webp",
     desc: "Percale and sateen constructions in 200–800 TC. Cotton, cotton-polyester and microfiber. All standard international sizes.",
     spec: "200–800 TC · Percale · Sateen · Microfiber",
     badge: "Highest Volume",
@@ -17,6 +18,7 @@ const PRODUCTS = [
   {
     name: "Fitted Sheets",
     slug: "fittedsheets",
+    img: "/images/hero/hero-fitted-sheets.webp",
     desc: "Deep pocket options (25–40 cm) in percale and sateen. All-around elastic and split-corner options for hospitality.",
     spec: "200–600 TC · Deep Pocket · All-Around Elastic",
     badge: "Hotel Spec",
@@ -26,6 +28,7 @@ const PRODUCTS = [
   {
     name: "Duvet Covers",
     slug: "duvetcovers",
+    img: "/images/hero/hero-duvet-covers.webp",
     desc: "Button, snap, zip and tie closure duvet covers. Percale, sateen and microfiber. Retail and hospitality programmes.",
     spec: "200–600 TC · 4 Closure Types",
     badge: "",
@@ -35,6 +38,7 @@ const PRODUCTS = [
   {
     name: "Pillow Covers",
     slug: "pillowcovers",
+    img: "/images/hero/hero-pillow-covers.webp",
     desc: "Standard, Oxford and envelope styles in all thread counts. Coordinated to bedsheet and duvet cover programmes.",
     spec: "200–800 TC · Standard · Oxford · Envelope",
     badge: "",
@@ -44,6 +48,7 @@ const PRODUCTS = [
   {
     name: "Cushion Covers",
     slug: "cushioncovers",
+    img: "/images/hero/hero-cushion-covers.webp",
     desc: "Decorative cushion covers in jacquard, embroidered, printed and woven constructions. Hospitality and retail.",
     spec: "Jacquard · Embroidered · Printed",
     badge: "Decorative Range",
@@ -53,6 +58,7 @@ const PRODUCTS = [
   {
     name: "Curtains",
     slug: "curtains",
+    img: "/images/hero/hero-curtains.webp",
     desc: "Eyelet, pencil pleat and pinch pleat curtains in blackout, sheer and semi-sheer weights. Hospitality and retail.",
     spec: "Blackout · Sheer · Eyelet · Pencil Pleat",
     badge: "",
@@ -62,6 +68,7 @@ const PRODUCTS = [
   {
     name: "Institutional Bedding",
     slug: "institutionalbedding",
+    img: "/images/hero/hero-institutional-towels.webp",
     desc: "ISO-grade flat sheets, fitted sheets and pillow covers for hospitals, hotels and government facilities. White, plain.",
     spec: "Plain White · Durable Press · ISO Grade",
     badge: "Institutional",
@@ -231,22 +238,33 @@ export default function BedLinenContent() {
               >
                 <Link
                   href={`/hometextile/bedlinen/${p.slug}/`}
-                  className={`group block border rounded-2xl p-6 h-full transition-all hover:shadow-md hover:-translate-y-0.5 ${p.color}`}
+                  className={`group block border rounded-2xl overflow-hidden h-full transition-all hover:shadow-md hover:-translate-y-0.5 ${p.color}`}
                 >
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-bold text-navy-900 group-hover:text-gold transition-colors">{p.name}</h3>
-                    {p.badge && (
-                      <span className="text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full shrink-0 ml-2">
-                        {p.badge}
-                      </span>
-                    )}
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={p.img}
+                      fill
+                      alt={`Pakistan ${p.name.toLowerCase()} manufacturer — OEM supplier for international buyers`}
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
                   </div>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">{p.desc}</p>
-                  <p className={`text-xs font-semibold ${p.accent} mb-4`}>{p.spec}</p>
-                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-navy-900 group-hover:text-gold transition-colors">
-                    Explore {p.name}
-                    <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
-                  </span>
+                  <div className="p-6 flex flex-col">
+                    <div className="flex items-start justify-between mb-3">
+                      <h3 className="text-lg font-bold text-navy-900 group-hover:text-gold transition-colors">{p.name}</h3>
+                      {p.badge && (
+                        <span className="text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full shrink-0 ml-2">
+                          {p.badge}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4">{p.desc}</p>
+                    <p className={`text-xs font-semibold ${p.accent} mb-4`}>{p.spec}</p>
+                    <span className="inline-flex items-center gap-1 text-sm font-semibold text-navy-900 group-hover:text-gold transition-colors">
+                      Explore {p.name}
+                      <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
+                    </span>
+                  </div>
                 </Link>
               </motion.div>
             ))}

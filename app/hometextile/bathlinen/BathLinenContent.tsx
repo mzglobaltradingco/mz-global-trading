@@ -8,6 +8,7 @@ const PRODUCTS = [
   {
     name: "Towels",
     slug: "towels",
+    img: "/images/hero/hero-towels.webp",
     desc: "Terry loop bath towels in 300–900 GSM. Velour, zero-twist and waffle options. Hotel, retail and promotional programmes.",
     spec: "300–900 GSM · Terry · Velour · Zero-Twist",
     badge: "Highest Volume",
@@ -17,6 +18,7 @@ const PRODUCTS = [
   {
     name: "Institutional Towels",
     slug: "institutionaltowels",
+    img: "/images/hero/hero-institutional-towels.webp",
     desc: "300–550 GSM plain and dobby-border towels for healthcare, hospitality and government procurement.",
     spec: "300–550 GSM · Plain White · Dobby Border",
     badge: "Institutional Grade",
@@ -26,6 +28,7 @@ const PRODUCTS = [
   {
     name: "Bathrobes",
     slug: "bathrobes",
+    img: "/images/hero/hero-bathrobes.webp",
     desc: "Shawl collar, kimono and hooded styles in terry loop and velour. 300–600 GSM. Hotel and spa programmes.",
     spec: "300–600 GSM · Shawl · Kimono · Hooded",
     badge: "Hotel Specialist",
@@ -35,6 +38,7 @@ const PRODUCTS = [
   {
     name: "Bath Mats",
     slug: "bathmats",
+    img: "/images/hero/hero-bath-mats.webp",
     desc: "Woven terry, tufted and memory foam-backed options. Anti-slip rubber or latex backing. 800–1800 GSM.",
     spec: "800–1800 GSM · Anti-Slip · Multiple Constructions",
     badge: "",
@@ -44,6 +48,7 @@ const PRODUCTS = [
   {
     name: "Beach & Pool Towels",
     slug: "beachpooltowel",
+    img: "/images/hero/hero-beach-pool-towels.webp",
     desc: "Velour-faced reactive-printed and yarn-dyed beach towels. Jacquard and dobby constructions. 300–500 GSM.",
     spec: "300–500 GSM · Velour · Reactive Print",
     badge: "S/S Specialist",
@@ -213,22 +218,33 @@ export default function BathLinenContent() {
               >
                 <Link
                   href={`/hometextile/bathlinen/${p.slug}/`}
-                  className={`group block border rounded-2xl p-6 h-full transition-all hover:shadow-md hover:-translate-y-0.5 ${p.color}`}
+                  className={`group block border rounded-2xl overflow-hidden h-full transition-all hover:shadow-md hover:-translate-y-0.5 ${p.color}`}
                 >
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-bold text-navy-900 group-hover:text-gold transition-colors">{p.name}</h3>
-                    {p.badge && (
-                      <span className="text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full shrink-0 ml-2">
-                        {p.badge}
-                      </span>
-                    )}
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={p.img}
+                      fill
+                      alt={`Pakistan ${p.name.toLowerCase()} manufacturer — OEM supplier for international buyers`}
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
                   </div>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">{p.desc}</p>
-                  <p className={`text-xs font-semibold ${p.accent} mb-4`}>{p.spec}</p>
-                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-navy-900 group-hover:text-gold transition-colors">
-                    Explore {p.name}
-                    <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
-                  </span>
+                  <div className="p-6 flex flex-col">
+                    <div className="flex items-start justify-between mb-3">
+                      <h3 className="text-lg font-bold text-navy-900 group-hover:text-gold transition-colors">{p.name}</h3>
+                      {p.badge && (
+                        <span className="text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full shrink-0 ml-2">
+                          {p.badge}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4">{p.desc}</p>
+                    <p className={`text-xs font-semibold ${p.accent} mb-4`}>{p.spec}</p>
+                    <span className="inline-flex items-center gap-1 text-sm font-semibold text-navy-900 group-hover:text-gold transition-colors">
+                      Explore {p.name}
+                      <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
+                    </span>
+                  </div>
                 </Link>
               </motion.div>
             ))}

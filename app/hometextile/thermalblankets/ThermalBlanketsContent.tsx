@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 const PRODUCTS = [
   {
     href: "/hometextile/thermalblankets/cellularthermalblanket/",
+    img: "/images/hero/hero-home-textiles.webp",
     title: "Cellular Thermal Blanket",
     subtitle: "100% Cotton Open-Cell Weave",
     desc: "The clinical-grade standard for NHS and global hospital procurement. Open honeycomb weave breathes, resists moisture build-up and withstands repeated 60–90°C laundering. OEKO-TEX, GOTS, ISO 9001.",
@@ -21,6 +22,7 @@ const PRODUCTS = [
   },
   {
     href: "/hometextile/thermalblankets/fleecethermalblankets/",
+    img: "/images/hero/hero-home-textiles.webp",
     title: "Fleece Thermal Blankets",
     subtitle: "Anti-Pill Polar Fleece & Variants",
     desc: "High-volume retail, promotional and institutional blanket programmes. Anti-pill polar fleece, sherpa double-sided and jacquard woven options. GRS recycled polyester available. OEKO-TEX, BSCI, WRAP.",
@@ -123,8 +125,18 @@ export default function ThermalBlanketsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.55, delay: i * 0.1 }}
-                className={`bg-gradient-to-br ${p.color} border ${p.border} rounded-2xl p-8 flex flex-col gap-5`}
+                className={`bg-gradient-to-br ${p.color} border ${p.border} rounded-2xl overflow-hidden flex flex-col`}
               >
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={p.img}
+                    fill
+                    alt={`Pakistan ${p.title.toLowerCase()} manufacturer — OEM supplier for international buyers`}
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+                <div className="p-8 flex flex-col gap-5 flex-1">
                 <div className="flex items-start gap-4">
                   <span className="text-3xl" aria-hidden="true">{p.icon}</span>
                   <div className="flex-1">
@@ -151,6 +163,7 @@ export default function ThermalBlanketsContent() {
                   >
                     View Full Spec <span aria-hidden="true">→</span>
                   </Link>
+                </div>
                 </div>
               </motion.div>
             ))}

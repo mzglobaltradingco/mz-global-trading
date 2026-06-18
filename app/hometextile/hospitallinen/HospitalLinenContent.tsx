@@ -8,6 +8,7 @@ const PRODUCTS = [
   {
     name: "Doctor Surgical Gowns",
     href: "/hometextile/hospitallinen/doctorsurgicalgowns/",
+    img: "/images/hero/hero-home-textiles.webp",
     desc: "Reusable and disposable surgical gowns in TC 65/35 poly-cotton and 100% cotton. Anti-bacterial, fluid repellent, autoclave-safe finishes. ISO 13485 and EN 13795 compliant.",
     specs: ["TC 65/35 Poly-Cotton", "100% Cotton", "Non-Woven Disposable"],
     market: "Hospitals · Surgical Centres · Medical Distributors",
@@ -15,6 +16,7 @@ const PRODUCTS = [
   {
     name: "Medical Scrubs",
     href: "/hometextile/hospitallinen/medicalscrubs/",
+    img: "/images/hero/hero-apparel.webp",
     desc: "Twill poly-cotton and 4-way stretch scrubs for clinical staff. Anti-bacterial, moisture-wicking, fluid-repellent finish. Embroidery and custom colour programmes available.",
     specs: ["Twill TC 65/35", "100% Cotton Twill", "4-Way Stretch"],
     market: "Hospitals · Clinics · Nursing Homes · Dental Practices",
@@ -22,6 +24,7 @@ const PRODUCTS = [
   {
     name: "Patient Gowns",
     href: "/hometextile/hospitallinen/patientgowns/",
+    img: "/images/hero/hero-home-textiles.webp",
     desc: "Plain weave cotton and poly-cotton patient gowns for hospital wards and aged-care facilities. Autoclave-compatible. Adult and pediatric sizes with printed options for children's wards.",
     specs: ["100% Cotton Plain Weave", "TC Poly-Cotton", "Jersey Knit Wrap-Style"],
     market: "Hospitals · Aged Care · Outpatient Facilities",
@@ -29,6 +32,7 @@ const PRODUCTS = [
   {
     name: "Surgical Huck Towels",
     href: "/hometextile/hospitallinen/surgicalhucktowels/",
+    img: "/images/hero/hero-towels.webp",
     desc: "100% cotton honeycomb huck weave. Pre-washed, lint-free, high absorbency. The defining construction for operating theatre supply. Plain white and blue stripe variants.",
     specs: ["Huck / Honeycomb Weave", "100% Cotton", "Pre-Washed / Lint-Free"],
     market: "Operating Theatres · CSSD · Medical Distributors",
@@ -158,8 +162,18 @@ export default function HospitalLinenContent() {
               <motion.div
                 key={p.name}
                 initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-blue-50 border border-blue-100 rounded-2xl p-7 flex flex-col gap-4"
+                className="bg-blue-50 border border-blue-100 rounded-2xl overflow-hidden flex flex-col"
               >
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={p.img}
+                    fill
+                    alt={`Pakistan ${p.name.toLowerCase()} manufacturer — OEM supplier for international buyers`}
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                  />
+                </div>
+                <div className="p-7 flex flex-col gap-4">
                 <h3 className="text-xl font-bold text-navy-900">{p.name}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed flex-1">{p.desc}</p>
                 <div className="flex flex-wrap gap-2">
@@ -171,6 +185,7 @@ export default function HospitalLinenContent() {
                 <Link href={p.href} className="self-start inline-flex items-center gap-2 bg-navy-900 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-gold hover:text-navy-900 transition-colors text-sm">
                   Explore {p.name} <span aria-hidden="true">&#8594;</span>
                 </Link>
+                </div>
               </motion.div>
             ))}
           </div>
