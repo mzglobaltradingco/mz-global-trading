@@ -1,0 +1,160 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+const PRODUCTS = [
+  {
+    href: "/hometextile/industriallinen/shoptowels/",
+    title: "Shop Towels",
+    subtitle: "Heavy Cotton Terry & Huck Weave",
+    desc: "The workhorse of automotive and industrial maintenance. Heavy cotton terry loop absorbs oil, grease and solvent residues in workshops, print shops and food processing facilities. 300–450 GSM. ISO 9001, BSCI, WRAP.",
+    gsm: "300–450 GSM",
+    badge: "USA Market Leader",
+    badgeColor: "bg-slate-100 text-slate-700",
+    sectors: ["Auto Workshops", "Dealerships", "Industrial Mfg", "Janitorial Supply"],
+    color: "from-slate-50 to-gray-50",
+    border: "border-slate-200",
+    accent: "text-slate-600",
+    icon: "🔧",
+  },
+  {
+    href: "/hometextile/industriallinen/fendercovers/",
+    title: "Fender Covers",
+    subtitle: "Knitted Terry Stretch & Non-Scratch",
+    desc: "Precision-fit automotive protection textile. Knitted terry stretch construction forms over any fender profile without slippage — protecting vehicle paintwork during mechanical, suspension and brake work. 300–400 GSM.",
+    gsm: "300–400 GSM",
+    badge: "Automotive Grade",
+    badgeColor: "bg-blue-100 text-blue-700",
+    sectors: ["Auto Dealerships", "Body Shops", "Car Washes", "Detailing"],
+    color: "from-blue-50 to-sky-50",
+    border: "border-blue-100",
+    accent: "text-blue-600",
+    icon: "🚗",
+  },
+];
+
+const CAPABILITIES = [
+  { icon: "🏭", title: "50+ Verified Factories", desc: "Pakistan's specialist industrial textile mills — heavy-duty weave and knitted terry construction under one sourcing umbrella." },
+  { icon: "🌍", title: "35+ Export Markets", desc: "Primary markets: USA (large shop towel volume), UK, EU, Australia, Canada, Middle East." },
+  { icon: "📋", title: "ISO 9001 & BSCI", desc: "Consistent quality management and ethical production audit compliance across the industrial linen supply network." },
+  { icon: "⚡", title: "95% On-Time Delivery", desc: "High-volume repeat order programmes with consistent scheduling and turnaround." },
+];
+
+export default function IndustrialLinenContent() {
+  return (
+    <div className="overflow-x-clip">
+      {/* HERO */}
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero/hero-home-textiles.webp"
+            fill
+            alt="Pakistan industrial linen manufacturer — heavy-duty shop towels and automotive fender covers for workshops worldwide"
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-navy-900/80" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
+          <div className="max-w-3xl">
+            <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-5">Pakistan Industrial Textile Export</motion.p>
+            <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65, delay: 0.25 }}
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.08] mb-6">
+              Industrial Linen<br /><span className="text-gold">Manufacturer</span><br />Pakistan
+            </motion.h1>
+            <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}
+              className="text-gray-300 text-lg leading-relaxed mb-8 max-w-xl">
+              Heavy-duty industrial textile products engineered for performance environments — shop towels for the automotive and industrial sector, fender covers for vehicle care professionals. Pakistan-manufactured, ISO 9001 and BSCI certified.
+            </motion.p>
+            <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.7 }}
+              className="flex flex-col sm:flex-row gap-4">
+              <Link href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
+                Request a Quote <span aria-hidden="true">&#8594;</span>
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* PRODUCT TYPES */}
+      <section className="bg-white py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Two Product Lines</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Industrial Textile Programmes</h2>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm leading-relaxed">
+              Different performance requirements, different constructions — both engineered for the demands of professional industrial and automotive environments.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {PRODUCTS.map((p, i) => (
+              <motion.div key={p.href} initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55, delay: i * 0.1 }}
+                className={`bg-gradient-to-br ${p.color} border ${p.border} rounded-2xl p-8 flex flex-col gap-5`}>
+                <div className="flex items-start gap-4">
+                  <span className="text-3xl" aria-hidden="true">{p.icon}</span>
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-center gap-2 mb-1">
+                      <h3 className="text-xl font-bold text-navy-900">{p.title}</h3>
+                      <span className={`text-[11px] font-semibold px-2.5 py-0.5 rounded-full ${p.badgeColor}`}>{p.badge}</span>
+                    </div>
+                    <p className={`text-xs font-semibold ${p.accent} mb-2`}>{p.subtitle}</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm leading-relaxed">{p.desc}</p>
+                <div className="flex flex-wrap gap-2">
+                  {p.sectors.map((s) => (
+                    <span key={s} className="bg-white/70 text-navy-900 text-[11px] font-medium px-2.5 py-1 rounded-lg border border-white/50">{s}</span>
+                  ))}
+                </div>
+                <div className="flex items-center justify-between mt-auto pt-2">
+                  <span className="text-xs text-gray-500 font-medium">{p.gsm}</span>
+                  <Link href={p.href} className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy-900 hover:text-gold transition-colors">
+                    View Full Spec <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CAPABILITIES */}
+      <section className="bg-gray-50 py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Why Source Here</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy-900">Industrial Textile Sourcing Capability</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {CAPABILITIES.map((c, i) => (
+              <motion.div key={c.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+                <span className="text-2xl mb-3 block" aria-hidden="true">{c.icon}</span>
+                <h3 className="text-base font-bold text-navy-900 mb-2">{c.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{c.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-[#0D1B2A] py-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Start Your Programme</p>
+          <h2 className="text-3xl font-bold text-white mb-5">Ready to Source Industrial Textiles from Pakistan?</h2>
+          <p className="text-gray-300 text-sm leading-relaxed mb-8">
+            Submit your specification — product type, construction, GSM, quantity and destination — and receive a detailed quotation within 3–5 business days.
+          </p>
+          <Link href="/rfq/" className="inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold px-10 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
+            Request a Quote <span aria-hidden="true">&#8594;</span>
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+}
