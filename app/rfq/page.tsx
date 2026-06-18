@@ -13,7 +13,13 @@ export const metadata: Metadata = {
     "wholesale textile sourcing",
     "apparel home textile quote",
   ],
-  alternates: { canonical: "/rfq/" },
+  alternates: {
+    canonical: "/rfq/",
+    languages: {
+      "en": "https://mzglobaltrading.com/rfq/",
+      "x-default": "https://mzglobaltrading.com/rfq/",
+    },
+  },
   openGraph: {
     title: "Request a Quote | MZ Global Trading",
     description:

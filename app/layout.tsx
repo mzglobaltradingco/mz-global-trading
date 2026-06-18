@@ -32,6 +32,10 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/",
+    languages: {
+      "en": "https://mzglobaltrading.com/",
+      "x-default": "https://mzglobaltrading.com/",
+    },
     types: {
       "application/rss+xml": [
         { url: "/rss.xml", title: "MZ Global Trading — Knowledge Hub" },

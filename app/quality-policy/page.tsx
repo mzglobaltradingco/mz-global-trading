@@ -6,7 +6,7 @@ import QualityPolicyContent from "./QualityPolicyContent";
 export const metadata: Metadata = {
   title: "Quality Policy | MZ Global Trading",
   description:
-    "MZ Global Trading's formal quality policy — our documented commitment to international standards, pre-shipment inspection and certified factory sourcing for buyers in USA, UK and Europe.",
+    "MZ Global Trading's quality policy — AQL-based inspection, GOTS, OEKO-TEX and ISO 9001 certified production. Covering apparel, home textiles and fabric.",
   keywords: [
     "textile quality policy",
     "quality assurance Pakistan manufacturer",

@@ -6,9 +6,15 @@ import ContactUsContent from "./ContactUsContent";
 export const metadata: Metadata = {
   title: "Contact Us | MZ Global Trading",
   description:
-    "Contact MZ Global Trading — Pakistan's B2B textile sourcing partner for brands and retailers in USA, UK, Canada, Europe and South America. Response within one business day.",
+    "Contact MZ Global Trading — Pakistan's B2B textile sourcing partner for brands and retailers in USA, UK, Canada, Europe and South America.",
   keywords: ["contact MZ Global Trading", "textile sourcing enquiry", "Pakistan textile supplier contact"],
-  alternates: { canonical: "/contact-us/" },
+  alternates: {
+    canonical: "/contact-us/",
+    languages: {
+      "en": "https://mzglobaltrading.com/contact-us/",
+      "x-default": "https://mzglobaltrading.com/contact-us/",
+    },
+  },
   openGraph: {
     title: "Contact Us | MZ Global Trading",
     description:

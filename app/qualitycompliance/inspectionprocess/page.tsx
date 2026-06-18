@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 import InspectionProcessContent from "./InspectionProcessContent";
 
 export const metadata: Metadata = {
-  title: "Inspection Process | Quality & Compliance | MZ Global Trading",
+  title: "Inspection Process | Quality Compliance | MZ Global Trading",
   description:
-    "Step-by-step inspection process at MZ Global Trading — from material receipt to container loading. Every shipment is verified against your approved specifications before it leaves Pakistan.",
+    "Step-by-step inspection process at MZ Global Trading — material receipt to container loading. AQL sampling, inline checks and pre-shipment inspection.",
   keywords: [
     "pre-shipment inspection process Pakistan",
     "textile inspection stages",

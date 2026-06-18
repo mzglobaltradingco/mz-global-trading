@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 import WhyChooseUsContent from "./WhyChooseUsContent";
 
 export const metadata: Metadata = {
-  title: "Why Choose MZ Global Trading | Pakistan Textile Sourcing Partner",
+  title: "Why Choose MZ Global Trading | Textile Sourcing Partner",
   description:
-    "Discover why international buyers choose MZ Global Trading — 50+ vetted factories, ethical sourcing, competitive pricing, 95% on-time delivery and end-to-end custom solutions.",
+    "Discover why international buyers choose MZ Global Trading — 50+ vetted factories, GOTS, OEKO-TEX, BSCI certified. Ethical sourcing from Pakistan.",
   keywords: [
     "why choose MZ Global Trading",
     "certified textile manufacturer Pakistan",

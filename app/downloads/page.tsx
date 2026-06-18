@@ -6,7 +6,7 @@ import DownloadsContent from "./DownloadsContent";
 export const metadata: Metadata = {
   title: "Downloads | MZ Global Trading",
   description:
-    "Free textile trade documents — company profile, AQL tables, inspection checklists, Tech Pack templates and incoterms references. Read online, print or save as PDF.",
+    "Free textile trade documents — company profile, AQL tables, inspection checklists, Tech Pack templates and incoterms references. For B2B buyers.",
   keywords: [
     "textile supplier company profile download",
     "AQL inspection checklist download",
@@ -14,7 +14,13 @@ export const metadata: Metadata = {
     "textile sourcing documentation",
     "Pakistan manufacturer profile PDF",
   ],
-  alternates: { canonical: "/downloads/" },
+  alternates: {
+    canonical: "/downloads/",
+    languages: {
+      "en": "https://mzglobaltrading.com/downloads/",
+      "x-default": "https://mzglobaltrading.com/downloads/",
+    },
+  },
   openGraph: {
     title: "Resource Downloads | MZ Global Trading",
     description:

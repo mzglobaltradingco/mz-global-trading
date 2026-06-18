@@ -6,7 +6,7 @@ import TextileToolsContent from "./TextileToolsContent";
 export const metadata: Metadata = {
   title: "Textile Tools Calculator | MZ Global Trading",
   description:
-    "55+ free textile calculators — order costing, GSM, yarn count, AQL inspection, CBM, landed cost and break-even tools for buyers, merchandisers and factory teams.",
+    "55+ free textile calculators — order costing, GSM, yarn count, AQL inspection, CBM, landed cost and break-even tools for international B2B buyers.",
   keywords: [
     "textile calculator online free",
     "GSM calculator textile",
@@ -19,7 +19,13 @@ export const metadata: Metadata = {
     "SMV calculator garment",
     "fabric booking calculator merchandiser",
   ],
-  alternates: { canonical: "/textile-tools-calculator/" },
+  alternates: {
+    canonical: "/textile-tools-calculator/",
+    languages: {
+      "en": "https://mzglobaltrading.com/textile-tools-calculator/",
+      "x-default": "https://mzglobaltrading.com/textile-tools-calculator/",
+    },
+  },
   openGraph: {
     title: "Textile Tools Calculator | MZ Global Trading",
     description:

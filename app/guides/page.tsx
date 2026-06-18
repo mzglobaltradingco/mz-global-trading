@@ -6,7 +6,7 @@ import GuidesContent from "./GuidesContent";
 export const metadata: Metadata = {
   title: "Sourcing Guides | MZ Global Trading",
   description:
-    "In-depth sourcing guides for textile buyers — AQL inspection, incoterms, Tech Pack writing, GSM selection, certification comparisons and Pakistan sourcing strategy.",
+    "In-depth sourcing guides for textile buyers — AQL, incoterms, Tech Pack writing and GSM selection. Covers apparel, home textiles and fabric sourcing.",
   keywords: [
     "textile sourcing guide",
     "AQL inspection guide buyer",
@@ -15,7 +15,13 @@ export const metadata: Metadata = {
     "incoterms textile importer",
     "Tech Pack template guide",
   ],
-  alternates: { canonical: "/guides/" },
+  alternates: {
+    canonical: "/guides/",
+    languages: {
+      "en": "https://mzglobaltrading.com/guides/",
+      "x-default": "https://mzglobaltrading.com/guides/",
+    },
+  },
   openGraph: {
     title: "Textile Sourcing Guides | MZ Global Trading",
     description:

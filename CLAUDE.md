@@ -138,15 +138,21 @@ import Footer from "@/components/Footer";
 import PageNameContent from "./PageNameContent";
 
 export const metadata: Metadata = {
-  title: "Page Name",
-  description: "130–160 chars for international buyers with primary keyword.",
+  title: "Page Name | MZ Global Trading",          // ≤60 chars — check length before saving
+  description: "130–160 chars for international buyers with primary keyword front-loaded.",
   keywords: ["keyword1", "keyword2"],
-  alternates: { canonical: "/section/page-name/" },
+  alternates: {
+    canonical: "/section/page-name/",              // relative, trailing slash required
+    languages: {
+      "en": "https://mzglobaltrading.com/section/page-name/",
+      "x-default": "https://mzglobaltrading.com/section/page-name/",
+    },
+  },
   openGraph: {
     title: "Page Name | MZ Global Trading",
-    description: "OG description.",
+    description: "OG description — can be up to 200 chars.",
     url: "https://mzglobaltrading.com/section/page-name/",
-    images: [{ url: "/images/og/page-name-og.webp", width: 1200, height: 630, alt: "Alt text" }],
+    images: [{ url: "/images/og/page-name-og.webp", width: 1200, height: 630, alt: "Alt text 80–140 chars" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -163,6 +169,57 @@ export default function PageNamePage() {
         <PageNameContent />
       </main>
       <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",                    // swap for CollectionPage / AboutPage etc as needed
+            name: "Product Name — Pakistan Export",
+            description: "...",
+            image: "https://mzglobaltrading.com/images/og/page-name-og.webp",
+            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            offers: {
+              "@type": "Offer",
+              priceCurrency: "USD",
+              availability: "https://schema.org/InStock",
+              seller: { "@type": "Organization", name: "MZ Global Trading" },
+            },
+            primaryImageOfPage: {
+              "@type": "ImageObject",
+              contentUrl: "https://mzglobaltrading.com/images/og/page-name-og.webp",
+              name: "Descriptive image name",
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
+                { "@type": "ListItem", position: 2, name: "Section", item: "https://mzglobaltrading.com/section/" },
+                { "@type": "ListItem", position: 3, name: "Page Name", item: "https://mzglobaltrading.com/section/page-name/" },
+              ],
+            },
+          }),
+        }}
+      />
+      {/* FAQPage schema — add below Product schema if page has an FAQ section */}
+      {/*
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Question text?",
+                acceptedAnswer: { "@type": "Answer", text: "Answer text." },
+              },
+            ],
+          }),
+        }}
+      />
+      */}
     </>
   );
 }
@@ -173,18 +230,21 @@ export default function PageNamePage() {
 ## Mandatory Checklist — Every Page Before Marking Complete
 
 ### SEO
-- [ ] Unique `title` — format: `"Specific Page Name | MZ Global Trading"`, max 60 chars
-- [ ] Unique `description` — 130–160 chars, includes primary keyword, written for international buyers
-- [ ] `alternates: { canonical: '/page-path/' }` — relative URL with trailing slash
-- [ ] `openGraph` block: title, description, url (absolute), images array
+- [ ] Unique `title` — format: `"Specific Page Name | MZ Global Trading"`, **max 60 chars** — count before saving
+- [ ] Unique `description` — **130–160 chars**, primary keyword front-loaded, written for international buyers — count before saving
+- [ ] `alternates.canonical` — relative URL with trailing slash
+- [ ] `alternates.languages` — **both `"en"` and `"x-default"` pointing to absolute URL** — required on every page, not just layout.tsx
+- [ ] `openGraph` block: title, description, url (absolute), images array with `.webp` OG image
 - [ ] `twitter` block: `card: "summary_large_image"`, title, description
-- [ ] Page-appropriate JSON-LD script tag
+- [ ] **Product/BreadcrumbList JSON-LD** — use page.tsx template; include `primaryImageOfPage`
+- [ ] **FAQPage JSON-LD** — add whenever the page has an FAQ section; questions must exactly match on-page FAQ text
 - [ ] Single `<h1>` per page containing primary keyword
 - [ ] Heading hierarchy h1 → h2 → h3 only — no skips
-- [ ] Every `<Image>` has descriptive, specific `alt` text
+- [ ] Every `<Image>` has descriptive 80–140 char `alt` text — pattern: `"Pakistan [product] manufacturer — [descriptor] for [buyer type] in [markets]"`
 - [ ] `<main id="main-content">` on every page
 - [ ] Internal links use `<Link>` from `next/link`
 - [ ] No mention of "private label" — grep before completing
+- [ ] Run `python scripts/check-page.py app/section/page-name/page.tsx` — zero issues before marking done
 
 ### Performance
 - [ ] `<Image>` component for ALL content images — `<img>` only for logo in MegaMenu

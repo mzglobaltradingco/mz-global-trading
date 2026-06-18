@@ -15,7 +15,13 @@ export const metadata: Metadata = {
     "FOB incoterms textile buyer",
     "B2B textile importer FAQ",
   ],
-  alternates: { canonical: "/faqs/" },
+  alternates: {
+    canonical: "/faqs/",
+    languages: {
+      "en": "https://mzglobaltrading.com/faqs/",
+      "x-default": "https://mzglobaltrading.com/faqs/",
+    },
+  },
   openGraph: {
     title: "Frequently Asked Questions | MZ Global Trading",
     description:

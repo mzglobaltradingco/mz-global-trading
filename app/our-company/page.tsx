@@ -6,7 +6,7 @@ import OurCompanyContent from "./OurCompanyContent";
 export const metadata: Metadata = {
   title: "About Us | MZ Global Trading",
   description:
-    "MZ Global Trading — Pakistan's B2B textile sourcing partner for brands and importers in the USA, UK and Europe. 50+ certified manufacturers across apparel, home textiles and fabric.",
+    "MZ Global Trading — Pakistan B2B textile sourcing partner for brands in USA, UK and Europe. 50+ vetted factories, 10+ certifications, 35+ markets.",
   keywords: [
     "about MZ Global Trading",
     "Pakistan textile sourcing company",

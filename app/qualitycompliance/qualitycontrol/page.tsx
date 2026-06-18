@@ -6,7 +6,7 @@ import QualityControlContent from "./QualityControlContent";
 export const metadata: Metadata = {
   title: "Quality Control | Quality & Compliance | MZ Global Trading",
   description:
-    "MZ Global Trading's end-to-end quality control process — pre-production checks, in-line inspections and AQL pre-shipment inspections by an independent QC team for every order.",
+    "MZ Global Trading's end-to-end quality control process — pre-production checks, in-line inspections and AQL pre-shipment inspections by an independent QC.",
   keywords: [
     "textile quality control Pakistan",
     "pre-shipment inspection textiles",

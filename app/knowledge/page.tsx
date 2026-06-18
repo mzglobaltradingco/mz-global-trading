@@ -6,7 +6,7 @@ import KnowledgeHubContent from "./KnowledgeHubContent";
 export const metadata: Metadata = {
   title: "Knowledge Hub | MZ Global Trading",
   description:
-    "Trade guides, sourcing insights and company updates from MZ Global Trading — practical knowledge for procurement managers and textile buyers in USA, UK, Europe and Canada.",
+    "Trade guides, sourcing insights and company updates from MZ Global Trading — practical knowledge for procurement managers and textile buyers in USA, UK.",
   keywords: [
     "textile sourcing guide",
     "Pakistan textile export",
@@ -16,7 +16,13 @@ export const metadata: Metadata = {
     "pre-shipment inspection",
     "textile tech pack",
   ],
-  alternates: { canonical: "/knowledge/" },
+  alternates: {
+    canonical: "/knowledge/",
+    languages: {
+      "en": "https://mzglobaltrading.com/knowledge/",
+      "x-default": "https://mzglobaltrading.com/knowledge/",
+    },
+  },
   openGraph: {
     title: "Knowledge Hub | MZ Global Trading",
     description:

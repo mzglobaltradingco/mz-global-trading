@@ -208,8 +208,9 @@ const navItems: NavItem[] = [
             { label: "Fitted Sheets",  href: "/hometextile/bedlinen/fittedsheets/",  img: "/images/menu/menu-fittedsheets.webp",  imgAlt: "Pakistan fitted sheet manufacturer — custom elastic bedding sets for wholesale buyers" },
             { label: "Duvet Covers",   href: "/hometextile/bedlinen/duvetcovers/",   img: "/images/menu/menu-duvetcovers.webp",   imgAlt: "Pakistan duvet cover manufacturer — custom comforter covers for wholesale in Europe" },
             { label: "Pillow Covers",  href: "/hometextile/bedlinen/pillowcovers/",  img: "/images/menu/menu-pillowcovers.webp",  imgAlt: "Pakistan pillow cover manufacturer — custom cotton and satin pillowcases wholesale" },
-            { label: "Cushion Covers", href: "/hometextile/bedlinen/cushioncovers/", img: "/images/menu/menu-cushioncovers.webp", imgAlt: "Pakistan cushion cover manufacturer — custom decorative pillow covers wholesale" },
-            { label: "Curtains",       href: "/hometextile/bedlinen/curtains/",      img: "/images/menu/menu-curtains.webp",      imgAlt: "Pakistan curtain manufacturer — custom woven and printed curtains wholesale export" },
+            { label: "Cushion Covers",        href: "/hometextile/bedlinen/cushioncovers/",         img: "/images/menu/menu-cushioncovers.webp",        imgAlt: "Pakistan cushion cover manufacturer — custom decorative pillow covers wholesale" },
+            { label: "Curtains",              href: "/hometextile/bedlinen/curtains/",               img: "/images/menu/menu-curtains.webp",             imgAlt: "Pakistan curtain manufacturer — custom woven and printed curtains wholesale export" },
+            { label: "Institutional Bedding", href: "/hometextile/bedlinen/institutionalbedding/",   img: "/images/menu/menu-institutionaltowels.webp",  imgAlt: "Pakistan institutional bedding manufacturer — hotel and hospital bed linen wholesale" },
           ],
         },
         {

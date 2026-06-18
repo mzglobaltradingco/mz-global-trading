@@ -6,7 +6,8 @@ import SearchContent from "./SearchContent";
 
 export const metadata: Metadata = {
   title: "Search | MZ Global Trading",
-  description: "Search MZ Global Trading's full product range, sourcing guides, downloads and knowledge hub articles.",
+  description:
+    "Search MZ Global Trading's full product range, sourcing guides, downloads and knowledge hub articles. Apparel, home textiles and fabric for B2B buyers.",
   robots: { index: false, follow: false },
 };
 

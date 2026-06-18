@@ -6,7 +6,7 @@ import CertificationsContent from "./CertificationsContent";
 export const metadata: Metadata = {
   title: "Certifications | Quality & Compliance | MZ Global Trading",
   description:
-    "MZ Global Trading's factory network is certified to GOTS, OEKO-TEX, BSCI, ISO 9001, Sedex, GRS, WRAP, BCI, SA8000 and Bluesign. Full certification documentation available on request.",
+    "MZ Global Trading's factory network holds GOTS, OEKO-TEX, BSCI, ISO 9001, Sedex, GRS, WRAP, BCI, SA8000 and Bluesign certifications for global buyers.",
   keywords: [
     "GOTS certified textile manufacturer Pakistan",
     "OEKO-TEX certified fabric supplier",

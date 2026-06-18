@@ -6,9 +6,15 @@ import TermsOfUseContent from "./TermsOfUseContent";
 export const metadata: Metadata = {
   title: "Terms of Use | MZ Global Trading",
   description:
-    "Terms of use for mzglobaltrading.com — governing law, RFQ submission terms, intellectual property, and liability limitations for international B2B textile buyers.",
+    "Terms of use for mzglobaltrading.com — governing law, RFQ submission terms, intellectual property and liability limitations for buyers and service users.",
   keywords: ["terms of use", "terms and conditions", "legal", "MZ Global Trading"],
-  alternates: { canonical: "/termsofuse/" },
+  alternates: {
+    canonical: "/termsofuse/",
+    languages: {
+      "en": "https://mzglobaltrading.com/termsofuse/",
+      "x-default": "https://mzglobaltrading.com/termsofuse/",
+    },
+  },
   openGraph: {
     title: "Terms of Use | MZ Global Trading",
     description:

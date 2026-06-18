@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 import SupplierEvaluationContent from "./SupplierEvaluationContent";
 
 export const metadata: Metadata = {
-  title: "Supplier Evaluation | Quality & Compliance | MZ Global Trading",
+  title: "Supplier Evaluation | Quality Compliance | MZ Global Trading",
   description:
-    "How MZ Global Trading vets every factory before onboarding — a rigorous 4-stage evaluation covering capacity, certifications, social compliance and a pilot order before full placement.",
+    "How MZ Global Trading vets every factory before onboarding — a rigorous 4-stage evaluation covering capacity, certifications and compliance standards.",
   keywords: [
     "supplier evaluation textile Pakistan",
     "factory vetting process sourcing",

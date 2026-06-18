@@ -6,9 +6,15 @@ import PrivacyPolicyContent from "./PrivacyPolicyContent";
 export const metadata: Metadata = {
   title: "Privacy Policy | MZ Global Trading",
   description:
-    "Privacy policy for MZ Global Trading — how we collect, use, and protect personal data submitted by international buyers through our textile sourcing enquiry forms.",
+    "Privacy policy for MZ Global Trading — how we collect, use, and protect personal data submitted by international buyers through our textile sourcing.",
   keywords: ["privacy policy", "data protection", "GDPR", "CCPA", "MZ Global Trading"],
-  alternates: { canonical: "/privacypolicy/" },
+  alternates: {
+    canonical: "/privacypolicy/",
+    languages: {
+      "en": "https://mzglobaltrading.com/privacypolicy/",
+      "x-default": "https://mzglobaltrading.com/privacypolicy/",
+    },
+  },
   openGraph: {
     title: "Privacy Policy | MZ Global Trading",
     description:
