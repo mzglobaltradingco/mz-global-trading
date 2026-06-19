@@ -374,97 +374,203 @@ export default function TableCoversContent() {
 
           {/* Row 2 */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-            {[
-              { icon: "✨", label: "GSM Tiers", sub: "150–300+ GSM", color: "bg-sky-50 border-sky-100", text: "sky", sid: "section-gsm" },
-              { icon: "🎨", label: "Colour Range", sub: "Full PMS range", color: "bg-purple-50 border-purple-100", text: "purple", sid: "section-colour" },
-              { icon: "🌊", label: "Finishes", sub: "4 treatment options", color: "bg-teal-50 border-teal-100", text: "teal", sid: "section-finishes" },
-              { icon: "🏷️", label: "Decoration", sub: "Weave · Embroidery · Print", color: "bg-indigo-50 border-indigo-100", text: "indigo", sid: "section-decoration" },
-            ].map((b, i) => (
-              <motion.div
-                key={b.label}
-                initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.07 }}
-                className={`${b.color} border rounded-2xl p-5 flex flex-col gap-2 cursor-pointer hover:shadow-md transition-shadow`}
-                onClick={() => scrollToId(b.sid)}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => e.key === "Enter" && scrollToId(b.sid)}
-              >
-                <span className="text-2xl" aria-hidden="true">{b.icon}</span>
-                <p className="text-sm font-bold text-navy-900">{b.label}</p>
-                <p className="text-xs text-gray-400">{b.sub}</p>
-              </motion.div>
-            ))}
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45 }}
+              className="bg-sky-50 border border-sky-100 rounded-2xl p-5 flex flex-col gap-3 min-h-[200px]">
+              <div>
+                <p className="text-sky-600 text-xs font-semibold tracking-[0.2em] uppercase">Weight</p>
+                <h3 className="text-base font-bold text-navy-900 mt-0.5">GSM Tiers</h3>
+              </div>
+              <div className="flex flex-col gap-1.5 flex-1">
+                {GSM_TIERS.map(g => (
+                  <div key={g.gsm} className="flex items-start gap-2">
+                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-sky-100 text-sky-700 shrink-0 mt-0.5">{g.gsm}</span>
+                    <span className="text-xs text-gray-600 leading-tight">{g.name}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-gsm" label="GSM Detail" />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: 0.07 }}
+              className="bg-purple-50 border border-purple-100 rounded-2xl p-5 flex flex-col gap-3 min-h-[200px]">
+              <div>
+                <p className="text-purple-600 text-xs font-semibold tracking-[0.2em] uppercase">Colour</p>
+                <h3 className="text-base font-bold text-navy-900 mt-0.5">PMS Range</h3>
+              </div>
+              <div className="flex flex-wrap gap-1.5 flex-1 content-start">
+                {["White", "Ivory", "Navy", "Burgundy", "Black", "Sage", "Champagne", "Custom PMS"].map(c => (
+                  <span key={c} className="bg-white text-navy-900 text-[10px] font-semibold px-2 py-0.5 rounded border border-purple-100">{c}</span>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-colour" label="Colour Programme" />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: 0.14 }}
+              className="bg-teal-50 border border-teal-100 rounded-2xl p-5 flex flex-col gap-3 min-h-[200px]">
+              <div>
+                <p className="text-teal-600 text-xs font-semibold tracking-[0.2em] uppercase">Treatment</p>
+                <h3 className="text-base font-bold text-navy-900 mt-0.5">Finishes</h3>
+              </div>
+              <div className="flex flex-col gap-1.5 flex-1">
+                {FINISHES.map(f => (
+                  <div key={f.name} className="flex items-start gap-2">
+                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-teal-100 text-teal-700 shrink-0 mt-0.5 leading-tight">{f.tag.split(" ")[0]}</span>
+                    <span className="text-xs text-gray-600 leading-tight">{f.name}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-finishes" label="Finish Detail" />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: 0.21 }}
+              className="bg-indigo-50 border border-indigo-100 rounded-2xl p-5 flex flex-col gap-3 min-h-[200px]">
+              <div>
+                <p className="text-indigo-600 text-xs font-semibold tracking-[0.2em] uppercase">Branding</p>
+                <h3 className="text-base font-bold text-navy-900 mt-0.5">Decoration</h3>
+              </div>
+              <div className="flex flex-col gap-1.5 flex-1">
+                {DECORATION_OPTIONS.map(d => (
+                  <div key={d.method} className="flex items-start gap-2">
+                    <span className="text-indigo-400 text-xs mt-0.5">✓</span>
+                    <span className="text-xs text-gray-600 leading-tight">{d.method}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-decoration" label="Decoration Detail" />
+            </motion.div>
           </div>
 
           {/* Row 3 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-            {[
-              { icon: "🏨", label: "Sectors We Supply", sub: "Hotels · Events · Airlines · Restaurants", sid: "section-sectors", color: "bg-green-50 border-green-100" },
-              { icon: "🏅", label: "Certifications", sub: "OEKO-TEX · BSCI · ISO 9001 · GOTS", sid: "section-certifications", color: "bg-amber-50 border-amber-100" },
-              { icon: "📦", label: "Packing & Export", sub: "FOB · CIF · CFR · EXW", sid: "section-packing", color: "bg-orange-50 border-orange-100" },
-            ].map((b, i) => (
-              <motion.div
-                key={b.label}
-                initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.08 }}
-                className={`${b.color} border rounded-2xl p-6 flex flex-col gap-2 cursor-pointer hover:shadow-md transition-shadow`}
-                onClick={() => scrollToId(b.sid)}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => e.key === "Enter" && scrollToId(b.sid)}
-              >
-                <span className="text-2xl" aria-hidden="true">{b.icon}</span>
-                <p className="text-sm font-bold text-navy-900">{b.label}</p>
-                <p className="text-xs text-gray-400">{b.sub}</p>
-              </motion.div>
-            ))}
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45 }}
+              className="bg-green-50 border border-green-100 rounded-2xl p-5 flex flex-col gap-3 min-h-[200px]">
+              <div>
+                <p className="text-green-600 text-xs font-semibold tracking-[0.2em] uppercase">Markets</p>
+                <h3 className="text-base font-bold text-navy-900 mt-0.5">Sectors We Supply</h3>
+              </div>
+              <div className="flex flex-col gap-1.5 flex-1">
+                {SECTORS.map((s) => (
+                  <div key={s.abbr} className="flex items-center gap-2">
+                    <span className="w-8 text-center text-[9px] font-bold bg-green-100 text-green-700 rounded px-1 py-0.5">{s.abbr}</span>
+                    <span className="text-xs text-gray-700 font-medium">{s.name}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-sectors" label="Sector Detail" />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: 0.08 }}
+              className="bg-amber-50 border border-amber-100 rounded-2xl p-5 flex flex-col gap-3 min-h-[200px]">
+              <div>
+                <p className="text-amber-600 text-xs font-semibold tracking-[0.2em] uppercase">Compliance</p>
+                <h3 className="text-base font-bold text-navy-900 mt-0.5">Certifications</h3>
+              </div>
+              <div className="flex flex-wrap gap-1.5 flex-1 content-start">
+                {CERTIFICATIONS.map((c) => (
+                  <span key={c.name} className="bg-white text-navy-900 text-[10px] font-semibold px-2 py-0.5 rounded border border-amber-100">{c.name}</span>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-certifications" label="Cert Detail" />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: 0.16 }}
+              className="bg-orange-50 border border-orange-100 rounded-2xl p-5 flex flex-col gap-3 min-h-[200px]">
+              <div>
+                <p className="text-orange-600 text-xs font-semibold tracking-[0.2em] uppercase">Logistics</p>
+                <h3 className="text-base font-bold text-navy-900 mt-0.5">Packing & Export</h3>
+              </div>
+              <div className="flex flex-col gap-2 flex-1">
+                {EXPORT_TERMS.map((t) => (
+                  <div key={t.term} className="flex items-center gap-2">
+                    <span className="w-10 text-center font-bold text-xs text-orange-700 bg-orange-100 rounded px-1 py-0.5">{t.term}</span>
+                    <span className="text-xs text-gray-600">{t.full}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-packing" label="Packing Options" />
+            </motion.div>
           </div>
 
           {/* Row 4 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {[
-              { icon: "⚙️", label: "OEM & Custom Programme", sub: "Custom branding, dimensions, certifications", sid: "section-oem", color: "bg-slate-50 border-slate-100" },
-              { icon: "🚢", label: "Lead Times & Process", sub: "RFQ to delivery — step by step", sid: "section-process", color: "bg-blue-50 border-blue-100" },
-            ].map((b, i) => (
-              <motion.div
-                key={b.label}
-                initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.08 }}
-                className={`${b.color} border rounded-2xl p-6 flex flex-col gap-2 cursor-pointer hover:shadow-md transition-shadow`}
-                onClick={() => scrollToId(b.sid)}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => e.key === "Enter" && scrollToId(b.sid)}
-              >
-                <span className="text-2xl" aria-hidden="true">{b.icon}</span>
-                <p className="text-sm font-bold text-navy-900">{b.label}</p>
-                <p className="text-xs text-gray-400">{b.sub}</p>
-              </motion.div>
-            ))}
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45 }}
+              className="bg-slate-50 border border-slate-100 rounded-2xl p-7 flex flex-col gap-4 min-h-[280px]">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl" aria-hidden="true">⚙️</span>
+                <div>
+                  <p className="text-slate-500 text-xs font-semibold tracking-[0.2em] uppercase">OEM Programme</p>
+                  <h3 className="text-xl font-bold text-navy-900 mt-0.5">Custom Specification</h3>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-2.5 flex-1">
+                {[
+                  { title: "Custom Dimensions", note: "Any table size + drop length" },
+                  { title: "Bespoke Colour", note: "Full PMS reactive dye range" },
+                  { title: "Logo Embroidery", note: "Hotel crest or brand monogram" },
+                  { title: "Certification Pack", note: "OEKO-TEX · ISO · BSCI · GOTS" },
+                ].map((f) => (
+                  <div key={f.title} className="bg-white rounded-xl p-3 border border-slate-100">
+                    <p className="text-xs font-semibold text-navy-900 leading-tight">{f.title}</p>
+                    <p className="text-[10px] text-gray-400 mt-0.5">{f.note}</p>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-oem" label="OEM Programme" />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: 0.1 }}
+              className="bg-blue-50 border border-blue-100 rounded-2xl p-7 flex flex-col gap-4 min-h-[280px]">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl" aria-hidden="true">⏱️</span>
+                <div>
+                  <p className="text-blue-600 text-xs font-semibold tracking-[0.2em] uppercase">Timeline</p>
+                  <h3 className="text-xl font-bold text-navy-900 mt-0.5">Lead Times & Process</h3>
+                </div>
+              </div>
+              <div className="flex flex-col gap-3 flex-1">
+                {LEAD_STAGES.map((s, i) => (
+                  <div key={s.stage} className="flex items-center gap-3">
+                    <span className={`w-6 h-6 rounded-full ${s.color} text-white text-[10px] font-bold flex items-center justify-center shrink-0`}>{i + 1}</span>
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold text-navy-900">{s.stage}</p>
+                      <p className="text-[10px] text-gray-400">{s.days} days</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-process" label="Full Process" />
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* ═══════════════ RESOURCES ROW ═══════════════ */}
-      <section className="bg-gray-50 py-10">
+      <section className="bg-gray-50 py-12 lg:py-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { icon: "📋", title: "Download Table Linen Spec Sheet", desc: "PDF reference covering constructions, GSM tiers, standard sizes and certification options.", href: "/rfq/" },
-              { icon: "💬", title: "Speak to a Sourcing Specialist", desc: "Direct consultation on construction selection, pricing and certification requirements for your programme.", href: "/contact-us/" },
-              { icon: "📐", title: "Request a Custom Size Sample", desc: "Sample a specific construction and dimension before committing to bulk programme quantities.", href: "/rfq/" },
-            ].map((r, i) => (
-              <motion.div
-                key={r.title}
-                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.08 }}
-                className="bg-white border border-gray-100 rounded-2xl p-6 flex flex-col gap-3"
-              >
-                <span className="text-2xl" aria-hidden="true">{r.icon}</span>
-                <h3 className="text-base font-bold text-navy-900">{r.title}</h3>
-                <p className="text-sm text-gray-500 flex-1">{r.desc}</p>
-                <Link href={r.href} className="self-start text-sm font-semibold text-gold hover:underline">
-                  {r.href === "/rfq/" ? "Request Now →" : "Contact →"}
-                </Link>
-              </motion.div>
-            ))}
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link href="/knowledge/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📚</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
+              <p className="font-semibold text-navy-900">Table Linen Buying Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Construction guide, GSM selection and sizing reference for hospitality buyers in the USA, UK and EU.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Explore Hub →</span>
+            </Link>
+            <Link href="/guides/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📄</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Guides</p>
+              <p className="font-semibold text-navy-900">Pakistan Table Linen Export Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Sourcing process, lead times, certification requirements and factory audit overview.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guides →</span>
+            </Link>
+            <Link href="/downloads/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">⬇️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
+              <p className="font-semibold text-navy-900">Spec Sheets &amp; Size Charts</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Construction spec sheets, size charts and certification documentation.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Downloads →</span>
+            </Link>
+            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">✉️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
+              <p className="font-semibold text-white">Ready to Source Table Covers?</p>
+              <p className="text-xs text-gray-300 leading-relaxed">Specify construction, GSM, dimensions and decoration. RFQ to factory quotation: 3–5 working days.</p>
+              <span className="text-xs font-semibold text-gold group-hover:text-yellow-300 transition-colors mt-auto">Request a Quote →</span>
+            </Link>
           </div>
         </div>
       </section>

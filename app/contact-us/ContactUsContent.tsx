@@ -121,6 +121,14 @@ export default function ContactUsContent() {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [mapLoaded, setMapLoaded] = useState(false);
 
+  function handleFieldEnter(e: React.KeyboardEvent<HTMLInputElement>, nextId: string) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      const next = document.getElementById(nextId);
+      if (next) (next as HTMLInputElement).focus();
+    }
+  }
+
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) {
@@ -273,9 +281,17 @@ export default function ContactUsContent() {
               <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 mb-2">
                 How can we help?
               </h2>
-              <p className="text-gray-500 text-sm mb-8">
+              <p className="text-gray-500 text-sm mb-6">
                 Fill in the form and click <strong>Send Message</strong> — your default email app will open with everything pre-filled. Review and send to reach us.
               </p>
+
+              <div className="bg-gold/5 border border-gold/20 rounded-xl px-5 py-4 flex items-start gap-3 mb-6">
+                <svg className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
+                <div>
+                  <p className="text-sm font-semibold text-navy-900">Have questions before getting in touch?</p>
+                  <p className="text-xs text-gray-500 mt-0.5">Browse our <Link href="/faqs/" className="text-gold hover:underline font-semibold">Frequently Asked Questions</Link> — sourcing process, lead times, certifications, and ordering covered.</p>
+                </div>
+              </div>
 
               {status === "sent" ? (
                 <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
@@ -312,13 +328,13 @@ export default function ContactUsContent() {
                       <input id="name" name="name" type="text" required autoComplete="name"
                         aria-invalid={!!errors.name}
                         placeholder="Jane Smith" value={formData.name}
-                        onChange={handleChange} className={ic(errors.name)} />
+                        onChange={handleChange} onKeyDown={e => handleFieldEnter(e, "company")} className={ic(errors.name)} />
                     </Field>
                     <Field id="company" label="Company Name" required error={errors.company}>
                       <input id="company" name="company" type="text" required autoComplete="organization"
                         aria-invalid={!!errors.company}
                         placeholder="Acme Retail Ltd." value={formData.company}
-                        onChange={handleChange} className={ic(errors.company)} />
+                        onChange={handleChange} onKeyDown={e => handleFieldEnter(e, "email")} className={ic(errors.company)} />
                     </Field>
                   </div>
 
@@ -327,7 +343,7 @@ export default function ContactUsContent() {
                       <input id="email" name="email" type="email" required autoComplete="email"
                         aria-invalid={!!errors.email}
                         placeholder="jane@acmeretail.com" value={formData.email}
-                        onChange={handleChange} className={ic(errors.email)} />
+                        onChange={handleChange} onKeyDown={e => handleFieldEnter(e, "message")} className={ic(errors.email)} />
                     </Field>
                     <PhoneInputField
                       id="phone"

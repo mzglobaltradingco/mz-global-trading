@@ -463,19 +463,38 @@ export default function FleeceThermalBlanketsContent() {
       </section>
 
       {/* RESOURCES */}
-      <section className="bg-gray-50 py-8 border-y border-gray-100">
+      <section className="bg-gray-50 py-12 lg:py-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-4 justify-center">
-            {[
-              { label: "Submit an RFQ", href: "/rfq/", highlight: true },
-              { label: "Thermal Blankets Overview", href: "/hometextile/thermalblankets/", highlight: false },
-              { label: "Cellular Thermal Blanket", href: "/hometextile/thermalblankets/cellularthermalblanket/", highlight: false },
-              { label: "Home Textiles", href: "/hometextile/", highlight: false },
-            ].map((r) => (
-              <Link key={r.label} href={r.href} className={`inline-flex items-center gap-1.5 text-sm font-semibold px-5 py-2.5 rounded-xl border transition-colors ${r.highlight ? "bg-gold text-navy-900 border-gold hover:bg-yellow-400" : "bg-white text-navy-900 border-gray-200 hover:border-gold hover:text-gold"}`}>
-                {r.label}
-              </Link>
-            ))}
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link href="/knowledge/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📚</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
+              <p className="font-semibold text-navy-900">Fleece Blanket Buying Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Construction selection, GSM tiers, market positioning and sustainability options for retail and institutional buyers.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Explore Hub →</span>
+            </Link>
+            <Link href="/guides/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📄</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Guides</p>
+              <p className="font-semibold text-navy-900">Pakistan Home Textile Export Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Sourcing process, lead times and certification requirements for fleece blanket export.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guides →</span>
+            </Link>
+            <Link href="/downloads/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">⬇️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
+              <p className="font-semibold text-navy-900">Spec Sheets &amp; Construction Swatches</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Fleece blanket spec sheets, construction comparison and certification documentation.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Downloads →</span>
+            </Link>
+            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">✉️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
+              <p className="font-semibold text-white">Ready to Source Fleece Blankets?</p>
+              <p className="text-xs text-gray-300 leading-relaxed">Specify construction, GSM, size and quantity. RFQ to factory quotation: 3–5 working days.</p>
+              <span className="text-xs font-semibold text-gold group-hover:text-yellow-300 transition-colors mt-auto">Request a Quote →</span>
+            </Link>
           </div>
         </div>
       </section>

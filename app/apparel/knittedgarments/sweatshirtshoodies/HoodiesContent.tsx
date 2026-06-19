@@ -380,7 +380,7 @@ export default function HoodiesContent() {
                 Request a Quote <span aria-hidden="true">&#8594;</span>
               </Link>
               <button
-                onClick={() => scrollToId("constructions")}
+                onClick={() => scrollToId("section-constructions")}
                 className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-base"
               >
                 Explore Constructions
@@ -733,7 +733,7 @@ export default function HoodiesContent() {
       ════════════════════════════════════════════════════════════════════════ */}
       <section className="bg-gray-50 py-12 lg:py-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Guides &amp; Resources</p>
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             <Link href="/knowledge/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📚</span>

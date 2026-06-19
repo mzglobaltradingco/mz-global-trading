@@ -29,7 +29,7 @@ interface JsPDFDoc {
 }
 
 interface JsPDFCtor {
-  new(opts: { orientation: string; unit: string; format: string }): JsPDFDoc;
+  new(opts: { orientation: string; unit: string; format: string; compress?: boolean }): JsPDFDoc;
 }
 
 // ── Page geometry (A4 mm) ──────────────────────────────────────────────────────
@@ -52,7 +52,8 @@ const WM_POS: [number, number][] = [
 
 export async function generateRFQPdf(
   formState: RFQFormState,
-  submittedAt: string
+  submittedAt: string,
+  subject?: string
 ): Promise<void> {
   // Load jsPDF + company logo concurrently
   const [jsPDFModule, logoImg] = await Promise.all([
@@ -63,11 +64,11 @@ export async function generateRFQPdf(
   const JsPDF = (mod.jsPDF ?? mod.default) as JsPDFCtor;
 
   // Prepare two canvas variants of the logo
-  const headerLogoUrl = bakeCanvas(logoImg, 1.0, 0, 800);    // full-opacity header
-  const wmUrl = bakeCanvas(logoImg, 0.12, -38, 600);          // 12% opacity, -38° for watermark
+  const headerLogoUrl = bakeCanvas(logoImg, 1.0, 0, 600);    // full-opacity header
+  const wmUrl = bakeCanvas(logoImg, 0.12, -38, 300);          // 12% opacity, -38° for watermark
   const [wmW, wmH] = wmBBox(40, LOGO_RATIO, 38);              // watermark bounding box in mm
 
-  const doc = new JsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
+  const doc = new JsPDF({ orientation: "portrait", unit: "mm", format: "a4", compress: true });
 
   let y = 0;
   let totalPages = 1;
@@ -416,12 +417,14 @@ export async function generateRFQPdf(
   // ── One-time blob download ─────────────────────────────────────────────────────
   // Blob URL is created, used once, then scheduled for revocation after 30 s.
 
-  const ref = `RFQ-${Date.now().toString(36).toUpperCase()}`;
   const blob = doc.output("blob");
   const blobUrl = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = blobUrl;
-  a.download = `MZ-Global-Trading-${ref}.pdf`;
+  const filename = subject
+    ? subject.replace(/[\\/:*?"<>|]/g, "-").replace(/\s+/g, "-").slice(0, 120) + ".pdf"
+    : `MZ-Global-Trading-RFQ-${Date.now().toString(36).toUpperCase()}.pdf`;
+  a.download = filename;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);

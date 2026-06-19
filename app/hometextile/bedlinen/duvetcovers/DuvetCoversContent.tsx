@@ -600,7 +600,7 @@ export default function DuvetCoversContent() {
               </div>
               <div className="grid grid-cols-4 gap-2 flex-1 content-start">
                 {CERTIFICATIONS.map((c) => (
-                  <div key={c.name} className="bg-white rounded-xl border border-green-100 flex items-center justify-center p-2" style={{ height: 56 }}>
+                  <div key={c.name} className="bg-gray-50 rounded-xl border border-gray-200 shadow-sm flex items-center justify-center p-2" style={{ height: 56 }}>
                     <Image src={c.img} alt={`${c.name} — ${c.full}`} width={72} height={44} className="object-contain w-full h-full" />
                   </div>
                 ))}
@@ -906,10 +906,11 @@ export default function DuvetCoversContent() {
             <div className="flex flex-col gap-6">
               <div className="relative w-64 h-64 mx-auto">
                 <svg viewBox="0 0 120 120" className="w-full h-full -rotate-90">
+                  <circle cx="60" cy="60" r="45" fill="none" stroke="#e5e7eb" strokeWidth="20" />
                   {[
-                    { pct: 60, color: "#D97706", offset: 0 },
-                    { pct: 20, color: "#92400E", offset: 60 },
-                    { pct: 15, color: "#78350F", offset: 80 },
+                    { pct: 60, color: "#FBBF24", offset: 0 },
+                    { pct: 20, color: "#D97706", offset: 60 },
+                    { pct: 15, color: "#92400E", offset: 80 },
                     { pct: 5, color: "#22C55E", offset: 95 },
                   ].map((seg, i) => {
                     const circumference = 2 * Math.PI * 45;

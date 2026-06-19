@@ -312,6 +312,41 @@ const SECTORS = [
     markets: "UK, Canada, Germany, Australia, Gulf states",
     colour: "bg-teal-50 border-teal-200",
   },
+  {
+    name: "Food Processing & Hospitality",
+    icon: "🍽️",
+    requirements: "Food-safe dyestuffs, HACCP-compliant lightweight fabric, no external pockets, colour-coded zones",
+    markets: "USA, Germany, Netherlands, Australia, UAE",
+    colour: "bg-green-50 border-green-200",
+  },
+  {
+    name: "Manufacturing & Automotive",
+    icon: "🏭",
+    requirements: "Anti-static options, reinforced knees, multiple utility pockets, oil-resistant finishing",
+    markets: "Germany, USA, UK, Czech Republic, Mexico",
+    colour: "bg-zinc-50 border-zinc-200",
+  },
+  {
+    name: "Electrical & Energy",
+    icon: "⚡",
+    requirements: "Arc-rated FR garments, NFPA 70E / IEC 61482 compliance, anti-static construction",
+    markets: "USA, UK, Germany, Australia, Saudi Arabia",
+    colour: "bg-yellow-50 border-yellow-200",
+  },
+  {
+    name: "Security & Law Enforcement",
+    icon: "🛡️",
+    requirements: "Tactical pocket layout, reinforced seams, low-profile uniform finish, ID badge accommodation",
+    markets: "UK, Germany, USA, Gulf states, Australia",
+    colour: "bg-indigo-50 border-indigo-200",
+  },
+  {
+    name: "Agriculture & Outdoor",
+    icon: "🌾",
+    requirements: "Breathable lightweight canvas, waterproof outer options, UV protection, reinforced knees",
+    markets: "Australia, New Zealand, USA, Canada, UK",
+    colour: "bg-lime-50 border-lime-200",
+  },
 ];
 
 const CERTIFICATIONS = [
@@ -392,11 +427,311 @@ const FAQS = [
     q: "Can you produce workwear in custom corporate colours with precise Pantone matching?",
     a: "Yes. We work to target Pantone / RAL references with lab dip approval before bulk dyeing. Corporate colour programmes with consistent colour across multiple garment types (jackets, trousers, shirts) are matched within ΔE 1.0 tolerance. Colour consistency is confirmed on bulk fabric pre-cut.",
   },
+  {
+    q: "Which garment types can you source — do you cover full-body coveralls and bib-and-brace overalls?",
+    a: "Yes. Our catalogue covers five garment categories: upper body (shirts, FR shirts, work jackets), lower body (work trousers, cargo pants, FR trousers), full-body (coveralls/boiler suits, bib-and-brace overalls, hi-vis one-piece coveralls), outerwear (hi-vis jackets, rain jackets, FR jackets), and accessories (safety vests, aprons, caps). If your required garment type is not listed, submit the specification in your RFQ and we confirm factory capability.",
+  },
+  {
+    q: "Can you supply extended sizes up to 5XL for large fleet programmes?",
+    a: "Yes. Our standard size range for men's workwear runs XS through 5XL with EU 44–60 equivalents. Women's sizing runs XS/6 through 3XL/20 with EU 34–48 equivalents. All size charts are based on body measurements in centimetres. Custom grading for non-standard size ranges is available on request. For fleet programmes, buyers provide a size ratio and we produce per that allocation.",
+  },
+  {
+    q: "How do you confirm compliance with the correct safety standard for our destination market?",
+    a: "At enquiry stage we review your destination market and end-use sector and identify the applicable standard — EN ISO for EU and UK, NFPA for USA, ANSI/ISEA 107 for US hi-vis, AS/NZS 4602.1 for Australia and New Zealand. We then confirm that the selected factory holds the required certification before production is authorised. Test reports from accredited third-party laboratories are provided with shipment documentation.",
+  },
+  {
+    q: "Can workwear accessories (vests, aprons, base layers) be included in the same order as garments?",
+    a: "Yes. Hi-vis safety vests, work aprons, bouffant caps, neck gaiters, moisture-wicking base layers, reflective wristbands, ID lanyards, and fleece liner jackets can all be included in a single RFQ alongside your garment order. We coordinate sourcing and consolidate accessories and garments into one shipment from Pakistan to your nominated port, reducing freight cost and administrative overhead.",
+  },
 ];
 
 
+const WORKWEAR_ARTICLES = [
+  {
+    category: "Upper Body",
+    icon: "👕",
+    accent: "bg-blue-50 border-blue-200",
+    labelClr: "text-blue-700",
+    garments: [
+      { name: "Work Shirts & Polo Shirts", desc: "Woven or piqué knit. Collar formats for corporate identity programmes. Available in short and long sleeve.", tags: ["Corporate", "Service", "Healthcare"] },
+      { name: "Hi-Vis T-Shirts", desc: "Fluorescent background with reflective tape at chest and shoulder. Class 1 base-layer for low-risk visibility zones.", tags: ["Construction", "Logistics"] },
+      { name: "Work Jackets & Blouson", desc: "Mid-layer or outer-shell in canvas or ripstop. Removable liner options. Available in standard and hi-vis shell.", tags: ["Construction", "Outdoor", "Cold weather"] },
+      { name: "FR Shirts", desc: "FR cotton treated or inherent. Satisfies EN ISO 11612 arc and flame requirements. Available in Class A1/A2.", tags: ["Oil & Gas", "Petrochemical", "Electrical"] },
+    ],
+  },
+  {
+    category: "Lower Body",
+    icon: "👖",
+    accent: "bg-amber-50 border-amber-200",
+    labelClr: "text-amber-700",
+    garments: [
+      { name: "Work Trousers", desc: "Straight leg with reinforced knees and multiple utility pockets. Available in canvas, ripstop and twill.", tags: ["Construction", "Logistics", "Mining"] },
+      { name: "Cargo Pants", desc: "Dual-bellows cargo pockets with secure flap fastening. Used across construction and logistics sectors.", tags: ["Construction", "Outdoor"] },
+      { name: "FR Trousers", desc: "FR cotton construction to pair with FR shirts in two-piece suit programmes. EN ISO 11612 validated.", tags: ["Oil & Gas", "Electrical"] },
+    ],
+  },
+  {
+    category: "Full-Body Garments",
+    icon: "🦺",
+    accent: "bg-emerald-50 border-emerald-200",
+    labelClr: "text-emerald-700",
+    garments: [
+      { name: "Coveralls / Boiler Suits", desc: "One-piece full-body construction in canvas or ripstop. Zip-front with concealed placket. Standard, FR and anti-static options.", tags: ["Oil & Gas", "Industrial", "Mining"] },
+      { name: "Bib & Brace Overalls", desc: "Adjustable shoulder straps, front bib pocket. Ideal for trades needing torso coverage without a full-body suit.", tags: ["Construction", "Manufacturing"] },
+      { name: "Hi-Vis One-Piece Coverall", desc: "Fluorescent shell with sewn reflective tape meeting EN ISO 20471 Class 3. Road maintenance and site-perimeter work.", tags: ["Road", "Construction", "Rail"] },
+    ],
+  },
+  {
+    category: "Outerwear",
+    icon: "🧥",
+    accent: "bg-violet-50 border-violet-200",
+    labelClr: "text-violet-700",
+    garments: [
+      { name: "Hi-Vis Jackets", desc: "Fluorescent polyester shell with retroreflective tape. EN ISO 20471 Class 2 or Class 3. Multiple pocket configurations.", tags: ["Construction", "Logistics", "Rail"] },
+      { name: "Rain Jackets / Windcheaters", desc: "Waterproof/water-resistant outer layer in ripstop or bonded fabric. Available in hi-vis or standard colour.", tags: ["Outdoor", "Construction", "Agriculture"] },
+      { name: "FR Jackets", desc: "Inherent or treated FR outer shell. Paired with FR trousers for two-piece compliance programmes in petrochemical environments.", tags: ["Oil & Gas", "Electrical"] },
+    ],
+  },
+  {
+    category: "Accessories & Add-ons",
+    icon: "🎒",
+    accent: "bg-rose-50 border-rose-200",
+    labelClr: "text-rose-700",
+    garments: [
+      { name: "Safety Vests (Hi-Vis)", desc: "Mesh or solid fluorescent shell with adjustable side. Class 2 per EN ISO 20471 / ANSI/ISEA 107. Fast assembly for site check-in.", tags: ["All sectors", "Site visitors"] },
+      { name: "Work Aprons", desc: "Canvas or poly-cotton. Used in food processing, laboratory, and automotive finishing environments.", tags: ["Food", "Lab", "Automotive"] },
+      { name: "Disposable / Reusable Caps", desc: "Bouffant and mob caps for food and pharmaceutical environments. Non-woven or cotton. Colour-coded by department.", tags: ["Food", "Pharma", "Hospital"] },
+    ],
+  },
+];
+
+const COMPLIANCE_STANDARDS = [
+  {
+    code: "EN ISO 13688",
+    title: "General Performance Requirements",
+    region: "EU / UK",
+    hazard: "All workwear baseline",
+    icon: "🇪🇺",
+    accent: "bg-blue-50 border-blue-200",
+    labelClr: "text-blue-700",
+    desc: "Sets baseline ergonomic, size, aging and marking requirements for all protective clothing sold in the EU and UK. Every garment in a compliant programme must meet EN ISO 13688 before additional hazard-specific standards are applied.",
+    applies: ["All workwear", "Prerequisite for EN ISO 11612, EN ISO 20471"],
+  },
+  {
+    code: "EN ISO 11612",
+    title: "Protection Against Heat & Flame",
+    region: "EU / UK",
+    hazard: "FR — Flame & heat",
+    icon: "🔥",
+    accent: "bg-red-50 border-red-200",
+    labelClr: "text-red-700",
+    desc: "Specifies test methods and performance requirements for garments protecting against convective heat, radiant heat, flame spread, and molten metal splash. Performance levels A1/A2 (flame), B (convective), C (radiant), D/E/F (metal splash) are certified independently.",
+    applies: ["Oil & Gas", "Petrochemical", "Welding & Foundry", "Electrical (arc flash)"],
+  },
+  {
+    code: "EN ISO 20471",
+    title: "High-Visibility Warning Clothing",
+    region: "EU / UK",
+    hazard: "Hi-Vis — Road & site visibility",
+    icon: "🔆",
+    accent: "bg-yellow-50 border-yellow-200",
+    labelClr: "text-yellow-700",
+    desc: "Defines minimum areas of fluorescent background material and retroreflective tape to ensure visibility in daylight and in the dark. Class 1 (lowest) to Class 3 (highest). Class 3 mandatory for most roadside and rail environments.",
+    applies: ["Road Construction", "Logistics", "Rail", "Airport Ground"],
+  },
+  {
+    code: "EN 1149-3",
+    title: "Electrostatic Properties",
+    region: "EU / UK",
+    hazard: "Anti-static (ATEX zones)",
+    icon: "⚡",
+    accent: "bg-sky-50 border-sky-200",
+    labelClr: "text-sky-700",
+    desc: "Measures charge decay in fabrics intended for use in explosive atmospheres. Anti-static finishing on canvas and ripstop measured after 50 wash cycles. Required for garments used in ATEX-classified zones.",
+    applies: ["Oil & Gas", "Petrochemical", "Grain Handling", "Chemical Plants"],
+  },
+  {
+    code: "EN 342",
+    title: "Protection Against Cold",
+    region: "EU / UK",
+    hazard: "Cold — Below 0°C environments",
+    icon: "❄️",
+    accent: "bg-cyan-50 border-cyan-200",
+    labelClr: "text-cyan-700",
+    desc: "Covers insulation and wind resistance for garments protecting workers in cold environments. Thermal resistance (Rct) and breathability (Ret) values are test-certified. Applicable for cold-store logistics and outdoor work in northern markets.",
+    applies: ["Cold Storage", "Outdoor Logistics", "Northern European Markets"],
+  },
+  {
+    code: "EN 343",
+    title: "Protection Against Rain",
+    region: "EU / UK",
+    hazard: "Rain & wind resistance",
+    icon: "🌧️",
+    accent: "bg-indigo-50 border-indigo-200",
+    labelClr: "text-indigo-700",
+    desc: "Covers penetration resistance and water vapour permeability of materials used in rain-protective workwear. Classes 1–3 for water penetration, breathability index 1–2. Used on rain jackets and waterproof outer shells.",
+    applies: ["Outdoor Construction", "Agriculture", "Marine"],
+  },
+  {
+    code: "NFPA 2112",
+    title: "Flash Fire Protection",
+    region: "USA / Canada",
+    hazard: "FR — Flash fire (USA)",
+    icon: "🇺🇸",
+    accent: "bg-orange-50 border-orange-200",
+    labelClr: "text-orange-700",
+    desc: "NFPA 2112 governs FR garments for industrial workers exposed to flash fire in the USA. Requires minimum 40% body coverage, thermal protective performance (TPP) testing, and heat shrinkage resistance. Differs from EN ISO 11612 — both may be required for export to US buyers.",
+    applies: ["Oil & Gas (USA)", "Petrochemical (USA)", "Utilities (USA)"],
+  },
+  {
+    code: "NFPA 70E",
+    title: "Arc Flash Electrical Safety",
+    region: "USA",
+    hazard: "Arc flash (electrical hazard)",
+    icon: "⚡",
+    accent: "bg-amber-50 border-amber-200",
+    labelClr: "text-amber-700",
+    desc: "Sets requirements for electrical safe work practices and defines arc flash PPE categories. Arc rating (cal/cm²) is the key metric — garments must meet or exceed the incident energy at the worker's position. Common in electrical utility, switchgear, and industrial electrical maintenance.",
+    applies: ["Electrical Utilities (USA)", "Industrial Electrical Maintenance"],
+  },
+  {
+    code: "ANSI/ISEA 107",
+    title: "High-Visibility Apparel (USA)",
+    region: "USA",
+    hazard: "Hi-Vis — US road & site",
+    icon: "🔆",
+    accent: "bg-lime-50 border-lime-200",
+    labelClr: "text-lime-700",
+    desc: "US equivalent of EN ISO 20471. Class 1, 2, 3 for hi-vis garments; E class for lower-body hi-vis (trousers, gaiters). Required by MUTCD for all US roadside construction workers. Fluorescent lime-yellow or orange-red backgrounds only.",
+    applies: ["Road Construction (USA)", "Logistics (USA)", "Railway (USA)"],
+  },
+  {
+    code: "AS/NZS 4602.1",
+    title: "High-Visibility Garments (AUS/NZ)",
+    region: "Australia / New Zealand",
+    hazard: "Hi-Vis — Australasian standard",
+    icon: "🇦🇺",
+    accent: "bg-teal-50 border-teal-200",
+    labelClr: "text-teal-700",
+    desc: "Australasian equivalent of EN ISO 20471 for day-only, day-night, and night-only use garments. Class D (day), N (night), D/N (combined). Fluorescent backgrounds must meet AS 1906.4. Used across construction, mining, and transport in Australia and New Zealand.",
+    applies: ["Mining (AUS)", "Construction (AUS)", "Transport (AUS/NZ)"],
+  },
+];
+
+const ACCESSORIES = [
+  {
+    name: "Hi-Vis Safety Vest",
+    icon: "🦺",
+    desc: "Mesh or solid fluorescent shell. Class 2 per EN ISO 20471 / ANSI/ISEA 107. Adjustable side closure. Used for site visitors and short-duration workers.",
+    materials: "Fluorescent polyester mesh + retroreflective tape",
+    colour: "bg-yellow-50 border-yellow-200",
+    tag: "All sectors",
+  },
+  {
+    name: "Work Apron",
+    icon: "👨‍🍳",
+    desc: "Canvas or poly-cotton apron with adjustable neck and waist ties. Used in food processing, automotive, and laboratory environments.",
+    materials: "300–350 gsm canvas or poly-cotton",
+    colour: "bg-stone-50 border-stone-200",
+    tag: "Food / Automotive / Lab",
+  },
+  {
+    name: "Bouffant & Mob Cap",
+    icon: "🎩",
+    desc: "Non-woven or cotton caps for food and pharmaceutical clean-room environments. Colour-coded per department hygiene protocol.",
+    materials: "Non-woven PP or 100% cotton",
+    colour: "bg-sky-50 border-sky-200",
+    tag: "Food / Pharma / Hospital",
+  },
+  {
+    name: "Neck Gaiter / Balaclava",
+    icon: "🧣",
+    desc: "FR cotton or polyester fleece for cold-weather site work. Worn under hard hats in mining and outdoor construction.",
+    materials: "FR cotton or polyester fleece",
+    colour: "bg-slate-50 border-slate-200",
+    tag: "Mining / Cold weather",
+  },
+  {
+    name: "Moisture-Wicking Base Layer",
+    icon: "🧤",
+    desc: "Polyester or FR-treated base layer for workers wearing heavy PPE. Reduces skin temperature under coveralls and FR outerwear.",
+    materials: "100% polyester moisture-wicking or FR cotton",
+    colour: "bg-blue-50 border-blue-200",
+    tag: "FR / Oil & Gas / Mining",
+  },
+  {
+    name: "Reflective Wrist Bands",
+    icon: "💪",
+    desc: "Add-on retroreflective bands at wrist or ankle. Supplement lower-class hi-vis garments for improved low-light visibility.",
+    materials: "Silver retroreflective tape on elastic band",
+    colour: "bg-gray-50 border-gray-200",
+    tag: "Construction / Road",
+  },
+  {
+    name: "ID Lanyard",
+    icon: "🪪",
+    desc: "Woven polyester lanyards with detachable clip or breakaway safety release. Branded with company name or logo on request.",
+    materials: "Woven polyester, 15–20 mm width",
+    colour: "bg-emerald-50 border-emerald-200",
+    tag: "All sectors — fleet ID",
+  },
+  {
+    name: "Fleece Liner Jacket",
+    icon: "🧥",
+    desc: "Zip-through polyester fleece mid-layer for workwear systems in cold climates. Designed to layer under hi-vis or FR outer shells.",
+    materials: "Polyester anti-pill fleece, 240–300 gsm",
+    colour: "bg-violet-50 border-violet-200",
+    tag: "Cold storage / Outdoor",
+  },
+];
+
+const SIZE_TABLE_MEN = [
+  { size: "XS",  eu: "44",    chest: "86–90",   waist: "70–74",   hip: "90–94",   inseam: "78–80" },
+  { size: "S",   eu: "46",    chest: "90–94",   waist: "74–78",   hip: "94–98",   inseam: "80–82" },
+  { size: "M",   eu: "48",    chest: "94–98",   waist: "78–82",   hip: "98–102",  inseam: "82–84" },
+  { size: "L",   eu: "50",    chest: "98–102",  waist: "82–86",   hip: "102–106", inseam: "82–84" },
+  { size: "XL",  eu: "52",    chest: "102–107", waist: "86–92",   hip: "106–111", inseam: "82–84" },
+  { size: "2XL", eu: "54",    chest: "107–112", waist: "92–98",   hip: "111–116", inseam: "82–84" },
+  { size: "3XL", eu: "56",    chest: "112–117", waist: "98–104",  hip: "116–121", inseam: "82–84" },
+  { size: "4XL", eu: "58",    chest: "117–122", waist: "104–110", hip: "121–126", inseam: "82–84" },
+  { size: "5XL", eu: "60",    chest: "122–127", waist: "110–116", hip: "126–131", inseam: "82–84" },
+];
+
+const SIZE_TABLE_WOMEN = [
+  { size: "XS/6",      eu: "34",    bust: "80–84",   waist: "62–66",  hip: "86–90",   inseam: "76–78" },
+  { size: "S/8",       eu: "36",    bust: "84–88",   waist: "66–70",  hip: "90–94",   inseam: "76–78" },
+  { size: "M/10",      eu: "38",    bust: "88–92",   waist: "70–74",  hip: "94–98",   inseam: "78–80" },
+  { size: "L/12",      eu: "40",    bust: "92–97",   waist: "74–80",  hip: "98–103",  inseam: "78–80" },
+  { size: "XL/14",     eu: "42",    bust: "97–102",  waist: "80–86",  hip: "103–108", inseam: "78–80" },
+  { size: "2XL/16",    eu: "44",    bust: "102–107", waist: "86–92",  hip: "108–113", inseam: "78–80" },
+  { size: "3XL/18–20", eu: "46–48", bust: "107–117", waist: "92–104", hip: "113–123", inseam: "78–80" },
+];
+
 /* ─── Bento data ─── */
 const BENTO_ROWS = [
+  /* Row 0: 2-col equal — Articles + Compliance (new) */
+  [
+    {
+      id: "articles",
+      icon: "👕",
+      label: "Garment Types",
+      title: "15 Garment Types Across 5 Workwear Categories",
+      body: "Shirts, coveralls, boiler suits, hi-vis jackets, FR trousers, bib-and-brace overalls, rain jackets and more — full programme catalogue for any sector.",
+      accent: "bg-indigo-50 border-indigo-200",
+      labelClr: "text-indigo-700",
+      col: "md:col-span-3",
+    },
+    {
+      id: "compliance",
+      icon: "📋",
+      label: "Safety Standards",
+      title: "10 International Standards — EN ISO, NFPA, ANSI, AS/NZS",
+      body: "EN ISO 13688, EN ISO 11612, EN ISO 20471, EN 1149-3, NFPA 2112, NFPA 70E, ANSI/ISEA 107, AS/NZS 4602.1 and more. Region-specific compliance matched to your destination.",
+      accent: "bg-emerald-50 border-emerald-200",
+      labelClr: "text-emerald-700",
+      col: "md:col-span-3",
+    },
+  ],
   /* Row 1: 2-col equal */
   [
     {
@@ -436,8 +771,8 @@ const BENTO_ROWS = [
       id: "sectors",
       icon: "🏗️",
       label: "Industry Sectors",
-      title: "5 Sectors Served",
-      body: "Construction · Oil & Gas · Mining · Logistics · Healthcare & Facility Services",
+      title: "10 Sectors Served",
+      body: "Construction · Oil & Gas · Mining · Logistics · Healthcare · Food Processing · Manufacturing · Electrical · Security · Agriculture",
       accent: "bg-rose-50 border-rose-200",
       labelClr: "text-rose-700",
       col: "md:col-span-3",
@@ -517,6 +852,29 @@ const BENTO_ROWS = [
       accent: "bg-fuchsia-50 border-fuchsia-200",
       labelClr: "text-fuchsia-700",
       col: "md:col-span-1",
+    },
+  ],
+  /* Row 5: 2-col equal — Sizing + Accessories (new) */
+  [
+    {
+      id: "sizing",
+      icon: "📏",
+      label: "Size Tables",
+      title: "Men’s XS–5XL · Women’s XS/6–3XL/20 — All in cm",
+      body: "Complete measurement charts for chest, waist, hip and inseam in centimetres. EU, UK and US size equivalents provided. Custom size allocation for fleet programmes on request.",
+      accent: "bg-violet-50 border-violet-200",
+      labelClr: "text-violet-700",
+      col: "md:col-span-3",
+    },
+    {
+      id: "accessories",
+      icon: "🎒",
+      label: "Workwear Accessories",
+      title: "8 Textile Accessories — Vests, Aprons, Base Layers, Lanyards",
+      body: "Hi-vis vests, work aprons, bouffant caps, neck gaiters, base layers, reflective wristbands, ID lanyards, and fleece liners sourced through the same certified factory network.",
+      accent: "bg-rose-50 border-rose-200",
+      labelClr: "text-rose-700",
+      col: "md:col-span-3",
     },
   ],
 ];
@@ -622,7 +980,7 @@ export default function WorkwearContent() {
               { value: "50+", label: "Vetted Factories" },
               { value: "35+", label: "Export Markets" },
               { value: "10+", label: "Certifications" },
-              { value: "5", label: "Industry Sectors" },
+              { value: "10", label: "Industry Sectors" },
             ].map((s, i) => (
               <motion.div
                 key={s.label}
@@ -654,7 +1012,7 @@ export default function WorkwearContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects of Our Workwear Programme</h2>
           </motion.div>
 
-          {/* Row 1 */}
+          {/* Row 0 — Articles + Compliance */}
           <div className="grid grid-cols-6 gap-4 mb-4">
             {BENTO_ROWS[0].map((cell, i) => (
               <motion.div
@@ -677,7 +1035,7 @@ export default function WorkwearContent() {
             ))}
           </div>
 
-          {/* Row 2 */}
+          {/* Row 1 */}
           <div className="grid grid-cols-6 gap-4 mb-4">
             {BENTO_ROWS[1].map((cell, i) => (
               <motion.div
@@ -700,9 +1058,32 @@ export default function WorkwearContent() {
             ))}
           </div>
 
+          {/* Row 2 */}
+          <div className="grid grid-cols-6 gap-4 mb-4">
+            {BENTO_ROWS[2].map((cell, i) => (
+              <motion.div
+                key={cell.id}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className={`${cell.col} col-span-6 rounded-2xl border p-6 flex flex-col justify-between ${cell.accent}`}
+              >
+                <div>
+                  <span className="text-3xl mb-3 block" aria-hidden="true">{cell.icon}</span>
+                  <p className={`text-xs font-semibold tracking-[0.18em] uppercase mb-2 ${cell.labelClr}`}>{cell.label}</p>
+                  <h3 className="text-lg font-bold text-navy-900 mb-2">{cell.title}</h3>
+                  <p className="text-sm text-gray-600">{cell.body}</p>
+                </div>
+                <ExploreBtn sectionId={`ww-${cell.id}`} label={`Explore ${cell.label}`} />
+              </motion.div>
+            ))}
+          </div>
+
           {/* Row 3 */}
           <div className="grid grid-cols-5 gap-4 mb-4">
-            {BENTO_ROWS[2].map((cell, i) => (
+            {BENTO_ROWS[3].map((cell, i) => (
               <motion.div
                 key={cell.id}
                 custom={i}
@@ -725,7 +1106,7 @@ export default function WorkwearContent() {
 
           {/* Row 4 */}
           <div className="grid grid-cols-3 gap-4 mb-4">
-            {BENTO_ROWS[3].map((cell, i) => (
+            {BENTO_ROWS[4].map((cell, i) => (
               <motion.div
                 key={cell.id}
                 custom={i}
@@ -745,28 +1126,137 @@ export default function WorkwearContent() {
               </motion.div>
             ))}
           </div>
+
+          {/* Row 5 — Sizing + Accessories */}
+          <div className="grid grid-cols-6 gap-4 mb-4">
+            {BENTO_ROWS[5].map((cell, i) => (
+              <motion.div
+                key={cell.id}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className={`${cell.col} col-span-6 rounded-2xl border p-6 flex flex-col justify-between ${cell.accent}`}
+              >
+                <div>
+                  <span className="text-3xl mb-3 block" aria-hidden="true">{cell.icon}</span>
+                  <p className={`text-xs font-semibold tracking-[0.18em] uppercase mb-2 ${cell.labelClr}`}>{cell.label}</p>
+                  <h3 className="text-lg font-bold text-navy-900 mb-2">{cell.title}</h3>
+                  <p className="text-sm text-gray-600">{cell.body}</p>
+                </div>
+                <ExploreBtn sectionId={`ww-${cell.id}`} label={`Explore ${cell.label}`} />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* ═══ RESOURCES ROW ═══ */}
-      <section className="bg-gray-50 border-y border-gray-100 py-10" aria-label="Quick links and resources">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col sm:flex-row gap-4 items-center justify-between">
-          <p className="text-sm font-semibold text-navy-900">Ready to source workwear for your programme?</p>
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Link
-              href="/rfq/"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-navy-900 px-6 py-3 text-sm font-semibold text-white hover:bg-navy-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-            >
-              Submit an RFQ
+      {/* ═══ RESOURCES SECTION ═══ */}
+      <section className="bg-gray-50 py-12 lg:py-16 border-t border-gray-100" aria-label="Guides and resources">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link href="/guides/" className="rounded-2xl bg-white border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+              <span className="text-2xl mb-3" aria-hidden="true">📚</span>
+              <h3 className="text-sm font-bold text-navy-900 mb-1">Knowledge Hub</h3>
+              <p className="text-xs text-gray-500 leading-relaxed flex-1">Workwear standards, fabric guides, and compliance references for procurement teams.</p>
+              <span className="mt-4 text-xs font-semibold text-gold">Browse Knowledge Hub →</span>
             </Link>
-            <Link
-              href="/qualitycompliance/certifications/"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-navy-900/20 px-6 py-3 text-sm font-semibold text-navy-900 hover:bg-navy-900/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-            >
-              View Certifications
+            <Link href="/guides/" className="rounded-2xl bg-white border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+              <span className="text-2xl mb-3" aria-hidden="true">📋</span>
+              <h3 className="text-sm font-bold text-navy-900 mb-1">Workwear Sourcing Guide</h3>
+              <p className="text-xs text-gray-500 leading-relaxed flex-1">Step-by-step guide for specifying and procuring workwear for industrial fleet programmes.</p>
+              <span className="mt-4 text-xs font-semibold text-gold">Read the Guide →</span>
+            </Link>
+            <Link href="/downloads/" className="rounded-2xl bg-white border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+              <span className="text-2xl mb-3" aria-hidden="true">⬇️</span>
+              <h3 className="text-sm font-bold text-navy-900 mb-1">Downloads</h3>
+              <p className="text-xs text-gray-500 leading-relaxed flex-1">Certification documents, compliance spec sheets, and product data sheets available for download.</p>
+              <span className="mt-4 text-xs font-semibold text-gold">Go to Downloads →</span>
+            </Link>
+            <Link href="/rfq/" className="rounded-2xl bg-navy-900 border border-navy-900 p-6 flex flex-col hover:bg-navy-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+              <span className="text-2xl mb-3" aria-hidden="true">✉️</span>
+              <h3 className="text-sm font-bold text-white mb-1">Quick Start — Request a Quote</h3>
+              <p className="text-xs text-white/60 leading-relaxed flex-1">Tell us your sector, safety standard required, and fleet size. We confirm factory match within 48 hours.</p>
+              <span className="mt-4 text-xs font-semibold text-gold">Submit RFQ →</span>
             </Link>
           </div>
         </div>
+      </section>
+
+      {/* ═══ SECTION A — WORKWEAR ARTICLES (Catalogue UI) ═══ */}
+      <section id="ww-articles" className="py-20 bg-white" aria-labelledby="ww-articles-h2">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-12"
+          >
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Garment Catalogue</p>
+            <h2 id="ww-articles-h2" className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
+              15 Workwear Garments — Upper Body, Lower Body, Full-Body, Outerwear
+            </h2>
+            <p className="text-gray-600 max-w-3xl">
+              Our sourcing network covers the full range of industrial and corporate workwear garments. From FR coveralls to hi-vis blouson jackets to corporate polo shirts — each garment category includes standard, FR, anti-static, and hi-vis variants where applicable. Garment-specific tech packs available on request.
+            </p>
+          </motion.div>
+
+          <div className="space-y-5">
+            {WORKWEAR_ARTICLES.map((cat, ci) => (
+              <motion.div
+                key={cat.category}
+                custom={ci}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className={`rounded-2xl border p-6 ${cat.accent}`}
+              >
+                <div className="flex items-center gap-3 mb-5">
+                  <span className="text-2xl" aria-hidden="true">{cat.icon}</span>
+                  <h3 className={`text-sm font-bold uppercase tracking-[0.18em] ${cat.labelClr}`}>{cat.category}</h3>
+                </div>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                  {cat.garments.map((g) => (
+                    <div key={g.name} className="rounded-xl bg-white border border-white/60 p-4 flex flex-col shadow-sm">
+                      <h4 className="text-sm font-bold text-navy-900 mb-1.5">{g.name}</h4>
+                      <p className="text-xs text-gray-600 leading-relaxed flex-1 mb-3">{g.desc}</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {g.tags.map((tag) => (
+                          <span key={tag} className={`rounded-full px-2 py-0.5 text-[10px] font-semibold ${cat.labelClr} bg-white border border-current/20`}>{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-8 rounded-xl bg-navy-900 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+          >
+            <div>
+              <p className="text-gold font-bold text-sm uppercase tracking-wider mb-1">Bespoke Garment Development</p>
+              <p className="text-white/70 text-sm">Garment type not listed? Submit your specification and we source from our 50+ vetted factory network.</p>
+            </div>
+            <Link
+              href="/rfq/"
+              className="shrink-0 inline-flex items-center gap-2 bg-gold text-navy-900 font-bold px-6 py-3 rounded-lg text-sm hover:bg-yellow-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            >
+              Submit Garment RFQ
+              <span aria-hidden="true">→</span>
+            </Link>
+          </motion.div>
+        </div>
+        <BackToTop />
       </section>
 
       {/* ═══ SECTION 1 — CONSTRUCTIONS (Industrial UI + Comparison Table) ═══ */}
@@ -948,6 +1438,134 @@ export default function WorkwearContent() {
         <BackToTop dark />
       </section>
 
+      {/* ═══ SECTION — SIZING TABLES ═══ */}
+      <section id="ww-sizing" className="py-20 bg-white" aria-labelledby="ww-sizing-h2">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-10"
+          >
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Sizing Guide</p>
+            <h2 id="ww-sizing-h2" className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
+              Men&apos;s XS–5XL · Women&apos;s XS/6–3XL/20 — All Measurements in Centimetres
+            </h2>
+            <p className="text-gray-600 max-w-3xl">
+              Workwear fleet programmes require precise size allocation. The tables below provide body measurements (not finished garment measurements) in centimetres with EU size equivalents. For fleet orders, buyers supply a size ratio and we produce accordingly. Custom grading and non-standard size ranges are available on request.
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-sm font-bold text-navy-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+                <span aria-hidden="true">👨</span> Men&apos;s Sizing — Body Measurements (cm)
+              </h3>
+              <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-navy-900">
+                      <th className="text-left px-4 py-3 text-white text-xs font-semibold uppercase tracking-wider">Size</th>
+                      <th className="text-left px-4 py-3 text-white text-xs font-semibold uppercase tracking-wider">EU</th>
+                      <th className="text-left px-4 py-3 text-white text-xs font-semibold uppercase tracking-wider">Chest</th>
+                      <th className="text-left px-4 py-3 text-white text-xs font-semibold uppercase tracking-wider">Waist</th>
+                      <th className="text-left px-4 py-3 text-white text-xs font-semibold uppercase tracking-wider">Hip</th>
+                      <th className="text-left px-4 py-3 text-white text-xs font-semibold uppercase tracking-wider hidden sm:table-cell">Inseam</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {SIZE_TABLE_MEN.map((row, i) => (
+                      <motion.tr
+                        key={row.size}
+                        custom={i}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={fadeUp}
+                        className={`border-b border-gray-50 hover:bg-amber-50 transition-colors ${i % 2 === 0 ? "bg-white" : "bg-gray-50/60"}`}
+                      >
+                        <td className="px-4 py-3 font-bold text-navy-900">{row.size}</td>
+                        <td className="px-4 py-3 text-gray-500 font-mono text-xs">{row.eu}</td>
+                        <td className="px-4 py-3 text-gray-700 font-mono text-xs">{row.chest}</td>
+                        <td className="px-4 py-3 text-gray-700 font-mono text-xs">{row.waist}</td>
+                        <td className="px-4 py-3 text-gray-700 font-mono text-xs">{row.hip}</td>
+                        <td className="px-4 py-3 text-gray-700 font-mono text-xs hidden sm:table-cell">{row.inseam}</td>
+                      </motion.tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-sm font-bold text-navy-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+                <span aria-hidden="true">👩</span> Women&apos;s Sizing — Body Measurements (cm)
+              </h3>
+              <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-navy-900">
+                      <th className="text-left px-4 py-3 text-white text-xs font-semibold uppercase tracking-wider">Size / UK</th>
+                      <th className="text-left px-4 py-3 text-white text-xs font-semibold uppercase tracking-wider">EU</th>
+                      <th className="text-left px-4 py-3 text-white text-xs font-semibold uppercase tracking-wider">Bust</th>
+                      <th className="text-left px-4 py-3 text-white text-xs font-semibold uppercase tracking-wider">Waist</th>
+                      <th className="text-left px-4 py-3 text-white text-xs font-semibold uppercase tracking-wider">Hip</th>
+                      <th className="text-left px-4 py-3 text-white text-xs font-semibold uppercase tracking-wider hidden sm:table-cell">Inseam</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {SIZE_TABLE_WOMEN.map((row, i) => (
+                      <motion.tr
+                        key={row.size}
+                        custom={i}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={fadeUp}
+                        className={`border-b border-gray-50 hover:bg-amber-50 transition-colors ${i % 2 === 0 ? "bg-white" : "bg-gray-50/60"}`}
+                      >
+                        <td className="px-4 py-3 font-bold text-navy-900">{row.size}</td>
+                        <td className="px-4 py-3 text-gray-500 font-mono text-xs">{row.eu}</td>
+                        <td className="px-4 py-3 text-gray-700 font-mono text-xs">{row.bust}</td>
+                        <td className="px-4 py-3 text-gray-700 font-mono text-xs">{row.waist}</td>
+                        <td className="px-4 py-3 text-gray-700 font-mono text-xs">{row.hip}</td>
+                        <td className="px-4 py-3 text-gray-700 font-mono text-xs hidden sm:table-cell">{row.inseam}</td>
+                      </motion.tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 p-4 rounded-xl bg-amber-50 border border-amber-200">
+            <p className="text-amber-700 text-sm"><strong>Tolerances:</strong> All figures are body measurements in centimetres with ±1 cm tolerance. Finished garment measurements include ease allowance per garment type. Custom grading for non-standard size ranges is available — state requirements in your RFQ.</p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-8 rounded-2xl bg-navy-900 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+          >
+            <div>
+              <p className="font-bold text-white mb-1">Non-standard sizes, plus-size fleet, or custom grading spec?</p>
+              <p className="text-white/60 text-sm">Attach your measurement sheet or grading file to the RFQ — we confirm factory grading capability and sample lead time within 48 hours.</p>
+            </div>
+            <Link
+              href="/rfq/"
+              className="shrink-0 inline-flex items-center gap-2 bg-gold text-navy-900 font-bold px-6 py-3 rounded-lg text-sm hover:bg-yellow-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            >
+              Submit Sizing Spec
+              <span aria-hidden="true">→</span>
+            </Link>
+          </motion.div>
+        </div>
+        <BackToTop />
+      </section>
+
       {/* ═══ SECTION 3 — GSM TIERS (Material Design + Table with bars) ═══ */}
       <section id="ww-gsm" className="py-20 bg-white" aria-labelledby="ww-gsm-h2">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -1120,6 +1738,68 @@ export default function WorkwearContent() {
         <BackToTop dark />
       </section>
 
+      {/* ═══ SECTION — ACCESSORIES ═══ */}
+      <section id="ww-accessories" className="py-20 bg-white" aria-labelledby="ww-accessories-h2">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-10"
+          >
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Workwear Accessories</p>
+            <h2 id="ww-accessories-h2" className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
+              8 Textile Accessories — Sourced Through the Same Certified Factory Network
+            </h2>
+            <p className="text-gray-600 max-w-3xl">
+              Fleet programmes typically require more than garments alone. Hi-vis vests, aprons, base layers, headwear, lanyards and fleece liners complete the workwear programme. All accessories sourced from the same vetted factories — consolidated into a single shipment with your garment order.
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {ACCESSORIES.map((acc, i) => (
+              <motion.div
+                key={acc.name}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className={`rounded-2xl border p-5 flex flex-col ${acc.colour}`}
+              >
+                <span className="text-3xl mb-3 block" aria-hidden="true">{acc.icon}</span>
+                <h3 className="text-sm font-bold text-navy-900 mb-2">{acc.name}</h3>
+                <p className="text-xs text-gray-600 leading-relaxed flex-1 mb-3">{acc.desc}</p>
+                <div className="border-t border-white/60 pt-3 space-y-1">
+                  <p className="text-[10px] font-semibold text-gold uppercase tracking-wider">Materials</p>
+                  <p className="text-xs text-gray-500">{acc.materials}</p>
+                  <span className="inline-block mt-1 rounded-full bg-white/70 px-2 py-0.5 text-[10px] font-semibold text-navy-900/70">{acc.tag}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-8 rounded-xl border border-gray-100 bg-gray-50 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+          >
+            <p className="text-gray-600 text-sm max-w-xl">All accessories can be included in a single RFQ with your garment order. We coordinate production and consolidate into one shipment to your port.</p>
+            <Link
+              href="/rfq/"
+              className="shrink-0 inline-flex items-center gap-2 bg-navy-900 text-white font-semibold px-6 py-3 rounded-lg text-sm hover:bg-navy-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+            >
+              Include Accessories in RFQ
+              <span aria-hidden="true">→</span>
+            </Link>
+          </motion.div>
+        </div>
+        <BackToTop />
+      </section>
+
       {/* ═══ SECTION 6 — OEM CAPABILITIES (Isometric UI + Workflow Diagram) ═══ */}
       <section id="ww-oem" className="py-20 bg-slate-900" aria-labelledby="ww-oem-h2">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -1208,10 +1888,10 @@ export default function WorkwearContent() {
           >
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Industry Sectors</p>
             <h2 id="ww-sectors-h2" className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Five Industries · Distinct Requirements · One Sourcing Partner
+              Ten Industries · Distinct Requirements · One Sourcing Partner
             </h2>
             <p className="text-white/60 max-w-3xl">
-              Each sector demands a specific combination of fabric, safety rating, and certification. Our programme experience spans all five — matching the right factory, fabric, and compliance pathway to your procurement brief.
+              Each sector demands a specific combination of fabric, safety rating, and certification. Our programme experience spans construction, oil and gas, mining, logistics, healthcare, food processing, manufacturing, electrical, security, and agriculture — matching the right factory, fabric, and compliance pathway to your procurement brief.
             </p>
           </motion.div>
 
@@ -1355,6 +2035,83 @@ export default function WorkwearContent() {
               </motion.div>
             ))}
           </div>
+        </div>
+        <BackToTop />
+      </section>
+
+      {/* ═══ SECTION — COMPLIANCE STANDARDS ═══ */}
+      <section id="ww-compliance" className="py-20 bg-gray-50" aria-labelledby="ww-compliance-h2">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-12"
+          >
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Safety Standards</p>
+            <h2 id="ww-compliance-h2" className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
+              10 International Standards — Matched to Your Export Region
+            </h2>
+            <p className="text-gray-600 max-w-3xl">
+              Workwear compliance is jurisdiction-specific. EN ISO standards govern EU and UK markets; NFPA standards are mandatory for US buyers; ANSI/ISEA 107 applies to hi-vis workwear in the USA; AS/NZS 4602.1 covers Australian and New Zealand programmes. We identify the correct standard for your destination market and confirm factory certification before production begins.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {COMPLIANCE_STANDARDS.map((std, i) => (
+              <motion.div
+                key={std.code}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className={`rounded-2xl border p-6 ${std.accent}`}
+              >
+                <div className="flex items-start gap-4">
+                  <span className="text-3xl shrink-0 mt-0.5" aria-hidden="true">{std.icon}</span>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
+                      <h3 className="text-base font-bold text-navy-900 font-mono">{std.code}</h3>
+                      <span className={`rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider ${std.labelClr} bg-white/70`}>{std.region}</span>
+                    </div>
+                    <p className={`text-xs font-semibold uppercase tracking-wider mb-2 ${std.labelClr}`}>{std.title}</p>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-3">{std.desc}</p>
+                    <div>
+                      <p className="text-[10px] font-bold text-navy-900/60 uppercase tracking-wider mb-1.5">Applies To</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {std.applies.map((a) => (
+                          <span key={a} className="rounded-full bg-white/60 border border-gray-200 px-2 py-0.5 text-[10px] font-semibold text-navy-900/70">{a}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-10 rounded-2xl bg-navy-900 p-8 text-center"
+          >
+            <p className="text-gold font-bold text-xs tracking-[0.2em] uppercase mb-3">Standard Not Listed?</p>
+            <h3 className="text-xl font-bold text-white mb-3">We Source to Buyer-Specified Standards</h3>
+            <p className="text-white/70 text-sm max-w-2xl mx-auto mb-6">
+              If your programme requires a standard not listed above — country-specific regulations, military standards, or combined standard compliance — state the exact standard code in your RFQ and we confirm factory capability before accepting the order.
+            </p>
+            <Link
+              href="/rfq/"
+              className="inline-flex items-center gap-2 bg-gold text-navy-900 font-bold px-8 py-3 rounded-lg text-sm hover:bg-yellow-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+            >
+              Specify Your Standard in the RFQ
+              <span aria-hidden="true">→</span>
+            </Link>
+          </motion.div>
         </div>
         <BackToTop />
       </section>

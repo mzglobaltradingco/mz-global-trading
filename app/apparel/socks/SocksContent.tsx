@@ -70,32 +70,68 @@ const KNIT_STRUCTURES = [
   { id: "terry-sole", name: "Terry Sole Cushion", badge: "", icon: "🛡️", color: "bg-blue-50 border-blue-100", accent: "text-blue-700", tag: "Sport / Work", desc: "Terry loop on the sole only — targeted cushioning underfoot without extra weight on the cuff and leg. Popular in running, hiking and work sock programmes." },
   { id: "full-terry", name: "Full Terry Cushion", badge: "", icon: "🏔️", color: "bg-sky-50 border-sky-100", accent: "text-sky-700", tag: "Winter / Hiking", desc: "All-over terry loop construction for maximum cushioning and insulation. Suited to winter, outdoor and heavy-duty work sock programmes." },
   { id: "jacquard", name: "Jacquard / Pattern Knit", badge: "Popular Fashion", icon: "🎨", color: "bg-pink-50 border-pink-100", accent: "text-pink-700", tag: "Fashion / Gift", desc: "Complex multi-colour patterns knitted directly into the fabric structure. No print, no embellishment — the pattern is structural. Popular in fashion, gift and branded retail." },
+  { id: "cable-knit", name: "Cable Knit", badge: "", icon: "🔗", color: "bg-amber-50 border-amber-100", accent: "text-amber-700", tag: "Fashion / Winter / Gift", desc: "Raised cable twists and lattice patterns created by crossing stitch groups during knitting. Widely used in seasonal fashion, holiday gift programmes and premium casual socks." },
+  { id: "pointelle", name: "Pointelle / Openwork", badge: "", icon: "✦", color: "bg-fuchsia-50 border-fuchsia-100", accent: "text-fuchsia-700", tag: "Women's / Kids'", desc: "Small eyelets and lace-effect patterns created by transferring stitches — a delicate openwork structure. Standard in women's fashion, girls' and infant sock programmes." },
   { id: "mesh-eyelet", name: "Mesh / Open Knit", badge: "", icon: "💨", color: "bg-teal-50 border-teal-100", accent: "text-teal-700", tag: "Athletic / Ventilated", desc: "Open-weave construction with ventilation zones for maximum airflow during activity. Used in running, cycling and performance sport sock programmes." },
   { id: "compression", name: "Compression Knit", badge: "Medical / Sport", icon: "⚡", color: "bg-rose-50 border-rose-100", accent: "text-rose-700", tag: "Medical / Recovery", desc: "Graduated compression from ankle to calf. mmHg rating engineered to specification. Used in medical, travel comfort and sport recovery programmes." },
 ];
 
-const SIZE_RANGES = [
-  { code: "WS", range: "EU 35–38 / UK 2–5 / US Women 5–8", use: "Women's programme" },
-  { code: "MM", range: "EU 39–42 / UK 6–8 / US Men 6–9", use: "Men's standard" },
-  { code: "ML", range: "EU 43–46 / UK 9–11 / US Men 10–13", use: "Men's large" },
-  { code: "XL", range: "EU 47–50 / UK 12–14 / US Men 14+", use: "XL / extended" },
-  { code: "KS", range: "Kids EU 22–27 / UK 4–10", use: "Junior / smaller" },
-  { code: "KM", range: "Kids EU 28–34 / UK 10–2", use: "Older kids" },
-  { code: "OS", range: "One Size (EU 38–44)", use: "Unisex / gift" },
-  { code: "CX", range: "Custom size range", use: "Bespoke spec" },
+const SOCK_STYLES = [
+  { id: "no-show", name: "No-Show / Invisible", icon: "👟", cut: "Below ankle bone", badge: "Most Popular", tag: "Casual · Sneaker · Trainer", desc: "Sits below the ankle bone — invisible inside low-cut trainers, boat shoes and loafers. The single most-ordered style globally. Non-slip silicone grip tab option available." },
+  { id: "loafer-liner", name: "Loafer Liner", icon: "🥿", cut: "Covers heel & arch only", badge: "", tag: "Dress · Formal", desc: "Ultra-low cut covering only heel, arch and ball of foot. Designed for loafers, moccasins and formal shoes. Fine-knit plain weave; virtually invisible in formal footwear." },
+  { id: "ankle", name: "Ankle Sock", icon: "👟", cut: "Just above ankle bone", badge: "", tag: "Athletic · Casual", desc: "Sits just above the ankle bone. Standard for casual and athletic programmes. Available in all knit structures — plain, rib, terry cushion and mesh open knit." },
+  { id: "quarter", name: "Quarter / Mini Crew", icon: "🏃", cut: "Lower calf", badge: "", tag: "Sport · Running", desc: "Between ankle and full crew length. Popular for running, gym and casual sport programmes where some calf coverage is preferred without full crew bulk." },
+  { id: "crew", name: "Crew Sock", icon: "🧦", cut: "Mid-calf", badge: "Best Seller", tag: "Universal · Fashion · Work", desc: "Reaches the mid-calf — the most versatile and highest-volume sock style. Suitable for all programmes from plain casual to cushioned work and jacquard fashion." },
+  { id: "knee-high", name: "Knee-High", icon: "🦵", cut: "Below the knee", badge: "", tag: "Dress · School · Compression", desc: "Extends to just below the knee. Used in dress, school uniform, equestrian and graduated compression programmes (10–40 mmHg). Also OTC compression for travel." },
+  { id: "over-knee", name: "Over-the-Knee", icon: "👗", cut: "Above the knee", badge: "", tag: "Fashion · Specialty", desc: "Fashion and specialty lengths extending above the knee. Available in plain knit, rib and jacquard structures for branded fashion and seasonal gift programmes." },
+  { id: "boot", name: "Boot / Hiking Sock", icon: "🥾", cut: "Crew to mid-calf", badge: "", tag: "Outdoor · Work", desc: "Full- or partial-terry cushioning built to resist boot friction. Reinforced heel, toe and leg. Merino wool, cotton/acrylic or cotton/polyester blends." },
+  { id: "diabetic", name: "Diabetic / Non-Binding", icon: "🏥", cut: "Crew height, loose top", badge: "", tag: "Medical · Sensitive Foot", desc: "Seamless toe, wide toe box and non-restrictive top band — no elastic compression. Designed for diabetic foot care, post-surgical and sensitive-foot programmes." },
+  { id: "toe-sock", name: "Toe Sock / Five-Finger", icon: "✋", cut: "Ankle or crew height", badge: "", tag: "Yoga · Specialist", desc: "Individual toe pockets reduce friction and improve grip. Used in yoga, Pilates, barefoot-shoe and specialist athletic programmes. Cotton, bamboo and recycled polyester blends." },
 ];
 
-const DENIER_TIERS = [
-  { label: "Fine / Liner", denier: "< 100D", desc: "Lightweight dress and liner socks for formal, hotel amenity and airline programmes", pct: 35, featured: false, color: "bg-indigo-300" },
-  { label: "Standard", denier: "100–200D", desc: "The commercial baseline for casual, fashion and everyday performance sock programmes", pct: 80, featured: true, color: "bg-gold" },
-  { label: "Heavy / Cushion", denier: "200D+", desc: "Heavy work, hiking and full-terry construction socks for maximum durability and cushioning", pct: 45, featured: false, color: "bg-orange-600" },
+const SIZE_RANGES = [
+  { code: "IT", range: "EU 15–22 / 0–24 months", use: "Infant & toddler", note: "Foot length 9–14 cm" },
+  { code: "KS", range: "EU 22–27 / UK 4–9 / US Kids 5–10", use: "Young children", note: "Foot length 14–17 cm" },
+  { code: "KM", range: "EU 28–34 / UK 10–2 / US Kids 11–3", use: "Older children", note: "Foot length 17–22 cm" },
+  { code: "WS", range: "EU 35–38 / UK 2–5 / US Women 5–8", use: "Women's standard", note: "Foot length 22–25 cm" },
+  { code: "MM", range: "EU 39–42 / UK 6–8 / US Men 7–9", use: "Men's standard", note: "Foot length 25–27 cm" },
+  { code: "ML", range: "EU 43–46 / UK 9–11 / US Men 10–12", use: "Men's large", note: "Foot length 27–30 cm" },
+  { code: "XL", range: "EU 47–50 / UK 12–14 / US Men 13+", use: "XL / extended", note: "Foot length 30 cm+" },
+  { code: "OS", range: "One Size (EU 38–44 / UK 5–9.5)", use: "Unisex / gift packs", note: "Stretch knit accommodates range" },
+  { code: "CS", range: "Calf ≤ 33 cm", use: "Compression — Small", note: "Sized by calf circumference" },
+  { code: "CM", range: "Calf 33–40 cm", use: "Compression — Medium", note: "Sized by calf circumference" },
+  { code: "CL", range: "Calf 40–46 cm", use: "Compression — Large", note: "Sized by calf circumference" },
+  { code: "CX", range: "Custom — specify foot length & calf", use: "Bespoke size specification", note: "Full measurement sheet on request" },
+];
+
+const WEIGHT_TIERS = [
+  { label: "Lightweight / Liner", weight: "25–50 g/pr", oz: "0.9–1.8 oz", desc: "Fine dress, liner and no-show socks. Smooth hand, low bulk. Ideal for formal wear, hotel amenity and hidden footwear programmes.", pct: 30, featured: false, color: "bg-indigo-300" },
+  { label: "Standard / Fashion", weight: "50–80 g/pr", oz: "1.8–2.8 oz", desc: "The commercial baseline for crew, ankle, casual and fashion socks. Accepts all knit structures and decoration methods.", pct: 80, featured: true, color: "bg-gold" },
+  { label: "Athletic / Cushion", weight: "80–110 g/pr", oz: "2.8–3.9 oz", desc: "Cushioned sport, running and work socks with terry zones. Higher yarn density for durability and impact absorption.", pct: 60, featured: false, color: "bg-orange-500" },
+  { label: "Heavy Work / Hiking", weight: "110–160 g/pr", oz: "3.9–5.6 oz", desc: "Full-terry construction for maximum cushioning and insulation. Heavy-duty work socks, hiking and winter programmes.", pct: 40, featured: false, color: "bg-red-600" },
+];
+
+const COMPOSITIONS = [
+  { id: "cotton-nylon-sp", name: "Cotton / Nylon / Spandex", badge: "Most Common", blend: "75% Cotton · 22% Nylon · 3% Spandex", icon: "🌿", color: "bg-emerald-50 border-emerald-100", accent: "text-emerald-700", tag: "Casual · Fashion · Crew", desc: "The dominant global sock composition. Combed cotton for softness, nylon for durability, spandex for shape retention. Suitable for all lengths and most knit structures." },
+  { id: "combed-cotton", name: "Combed Cotton / Nylon / Spandex", badge: "Premium Hand", blend: "80% Combed Cotton · 17% Nylon · 3% Spandex", icon: "🧵", color: "bg-amber-50 border-amber-100", accent: "text-amber-700", tag: "Dress · Hotel Amenity", desc: "Combing removes short fibres — softer hand, reduced pilling. Standard for premium fashion, executive gift and hotel amenity programmes." },
+  { id: "cotton-poly-sp", name: "Cotton / Polyester / Spandex", badge: "", blend: "60% Cotton · 37% Polyester · 3% Spandex", icon: "⚡", color: "bg-blue-50 border-blue-100", accent: "text-blue-700", tag: "Athletic · Sport", desc: "Athletic sock baseline. Polyester wicks moisture faster than nylon, making this the preferred blend for running, gym and performance sport programmes." },
+  { id: "organic-cotton", name: "Organic Cotton / Nylon / Spandex", badge: "GOTS Certified", blend: "75% Organic Cotton · 22% Nylon · 3% Spandex", icon: "☘️", color: "bg-lime-50 border-lime-100", accent: "text-lime-700", tag: "Organic · Sustainable", desc: "Same construction as conventional cotton/nylon/spandex — organic cotton source carries full GOTS chain-of-custody. Targets EU/UK organic retail and eco-brand programmes." },
+  { id: "polyester-technical", name: "Polyester / Nylon / Spandex", badge: "", blend: "80% Polyester · 17% Nylon · 3% Spandex", icon: "🏃", color: "bg-cyan-50 border-cyan-100", accent: "text-cyan-700", tag: "Performance · Technical", desc: "Full synthetic technical sock — maximum moisture wicking, lowest weight, fastest drying. Sublimation-compatible base. Road running and cycling programmes." },
+  { id: "merino-wool", name: "Merino Wool / Nylon / Spandex", badge: "", blend: "85% Merino Wool · 12% Nylon · 3% Spandex", icon: "🐑", color: "bg-stone-50 border-stone-200", accent: "text-stone-700", tag: "Hiking · Premium Outdoor", desc: "Natural temperature regulation and odour resistance. Industry standard for premium hiking, travel and outdoor programmes. Superwash treated for machine wash." },
+  { id: "bamboo", name: "Bamboo Viscose / Cotton / Spandex", badge: "", blend: "70% Bamboo · 27% Cotton · 3% Spandex", icon: "🌱", color: "bg-green-50 border-green-100", accent: "text-green-700", tag: "Natural · Eco", desc: "Naturally antibacterial, moisture-wicking and ultra-soft hand. Premium natural fibre positioning for eco-conscious retail and wellness-brand programmes." },
+  { id: "nylon-compression", name: "Nylon / Spandex (Compression)", badge: "Medical / Sport", blend: "80% Nylon · 20% Spandex", icon: "⚕️", color: "bg-rose-50 border-rose-100", accent: "text-rose-700", tag: "Medical · Recovery", desc: "High spandex ratio enables precision graduated compression (10–40 mmHg). Smooth microfibre nylon knit. Medical, travel-comfort and sport recovery programmes." },
+  { id: "acrylic-wool", name: "Acrylic / Wool / Nylon", badge: "", blend: "60% Acrylic · 30% Wool · 10% Nylon", icon: "❄️", color: "bg-sky-50 border-sky-100", accent: "text-sky-700", tag: "Winter · Thermal", desc: "Cost-effective thermal/winter composition. Acrylic adds bulk insulation at lower cost than pure merino. Used in winter work socks, thermal casual and branded cold-weather programmes." },
+  { id: "recycled-poly", name: "Recycled Polyester / Nylon / Spandex", badge: "GRS Certified", blend: "80% Recycled Polyester · 17% Nylon · 3% Spandex", icon: "♻️", color: "bg-teal-50 border-teal-100", accent: "text-teal-700", tag: "Eco · Athletic", desc: "Post-consumer plastic converted to performance hosiery yarn. GRS chain-of-custody certified. Targets ESG-committed sport, outdoor and performance sock brands." },
 ];
 
 const DESIGN_METHODS = [
-  { code: "JCQ", method: "Knitted-in Jacquard", best: "Multi-colour woven patterns — logos, motifs, stripes and geometric patterns built into the fabric structure", compat: ["Plain Knit", "Rib Cuff", "Jacquard Knit"], note: "No fading, no peeling — pattern is structural and permanent" },
-  { code: "ITS", method: "Intarsia (Multi-colour Blocks)", best: "Distinct colour blocks without floats on the reverse — cleaner back for premium programmes", compat: ["Plain Knit", "Jacquard Knit"], note: "Premium finish — used in high-end branded and gift sock programmes" },
-  { code: "SBL", method: "All-Over Sublimation", best: "Photographic quality full-sock print — any image, any colour range on white or light base", compat: ["Plain Knit (polyester base)"], note: "100% polyester base required. Not available on cotton or cotton-blend socks" },
-  { code: "PLN", method: "Plain / No Design", best: "Solid colour socks — PMS matched, clean finish. Label and ankle band are the sole branded element", compat: ["All Structures"], note: "Best combined with branded ankle band or custom label programme" },
+  { code: "JCQ", method: "Knitted-in Jacquard", best: "Multi-colour woven patterns — logos, motifs, stripes and geometric patterns built directly into the fabric structure during knitting", compat: ["Plain Knit", "Rib Cuff", "Jacquard Knit"], note: "No fading, no peeling — pattern is structural and fully permanent" },
+  { code: "STR", method: "Yarn-Dyed Stripes", best: "Horizontal colour stripes created by switching yarn colours during knitting — the most common decoration method for casual and fashion socks globally", compat: ["Plain Knit", "Rib Cuff", "Terry Sole", "Full Terry"], note: "Clean colour transitions; stripe width and repeat specified per programme" },
+  { code: "ITS", method: "Intarsia (Colour Block)", best: "Large distinct colour blocks without float threads on the reverse — cleaner back face than jacquard for premium and gift programmes", compat: ["Plain Knit", "Jacquard Knit"], note: "Premium finish for high-end branded, fashion and gift sock programmes" },
+  { code: "EMB", method: "Embroidery", best: "Logo or motif embroidered on the cuff, ankle or leg panel after knitting — standard decoration for corporate branded and promotional sock programmes", compat: ["Plain Knit", "Rib Cuff", "Full Terry"], note: "Artwork digitised to stitch file; minimum 6-colour logo standard; cuff placement most common" },
+  { code: "SBL", method: "All-Over Sublimation", best: "Photographic-quality full-sock print — any image, unlimited colour range on a white polyester base", compat: ["Plain Knit (polyester base only)"], note: "100% polyester base required. Not available on cotton or cotton-blend socks" },
+  { code: "SGP", method: "Silicone Grip Print", best: "Non-slip silicone dots, waves or custom patterns printed onto the sole and/or heel — functional and decorative", compat: ["Plain Knit", "Terry Sole", "Full Terry"], note: "Standard for yoga, grip, baby and non-slip athletic socks; also used on no-show tabs" },
+  { code: "PLN", method: "Plain / Solid Colour", best: "Fully PMS-matched solid colour — no surface pattern. Ankle band, label and custom packaging carry all branding", compat: ["All Structures"], note: "Fastest sampling and highest colour accuracy; best combined with a branded ankle band programme" },
 ];
 
 const COLOUR_PROFILES = [
@@ -119,8 +155,8 @@ const CERTIFICATIONS = [
 ];
 
 const OEM_FEATURES = [
-  { num: "01", title: "Knit Structure Selection", desc: "All 7 knit structures — from fine plain liner to graduated compression — developed to your end-use specification.", color: "border-indigo-300" },
-  { num: "02", title: "Yarn Specification", desc: "Combed cotton, organic cotton, merino wool, bamboo, recycled polyester and blends. Denier and twist per your performance brief.", color: "border-violet-300" },
+  { num: "01", title: "Knit Structure Selection", desc: "All 9 knit structures — from fine plain liner and pointelle openwork to cable knit and graduated compression — developed to your end-use specification.", color: "border-indigo-300" },
+  { num: "02", title: "Yarn & Composition Specification", desc: "Combed cotton, organic cotton, merino wool, bamboo, recycled polyester and blends. Yarn count and twist per your performance brief.", color: "border-violet-300" },
   { num: "03", title: "Pattern & Logo Programme", desc: "Knitted-in jacquard logo, intarsia block, stripe or sublimation — your brand is engineered into the sock construction, not applied on top.", color: "border-blue-300" },
   { num: "04", title: "Compression Specification", desc: "Graduated compression programmes (10–40 mmHg) engineered to your medical or sport recovery specification with test reporting available.", color: "border-teal-300" },
   { num: "05", title: "Ankle Band & Label", desc: "Branded ankle band (sock header), printed care label, woven label or hang tag — full label programme developed to your artwork.", color: "border-pink-300" },
@@ -154,7 +190,7 @@ const PACK_OPTIONS = [
 
 const LEAD_STAGES = [
   { stage: "RFQ & Quotation", days: "3–5", desc: "Knit structure, yarn, pattern and pack confirmed with factory pricing", color: "bg-indigo-500" },
-  { stage: "Sample Production", days: "10–18", desc: "Knitted sample pair(s) to specification — pattern, denier and size confirmed", color: "bg-violet-500" },
+  { stage: "Sample Production", days: "10–18", desc: "Knitted sample pair(s) to specification — style, composition, weight and size confirmed", color: "bg-violet-500" },
   { stage: "Bulk Production", days: "30–55", desc: "From confirmed PO and approved knit sample — duration varies with jacquard complexity", color: "bg-blue-600" },
   { stage: "QC & Inspection", days: "3–5", desc: "Pair count, size check, pattern accuracy and packaging audit", color: "bg-teal-500" },
   { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim to destination port", color: "bg-pink-500" },
@@ -170,21 +206,23 @@ const SUSTAINABILITY_ITEMS = [
 ];
 
 const PROCESS_STEPS = [
-  { num: "01", title: "Submit RFQ", short: "Specification", desc: "Share knit structure, yarn blend, denier, size range, pattern brief, compression requirement (if applicable), pack format and target quantity." },
+  { num: "01", title: "Submit RFQ", short: "Specification", desc: "Share sock style (length/cut), knit structure, yarn composition, target weight (g/pair), size range, pattern brief, compression specification (if applicable), pack format and target quantity." },
   { num: "02", title: "Factory Matching", short: "Shortlisting", desc: "We match 2–3 certified Pakistan hosiery factories to your knit structure, yarn and certification requirements. Pricing in 3–5 working days." },
   { num: "03", title: "Sample Production", short: "Sampling", desc: "Knitted sample pairs produced to your pattern, structure and size specification. 10–18 days from specification lock." },
-  { num: "04", title: "Sample Approval", short: "Approval", desc: "Review knit quality, pattern accuracy, yarn blend, denier hand and size before purchase order placement." },
+  { num: "04", title: "Sample Approval", short: "Approval", desc: "Review knit quality, pattern accuracy, yarn blend, weight hand and size before purchase order placement." },
   { num: "05", title: "Bulk Production", short: "Production", desc: "Full knitting run with pattern, colour and pair count per purchase order. Jacquard programmes take longer than plain." },
   { num: "06", title: "QC & Shipment", short: "Export", desc: "Pair count audit, size range check, pattern accuracy verification and pack configuration confirmed before loading at Karachi or Port Qasim." },
 ];
 
 const FAQS = [
-  { q: "What knit structures are available for socks from Pakistan?", a: "Pakistan's hosiery sector produces all seven major knit structures: plain knit (smooth, everyday), rib cuff + plain foot (casual and crew), terry sole cushion (sport and work), full terry cushion (heavy-duty and winter), jacquard / pattern knit (fashion and branded), mesh / open knit (ventilated athletic), and compression knit (medical and recovery). Include your intended end use and performance requirement in your RFQ for correct structure matching." },
+  { q: "What knit structures are available for socks from Pakistan?", a: "Pakistan's hosiery sector produces all nine commercial knit structures: plain knit (smooth, everyday), rib cuff + plain foot (casual and crew), terry sole cushion (sport and work), full terry cushion (heavy-duty and winter), jacquard / pattern knit (fashion and branded), cable knit (fashion, winter and gift programmes), pointelle / openwork (women's and children's), mesh / open knit (ventilated athletic), and compression knit (medical and recovery). Include your intended end use and performance requirement in your RFQ for correct structure matching." },
   { q: "What is the difference between jacquard and sublimation for patterned socks?", a: "Jacquard knitting builds the pattern into the fabric structure using coloured yarns — the pattern is permanent, does not fade and has no feel difference on the sock surface. Sublimation is a dye-transfer print applied to a finished white polyester-base sock — it delivers photographic image quality and unlimited colour range but requires 100% polyester as the base fabric. Cotton and cotton-blend socks cannot receive sublimation print. For branded or gift programmes where pattern longevity and hand feel are priorities, jacquard is typically preferred. For photographic or complex artwork, sublimation is the correct choice." },
   { q: "Can compression socks be manufactured in Pakistan?", a: "Yes. Graduated compression socks (10–40 mmHg) are available from Pakistan's certified hosiery factories. Compression programmes require specific needle count and yarn tension specification — include your target mmHg rating, size range (typically shoe size or calf circumference) and compression class in your RFQ. Test reporting and compression curve documentation are available on request for medical-grade programmes." },
   { q: "What fibre options are available for hosiery from Pakistan?", a: "Combed cotton, organic cotton (GOTS certified), cotton-polyester blends, bamboo viscose, merino wool blend, recycled polyester (GRS certified) and nylon blend for reinforced heels and toes. Fibre selection depends on knit structure, performance requirements and target market positioning. Organic cotton and recycled polyester programmes require corresponding factory certification — specify in your RFQ." },
   { q: "What order quantities are typical for sock programmes?", a: "Sock programme quantities vary considerably by knit complexity and pack format — plain bulk programmes run differently to complex jacquard or compression programmes. Include your target quantity, size breakdown, number of colour/pattern options and pack configuration in your RFQ and we match you with factories whose equipment and production economics align with your programme size." },
   { q: "What retail packaging options are available for socks?", a: "All standard hosiery retail pack formats are available: ankle band (single pair, the most common retail format), header card in 2-pair and 3-pair configurations, polybag in 3-pair, 6-pair, 12-pair and 24-pair counts, and bulk bale without individual packing for institutional and trade programmes. Ankle band and header card artwork is submitted for approval before bulk production." },
+  { q: "What sock styles (cuts and lengths) are available from Pakistan?", a: "Pakistan's hosiery factories produce all major sock styles: no-show / invisible (the most ordered globally), loafer liner, ankle, quarter / mini crew, crew (highest volume), knee-high, over-the-knee, boot / hiking, diabetic / non-binding, and toe socks. Style selection is specified in your RFQ alongside knit structure, composition and decoration requirements." },
+  { q: "What is the most common sock composition and why?", a: "The most common commercial sock composition worldwide is cotton / nylon / spandex — typically 75% combed cotton, 22% nylon and 3% spandex. Combed cotton provides softness and breathability; nylon (polyamide) adds durability, particularly at the heel and toe; spandex (elastane) gives the sock shape retention through repeated washing. This blend is suitable for all lengths and most knit structures. For athletic socks, cotton/polyester/spandex is preferred because polyester wicks moisture faster. Merino wool/nylon/spandex is standard for hiking and premium outdoor programmes. Nylon/spandex at high spandex ratios (80%/20%) is used for medical compression socks." },
 ];
 
 // ─── Main component ───────────────────────────────────────────────────────────
@@ -210,14 +248,14 @@ export default function SocksContent() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
           <div className="max-w-3xl">
-                        <motion.nav aria-label="Breadcrumb" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
+            <motion.nav aria-label="Breadcrumb" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
               <Link href="/" className="hover:text-gold transition-colors">Home</Link>
               <span aria-hidden="true">&#x203A;</span>
               <Link href="/apparel/" className="hover:text-gold transition-colors">Apparel</Link>
               <span aria-hidden="true">&#x203A;</span>
               <span className="text-gold">Socks</span>
             </motion.nav>
-<motion.p
+            <motion.p
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -244,8 +282,9 @@ export default function SocksContent() {
               className="text-gray-300 text-lg leading-relaxed mb-10 max-w-2xl"
             >
               MZ Global Trading sources custom socks from Pakistan&rsquo;s certified
-              hosiery factories. Seven knit structures from plain liner to graduated
-              compression. Jacquard patterns, sublimation print, organic cotton.
+              hosiery factories. Ten sock styles from no-show to knee-high. Nine knit
+              structures from plain liner to graduated compression. Ten fibre compositions
+              including organic cotton, merino wool and recycled polyester.
               OEKO-TEX, BSCI, WRAP certified. FOB Karachi.
             </motion.p>
             <motion.div
@@ -296,12 +335,12 @@ export default function SocksContent() {
                 Socks — Pakistan Hosiery
               </p>
               <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-3">
-                Seven Knit Structures. Every Sock Programme.
+                Ten Sock Styles. Nine Knit Structures. Every Programme.
               </h2>
               <p className="text-indigo-200 text-sm leading-relaxed max-w-xl">
-                From fine plain liner to medical-grade compression — Pakistan&rsquo;s certified
-                hosiery factories span the full knit structure range. Jacquard patterns,
-                organic cotton, bamboo blends and recycled polyester all available.
+                From no-show liner to medical compression, plain casual to jacquard fashion —
+                Pakistan&rsquo;s certified hosiery factories cover the full style, structure and
+                composition range. Organic cotton, merino wool and recycled polyester all available.
               </p>
             </div>
             <div className="flex flex-wrap sm:flex-nowrap gap-8 lg:gap-10 border-t border-white/10 pt-6 lg:border-t-0 lg:pt-0 lg:border-l lg:pl-10 shrink-0">
@@ -309,7 +348,7 @@ export default function SocksContent() {
                 { val: "50+", label: "Vetted Factories" },
                 { val: "35+", label: "Export Markets" },
                 { val: "10+", label: "Certifications" },
-                { val: "7", label: "Knit Structures" },
+                { val: "10", label: "Sock Styles" },
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
@@ -336,9 +375,9 @@ export default function SocksContent() {
             <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
-          {/* Row 1 */}
+          {/* Row 1 — 2 large cards */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            {/* Bento 1 — Knit Structures */}
+            {/* Knit Structures */}
             <motion.div
               initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
               className="bg-indigo-50 border border-indigo-100 rounded-2xl p-7 flex flex-col gap-4 min-h-[300px]"
@@ -347,7 +386,7 @@ export default function SocksContent() {
                 <span className="text-2xl" aria-hidden="true">🧦</span>
                 <div>
                   <p className="text-indigo-600 text-xs font-semibold tracking-[0.2em] uppercase">Knit Structures</p>
-                  <h3 className="text-xl font-bold text-navy-900 mt-0.5">7 Knit Structures</h3>
+                  <h3 className="text-xl font-bold text-navy-900 mt-0.5">9 Knit Structures</h3>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-2.5 flex-1">
@@ -364,68 +403,86 @@ export default function SocksContent() {
                   </div>
                 ))}
               </div>
-              <p className="text-xs text-indigo-600 font-medium">+ 3 more structures</p>
+              <p className="text-xs text-indigo-600 font-medium">+ 5 more structures</p>
               <ExploreBtn sectionId="section-constructions" label="Explore Knit Structures" />
             </motion.div>
 
-            {/* Bento 2 — Sizes */}
+            {/* Sock Styles (new) */}
             <motion.div
               initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-violet-50 border border-violet-100 rounded-2xl p-7 flex flex-col gap-4 min-h-[300px]"
+              className="bg-orange-50 border border-orange-100 rounded-2xl p-7 flex flex-col gap-4 min-h-[300px]"
             >
               <div className="flex items-start gap-3">
-                <span className="text-2xl" aria-hidden="true">📐</span>
+                <span className="text-2xl" aria-hidden="true">👟</span>
                 <div>
-                  <p className="text-violet-600 text-xs font-semibold tracking-[0.2em] uppercase">Sizing</p>
-                  <h3 className="text-xl font-bold text-navy-900 mt-0.5">Shoe Size Ranges</h3>
+                  <p className="text-orange-600 text-xs font-semibold tracking-[0.2em] uppercase">Styles</p>
+                  <h3 className="text-xl font-bold text-navy-900 mt-0.5">10 Sock Styles</h3>
                 </div>
               </div>
-              <div className="flex flex-col gap-2 flex-1">
-                {SIZE_RANGES.slice(0, 5).map((s) => (
-                  <div key={s.code} className="bg-white rounded-xl px-4 py-2.5 border border-violet-100 flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-lg bg-violet-100 text-violet-700 text-[10px] font-bold flex items-center justify-center shrink-0">{s.code}</span>
-                    <div>
-                      <p className="text-xs font-semibold text-navy-900">{s.range}</p>
-                      <p className="text-[10px] text-gray-400">{s.use}</p>
+              <div className="grid grid-cols-2 gap-2.5 flex-1">
+                {SOCK_STYLES.slice(0, 4).map((s) => (
+                  <div key={s.id} className="bg-white rounded-xl p-3 border border-orange-100">
+                    <div className="flex items-start gap-1.5">
+                      <span className="text-base" aria-hidden="true">{s.icon}</span>
+                      <div>
+                        <p className="text-sm font-semibold text-navy-900 leading-tight">{s.name}</p>
+                        <span className="inline-block text-[10px] font-medium text-orange-600 mt-0.5">{s.tag}</span>
+                      </div>
                     </div>
+                    {s.badge && <span className="mt-1 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{s.badge}</span>}
                   </div>
                 ))}
-                <p className="text-xs text-violet-600 font-medium pl-11">+ 3 more size ranges</p>
               </div>
-              <ExploreBtn sectionId="section-fits" label="Explore Sizes" />
+              <p className="text-xs text-orange-600 font-medium">+ 6 more styles</p>
+              <ExploreBtn sectionId="section-styles" label="Explore Sock Styles" />
             </motion.div>
           </div>
 
-          {/* Row 2: 4 compact */}
+          {/* Row 2 — 4 compact cards */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-            {/* Bento 3 — Denier */}
+            {/* Sizes (compact, moved from Row 1) */}
             <motion.div
               initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
-              className="bg-blue-50 border border-blue-100 rounded-2xl p-6 flex flex-col gap-3 min-h-[280px]"
+              className="bg-violet-50 border border-violet-100 rounded-2xl p-6 flex flex-col gap-3 min-h-[280px]"
             >
-              <span className="text-2xl" aria-hidden="true">🪡</span>
-              <p className="text-blue-600 text-xs font-semibold tracking-[0.2em] uppercase">Weight</p>
-              <h3 className="text-base font-bold text-navy-900 leading-tight">Denier Guide</h3>
-              <div className="flex flex-col gap-2.5 flex-1">
-                {DENIER_TIERS.map((t) => (
-                  <div key={t.label} className="bg-white rounded-xl p-3 border border-blue-100">
-                    <div className="flex justify-between mb-1">
-                      <span className="text-xs font-bold text-navy-900">{t.denier}</span>
-                      {t.featured && <span className="text-[10px] font-semibold text-gold bg-gold/10 px-1.5 py-0.5 rounded-full">Popular</span>}
-                    </div>
-                    <div className="w-full h-1.5 bg-blue-100 rounded-full overflow-hidden mb-1">
-                      <div className={`h-full rounded-full ${t.color}`} style={{ width: `${t.pct}%` }} aria-hidden="true" />
-                    </div>
-                    <p className="text-[10px] font-semibold text-blue-600">{t.label}</p>
+              <span className="text-2xl" aria-hidden="true">📐</span>
+              <p className="text-violet-600 text-xs font-semibold tracking-[0.2em] uppercase">Sizing</p>
+              <h3 className="text-base font-bold text-navy-900 leading-tight">Sock Size Guide</h3>
+              <div className="flex flex-col gap-1.5 flex-1">
+                {SIZE_RANGES.slice(0, 5).map((s) => (
+                  <div key={s.code} className="bg-white rounded-lg px-3 py-2 border border-violet-100 flex items-center gap-2">
+                    <span className="w-6 h-6 rounded bg-violet-100 text-violet-700 text-[9px] font-bold flex items-center justify-center shrink-0">{s.code}</span>
+                    <p className="text-[10px] font-semibold text-navy-900 leading-tight">{s.use}</p>
                   </div>
                 ))}
+                <p className="text-[10px] text-violet-600 font-medium pl-8">+ 7 more incl. compression &amp; infant</p>
               </div>
-              <ExploreBtn sectionId="section-gsm" label="View Denier Guide" />
+              <ExploreBtn sectionId="section-fits" label="Explore Sizes" />
             </motion.div>
 
-            {/* Bento 4 — Design */}
+            {/* Compositions (new) */}
             <motion.div
               initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.08 }}
+              className="bg-emerald-50 border border-emerald-100 rounded-2xl p-6 flex flex-col gap-3 min-h-[280px]"
+            >
+              <span className="text-2xl" aria-hidden="true">🌿</span>
+              <p className="text-emerald-700 text-xs font-semibold tracking-[0.2em] uppercase">Compositions</p>
+              <h3 className="text-base font-bold text-navy-900 leading-tight">10 Fibre Blends</h3>
+              <div className="flex flex-col gap-1.5 flex-1">
+                {COMPOSITIONS.slice(0, 4).map((c) => (
+                  <div key={c.id} className="bg-white rounded-lg px-3 py-2 border border-emerald-100">
+                    <p className="text-[10px] font-bold text-navy-900 leading-tight">{c.name}</p>
+                    <p className="text-[9px] text-emerald-700 mt-0.5">{c.blend}</p>
+                  </div>
+                ))}
+                <p className="text-[10px] text-emerald-700 font-medium">+ 6 more blends</p>
+              </div>
+              <ExploreBtn sectionId="section-compositions" label="View Compositions" />
+            </motion.div>
+
+            {/* Design */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.16 }}
               className="bg-pink-50 border border-pink-100 rounded-2xl p-6 flex flex-col gap-3 min-h-[280px]"
             >
               <span className="text-2xl" aria-hidden="true">🎨</span>
@@ -442,9 +499,9 @@ export default function SocksContent() {
               <ExploreBtn sectionId="section-decoration" label="View Design Methods" />
             </motion.div>
 
-            {/* Bento 5 — Colours */}
+            {/* Colours */}
             <motion.div
-              initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.16 }}
+              initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.24 }}
               className="bg-rose-50 border border-rose-100 rounded-2xl p-6 flex flex-col gap-3 min-h-[280px]"
             >
               <span className="text-2xl" aria-hidden="true">🌈</span>
@@ -464,17 +521,24 @@ export default function SocksContent() {
               </div>
               <ExploreBtn sectionId="section-colors" label="Explore Colours" />
             </motion.div>
+          </div>
 
-            {/* Bento 6 — OEM */}
+          {/* Row 3 — 5-col 2+2+1: OEM + Markets + Export */}
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 mb-6">
+            {/* OEM */}
             <motion.div
-              initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.24 }}
-              className="bg-teal-50 border border-teal-100 rounded-2xl p-6 flex flex-col gap-3 min-h-[280px]"
+              initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+              className="lg:col-span-2 bg-teal-50 border border-teal-100 rounded-2xl p-7 flex flex-col gap-4 min-h-[270px]"
             >
-              <span className="text-2xl" aria-hidden="true">🏷️</span>
-              <p className="text-teal-600 text-xs font-semibold tracking-[0.2em] uppercase">Custom</p>
-              <h3 className="text-base font-bold text-navy-900 leading-tight">OEM &amp; Custom</h3>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl" aria-hidden="true">🏷️</span>
+                <div>
+                  <p className="text-teal-600 text-xs font-semibold tracking-[0.2em] uppercase">Custom</p>
+                  <h3 className="text-lg font-bold text-navy-900 mt-0.5">OEM &amp; Custom</h3>
+                </div>
+              </div>
               <div className="flex flex-col gap-2 flex-1">
-                {OEM_FEATURES.slice(0, 5).map((f) => (
+                {OEM_FEATURES.map((f) => (
                   <div key={f.num} className="flex items-start gap-2">
                     <span className="text-indigo-600 text-xs font-bold mt-0.5 shrink-0">{f.num}</span>
                     <p className="text-xs text-gray-600 leading-snug">{f.title}</p>
@@ -483,13 +547,10 @@ export default function SocksContent() {
               </div>
               <ExploreBtn sectionId="section-oem" label="Explore OEM" />
             </motion.div>
-          </div>
 
-          {/* Row 3: 5-col 2+2+1 */}
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 mb-6">
-            {/* Bento 7 — Markets */}
+            {/* Markets */}
             <motion.div
-              initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+              initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}
               className="lg:col-span-2 bg-purple-50 border border-purple-100 rounded-2xl p-7 flex flex-col gap-4 min-h-[270px]"
             >
               <div className="flex items-start gap-3">
@@ -511,29 +572,7 @@ export default function SocksContent() {
               <ExploreBtn sectionId="section-markets" label="View All Sectors" />
             </motion.div>
 
-            {/* Bento 8 — Certs */}
-            <motion.div
-              initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}
-              className="lg:col-span-2 bg-emerald-50 border border-emerald-100 rounded-2xl p-7 flex flex-col gap-4 min-h-[270px]"
-            >
-              <div className="flex items-start gap-3">
-                <span className="text-2xl" aria-hidden="true">🏅</span>
-                <div>
-                  <p className="text-emerald-700 text-xs font-semibold tracking-[0.2em] uppercase">Standards</p>
-                  <h3 className="text-lg font-bold text-navy-900 mt-0.5">Quality Certifications</h3>
-                </div>
-              </div>
-              <div className="grid grid-cols-4 gap-2 flex-1 content-start">
-                {CERTIFICATIONS.map((c) => (
-                  <div key={c.name} className="bg-white rounded-xl border border-emerald-100 flex items-center justify-center p-2" style={{ height: 56 }}>
-                    <Image src={c.img} alt={`${c.name} — ${c.full}`} width={72} height={44} className="object-contain w-full h-full" />
-                  </div>
-                ))}
-              </div>
-              <ExploreBtn sectionId="section-certs" label="View Certifications" />
-            </motion.div>
-
-            {/* Bento 9 — Export */}
+            {/* Export */}
             <motion.div
               initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}
               className="lg:col-span-1 bg-sky-50 border border-sky-100 rounded-2xl p-7 flex flex-col gap-4 min-h-[270px]"
@@ -556,9 +595,9 @@ export default function SocksContent() {
             </motion.div>
           </div>
 
-          {/* Row 4: 3-col 2+1 */}
+          {/* Row 4 — 3-col 2+1 */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Bento 10 — Sustainability */}
+            {/* Sustainability */}
             <motion.div
               initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
               className="lg:col-span-2 bg-green-50 border border-green-100 rounded-2xl p-7 flex flex-col gap-4 min-h-[240px]"
@@ -582,7 +621,7 @@ export default function SocksContent() {
               <ExploreBtn sectionId="section-sustainability" label="View Sustainability" />
             </motion.div>
 
-            {/* Bento 11 — Process */}
+            {/* Process */}
             <motion.div
               initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.12 }}
               className="lg:col-span-1 bg-indigo-50 border border-indigo-100 rounded-2xl p-7 flex flex-col gap-4 min-h-[240px]"
@@ -606,46 +645,46 @@ export default function SocksContent() {
       </section>
 
       {/* ══ RESOURCES ROW ════════════════════════════════════════════════════ */}
-      <section className="bg-indigo-950 py-12 lg:py-16">
+      <section className="bg-gray-50 py-12 lg:py-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Guides &amp; Resources</p>
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Link href="/knowledge/" className="group bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-gold hover:bg-white/10 transition-all flex flex-col gap-3">
+            <Link href="/knowledge/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📚</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
-              <p className="font-semibold text-white">Hosiery Buying Guide</p>
-              <p className="text-xs text-indigo-200 leading-relaxed">Knit structure selection, denier guide and market positioning for international sock buyers.</p>
-              <span className="text-xs font-semibold text-gold group-hover:text-yellow-300 transition-colors mt-auto">Explore Hub →</span>
+              <p className="font-semibold text-navy-900">Hosiery Buying Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Knit structures, sock styles, composition selection and market positioning for international buyers.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Explore Hub →</span>
             </Link>
-            <Link href="/guides/" className="group bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-gold hover:bg-white/10 transition-all flex flex-col gap-3">
+            <Link href="/guides/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📄</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Guides</p>
-              <p className="font-semibold text-white">Pakistan Hosiery Export Guide</p>
-              <p className="text-xs text-indigo-200 leading-relaxed">Sourcing process, yarn options, certification requirements and factory audit overview.</p>
-              <span className="text-xs font-semibold text-gold group-hover:text-yellow-300 transition-colors mt-auto">View Guides →</span>
+              <p className="font-semibold text-navy-900">Pakistan Hosiery Export Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Sourcing process, yarn options, certification requirements and factory audit overview.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guides →</span>
             </Link>
-            <Link href="/downloads/" className="group bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-gold hover:bg-white/10 transition-all flex flex-col gap-3">
+            <Link href="/downloads/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">⬇️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
-              <p className="font-semibold text-white">Size Charts &amp; Spec Sheets</p>
-              <p className="text-xs text-indigo-200 leading-relaxed">Shoe size range charts, compression mmHg reference and certification documentation.</p>
-              <span className="text-xs font-semibold text-gold group-hover:text-yellow-300 transition-colors mt-auto">Get Downloads →</span>
+              <p className="font-semibold text-navy-900">Size Charts &amp; Spec Sheets</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Shoe size range charts, weight guide, compression mmHg reference and certification documentation.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Downloads →</span>
             </Link>
-            <Link href="/rfq/" className="group bg-gold rounded-2xl p-6 flex flex-col gap-3">
+            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">✉️</span>
-              <p className="text-xs font-semibold text-navy-900 uppercase tracking-widest">Quick Start</p>
-              <p className="font-semibold text-navy-900">Ready to Source Socks?</p>
-              <p className="text-xs text-navy-900/70 leading-relaxed">Structure and yarn confirmed — RFQ takes 3 minutes. Factory match and pricing in 3–5 working days.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-navy-700 transition-colors mt-auto">Request a Quote →</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
+              <p className="font-semibold text-white">Ready to Source Socks?</p>
+              <p className="text-xs text-gray-300 leading-relaxed">Specify style, composition, knit structure and weight. RFQ to factory quotation: 3–5 working days.</p>
+              <span className="text-xs font-semibold text-gold group-hover:text-yellow-300 transition-colors mt-auto">Request a Quote →</span>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ══ SECTION 1 — KNIT STRUCTURES — RETAIL UI ══════════════════════════ */}
+      {/* ══ SECTION 1 — KNIT STRUCTURES ══════════════════════════════════════ */}
       <section id="section-constructions" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Seven Structures</p>
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Nine Knit Structures</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Knit Structures</h2>
           <p className="text-gray-500 mb-10 max-w-2xl leading-relaxed">
             Knit structure is the primary specification decision in a sock programme. It determines cushioning, compression, ventilation, pattern capability and end-use application.
@@ -675,7 +714,6 @@ export default function SocksContent() {
               </motion.div>
             ))}
           </div>
-          {/* Structure × use-case matrix */}
           <div className="mt-12 bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
             <div className="bg-indigo-700 px-6 py-3">
               <p className="text-white text-sm font-bold">Knit Structure × End-Use Guide</p>
@@ -717,11 +755,91 @@ export default function SocksContent() {
         </div>
       </section>
 
-      {/* ══ SECTION 2 — SIZES — TYPOGRAPHY-DRIVEN UI ═════════════════════════ */}
+      {/* ══ SECTION 2 — SOCK STYLES ═══════════════════════════════════════════ */}
+      <section id="section-styles" className="bg-orange-50 py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Ten Styles</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Sock Styles &amp; Cuts</h2>
+          <p className="text-gray-600 mb-10 max-w-2xl leading-relaxed">
+            Sock style — the length and cut of the sock — is specified independently from knit structure and composition. Pakistan&rsquo;s hosiery factories produce all ten major sock styles across the full range of constructions and fibre blends.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            {SOCK_STYLES.map((s, i) => (
+              <motion.div
+                key={s.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.06 }}
+                whileHover={{ scale: 1.03, transition: { type: "spring", stiffness: 400, damping: 25 } }}
+                className={`bg-white border border-orange-100 rounded-2xl p-6 flex flex-col gap-3 cursor-default ${i === 0 ? "sm:col-span-2 lg:col-span-1" : ""}`}
+              >
+                <div className="flex items-start justify-between">
+                  <span className="text-3xl" aria-hidden="true">{s.icon}</span>
+                  <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full text-orange-700 bg-orange-50 border border-orange-200">{s.tag}</span>
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-navy-900">{s.name}</h3>
+                  <p className="text-xs text-orange-600 mt-0.5">{s.cut}</p>
+                  {s.badge && (
+                    <span className="inline-block mt-1 text-[10px] font-semibold text-gold bg-gold/15 px-2.5 py-0.5 rounded-full border border-gold/25">{s.badge}</span>
+                  )}
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed flex-1">{s.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+          <div className="mt-12 bg-white rounded-2xl overflow-hidden border border-orange-100">
+            <div className="bg-orange-600 px-6 py-3 flex items-center justify-between flex-wrap gap-2">
+              <p className="text-white text-sm font-bold">Sock Style × End-Use Guide</p>
+              <p className="text-orange-100 text-xs">✓✓ Primary use &nbsp;·&nbsp; ✓ Secondary use &nbsp;·&nbsp; — Not typical</p>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-gray-200">
+                    <th className="text-left px-5 py-3 font-semibold text-navy-900 text-xs uppercase tracking-wider">Style</th>
+                    <th className="text-center px-3 py-3 font-semibold text-navy-900 text-xs">Dress/Formal</th>
+                    <th className="text-center px-3 py-3 font-semibold text-navy-900 text-xs">Casual/Fashion</th>
+                    <th className="text-center px-3 py-3 font-semibold text-navy-900 text-xs">Athletic</th>
+                    <th className="text-center px-3 py-3 font-semibold text-navy-900 text-xs">Medical</th>
+                    <th className="text-center px-3 py-3 font-semibold text-navy-900 text-xs">Work</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {[
+                    ["No-Show / Invisible", "—", "✓✓", "✓", "—", "—"],
+                    ["Loafer Liner", "✓✓", "✓", "—", "—", "—"],
+                    ["Ankle Sock", "✓", "✓✓", "✓✓", "—", "✓"],
+                    ["Quarter / Mini Crew", "—", "✓", "✓✓", "—", "✓"],
+                    ["Crew Sock", "✓", "✓✓", "✓", "—", "✓✓"],
+                    ["Knee-High", "✓", "✓", "—", "✓✓", "—"],
+                    ["Over-the-Knee", "—", "✓✓", "—", "—", "—"],
+                    ["Boot / Hiking Sock", "—", "—", "✓✓", "—", "✓✓"],
+                    ["Diabetic / Non-Binding", "—", "—", "—", "✓✓", "—"],
+                    ["Toe Sock / Five-Finger", "—", "—", "✓", "✓", "—"],
+                  ].map(([style, ...cells]) => (
+                    <tr key={style} className="hover:bg-orange-50/40">
+                      <td className="px-5 py-3 font-medium text-navy-900">{style}</td>
+                      {cells.map((cell, ci) => (
+                        <td key={ci} className={`text-center px-3 py-3 text-sm ${cell === "✓✓" ? "text-orange-600 font-bold" : cell === "✓" ? "text-green-600" : "text-gray-300"}`}>{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <BackToTop />
+        </div>
+      </section>
+
+      {/* ══ SECTION 3 — SIZES ════════════════════════════════════════════════ */}
       <section id="section-fits" className="bg-indigo-950 py-20 lg:py-28 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Shoe Size Ranges</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">All Shoe Sizes Available</h2>
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Sock Sizing</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Sizing Guide</h2>
+          <p className="text-indigo-300 text-sm mb-8 max-w-2xl leading-relaxed">Standard socks are sized by shoe size (foot length). Compression and medical socks are additionally sized by calf circumference. Infant socks are sized by age and foot length. Custom size ranges available on specification.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
             {SIZE_RANGES.map((s, i) => (
               <motion.div
@@ -753,16 +871,16 @@ export default function SocksContent() {
         </div>
       </section>
 
-      {/* ══ SECTION 3 — DENIER — NEUMORPHISM ════════════════════════════════ */}
+      {/* ══ SECTION 4 — WEIGHT GUIDE ══════════════════════════════════════════ */}
       <section id="section-gsm" className="bg-gray-100 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Weight Guide</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Denier Weight Guide</h2>
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Sock Weight Guide</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Weight by End Use</h2>
           <p className="text-gray-500 mb-10 max-w-2xl leading-relaxed">
-            Unlike woven garments measured in GSM, hosiery weight is expressed in denier — the thickness and density of the yarn. Denier selection drives the sock&rsquo;s hand, durability and end-use position.
+            Sock weight is specified in grams per pair (g/pair). Unlike woven fabrics rated in GSM, hosiery weight reflects the total knitted pair mass — influenced by yarn composition, knit density and cushioning structure.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
-            {DENIER_TIERS.map((tier, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+            {WEIGHT_TIERS.map((tier, i) => (
               <motion.div
                 key={tier.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -780,7 +898,8 @@ export default function SocksContent() {
                 {tier.featured && (
                   <span className="absolute -top-3 left-6 text-[10px] font-bold text-gold bg-navy-900 px-3 py-1 rounded-full uppercase tracking-wider">Most Ordered</span>
                 )}
-                <p className={`text-3xl font-bold ${tier.featured ? "text-gold" : "text-navy-900"}`}>{tier.denier}</p>
+                <p className={`text-2xl font-bold ${tier.featured ? "text-gold" : "text-navy-900"}`}>{tier.weight}</p>
+                <p className="text-xs text-gray-400 font-semibold">{tier.oz}</p>
                 <p className="text-sm font-bold text-gray-500 uppercase tracking-wider">{tier.label}</p>
                 <div className="w-full h-2 rounded-full overflow-hidden" style={{ background: "#c8cdd6", boxShadow: "inset 2px 2px 4px #b8bec8, inset -2px -2px 4px #f8fbff" }}>
                   <div className={`h-full rounded-full ${tier.color}`} style={{ width: `${tier.pct}%` }} aria-hidden="true" />
@@ -790,17 +909,17 @@ export default function SocksContent() {
             ))}
           </div>
           <div className="bg-white rounded-2xl p-6 border border-gray-200">
-            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Denier by Application</p>
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Weight by Application</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                ["Dress / Liner Socks", "< 100D", "Smooth fine hand for formal and hotel programmes"],
-                ["Athletic Running", "100–150D", "Lightweight breathable with targeted cushioning zones"],
-                ["Casual / Fashion", "150–200D", "Commercial baseline — durable, accepts patterns"],
-                ["Work / Hiking Cushion", "200D+", "Heavy full-terry for maximum durability and impact absorption"],
-              ].map(([app, d, note]) => (
+                ["No-Show / Liner Socks", "25–50 g/pair", "Smooth fine hand for formal and hidden footwear"],
+                ["Casual / Fashion Crew", "50–80 g/pair", "Commercial baseline — accepts all knit structures and colour methods"],
+                ["Athletic / Running", "80–110 g/pair", "Cushioned, breathable — terry zones underfoot without excess bulk"],
+                ["Work / Hiking", "110–160 g/pair", "Full-terry heavy construction — maximum durability and impact protection"],
+              ].map(([app, w, note]) => (
                 <div key={app} className="rounded-xl p-4" style={{ background: "#e0e5ec", boxShadow: "4px 4px 8px #b8bec8, -4px -4px 8px #f8fbff" }}>
                   <p className="text-sm font-bold text-navy-900">{app}</p>
-                  <p className="text-lg font-black text-indigo-600 mt-1">{d}</p>
+                  <p className="text-lg font-black text-indigo-600 mt-1">{w}</p>
                   <p className="text-xs text-gray-500 mt-1 leading-snug">{note}</p>
                 </div>
               ))}
@@ -810,7 +929,89 @@ export default function SocksContent() {
         </div>
       </section>
 
-      {/* ══ SECTION 4 — DESIGN — SOCIAL-FIRST UI ════════════════════════════ */}
+      {/* ══ SECTION 5 — COMPOSITIONS ══════════════════════════════════════════ */}
+      <section id="section-compositions" className="bg-white py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Fibre Compositions</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Compositions &amp; Yarn</h2>
+          <p className="text-gray-500 mb-3 max-w-2xl leading-relaxed">
+            The most common sock composition worldwide is cotton / nylon / spandex. Below are the industry&rsquo;s leading commercial blends — the most frequently specified across fashion, athletic, medical and eco programmes globally.
+          </p>
+          <p className="text-gray-400 text-sm mb-10 max-w-2xl leading-relaxed">
+            The blends below cover the most commonly ordered compositions across global hosiery programmes. Bespoke ratios, custom yarn counts and blends not listed here are all available — state your exact specification in your RFQ and we source accordingly.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {COMPOSITIONS.map((c, i) => (
+              <motion.div
+                key={c.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.06 }}
+                whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 400, damping: 25 } }}
+                className={`${c.color} border rounded-2xl p-6 flex flex-col gap-3 cursor-default ${i === 0 ? "sm:col-span-2 lg:col-span-1" : ""}`}
+              >
+                <div className="flex items-start justify-between">
+                  <span className="text-3xl" aria-hidden="true">{c.icon}</span>
+                  <div className="flex flex-col items-end gap-1">
+                    <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${c.accent} bg-white/60 border border-white`}>{c.tag}</span>
+                    {c.badge && <span className="text-[10px] font-semibold text-gold bg-gold/15 px-2 py-0.5 rounded-full border border-gold/25">{c.badge}</span>}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-navy-900">{c.name}</h3>
+                  <p className={`text-xs font-semibold mt-1 ${c.accent}`}>{c.blend}</p>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed flex-1">{c.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+          <div className="mt-12 bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
+            <div className="bg-emerald-700 px-6 py-3 flex items-center justify-between flex-wrap gap-2">
+              <p className="text-white text-sm font-bold">Composition × End Use</p>
+              <p className="text-emerald-100 text-xs">✓✓ Primary use &nbsp;·&nbsp; ✓ Secondary use &nbsp;·&nbsp; — Not typical</p>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-gray-200">
+                    <th className="text-left px-5 py-3 font-semibold text-navy-900 text-xs uppercase tracking-wider">Composition</th>
+                    <th className="text-center px-3 py-3 font-semibold text-navy-900 text-xs">Dress/Fashion</th>
+                    <th className="text-center px-3 py-3 font-semibold text-navy-900 text-xs">Athletic</th>
+                    <th className="text-center px-3 py-3 font-semibold text-navy-900 text-xs">Medical</th>
+                    <th className="text-center px-3 py-3 font-semibold text-navy-900 text-xs">Outdoor</th>
+                    <th className="text-center px-3 py-3 font-semibold text-navy-900 text-xs">Eco/Organic</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {[
+                    ["Cotton / Nylon / Spandex", "✓✓", "✓", "—", "—", "—"],
+                    ["Combed Cotton / Nylon / Spandex", "✓✓", "—", "—", "—", "—"],
+                    ["Cotton / Polyester / Spandex", "✓", "✓✓", "—", "—", "—"],
+                    ["Organic Cotton / Nylon / Spandex", "✓✓", "✓", "—", "—", "✓✓"],
+                    ["Polyester / Nylon / Spandex", "—", "✓✓", "—", "✓", "—"],
+                    ["Merino Wool / Nylon / Spandex", "✓", "✓", "—", "✓✓", "—"],
+                    ["Bamboo / Cotton / Spandex", "✓✓", "—", "—", "—", "✓✓"],
+                    ["Nylon / Spandex (Compression)", "—", "✓", "✓✓", "—", "—"],
+                    ["Acrylic / Wool / Nylon", "—", "—", "—", "✓✓", "—"],
+                    ["Recycled Polyester / Nylon / Spandex", "—", "✓✓", "—", "✓", "✓✓"],
+                  ].map(([comp, ...cells]) => (
+                    <tr key={comp} className="hover:bg-emerald-50/30">
+                      <td className="px-5 py-3 font-medium text-navy-900">{comp}</td>
+                      {cells.map((cell, ci) => (
+                        <td key={ci} className={`text-center px-3 py-3 text-sm ${cell === "✓✓" ? "text-emerald-700 font-bold" : cell === "✓" ? "text-green-600" : "text-gray-300"}`}>{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <BackToTop />
+        </div>
+      </section>
+
+      {/* ══ SECTION 6 — DESIGN ════════════════════════════════════════════════ */}
       <section id="section-decoration" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Pattern &amp; Design</p>
@@ -851,7 +1052,7 @@ export default function SocksContent() {
         </div>
       </section>
 
-      {/* ══ SECTION 5 — COLOURS — CINEMATIC UI ══════════════════════════════ */}
+      {/* ══ SECTION 7 — COLOURS ══════════════════════════════════════════════ */}
       <section id="section-colors" className="relative bg-gray-900 py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0 opacity-30" aria-hidden="true">
           <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-indigo-500 blur-3xl" />
@@ -890,7 +1091,7 @@ export default function SocksContent() {
         </div>
       </section>
 
-      {/* ══ SECTION 6 — OEM — PRODUCT SHOWCASE UI ════════════════════════════ */}
+      {/* ══ SECTION 8 — OEM ═══════════════════════════════════════════════════ */}
       <section id="section-oem" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Custom Development</p>
@@ -928,7 +1129,7 @@ export default function SocksContent() {
         </div>
       </section>
 
-      {/* ══ SECTION 7 — MARKETS — COLLAGE UI ════════════════════════════════ */}
+      {/* ══ SECTION 9 — MARKETS ═══════════════════════════════════════════════ */}
       <section id="section-markets" className="bg-gray-50 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Markets</p>
@@ -957,7 +1158,7 @@ export default function SocksContent() {
         </div>
       </section>
 
-      {/* ══ SECTION 8 — CERTIFICATIONS — SKEUOMORPHIC UI ════════════════════ */}
+      {/* ══ SECTION 10 — CERTIFICATIONS ═══════════════════════════════════════ */}
       <section id="section-certs" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Quality Standards</p>
@@ -1007,7 +1208,7 @@ export default function SocksContent() {
         </div>
       </section>
 
-      {/* ══ SECTION 9 — EXPORT — MAXIMALIST UI ══════════════════════════════ */}
+      {/* ══ SECTION 11 — EXPORT ═══════════════════════════════════════════════ */}
       <section id="section-export" className="bg-indigo-950 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Logistics</p>
@@ -1088,7 +1289,7 @@ export default function SocksContent() {
         </div>
       </section>
 
-      {/* ══ SECTION 10 — SUSTAINABILITY — EDITORIAL UI ═══════════════════════ */}
+      {/* ══ SECTION 12 — SUSTAINABILITY ═══════════════════════════════════════ */}
       <section id="section-sustainability" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-xl mb-16">
@@ -1136,7 +1337,7 @@ export default function SocksContent() {
         </div>
       </section>
 
-      {/* ══ SECTION 11 — PROCESS — HERO-CENTERED UI ══════════════════════════ */}
+      {/* ══ SECTION 13 — PROCESS ══════════════════════════════════════════════ */}
       <section id="section-process" className="bg-gray-50 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">How We Work</p>
@@ -1240,9 +1441,9 @@ export default function SocksContent() {
               Ready to Source Socks<br />from Pakistan?
             </h2>
             <p className="text-indigo-200 max-w-2xl mx-auto leading-relaxed mb-10 text-lg">
-              All seven knit structures. Organic cotton, recycled polyester, bamboo, merino
-              and nylon blends. Jacquard, intarsia, sublimation and plain programmes.
-              Pakistan&rsquo;s certified hosiery factories. FOB Karachi.
+              Ten sock styles. Nine knit structures. Ten fibre compositions including organic
+              cotton, recycled polyester, bamboo and merino wool. Jacquard, intarsia,
+              sublimation and plain programmes. Pakistan&rsquo;s certified hosiery factories. FOB Karachi.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-9 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">

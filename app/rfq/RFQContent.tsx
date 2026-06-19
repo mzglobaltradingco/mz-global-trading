@@ -42,6 +42,8 @@ const COUNTRIES = [
   "Yemen", "Zimbabwe",
 ];
 
+const COUNTRIES_SORTED = [...COUNTRIES].sort((a, b) => a.localeCompare(b));
+
 const INCOTERMS = [
   "EXW – Ex Works (factory)",
   "FOB – Free on Board (Karachi)",
@@ -639,6 +641,80 @@ const ic = (err?: string) =>
         : "border-gray-200 focus:ring-gold/40 focus:border-gold"
   }`;
 
+function SearchableSelect({
+  id, value, onChange, placeholder, options, error,
+}: {
+  id: string; value: string; onChange: (v: string) => void;
+  placeholder: string; options: string[]; error?: string;
+}) {
+  const [query, setQuery] = useState("");
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  const filtered = query.trim()
+    ? options.filter(o => o.toLowerCase().includes(query.toLowerCase()))
+    : options;
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
+
+  const listboxId = `${id}-listbox`;
+
+  return (
+    <div ref={ref} id={id} className="relative">
+      <div
+        className={`${ic(error)} flex items-center justify-between cursor-pointer`}
+        onClick={() => setOpen(v => !v)}
+        role="combobox"
+        aria-expanded={open}
+        aria-haspopup="listbox"
+        aria-controls={listboxId}
+        tabIndex={0}
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setOpen(v => !v); } }}
+      >
+        <span className={value ? "text-gray-900" : "text-gray-400"}>
+          {value || placeholder}
+        </span>
+        <svg className={`w-4 h-4 text-gray-400 transition-transform shrink-0 ${open ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9" /></svg>
+      </div>
+      {open && (
+        <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+          <div className="p-2 border-b border-gray-100">
+            <input
+              type="text"
+              placeholder="Search country…"
+              value={query}
+              onChange={e => setQuery(e.target.value)}
+              className="w-full px-2 py-1.5 text-sm border border-gray-200 rounded focus:outline-none focus:border-gold"
+              autoFocus
+            />
+          </div>
+          <ul id={listboxId} className="max-h-52 overflow-y-auto" role="listbox">
+            {filtered.length === 0 ? (
+              <li className="px-3 py-2 text-sm text-gray-400">No results</li>
+            ) : filtered.map(c => (
+              <li
+                key={c}
+                role="option"
+                aria-selected={value === c}
+                onClick={() => { onChange(c); setQuery(""); setOpen(false); }}
+                className={`px-3 py-2 text-sm cursor-pointer transition-colors ${value === c ? "bg-gold/10 text-navy-900 font-semibold" : "hover:bg-gray-50 text-gray-700"}`}
+              >
+                {c}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
+
 const stepAnim = {
   initial: { opacity: 0, x: 20 },
   animate: { opacity: 1, x: 0 },
@@ -905,6 +981,7 @@ export default function RFQContent() {
     setFormState(prev => ({ ...prev, products: [...prev.products, mkProduct()] }));
     setActiveProduct(formState.products.length);
     setErrors({});
+    setStep(1);
     scrollToForm();
   }
 
@@ -932,6 +1009,33 @@ export default function RFQContent() {
       e.weight = `${opts?.weightLabel ?? "GSM / Weight"} is required`;
     if (opts?.isFabricRoll && !p.sizeRange[0])
       e.sizeRange0 = "Fabric width is required";
+    if (p.productType && p.productType !== "Other / Multiple" && !p.fiberContent)
+      e.fiberContent = "Fiber content is required";
+    if (p.productType && p.productType !== "Other / Multiple" && opts?.constructionOptions?.length && !p.construction)
+      e.construction = "Construction / weave type is required";
+    // Section 4 — at least one size
+    if (p.productType && p.productType !== "Other / Multiple" && opts?.sizeOptions?.length && !opts?.isFabricRoll && p.sizeRange.length === 0)
+      e.sizeRange = "Please select at least one size option";
+    // Section 5 — dyeing method (Apparel / Home Textiles)
+    if (p.productType && p.productType !== "Other / Multiple" && !opts?.isFabricRoll && (p.category === "Apparel" || p.category === "Home Textiles") && !p.dyeingMethod)
+      e.dyeingMethod = "Dyeing method is required";
+    // Section 5 — fabric state (Fabric rolls)
+    if (opts?.isFabricRoll && !p.printType)
+      e.printType = "Fabric state is required";
+    // Section 6 — at least one finishing option
+    if (p.productType && p.productType !== "Other / Multiple" && opts?.finishingOptions?.length && p.finishing.length === 0)
+      e.finishing = "Please select at least one finishing option";
+    // Section 7 — brand label (Apparel only)
+    if (p.productType && p.productType !== "Other / Multiple" && p.category === "Apparel" && !p.brandLabel)
+      e.brandLabel = "Brand label type is required";
+    // Section 8 — packing type
+    if (p.productType && p.productType !== "Other / Multiple" && opts?.isFabricRoll && !p.rollLength)
+      e.rollLength = "Roll length is required";
+    if (p.productType && p.productType !== "Other / Multiple" && !opts?.isFabricRoll && opts?.individualPackOptions?.length && !p.individualPack)
+      e.individualPack = "Individual pack type is required";
+    // Section 9 — at least one certification entry
+    if (p.productType && p.productType !== "Other / Multiple" && opts?.certifications?.length && p.certifications.length === 0)
+      e.certifications = "Select at least one option — or choose 'No specific requirement'";
     if (!p.quantity.trim()) e.quantity = "Quantity is required";
     else if (!/\d/.test(p.quantity)) e.quantity = "Enter a numeric quantity";
     if (p.targetPrice && !/\d/.test(p.targetPrice)) e.targetPrice = "Enter a valid price (e.g. 3.50)";
@@ -1016,7 +1120,9 @@ export default function RFQContent() {
     setPdfState("loading");
     try {
       const { generateRFQPdf } = await import("@/lib/rfq-pdf");
-      await generateRFQPdf(formState, submittedAt);
+      const validProducts = formState.products.filter(p => p.category && p.productType);
+      const pdfSubject = `[RFQ] ${validProducts.map(p => p.productType || p.category).join(" + ")} — ${formState.company}`;
+      await generateRFQPdf(formState, submittedAt, pdfSubject);
       setPdfState("done");
     } catch {
       setPdfState("error");
@@ -1042,9 +1148,10 @@ export default function RFQContent() {
       const arr = (product[field] as string[]) || [];
       const next = arr.includes(val) ? arr.filter(v => v !== val) : [...arr, val];
       updateProduct(activeProduct, { [field]: next } as Partial<ProductSpec>);
+      if (errors[field]) setErrors(prev => ({ ...prev, [field]: "" }));
     }
 
-    const finishingOpts = opts ? [...opts.finishingOptions, "Other (specify below)"] : [];
+    const finishingOpts = opts ? ["Standard / No special finishing", ...opts.finishingOptions, "Other (specify below)"] : [];
     const isTerrySelected = product.construction !== "" && /terry|velour/i.test(product.construction);
     const shouldShowWarpWeft = !!(opts?.showWarpWeft && (
       opts.isFabricRoll ? product.construction === "Woven"
@@ -1179,9 +1286,9 @@ export default function RFQContent() {
                 <SpecSection title="Composition" number={2} color="teal">
                   <div className="grid sm:grid-cols-2 gap-3">
                     <div>
-                      <Field id="fiberContent" label="Fiber Content">
+                      <Field id="fiberContent" label="Fiber Content" required error={errors.fiberContent}>
                         <select id="fiberContent" value={product.fiberContent}
-                          onChange={e => setP("fiberContent", e.target.value)} className={ic()}>
+                          onChange={e => { setP("fiberContent", e.target.value); if (errors.fiberContent) setErrors(prev => ({ ...prev, fiberContent: "" })); }} className={ic(errors.fiberContent)}>
                           <option value="">Select…</option>
                           {fiberOptions.map(o => <option key={o} value={o}>{o}</option>)}
                         </select>
@@ -1227,9 +1334,9 @@ export default function RFQContent() {
                     <SpecSection title={opts.isFabricRoll ? "Construction & Width" : "Construction & Weight"} number={3} color="amber">
                       <div className="grid sm:grid-cols-2 gap-3">
                         <div>
-                          <Field id="construction" label={opts.constructionLabel}>
+                          <Field id="construction" label={opts.constructionLabel} required error={errors.construction}>
                             <select id="construction" value={product.construction}
-                              onChange={e => setP("construction", e.target.value)} className={ic()}>
+                              onChange={e => { setP("construction", e.target.value); if (errors.construction) setErrors(prev => ({ ...prev, construction: "" })); }} className={ic(errors.construction)}>
                               <option value="">Select…</option>
                               {opts.constructionOptions.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
@@ -1346,6 +1453,7 @@ export default function RFQContent() {
                         {opts.sizeLabel} <span className="text-gray-400 font-normal text-[11px]">(select all that apply)</span>
                       </p>
                       <CheckboxGrid options={opts.sizeOptions} selected={product.sizeRange} onToggle={v => toggleArr("sizeRange", v)} />
+                      {errors.sizeRange && <p className="text-red-500 text-[11px] mt-1.5 flex items-center gap-1" role="alert"><span aria-hidden="true">↑</span> {errors.sizeRange}</p>}
                       {product.sizeRange.includes("Custom") && (
                         <input type="text" placeholder="Describe your custom size requirement"
                           value={product.sizeRangeNotes} onChange={e => setP("sizeRangeNotes", e.target.value)}
@@ -1498,9 +1606,9 @@ export default function RFQContent() {
                   <SpecSection title="Color & Design" number={5} color="purple">
                     {(product.category === "Apparel" || product.category === "Home Textiles") && (
                       <div className="grid sm:grid-cols-2 gap-3">
-                        <Field id="dyeingMethod" label="Dyeing Method">
-                          <select id="dyeingMethod" value={product.dyeingMethod}
-                            onChange={e => setP("dyeingMethod", e.target.value)} className={ic()}>
+                        <Field id="dyeingMethod" label="Dyeing Method" required error={errors.dyeingMethod}>
+                          <select id="dyeingMethod" value={product.dyeingMethod} aria-invalid={!!errors.dyeingMethod}
+                            onChange={e => { setP("dyeingMethod", e.target.value); if (errors.dyeingMethod) setErrors(prev => ({ ...prev, dyeingMethod: "" })); }} className={ic(errors.dyeingMethod)}>
                             <option value="">Select…</option>
                             {DYEING_METHODS.map(o => <option key={o} value={o}>{o}</option>)}
                           </select>
@@ -1548,9 +1656,9 @@ export default function RFQContent() {
               {opts?.isFabricRoll && (
                 <SpecSection title="State & Design" number={4} color="purple">
                   <div className="grid sm:grid-cols-2 gap-3">
-                    <Field id="printType" label="Fabric State">
-                      <select id="printType" value={product.printType}
-                        onChange={e => setP("printType", e.target.value)} className={ic()}>
+                    <Field id="printType" label="Fabric State" required error={errors.printType}>
+                      <select id="printType" value={product.printType} aria-invalid={!!errors.printType}
+                        onChange={e => { setP("printType", e.target.value); if (errors.printType) setErrors(prev => ({ ...prev, printType: "" })); }} className={ic(errors.printType)}>
                         <option value="">Select…</option>
                         {FABRIC_STATES.map(o => <option key={o} value={o}>{o}</option>)}
                       </select>
@@ -1608,6 +1716,7 @@ export default function RFQContent() {
                   <SpecSection title="Finishing" number={6} color="teal">
                     <p className="text-[11px] text-gray-500">Select all that apply</p>
                     <CheckboxGrid options={finishingOpts} selected={product.finishing} onToggle={v => toggleArr("finishing", v)} />
+                    {errors.finishing && <p className="text-red-500 text-[11px] mt-1.5 flex items-center gap-1" role="alert"><span aria-hidden="true">↑</span> {errors.finishing}</p>}
                     {product.finishing.includes("Other (specify below)") && (
                       <input type="text" placeholder="Describe other finishing requirement"
                         value={product.finishingOther} onChange={e => setP("finishingOther", e.target.value)}
@@ -1623,9 +1732,9 @@ export default function RFQContent() {
                   {product.category === "Apparel" ? (
                     <SpecSection title="Labels & Branding" number={7} color="indigo">
                       <div className="grid sm:grid-cols-2 gap-3">
-                        <Field id="brandLabel" label="Brand Label">
-                          <select id="brandLabel" value={product.brandLabel}
-                            onChange={e => setP("brandLabel", e.target.value)} className={ic()}>
+                        <Field id="brandLabel" label="Brand Label" required error={errors.brandLabel}>
+                          <select id="brandLabel" value={product.brandLabel} aria-invalid={!!errors.brandLabel}
+                            onChange={e => { setP("brandLabel", e.target.value); if (errors.brandLabel) setErrors(prev => ({ ...prev, brandLabel: "" })); }} className={ic(errors.brandLabel)}>
                             <option value="">Select…</option>
                             {BRAND_LABELS.map(o => <option key={o} value={o}>{o}</option>)}
                           </select>
@@ -1657,9 +1766,9 @@ export default function RFQContent() {
                     {opts.isFabricRoll ? (
                       <div className="grid sm:grid-cols-2 gap-3">
                         <div>
-                          <Field id="rollLength" label="Roll Length">
-                            <select id="rollLength" value={product.rollLength}
-                              onChange={e => setP("rollLength", e.target.value)} className={ic()}>
+                          <Field id="rollLength" label="Roll Length" required error={errors.rollLength}>
+                            <select id="rollLength" value={product.rollLength} aria-invalid={!!errors.rollLength}
+                              onChange={e => { setP("rollLength", e.target.value); if (errors.rollLength) setErrors(prev => ({ ...prev, rollLength: "" })); }} className={ic(errors.rollLength)}>
                               <option value="">Select…</option>
                               {ROLL_LENGTHS.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
@@ -1684,9 +1793,9 @@ export default function RFQContent() {
                     ) : (
                       <div className="space-y-3.5">
                         <div className="grid sm:grid-cols-2 gap-3">
-                          <Field id="individualPack" label="Individual Pack">
-                            <select id="individualPack" value={product.individualPack}
-                              onChange={e => setP("individualPack", e.target.value)} className={ic()}>
+                          <Field id="individualPack" label="Individual Pack" required error={errors.individualPack}>
+                            <select id="individualPack" value={product.individualPack} aria-invalid={!!errors.individualPack}
+                              onChange={e => { setP("individualPack", e.target.value); if (errors.individualPack) setErrors(prev => ({ ...prev, individualPack: "" })); }} className={ic(errors.individualPack)}>
                               <option value="">Select…</option>
                               {opts.individualPackOptions.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
@@ -1727,8 +1836,9 @@ export default function RFQContent() {
               {/* Certifications */}
               {opts && (
                 <SpecSection title="Certifications Required" number={9} color="gold">
-                  <p className="text-[11px] text-gray-500">Select all that apply — or skip if no preference</p>
-                  <CheckboxGrid options={opts.certifications} selected={product.certifications} onToggle={v => toggleArr("certifications", v)} />
+                  <p className="text-[11px] text-gray-500">Select all that apply — or choose &ldquo;No specific requirement&rdquo;</p>
+                  <CheckboxGrid options={["No specific requirement", ...opts.certifications]} selected={product.certifications} onToggle={v => toggleArr("certifications", v)} />
+                  {errors.certifications && <p className="text-red-500 text-[11px] mt-1.5 flex items-center gap-1" role="alert"><span aria-hidden="true">↑</span> {errors.certifications}</p>}
                   {product.certifications.includes("Other (specify below)") && (
                     <input type="text" placeholder="e.g. USDA Organic, Fairtrade"
                       value={product.certOther} onChange={e => setP("certOther", e.target.value)}
@@ -1818,13 +1928,14 @@ export default function RFQContent() {
           <SpecSection title="Destination & Incoterm" number={1} color="blue">
             <div className="grid sm:grid-cols-2 gap-3">
               <Field id="destinationCountry" label="Destination Country" required error={errors.destinationCountry}>
-                <select id="destinationCountry" required aria-invalid={!!errors.destinationCountry}
+                <SearchableSelect
+                  id="destinationCountry"
                   value={formState.destinationCountry}
-                  onChange={e => setGlobal("destinationCountry", e.target.value)}
-                  className={ic(errors.destinationCountry)}>
-                  <option value="">Select country…</option>
-                  {COUNTRIES.map(c => <option key={c} value={c}>{c}</option>)}
-                </select>
+                  onChange={v => { setGlobal("destinationCountry", v); }}
+                  placeholder="Select country…"
+                  options={COUNTRIES_SORTED}
+                  error={errors.destinationCountry}
+                />
               </Field>
               <Field id="deliveryDate" label="Required Delivery Date" required error={errors.deliveryDate}>
                 <input id="deliveryDate" type="date" required aria-invalid={!!errors.deliveryDate}
@@ -1896,12 +2007,14 @@ export default function RFQContent() {
                   className={ic(errors.position)} />
               </Field>
               <Field id="country" label="Country" required error={errors.country}>
-                <select id="country" required aria-invalid={!!errors.country}
-                  value={formState.country} onChange={e => setGlobal("country", e.target.value)}
-                  className={ic(errors.country)}>
-                  <option value="">Select your country…</option>
-                  {COUNTRIES.map(c => <option key={c} value={c}>{c}</option>)}
-                </select>
+                <SearchableSelect
+                  id="country"
+                  value={formState.country}
+                  onChange={v => { setGlobal("country", v); }}
+                  placeholder="Select your country…"
+                  options={COUNTRIES_SORTED}
+                  error={errors.country}
+                />
               </Field>
             </div>
             <div className="grid sm:grid-cols-2 gap-3">
@@ -2161,11 +2274,9 @@ export default function RFQContent() {
                 <button
                   type="button"
                   onClick={handleDownloadPdf}
-                  disabled={pdfState === "loading" || pdfState === "done"}
+                  disabled={pdfState === "loading"}
                   className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-sm border transition-colors ${
-                    pdfState === "done"
-                      ? "bg-green-50 border-green-200 text-green-700 cursor-default"
-                      : pdfState === "error"
+                    pdfState === "error"
                       ? "bg-red-50 border-red-200 text-red-700 hover:bg-red-100"
                       : pdfState === "loading"
                       ? "bg-gray-50 border-gray-200 text-gray-400 cursor-wait"
@@ -2181,7 +2292,7 @@ export default function RFQContent() {
                   ) : pdfState === "done" ? (
                     <>
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
-                      PDF Downloaded
+                      Download PDF Again
                     </>
                   ) : pdfState === "error" ? (
                     <>

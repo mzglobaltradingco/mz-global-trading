@@ -225,71 +225,208 @@ export default function PatientGownsContent() {
           </div>
           {/* Row 2 */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-            {[
-              { icon: "⚖️", label: "GSM Weight", sub: "120–180 GSM range", sid: "section-gsm", color: "bg-slate-50 border-slate-100" },
-              { icon: "🚪", label: "Opening Styles", sub: "Open-back · Wrap-front · Full-open", sid: "section-openings", color: "bg-rose-50 border-rose-100" },
-              { icon: "⚗️", label: "Performance Finishes", sub: "Autoclave · Anti-bacterial · Fluid repellent", sid: "section-finishes", color: "bg-green-50 border-green-100" },
-              { icon: "🎨", label: "Decoration Options", sub: "Plain · Printed · Embroidered", sid: "section-decoration", color: "bg-amber-50 border-amber-100" },
-            ].map((b, i) => (
-              <motion.div key={b.label} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.07 }}
-                className={`${b.color} border rounded-2xl p-5 flex flex-col gap-2 cursor-pointer hover:shadow-md transition-shadow`}
-                onClick={() => scrollToId(b.sid)} role="button" tabIndex={0} onKeyDown={(e) => e.key === "Enter" && scrollToId(b.sid)}>
-                <span className="text-2xl" aria-hidden="true">{b.icon}</span>
-                <p className="text-sm font-bold text-navy-900">{b.label}</p>
-                <p className="text-xs text-gray-400">{b.sub}</p>
-              </motion.div>
-            ))}
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45 }}
+              className="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col gap-3 min-h-[200px]">
+              <div>
+                <p className="text-slate-500 text-xs font-semibold tracking-[0.2em] uppercase">Weight</p>
+                <h3 className="text-base font-bold text-navy-900 mt-0.5">GSM Tiers</h3>
+              </div>
+              <div className="flex flex-col gap-1.5 flex-1">
+                {GSM_TIERS.map(g => (
+                  <div key={g.gsm} className="flex items-start gap-2">
+                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-slate-200 text-slate-600 shrink-0 mt-0.5">{g.gsm}</span>
+                    <span className="text-xs text-gray-600 leading-tight">{g.name}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-gsm" label="GSM Guide" />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: 0.07 }}
+              className="bg-rose-50 border border-rose-100 rounded-2xl p-5 flex flex-col gap-3 min-h-[200px]">
+              <div>
+                <p className="text-rose-500 text-xs font-semibold tracking-[0.2em] uppercase">Access</p>
+                <h3 className="text-base font-bold text-navy-900 mt-0.5">Opening Styles</h3>
+              </div>
+              <div className="flex flex-col gap-1.5 flex-1">
+                {OPENINGS.map(o => (
+                  <div key={o.name} className="flex items-start gap-2">
+                    <span className="text-base leading-none mt-0.5" aria-hidden="true">{o.icon}</span>
+                    <span className="text-xs text-gray-600 leading-tight">{o.name}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-openings" label="Opening Detail" />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: 0.14 }}
+              className="bg-green-50 border border-green-100 rounded-2xl p-5 flex flex-col gap-3 min-h-[200px]">
+              <div>
+                <p className="text-green-600 text-xs font-semibold tracking-[0.2em] uppercase">Performance</p>
+                <h3 className="text-base font-bold text-navy-900 mt-0.5">Finishes</h3>
+              </div>
+              <div className="flex flex-col gap-1.5 flex-1">
+                {FINISHES.map(f => (
+                  <div key={f.code} className="flex items-start gap-2">
+                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-green-100 text-green-700 shrink-0 mt-0.5">{f.code}</span>
+                    <span className="text-xs text-gray-600 leading-tight">{f.name}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-finishes" label="Finish Detail" />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: 0.21 }}
+              className="bg-amber-50 border border-amber-100 rounded-2xl p-5 flex flex-col gap-3 min-h-[200px]">
+              <div>
+                <p className="text-amber-600 text-xs font-semibold tracking-[0.2em] uppercase">Branding</p>
+                <h3 className="text-base font-bold text-navy-900 mt-0.5">Decoration</h3>
+              </div>
+              <div className="flex flex-col gap-1.5 flex-1">
+                {DECORATION.map(d => (
+                  <div key={d.name} className="flex items-start gap-2">
+                    <span className="text-gold text-xs mt-0.5">✓</span>
+                    <span className="text-xs text-gray-600 leading-tight">{d.name}</span>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-decoration" label="Decoration Options" />
+            </motion.div>
           </div>
           {/* Row 3 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-            {[
-              { icon: "🏅", label: "Certifications", sub: "ISO 9001 · BSCI · Sedex · OEKO-TEX", sid: "section-certifications", color: "bg-teal-50 border-teal-100" },
-              { icon: "🏥", label: "Buyer Sectors", sub: "Hospitals · Aged care · Distributors", sid: "section-sectors", color: "bg-indigo-50 border-indigo-100" },
-              { icon: "📦", label: "Pack Options", sub: "Individual · Ward pack · Bulk carton", sid: "section-packing", color: "bg-orange-50 border-orange-100" },
-            ].map((b, i) => (
-              <motion.div key={b.label} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.08 }}
-                className={`${b.color} border rounded-2xl p-6 flex flex-col gap-2 cursor-pointer hover:shadow-md transition-shadow`}
-                onClick={() => scrollToId(b.sid)} role="button" tabIndex={0} onKeyDown={(e) => e.key === "Enter" && scrollToId(b.sid)}>
-                <span className="text-2xl" aria-hidden="true">{b.icon}</span>
-                <p className="text-sm font-bold text-navy-900">{b.label}</p>
-                <p className="text-xs text-gray-400">{b.sub}</p>
-              </motion.div>
-            ))}
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45 }}
+              className="bg-teal-50 border border-teal-100 rounded-2xl p-5 flex flex-col gap-3 min-h-[200px]">
+              <div>
+                <p className="text-teal-600 text-xs font-semibold tracking-[0.2em] uppercase">Compliance</p>
+                <h3 className="text-base font-bold text-navy-900 mt-0.5">Certifications</h3>
+              </div>
+              <div className="flex flex-wrap gap-1.5 flex-1 content-start">
+                {CERTIFICATIONS.map((c) => (
+                  <div key={c.name} className="bg-white rounded-lg px-2 py-1 border border-teal-100">
+                    <p className="text-[10px] font-bold text-navy-900">{c.name}</p>
+                    <p className="text-[9px] text-gray-400 leading-tight">{c.desc.split(" — ")[0]}</p>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-certifications" label="Cert Detail" />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: 0.08 }}
+              className="bg-indigo-50 border border-indigo-100 rounded-2xl p-5 flex flex-col gap-3 min-h-[200px]">
+              <div>
+                <p className="text-indigo-600 text-xs font-semibold tracking-[0.2em] uppercase">Markets</p>
+                <h3 className="text-base font-bold text-navy-900 mt-0.5">Buyer Sectors</h3>
+              </div>
+              <div className="flex flex-col gap-1.5 flex-1">
+                {SECTORS.map((s) => (
+                  <div key={s.name} className="flex items-start gap-2">
+                    <span className="text-indigo-400 text-xs mt-0.5 shrink-0">▶</span>
+                    <div>
+                      <p className="text-xs font-semibold text-navy-900 leading-tight">{s.name}</p>
+                      <p className="text-[10px] text-gray-400">{s.market}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-sectors" label="Sector Detail" />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: 0.16 }}
+              className="bg-orange-50 border border-orange-100 rounded-2xl p-5 flex flex-col gap-3 min-h-[200px]">
+              <div>
+                <p className="text-orange-600 text-xs font-semibold tracking-[0.2em] uppercase">Logistics</p>
+                <h3 className="text-base font-bold text-navy-900 mt-0.5">Pack Options</h3>
+              </div>
+              <div className="flex flex-col gap-1.5 flex-1">
+                {PACKING.map((p) => (
+                  <div key={p.name} className="flex items-start gap-2">
+                    <span className="text-orange-400 text-xs mt-0.5 shrink-0">✓</span>
+                    <div>
+                      <p className="text-xs font-semibold text-navy-900 leading-tight">{p.name}</p>
+                      <p className="text-[10px] text-gray-400">{p.note}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-packing" label="Packing Detail" />
+            </motion.div>
           </div>
           {/* Row 4 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {[
-              { icon: "⚙️", label: "OEM Custom Programme", sub: "Construction, size, decoration — all configurable", sid: "section-oem", color: "bg-cyan-50 border-cyan-100" },
-              { icon: "🔄", label: "Sourcing Process", sub: "RFQ to delivered shipment", sid: "section-process", color: "bg-gray-50 border-gray-100" },
-            ].map((b, i) => (
-              <motion.div key={b.label} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.08 }}
-                className={`${b.color} border rounded-2xl p-6 flex flex-col gap-2 cursor-pointer hover:shadow-md transition-shadow`}
-                onClick={() => scrollToId(b.sid)} role="button" tabIndex={0} onKeyDown={(e) => e.key === "Enter" && scrollToId(b.sid)}>
-                <span className="text-2xl" aria-hidden="true">{b.icon}</span>
-                <p className="text-sm font-bold text-navy-900">{b.label}</p>
-                <p className="text-xs text-gray-400">{b.sub}</p>
-              </motion.div>
-            ))}
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45 }}
+              className="bg-cyan-50 border border-cyan-100 rounded-2xl p-7 flex flex-col gap-4 min-h-[280px]">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl" aria-hidden="true">⚙️</span>
+                <div>
+                  <p className="text-cyan-600 text-xs font-semibold tracking-[0.2em] uppercase">OEM Programme</p>
+                  <h3 className="text-xl font-bold text-navy-900 mt-0.5">Opening Styles & Custom Spec</h3>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2.5 flex-1">
+                {OPENINGS.map((o) => (
+                  <div key={o.name} className="flex items-start gap-2">
+                    <span className="text-lg leading-none mt-0.5 shrink-0" aria-hidden="true">{o.icon}</span>
+                    <div>
+                      <p className="text-xs font-semibold text-navy-900">{o.name}</p>
+                      <p className="text-[10px] text-gray-400 leading-tight">{o.desc.split(".")[0]}.</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-oem" label="OEM Detail" />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: 0.1 }}
+              className="bg-gray-50 border border-gray-100 rounded-2xl p-7 flex flex-col gap-4 min-h-[280px]">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl" aria-hidden="true">🔄</span>
+                <div>
+                  <p className="text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase">Process</p>
+                  <h3 className="text-xl font-bold text-navy-900 mt-0.5">Sourcing Process</h3>
+                </div>
+              </div>
+              <div className="flex flex-col gap-3 flex-1">
+                {PROCESS_STEPS.map((s, i) => (
+                  <div key={s.num} className="flex items-start gap-3">
+                    <span className="w-6 h-6 rounded-full bg-navy-900 text-white text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">{i + 1}</span>
+                    <p className="text-xs font-semibold text-navy-900 leading-tight">{s.title}</p>
+                  </div>
+                ))}
+              </div>
+              <ExploreBtn sectionId="section-process" label="Full Process" />
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* RESOURCES */}
-      <section className="bg-gray-50 py-10">
+      <section className="bg-gray-50 py-12 lg:py-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { icon: "👘", title: "Request Garment Samples", desc: "Evaluate gown construction, opening style and sizing before purchase order." },
-              { icon: "🖨️", title: "Request Print Samples", desc: "Assess juvenile print options and colourways for pediatric ward supply." },
-              { icon: "💬", title: "Speak with a Specialist", desc: "Consultation on construction choice, certifications and programme scope." },
-            ].map((r, i) => (
-              <motion.div key={r.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.08 }} className="bg-white border border-gray-100 rounded-2xl p-6 flex flex-col gap-3">
-                <span className="text-2xl" aria-hidden="true">{r.icon}</span>
-                <h3 className="text-base font-bold text-navy-900">{r.title}</h3>
-                <p className="text-sm text-gray-500 flex-1">{r.desc}</p>
-                <Link href="/rfq/" className="self-start text-sm font-semibold text-gold hover:underline">Request Now →</Link>
-              </motion.div>
-            ))}
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link href="/knowledge/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📚</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
+              <p className="font-semibold text-navy-900">Patient Gown Procurement Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Construction types, opening styles, sizing and certification requirements for hospital procurement.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Explore Hub →</span>
+            </Link>
+            <Link href="/guides/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📄</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Guides</p>
+              <p className="font-semibold text-navy-900">Pakistan Hospital Linen Export Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Sourcing process, lead times and certification requirements for hospital textile supply.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guides →</span>
+            </Link>
+            <Link href="/downloads/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">⬇️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
+              <p className="font-semibold text-navy-900">Patient Gown Spec Sheets</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Construction spec sheets, opening style diagrams and certification documentation.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Downloads →</span>
+            </Link>
+            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">✉️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
+              <p className="font-semibold text-white">Ready to Source Patient Gowns?</p>
+              <p className="text-xs text-gray-300 leading-relaxed">Specify construction, opening style, size breakdown and decoration. RFQ to factory quotation: 3–5 working days.</p>
+              <span className="text-xs font-semibold text-gold group-hover:text-yellow-300 transition-colors mt-auto">Request a Quote →</span>
+            </Link>
           </div>
         </div>
       </section>
