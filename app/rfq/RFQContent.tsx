@@ -142,7 +142,7 @@ const TECH_PACK_OPTIONS = [
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
-interface ProductSpec {
+export interface ProductSpec {
   id: string;
   category: string;
   productType: string;
@@ -220,7 +220,7 @@ interface ProductSpec {
   hasTechPack: string;
 }
 
-interface RFQFormState {
+export interface RFQFormState {
   products: ProductSpec[];
   destinationCountry: string;
   incoterm: string;
@@ -859,6 +859,8 @@ export default function RFQContent() {
   const [phoneCountry, setPhoneCountry]   = useState("us");
   const [errors, setErrors]           = useState<Record<string, string>>({});
   const [status, setStatus]           = useState<Status>("idle");
+  const [submittedAt, setSubmittedAt] = useState("");
+  const [pdfState, setPdfState]       = useState<"idle" | "loading" | "done" | "error">("idle");
   const formRef  = useRef<HTMLDivElement>(null);
   const hasMounted = useRef(false);
 
@@ -1001,8 +1003,24 @@ export default function RFQContent() {
     // Gmail web ignores body; clipboard copy is the fallback for those users.
     window.location.href = `mailto:${RECIPIENT}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     try { localStorage.removeItem("rfq_wizard_draft_v2"); } catch { /* ignore */ }
+    const now = new Date();
+    setSubmittedAt(
+      now.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })
+      + " at " + now.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })
+    );
     setStatus("sent");
     scrollToForm();
+  }
+
+  async function handleDownloadPdf() {
+    setPdfState("loading");
+    try {
+      const { generateRFQPdf } = await import("@/lib/rfq-pdf");
+      await generateRFQPdf(formState, submittedAt);
+      setPdfState("done");
+    } catch {
+      setPdfState("error");
+    }
   }
 
   // ── Step 1: Product(s) ──────────────────────────────────────────────────────
@@ -2139,7 +2157,46 @@ export default function RFQContent() {
                 <button type="button" onClick={() => { setStatus("idle"); setStep(4); scrollToForm(); }}
                   className="text-gold hover:underline font-medium">go back and try again</button>.</span>
               </div>
-              <Link href="/" className="inline-flex items-center gap-2 px-7 py-3 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors">Back to Home</Link>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-1">
+                <button
+                  type="button"
+                  onClick={handleDownloadPdf}
+                  disabled={pdfState === "loading" || pdfState === "done"}
+                  className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-sm border transition-colors ${
+                    pdfState === "done"
+                      ? "bg-green-50 border-green-200 text-green-700 cursor-default"
+                      : pdfState === "error"
+                      ? "bg-red-50 border-red-200 text-red-700 hover:bg-red-100"
+                      : pdfState === "loading"
+                      ? "bg-gray-50 border-gray-200 text-gray-400 cursor-wait"
+                      : "bg-white border-navy-900/20 text-navy-900 hover:bg-navy-900 hover:text-white hover:border-navy-900"
+                  }`}
+                  aria-label="Download a PDF copy of your RFQ submission"
+                >
+                  {pdfState === "loading" ? (
+                    <>
+                      <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24" aria-hidden="true"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" /></svg>
+                      Generating PDF…
+                    </>
+                  ) : pdfState === "done" ? (
+                    <>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      PDF Downloaded
+                    </>
+                  ) : pdfState === "error" ? (
+                    <>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
+                      Download failed — try again
+                    </>
+                  ) : (
+                    <>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 12-4-4m4 4 4-4M4 20h16" /></svg>
+                      Download PDF Copy
+                    </>
+                  )}
+                </button>
+                <Link href="/" className="inline-flex items-center gap-2 px-7 py-3 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors">Back to Home</Link>
+              </div>
             </div>
           </div>
         </div>

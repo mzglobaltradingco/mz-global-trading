@@ -62,7 +62,14 @@ export default function IndustrialLinenContent() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
           <div className="max-w-3xl">
-            <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
+                        <motion.nav aria-label="Breadcrumb" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
+              <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+              <span aria-hidden="true">&#x203A;</span>
+              <Link href="/hometextile/" className="hover:text-gold transition-colors">Home Textiles</Link>
+              <span aria-hidden="true">&#x203A;</span>
+              <span className="text-gold">Industrial Linen</span>
+            </motion.nav>
+<motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
               className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-5">Pakistan Industrial Textile Export</motion.p>
             <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65, delay: 0.25 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.08] mb-6">
