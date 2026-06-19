@@ -460,7 +460,7 @@ export default function ShortsContent() {
             alt="Pakistan shorts manufacturer — chino, ripstop and athletic shorts for wholesale buyers in USA, UK and Europe"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-navy-900/75" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(13,27,42,0.93) 0%, rgba(13,27,42,0.78) 35%, rgba(13,27,42,0.30) 62%, transparent 85%)" }} aria-hidden="true" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">

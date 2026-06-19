@@ -35,7 +35,7 @@ export default function ArticleContent({ post }: ArticleContentProps) {
             className="object-cover object-center"
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/90 via-navy-950/75 to-navy-950/50" aria-hidden="true" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(13,27,42,0.93) 0%, rgba(13,27,42,0.78) 35%, rgba(13,27,42,0.30) 62%, transparent 85%)" }} aria-hidden="true" />
         <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-gold/5 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

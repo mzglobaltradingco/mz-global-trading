@@ -51,7 +51,8 @@ export default function PageHero({
         className="object-cover object-center"
       />
       <div
-        className="absolute inset-0 bg-gradient-to-r from-navy-950/90 via-navy-950/75 to-navy-950/50"
+        className="absolute inset-0"
+        style={{ background: "linear-gradient(to right, rgba(13,27,42,0.93) 0%, rgba(13,27,42,0.78) 35%, rgba(13,27,42,0.30) 62%, transparent 85%)" }}
         aria-hidden="true"
       />
       <div

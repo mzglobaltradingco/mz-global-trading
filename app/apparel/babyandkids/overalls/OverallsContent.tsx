@@ -236,7 +236,7 @@ export default function OverallsContent() {
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image src="/images/hero/hero-apparel.webp" fill alt="Pakistan baby and kids overalls manufacturer — OEM denim and canvas dungarees for USA, UK and Europe" className="object-cover" priority sizes="100vw" />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-900/93 via-navy-900/75 to-navy-900/30" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(13,27,42,0.93) 0%, rgba(13,27,42,0.78) 35%, rgba(13,27,42,0.30) 62%, transparent 85%)" }} aria-hidden="true" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
           <div className="max-w-2xl">
