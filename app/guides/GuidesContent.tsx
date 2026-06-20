@@ -24,7 +24,7 @@ const numReveal: Variants = {
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-type GuideCategory = "all" | "sourcing" | "quality" | "compliance" | "logistics" | "technical";
+type GuideCategory = "all" | "sourcing" | "quality" | "compliance" | "logistics" | "technical" | "lifecycle" | "bestpractice";
 
 const guideCategories: { id: GuideCategory; label: string }[] = [
   { id: "all", label: "All Guides" },
@@ -33,6 +33,8 @@ const guideCategories: { id: GuideCategory; label: string }[] = [
   { id: "compliance", label: "Compliance" },
   { id: "logistics", label: "Logistics" },
   { id: "technical", label: "Technical" },
+  { id: "lifecycle", label: "Product Lifecycle" },
+  { id: "bestpractice", label: "Best Practices" },
 ];
 
 interface Guide {
@@ -166,6 +168,316 @@ const guides: Guide[] = [
     readTime: "5 min read",
     wide: false,
   },
+  // ── Series 1: Textile Product Lifecycle ──────────────────────────────────
+  {
+    num: "09",
+    slug: "textile-product-lifecycle-concept-trend-research",
+    catId: "lifecycle",
+    category: "Product Lifecycle",
+    categoryPill: "bg-orange-50 text-orange-700 border border-orange-200",
+    accentBar: "bg-orange-400",
+    title: "Textile Product Lifecycle — Phase 1: Concept & Trend Research",
+    description:
+      "The product lifecycle begins before any fabric is cut. How procurement teams research trends, set commercial objectives and make early decisions that define every downstream sourcing choice.",
+    topics: ["Trend research inputs and sources", "Building a commercial brief", "Fibre and certification decisions at concept stage"],
+    readTime: "8 min read",
+    wide: false,
+  },
+  {
+    num: "10",
+    slug: "textile-product-lifecycle-design-technical-development",
+    catId: "lifecycle",
+    category: "Product Lifecycle",
+    categoryPill: "bg-orange-50 text-orange-700 border border-orange-200",
+    accentBar: "bg-orange-400",
+    title: "Textile Product Lifecycle — Phase 2: Design & Technical Development",
+    description:
+      "Technical development converts a trend brief into a manufacturable specification. Tech Pack structure, material specification, construction decisions and common errors that create costly sampling revisions.",
+    topics: ["Tech Pack structure and completeness", "Material specification with tolerances", "Revision control during development"],
+    readTime: "9 min read",
+    wide: false,
+  },
+  {
+    num: "11",
+    slug: "textile-product-lifecycle-raw-material-sourcing",
+    catId: "lifecycle",
+    category: "Product Lifecycle",
+    categoryPill: "bg-orange-50 text-orange-700 border border-orange-200",
+    accentBar: "bg-orange-400",
+    title: "Textile Product Lifecycle — Phase 3: Raw Material Sourcing",
+    description:
+      "Raw material quality and compliance set the ceiling for everything that follows. How factories source yarn, fabric, dyes and trims — and what buyers need to verify to protect product integrity.",
+    topics: ["Raw material supply chain from gin to garment", "Certification requirements at fibre level", "What buyers should verify before cutting"],
+    readTime: "8 min read",
+    wide: false,
+  },
+  {
+    num: "12",
+    slug: "textile-product-lifecycle-supplier-factory-selection",
+    catId: "lifecycle",
+    category: "Product Lifecycle",
+    categoryPill: "bg-orange-50 text-orange-700 border border-orange-200",
+    accentBar: "bg-orange-400",
+    title: "Textile Product Lifecycle — Phase 4: Supplier & Factory Selection",
+    description:
+      "Selecting the wrong factory is the most expensive sourcing mistake. Five-dimension evaluation criteria, social audit standards, capability matching and the red flags that rule out a factory.",
+    topics: ["5-dimension factory evaluation", "Social audit standards compared", "Red flags that disqualify a factory"],
+    readTime: "10 min read",
+    wide: false,
+  },
+  {
+    num: "13",
+    slug: "textile-product-lifecycle-costing-moq-negotiation",
+    catId: "lifecycle",
+    category: "Product Lifecycle",
+    categoryPill: "bg-orange-50 text-orange-700 border border-orange-200",
+    accentBar: "bg-orange-400",
+    title: "Textile Product Lifecycle — Phase 5: Costing, MOQ & Negotiation",
+    description:
+      "Understanding how factories build FOB prices and set MOQs is the foundation of effective negotiation — including what buyers can and cannot reasonably push on.",
+    topics: ["How factories build FOB prices", "Understanding MOQ constraints", "What to negotiate — and what not to"],
+    readTime: "9 min read",
+    wide: false,
+  },
+  {
+    num: "14",
+    slug: "textile-product-lifecycle-pre-production-sampling",
+    catId: "lifecycle",
+    category: "Product Lifecycle",
+    categoryPill: "bg-orange-50 text-orange-700 border border-orange-200",
+    accentBar: "bg-orange-400",
+    title: "Textile Product Lifecycle — Phase 6: Pre-Production Sampling",
+    description:
+      "Sampling is the quality gate between specification and bulk production. Each sampling stage, approval criteria, revision management and the PP sample's legal role as a production reference.",
+    topics: ["Sampling sequence from proto to PP", "PP sample as a legal document", "Reducing sampling rounds with better specs"],
+    readTime: "8 min read",
+    wide: false,
+  },
+  {
+    num: "15",
+    slug: "textile-product-lifecycle-manufacturing-production",
+    catId: "lifecycle",
+    category: "Product Lifecycle",
+    categoryPill: "bg-orange-50 text-orange-700 border border-orange-200",
+    accentBar: "bg-orange-400",
+    title: "Textile Product Lifecycle — Phase 7: Manufacturing & Production",
+    description:
+      "Bulk production is where weeks of specification and sampling hold together or fall apart. Production stages, quality control checkpoints and what buyers can monitor remotely.",
+    topics: ["Production stages and QC checkpoints", "DHU benchmarks and in-line inspection", "Remote production monitoring protocols"],
+    readTime: "8 min read",
+    wide: false,
+  },
+  {
+    num: "16",
+    slug: "textile-product-lifecycle-quality-control-compliance",
+    catId: "lifecycle",
+    category: "Product Lifecycle",
+    categoryPill: "bg-orange-50 text-orange-700 border border-orange-200",
+    accentBar: "bg-orange-400",
+    title: "Textile Product Lifecycle — Phase 8: Quality Control & Compliance",
+    description:
+      "Final quality inspection, AQL sampling, lab testing and certification verification before shipment is authorised — the last line of defence before goods leave the factory.",
+    topics: ["AQL inspection methodology", "Lab testing by market requirement", "Verifying certification claims independently"],
+    readTime: "9 min read",
+    wide: false,
+  },
+  {
+    num: "17",
+    slug: "textile-product-lifecycle-packaging-labelling",
+    catId: "lifecycle",
+    category: "Product Lifecycle",
+    categoryPill: "bg-orange-50 text-orange-700 border border-orange-200",
+    accentBar: "bg-orange-400",
+    title: "Textile Product Lifecycle — Phase 9: Packaging & Labelling",
+    description:
+      "Compliance requirements for care labels, country of origin, barcodes and retail-ready packaging across USA, UK, EU, Canada and Australia — one error causes customs holds and retailer rejections.",
+    topics: ["Care label requirements by market", "Country of origin and fibre content rules", "Barcode and DC compliance"],
+    readTime: "7 min read",
+    wide: false,
+  },
+  {
+    num: "18",
+    slug: "textile-product-lifecycle-export-logistics",
+    catId: "lifecycle",
+    category: "Product Lifecycle",
+    categoryPill: "bg-orange-50 text-orange-700 border border-orange-200",
+    accentBar: "bg-orange-400",
+    title: "Textile Product Lifecycle — Phase 10: Export & Logistics",
+    description:
+      "Freight booking, export documentation from Pakistan, incoterm implications and coordinating customs clearance at destination — how shipments move from factory to port to buyer.",
+    topics: ["Incoterm selection and risk transfer", "Export documentation from Pakistan", "FCL vs LCL freight comparison"],
+    readTime: "8 min read",
+    wide: false,
+  },
+  {
+    num: "19",
+    slug: "textile-product-lifecycle-retail-distribution",
+    catId: "lifecycle",
+    category: "Product Lifecycle",
+    categoryPill: "bg-orange-50 text-orange-700 border border-orange-200",
+    accentBar: "bg-orange-400",
+    title: "Textile Product Lifecycle — Phase 11: Retail & Distribution",
+    description:
+      "How textile products move from port to retail shelf — import customs, DC compliance, allocation, sell-through analysis and re-order triggers for efficient inventory management.",
+    topics: ["Import customs by destination market", "DC compliance requirements and charge-backs", "Re-order triggers and lead time planning"],
+    readTime: "7 min read",
+    wide: false,
+  },
+  {
+    num: "20",
+    slug: "textile-product-lifecycle-end-of-life-circular-economy",
+    catId: "lifecycle",
+    category: "Product Lifecycle",
+    categoryPill: "bg-orange-50 text-orange-700 border border-orange-200",
+    accentBar: "bg-orange-400",
+    title: "Textile Product Lifecycle — Phase 12: End-of-Life & Circular Economy",
+    description:
+      "How circularity principles apply to B2B textile sourcing — GRS certification, take-back programs, design for recyclability and how to build end-of-life thinking into procurement from Phase 1.",
+    topics: ["Circular economy models for B2B buyers", "GRS certification and recycled content", "Design for recyclability principles"],
+    readTime: "8 min read",
+    wide: false,
+  },
+  // ── Series 2: Sourcing Best Practices ────────────────────────────────────
+  {
+    num: "21",
+    slug: "sourcing-best-practices-design-technical-specification",
+    catId: "bestpractice",
+    category: "Sourcing Best Practices",
+    categoryPill: "bg-teal-50 text-teal-700 border border-teal-200",
+    accentBar: "bg-teal-400",
+    title: "Sourcing Best Practices: Design & Technical Specification",
+    description:
+      "A precise technical specification is the highest-leverage investment in the sourcing process — it prevents factory misunderstandings, reduces sampling rounds and produces consistent bulk quality.",
+    topics: ["Define all specifications numerically with tolerances", "Revision control and version management", "Including lab test requirements in Tech Packs"],
+    readTime: "8 min read",
+    wide: false,
+  },
+  {
+    num: "22",
+    slug: "sourcing-best-practices-fabric-raw-material-sourcing",
+    catId: "bestpractice",
+    category: "Sourcing Best Practices",
+    categoryPill: "bg-teal-50 text-teal-700 border border-teal-200",
+    accentBar: "bg-teal-400",
+    title: "Sourcing Best Practices: Fabric & Raw Material Sourcing",
+    description:
+      "Fabric is the largest cost driver and the most common source of quality problems. How professional buyers evaluate fabrics, prevent substitution and ensure lot-to-lot consistency across production runs.",
+    topics: ["Specifying mill to prevent substitution", "Pre-production fabric testing protocols", "Dye lot consistency management"],
+    readTime: "8 min read",
+    wide: false,
+  },
+  {
+    num: "23",
+    slug: "sourcing-best-practices-supplier-evaluation-factory-selection",
+    catId: "bestpractice",
+    category: "Sourcing Best Practices",
+    categoryPill: "bg-teal-50 text-teal-700 border border-teal-200",
+    accentBar: "bg-teal-400",
+    title: "Sourcing Best Practices: Supplier Evaluation & Factory Selection",
+    description:
+      "Supplier evaluation is not a one-time exercise — it is an ongoing process that protects quality, compliance and supply continuity. Structured RFI, evaluation scorecard and factory tiering.",
+    topics: ["Structured RFI and evaluation scorecard", "Factory tiering by risk profile", "Red flags for automatic disqualification"],
+    readTime: "9 min read",
+    wide: false,
+  },
+  {
+    num: "24",
+    slug: "sourcing-best-practices-pre-production-sampling",
+    catId: "bestpractice",
+    category: "Sourcing Best Practices",
+    categoryPill: "bg-teal-50 text-teal-700 border border-teal-200",
+    accentBar: "bg-teal-400",
+    title: "Sourcing Best Practices: Pre-Production Sampling",
+    description:
+      "Sampling is the most time-intensive phase in the sourcing calendar. Best practices for managing sampling rounds efficiently, making decisive approvals and using the PP sample as an enforceable reference.",
+    topics: ["Complete comments on the first review", "PP sample as enforceable reference document", "Tracking cumulative development time"],
+    readTime: "8 min read",
+    wide: false,
+  },
+  {
+    num: "25",
+    slug: "sourcing-best-practices-inline-quality-control",
+    catId: "bestpractice",
+    category: "Sourcing Best Practices",
+    categoryPill: "bg-teal-50 text-teal-700 border border-teal-200",
+    accentBar: "bg-teal-400",
+    title: "Sourcing Best Practices: Inline Quality Control",
+    description:
+      "Inline QC catches defects when correction is cheapest — during production. DHU benchmarks, inspection frequency, escalation protocols and remote production quality monitoring.",
+    topics: ["DHU benchmarks by product tier", "Four inline QC checkpoints explained", "Remote production quality monitoring"],
+    readTime: "8 min read",
+    wide: false,
+  },
+  {
+    num: "26",
+    slug: "sourcing-best-practices-pre-shipment-inspection",
+    catId: "bestpractice",
+    category: "Sourcing Best Practices",
+    categoryPill: "bg-teal-50 text-teal-700 border border-teal-200",
+    accentBar: "bg-teal-400",
+    title: "Sourcing Best Practices: Pre-Shipment Inspection",
+    description:
+      "The final quality checkpoint before goods leave the factory. Selecting AQL levels, booking and briefing inspectors, interpreting results and managing the commercial decision on a FAIL.",
+    topics: ["AQL parameters in purchase orders", "Briefing inspectors with complete information", "Managing PASS/FAIL decisions commercially"],
+    readTime: "8 min read",
+    wide: false,
+  },
+  {
+    num: "27",
+    slug: "sourcing-best-practices-export-logistics-compliance",
+    catId: "bestpractice",
+    category: "Sourcing Best Practices",
+    categoryPill: "bg-teal-50 text-teal-700 border border-teal-200",
+    accentBar: "bg-teal-400",
+    title: "Sourcing Best Practices: Export Logistics & Compliance",
+    description:
+      "Export logistics errors are the most avoidable — and most expensive — sources of delay. Documents checklist, HS code classification, preference scheme selection and freight booking timing.",
+    topics: ["Document checklist by destination market", "HS code classification for textiles", "Preference schemes for Pakistan exports"],
+    readTime: "8 min read",
+    wide: false,
+  },
+  {
+    num: "28",
+    slug: "sourcing-best-practices-communication-documentation",
+    catId: "bestpractice",
+    category: "Sourcing Best Practices",
+    categoryPill: "bg-teal-50 text-teal-700 border border-teal-200",
+    accentBar: "bg-teal-400",
+    title: "Sourcing Best Practices: Communication & Documentation",
+    description:
+      "Poor communication is the root cause of more sourcing failures than poor manufacturing. The disciplines, protocols and change-control practices that prevent misunderstandings becoming disputes.",
+    topics: ["Single-thread email discipline by PO", "Change control and PO amendment process", "Building a supplier communication archive"],
+    readTime: "7 min read",
+    wide: false,
+  },
+  {
+    num: "29",
+    slug: "sourcing-best-practices-payment-terms-trade-finance",
+    catId: "bestpractice",
+    category: "Sourcing Best Practices",
+    categoryPill: "bg-teal-50 text-teal-700 border border-teal-200",
+    accentBar: "bg-teal-400",
+    title: "Sourcing Best Practices: Payment Terms & Trade Finance",
+    description:
+      "Payment terms structure the commercial risk between buyer and supplier. TT vs. LC, open account, advance payment, documentary collections and trade finance tools for importers.",
+    topics: ["TT payment best practices and triggers", "Letters of credit for high-risk transactions", "Trade finance tools for importers"],
+    readTime: "9 min read",
+    wide: false,
+  },
+  {
+    num: "30",
+    slug: "sourcing-best-practices-sustainable-ethical-sourcing",
+    catId: "bestpractice",
+    category: "Sourcing Best Practices",
+    categoryPill: "bg-teal-50 text-teal-700 border border-teal-200",
+    accentBar: "bg-teal-400",
+    title: "Sourcing Best Practices: Sustainable & Ethical Sourcing",
+    description:
+      "Sustainability is increasingly a market requirement, not a marketing choice. Building a credible, verifiable sustainable sourcing program — from certification selection to supplier auditing and greenwashing avoidance.",
+    topics: ["Three pillars of sustainable sourcing", "Avoiding greenwashing under EU law", "Building a supplier sustainability scorecard"],
+    readTime: "9 min read",
+    wide: false,
+  },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -199,8 +511,8 @@ export default function GuidesContent() {
         label="Resources"
         title="Sourcing"
         titleGold="Guides"
-        description="Eight comprehensive reference guides — AQL inspection, certifications, incoterms, Tech Packs and Pakistan sourcing strategy. Free to read online."
-        pills={["8 Guides", "Free to Read Online", "B2B Reference Quality"]}
+        description="30 comprehensive reference guides — AQL inspection, certifications, incoterms, Tech Packs, the full product lifecycle and sourcing best practices. Free to read online."
+        pills={["30 Guides", "Free to Read Online", "B2B Reference Quality"]}
       />
 
       {/* ── Stats bar ─────────────────────────────────────────────────────────── */}
@@ -214,9 +526,9 @@ export default function GuidesContent() {
             className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-gray-100 rounded-2xl overflow-hidden"
           >
             {[
-              { val: "8", label: "Guides", delay: 0 },
-              { val: "70+", label: "Minutes of Content", delay: 0.08 },
-              { val: "5", label: "Topic Areas", delay: 0.16 },
+              { val: "30", label: "Guides", delay: 0 },
+              { val: "250+", label: "Minutes of Content", delay: 0.08 },
+              { val: "7", label: "Topic Areas", delay: 0.16 },
               { val: "Free", label: "Read Online", delay: 0.24 },
             ].map((s) => (
               <motion.div
@@ -251,7 +563,7 @@ export default function GuidesContent() {
               </p>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
-              All 8 Sourcing Guides
+              All 30 Guides
             </h2>
 
             <div className="flex flex-col lg:flex-row lg:items-center gap-3">
@@ -412,7 +724,7 @@ export default function GuidesContent() {
             <div className="flex-1">
               <p className="text-navy-900 font-bold text-sm mb-1">More guides in development</p>
               <p className="text-gray-500 text-sm">
-                Upcoming: Towel Sourcing Guide, Hospital Linen Compliance, Sustainable Fibre Selection, Denim Washing Guide.
+                Upcoming: Towel Sourcing Guide, Hospital Linen Compliance, Denim Washing Guide, Sustainable Fibre Selection.
               </p>
             </div>
             <Link

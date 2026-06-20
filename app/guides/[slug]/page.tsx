@@ -133,8 +133,8 @@ export default function GuidePage({ params }: GuidePageProps) {
     description: guide.description,
     url,
     inLanguage: "en",
-    datePublished: "2026-06-12",
-    dateModified: "2026-06-12",
+    datePublished: guide.datePublished,
+    dateModified: guide.datePublished,
     author: { "@type": "Organization", name: "MZ Global Trading", url: "https://mzglobaltrading.com/" },
     publisher: {
       "@type": "Organization",
