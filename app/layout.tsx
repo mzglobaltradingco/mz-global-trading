@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://mzglobaltrading.com"),
   title: {
     default: "MZ Global Trading | Apparel, Home Textile & Fabric Sourcing",
-    template: "%s | MZ Global Trading",
+    template: "%s",
   },
   description:
     "Pakistan textile sourcing for brands in USA, UK, Canada, Europe and South America. Certified apparel, home textiles and fabric manufacturers.",
