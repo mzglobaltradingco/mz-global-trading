@@ -204,42 +204,42 @@ export default function BabyHoodedTowelsContent() {
 
   return (
     <div className="bg-white">
-      {/* Hero */}
-      <section className="relative min-h-[540px] md:min-h-[620px] flex items-end overflow-hidden bg-[#0D1B2A]">
-        <Image
-          src="/images/hero/hero-baby-hooded-towels.webp"
-          alt="Pakistan baby hooded towels manufacturer — OEM organic cotton terry hooded bath towels for USA, UK and Europe"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center opacity-50"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] via-[#0D1B2A]/40 to-transparent" />
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 md:pb-20">
-          <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65 }}>
-            <p className="text-[#D4A017] text-xs font-semibold tracking-[0.25em] uppercase mb-3">
-              Baby & Kids Apparel · OEM Manufacturing · Pakistan
-            </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5">
-              Baby Hooded Towels<br className="hidden sm:block" /> Manufacturer
-            </h1>
-            <p className="text-gray-300 text-lg md:text-xl max-w-2xl mb-8 leading-relaxed">
-              Soft terry and velour hooded bath towels for infants — animal hood designs, custom embroidery, GOTS certified organic cotton and OEKO-TEX Class 1. Newborn to kids 4 years. OEM bulk programmes for USA, UK, Europe and global baby brands.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/rfq/"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#D4A017] text-[#0D1B2A] font-bold rounded-full hover:bg-[#b8891a] transition-colors"
-              >
-                Request a Quote
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-              <ExploreBtn label="View Specifications" targetId="bento-grid" />
-            </div>
-          </motion.div>
+            {/* ══ HERO ════════════════════════════════════════════════════════════════ */}
+      <section className="relative min-h-[88vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image src="/images/hero/hero-baby-hooded-towels.webp" fill alt="Pakistan baby hooded towels manufacturer — OEM organic cotton terry hooded bath towels for USA, UK and Europe" className="object-cover" priority sizes="100vw" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(13,27,42,0.93) 0%, rgba(13,27,42,0.78) 35%, rgba(13,27,42,0.30) 62%, transparent 85%)" }} aria-hidden="true" />
         </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
+          <div className="max-w-2xl">
+            <motion.nav aria-label="Breadcrumb" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
+              <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+              <span aria-hidden="true">&#x203A;</span>
+              <Link href="/apparel/" className="hover:text-gold transition-colors">Apparel</Link>
+              <span aria-hidden="true">&#x203A;</span>
+              <Link href="/apparel/babyandkids/" className="hover:text-gold transition-colors">Baby &amp; Kids</Link>
+              <span aria-hidden="true">&#x203A;</span>
+              <span className="text-gold">Baby Hooded Towels</span>
+            </motion.nav>
+            <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Pakistan Baby &amp; Kids Apparel</motion.p>
+            <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65, delay: 0.25 }} className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-8">
+              Baby
+              <br /><span className="text-gold">Hooded Towels</span>
+              <br />Manufacturer Pakistan
+            </motion.h1>
+            <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }} className="text-gray-300 text-lg leading-relaxed mb-10 max-w-xl">
+              Soft terry and velour hooded bath towels for infants — animal hood designs, custom embroidery, GOTS certified organic cotton and OEKO-TEX Class 1. Newborn to kids 4 years. OEM bulk programmes for USA, UK, Europe and global baby brands.
+            </motion.p>
+            <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.7 }} className="flex flex-col sm:flex-row gap-4">
+              <Link href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">Request a Quote <span aria-hidden="true">&#x2192;</span></Link>
+              <button onClick={() => scrollToId("bento-grid")} className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">Explore Product Guide</button>
+            </motion.div>
+          </div>
+        </div>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.4, duration: 0.5 }} className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" aria-hidden="true">
+          <div className="w-px h-8 bg-white/30" />
+          <span className="text-white/40 text-[10px] tracking-widest uppercase">Scroll</span>
+        </motion.div>
       </section>
 
       {/* Stats bar */}
