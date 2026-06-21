@@ -576,7 +576,7 @@ LEAF    (/apparel/knittedgarments/tshirts/,  /hometextile/bathlinen/towels/)
 
 ### Technical SEO (Implemented)
 - Canonical URLs on every page
-- XML sitemap (needs update — currently lists 78 pages but site now has 143+ URLs)
+- XML sitemap (needs update — currently lists 78 pages but site now has 128 URLs)
 - robots.txt
 - Organization JSON-LD with social profiles and areaServed
 - Twitter card + OpenGraph on all pages
@@ -602,7 +602,7 @@ LEAF    (/apparel/knittedgarments/tshirts/,  /hometextile/bathlinen/towels/)
 
 **Decision: Do not implement i18n at this time.**
 
-Reasons: new domain needs English authority first, maintenance burden (143+ × N languages), quality risk with machine translation for B2B copy, Cloudflare Pages free tier 20,000 file limit would be hit quickly with multilingual pages at this scale.
+Reasons: new domain needs English authority first, maintenance burden (128 × N languages), quality risk with machine translation for B2B copy, Cloudflare Pages free tier 20,000 file limit would be hit quickly with multilingual pages at this scale.
 
 Revisit after launch when Google Search Console data shows which non-English markets are generating impressions.
 
@@ -655,17 +655,17 @@ Combined slide panel labels use frosted pill `bg-navy-950/60 backdrop-blur-sm bo
 
 ## Pages Built
 
-All product pages are complete. Actual URL count as of 2026-06-21:
+All product pages are complete. Actual URL count as of 2026-06-22:
 
 | Type | Count |
 |---|---|
 | Static page.tsx files (non-dynamic) | 80 |
 | Knowledge Hub posts `/knowledge/[slug]` | 6 |
-| Guide pages `/guides/[slug]` | 31 |
-| Downloads `/downloads/[slug]` | 26 |
-| **Total unique URLs** | **~143** |
+| Guide pages `/guides/[slug]` | 30 |
+| Downloads `/downloads/[slug]` | 12 |
+| **Total unique URLs** | **128** (130 HTML files incl. 404 + \_not-found) |
 
-The CLAUDE.md previously said 78 pages — that figure is obsolete. The actual count is 143+ and growing.
+Verified against `out/` directory after build — pagefind indexes 131 files (includes \_not-found). All dynamic slugs in `lib/guides-content.ts` and `lib/downloads-content.ts` generate correctly.
 
 > File pattern: every page follows `app/section/name/page.tsx` + `NameContent.tsx`
 
@@ -673,16 +673,16 @@ The CLAUDE.md previously said 78 pages — that figure is obsolete. The actual c
 
 ## Full Sitemap
 
-> **Source of truth:** `public/sitemap.xml` — needs to be updated to reflect 143+ URLs (currently lists only 78). Dynamic slug pages (`/guides/`, `/knowledge/`, `/downloads/`) are not yet in the sitemap.
+> **Source of truth:** `public/sitemap.xml` — needs to be updated to reflect 128 URLs (currently lists only 78). Dynamic slug pages (`/guides/`, `/knowledge/`, `/downloads/`) are not yet in the sitemap.
 
 **Structure:** `/` · `/our-company/` · `/rfq/` · `/contact-us/` · `/qualitycompliance/[page]/` · `/quality-policy/` · `/apparel/[cluster]/[product]/` · `/hometextile/[cluster]/[product]/` · `/hometextile/ihram/` · `/fabric/apparelfabric/` · `/fabric/hometextilefabric/` · `/guides/[slug]/` · `/knowledge/[slug]/` · `/downloads/[slug]/`
 
 ### Content Data Files (dynamic slug pages)
 | File | Purpose | Count |
 |---|---|---|
-| `lib/guides-content.ts` | All guide page data — source of truth for `/guides/[slug]` | 31 guides |
+| `lib/guides-content.ts` | All guide page data — source of truth for `/guides/[slug]` | 30 guides |
 | `content/knowledge/*.ts` | One `.ts` file per knowledge post — auto-discovered via webpack `require.context` | 6 posts |
-| `lib/downloads-content.ts` | All download entries — source of truth for `/downloads/[slug]` | 26 entries |
+| `lib/downloads-content.ts` | All download entries — source of truth for `/downloads/[slug]` | 12 entries |
 | `lib/knowledge.ts` | Helper functions for knowledge posts — reads from `content/knowledge/` | — |
 
 ## Mega Menu Structure
@@ -745,7 +745,7 @@ public/
   _headers                   ← Cloudflare security headers
   _redirects                 ← Cloudflare URL redirects
   robots.txt
-  sitemap.xml                ← needs update — currently lists 78 pages, actual count is 143+
+  sitemap.xml                ← needs update — currently lists 78 pages, actual count is 128
   favicon-32.png             ← PNG required
   favicon-192.png            ← PNG required
   apple-touch-icon.png       ← PNG required
@@ -784,7 +784,7 @@ public/
 - **hreflang tags:** Add `<link rel="alternate" hreflang="en">` and `hreflang="x-default"` to `app/layout.tsx`
 - **Missing menu images:** Doctor Surgical Gowns, Shop Towels — awaiting user-supplied WebP files
 - **Google Search Console:** After launch, set preferred country to USA
-- **Sitemap update:** `public/sitemap.xml` needs to be regenerated to include all 143+ URLs including dynamic guide, knowledge, and download pages
+- **Sitemap update:** `public/sitemap.xml` needs to be regenerated to include all 128 URLs including dynamic guide, knowledge, and download pages
 - **Next.js upgrade:** Upgrade to v16 at ~v16.5+ (est. late 2026) — skip v15
 
 ---
