@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -895,7 +895,7 @@ export default function WorkwearContent() {
       {/* ═══ HERO ═══ */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden" aria-label="Workwear Apparel hero">
         <Image
-          src="/images/hero/hero-apparel.webp"
+          src="/images/hero/hero-workwear-apparel.webp"
           alt="Pakistan workwear apparel manufacturer — OEM safety workwear, FR clothing and hi-vis uniforms for industrial sectors in the USA, UK, Australia and Middle East"
           fill
           priority
