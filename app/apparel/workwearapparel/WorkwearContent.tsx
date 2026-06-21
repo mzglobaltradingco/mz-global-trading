@@ -2423,6 +2423,36 @@ export default function WorkwearContent() {
         </div>
       </section>
 
+      {/* ═══ SAME-TIER PAGES ═══ */}
+      <section className="bg-gray-50 py-16 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-1">Apparel Range</p>
+            <h2 className="text-2xl font-bold text-navy-900">More Apparel Products</h2>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { name: "Knitted Garments", desc: "T-shirts, polo shirts, hoodies, joggers and more. 160–420 GSM.", href: "/apparel/knittedgarments/", img: "/images/hero/hero-knitted-garments.webp", alt: "Pakistan knitted garments manufacturer — OEM T-shirts, polo shirts and hoodies for international buyers" },
+              { name: "Woven Garments", desc: "Denim, formal shirts, trousers, cargo pants and shorts.", href: "/apparel/wovengarments/", img: "/images/hero/hero-woven-garments.webp", alt: "Pakistan woven garments manufacturer — OEM denim, formal shirts and trousers for international buyers" },
+              { name: "Baby & Kids", desc: "OEKO-TEX certified baby rompers, bibs, overalls and muslin fabric.", href: "/apparel/babyandkids/", img: "/images/hero/hero-baby-and-kids.webp", alt: "Pakistan baby and kids garments manufacturer — OEM OEKO-TEX certified infant and children's apparel" },
+              { name: "Socks", desc: "Cotton, wool, bamboo and performance sport socks. Any specification.", href: "/apparel/socks/", img: "/images/hero/hero-socks.webp", alt: "Pakistan socks manufacturer — OEM cotton, wool and performance socks for international buyers" },
+            ].map((p) => (
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                <div className="relative h-64 overflow-hidden">
+                  <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <p className="font-bold text-white text-sm leading-tight mb-1">{p.name}</p>
+                  <p className="text-gray-300 text-xs leading-relaxed mb-2">{p.desc}</p>
+                  <span className="text-xs font-semibold text-gold transition-all duration-200">View →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══ CTA BANNER ═══ */}
       <section className="py-20 bg-navy-900" aria-label="Request a quote call to action">
         <div className="max-w-3xl mx-auto px-6 md:px-12 text-center">

@@ -934,6 +934,35 @@ export default function CellularThermalBlanketContent() {
         </div>
       </section>
 
+      {/* ═══ SAME-TIER PAGES ═══ */}
+      <section className="bg-gray-50 py-16 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-1">Thermal Blankets</p>
+            <h2 className="text-2xl font-bold text-navy-900">More Thermal Blanket Products</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              { name: "Fleece Thermal Blankets", desc: "Anti-pill polyester fleece. Healthcare, institutional and retail blanket programmes.", href: "/hometextile/thermalblankets/fleecethermalblankets/", img: "/images/hero/hero-fleece-thermal-blankets.webp", alt: "Pakistan fleece thermal blankets manufacturer — OEM anti-pill polyester blankets for healthcare and retail buyers" },
+              { name: "Hospital Linen", desc: "Surgical gowns, medical scrubs, patient gowns and huck towels. ISO certified.", href: "/hometextile/hospitallinen/", img: "/images/hero/hero-hospital-linen.webp", alt: "Pakistan hospital linen manufacturer — OEM surgical gowns and medical scrubs for healthcare buyers worldwide" },
+              { name: "Industrial Linen", desc: "Shop towels and fender covers for automotive, maintenance and industrial buyers.", href: "/hometextile/industriallinen/", img: "/images/hero/hero-industrial-linen.webp", alt: "Pakistan industrial linen manufacturer — OEM shop towels and fender covers for automotive buyers worldwide" },
+            ].map((p) => (
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                <div className="relative h-64 overflow-hidden">
+                  <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 33vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <p className="font-bold text-white text-sm leading-tight mb-1">{p.name}</p>
+                  <p className="text-gray-300 text-xs leading-relaxed mb-2">{p.desc}</p>
+                  <span className="text-xs font-semibold text-gold transition-all duration-200">View →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ══ FINAL CTA ══ */}
       <section className="bg-[#0D1B2A] py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -694,6 +694,35 @@ export default function SurgicalHuckTowelsContent() {
         </div>
       </section>
 
+      {/* ═══ SAME-TIER PAGES ═══ */}
+      <section className="bg-gray-50 py-16 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-1">Hospital Linen</p>
+            <h2 className="text-2xl font-bold text-navy-900">More Hospital Linen Products</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              { name: "Doctor Surgical Gowns", desc: "Level 2 and Level 4 surgical gowns. Sterile and non-sterile programme options.", href: "/hometextile/hospitallinen/doctorsurgicalgowns/", img: "/images/hero/hero-doctor-surgical-gowns.webp", alt: "Pakistan surgical gowns manufacturer — OEM Level 2 and Level 4 disposable and reusable surgical gowns" },
+              { name: "Medical Scrubs", desc: "Four-way stretch and cotton-poly scrubs. NHS, private hospital and clinic programmes.", href: "/hometextile/hospitallinen/medicalscrubs/", img: "/images/hero/hero-medical-scrubs.webp", alt: "Pakistan medical scrubs manufacturer — OEM stretch and cotton-poly scrubs for NHS and hospital buyers" },
+              { name: "Patient Gowns", desc: "Cotton and poly-cotton patient gowns. Open-back and snap fastening options.", href: "/hometextile/hospitallinen/patientgowns/", img: "/images/hero/hero-patient-gowns.webp", alt: "Pakistan patient gowns manufacturer — OEM cotton and poly-cotton hospital gowns for healthcare buyers" },
+            ].map((p) => (
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                <div className="relative h-64 overflow-hidden">
+                  <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 33vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <p className="font-bold text-white text-sm leading-tight mb-1">{p.name}</p>
+                  <p className="text-gray-300 text-xs leading-relaxed mb-2">{p.desc}</p>
+                  <span className="text-xs font-semibold text-gold transition-all duration-200">View →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
       <section className="bg-[#0D1B2A] py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

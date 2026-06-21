@@ -132,46 +132,44 @@ export default function ThermalBlanketsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.55, delay: i * 0.1 }}
-                className={`bg-gradient-to-br ${p.color} border ${p.border} rounded-2xl overflow-hidden flex flex-col`}
               >
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={p.img}
-                    fill
-                    alt={`Pakistan ${p.title.toLowerCase()} manufacturer — OEM supplier for international buyers`}
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                </div>
-                <div className="p-8 flex flex-col gap-5 flex-1">
-                <div className="flex items-start gap-4">
-                  <span className="text-3xl" aria-hidden="true">{p.icon}</span>
-                  <div className="flex-1">
-                    <div className="flex flex-wrap items-center gap-2 mb-1">
-                      <h3 className="text-xl font-bold text-navy-900">{p.title}</h3>
-                      <span className={`text-[11px] font-semibold px-2.5 py-0.5 rounded-full ${p.badgeColor}`}>{p.badge}</span>
-                    </div>
-                    <p className={`text-xs font-semibold ${p.accent} mb-2`}>{p.subtitle}</p>
+                <Link href={p.href} className={`group block bg-gradient-to-br ${p.color} border ${p.border} rounded-2xl overflow-hidden h-full flex flex-col hover:shadow-md transition-shadow`}>
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={p.img}
+                      fill
+                      alt={`Pakistan ${p.title.toLowerCase()} manufacturer — OEM supplier for international buyers`}
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
                   </div>
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed">{p.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {p.sectors.map((s) => (
-                    <span key={s} className="bg-white/70 text-navy-900 text-[11px] font-medium px-2.5 py-1 rounded-lg border border-white/50">
-                      {s}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex items-center justify-between mt-auto pt-2">
-                  <span className="text-xs text-gray-500 font-medium">{p.gsm}</span>
-                  <Link
-                    href={p.href}
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy-900 hover:text-gold transition-colors"
-                  >
-                    View Full Spec <span aria-hidden="true">→</span>
-                  </Link>
-                </div>
-                </div>
+                  <div className="p-8 flex flex-col gap-5 flex-1">
+                    <div className="flex items-start gap-4">
+                      <span className="text-3xl" aria-hidden="true">{p.icon}</span>
+                      <div className="flex-1">
+                        <div className="flex flex-wrap items-center gap-2 mb-1">
+                          <h3 className="text-xl font-bold text-navy-900 group-hover:text-gold transition-colors">{p.title}</h3>
+                          <span className={`text-[11px] font-semibold px-2.5 py-0.5 rounded-full ${p.badgeColor}`}>{p.badge}</span>
+                        </div>
+                        <p className={`text-xs font-semibold ${p.accent} mb-2`}>{p.subtitle}</p>
+                      </div>
+                    </div>
+                    <p className="text-gray-600 text-sm leading-relaxed">{p.desc}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {p.sectors.map((s) => (
+                        <span key={s} className="bg-white/70 text-navy-900 text-[11px] font-medium px-2.5 py-1 rounded-lg border border-white/50">
+                          {s}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex items-center justify-between mt-auto pt-2">
+                      <span className="text-xs text-gray-500 font-medium">{p.gsm}</span>
+                      <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy-900 group-hover:text-gold transition-colors">
+                        View Full Spec →
+                      </span>
+                    </div>
+                  </div>
+                </Link>
               </motion.div>
             ))}
           </div>

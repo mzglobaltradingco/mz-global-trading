@@ -1206,6 +1206,35 @@ export default function KitchenTowelsContent() {
         </div>
       </section>
 
+      {/* ═══ SAME-TIER PAGES ═══ */}
+      <section className="bg-gray-50 py-16 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-1">Kitchen Linen</p>
+            <h2 className="text-2xl font-bold text-navy-900">More Kitchen Linen Products</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              { name: "Bar Mops", desc: "Absorbent cotton bar mops for restaurant, bar and commercial kitchen programmes.", href: "/hometextile/kitchenlinen/barmops/", img: "/images/hero/hero-bar-mops.webp", alt: "Pakistan bar mops manufacturer — OEM cotton bar mops for restaurant and commercial kitchen buyers worldwide" },
+              { name: "Aprons", desc: "Bib, waist and chef aprons in cotton, denim and canvas. Custom embroidery.", href: "/hometextile/kitchenlinen/aprons/", img: "/images/hero/hero-aprons.webp", alt: "Pakistan aprons manufacturer — OEM cotton and canvas chef aprons for hospitality and foodservice brands" },
+              { name: "Pot Holders", desc: "Terry and silicone-lined pot holders. Restaurant and retail programme options.", href: "/hometextile/kitchenlinen/potholders/", img: "/images/hero/hero-pot-holders.webp", alt: "Pakistan pot holders manufacturer — OEM terry and silicone pot holders for kitchen and retail buyers worldwide" },
+            ].map((p) => (
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                <div className="relative h-64 overflow-hidden">
+                  <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 33vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <p className="font-bold text-white text-sm leading-tight mb-1">{p.name}</p>
+                  <p className="text-gray-300 text-xs leading-relaxed mb-2">{p.desc}</p>
+                  <span className="text-xs font-semibold text-gold transition-all duration-200">View →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
       <section className="bg-[#0D1B2A] py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

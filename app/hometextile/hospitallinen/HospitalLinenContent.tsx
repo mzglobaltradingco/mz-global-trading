@@ -169,30 +169,31 @@ export default function HospitalLinenContent() {
               <motion.div
                 key={p.name}
                 initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-blue-50 border border-blue-100 rounded-2xl overflow-hidden flex flex-col"
               >
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={p.img}
-                    fill
-                    alt={`Pakistan ${p.name.toLowerCase()} manufacturer — OEM supplier for international buyers`}
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, 50vw"
-                  />
-                </div>
-                <div className="p-7 flex flex-col gap-4">
-                <h3 className="text-xl font-bold text-navy-900">{p.name}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed flex-1">{p.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {p.specs.map((s) => (
-                    <span key={s} className="text-xs bg-white border border-blue-200 text-navy-900 px-3 py-1 rounded-full font-medium">{s}</span>
-                  ))}
-                </div>
-                <p className="text-xs text-blue-700 font-medium">{p.market}</p>
-                <Link href={p.href} className="self-start inline-flex items-center gap-2 bg-navy-900 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-gold hover:text-navy-900 transition-colors text-sm">
-                  Explore {p.name} <span aria-hidden="true">&#8594;</span>
+                <Link href={p.href} className="group block bg-blue-50 border border-blue-100 rounded-2xl overflow-hidden h-full flex flex-col hover:shadow-md transition-shadow">
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={p.img}
+                      fill
+                      alt={`Pakistan ${p.name.toLowerCase()} manufacturer — OEM supplier for international buyers`}
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                    />
+                  </div>
+                  <div className="p-7 flex flex-col gap-4 flex-1">
+                    <h3 className="text-xl font-bold text-navy-900 group-hover:text-gold transition-colors">{p.name}</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed flex-1">{p.desc}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {p.specs.map((s) => (
+                        <span key={s} className="text-xs bg-white border border-blue-200 text-navy-900 px-3 py-1 rounded-full font-medium">{s}</span>
+                      ))}
+                    </div>
+                    <p className="text-xs text-blue-700 font-medium">{p.market}</p>
+                    <span className="self-start inline-flex items-center gap-2 text-gold text-sm font-semibold group-hover:gap-3 transition-all duration-200">
+                      Explore {p.name} →
+                    </span>
+                  </div>
                 </Link>
-                </div>
               </motion.div>
             ))}
           </div>

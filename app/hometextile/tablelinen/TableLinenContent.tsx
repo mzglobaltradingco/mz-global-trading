@@ -172,42 +172,40 @@ export default function TableLinenContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-amber-50 border border-amber-100 rounded-2xl overflow-hidden"
               >
-                <div className="relative h-56 overflow-hidden">
-                  <Image
-                    src={p.img}
-                    fill
-                    alt={`Pakistan ${p.name.toLowerCase()} manufacturer — OEM supplier for international buyers`}
-                    className="object-cover"
-                    sizes="100vw"
-                  />
-                </div>
-                <div className="p-8 flex flex-col md:flex-row gap-6">
-                <div className="flex-1">
-                  <span className="inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full mb-3">
-                    {p.tag}
-                  </span>
-                  <h3 className="text-2xl font-bold text-navy-900 mb-3">{p.name}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{p.desc}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {p.constructions.map((c) => (
-                      <span key={c} className="text-xs bg-white border border-amber-200 text-navy-900 px-3 py-1 rounded-full font-medium">
-                        {c}
-                      </span>
-                    ))}
+                <Link href={p.href} className="group block bg-amber-50 border border-amber-100 rounded-2xl overflow-hidden hover:shadow-md transition-shadow">
+                  <div className="relative h-56 overflow-hidden">
+                    <Image
+                      src={p.img}
+                      fill
+                      alt={`Pakistan ${p.name.toLowerCase()} manufacturer — OEM supplier for international buyers`}
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="100vw"
+                    />
                   </div>
-                  <p className="text-xs text-amber-700 font-medium">{p.markets}</p>
-                </div>
-                <div className="flex items-center shrink-0">
-                  <Link
-                    href={p.href}
-                    className="inline-flex items-center gap-2 bg-navy-900 text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-gold hover:text-navy-900 transition-colors text-sm"
-                  >
-                    Explore {p.name} <span aria-hidden="true">&#8594;</span>
-                  </Link>
-                </div>
-                </div>
+                  <div className="p-8 flex flex-col md:flex-row gap-6">
+                    <div className="flex-1">
+                      <span className="inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full mb-3">
+                        {p.tag}
+                      </span>
+                      <h3 className="text-2xl font-bold text-navy-900 group-hover:text-gold transition-colors mb-3">{p.name}</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed mb-4">{p.desc}</p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {p.constructions.map((c) => (
+                          <span key={c} className="text-xs bg-white border border-amber-200 text-navy-900 px-3 py-1 rounded-full font-medium">
+                            {c}
+                          </span>
+                        ))}
+                      </div>
+                      <p className="text-xs text-amber-700 font-medium">{p.markets}</p>
+                    </div>
+                    <div className="flex items-center shrink-0">
+                      <span className="inline-flex items-center gap-2 bg-navy-900 text-white group-hover:bg-gold group-hover:text-navy-900 font-semibold px-6 py-3.5 rounded-xl transition-colors text-sm">
+                        Explore {p.name} &#8594;
+                      </span>
+                    </div>
+                  </div>
+                </Link>
               </motion.div>
             ))}
           </div>

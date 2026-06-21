@@ -1052,6 +1052,35 @@ export default function TableCoversContent() {
         </div>
       </section>
 
+      {/* ═══ SAME-TIER PAGES ═══ */}
+      <section className="bg-gray-50 py-16 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-1">Home Textile Range</p>
+            <h2 className="text-2xl font-bold text-navy-900">More Home Textile Products</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              { name: "Kitchen Linen", desc: "Kitchen towels, bar mops, aprons and pot holders for commercial and retail buyers.", href: "/hometextile/kitchenlinen/", img: "/images/hero/hero-kitchen-linen.webp", alt: "Pakistan kitchen linen manufacturer — OEM kitchen towels, bar mops and aprons for hospitality buyers" },
+              { name: "Bath Linen", desc: "Towels, bathrobes, bath mats and beach towels. GOTS and OEKO-TEX certified.", href: "/hometextile/bathlinen/", img: "/images/hero/hero-bath-linen.webp", alt: "Pakistan bath linen manufacturer — OEM GOTS certified towels and bathrobes for international buyers" },
+              { name: "Bed Linen", desc: "Bedsheets, duvet covers, pillow covers and curtains in any thread count.", href: "/hometextile/bedlinen/", img: "/images/hero/hero-bed-linen.webp", alt: "Pakistan bed linen manufacturer — OEM bedsheets and duvet covers for hotel and retail buyers worldwide" },
+            ].map((p) => (
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                <div className="relative h-64 overflow-hidden">
+                  <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 33vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <p className="font-bold text-white text-sm leading-tight mb-1">{p.name}</p>
+                  <p className="text-gray-300 text-xs leading-relaxed mb-2">{p.desc}</p>
+                  <span className="text-xs font-semibold text-gold transition-all duration-200">View →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══════════════ FINAL CTA ═══════════════ */}
       <section className="bg-[#0D1B2A] py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
