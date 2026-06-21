@@ -1,9 +1,9 @@
-"use client";
+﻿"use client";
 
 import { useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "@/lib/motion-shim";
 import {
   fadeUpVariants,
   staggerContainerVariants,

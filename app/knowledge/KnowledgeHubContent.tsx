@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import { useState, useMemo, useEffect, useRef, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "@/lib/motion-shim";
 import {
   staggerContainerVariants,
   viewportOnce,

@@ -2,9 +2,11 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import dynamic from "next/dynamic";
 import SearchWidget from "./SearchWidget";
+
+// Desktop panel — dynamically imported so Framer Motion only loads on desktop
+const MegaMenuPanel = dynamic(() => import("./MegaMenuPanel"), { ssr: false, loading: () => null });
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -13,7 +15,7 @@ type SubItem = { label: string; href: string; img: string; imgAlt: string };
 type CategoryRow = {
   heading: string;
   href?: string;
-  img: string;        // shown in preview zone when this row is hovered
+  img: string;
   imgAlt: string;
   items?: SubItem[];
 };
@@ -31,7 +33,7 @@ type NavItem = {
   href?: string;
   mega?: {
     panel: PanelContent;
-    defaultImg: string; // shown in preview zone on panel open, before any hover
+    defaultImg: string;
     rows: CategoryRow[];
   };
 };
@@ -204,13 +206,13 @@ const navItems: NavItem[] = [
           img: "/images/menu/menu-bedsheets.webp",
           imgAlt: "Pakistan bed linen manufacturer — bedsheets, duvet covers and pillowcases wholesale",
           items: [
-            { label: "Bedsheets",      href: "/hometextile/bedlinen/bedsheets/",     img: "/images/menu/menu-bedsheets.webp",     imgAlt: "Pakistan bedsheet manufacturer — custom cotton percale and sateen sheets wholesale" },
-            { label: "Fitted Sheets",  href: "/hometextile/bedlinen/fittedsheets/",  img: "/images/menu/menu-fittedsheets.webp",  imgAlt: "Pakistan fitted sheet manufacturer — custom elastic bedding sets for wholesale buyers" },
-            { label: "Duvet Covers",   href: "/hometextile/bedlinen/duvetcovers/",   img: "/images/menu/menu-duvetcovers.webp",   imgAlt: "Pakistan duvet cover manufacturer — custom comforter covers for wholesale in Europe" },
-            { label: "Pillow Covers",  href: "/hometextile/bedlinen/pillowcovers/",  img: "/images/menu/menu-pillowcovers.webp",  imgAlt: "Pakistan pillow cover manufacturer — custom cotton and satin pillowcases wholesale" },
-            { label: "Cushion Covers",        href: "/hometextile/bedlinen/cushioncovers/",         img: "/images/menu/menu-cushioncovers.webp",        imgAlt: "Pakistan cushion cover manufacturer — custom decorative pillow covers wholesale" },
-            { label: "Curtains",              href: "/hometextile/bedlinen/curtains/",               img: "/images/menu/menu-curtains.webp",             imgAlt: "Pakistan curtain manufacturer — custom woven and printed curtains wholesale export" },
-            { label: "Institutional Bedding", href: "/hometextile/bedlinen/institutionalbedding/",   img: "/images/menu/menu-institutionaltowels.webp",  imgAlt: "Pakistan institutional bedding manufacturer — hotel and hospital bed linen wholesale" },
+            { label: "Bedsheets",             href: "/hometextile/bedlinen/bedsheets/",           img: "/images/menu/menu-bedsheets.webp",            imgAlt: "Pakistan bedsheet manufacturer — custom cotton percale and sateen sheets wholesale" },
+            { label: "Fitted Sheets",         href: "/hometextile/bedlinen/fittedsheets/",        img: "/images/menu/menu-fittedsheets.webp",         imgAlt: "Pakistan fitted sheet manufacturer — custom elastic bedding sets for wholesale buyers" },
+            { label: "Duvet Covers",          href: "/hometextile/bedlinen/duvetcovers/",         img: "/images/menu/menu-duvetcovers.webp",          imgAlt: "Pakistan duvet cover manufacturer — custom comforter covers for wholesale in Europe" },
+            { label: "Pillow Covers",         href: "/hometextile/bedlinen/pillowcovers/",        img: "/images/menu/menu-pillowcovers.webp",         imgAlt: "Pakistan pillow cover manufacturer — custom cotton and satin pillowcases wholesale" },
+            { label: "Cushion Covers",        href: "/hometextile/bedlinen/cushioncovers/",       img: "/images/menu/menu-cushioncovers.webp",        imgAlt: "Pakistan cushion cover manufacturer — custom decorative pillow covers wholesale" },
+            { label: "Curtains",              href: "/hometextile/bedlinen/curtains/",            img: "/images/menu/menu-curtains.webp",             imgAlt: "Pakistan curtain manufacturer — custom woven and printed curtains wholesale export" },
+            { label: "Institutional Bedding", href: "/hometextile/bedlinen/institutionalbedding/", img: "/images/menu/menu-institutionaltowels.webp", imgAlt: "Pakistan institutional bedding manufacturer — hotel and hospital bed linen wholesale" },
           ],
         },
         {
@@ -343,105 +345,6 @@ const navItems: NavItem[] = [
   { id: "contact", label: "Contact Us", href: "/contact-us/" },
 ];
 
-// ─── Animation Variants ───────────────────────────────────────────────────────
-
-const panelVariants = {
-  hidden: { opacity: 0, y: -10 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring" as const,
-      stiffness: 280,
-      damping: 26,
-      staggerChildren: 0.07,
-      delayChildren: 0.03,
-    },
-  },
-  exit: {
-    opacity: 0,
-    y: -8,
-    transition: { duration: 0.13, ease: "easeIn" as const },
-  },
-};
-
-const leftPanelVariants = {
-  hidden: { opacity: 0, x: -14 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { type: "spring" as const, stiffness: 300, damping: 26 },
-  },
-};
-
-const rowsContainerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.055 },
-  },
-};
-
-const rowVariants = {
-  hidden: { opacity: 0, y: 10 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring" as const,
-      stiffness: 340,
-      damping: 28,
-      staggerChildren: 0.03,
-      delayChildren: 0.02,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 5 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { type: "spring" as const, stiffness: 420, damping: 32 },
-  },
-};
-
-const previewZoneVariants = {
-  hidden: { opacity: 0, x: 14 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { type: "spring" as const, stiffness: 300, damping: 26 },
-  },
-};
-
-// ─── Sub-item link ─────────────────────────────────────────────────────────────
-
-function SubItemLink({
-  item,
-  onClose,
-  onHover,
-}: {
-  item: SubItem;
-  onClose: () => void;
-  onHover: (img: string, label: string, alt: string) => void;
-}) {
-  return (
-    <motion.div variants={itemVariants} className="flex-shrink-0">
-      <Link
-        href={item.href}
-        onClick={onClose}
-        onMouseEnter={() => onHover(item.img, item.label, item.imgAlt)}
-        className="relative group inline-flex items-center px-3 py-1.5 text-[13px] text-gray-300 hover:text-gold rounded transition-colors duration-150"
-      >
-        {item.label}
-        {/* Gold underline draws left-to-right on hover */}
-        <span className="absolute bottom-0.5 left-3 right-3 h-px bg-gold/70 scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-200 ease-out" />
-      </Link>
-    </motion.div>
-  );
-}
-
 // ─── Main component ───────────────────────────────────────────────────────────
 
 export default function MegaMenu() {
@@ -458,9 +361,6 @@ export default function MegaMenu() {
     setActiveMenu(id);
   };
   const startClose = () => {
-    // Always clear the previous timer before scheduling a new one —
-    // without this, rapid re-entry creates orphaned timers that fire
-    // and close the panel even after the mouse has re-entered.
     if (closeTimer.current) clearTimeout(closeTimer.current);
     closeTimer.current = setTimeout(() => setActiveMenu(null), 280);
   };
@@ -472,7 +372,6 @@ export default function MegaMenu() {
     setActiveMenu(null);
   };
 
-  // Close on Escape key and on any click outside the header
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") closeAll(); };
     document.addEventListener("keydown", onKey);
@@ -481,30 +380,21 @@ export default function MegaMenu() {
   }, []);
 
   const activeItem = navItems.find((n) => n.id === activeMenu);
-
-  // Derive the current preview — fall back to menu defaultImg until something is hovered
   const currentImg = preview?.img ?? activeItem?.mega?.defaultImg ?? "";
   const currentLabel = preview?.label ?? "";
   const currentAlt = preview?.alt ?? activeItem?.mega?.panel.heading ?? "MZ Global Trading";
 
   return (
     <>
-      {/* Backdrop */}
-      <AnimatePresence>
-        {activeMenu && (
-          <motion.div
-            key="overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/50 z-40 hidden lg:block"
-            style={{ top: 128 }}
-            onMouseEnter={startClose}
-            onClick={closeAll}
-          />
-        )}
-      </AnimatePresence>
+      {/* Backdrop — CSS opacity transition, no Framer Motion, never on mobile */}
+      <div
+        className={`fixed inset-0 bg-black/50 z-40 hidden lg:block transition-opacity duration-200 ${
+          activeMenu ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        style={{ top: 128 }}
+        onMouseEnter={startClose}
+        onClick={closeAll}
+      />
 
       <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm border-b border-gray-100" data-pagefind-ignore>
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -516,10 +406,11 @@ export default function MegaMenu() {
                 src="/images/logo/mz-global-trading-logo-header.webp"
                 alt="MZ Global Trading"
                 className="w-[160px] md:w-[190px] lg:w-[220px] h-auto"
+                fetchPriority="low"
               />
             </Link>
 
-            {/* Desktop nav */}
+            {/* Desktop nav — hidden on mobile, so hover events never fire on mobile */}
             <div className="hidden lg:flex items-center gap-0.5">
               {navItems.map((item) =>
                 item.href && !item.mega ? (
@@ -541,16 +432,17 @@ export default function MegaMenu() {
                     onMouseLeave={startClose}
                   >
                     {item.label}
-                    <motion.svg
-                      animate={{ rotate: activeMenu === item.id ? 180 : 0 }}
-                      transition={{ type: "spring", stiffness: 300, damping: 22 }}
-                      className="w-3.5 h-3.5"
+                    {/* CSS rotate — no Framer Motion */}
+                    <svg
+                      className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                        activeMenu === item.id ? "rotate-180" : "rotate-0"
+                      }`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </motion.svg>
+                    </svg>
                   </button>
                 )
               )}
@@ -566,7 +458,7 @@ export default function MegaMenu() {
               </Link>
             </div>
 
-            {/* Mobile controls — search icon + hamburger */}
+            {/* Mobile controls */}
             <div className="flex items-center gap-1 lg:hidden">
               <Link
                 href="/search/"
@@ -577,354 +469,177 @@ export default function MegaMenu() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </Link>
-            <button
-              onClick={() => {
-                setMobileOpen(!mobileOpen);
-                setMobileExpanded(null);
-                setMobileRowExpanded(null);
-              }}
-              className="p-2 text-gray-700 hover:text-gold transition-colors"
-              aria-label="Toggle menu"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {mobileOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
+              <button
+                onClick={() => {
+                  setMobileOpen(!mobileOpen);
+                  setMobileExpanded(null);
+                  setMobileRowExpanded(null);
+                }}
+                className="p-2 text-gray-700 hover:text-gold transition-colors"
+                aria-label="Toggle menu"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  {mobileOpen ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  )}
+                </svg>
+              </button>
             </div>
           </div>
         </nav>
 
-        {/* ── Desktop Mega Panel ──────────────────────────────────────────── */}
-        <AnimatePresence mode="wait">
-          {activeMenu && activeItem?.mega && (
-            <motion.div
-              key={activeMenu}
-              variants={panelVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              className="hidden lg:block absolute top-full left-0 right-0 bg-[#08111f] border-t border-gold/20 shadow-2xl z-50"
-              onMouseEnter={cancelClose}
-              onMouseLeave={startClose}
-            >
-              <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8 flex gap-8">
+        {/* ── Desktop Mega Panel — Framer Motion lives here, loaded lazily ── */}
+        {activeMenu && activeItem?.mega && (
+          <MegaMenuPanel
+            key={activeMenu}
+            activeItem={{ mega: activeItem.mega }}
+            currentImg={currentImg}
+            currentLabel={currentLabel}
+            currentAlt={currentAlt}
+            onClose={closeAll}
+            onMouseEnter={cancelClose}
+            onMouseLeave={startClose}
+            onPreview={(img, label, alt) => setPreview({ img, label, alt })}
+            onRowHover={(img, heading, alt) => setPreview({ img, label: heading, alt })}
+          />
+        )}
 
-                {/* ① Left content-aware brand panel */}
-                <motion.div
-                  variants={leftPanelVariants}
-                  className="flex-shrink-0 w-52 xl:w-60 border-r border-white/10 pr-8 flex flex-col"
-                >
-                  <p className="text-gold text-[10px] font-bold tracking-[0.18em] uppercase mb-3">
-                    MZ Global Trading
-                  </p>
-                  <h3 className="text-white text-[14px] font-semibold leading-snug mb-4">
-                    {activeItem.mega.panel.heading}
-                  </h3>
-                  <ul className="space-y-2.5 mb-6 flex-1">
-                    {activeItem.mega.panel.bullets.map((b) => (
-                      <li key={b} className="flex items-start gap-2.5">
-                        <span className="mt-[5px] flex-shrink-0 w-1 h-1 rounded-full bg-gold" />
-                        <span className="text-gray-400 text-[12px] leading-snug">{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    href={activeItem.mega.panel.ctaHref}
-                    onClick={closeAll}
-                    className="inline-flex items-center gap-1.5 self-start px-4 py-2 bg-gold text-navy-900 text-[12px] font-bold rounded hover:bg-yellow-400 transition-colors"
-                  >
-                    {activeItem.mega.panel.ctaLabel}
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </motion.div>
-
-                {/* ② Main rows — categories as rows, sub-items as columns */}
-                <motion.div
-                  variants={rowsContainerVariants}
-                  className="flex-1 min-w-0 divide-y divide-white/[0.06]"
-                >
-                  {activeItem.mega.rows.map((row) => (
-                    <motion.div
-                      key={row.heading}
-                      variants={rowVariants}
-                      className="flex items-start gap-4 py-2.5 first:pt-0 last:pb-0"
-                      onMouseEnter={() => setPreview({ img: row.img, label: row.heading, alt: row.imgAlt })}
-                    >
-                      {/* Category label */}
-                      <div className="flex-shrink-0 w-36 xl:w-40 pt-1">
-                        {row.href ? (
-                          <Link
-                            href={row.href}
-                            onClick={closeAll}
-                            className="group inline-flex items-center gap-1 text-[10.5px] font-bold tracking-[0.14em] uppercase text-gold/75 hover:text-gold transition-colors duration-150"
-                          >
-                            {row.heading}
-                            <svg
-                              className="w-2.5 h-2.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                            </svg>
-                          </Link>
-                        ) : (
-                          <span className="text-[10.5px] font-bold tracking-[0.14em] uppercase text-gold/75">
-                            {row.heading}
-                          </span>
-                        )}
-                      </div>
-
-                      {/* Sub-items or direct-link indicator */}
-                      {row.items && row.items.length > 0 ? (
-                        <div className="flex flex-wrap flex-1 min-w-0">
-                          {row.items.map((item) => (
-                            <SubItemLink
-                              key={item.href}
-                              item={item}
-                              onClose={closeAll}
-                              onHover={(img, label, alt) => setPreview({ img, label, alt })}
-                            />
-                          ))}
-                        </div>
-                      ) : (
-                        row.href && (
-                          <motion.div variants={itemVariants} className="pt-1">
-                            <Link
-                              href={row.href}
-                              onClick={closeAll}
-                              className="inline-flex items-center gap-1 text-[13px] text-gray-400 hover:text-gold transition-colors duration-150"
-                            >
-                              View All
-                              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                              </svg>
-                            </Link>
-                          </motion.div>
-                        )
-                      )}
-                    </motion.div>
-                  ))}
-                </motion.div>
-
-                {/* ③ Right preview zone — crossfades on hover */}
-                <motion.div
-                  variants={previewZoneVariants}
-                  className="flex-shrink-0 w-44 xl:w-52 border-l border-white/10 pl-8 flex flex-col gap-3"
-                >
-                  <div
-                    className="relative w-full rounded-lg overflow-hidden bg-navy-800"
-                    style={{ aspectRatio: "4/3" }}
-                  >
-                    <AnimatePresence mode="wait">
-                      <motion.div
-                        key={currentImg}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.25, ease: "easeInOut" }}
-                        className="absolute inset-0"
+        {/* ── Mobile Drawer — CSS grid transition, zero Framer Motion ── */}
+        <div
+          className={`lg:hidden border-t border-white/10 bg-navy-900 grid transition-[grid-template-rows] duration-200 ease-out ${
+            mobileOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+          }`}
+        >
+          <div className="overflow-hidden">
+            <div className="max-h-[80vh] overflow-y-auto">
+              <div className="py-2">
+                {navItems.map((item) => (
+                  <div key={item.id}>
+                    {item.href && !item.mega ? (
+                      <Link
+                        href={item.href}
+                        onClick={() => setMobileOpen(false)}
+                        className="block px-5 py-3 text-gray-200 hover:text-gold text-sm font-medium border-b border-white/5"
                       >
-                        {currentImg && (
-                          <Image
-                            src={currentImg}
-                            alt={currentAlt}
-                            fill
-                            className="object-cover"
-                            sizes="200px"
-                          />
-                        )}
-                      </motion.div>
-                    </AnimatePresence>
-                    {/* Subtle gold bottom border accent */}
-                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
-                  </div>
-
-                  {/* Label below image */}
-                  <div className="min-h-[2rem]">
-                    <AnimatePresence mode="wait">
-                      {currentLabel && (
-                        <motion.p
-                          key={currentLabel}
-                          initial={{ opacity: 0, y: 4 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -4 }}
-                          transition={{ duration: 0.15 }}
-                          className="text-[12px] text-gray-300 font-medium text-center leading-snug"
-                        >
-                          {currentLabel}
-                        </motion.p>
-                      )}
-                    </AnimatePresence>
-                  </div>
-
-                  {/* Explore link */}
-                  <Link
-                    href={activeItem.mega.panel.ctaHref}
-                    onClick={closeAll}
-                    className="mt-auto text-[11px] text-gold/60 hover:text-gold text-center transition-colors duration-150"
-                  >
-                    View Full Range →
-                  </Link>
-                </motion.div>
-
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* ── Mobile Drawer ───────────────────────────────────────────────── */}
-        <AnimatePresence>
-          {mobileOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.22, ease: "easeOut" }}
-              className="lg:hidden overflow-hidden border-t border-white/10 bg-navy-900"
-            >
-              <div className="max-h-[80vh] overflow-y-auto">
-                <div className="py-2">
-                  {navItems.map((item) => (
-                    <div key={item.id}>
-                      {item.href && !item.mega ? (
-                        <Link
-                          href={item.href}
-                          onClick={() => setMobileOpen(false)}
-                          className="block px-5 py-3 text-gray-200 hover:text-gold text-sm font-medium border-b border-white/5"
+                        {item.label}
+                      </Link>
+                    ) : item.mega ? (
+                      <>
+                        <button
+                          onClick={() => {
+                            setMobileExpanded(mobileExpanded === item.id ? null : item.id);
+                            setMobileRowExpanded(null);
+                          }}
+                          className="w-full flex items-center justify-between px-5 py-3 text-gray-200 hover:text-gold text-sm font-medium border-b border-white/5"
                         >
                           {item.label}
-                        </Link>
-                      ) : item.mega ? (
-                        <>
-                          <button
-                            onClick={() => {
-                              setMobileExpanded(mobileExpanded === item.id ? null : item.id);
-                              setMobileRowExpanded(null);
-                            }}
-                            className="w-full flex items-center justify-between px-5 py-3 text-gray-200 hover:text-gold text-sm font-medium border-b border-white/5"
+                          <svg
+                            className={`w-4 h-4 flex-shrink-0 transition-transform duration-200 ${
+                              mobileExpanded === item.id ? "rotate-180" : "rotate-0"
+                            }`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
                           >
-                            {item.label}
-                            <motion.svg
-                              animate={{ rotate: mobileExpanded === item.id ? 180 : 0 }}
-                              transition={{ type: "spring", stiffness: 300, damping: 22 }}
-                              className="w-4 h-4 flex-shrink-0"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </motion.svg>
-                          </button>
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
 
-                          <AnimatePresence>
-                            {mobileExpanded === item.id && (
-                              <motion.div
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: "auto", opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                transition={{ duration: 0.2, ease: "easeOut" }}
-                                className="overflow-hidden bg-[#08111f]"
-                              >
-                                {item.mega.rows.map((row) => {
-                                  const rowKey = `${item.id}-${row.heading}`;
-                                  const hasItems = row.items && row.items.length > 0;
+                        {/* Category accordion — CSS grid transition */}
+                        <div
+                          className={`bg-[#08111f] grid transition-[grid-template-rows] duration-200 ease-out ${
+                            mobileExpanded === item.id ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                          }`}
+                        >
+                          <div className="overflow-hidden">
+                            {item.mega.rows.map((row) => {
+                              const rowKey = `${item.id}-${row.heading}`;
+                              const hasItems = row.items && row.items.length > 0;
 
-                                  return (
-                                    <div key={row.heading} className="border-b border-white/5 last:border-0">
-                                      {hasItems ? (
-                                        <>
-                                          <button
-                                            onClick={() =>
-                                              setMobileRowExpanded(
-                                                mobileRowExpanded === rowKey ? null : rowKey
-                                              )
-                                            }
-                                            className="w-full flex items-center justify-between px-5 py-2.5"
-                                          >
-                                            <span className="text-[11px] font-bold tracking-[0.14em] uppercase text-gold/70">
-                                              {row.heading}
-                                            </span>
-                                            <motion.svg
-                                              animate={{ rotate: mobileRowExpanded === rowKey ? 180 : 0 }}
-                                              transition={{ type: "spring", stiffness: 300, damping: 22 }}
-                                              className="w-3.5 h-3.5 text-gold/60 flex-shrink-0"
-                                              fill="none"
-                                              stroke="currentColor"
-                                              viewBox="0 0 24 24"
+                              return (
+                                <div key={row.heading} className="border-b border-white/5 last:border-0">
+                                  {hasItems ? (
+                                    <>
+                                      <button
+                                        onClick={() =>
+                                          setMobileRowExpanded(mobileRowExpanded === rowKey ? null : rowKey)
+                                        }
+                                        className="w-full flex items-center justify-between px-5 py-2.5"
+                                      >
+                                        <span className="text-[11px] font-bold tracking-[0.14em] uppercase text-gold/70">
+                                          {row.heading}
+                                        </span>
+                                        <svg
+                                          className={`w-3.5 h-3.5 text-gold/60 flex-shrink-0 transition-transform duration-150 ${
+                                            mobileRowExpanded === rowKey ? "rotate-180" : "rotate-0"
+                                          }`}
+                                          fill="none"
+                                          stroke="currentColor"
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                      </button>
+
+                                      {/* Row sub-items accordion — CSS grid transition */}
+                                      <div
+                                        className={`grid transition-[grid-template-rows] duration-150 ${
+                                          mobileRowExpanded === rowKey ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                                        }`}
+                                      >
+                                        <div className="overflow-hidden px-5 pb-3">
+                                          {row.items!.map((subItem) => (
+                                            <Link
+                                              key={subItem.href}
+                                              href={subItem.href}
+                                              onClick={() => setMobileOpen(false)}
+                                              className="block py-1.5 pl-3 text-[13px] text-gray-300 hover:text-gold border-l border-gold/20 hover:border-gold/50 transition-colors"
                                             >
-                                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                            </motion.svg>
-                                          </button>
-
-                                          <AnimatePresence>
-                                            {mobileRowExpanded === rowKey && (
-                                              <motion.div
-                                                initial={{ height: 0, opacity: 0 }}
-                                                animate={{ height: "auto", opacity: 1 }}
-                                                exit={{ height: 0, opacity: 0 }}
-                                                transition={{ duration: 0.15 }}
-                                                className="overflow-hidden px-5 pb-3"
-                                              >
-                                                {row.items!.map((subItem) => (
-                                                  <Link
-                                                    key={subItem.href}
-                                                    href={subItem.href}
-                                                    onClick={() => setMobileOpen(false)}
-                                                    className="block py-1.5 pl-3 text-[13px] text-gray-300 hover:text-gold border-l border-gold/20 hover:border-gold/50 transition-colors"
-                                                  >
-                                                    {subItem.label}
-                                                  </Link>
-                                                ))}
-                                              </motion.div>
-                                            )}
-                                          </AnimatePresence>
-                                        </>
-                                      ) : (
-                                        row.href && (
-                                          <Link
-                                            href={row.href}
-                                            onClick={() => setMobileOpen(false)}
-                                            className="flex items-center justify-between px-5 py-2.5 text-[11px] font-bold tracking-[0.14em] uppercase text-gold/70 hover:text-gold transition-colors"
-                                          >
-                                            {row.heading}
-                                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                            </svg>
-                                          </Link>
-                                        )
-                                      )}
-                                    </div>
-                                  );
-                                })}
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
-                        </>
-                      ) : null}
-                    </div>
-                  ))}
-
-                  <div className="px-5 pt-3 pb-5">
-                    <Link
-                      href="/rfq/"
-                      onClick={() => setMobileOpen(false)}
-                      className="block text-center px-5 py-3 bg-gold text-navy-900 text-sm font-bold rounded hover:bg-yellow-400 transition-colors"
-                    >
-                      Request a Quote
-                    </Link>
+                                              {subItem.label}
+                                            </Link>
+                                          ))}
+                                        </div>
+                                      </div>
+                                    </>
+                                  ) : (
+                                    row.href && (
+                                      <Link
+                                        href={row.href}
+                                        onClick={() => setMobileOpen(false)}
+                                        className="flex items-center justify-between px-5 py-2.5 text-[11px] font-bold tracking-[0.14em] uppercase text-gold/70 hover:text-gold transition-colors"
+                                      >
+                                        {row.heading}
+                                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                        </svg>
+                                      </Link>
+                                    )
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </>
+                    ) : null}
                   </div>
+                ))}
+
+                <div className="px-5 pt-3 pb-5">
+                  <Link
+                    href="/rfq/"
+                    onClick={() => setMobileOpen(false)}
+                    className="block text-center px-5 py-3 bg-gold text-navy-900 text-sm font-bold rounded hover:bg-yellow-400 transition-colors"
+                  >
+                    Request a Quote
+                  </Link>
                 </div>
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+            </div>
+          </div>
+        </div>
       </header>
 
       {/* Fixed header spacer */}

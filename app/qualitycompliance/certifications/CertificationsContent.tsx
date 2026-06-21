@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion-shim";
 import PageHero from "@/components/PageHero";
 import CertificationsStrip from "@/components/CertificationsStrip";
 import {

@@ -1,9 +1,9 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "@/lib/motion-shim";
 
 function scrollToId(id: string) {
   const el = document.getElementById(id);
@@ -819,37 +819,37 @@ export default function BarMopsContent() {
         </div>
       </section>
 
-      {/* SECTION 6 — PACKING — Military/Tactical UI */}
-      <section id="section-packing" className="bg-[#1C2B1C] py-20 lg:py-28">
+      {/* SECTION 6 — PACKING */}
+      <section id="section-packing" className="bg-gray-50 py-20 lg:py-28 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <p className="font-mono text-green-400 text-xs tracking-[0.3em] uppercase mb-2">&#x25B6; ORDER FORMATS // COMMERCIAL DISTRIBUTION</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Packing &amp; Order Formats</h2>
-            <p className="text-gray-400 max-w-2xl leading-relaxed">Commercial bar mop distribution requires specific packing configurations for efficient handling, storage and distribution.</p>
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Order Formats</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-3">Packing &amp; Order Formats</h2>
+            <p className="text-gray-500 max-w-2xl leading-relaxed">Commercial bar mop distribution requires specific packing configurations for efficient handling, storage and distribution.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {PACKING.map((p, i) => (
               <motion.div
                 key={p.format}
-                initial={{ opacity: 0, x: -16 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="border border-green-900/50 bg-white/5 rounded-xl p-6 flex items-start gap-4"
+                className="border border-gray-200 bg-white rounded-xl p-6 flex items-start gap-4"
               >
                 <span className="text-3xl" aria-hidden="true">{p.icon}</span>
                 <div>
-                  <h3 className="text-base font-bold text-white mb-1">{p.format}</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">{p.note}</p>
+                  <h3 className="text-base font-bold text-navy-900 mb-1">{p.format}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{p.note}</p>
                 </div>
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 border border-green-900/50 bg-white/5 rounded-xl p-6">
-            <p className="font-mono text-green-400 text-xs tracking-[0.2em] uppercase mb-3">&#x25B6; EXPORT PACKING STANDARD</p>
-            <p className="text-gray-300 text-sm leading-relaxed">All bar mops are packed in standard export cartons with full markings: description, quantity, gross/net weight, country of origin, shipping marks. Pallet options available for FCL shipments. Custom carton labelling to your distribution requirements on request.</p>
+          <div className="mt-8 border border-gray-200 bg-white rounded-xl p-6">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Export Packing Standard</p>
+            <p className="text-gray-600 text-sm leading-relaxed">All bar mops are packed in standard export cartons with full markings: description, quantity, gross/net weight, country of origin, shipping marks. Pallet options available for FCL shipments. Custom carton labelling to your distribution requirements on request.</p>
           </div>
-          <BackToTop dark />
+          <BackToTop />
         </div>
       </section>
 
@@ -926,17 +926,13 @@ export default function BarMopsContent() {
         </div>
       </section>
 
-      {/* SECTION 9 — CERTIFICATIONS — Retro/Vintage UI */}
-      <section id="section-certs" className="bg-[#F5F0E8] py-20 lg:py-28">
+      {/* SECTION 9 — CERTIFICATIONS */}
+      <section id="section-certs" className="bg-gray-50 py-20 lg:py-28 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-4 mb-4" aria-hidden="true">
-              <div className="h-px w-20 bg-[#8B7355]" />
-              <span className="text-[#8B7355] text-xs font-semibold tracking-[0.4em] uppercase">Quality Assurance</span>
-              <div className="h-px w-20 bg-[#8B7355]" />
-            </div>
-            <h2 className="text-4xl font-bold text-[#2C2416] mb-4">Certifications &amp; Standards</h2>
-            <p className="text-[#6B5B45] max-w-xl mx-auto leading-relaxed">Certificates that institutional and commercial buyers require across all key export markets.</p>
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Quality Assurance</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Certifications &amp; Standards</h2>
+            <p className="text-gray-500 max-w-xl mx-auto leading-relaxed">Certificates that institutional and commercial buyers require across all key export markets.</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {CERTIFICATIONS.map((c, i) => (
@@ -946,12 +942,12 @@ export default function BarMopsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="bg-white border-2 border-[#D4C4A0] rounded-2xl p-5 flex flex-col items-center gap-3 text-center"
+                className="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col items-center gap-3 text-center"
               >
                 <div className="w-full h-14 flex items-center justify-center">
                   <Image src={c.img} alt={c.full} width={72} height={44} className="object-contain" />
                 </div>
-                <p className="text-sm font-bold text-[#2C2416]">{c.name}</p>
+                <p className="text-sm font-bold text-navy-900">{c.name}</p>
                 <span className={`text-[10px] px-2 py-0.5 rounded-full font-semibold ${c.tier === "Premium" ? "bg-gold/20 text-amber-800" : c.tier === "Optional" ? "bg-gray-100 text-gray-500" : "bg-green-100 text-green-800"}`}>{c.tier}</span>
               </motion.div>
             ))}
@@ -960,11 +956,9 @@ export default function BarMopsContent() {
         </div>
       </section>
 
-      {/* SECTION 10 — EXPORT — Aurora UI */}
-      <section id="section-export" className="relative py-20 lg:py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 via-teal-900 to-[#0D1B2A]" aria-hidden="true" />
-        <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-emerald-400/10 blur-3xl" aria-hidden="true" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* SECTION 10 — EXPORT */}
+      <section id="section-export" className="bg-navy-900 py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Export</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Export &amp; Logistics</h2>
           <p className="text-white/60 mb-12 max-w-2xl leading-relaxed">Commercial bar mops ship FCL and LCL from Karachi and Port Qasim. All major incoterms available. Full export documentation standard.</p>
@@ -1002,36 +996,44 @@ export default function BarMopsContent() {
         </div>
       </section>
 
-      {/* SECTION 11 — PROCESS — Code/Terminal UI */}
-      <section id="section-process" className="bg-[#0D1117] py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="font-mono text-green-400 text-xs tracking-[0.2em] mb-2"># sourcing_process.sh</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">From RFQ to Delivery</h2>
-          <p className="text-gray-400 mb-12 max-w-2xl leading-relaxed">A transparent, sequenced process from specification through to vessel loading.</p>
-          <div className="flex flex-col gap-3">
-            {PROCESS.map((p, i) => (
-              <motion.div
-                key={p.num}
-                initial={{ opacity: 0, x: -16 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="bg-[#161B22] border border-[#30363D] rounded-xl p-5 flex items-start gap-4 font-mono"
-              >
-                <span className="text-green-400 text-sm shrink-0">{p.num}</span>
-                <span className="text-yellow-400 text-sm shrink-0">./run</span>
-                <div>
-                  <span className="text-white text-sm font-bold">{p.short}</span>
-                  <p className="text-gray-400 text-xs mt-1 font-sans">{p.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+      {/* SECTION 11 — PROCESS */}
+      <section id="section-process" className="bg-white py-20 lg:py-28 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 text-center">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Sourcing Process</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">From RFQ to Delivery</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">A transparent, sequenced process from specification through to vessel loading.</p>
           </div>
-          <div className="mt-8 bg-amber-900/20 border border-amber-700/30 rounded-xl p-5">
-            <p className="font-mono text-amber-400 text-xs tracking-[0.2em] mb-2"># NOTICE</p>
-            <p className="text-amber-200/80 text-sm leading-relaxed font-sans">All lead times are indicative only — subject to factory scheduling, material availability and order complexity. Request a programme-specific timeline in your RFQ.</p>
+          <div className="relative">
+            <div className="absolute left-5 top-6 bottom-6 w-0.5 bg-gray-200" aria-hidden="true" />
+            <div className="space-y-5">
+              {PROCESS.map((p, i) => (
+                <motion.div
+                  key={p.num}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.07 }}
+                  className="relative flex items-start gap-5"
+                >
+                  <div className={`relative z-10 w-10 h-10 rounded-full flex items-center justify-center shrink-0 shadow-md border-4 border-white ${i < 3 ? "bg-navy-900" : "bg-gold"}`}>
+                    <span className={`text-xs font-bold ${i < 3 ? "text-gold" : "text-navy-900"}`}>{p.num}</span>
+                  </div>
+                  <div className="flex-1 rounded-2xl border border-gray-100 bg-white shadow-sm p-5 mb-2">
+                    <h3 className="font-bold text-navy-900 mb-1.5">{p.short}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{p.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
-          <BackToTop dark />
+          <div className="mt-8 rounded-xl bg-amber-50 border border-amber-200 p-4 flex items-start gap-3">
+            <svg viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5 text-amber-500 shrink-0 mt-0.5" aria-hidden="true">
+              <path fillRule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+            </svg>
+            <p className="text-amber-700 text-sm"><strong>Lead times are indicative only</strong> — subject to factory scheduling, material availability and order complexity. Request a programme-specific timeline in your RFQ.</p>
+          </div>
+          <BackToTop />
         </div>
       </section>
 

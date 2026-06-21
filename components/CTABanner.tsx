@@ -1,19 +1,11 @@
-"use client";
-
 import Link from "next/link";
-import { motion } from "framer-motion";
+import AnimateInView from "./AnimateInView";
 
 export default function CTABanner() {
   return (
     <section className="py-12 sm:py-16 bg-navy-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center"
-        >
+        <AnimateInView className="text-center">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
             Ready to Source?
           </p>
@@ -27,7 +19,7 @@ export default function CTABanner() {
           >
             Request a Quote →
           </Link>
-        </motion.div>
+        </AnimateInView>
       </div>
     </section>
   );

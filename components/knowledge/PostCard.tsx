@@ -3,8 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { staggerItemVariants } from "@/lib/animations";
+import { motion } from "@/lib/motion-shim";
 import { formatDate } from "@/lib/knowledge";
 import type { KnowledgePost, KnowledgeCategory } from "@/types/knowledge";
 
@@ -50,7 +49,6 @@ export default function PostCard({ post }: PostCardProps) {
 
   return (
     <motion.article
-      variants={staggerItemVariants}
       className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-gold/30 hover:shadow-lg transition-all duration-300 flex flex-col"
     >
       {/* Thumbnail — full link so right-click → open in new tab goes to article */}

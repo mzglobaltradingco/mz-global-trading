@@ -1,6 +1,6 @@
-"use client";
+﻿"use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion-shim";
 import { usePathname } from "next/navigation";
 import { pageTransitionConfig } from "@/lib/animations";
 

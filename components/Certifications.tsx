@@ -1,7 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
+import AnimateInView from "./AnimateInView";
 
 const certs = [
   { src: "/images/certs/cert-sedex.webp", alt: "Sedex" },
@@ -21,14 +19,7 @@ export default function Certifications() {
         </p>
         <div className="grid grid-cols-3 sm:grid-cols-6 gap-6 sm:gap-8 items-center">
           {certs.map((cert, i) => (
-            <motion.div
-              key={cert.alt}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.06 }}
-              className="flex items-center justify-center"
-            >
+            <AnimateInView key={cert.alt} delay={i * 60} y={0} className="flex items-center justify-center">
               <Image
                 src={cert.src}
                 alt={cert.alt}
@@ -36,7 +27,7 @@ export default function Certifications() {
                 height={60}
                 className="object-contain max-h-14 w-auto grayscale hover:grayscale-0 transition-all duration-300"
               />
-            </motion.div>
+            </AnimateInView>
           ))}
         </div>
       </div>
