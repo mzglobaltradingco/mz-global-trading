@@ -46,20 +46,22 @@
 
 ## Tech Stack
 
-- **Framework:** Next.js 14 App Router — installed version **14.2.35**
+- **Framework:** Next.js 16 App Router — installed version **16.2.9**
 - **Language:** TypeScript (strict mode)
-- **Styling:** Tailwind CSS with custom colour config
-- **Animations:** Framer Motion
-- **Output:** Static export — `output: "export"` in `next.config.ts` — no SSR, no API routes, no server actions
+- **Styling:** Tailwind CSS v4 — `@theme {}` block in `app/globals.css`, no `tailwind.config.ts`
+- **Animations:** Framer Motion v12
+- **Output:** Static export — `output: "export"` in `next.config.mjs` — no SSR, no API routes, no server actions
 - **Deployment:** Cloudflare Pages
 - **Font:** Geist Sans via `localFont` with `display: "swap"`
 - **Node:** 24.x
+- **React:** 19.2.7
+- **PostCSS:** `@tailwindcss/postcss` v4 — config in `postcss.config.mjs` (ESM)
+- **Dev server:** `next dev --webpack` (webpack flag required — Turbopack + Tailwind v4 oklch colours conflict in some browsers)
 
-### Next.js Version Decision (reviewed 2026-06-21)
-- v14.2.35 is **EOL as of Oct 2025** — no longer receives security patches from Vercel
-- v15 EOL: Oct 2026 (too close — not worth upgrading for ~4 months of support)
-- v16.2.9 is current stable but still early — ecosystem/docs not fully mature
-- **Plan:** Stay on v14 (safe — site is 100% static HTML on Cloudflare CDN, zero server-side attack surface). Upgrade directly to **Next.js 16 at ~v16.5+** when it matures (est. late 2026). Do NOT upgrade to v15.
+### Next.js Version Decision (reviewed 2026-06-22)
+- Upgraded from v14.2.35 (EOL Oct 2025) to **v16.2.9** on 2026-06-22
+- v16 is current stable — upgrade is complete and verified
+- **Next upgrade:** v16 → v17 when it stabilises (est. 2027). Do NOT downgrade to v15.
 
 ---
 
@@ -895,7 +897,7 @@ style={{ background: "linear-gradient(to right, rgba(13,27,42,0.93) 0%, rgba(13,
 | `app/rfq/RFQContent.tsx` | Full wizard UI — `"use client"` |
 | `lib/rfq-product-options.ts` | All product-specific dropdown data (single source of truth) |
 
-`lib/` is at the project root alongside `app/`. This is the standard Next.js 14 location for non-component library code.
+`lib/` is at the project root alongside `app/`. This is the standard Next.js location for non-component library code.
 
 ---
 
