@@ -1,9 +1,9 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "@/lib/motion-shim";
+import { motion, AnimatePresence } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import CertificationsStrip from "@/components/CertificationsStrip";
 import {

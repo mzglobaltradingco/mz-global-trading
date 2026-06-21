@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "@/lib/motion-shim";
+import { motion, AnimatePresence } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import {
   fadeUpVariants,

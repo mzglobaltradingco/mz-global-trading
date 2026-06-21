@@ -1,8 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import AnimateInView from "./AnimateInView";
-import { useCountUp } from "@/lib/animations";
+import { motion } from "framer-motion";
+import {
+  staggerContainerVariants,
+  staggerItemVariants,
+  viewportOnce,
+  useCountUp,
+} from "@/lib/animations";
 
 const stats = [
   {
@@ -12,7 +17,7 @@ const stats = [
   },
   {
     icon: "/images/icons/stats/icon-global-quality.svg",
-    value: "35+",
+    value: "25+",
     label: "Countries Served",
   },
   {
@@ -44,11 +49,17 @@ export default function StatsBar() {
   return (
     <section className="bg-navy-900 py-10 sm:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">
-          {stats.map((stat, i) => (
-            <AnimateInView
+        <motion.div
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8"
+          variants={staggerContainerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+        >
+          {stats.map((stat) => (
+            <motion.div
               key={stat.label}
-              delay={i * 80}
+              variants={staggerItemVariants}
               className="flex flex-col items-center text-center gap-3"
             >
               <Image src={stat.icon} alt={stat.label} width={40} height={40} />
@@ -58,9 +69,9 @@ export default function StatsBar() {
                 </p>
                 <p className="text-gray-300 text-xs sm:text-sm mt-0.5">{stat.label}</p>
               </div>
-            </AnimateInView>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

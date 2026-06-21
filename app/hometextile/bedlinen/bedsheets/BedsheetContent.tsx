@@ -1,9 +1,9 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { motion, AnimatePresence } from "@/lib/motion-shim";
+import { motion, AnimatePresence } from "framer-motion";
 
 // ─── Scroll helpers ────────────────────────────────────────────────────────────
 

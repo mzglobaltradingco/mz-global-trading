@@ -1,6 +1,8 @@
-import type { CSSProperties } from "react";
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export interface BreadcrumbItem {
   label: string;
@@ -17,6 +19,16 @@ interface PageHeroProps {
   description: string;
   pills?: string[];
 }
+
+const pillContainerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1, delayChildren: 0.36 } },
+};
+
+const pillVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.35 } },
+};
 
 export default function PageHero({
   image,
@@ -49,10 +61,12 @@ export default function PageHero({
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav
+        <motion.nav
           aria-label="Breadcrumb"
-          className="hero-fade-up flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap"
-          style={{ "--fy": "10px", "--dur": "0.4s", "--delay": "0ms" } as CSSProperties}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap"
         >
           {breadcrumbs.map((crumb, i) => {
             const isLast = i === breadcrumbs.length - 1;
@@ -71,19 +85,23 @@ export default function PageHero({
               </span>
             );
           })}
-        </nav>
+        </motion.nav>
 
         <div className="max-w-3xl">
-          <p
-            className="hero-fade-up text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4"
-            style={{ "--fy": "14px", "--dur": "0.4s", "--delay": "80ms" } as CSSProperties}
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.08 }}
+            className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4"
           >
             {label}
-          </p>
+          </motion.p>
 
-          <h1
-            className="hero-fade-up text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5"
-            style={{ "--fy": "20px", "--dur": "0.5s", "--delay": "160ms" } as CSSProperties}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.16 }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5"
           >
             {title}
             {titleGold && (
@@ -92,28 +110,35 @@ export default function PageHero({
                 <span className="text-gold">{titleGold}</span>
               </>
             )}
-          </h1>
+          </motion.h1>
 
-          <p
-            className="hero-fade-up text-gray-300 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl"
-            style={{ "--fy": "16px", "--dur": "0.5s", "--delay": "260ms" } as CSSProperties}
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.26 }}
+            className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl"
           >
             {description}
-          </p>
+          </motion.p>
 
           {pills && pills.length > 0 && (
-            <div className="flex flex-wrap gap-3">
-              {pills.map((pill, i) => (
-                <span
+            <motion.div
+              variants={pillContainerVariants}
+              initial="hidden"
+              animate="visible"
+              className="flex flex-wrap gap-3"
+            >
+              {pills.map((pill) => (
+                <motion.span
                   key={pill}
-                  className="hero-fade-up inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300"
-                  style={{ "--fy": "10px", "--dur": "0.35s", "--delay": `${360 + i * 100}ms` } as CSSProperties}
+                  variants={pillVariants}
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" aria-hidden="true" />
                   {pill}
-                </span>
+                </motion.span>
               ))}
-            </div>
+            </motion.div>
           )}
         </div>
       </div>

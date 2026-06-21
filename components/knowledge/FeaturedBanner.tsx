@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import AnimateInView from "@/components/AnimateInView";
+import { motion } from "framer-motion";
+import { fadeUpVariants, viewportOnce } from "@/lib/animations";
 import { formatDate } from "@/lib/knowledge";
 import type { KnowledgePost } from "@/types/knowledge";
 
@@ -10,7 +13,13 @@ interface FeaturedBannerProps {
 
 export default function FeaturedBanner({ post }: FeaturedBannerProps) {
   return (
-    <AnimateInView className="mb-10">
+    <motion.div
+      variants={fadeUpVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={viewportOnce}
+      className="mb-10"
+    >
       <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Featured Article</p>
 
       <Link href={`/knowledge/${post.slug}/`} className="block group">
@@ -67,6 +76,6 @@ export default function FeaturedBanner({ post }: FeaturedBannerProps) {
           </div>
         </article>
       </Link>
-    </AnimateInView>
+    </motion.div>
   );
 }

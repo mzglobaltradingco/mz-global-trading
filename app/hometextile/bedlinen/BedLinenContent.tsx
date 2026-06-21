@@ -1,8 +1,8 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "@/lib/motion-shim";
+import { motion } from "framer-motion";
 
 const PRODUCTS = [
   {

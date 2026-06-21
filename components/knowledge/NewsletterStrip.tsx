@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import AnimateInView from "@/components/AnimateInView";
+import { motion } from "framer-motion";
+import { fadeUpVariants, viewportOnce } from "@/lib/animations";
 
 const FEED_URL = "https://mzglobaltrading.com/rss.xml";
 
@@ -18,7 +19,13 @@ export default function NewsletterStrip() {
   return (
     <section className="py-16 sm:py-20 bg-navy-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimateInView className="max-w-2xl mx-auto text-center">
+        <motion.div
+          variants={fadeUpVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          className="max-w-2xl mx-auto text-center"
+        >
           {/* RSS icon */}
           <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center mx-auto mb-5">
             <svg className="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -71,7 +78,7 @@ export default function NewsletterStrip() {
           >
             Open raw feed
           </a>
-        </AnimateInView>
+        </motion.div>
       </div>
     </section>
   );

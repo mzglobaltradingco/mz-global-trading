@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "@/lib/motion-shim";
+import { motion, AnimatePresence } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import { PhoneInputField, validatePhone } from "@/components/PhoneInputField";
 import {
