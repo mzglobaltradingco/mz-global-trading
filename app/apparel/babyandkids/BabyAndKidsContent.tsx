@@ -8,7 +8,7 @@ const PRODUCTS = [
   {
     name: "T-Shirts for Kids",
     slug: "tshirtsforkids",
-    img: "/images/hero/hero-t-shirts.webp",
+    img: "/images/hero/hero-t-shirts-for-kids.webp",
     desc: "Soft combed cotton single jersey. Crew neck and V-neck. Sizes 0–12 years. GOTS organic option. Safe for sensitive skin.",
     spec: "140–180 GSM · Combed Jersey · 0–12 yrs",
     badge: "Best Seller",
@@ -18,7 +18,7 @@ const PRODUCTS = [
   {
     name: "Swaddle Muslin Fabric",
     slug: "swaddlemuslinfabric",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-swaddle-muslin-fabric.webp",
     desc: "4-layer muslin gauze in 100% GOTS organic cotton. Pre-washed, ultra-soft. Swaddle blankets, wraps and bedding.",
     spec: "100–140 GSM · 4-Layer Muslin · GOTS",
     badge: "GOTS Certified",
@@ -28,7 +28,7 @@ const PRODUCTS = [
   {
     name: "Overalls",
     slug: "overalls",
-    img: "/images/hero/hero-apparel.webp",
+    img: "/images/hero/hero-overalls.webp",
     desc: "100% cotton interlock and rib. Snap closures for easy nappy changes. Sizes 0–24 months and 2–6 years.",
     spec: "180–220 GSM · Interlock · Snap Closure",
     badge: "",
@@ -38,7 +38,7 @@ const PRODUCTS = [
   {
     name: "Baby Rompers",
     slug: "babyrompers",
-    img: "/images/hero/hero-apparel.webp",
+    img: "/images/hero/hero-baby-rompers.webp",
     desc: "Envelope neck, kimono wrap and snap-front styles. Interlock and jersey constructions. 0–24 months.",
     spec: "160–200 GSM · Jersey · Interlock",
     badge: "Retail Favourite",
@@ -48,7 +48,7 @@ const PRODUCTS = [
   {
     name: "Baby Bibs",
     slug: "babybibs",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-baby-bibs.webp",
     desc: "Terry-backed cotton bibs in snap and tie closures. Drool, feeding and bandana styles. Embroidery and print options.",
     spec: "200–280 GSM · Terry Backed · Cotton",
     badge: "",
@@ -58,7 +58,7 @@ const PRODUCTS = [
   {
     name: "Baby Hooded Towels",
     slug: "babyhoodedtowels",
-    img: "/images/hero/hero-towels.webp",
+    img: "/images/hero/hero-baby-hooded-towels.webp",
     desc: "Premium terry loop with woven hood panel. 300–500 GSM. Reactive print, embroidery and plain options. Newborn to 4 years.",
     spec: "300–500 GSM · Terry · Hood Panel",
     badge: "",

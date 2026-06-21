@@ -160,7 +160,7 @@ export default function QualityPolicyContent() {
 
       {/* ── 1. Hero ──────────────────────────────────────────────────────────── */}
       <PageHero
-        image="/images/hero/hero-why-choose-us.webp"
+        image="/images/hero/hero-quality-policy.webp"
         imageAlt="Pakistan textile factory quality inspection — MZ Global Trading quality policy commitment"
         breadcrumbs={[
           { label: "Home", href: "/" },
