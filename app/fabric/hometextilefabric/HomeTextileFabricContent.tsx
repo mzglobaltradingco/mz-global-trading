@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -531,9 +531,7 @@ export default function HomeTextileFabricContent() {
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-home-textiles.webp"
-            fill
-            alt="Pakistan home textile fabric manufacturer — terry and woven fabric for towel and bedding manufacturers worldwide"
+            src="/images/hero/hero-home-textile-fabric.webp" fill alt="Pakistan home textile fabric manufacturer — terry and woven fabric for towel and bedding manufacturers worldwide"
             className="object-cover"
             priority
             sizes="100vw"

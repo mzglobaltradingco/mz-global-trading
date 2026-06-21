@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/apparel/workwearapparel/",
     images: [
       {
-        url: "/images/og/hero-apparel.webp",
+        url: "/images/og/workwear-apparel-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan workwear apparel manufacturer — OEM safety workwear and uniforms for industrial and trade sectors worldwide",
@@ -118,7 +118,7 @@ export default function WorkwearApparelPage() {
             description:
               "Custom workwear apparel sourced from Pakistan's certified factories. Canvas, ripstop TC poly-cotton, FR cotton, hi-vis and denim constructions. 240–400 GSM. ISO 9001, BSCI, Sedex certified.",
             image:
-              "https://mzglobaltrading.com/images/hero/hero-apparel.webp",
+              "https://mzglobaltrading.com/images/og/workwear-apparel-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -152,7 +152,7 @@ export default function WorkwearApparelPage() {
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/hero/hero-apparel.webp",
+                "https://mzglobaltrading.com/images/og/workwear-apparel-og.webp",
               name: "Pakistan workwear apparel manufacturer — OEM safety workwear for industrial and trade sectors",
             },
           }),

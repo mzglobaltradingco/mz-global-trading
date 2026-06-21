@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import ApronsContent from "./ApronsContent";
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/kitchenlinen/aprons/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/aprons-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan aprons manufacturer — canvas, denim and terry aprons for restaurant, hospitality and corporate buyers in USA, UK and Europe",
@@ -61,7 +61,7 @@ export default function ApronsPage() {
             description:
               "OEM aprons sourced from Pakistan's certified textile mills. Canvas heavy (280–400 GSM), denim, terry and plain weave/poplin constructions. Bib and waist apron styles. Screen print, digital print, embroidery and heat transfer decoration. OEKO-TEX, BSCI, ISO 9001. FOB/CIF export to USA, UK, EU, Middle East and worldwide.",
             image:
-              "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+              "https://mzglobaltrading.com/images/og/aprons-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -75,7 +75,7 @@ export default function ApronsPage() {
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+                "https://mzglobaltrading.com/images/og/aprons-og.webp",
               name: "Pakistan aprons manufacturer — canvas, denim and terry aprons for restaurant and hospitality buyers worldwide",
             },
             breadcrumb: {

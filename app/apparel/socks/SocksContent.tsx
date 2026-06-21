@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -237,9 +237,7 @@ export default function SocksContent() {
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-apparel.webp"
-            fill
-            alt="Pakistan socks manufacturer — OEM plain, jacquard and compression socks for fashion and sport brands in USA, UK and Europe"
+            src="/images/hero/hero-socks.webp" fill alt="Pakistan socks manufacturer — OEM plain, jacquard and compression socks for fashion and sport brands in USA, UK and Europe"
             className="object-cover"
             priority
             sizes="100vw"

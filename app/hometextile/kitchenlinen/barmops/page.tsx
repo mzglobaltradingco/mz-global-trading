@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BarMopsContent from "./BarMopsContent";
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/kitchenlinen/barmops/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/bar-mops-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan bar mops manufacturer — heavy terry and huck weave commercial bar mops for restaurant and foodservice buyers in USA, UK and Canada",
@@ -61,7 +61,7 @@ export default function BarMopsPage() {
             description:
               "Commercial-grade bar mops sourced from Pakistan's certified textile mills. Heavy terry loop and huck weave constructions. 400–600 GSM. Anti-bacterial treatment standard. OEKO-TEX, BSCI, ISO 9001. Bulk export to USA, UK, Canada, Middle East and worldwide.",
             image:
-              "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+              "https://mzglobaltrading.com/images/og/bar-mops-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -75,7 +75,7 @@ export default function BarMopsPage() {
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+                "https://mzglobaltrading.com/images/og/bar-mops-og.webp",
               name: "Pakistan bar mops manufacturer — commercial-grade heavy terry bar mops for restaurant and foodservice buyers",
             },
             breadcrumb: {

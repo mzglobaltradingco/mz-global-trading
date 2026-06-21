@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/apparel/babyandkids/babyrompers/",
     images: [
       {
-        url: "/images/menu/menu-babyrompers.webp",
+        url: "/images/og/baby-rompers-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan baby rompers manufacturer — OEM organic cotton infant bodysuits for USA, UK and Europe",
@@ -53,7 +53,7 @@ export default function BabyRompersPage() {
     name: "Baby Rompers — OEM Infant Bodysuit Manufacturing Pakistan",
     description:
       "Pakistan OEM baby romper and bodysuit manufacturer. GOTS and OEKO-TEX Class 1 certified organic cotton and combed jersey. Snap crotch and envelope necklines. Newborn to 24 months. Bulk programmes for USA, UK, Europe and worldwide.",
-    image: "https://mzglobaltrading.com/images/menu/menu-babyrompers.webp",
+    image: "https://mzglobaltrading.com/images/og/baby-rompers-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     offers: {
       "@type": "Offer",
@@ -63,7 +63,7 @@ export default function BabyRompersPage() {
     },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/menu/menu-babyrompers.webp",
+      contentUrl: "https://mzglobaltrading.com/images/og/baby-rompers-og.webp",
       name: "Pakistan baby rompers manufacturer — OEM organic cotton infant bodysuits for USA, UK and Europe",
     },
     breadcrumb: {

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import SurgicalHuckTowelsContent from "./SurgicalHuckTowelsContent";
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/hospitallinen/surgicalhucktowels/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/surgical-huck-towels-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan surgical huck towel manufacturer — 100% cotton honeycomb weave lint-free surgical towels for hospitals worldwide",
@@ -136,7 +136,7 @@ export default function SurgicalHuckTowelsPage() {
             description:
               "Surgical huck towels manufactured in Pakistan's certified weaving mills. 100% cotton honeycomb huck weave. Pre-washed, lint-free, high absorbency. 180–280 GSM. Plain white and blue stripe. ISO 9001, BSCI certified. FOB / CIF export to USA, UK, Australia.",
             image:
-              "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+              "https://mzglobaltrading.com/images/og/surgical-huck-towels-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -150,7 +150,7 @@ export default function SurgicalHuckTowelsPage() {
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+                "https://mzglobaltrading.com/images/og/surgical-huck-towels-og.webp",
               name: "Pakistan surgical huck towel manufacturer — lint-free cotton honeycomb weave surgical towels for hospitals worldwide",
             },
             breadcrumb: {

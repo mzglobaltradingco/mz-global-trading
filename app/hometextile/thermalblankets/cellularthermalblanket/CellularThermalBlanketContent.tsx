@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -154,9 +154,7 @@ export default function CellularThermalBlanketContent() {
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-home-textiles.webp"
-            fill
-            alt="Pakistan cellular thermal blanket manufacturer — cotton open-cell weave blankets for hospitals and NHS procurement worldwide"
+            src="/images/hero/hero-cellular-thermal-blanket.webp" fill alt="Pakistan cellular thermal blanket manufacturer — cotton open-cell weave blankets for hospitals and NHS procurement worldwide"
             className="object-cover"
             priority
             sizes="100vw"

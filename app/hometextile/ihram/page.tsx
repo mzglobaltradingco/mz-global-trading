@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/ihram/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/ihram-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan ihram manufacturer — plain white cotton ihram sets for Hajj and Umrah pilgrims worldwide",
@@ -143,7 +143,7 @@ export default function IhramPage() {
             name: "Ihram Sets — Plain White Cotton for Hajj & Umrah",
             description:
               "Plain white cotton Ihram sets manufactured in Pakistan's certified weaving mills. Supplied as two unstitched panels per pair (Rida + Izar). Plain weave, terry weave and dobby stripe cotton. 200–350 GSM. OEKO-TEX Standard 100. Export to Saudi Arabia, UAE, Malaysia, Indonesia, UK and worldwide.",
-            image: "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+            image: "https://mzglobaltrading.com/images/og/ihram-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -153,7 +153,7 @@ export default function IhramPage() {
             },
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+              contentUrl: "https://mzglobaltrading.com/images/og/ihram-og.webp",
               name: "Pakistan ihram manufacturer — plain white cotton ihram sets for Hajj and Umrah pilgrims worldwide",
             },
             breadcrumb: {

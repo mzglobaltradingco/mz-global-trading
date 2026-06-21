@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import CellularThermalBlanketContent from "./CellularThermalBlanketContent";
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/thermalblankets/cellularthermalblanket/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/cellular-thermal-blanket-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan cellular thermal blanket manufacturer — cotton open-cell weave blankets for hospitals and NHS procurement worldwide",
@@ -135,7 +135,7 @@ export default function CellularThermalBlanketPage() {
             name: "Cellular Thermal Blanket — Pakistan Cotton Manufacturing",
             description:
               "100% cotton cellular thermal blankets with open-cell honeycomb weave. Clinical-grade breathability. 150–250 GSM. Anti-shrink finish for hospital laundry. OEKO-TEX Standard 100, GOTS, ISO 9001. Supplied to NHS, hospitals, neonatal units and aged-care globally.",
-            image: "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+            image: "https://mzglobaltrading.com/images/og/cellular-thermal-blanket-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -145,7 +145,7 @@ export default function CellularThermalBlanketPage() {
             },
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+              contentUrl: "https://mzglobaltrading.com/images/og/cellular-thermal-blanket-og.webp",
               name: "Pakistan cellular thermal blanket manufacturer — cotton open-cell weave hospital blankets",
             },
             breadcrumb: {

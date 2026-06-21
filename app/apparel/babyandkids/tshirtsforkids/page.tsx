@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/apparel/babyandkids/tshirtsforkids/",
     images: [
       {
-        url: "/images/menu/menu-tshirtsforkids.webp",
+        url: "/images/og/t-shirts-for-kids-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan kids T-shirt manufacturer — OEM organic cotton and combed jersey children's tees for USA, UK and Europe",
@@ -53,7 +53,7 @@ export default function TShirtsForKidsPage() {
     name: "Kids T-Shirts — OEM Children's Apparel Manufacturing Pakistan",
     description:
       "Pakistan OEM kids T-shirt manufacturer producing organic cotton and combed jersey children's tees in sizes from premature to 12 years. GOTS and OEKO-TEX Class 1 certified mills. Baby-safe water-based inks and hypoallergenic finishes. Bulk programmes for USA, UK, Europe and worldwide.",
-    image: "https://mzglobaltrading.com/images/menu/menu-tshirtsforkids.webp",
+    image: "https://mzglobaltrading.com/images/og/t-shirts-for-kids-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     offers: {
       "@type": "Offer",
@@ -63,7 +63,7 @@ export default function TShirtsForKidsPage() {
     },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/menu/menu-tshirtsforkids.webp",
+      contentUrl: "https://mzglobaltrading.com/images/og/t-shirts-for-kids-og.webp",
       name: "Pakistan kids T-shirt manufacturer — OEM organic cotton and combed jersey children's tees for USA, UK and Europe",
     },
     breadcrumb: {

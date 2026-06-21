@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -232,7 +232,7 @@ export default function SwaddleMuslinContent() {
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-apparel.webp"
+            src="/images/hero/hero-swaddle-muslin-fabric.webp"
             fill
             alt="Pakistan swaddle muslin manufacturer — GOTS organic cotton double gauze baby wraps for USA, UK and Europe"
             className="object-cover"

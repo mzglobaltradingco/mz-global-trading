@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/fabric/apparelfabric/",
     images: [
       {
-        url: "/images/og/menu-apparelfabric.webp",
+        url: "/images/og/apparel-fabric-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan apparel fabric manufacturer — knitted and woven fabric rolls for garment manufacturers in USA, UK and Europe",
@@ -145,7 +145,7 @@ export default function ApparelFabricPage() {
             description:
               "Knitted and woven apparel fabric sourced from Pakistan's certified textile mills. Single jersey, interlock, pique, French terry, fleece, twill, denim, canvas and more. 80–450 GSM. GOTS, OEKO-TEX, BSCI certified. FOB / CIF export.",
             image:
-              "https://mzglobaltrading.com/images/og/menu-apparelfabric.webp",
+              "https://mzglobaltrading.com/images/og/apparel-fabric-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -156,7 +156,7 @@ export default function ApparelFabricPage() {
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/hero/hero-fabric.webp",
+                "https://mzglobaltrading.com/images/og/apparel-fabric-og.webp",
               name: "Pakistan apparel fabric manufacturer — knitted and woven fabric rolls for garment manufacturers worldwide",
             },
             breadcrumb: {

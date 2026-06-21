@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -277,7 +277,7 @@ export default function InstitutionalBeddingContent() {
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-institutional-towels.webp"
+            src="/images/hero/hero-institutional-bedding.webp"
             fill
             alt="Pakistan institutional bedding manufacturer — commercial-grade bedsheets and bed linen for hotels, hospitals and student accommodation in USA, UK and Europe"
             className="object-cover"

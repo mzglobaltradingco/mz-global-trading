@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import PatientGownsContent from "./PatientGownsContent";
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/hospitallinen/patientgowns/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/patient-gowns-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan patient gown manufacturer — cotton and poly-cotton hospital patient gowns for healthcare buyers worldwide",
@@ -136,7 +136,7 @@ export default function PatientGownsPage() {
             description:
               "Patient gowns manufactured in Pakistan's ISO-certified healthcare textile facilities. 100% cotton and TC poly-cotton plain weave, jersey knit wrap-style. Anti-bacterial, autoclave safe. Adult and pediatric sizes. ISO 9001, BSCI, Sedex certified. FOB / CIF export.",
             image:
-              "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+              "https://mzglobaltrading.com/images/og/patient-gowns-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -150,7 +150,7 @@ export default function PatientGownsPage() {
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+                "https://mzglobaltrading.com/images/og/patient-gowns-og.webp",
               name: "Pakistan patient gown manufacturer — cotton hospital patient gowns for healthcare buyers worldwide",
             },
             breadcrumb: {

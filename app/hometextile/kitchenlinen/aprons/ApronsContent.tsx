@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -230,9 +230,7 @@ export default function ApronsContent() {
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-home-textiles.webp"
-            fill
-            alt="Pakistan aprons manufacturer — canvas, denim and terry aprons for restaurant, hospitality and corporate buyers in USA, UK and Europe"
+            src="/images/hero/hero-aprons.webp" fill alt="Pakistan aprons manufacturer — canvas, denim and terry aprons for restaurant, hospitality and corporate buyers in USA, UK and Europe"
             className="object-cover"
             priority
             sizes="100vw"

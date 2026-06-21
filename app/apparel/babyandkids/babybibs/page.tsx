@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BabyBibsContent from "./BabyBibsContent";
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/apparel/babyandkids/babybibs/",
     images: [
       {
-        url: "/images/menu/menu-babybibs.webp",
+        url: "/images/og/baby-bibs-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan baby bibs manufacturer — OEM terry and muslin drool bibs for USA, UK and Europe",
@@ -53,7 +53,7 @@ export default function BabyBibsPage() {
     name: "Baby Bibs — OEM Drool and Feeding Bib Manufacturing Pakistan",
     description:
       "Pakistan OEM baby bibs manufacturer producing terry, muslin, interlock and bandana drool bibs. GOTS and OEKO-TEX Class 1 certified. Velcro and snap closures. TPU waterproof backing available. Bulk programmes for USA, UK, Europe and global baby brands.",
-    image: "https://mzglobaltrading.com/images/menu/menu-babybibs.webp",
+    image: "https://mzglobaltrading.com/images/og/baby-bibs-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     offers: {
       "@type": "Offer",
@@ -63,7 +63,7 @@ export default function BabyBibsPage() {
     },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/menu/menu-babybibs.webp",
+      contentUrl: "https://mzglobaltrading.com/images/og/baby-bibs-og.webp",
       name: "Pakistan baby bibs manufacturer — OEM terry and muslin drool bibs for USA, UK and Europe",
     },
     breadcrumb: {

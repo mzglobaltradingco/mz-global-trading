@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/apparel/babyandkids/babyhoodedtowels/",
     images: [
       {
-        url: "/images/menu/menu-babyhoodedtowels.webp",
+        url: "/images/og/baby-hooded-towels-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan baby hooded towels manufacturer — OEM organic cotton terry hooded bath towels for USA, UK and Europe",
@@ -53,7 +53,7 @@ export default function BabyHoodedTowelsPage() {
     name: "Baby Hooded Towels — OEM Infant Bath Towel Manufacturing Pakistan",
     description:
       "Pakistan OEM baby hooded towel manufacturer. GOTS certified organic cotton terry and velour. Newborn to kids 4Y. Animal hood designs, custom embroidery. OEKO-TEX Class 1 certified mills. Bulk programmes for USA, UK, Europe and global baby brands.",
-    image: "https://mzglobaltrading.com/images/menu/menu-babyhoodedtowels.webp",
+    image: "https://mzglobaltrading.com/images/og/baby-hooded-towels-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     offers: {
       "@type": "Offer",
@@ -63,7 +63,7 @@ export default function BabyHoodedTowelsPage() {
     },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/menu/menu-babyhoodedtowels.webp",
+      contentUrl: "https://mzglobaltrading.com/images/og/baby-hooded-towels-og.webp",
       name: "Pakistan baby hooded towels manufacturer — OEM organic cotton terry hooded bath towels for USA, UK and Europe",
     },
     breadcrumb: {

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import KitchenTowelsContent from "./KitchenTowelsContent";
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/kitchenlinen/kitchentowels/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/kitchen-towels-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan kitchen towels manufacturer — waffle, huck weave and terry kitchen towels for retail and hospitality buyers in USA, UK and Europe",
@@ -61,7 +61,7 @@ export default function KitchenTowelsPage() {
             description:
               "Kitchen towels sourced from Pakistan's certified textile mills. Waffle/honeycomb, huck weave, plain weave and terry loop constructions. 150–250 GSM. Yarn-dyed stripe and check decoration. OEKO-TEX, BSCI, ISO 9001. FOB/CIF export to USA, UK, EU, Middle East and worldwide.",
             image:
-              "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+              "https://mzglobaltrading.com/images/og/kitchen-towels-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -75,7 +75,7 @@ export default function KitchenTowelsPage() {
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+                "https://mzglobaltrading.com/images/og/kitchen-towels-og.webp",
               name: "Pakistan kitchen towels manufacturer — waffle and huck weave kitchen towels for retail and hospitality buyers",
             },
             breadcrumb: {

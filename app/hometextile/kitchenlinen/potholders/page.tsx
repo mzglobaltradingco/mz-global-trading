@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import PotHoldersContent from "./PotHoldersContent";
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/kitchenlinen/potholders/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/pot-holders-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan pot holders manufacturer — quilted cotton and silicone oven mitts for kitchenware retail and foodservice buyers in USA, UK and Europe",
@@ -61,7 +61,7 @@ export default function PotHoldersPage() {
             description:
               "OEM pot holders and oven mitts sourced from Pakistan's certified textile factories. Quilted cotton, silicone-lined and terry constructions. Heat protection ratings to EN407. Square pot holder, gauntlet mitt and silicone mitt styles. OEKO-TEX, BSCI, ISO 9001. Bulk export to USA, UK, EU, Australia and worldwide.",
             image:
-              "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+              "https://mzglobaltrading.com/images/og/pot-holders-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -75,7 +75,7 @@ export default function PotHoldersPage() {
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+                "https://mzglobaltrading.com/images/og/pot-holders-og.webp",
               name: "Pakistan pot holders manufacturer — quilted and silicone oven mitts for kitchenware retail and foodservice worldwide",
             },
             breadcrumb: {

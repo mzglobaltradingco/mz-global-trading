@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/bedlinen/institutionalbedding/",
     images: [
       {
-        url: "/images/og/institutional-towels-og.webp",
+        url: "/images/og/institutional-bedding-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan institutional bedding manufacturer — commercial-grade bedsheets and bed linen for hotels and hospitals",
@@ -125,7 +125,7 @@ export default function InstitutionalBeddingPage() {
             description:
               "Commercial-grade institutional bedding manufactured in Pakistan's certified mills. Engineered for 100–200 industrial wash cycles at 60–90°C. Suitable for hotels, hospitals, airlines and student accommodation worldwide.",
             image:
-              "https://mzglobaltrading.com/images/hero/hero-institutional-towels.webp",
+              "https://mzglobaltrading.com/images/og/institutional-bedding-og.webp",
             brand: {
               "@type": "Brand",
               name: "MZ Global Trading",
@@ -142,7 +142,7 @@ export default function InstitutionalBeddingPage() {
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/hero/hero-institutional-towels.webp",
+                "https://mzglobaltrading.com/images/og/institutional-bedding-og.webp",
               name: "Pakistan institutional bedding manufacturer — commercial-grade bed linen for hotels, hospitals and airlines",
             },
             breadcrumb: {

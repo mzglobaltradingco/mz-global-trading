@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import FenderCoversContent from "./FenderCoversContent";
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/industriallinen/fendercovers/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/fender-covers-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan fender cover manufacturer — knitted terry stretch automotive fender covers for dealerships and body shops worldwide",
@@ -134,7 +134,7 @@ export default function FenderCoversPage() {
             name: "Fender Covers — Pakistan Automotive Textile Manufacturing",
             description:
               "Knitted terry stretch, woven terry, chenille and microfiber non-scratch automotive fender covers manufactured in Pakistan. 300–400 GSM. Non-scratch surface. ISO 9001, BSCI certified. Supplied to auto dealerships, body shops and professional detailers worldwide. Logo embroidery available.",
-            image: "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+            image: "https://mzglobaltrading.com/images/og/fender-covers-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -144,7 +144,7 @@ export default function FenderCoversPage() {
             },
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+              contentUrl: "https://mzglobaltrading.com/images/og/fender-covers-og.webp",
               name: "Pakistan fender cover manufacturer — knitted terry stretch non-scratch automotive fender covers",
             },
             breadcrumb: {

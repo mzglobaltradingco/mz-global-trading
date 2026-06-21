@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/fabric/hometextilefabric/",
     images: [
       {
-        url: "/images/og/menu-hometextilefabric.webp",
+        url: "/images/og/home-textile-fabric-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan home textile fabric manufacturer — terry and woven fabric for towel and bedding manufacturers in USA, UK and Europe",
@@ -145,7 +145,7 @@ export default function HomeTextileFabricPage() {
             description:
               "Terry loop, velour, zero twist and woven home textile fabric from Pakistan's certified mills. Percale, sateen, jacquard, flannel and plain weave for bedding manufacturers. GSM 300–800 (terry), TC 200–800 (woven). GOTS, OEKO-TEX, BSCI certified. FOB / CIF export.",
             image:
-              "https://mzglobaltrading.com/images/hero/hero-home-textiles.webp",
+              "https://mzglobaltrading.com/images/og/home-textile-fabric-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -156,7 +156,7 @@ export default function HomeTextileFabricPage() {
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/hero/hero-home-textiles.webp",
+                "https://mzglobaltrading.com/images/og/home-textile-fabric-og.webp",
               name: "Pakistan home textile fabric manufacturer — terry and woven fabric for towel and bedding manufacturers worldwide",
             },
             breadcrumb: {

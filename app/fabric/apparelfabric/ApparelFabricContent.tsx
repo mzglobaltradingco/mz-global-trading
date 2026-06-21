@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -556,9 +556,7 @@ export default function ApparelFabricContent() {
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-fabric.webp"
-            fill
-            alt="Pakistan apparel fabric manufacturer — knitted and woven fabric rolls for garment manufacturers in USA, UK and Europe"
+            src="/images/hero/hero-apparel-fabric.webp" fill alt="Pakistan apparel fabric manufacturer — knitted and woven fabric rolls for garment manufacturers in USA, UK and Europe"
             className="object-cover"
             priority
             sizes="100vw"

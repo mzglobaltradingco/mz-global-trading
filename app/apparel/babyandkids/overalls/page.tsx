@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/apparel/babyandkids/overalls/",
     images: [
       {
-        url: "/images/menu/menu-overalls.webp",
+        url: "/images/og/overalls-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan baby and kids overalls manufacturer — OEM denim and canvas dungarees for USA, UK and Europe",
@@ -53,7 +53,7 @@ export default function OverallsPage() {
     name: "Baby & Kids Overalls — OEM Dungarees Manufacturing Pakistan",
     description:
       "Pakistan OEM baby and kids overalls manufacturer producing denim, canvas and corduroy dungarees from newborn to 12 years. Adjustable straps, snap crotch for diaper access, GOTS and OEKO-TEX Class 1 certified mills. Bulk programmes for USA, UK, Europe and worldwide.",
-    image: "https://mzglobaltrading.com/images/menu/menu-overalls.webp",
+    image: "https://mzglobaltrading.com/images/og/overalls-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     offers: {
       "@type": "Offer",
@@ -63,7 +63,7 @@ export default function OverallsPage() {
     },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/menu/menu-overalls.webp",
+      contentUrl: "https://mzglobaltrading.com/images/og/overalls-og.webp",
       name: "Pakistan baby and kids overalls manufacturer — OEM denim and canvas dungarees for USA, UK and Europe",
     },
     breadcrumb: {

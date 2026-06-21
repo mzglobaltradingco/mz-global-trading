@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -157,7 +157,7 @@ export default function FleeceThermalBlanketsContent() {
       {/* ══ HERO ══ */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/images/hero/hero-home-textiles.webp" fill alt="Pakistan fleece thermal blanket manufacturer — anti-pill polar fleece and sherpa blankets for retail and promotional buyers worldwide" className="object-cover" priority sizes="100vw" />
+          <Image src="/images/hero/hero-fleece-thermal-blankets.webp" fill alt="Pakistan fleece thermal blanket manufacturer — anti-pill polar fleece and sherpa blankets for retail and promotional buyers worldwide" className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(13,27,42,0.93) 0%, rgba(13,27,42,0.78) 35%, rgba(13,27,42,0.30) 62%, transparent 85%)" }} aria-hidden="true" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">

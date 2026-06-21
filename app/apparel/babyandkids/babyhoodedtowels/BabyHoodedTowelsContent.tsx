@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -207,7 +207,7 @@ export default function BabyHoodedTowelsContent() {
       {/* Hero */}
       <section className="relative min-h-[540px] md:min-h-[620px] flex items-end overflow-hidden bg-[#0D1B2A]">
         <Image
-          src="/images/hero/hero-apparel.webp"
+          src="/images/hero/hero-baby-hooded-towels.webp"
           alt="Pakistan baby hooded towels manufacturer — OEM organic cotton terry hooded bath towels for USA, UK and Europe"
           fill
           priority

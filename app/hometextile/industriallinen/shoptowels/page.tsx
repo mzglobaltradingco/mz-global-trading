@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import ShopTowelsContent from "./ShopTowelsContent";
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/industriallinen/shoptowels/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/shop-towels-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan shop towel manufacturer — heavy cotton terry and huck weave shop rags for automotive and industrial buyers worldwide",
@@ -135,7 +135,7 @@ export default function ShopTowelsPage() {
             name: "Shop Towels — Pakistan Industrial Cotton Textile Manufacturing",
             description:
               "Heavy cotton terry loop and huck weave shop towels manufactured in Pakistan. 300–450 GSM. Oil and grease absorbent. Supplied in dozen, 50-pack and bulk carton to USA automotive workshops, dealerships, industrial facilities and janitorial distributors. ISO 9001, BSCI, WRAP certified.",
-            image: "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+            image: "https://mzglobaltrading.com/images/og/shop-towels-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -145,7 +145,7 @@ export default function ShopTowelsPage() {
             },
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+              contentUrl: "https://mzglobaltrading.com/images/og/shop-towels-og.webp",
               name: "Pakistan shop towel manufacturer — heavy cotton terry shop rags for automotive and industrial buyers",
             },
             breadcrumb: {

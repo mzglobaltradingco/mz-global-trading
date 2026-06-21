@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import DoctorSurgicalGownsContent from "./DoctorSurgicalGownsContent";
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/hospitallinen/doctorsurgicalgowns/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/doctor-surgical-gowns-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan surgical gown manufacturer — reusable TC poly-cotton and cotton surgical gowns for hospitals and medical distributors worldwide",
@@ -136,7 +136,7 @@ export default function DoctorSurgicalGownsPage() {
             description:
               "Reusable surgical gowns manufactured in Pakistan's ISO-certified medical textile facilities. TC 65/35 poly-cotton and 100% cotton plain weave. Anti-bacterial, fluid repellent, autoclave safe. ISO 13485, BSCI, EN 13795 compliant. FOB / CIF export.",
             image:
-              "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+              "https://mzglobaltrading.com/images/og/doctor-surgical-gowns-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -150,7 +150,7 @@ export default function DoctorSurgicalGownsPage() {
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+                "https://mzglobaltrading.com/images/og/doctor-surgical-gowns-og.webp",
               name: "Pakistan surgical gown manufacturer — reusable TC poly-cotton surgical gowns for hospitals worldwide",
             },
             breadcrumb: {

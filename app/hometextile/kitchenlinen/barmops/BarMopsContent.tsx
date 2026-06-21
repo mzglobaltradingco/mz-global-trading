@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -203,9 +203,7 @@ export default function BarMopsContent() {
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-home-textiles.webp"
-            fill
-            alt="Pakistan bar mops manufacturer — heavy terry and huck weave commercial bar mops for restaurant and foodservice buyers in USA, UK and Canada"
+            src="/images/hero/hero-bar-mops.webp" fill alt="Pakistan bar mops manufacturer — heavy terry and huck weave commercial bar mops for restaurant and foodservice buyers in USA, UK and Canada"
             className="object-cover"
             priority
             sizes="100vw"

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import FleeceThermalBlanketsContent from "./FleeceThermalBlanketsContent";
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/thermalblankets/fleecethermalblankets/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/fleece-thermal-blankets-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan fleece thermal blanket manufacturer — anti-pill polar fleece and sherpa blankets for retail and promotional buyers worldwide",
@@ -134,7 +134,7 @@ export default function FleeceThermalBlanketsPage() {
             name: "Fleece Thermal Blankets — Pakistan Manufacturing & Export",
             description:
               "Anti-pill polar fleece, sherpa double-sided and jacquard woven thermal blankets from Pakistan. 150–300 GSM. GRS-certified recycled polyester available. OEKO-TEX, BSCI, ISO 9001, WRAP. Sublimation print and embroidery for promotional and retail programmes. Export to USA, UK, EU, Australia and worldwide.",
-            image: "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+            image: "https://mzglobaltrading.com/images/og/fleece-thermal-blankets-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -144,7 +144,7 @@ export default function FleeceThermalBlanketsPage() {
             },
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+              contentUrl: "https://mzglobaltrading.com/images/og/fleece-thermal-blankets-og.webp",
               name: "Pakistan fleece thermal blanket manufacturer — anti-pill polar fleece and sherpa blankets worldwide",
             },
             breadcrumb: {

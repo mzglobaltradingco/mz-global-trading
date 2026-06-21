@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TableCoversContent from "./TableCoversContent";
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/tablelinen/tablecovers/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/table-covers-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan table cover manufacturer — custom damask and jacquard tablecloths for hotels, restaurants and events worldwide",
@@ -136,7 +136,7 @@ export default function TableCoversPage() {
             description:
               "Custom table covers manufactured in Pakistan's certified linen facilities. Cotton damask, jacquard, satin weave, plain weave and poly-cotton easy-care. Standard and custom dimensions. OEKO-TEX Standard 100, BSCI certified. FOB / CIF export.",
             image:
-              "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+              "https://mzglobaltrading.com/images/og/table-covers-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
@@ -150,7 +150,7 @@ export default function TableCoversPage() {
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+                "https://mzglobaltrading.com/images/og/table-covers-og.webp",
               name: "Pakistan table cover manufacturer — custom damask and jacquard tablecloths for hotels worldwide",
             },
             breadcrumb: {

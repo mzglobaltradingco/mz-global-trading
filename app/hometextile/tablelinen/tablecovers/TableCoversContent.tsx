@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -180,9 +180,7 @@ export default function TableCoversContent() {
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-home-textiles.webp"
-            fill
-            alt="Pakistan table cover manufacturer — custom damask and jacquard tablecloths for hotels, restaurants and events worldwide"
+            src="/images/hero/hero-table-covers.webp" fill alt="Pakistan table cover manufacturer — custom damask and jacquard tablecloths for hotels, restaurants and events worldwide"
             className="object-cover"
             priority
             sizes="100vw"

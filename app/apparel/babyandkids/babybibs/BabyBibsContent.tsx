@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -227,7 +227,7 @@ export default function BabyBibsContent() {
       {/* Hero */}
       <section className="relative min-h-[540px] md:min-h-[620px] flex items-end overflow-hidden bg-[#0D1B2A]">
         <Image
-          src="/images/hero/hero-apparel.webp"
+          src="/images/hero/hero-baby-bibs.webp"
           alt="Pakistan baby bibs manufacturer — OEM terry and muslin drool bibs with waterproof backing for USA, UK and Europe"
           fill
           priority
