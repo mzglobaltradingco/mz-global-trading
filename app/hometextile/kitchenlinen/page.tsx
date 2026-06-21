@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/kitchenlinen/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/kitchen-linen-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan kitchen linen manufacturer — kitchen towels, bar mops, aprons and pot holders for F&B and hospitality buyers worldwide",
@@ -63,7 +63,7 @@ export default function KitchenLinenPage() {
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+                "https://mzglobaltrading.com/images/og/kitchen-linen-og.webp",
               name: "Pakistan kitchen linen manufacturer — F&B and hospitality textile supply",
             },
             breadcrumb: {

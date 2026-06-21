@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const PRODUCTS = [
   {
     href: "/hometextile/industriallinen/shoptowels/",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-shop-towels.webp",
     title: "Shop Towels",
     subtitle: "Heavy Cotton Terry & Huck Weave",
     desc: "The workhorse of automotive and industrial maintenance. Heavy cotton terry loop absorbs oil, grease and solvent residues in workshops, print shops and food processing facilities. 300–450 GSM. ISO 9001, BSCI, WRAP.",
@@ -22,7 +22,7 @@ const PRODUCTS = [
   },
   {
     href: "/hometextile/industriallinen/fendercovers/",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-fender-covers.webp",
     title: "Fender Covers",
     subtitle: "Knitted Terry Stretch & Non-Scratch",
     desc: "Precision-fit automotive protection textile. Knitted terry stretch construction forms over any fender profile without slippage — protecting vehicle paintwork during mechanical, suspension and brake work. 300–400 GSM.",
@@ -51,7 +51,7 @@ export default function IndustrialLinenContent() {
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-home-textiles.webp"
+            src="/images/hero/hero-industrial-linen.webp"
             fill
             alt="Pakistan industrial linen manufacturer — heavy-duty shop towels and automotive fender covers for workshops worldwide"
             className="object-cover"

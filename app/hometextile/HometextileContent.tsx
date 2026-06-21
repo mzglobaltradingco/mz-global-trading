@@ -9,7 +9,7 @@ const CLUSTERS = [
     name: "Bath Linen",
     slug: "bathlinen",
     href: "/hometextile/bathlinen/",
-    img: "/images/hero/hero-towels.webp",
+    img: "/images/hero/hero-bath-linen.webp",
     desc: "Towels, institutional towels, bathrobes, bath mats and beach & pool towels. Terry loop, velour, zero-twist. 300–900 GSM. 5 product categories.",
     spec: "300–900 GSM · 5 Categories",
     badge: "Highest Volume",
@@ -20,7 +20,7 @@ const CLUSTERS = [
     name: "Bed Linen",
     slug: "bedlinen",
     href: "/hometextile/bedlinen/",
-    img: "/images/hero/hero-bedsheets.webp",
+    img: "/images/hero/hero-bed-linen.webp",
     desc: "Bedsheets, fitted sheets, duvet covers, pillow covers, cushion covers, curtains and institutional bedding. Percale 200–800 TC. 7 product categories.",
     spec: "200–800 TC · 7 Categories",
     badge: "Hotel Specialist",
@@ -31,7 +31,7 @@ const CLUSTERS = [
     name: "Kitchen Linen",
     slug: "kitchenlinen",
     href: "/hometextile/kitchenlinen/",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-kitchen-linen.webp",
     desc: "Kitchen towels, bar mops, aprons and pot holders. Waffle, huck weave and terry constructions. Retail, hospitality and food-service programmes.",
     spec: "150–600 GSM · 4 Categories",
     badge: "",
@@ -42,7 +42,7 @@ const CLUSTERS = [
     name: "Table Linen",
     slug: "tablelinen",
     href: "/hometextile/tablelinen/",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-table-linen.webp",
     desc: "Table covers in cotton damask, jacquard, satin weave and poly-cotton. Custom dimensions for hotels, restaurants, event companies and airlines.",
     spec: "Damask · Jacquard · Custom Dimensions",
     badge: "Hospitality",
@@ -53,7 +53,7 @@ const CLUSTERS = [
     name: "Thermal Blankets",
     slug: "thermalblankets",
     href: "/hometextile/thermalblankets/",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-thermal-blankets.webp",
     desc: "Cellular cotton thermal blankets for hospitals and clinical settings. Anti-pill polar fleece blankets for retail and promotional programmes. 2 product categories.",
     spec: "150–300 GSM · 2 Categories",
     badge: "NHS Standard",
@@ -64,7 +64,7 @@ const CLUSTERS = [
     name: "Hospital Linen",
     slug: "hospitallinen",
     href: "/hometextile/hospitallinen/",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-hospital-linen.webp",
     desc: "Surgical gowns, medical scrubs, patient gowns and surgical huck towels. Anti-bacterial, fluid-repellent constructions. ISO 9001, ISO 13485, BSCI. 4 product categories.",
     spec: "ISO 13485 · 4 Categories",
     badge: "Medical Grade",
@@ -75,7 +75,7 @@ const CLUSTERS = [
     name: "Industrial Linen",
     slug: "industriallinen",
     href: "/hometextile/industriallinen/",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-industrial-linen.webp",
     desc: "Shop towels for automotive and industrial maintenance. Fender covers for vehicle care professionals. Heavy cotton terry and knitted constructions. ISO 9001, BSCI.",
     spec: "300–450 GSM · 2 Categories",
     badge: "USA Market",
@@ -86,7 +86,7 @@ const CLUSTERS = [
     name: "Ihram",
     slug: "ihram",
     href: "/hometextile/ihram/",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-ihram.webp",
     desc: "100% white cotton Ihram for Hajj and Umrah pilgrimage. Unstitched towelling fabric in 300–500 GSM. Specific to Saudi Arabia and global Muslim market.",
     spec: "300–500 GSM · 100% Cotton",
     badge: "Hajj & Umrah",
@@ -122,7 +122,7 @@ export default function HometextileContent() {
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-home-textiles.webp"
+            src="/images/hero/hero-home-textile-category.webp"
             fill
             alt="Pakistan home textiles manufacturer — towels, bed linen and home textile OEM supplier for international buyers worldwide"
             className="object-cover"

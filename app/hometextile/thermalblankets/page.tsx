@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/thermalblankets/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/thermal-blankets-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan thermal blanket manufacturer — cellular and fleece blankets for hospitals and retail buyers worldwide",
@@ -60,10 +60,10 @@ export default function ThermalBlanketsPage() {
             name: "Thermal Blankets | MZ Global Trading",
             description:
               "Cotton cellular blankets for clinical and institutional environments. Polar fleece thermal blankets for retail and promotional programmes. Pakistan-manufactured, OEKO-TEX certified.",
-            image: "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+            image: "https://mzglobaltrading.com/images/og/thermal-blankets-og.webp",
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+              contentUrl: "https://mzglobaltrading.com/images/og/thermal-blankets-og.webp",
               name: "Pakistan thermal blanket manufacturer — cellular and fleece blankets worldwide",
             },
             breadcrumb: {

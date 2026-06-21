@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/hospitallinen/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/hospital-linen-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan hospital linen manufacturer — healthcare-grade surgical gowns, scrubs and medical textiles for global buyers",

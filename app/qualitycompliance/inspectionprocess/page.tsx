@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/qualitycompliance/inspectionprocess/",
     images: [
       {
-        url: "/images/og/hero-our-process.webp",
+        url: "/images/og/inspection-process-og.webp",
         width: 1200,
         height: 630,
         alt: "Textile inspection process — step-by-step shipment verification at MZ Global Trading",

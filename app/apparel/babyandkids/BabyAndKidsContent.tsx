@@ -94,7 +94,7 @@ export default function BabyAndKidsContent() {
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-apparel.webp"
+            src="/images/hero/hero-baby-and-kids.webp"
             fill
             alt="Pakistan baby and kids clothing manufacturer — GOTS certified rompers, bibs and swaddle muslin for brands worldwide"
             className="object-cover"

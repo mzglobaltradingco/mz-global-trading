@@ -225,12 +225,12 @@ const FAQS = [
 ];
 
 const PAGE_SIBLINGS = [
-  { title: "Bedsheets", desc: "Custom cotton percale and sateen bedsheets for wholesale buyers.", href: "/hometextile/bedlinen/bedsheets/", img: "/images/menu/menu-bedsheets.webp", alt: "Pakistan bedsheet manufacturer" },
-  { title: "Fitted Sheets", desc: "Elasticated fitted sheets with precision pocket depth engineering.", href: "/hometextile/bedlinen/fittedsheets/", img: "/images/menu/menu-fittedsheets.webp", alt: "Pakistan fitted sheet manufacturer" },
-  { title: "Duvet Covers", desc: "Button, zip and envelope duvet covers in percale and jacquard.", href: "/hometextile/bedlinen/duvetcovers/", img: "/images/menu/menu-duvetcovers.webp", alt: "Pakistan duvet cover manufacturer" },
-  { title: "Pillow Covers", desc: "Oxford and plain pillowcases in cotton, sateen and linen.", href: "/hometextile/bedlinen/pillowcovers/", img: "/images/menu/menu-pillowcovers.webp", alt: "Pakistan pillow cover manufacturer" },
-  { title: "Cushion Covers", desc: "Decorative cushion covers in cotton, linen, jacquard and velour.", href: "/hometextile/bedlinen/cushioncovers/", img: "/images/menu/menu-cushioncovers.webp", alt: "Pakistan cushion cover manufacturer" },
-  { title: "Institutional Bedding", desc: "Commercial-grade bedding for hotels, hospitals and airlines.", href: "/hometextile/bedlinen/institutionalbedding/", img: "/images/menu/menu-institutionaltowels.webp", alt: "Pakistan institutional bedding manufacturer" },
+  { title: "Bedsheets", desc: "Custom cotton percale and sateen bedsheets for wholesale buyers.", href: "/hometextile/bedlinen/bedsheets/", img: "/images/hero/hero-bedsheets.webp", alt: "Pakistan bedsheet manufacturer" },
+  { title: "Fitted Sheets", desc: "Elasticated fitted sheets with precision pocket depth engineering.", href: "/hometextile/bedlinen/fittedsheets/", img: "/images/hero/hero-fitted-sheets.webp", alt: "Pakistan fitted sheet manufacturer" },
+  { title: "Duvet Covers", desc: "Button, zip and envelope duvet covers in percale and jacquard.", href: "/hometextile/bedlinen/duvetcovers/", img: "/images/hero/hero-duvet-covers.webp", alt: "Pakistan duvet cover manufacturer" },
+  { title: "Pillow Covers", desc: "Oxford and plain pillowcases in cotton, sateen and linen.", href: "/hometextile/bedlinen/pillowcovers/", img: "/images/hero/hero-pillow-covers.webp", alt: "Pakistan pillow cover manufacturer" },
+  { title: "Cushion Covers", desc: "Decorative cushion covers in cotton, linen, jacquard and velour.", href: "/hometextile/bedlinen/cushioncovers/", img: "/images/hero/hero-cushion-covers.webp", alt: "Pakistan cushion cover manufacturer" },
+  { title: "Institutional Bedding", desc: "Commercial-grade bedding for hotels, hospitals and airlines.", href: "/hometextile/bedlinen/institutionalbedding/", img: "/images/hero/hero-institutional-bedding.webp", alt: "Pakistan institutional bedding manufacturer" },
 ];
 
 // ─── Main component ───────────────────────────────────────────────────────────

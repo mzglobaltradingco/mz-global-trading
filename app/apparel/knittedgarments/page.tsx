@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/apparel/knittedgarments/",
     images: [
       {
-        url: "/images/og/hero-apparel.webp",
+        url: "/images/og/knitted-garments-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan knitted garments manufacturer — knitwear OEM supplier for brands in USA, UK and Europe",
@@ -62,7 +62,7 @@ export default function KnittedGarmentsPage() {
               "Pakistan knitwear manufacturer supplying T-shirts, polo shirts, henley shirts, sweatshirts, hoodies, joggers and tank tops to international brands and retailers. GOTS, OEKO-TEX, BSCI certified. FOB/CIF export.",
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/hero-apparel.webp",
+              contentUrl: "https://mzglobaltrading.com/images/og/knitted-garments-og.webp",
               name: "Pakistan knitted garments manufacturer — knitwear OEM supplier for brands in USA, UK and Europe",
             },
             breadcrumb: {

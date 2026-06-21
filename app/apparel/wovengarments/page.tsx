@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/apparel/wovengarments/",
     images: [
       {
-        url: "/images/og/hero-apparel.webp",
+        url: "/images/og/woven-garments-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan woven garments manufacturer — denim jeans, shirts and trousers OEM supplier for international brands",
@@ -61,7 +61,7 @@ export default function WovenGarmentsPage() {
               "Pakistan woven garment manufacturer supplying denim jeans, formal & casual shirts, pants & trousers, cargo pants and shorts to international brands. GOTS, OEKO-TEX, BSCI certified. FOB/CIF export.",
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/hero-apparel.webp",
+              contentUrl: "https://mzglobaltrading.com/images/og/woven-garments-og.webp",
               name: "Pakistan woven garments manufacturer — denim jeans, shirts and trousers OEM supplier for international brands",
             },
             breadcrumb: {

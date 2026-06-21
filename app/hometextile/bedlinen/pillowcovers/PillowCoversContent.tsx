@@ -264,12 +264,12 @@ const FAQS = [
 ];
 
 const PAGE_SIBLINGS = [
-  { title: "Bedsheets", desc: "Percale, sateen and jacquard flat sheets in all standard sizes for retail and hospitality.", href: "/hometextile/bedlinen/bedsheets/", img: "/images/menu/menu-bedsheets.webp", cta: "Explore Bedsheets" },
-  { title: "Fitted Sheets", desc: "Elasticated fitted sheets — precise pocket depths from 12\" to 26\" across all major size standards.", href: "/hometextile/bedlinen/fittedsheets/", img: "/images/menu/menu-fittedsheets.webp", cta: "Explore Fitted Sheets" },
-  { title: "Duvet Covers", desc: "Custom comforter covers — button, zip and envelope closure in UK, US and EU sizing.", href: "/hometextile/bedlinen/duvetcovers/", img: "/images/menu/menu-duvetcovers.webp", cta: "Explore Duvet Covers" },
-  { title: "Cushion Covers", desc: "Decorative cushion covers — woven, printed and embroidered from 40×40 to 60×60cm.", href: "/hometextile/bedlinen/cushioncovers/", img: "/images/menu/menu-cushioncovers.webp", cta: "Explore Cushion Covers" },
-  { title: "Curtains", desc: "Blackout, sheer and lined curtains — eyelet, rod pocket and pinch pleat heading styles.", href: "/hometextile/bedlinen/curtains/", img: "/images/menu/menu-curtains.webp", cta: "Explore Curtains" },
-  { title: "Institutional Bedding", desc: "Commercial-grade bedding for hotels, hospitals and airlines — built for high wash-cycle durability.", href: "/hometextile/bedlinen/institutionalbedding/", img: "/images/menu/menu-institutionaltowels.webp", cta: "Explore Institutional Bedding" },
+  { title: "Bedsheets", desc: "Percale, sateen and jacquard flat sheets in all standard sizes for retail and hospitality.", href: "/hometextile/bedlinen/bedsheets/", img: "/images/hero/hero-bedsheets.webp", cta: "Explore Bedsheets" },
+  { title: "Fitted Sheets", desc: "Elasticated fitted sheets — precise pocket depths from 12\" to 26\" across all major size standards.", href: "/hometextile/bedlinen/fittedsheets/", img: "/images/hero/hero-fitted-sheets.webp", cta: "Explore Fitted Sheets" },
+  { title: "Duvet Covers", desc: "Custom comforter covers — button, zip and envelope closure in UK, US and EU sizing.", href: "/hometextile/bedlinen/duvetcovers/", img: "/images/hero/hero-duvet-covers.webp", cta: "Explore Duvet Covers" },
+  { title: "Cushion Covers", desc: "Decorative cushion covers — woven, printed and embroidered from 40×40 to 60×60cm.", href: "/hometextile/bedlinen/cushioncovers/", img: "/images/hero/hero-cushion-covers.webp", cta: "Explore Cushion Covers" },
+  { title: "Curtains", desc: "Blackout, sheer and lined curtains — eyelet, rod pocket and pinch pleat heading styles.", href: "/hometextile/bedlinen/curtains/", img: "/images/hero/hero-curtains.webp", cta: "Explore Curtains" },
+  { title: "Institutional Bedding", desc: "Commercial-grade bedding for hotels, hospitals and airlines — built for high wash-cycle durability.", href: "/hometextile/bedlinen/institutionalbedding/", img: "/images/hero/hero-institutional-bedding.webp", cta: "Explore Institutional Bedding" },
 ];
 
 // ─── Main component ────────────────────────────────────────────────────────────

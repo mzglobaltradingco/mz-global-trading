@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Fabric Supplier Pakistan | MZ Global Trading",
     description: "Pakistan fabric sourcing — apparel and home textile fabric from certified mills. Woven, knitted, sustainable constructions. Export worldwide.",
     url: "https://mzglobaltrading.com/fabric/",
-    images: [{ url: "/images/og/fabric-og.webp", width: 1200, height: 630, alt: "Pakistan fabric supplier — apparel and home textile fabric for international buyers" }],
+    images: [{ url: "/images/og/fabric-category-og.webp", width: 1200, height: 630, alt: "Pakistan fabric supplier — apparel and home textile fabric for international buyers" }],
   },
   twitter: {
     card: "summary_large_image",

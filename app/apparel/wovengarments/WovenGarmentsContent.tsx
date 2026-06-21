@@ -84,7 +84,7 @@ export default function WovenGarmentsContent() {
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-apparel.webp"
+            src="/images/hero/hero-woven-garments.webp"
             fill
             alt="Pakistan woven garments manufacturer — denim, shirts and trousers OEM supplier for brands in USA, UK and Europe"
             className="object-cover"

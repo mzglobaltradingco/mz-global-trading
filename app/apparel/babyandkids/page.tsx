@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/apparel/babyandkids/",
     images: [
       {
-        url: "/images/og/hero-apparel.webp",
+        url: "/images/og/baby-and-kids-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan baby and kids clothing manufacturer — GOTS certified rompers, bibs and swaddle muslin for international brands",
@@ -61,7 +61,7 @@ export default function BabyAndKidsPage() {
               "Pakistan baby and kids manufacturer supplying t-shirts, rompers, overalls, bibs, swaddle muslin and hooded towels. GOTS certified, OEKO-TEX Standard 100 Class 1. Safe for newborn skin. FOB/CIF export worldwide.",
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/hero-apparel.webp",
+              contentUrl: "https://mzglobaltrading.com/images/og/baby-and-kids-og.webp",
               name: "Pakistan baby and kids clothing manufacturer — GOTS certified rompers, bibs and swaddle muslin for international brands",
             },
             breadcrumb: {

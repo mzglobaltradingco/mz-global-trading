@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const PRODUCTS = [
   {
     href: "/hometextile/thermalblankets/cellularthermalblanket/",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-cellular-thermal-blanket.webp",
     title: "Cellular Thermal Blanket",
     subtitle: "100% Cotton Open-Cell Weave",
     desc: "The clinical-grade standard for NHS and global hospital procurement. Open honeycomb weave breathes, resists moisture build-up and withstands repeated 60–90°C laundering. OEKO-TEX, GOTS, ISO 9001.",
@@ -22,7 +22,7 @@ const PRODUCTS = [
   },
   {
     href: "/hometextile/thermalblankets/fleecethermalblankets/",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-fleece-thermal-blankets.webp",
     title: "Fleece Thermal Blankets",
     subtitle: "Anti-Pill Polar Fleece & Variants",
     desc: "High-volume retail, promotional and institutional blanket programmes. Anti-pill polar fleece, sherpa double-sided and jacquard woven options. GRS recycled polyester available. OEKO-TEX, BSCI, WRAP.",
@@ -51,7 +51,7 @@ export default function ThermalBlanketsContent() {
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-home-textiles.webp"
+            src="/images/hero/hero-thermal-blankets.webp"
             fill
             alt="Pakistan thermal blanket manufacturer — cotton cellular and polar fleece blankets for hospitals and retail buyers worldwide"
             className="object-cover"

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const PRODUCTS = [
   {
     href: "/hometextile/kitchenlinen/kitchentowels/",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-kitchen-towels.webp",
     emoji: "🧺",
     name: "Kitchen Towels",
     tagline: "Waffle, Huck & Terry Weave",
@@ -19,7 +19,7 @@ const PRODUCTS = [
   },
   {
     href: "/hometextile/kitchenlinen/barmops/",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-bar-mops.webp",
     emoji: "🍽️",
     name: "Bar Mops",
     tagline: "Heavy Terry — Commercial Grade",
@@ -31,7 +31,7 @@ const PRODUCTS = [
   },
   {
     href: "/hometextile/kitchenlinen/aprons/",
-    img: "/images/hero/hero-apparel.webp",
+    img: "/images/hero/hero-aprons.webp",
     emoji: "👨‍🍳",
     name: "Aprons",
     tagline: "Canvas, Denim & Terry Constructions",
@@ -43,7 +43,7 @@ const PRODUCTS = [
   },
   {
     href: "/hometextile/kitchenlinen/potholders/",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-pot-holders.webp",
     emoji: "🔥",
     name: "Pot Holders",
     tagline: "Heat-Resistant, Silicone-Lined Options",
@@ -106,7 +106,7 @@ export default function KitchenLinenContent() {
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-home-textiles.webp"
+            src="/images/hero/hero-kitchen-linen.webp"
             fill
             alt="Pakistan kitchen linen manufacturer — kitchen towels, bar mops, aprons and pot holders for hospitality and retail buyers worldwide"
             className="object-cover"

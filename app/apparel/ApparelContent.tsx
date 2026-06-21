@@ -9,7 +9,7 @@ const CLUSTERS = [
     name: "Knitted Garments",
     slug: "knittedgarments",
     href: "/apparel/knittedgarments/",
-    img: "/images/hero/hero-t-shirts.webp",
+    img: "/images/hero/hero-knitted-garments.webp",
     desc: "T-shirts, polo shirts, henley shirts, sweatshirts, hoodies, joggers and tank tops. Single jersey to 450 GSM fleece. 6 product categories.",
     spec: "140–450 GSM · 6 Categories",
     badge: "Highest Volume",
@@ -20,7 +20,7 @@ const CLUSTERS = [
     name: "Woven Garments",
     slug: "wovengarments",
     href: "/apparel/wovengarments/",
-    img: "/images/hero/hero-denim-jeans.webp",
+    img: "/images/hero/hero-woven-garments.webp",
     desc: "Denim jeans, formal and casual shirts, pants and trousers, cargo pants and shorts. From 8 oz denim to 420 GSM canvas. 5 product categories.",
     spec: "8–14 oz Denim · 5 Categories",
     badge: "",
@@ -31,7 +31,7 @@ const CLUSTERS = [
     name: "Baby & Kids",
     slug: "babyandkids",
     href: "/apparel/babyandkids/",
-    img: "/images/hero/hero-t-shirts.webp",
+    img: "/images/hero/hero-baby-and-kids.webp",
     desc: "GOTS organic baby and kids garments — t-shirts, overalls, rompers, bibs, hooded towels and swaddle muslin. OEKO-TEX Class 1. 6 product categories.",
     spec: "GOTS Organic · 6 Categories",
     badge: "GOTS Certified",
@@ -42,7 +42,7 @@ const CLUSTERS = [
     name: "Workwear Apparel",
     slug: "workwearapparel",
     href: "/apparel/workwearapparel/",
-    img: "/images/hero/hero-apparel.webp",
+    img: "/images/hero/hero-workwear-apparel.webp",
     desc: "Hi-vis vests, boiler suits, chef uniforms, protective workwear and corporate uniforms. Canvas, ripstop and poly-cotton constructions. BSCI certified supply chain.",
     spec: "Protective · Hi-Vis · Uniforms",
     badge: "Industrial",
@@ -53,7 +53,7 @@ const CLUSTERS = [
     name: "Socks",
     slug: "socks",
     href: "/apparel/socks/",
-    img: "/images/hero/hero-apparel.webp",
+    img: "/images/hero/hero-socks.webp",
     desc: "Crew, ankle, athletic, compression and diabetic socks. Cotton, bamboo, wool and technical fibre constructions. Custom branding and retail packaging.",
     spec: "Cotton · Bamboo · Technical",
     badge: "",
@@ -89,7 +89,7 @@ export default function ApparelContent() {
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-apparel.webp"
+            src="/images/hero/hero-apparel-category.webp"
             fill
             alt="Pakistan apparel manufacturer — OEM garment sourcing partner for brands in USA, UK and Europe"
             className="object-cover"

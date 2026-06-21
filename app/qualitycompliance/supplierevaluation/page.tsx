@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/qualitycompliance/supplierevaluation/",
     images: [
       {
-        url: "/images/og/hero-our-process.webp",
+        url: "/images/og/supplier-evaluation-og.webp",
         width: 1200,
         height: 630,
         alt: "Supplier evaluation process — factory vetting and compliance audit at MZ Global Trading",

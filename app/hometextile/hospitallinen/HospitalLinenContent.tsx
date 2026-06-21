@@ -8,7 +8,7 @@ const PRODUCTS = [
   {
     name: "Doctor Surgical Gowns",
     href: "/hometextile/hospitallinen/doctorsurgicalgowns/",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-doctor-surgical-gowns.webp",
     desc: "Reusable and disposable surgical gowns in TC 65/35 poly-cotton and 100% cotton. Anti-bacterial, fluid repellent, autoclave-safe finishes. ISO 13485 and EN 13795 compliant.",
     specs: ["TC 65/35 Poly-Cotton", "100% Cotton", "Non-Woven Disposable"],
     market: "Hospitals · Surgical Centres · Medical Distributors",
@@ -16,7 +16,7 @@ const PRODUCTS = [
   {
     name: "Medical Scrubs",
     href: "/hometextile/hospitallinen/medicalscrubs/",
-    img: "/images/hero/hero-apparel.webp",
+    img: "/images/hero/hero-medical-scrubs.webp",
     desc: "Twill poly-cotton and 4-way stretch scrubs for clinical staff. Anti-bacterial, moisture-wicking, fluid-repellent finish. Embroidery and custom colour programmes available.",
     specs: ["Twill TC 65/35", "100% Cotton Twill", "4-Way Stretch"],
     market: "Hospitals · Clinics · Nursing Homes · Dental Practices",
@@ -24,7 +24,7 @@ const PRODUCTS = [
   {
     name: "Patient Gowns",
     href: "/hometextile/hospitallinen/patientgowns/",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-patient-gowns.webp",
     desc: "Plain weave cotton and poly-cotton patient gowns for hospital wards and aged-care facilities. Autoclave-compatible. Adult and pediatric sizes with printed options for children's wards.",
     specs: ["100% Cotton Plain Weave", "TC Poly-Cotton", "Jersey Knit Wrap-Style"],
     market: "Hospitals · Aged Care · Outpatient Facilities",
@@ -32,7 +32,7 @@ const PRODUCTS = [
   {
     name: "Surgical Huck Towels",
     href: "/hometextile/hospitallinen/surgicalhucktowels/",
-    img: "/images/hero/hero-towels.webp",
+    img: "/images/hero/hero-surgical-huck-towels.webp",
     desc: "100% cotton honeycomb huck weave. Pre-washed, lint-free, high absorbency. The defining construction for operating theatre supply. Plain white and blue stripe variants.",
     specs: ["Huck / Honeycomb Weave", "100% Cotton", "Pre-Washed / Lint-Free"],
     market: "Operating Theatres · CSSD · Medical Distributors",
@@ -62,7 +62,7 @@ export default function HospitalLinenContent() {
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-home-textiles.webp"
+            src="/images/hero/hero-hospital-linen.webp"
             fill
             alt="Pakistan hospital linen manufacturer — healthcare-grade surgical gowns, scrubs and medical textiles for global buyers"
             className="object-cover"

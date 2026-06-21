@@ -8,7 +8,7 @@ const PRODUCTS = [
   {
     name: "Table Covers",
     href: "/hometextile/tablelinen/tablecovers/",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-table-covers.webp",
     desc: "Cotton damask, jacquard, satin weave and poly-cotton easy-care. Standard and custom rectangular, round and square dimensions. Wrinkle-resistant and stain-repellent finish options.",
     constructions: ["Cotton Damask", "Jacquard Woven", "Satin Weave", "Poly-Cotton"],
     markets: "Hotels · Restaurants · Events · Airlines",
@@ -39,7 +39,7 @@ export default function TableLinenContent() {
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-home-textiles.webp"
+            src="/images/hero/hero-table-linen.webp"
             fill
             alt="Pakistan table linen manufacturer — hotel and banquet table covers for hospitality buyers in USA, UK and Europe"
             className="object-cover"

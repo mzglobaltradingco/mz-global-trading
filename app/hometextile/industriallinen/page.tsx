@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/industriallinen/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/industrial-linen-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan industrial linen manufacturer — shop towels and automotive fender covers for workshops worldwide",
@@ -59,10 +59,10 @@ export default function IndustrialLinenPage() {
             name: "Industrial Linen | MZ Global Trading",
             description:
               "Heavy-duty industrial textile products for automotive and commercial use — shop towels and automotive fender covers manufactured in Pakistan's certified mills.",
-            image: "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+            image: "https://mzglobaltrading.com/images/og/industrial-linen-og.webp",
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+              contentUrl: "https://mzglobaltrading.com/images/og/industrial-linen-og.webp",
               name: "Pakistan industrial linen manufacturer — shop towels and fender covers worldwide",
             },
             breadcrumb: {

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/tablelinen/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/table-linen-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan table linen manufacturer — hotel and banquet table covers for hospitality buyers worldwide",

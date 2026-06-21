@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/bathlinen/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/bath-linen-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan bath linen manufacturer — towels, bathrobes and bath mats supplier for hotels and retailers worldwide",
@@ -62,7 +62,7 @@ export default function BathLinenPage() {
               "Pakistan bath linen manufacturer supplying towels, institutional towels, bathrobes, bath mats and beach & pool towels. OEKO-TEX, GOTS, BSCI, ISO 9001 certified. FOB/CIF export.",
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+              contentUrl: "https://mzglobaltrading.com/images/og/bath-linen-og.webp",
               name: "Pakistan bath linen manufacturer — towels, bathrobes and bath mats supplier for hotels and retailers worldwide",
             },
             breadcrumb: {

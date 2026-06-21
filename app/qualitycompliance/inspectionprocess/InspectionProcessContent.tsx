@@ -119,7 +119,7 @@ const qcHubCards = [
   {
     title: "Certifications",
     desc: "All 10 international certifications available across our factory network — GOTS, OEKO-TEX, BSCI, ISO 9001 and more.",
-    image: "/images/menu/menu-certifications.webp",
+    image: "/images/hero/hero-certifications.webp",
     alt: "International textile certifications — certified factory network at MZ Global Trading",
     href: "/qualitycompliance/certifications/",
     cta: "View All Certifications",
@@ -127,7 +127,7 @@ const qcHubCards = [
   {
     title: "Supplier Evaluation",
     desc: "How we vet and onboard every factory through our 4-stage evaluation process before placing your first order.",
-    image: "/images/menu/menu-supplierevaluation.webp",
+    image: "/images/hero/hero-supplier-evaluation.webp",
     alt: "Factory supplier evaluation process — MZ Global Trading vetting criteria",
     href: "/qualitycompliance/supplierevaluation/",
     cta: "Our Evaluation Process",
@@ -135,7 +135,7 @@ const qcHubCards = [
   {
     title: "Quality Control",
     desc: "Three-phase independent QC on every order — pre-production, in-line and AQL pre-shipment inspection.",
-    image: "/images/menu/menu-qualitycontrol.webp",
+    image: "/images/hero/hero-quality-control.webp",
     alt: "Quality control inspection — independent QC process at MZ Global Trading",
     href: "/qualitycompliance/qualitycontrol/",
     cta: "Our QC Process",
@@ -150,7 +150,7 @@ export default function InspectionProcessContent() {
 
       {/* ── 1. Hero ──────────────────────────────────────────────────────────── */}
       <PageHero
-        image="/images/hero/hero-our-process.webp"
+        image="/images/hero/hero-inspection-process.webp"
         imageAlt="Textile inspection process — step-by-step shipment verification before export from Pakistan"
         breadcrumbs={[
           { label: "Home", href: "/" },

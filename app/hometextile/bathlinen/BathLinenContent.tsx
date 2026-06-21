@@ -84,7 +84,7 @@ export default function BathLinenContent() {
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-home-textiles.webp"
+            src="/images/hero/hero-bath-linen.webp"
             fill
             alt="Pakistan bath linen manufacturer — towels, bathrobes and bath mats supplier for hotels and retailers worldwide"
             className="object-cover"

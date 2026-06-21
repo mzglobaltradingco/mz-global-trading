@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Apparel Manufacturer Pakistan | MZ Global Trading",
     description: "Pakistan OEM apparel sourcing — knitted garments, woven garments, baby & kids, workwear and socks. GOTS, OEKO-TEX, BSCI. Export worldwide.",
     url: "https://mzglobaltrading.com/apparel/",
-    images: [{ url: "/images/og/apparel-og.webp", width: 1200, height: 630, alt: "Pakistan apparel manufacturer — OEM garment sourcing for brands in USA, UK and Europe" }],
+    images: [{ url: "/images/og/apparel-category-og.webp", width: 1200, height: 630, alt: "Pakistan apparel manufacturer — OEM garment sourcing for brands in USA, UK and Europe" }],
   },
   twitter: {
     card: "summary_large_image",

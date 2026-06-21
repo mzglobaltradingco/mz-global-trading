@@ -9,7 +9,7 @@ const CLUSTERS = [
     name: "Apparel Fabric",
     slug: "apparelfabric",
     href: "/fabric/apparelfabric/",
-    img: "/images/hero/hero-apparel.webp",
+    img: "/images/hero/hero-apparel-fabric.webp",
     desc: "Woven and knitted apparel fabric — denim, shirting, twill, canvas, interlock, jersey and performance blends. GOTS, OEKO-TEX, Bluesign certified. Custom specifications.",
     spec: "Woven & Knit · Custom Construction",
     badge: "Full Range",
@@ -20,7 +20,7 @@ const CLUSTERS = [
     name: "Home Textile Fabric",
     slug: "hometextilefabric",
     href: "/fabric/hometextilefabric/",
-    img: "/images/hero/hero-home-textiles.webp",
+    img: "/images/hero/hero-home-textile-fabric.webp",
     desc: "Terry, percale, sateen, muslin and blanket fabric by the metre. All GSM and thread count ranges. OEKO-TEX, GOTS, BCI. Suitable for cut-and-make and in-house production programmes.",
     spec: "Terry · Percale · Sateen · Muslin",
     badge: "Mill-Direct",
@@ -56,7 +56,7 @@ export default function FabricContent() {
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/hero-apparel.webp"
+            src="/images/hero/hero-fabric-category.webp"
             fill
             alt="Pakistan fabric supplier — apparel and home textile fabric from certified mills for international buyers"
             className="object-cover"

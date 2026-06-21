@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/hometextile/bedlinen/",
     images: [
       {
-        url: "/images/og/hero-home-textiles.webp",
+        url: "/images/og/bed-linen-og.webp",
         width: 1200,
         height: 630,
         alt: "Pakistan bed linen manufacturer — bedsheets, duvet covers and fitted sheets for hotels and retailers worldwide",
@@ -62,7 +62,7 @@ export default function BedLinenPage() {
               "Pakistan bed linen manufacturer supplying bedsheets, fitted sheets, duvet covers, pillow covers, cushion covers, curtains and institutional bedding. Percale, sateen, microfiber constructions. OEKO-TEX, GOTS, BSCI certified. FOB/CIF export.",
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/hero-home-textiles.webp",
+              contentUrl: "https://mzglobaltrading.com/images/og/bed-linen-og.webp",
               name: "Pakistan bed linen manufacturer — bedsheets, duvet covers and fitted sheets for hotels and retailers worldwide",
             },
             breadcrumb: {

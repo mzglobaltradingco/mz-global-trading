@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Home Textiles Manufacturer Pakistan | MZ Global Trading",
     description: "Pakistan home textiles sourcing — bath linen, bed linen, kitchen, table, thermal, hospital and industrial linen. OEKO-TEX, GOTS. Export worldwide.",
     url: "https://mzglobaltrading.com/hometextile/",
-    images: [{ url: "/images/og/home-textiles-og.webp", width: 1200, height: 630, alt: "Pakistan home textiles manufacturer — towels, bed linen and home textile OEM for international buyers" }],
+    images: [{ url: "/images/og/home-textile-category-og.webp", width: 1200, height: 630, alt: "Pakistan home textiles manufacturer — towels, bed linen and home textile OEM for international buyers" }],
   },
   twitter: {
     card: "summary_large_image",

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     url: "https://mzglobaltrading.com/qualitycompliance/certifications/",
     images: [
       {
-        url: "/images/og/hero-why-choose-us.webp",
+        url: "/images/og/certifications-og.webp",
         width: 1200,
         height: 630,
         alt: "Certified textile factory certifications — GOTS, OEKO-TEX, BSCI and more",
