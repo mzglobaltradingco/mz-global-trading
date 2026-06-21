@@ -260,19 +260,6 @@ export default function BabyHoodedTowelsContent() {
         </div>
       </section>
 
-      {/* Breadcrumb */}
-      <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <ol className="flex flex-wrap items-center gap-1.5 text-sm text-gray-500">
-          <li><Link href="/" className="hover:text-[#D4A017] transition-colors">Home</Link></li>
-          <li aria-hidden="true" className="text-gray-300">/</li>
-          <li><Link href="/apparel/" className="hover:text-[#D4A017] transition-colors">Apparel</Link></li>
-          <li aria-hidden="true" className="text-gray-300">/</li>
-          <li><Link href="/apparel/babyandkids/" className="hover:text-[#D4A017] transition-colors">Baby & Kids</Link></li>
-          <li aria-hidden="true" className="text-gray-300">/</li>
-          <li className="text-[#0D1B2A] font-medium">Baby Hooded Towels</li>
-        </ol>
-      </nav>
-
       {/* ══ BENTO GRID ══════════════════════════════════════════════════════════ */}
       <section id="bento-grid" className="bg-white py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
