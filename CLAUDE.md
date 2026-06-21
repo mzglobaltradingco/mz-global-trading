@@ -46,7 +46,7 @@
 
 ## Tech Stack
 
-- **Framework:** Next.js 14 App Router
+- **Framework:** Next.js 14 App Router — installed version **14.2.35**
 - **Language:** TypeScript (strict mode)
 - **Styling:** Tailwind CSS with custom colour config
 - **Animations:** Framer Motion
@@ -54,6 +54,12 @@
 - **Deployment:** Cloudflare Pages
 - **Font:** Geist Sans via `localFont` with `display: "swap"`
 - **Node:** 24.x
+
+### Next.js Version Decision (reviewed 2026-06-21)
+- v14.2.35 is **EOL as of Oct 2025** — no longer receives security patches from Vercel
+- v15 EOL: Oct 2026 (too close — not worth upgrading for ~4 months of support)
+- v16.2.9 is current stable but still early — ecosystem/docs not fully mature
+- **Plan:** Stay on v14 (safe — site is 100% static HTML on Cloudflare CDN, zero server-side attack surface). Upgrade directly to **Next.js 16 at ~v16.5+** when it matures (est. late 2026). Do NOT upgrade to v15.
 
 ---
 
@@ -570,7 +576,7 @@ LEAF    (/apparel/knittedgarments/tshirts/,  /hometextile/bathlinen/towels/)
 
 ### Technical SEO (Implemented)
 - Canonical URLs on every page
-- XML sitemap (78 pages, correct priorities)
+- XML sitemap (needs update — currently lists 78 pages but site now has 143+ URLs)
 - robots.txt
 - Organization JSON-LD with social profiles and areaServed
 - Twitter card + OpenGraph on all pages
@@ -596,7 +602,7 @@ LEAF    (/apparel/knittedgarments/tshirts/,  /hometextile/bathlinen/towels/)
 
 **Decision: Do not implement i18n at this time.**
 
-Reasons: new domain needs English authority first, maintenance burden (78 × N languages), quality risk with machine translation for B2B copy, Cloudflare Pages free tier 20,000 file limit would be approached with 6+ languages.
+Reasons: new domain needs English authority first, maintenance burden (143+ × N languages), quality risk with machine translation for B2B copy, Cloudflare Pages free tier 20,000 file limit would be hit quickly with multilingual pages at this scale.
 
 Revisit after launch when Google Search Console data shows which non-English markets are generating impressions.
 
@@ -608,7 +614,7 @@ If implemented in future: use `app/[locale]/` structure with `next-intl`, profes
 
 | Component | File | Status | Notes |
 |---|---|---|---|
-| MegaMenu | `components/MegaMenu.tsx` | Complete | White header, h-32, all 78 URLs wired, hover preview zone |
+| MegaMenu | `components/MegaMenu.tsx` | Complete | White header, h-32, all product URLs wired, hover preview zone |
 | Footer | `components/Footer.tsx` | Complete | White, 5-column, certifications in bottom bar |
 | Hero | `components/Hero.tsx` | Complete | 4 slides: combined + apparel + home textiles + fabric |
 | SourcingCapabilities | `components/SourcingCapabilities.tsx` | Complete | Accordion desktop, stacked mobile |
@@ -649,22 +655,35 @@ Combined slide panel labels use frosted pill `bg-navy-950/60 backdrop-blur-sm bo
 
 ## Pages Built
 
-- **Phase 1 — Authority Foundation:** Complete ✓ (20 pages — all corporate, quality, legal, RFQ, contact)
-- **Phase 1 — First Product Leaf:** Complete ✓ (Towels)
-- **Phase 2 — Pillar Pages:** Pending (/apparel/, /hometextile/, /fabric/)
-- **Phase 3 — Cluster Pages:** /apparel/knittedgarments/, /apparel/wovengarments/, /apparel/babyandkids/, /hometextile/bathlinen/, /hometextile/bedlinen/ (Complete ✓), kitchen, table, thermal, hospital, industrial linen clusters
-- **Phase 4 — Leaf Pages:** 13 built (knitted garments ×6, woven ×5, baby&kids ×6, workwear, socks, bath linen ×4, bed linen ×6, ihram); remainder pending
-- **Fabric pages:** /fabric/apparelfabric/ and /fabric/hometextilefabric/ — Complete ✓
+All product pages are complete. Actual URL count as of 2026-06-21:
+
+| Type | Count |
+|---|---|
+| Static page.tsx files (non-dynamic) | 80 |
+| Knowledge Hub posts `/knowledge/[slug]` | 6 |
+| Guide pages `/guides/[slug]` | 31 |
+| Downloads `/downloads/[slug]` | 26 |
+| **Total unique URLs** | **~143** |
+
+The CLAUDE.md previously said 78 pages — that figure is obsolete. The actual count is 143+ and growing.
 
 > File pattern: every page follows `app/section/name/page.tsx` + `NameContent.tsx`
 
 ---
 
-## Full Sitemap (78 Pages)
+## Full Sitemap
 
-> **Source of truth:** `public/sitemap.xml` — all 78 URLs with correct priorities.
+> **Source of truth:** `public/sitemap.xml` — needs to be updated to reflect 143+ URLs (currently lists only 78). Dynamic slug pages (`/guides/`, `/knowledge/`, `/downloads/`) are not yet in the sitemap.
 
-**Structure:** `/` · `/our-company/` · `/rfq/` · `/contact-us/` · `/qualitycompliance/[page]/` · `/apparel/[cluster]/[product]/` · `/hometextile/[cluster]/[product]/` · `/hometextile/ihram/` · `/fabric/apparelfabric/` · `/fabric/hometextilefabric/`
+**Structure:** `/` · `/our-company/` · `/rfq/` · `/contact-us/` · `/qualitycompliance/[page]/` · `/quality-policy/` · `/apparel/[cluster]/[product]/` · `/hometextile/[cluster]/[product]/` · `/hometextile/ihram/` · `/fabric/apparelfabric/` · `/fabric/hometextilefabric/` · `/guides/[slug]/` · `/knowledge/[slug]/` · `/downloads/[slug]/`
+
+### Content Data Files (dynamic slug pages)
+| File | Purpose | Count |
+|---|---|---|
+| `lib/guides-content.ts` | All guide page data — source of truth for `/guides/[slug]` | 31 guides |
+| `content/knowledge/*.ts` | One `.ts` file per knowledge post — auto-discovered via webpack `require.context` | 6 posts |
+| `lib/downloads-content.ts` | All download entries — source of truth for `/downloads/[slug]` | 26 entries |
+| `lib/knowledge.ts` | Helper functions for knowledge posts — reads from `content/knowledge/` | — |
 
 ## Mega Menu Structure
 
@@ -726,7 +745,7 @@ public/
   _headers                   ← Cloudflare security headers
   _redirects                 ← Cloudflare URL redirects
   robots.txt
-  sitemap.xml                ← 78 pages, correct priorities
+  sitemap.xml                ← needs update — currently lists 78 pages, actual count is 143+
   favicon-32.png             ← PNG required
   favicon-192.png            ← PNG required
   apple-touch-icon.png       ← PNG required
@@ -765,8 +784,103 @@ public/
 - **hreflang tags:** Add `<link rel="alternate" hreflang="en">` and `hreflang="x-default"` to `app/layout.tsx`
 - **Missing menu images:** Doctor Surgical Gowns, Shop Towels — awaiting user-supplied WebP files
 - **Google Search Console:** After launch, set preferred country to USA
-- **Remaining pages:** All sitemap pages except the 4 built so far
-- **Build sequence:** Pillar pages first (/apparel/, /hometextile/, /fabric/, /rfq/, /contact-us/), then clusters, then product leaves
+- **Sitemap update:** `public/sitemap.xml` needs to be regenerated to include all 143+ URLs including dynamic guide, knowledge, and download pages
+- **Next.js upgrade:** Upgrade to v16 at ~v16.5+ (est. late 2026) — skip v15
+
+---
+
+## Known Bugs Fixed — Do Not Repeat
+
+These bugs were each reported multiple times. Understand the root cause so they are never introduced again.
+
+---
+
+### BUG 1 — Baby & Kids Cluster Page: Wrong Box Images
+**File:** `app/apparel/babyandkids/BabyAndKidsContent.tsx`
+**Root cause:** The `PRODUCTS` array at the top of the file had generic placeholder images (`hero-apparel.webp`, `hero-home-textiles.webp`, `hero-towels.webp`) instead of each product's dedicated hero image.
+**Fix:** Each entry in `PRODUCTS[]` must use the product's own dedicated hero image:
+```
+T-Shirts for Kids     → /images/hero/hero-t-shirts-for-kids.webp
+Swaddle Muslin Fabric → /images/hero/hero-swaddle-muslin-fabric.webp
+Overalls              → /images/hero/hero-overalls.webp
+Baby Rompers          → /images/hero/hero-baby-rompers.webp
+Baby Bibs             → /images/hero/hero-baby-bibs.webp
+Baby Hooded Towels    → /images/hero/hero-baby-hooded-towels.webp
+```
+**Key lesson:** When updating product card images on cluster pages, fix the `PRODUCTS[]` / `CLUSTERS[]` data array in the cluster's own `*Content.tsx` file — NOT just the same-tier sibling cards on leaf pages. These are separate data structures in separate files.
+
+---
+
+### BUG 2 — Quality Policy Hero Image Wrong
+**File:** `app/quality-policy/QualityPolicyContent.tsx`
+**Root cause:** PageHero `image=` prop was pointing to `hero-why-choose-us.webp` instead of `hero-quality-policy.webp`.
+**Fix:** Always verify `image=` prop on `<PageHero>` matches the page-specific hero image.
+**Key lesson:** When uploading a new hero image for a page, always grep for the `<PageHero image="...">` prop in that page's Content.tsx and update it explicitly.
+
+---
+
+### BUG 3 — Quality Policy Page is NOT under /qualitycompliance/
+**Correct location:** `app/quality-policy/page.tsx` (hyphenated, top-level)
+**Wrong assumption:** `app/qualitycompliance/qualitypolicy/` — this directory does NOT exist.
+**URL:** `/quality-policy/` (not `/qualitycompliance/qualitypolicy/`)
+**Key lesson:** Quality Policy is a standalone top-level page, not nested under `/qualitycompliance/`. The other 4 quality pages (quality control, inspection process, supplier evaluation, certifications) ARE under `/qualitycompliance/`.
+
+---
+
+### BUG 4 — Hero Gradient Direction Wrong on Some Pages
+**Affected pages (fixed):** Baby Rompers, Baby Bibs, Baby Hooded Towels
+**Root cause:** Used Tailwind `bg-gradient-to-t` (top-to-bottom) instead of the standard inline left-to-right gradient style.
+**Correct standard:**
+```tsx
+style={{ background: "linear-gradient(to right, rgba(13,27,42,0.93) 0%, rgba(13,27,42,0.78) 35%, rgba(13,27,42,0.30) 62%, transparent 85%)" }}
+```
+**Key lesson:** Never use Tailwind gradient classes for hero overlays. Always use the inline `style=` with the exact rgba values above. The standard is documented in PageHero.tsx and in the Hero Overlay Standard section of this file.
+
+---
+
+### BUG 5 — Duplicate Breadcrumbs on Some Pages
+**Affected pages (fixed):** Baby Rompers, Baby Bibs, Baby Hooded Towels
+**Root cause:** When the hero section was rewritten to fix the gradient, the old standalone `<nav aria-label="Breadcrumb">` breadcrumb below the hero was not removed, leaving two breadcrumbs.
+**Key lesson:** When rewriting a hero section that adds breadcrumbs inside it, always search the file for any existing standalone breadcrumb `<nav>` below the hero and remove it.
+
+---
+
+### BUG 6 — Page Box Cards Not Fully Clickable
+**Root cause:** Some cards used `<motion.div>` as outer wrapper with `<Link className="block">` inside, placing the text overlay `div` outside the Link's rendered height.
+**Correct pattern — `<Link>` must always be the outermost element:**
+```tsx
+<Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+  <div className="relative h-64 overflow-hidden">
+    <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="..." />
+    <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
+  </div>
+  <div className="absolute bottom-0 left-0 right-0 p-5">
+    <p className="font-bold text-white text-sm leading-tight mb-1">{p.name}</p>
+    <p className="text-gray-300 text-xs leading-relaxed mb-2">{p.desc}</p>
+    <span className="text-xs font-semibold text-gold transition-all duration-200">View →</span>
+  </div>
+</Link>
+```
+**Key lesson:** `<Link>` must be the outermost element on every card. Never wrap a card in `<div>` or `<motion.div>` with Link inside — the card won't be fully clickable on the text area.
+
+---
+
+### BUG 7 — Hero Images on Leaf Pages Not Updated When New Files Uploaded
+**Root cause:** When new hero images were uploaded (e.g. `hero-baby-bibs.webp`), the `<Image src=...>` prop in the leaf page's Content.tsx still pointed to the old generic image (e.g. `hero-apparel.webp`). The upload alone is not enough.
+**Fix checklist when uploading a new hero image for a page:**
+1. Copy file to `public/images/hero/hero-[slug].webp`
+2. Copy file to `public/images/og/[slug]-og.webp` (same image, OG naming)
+3. Update `<Image src=...>` in the page's `*Content.tsx`
+4. Update `openGraph.images[0].url` in `page.tsx`
+5. Update JSON-LD `image:` in `page.tsx`
+6. Update JSON-LD `primaryImageOfPage.contentUrl` in `page.tsx`
+7. Update `img:` in any same-tier sibling cards on OTHER pages that link to this page
+
+---
+
+### BUG 8 — Same-Tier Sibling Sections Missing on Cluster Pages
+**Root cause:** When leaf pages were built, the cluster page's own product card array (`PRODUCTS[]`) was never updated to use dedicated hero images — only generic category images were used as placeholders.
+**Key lesson:** Every cluster page's `PRODUCTS[]` / product grid array must be audited when dedicated hero images are added for that cluster's leaf pages. Check `img:` or `image:` values in the cluster Content.tsx, not just the leaf pages.
 
 ---
 
