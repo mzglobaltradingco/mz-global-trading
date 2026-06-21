@@ -508,10 +508,18 @@ Fixed `140×80px` containers per cert — `style={{ width: 140, height: 80 }}` w
 ## Deployment Workflow
 
 1. `npm run build` — generates static export in `/out/`
-2. Deploy `/out/` folder to Cloudflare Pages
-3. `public/_headers` — Cloudflare applies security headers automatically
-4. `public/_redirects` — Cloudflare handles redirects
-5. No server-side rendering, no API routes, no server actions
+2. `git add -A && git commit -m "..." && git push origin main` — push to GitHub
+3. Deploy to Cloudflare Pages via Wrangler CLI:
+   ```
+   npx wrangler pages deploy out --project-name=mz-global-trading
+   ```
+4. `public/_headers` — Cloudflare applies security headers automatically
+5. `public/_redirects` — Cloudflare handles redirects
+6. No server-side rendering, no API routes, no server actions
+
+**Wrangler version (confirmed working):** 4.98.0
+**Cloudflare project name:** `mz-global-trading`
+**Preview URL pattern:** `https://<hash>.mz-global-trading.pages.dev`
 
 ### Cloudflare Pages Config
 - Build command: `npm run build`
