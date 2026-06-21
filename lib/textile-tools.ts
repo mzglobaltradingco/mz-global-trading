@@ -32,6 +32,7 @@ export interface ToolField {
   def: number;
   help: string;
   group?: UnitGroupId;
+  allowNeg?: boolean;
 }
 
 export interface ToolDef {
@@ -140,8 +141,8 @@ export const PHASES: Phase[] = [
 
 // ─── Shared calculation helpers ───────────────────────────────────────────────
 
-function f(id: string, label: string, unit: string, def: number, help: string, group?: UnitGroupId): ToolField {
-  return { id, label, unit: unit || undefined, def, help, group };
+function f(id: string, label: string, unit: string, def: number, help: string, group?: UnitGroupId, allowNeg?: boolean): ToolField {
+  return { id, label, unit: unit || undefined, def, help, group, allowNeg };
 }
 
 function orderCostData(v: Values) {
@@ -201,6 +202,58 @@ function copqData(v: Values) {
 }
 
 // ─── Tool definitions ─────────────────────────────────────────────────────────
+
+// ─── ISO 2859-1 AQL lookup (Table I + Table II-A) ────────────────────────────
+
+const AQL_CODE_DATA: Record<string, { n: number; acre: Record<string, [number, number]> }> = {
+  A: { n: 2,    acre: { "1.0": [0,1], "1.5": [0,1], "2.5": [0,1], "4.0": [0,1], "6.5": [0,1] } },
+  B: { n: 3,    acre: { "1.0": [0,1], "1.5": [0,1], "2.5": [0,1], "4.0": [0,1], "6.5": [0,1] } },
+  C: { n: 5,    acre: { "1.0": [0,1], "1.5": [0,1], "2.5": [0,1], "4.0": [0,1], "6.5": [1,2] } },
+  D: { n: 8,    acre: { "1.0": [0,1], "1.5": [0,1], "2.5": [0,1], "4.0": [1,2], "6.5": [1,2] } },
+  E: { n: 13,   acre: { "1.0": [0,1], "1.5": [0,1], "2.5": [1,2], "4.0": [1,2], "6.5": [2,3] } },
+  F: { n: 20,   acre: { "1.0": [0,1], "1.5": [1,2], "2.5": [1,2], "4.0": [2,3], "6.5": [3,4] } },
+  G: { n: 32,   acre: { "1.0": [1,2], "1.5": [1,2], "2.5": [2,3], "4.0": [3,4], "6.5": [5,6] } },
+  H: { n: 50,   acre: { "1.0": [1,2], "1.5": [2,3], "2.5": [3,4], "4.0": [5,6], "6.5": [7,8] } },
+  J: { n: 80,   acre: { "1.0": [2,3], "1.5": [3,4], "2.5": [5,6], "4.0": [7,8], "6.5": [10,11] } },
+  K: { n: 125,  acre: { "1.0": [3,4], "1.5": [5,6], "2.5": [7,8], "4.0": [10,11], "6.5": [14,15] } },
+  L: { n: 200,  acre: { "1.0": [5,6], "1.5": [7,8], "2.5": [10,11], "4.0": [14,15], "6.5": [21,22] } },
+  M: { n: 315,  acre: { "1.0": [7,8], "1.5": [10,11], "2.5": [14,15], "4.0": [21,22], "6.5": [21,22] } },
+  N: { n: 500,  acre: { "1.0": [10,11], "1.5": [14,15], "2.5": [21,22], "4.0": [21,22], "6.5": [21,22] } },
+  P: { n: 800,  acre: { "1.0": [14,15], "1.5": [21,22], "2.5": [21,22], "4.0": [21,22], "6.5": [21,22] } },
+  Q: { n: 1250, acre: { "1.0": [21,22], "1.5": [21,22], "2.5": [21,22], "4.0": [21,22], "6.5": [21,22] } },
+  R: { n: 2000, acre: { "1.0": [21,22], "1.5": [21,22], "2.5": [21,22], "4.0": [21,22], "6.5": [21,22] } },
+};
+
+const AQL_LOT_TABLE: [number, string[]][] = [
+  [8,        ["A","A","B"]],
+  [15,       ["A","B","C"]],
+  [25,       ["B","C","D"]],
+  [50,       ["C","D","E"]],
+  [90,       ["C","E","F"]],
+  [150,      ["D","F","G"]],
+  [280,      ["E","G","H"]],
+  [500,      ["F","H","J"]],
+  [1200,     ["G","J","K"]],
+  [3200,     ["H","K","L"]],
+  [10000,    ["J","L","M"]],
+  [35000,    ["K","M","N"]],
+  [150000,   ["L","N","P"]],
+  [500000,   ["M","P","Q"]],
+  [Infinity, ["N","Q","R"]],
+];
+
+function aqlLookup(lot: number, aqlLevel: number, inspLevel: number) {
+  const lvl = Math.min(Math.max(Math.round(inspLevel), 1), 3) - 1;
+  const row = AQL_LOT_TABLE.find(([max]) => lot <= max);
+  if (!row) return null;
+  const code = row[1][lvl];
+  const codeData = AQL_CODE_DATA[code];
+  if (!codeData) return null;
+  const stdLevels = [1.0, 1.5, 2.5, 4.0, 6.5];
+  const closest = stdLevels.reduce((a, b) => (Math.abs(b - aqlLevel) < Math.abs(a - aqlLevel) ? b : a));
+  const aqlKey = closest.toFixed(1);
+  return { code, n: codeData.n, acRe: codeData.acre[aqlKey] ?? null, aqlKey };
+}
 
 export const TOOLS: Record<string, ToolDef> = {
   // ════════ BUSINESS & COSTING ════════
@@ -586,6 +639,81 @@ export const TOOLS: Record<string, ToolDef> = {
       { label: "Saving", value: `${fmt((1 - v.curW / v.newW) * 100)}%` },
     ],
   },
+  "Size Ratio Calculator": {
+    phase: "merchandising",
+    blurb: "Units per size from ratio breakdown",
+    resultLabel: "Total Quantity",
+    resultUnit: "pcs",
+    formula: "Each size = total qty × (ratio% ÷ 100)",
+    note: "Ratios must total 100%. Typical fashion ratio: XS 10%, S 25%, M 35%, L 20%, XL 10%. Adjust to buyer's size run.",
+    isNew: true,
+    fields: [
+      f("qty", "Total quantity", "pcs", 5000, "Order quantity."),
+      f("xs", "XS ratio", "%", 10, "Percentage for XS."),
+      f("sm", "S ratio", "%", 20, "Percentage for S."),
+      f("md", "M ratio", "%", 35, "Percentage for M."),
+      f("lg", "L ratio", "%", 25, "Percentage for L."),
+      f("xl", "XL ratio", "%", 10, "Percentage for XL."),
+    ],
+    calc: (v) => v.qty,
+    validate: (v) => {
+      const total = v.xs + v.sm + v.md + v.lg + v.xl;
+      return Math.abs(total - 100) > 0.01 ? `Ratios total ${fmt(total)}% — must equal 100%.` : "";
+    },
+    display: (v) => {
+      const sizes = ["xs", "sm", "md", "lg", "xl"];
+      return sizes.map((s) => Math.round((v.qty * v[s]) / 100)).join(" / ");
+    },
+    detail: (v) => {
+      const sizes = ["XS", "S", "M", "L", "XL"];
+      const keys = ["xs", "sm", "md", "lg", "xl"];
+      return sizes.map((s, i) => `${s}: ${Math.round((v.qty * v[keys[i]]) / 100)} pcs`).join(" · ");
+    },
+    metrics: (v) => {
+      const keys = ["xs", "sm", "md", "lg", "xl"];
+      const labels = ["XS", "S", "M", "L", "XL"];
+      return keys.map((k, i) => ({ label: labels[i], value: `${Math.round((v.qty * v[k]) / 100)} pcs` }));
+    },
+  },
+  "Trim & Accessories Qty": {
+    phase: "merchandising",
+    blurb: "Total trim needed including waste allowance",
+    resultLabel: "Trim Required",
+    resultUnit: "pcs / m",
+    formula: "Total = quantity × per unit × (1 + waste%)",
+    note: "Add 5–10% waste for trim items (buttons, zippers, labels). Minimum order quantities from trim suppliers may require rounding up.",
+    isNew: true,
+    fields: [
+      f("qty", "Garment quantity", "pcs", 5000, "Order quantity."),
+      f("perUnit", "Trim per garment", "", 3, "Units or metres per garment (e.g. 3 buttons)."),
+      f("waste", "Waste allowance", "%", 5, "Breakage, loss and minimum cut wastage."),
+    ],
+    calc: (v) => v.qty * v.perUnit * (1 + v.waste / 100),
+    detail: (v, r) => `Net requirement: ${fmt(v.qty * v.perUnit)} · Waste addition: ${fmt(r - v.qty * v.perUnit)}.`,
+  },
+  "Price Revision Calculator": {
+    phase: "merchandising",
+    blurb: "FOB impact from material or cost change",
+    resultLabel: "Revised FOB",
+    resultUnit: "USD",
+    formula: "New FOB = FOB × (1 + material share% × change% ÷ 100)",
+    note: "Use to negotiate or explain a FOB revision to the buyer. Transparent shared-cost adjustment is better received than a blanket price increase.",
+    isNew: true,
+    fields: [
+      f("fob", "Current FOB", "USD", 8.5, "Existing FOB per unit."),
+      f("share", "Material cost share", "%", 55, "Fabric as % of total FOB."),
+      f("change", "Material price change", "%", 12, "% rise (+) or fall (−) in material price.", undefined, true),
+    ],
+    calc: (v) => v.fob * (1 + (v.share / 100) * (v.change / 100)),
+    detail: (v, r) => {
+      const delta = r - v.fob;
+      return `FOB moves by ${delta >= 0 ? "+" : ""}${fmt(delta)} USD (${fmt((delta / v.fob) * 100)}% change).`;
+    },
+    status: (v, r) => {
+      const pct = ((r - v.fob) / v.fob) * 100;
+      return Math.abs(pct) <= 3 ? ["MINIMAL IMPACT", "ok"] : Math.abs(pct) <= 8 ? ["MODERATE IMPACT", "check"] : ["SIGNIFICANT IMPACT", "fail"];
+    },
+  },
 
   // ════════ SPINNING & YARN ════════
   "Yarn Count Converter": {
@@ -680,13 +808,18 @@ export const TOOLS: Record<string, ToolDef> = {
     resultLabel: "Moisture Regain",
     resultUnit: "%",
     formula: "Regain = (conditioned − dry) ÷ dry × 100",
-    note: "Commercial standard regain: cotton 8.5%, viscose 13%, polyester 0.4%. Invoicing above standard regain means paying for water.",
+    note: "Commercial standard regain: cotton 8.5%, viscose 13%, wool 16%, polyester 0.4%, nylon 4.5%. Invoicing above standard means paying for water.",
     fields: [
       f("conditioned", "Conditioned weight", "kg", 1000, "As-received weight.", "weight"),
       f("dry", "Oven-dry weight", "kg", 930, "Dried weight.", "weight"),
+      f("fiber", "Fiber type", "", 1, "1=Cotton(8.5%) 2=Viscose(13%) 3=Wool(16%) 4=Polyester(0.4%) 5=Nylon(4.5%)"),
     ],
     calc: (v) => ((v.conditioned - v.dry) / v.dry) * 100,
-    status: (v, r) => (r <= 8.5 ? ["WITHIN COTTON STD", "ok"] : r <= 10 ? ["CHECK", "check"] : ["OVER-CONDITIONED", "fail"]),
+    status: (v, r) => {
+      const std = [8.5, 13, 16, 0.4, 4.5][Math.min(Math.max(Math.round(v.fiber), 1), 5) - 1];
+      const fiberName = ["Cotton", "Viscose", "Wool", "Polyester", "Nylon"][Math.min(Math.max(Math.round(v.fiber), 1), 5) - 1];
+      return r <= std ? [`WITHIN ${fiberName.toUpperCase()} STD (${std}%)`, "ok"] : r <= std * 1.15 ? ["CHECK — ABOVE STANDARD", "check"] : ["OVER-CONDITIONED", "fail"];
+    },
   },
 
   // ════════ FABRIC DEVELOPMENT ════════
@@ -822,6 +955,38 @@ export const TOOLS: Record<string, ToolDef> = {
       f("ne", "Warp count", "Ne", 30, "English cotton count."),
     ],
     calc: (v) => (v.ends * v.length * (1 + v.crimp / 100)) / (1693.6 * v.ne),
+  },
+
+  "Terry Pile Calculator": {
+    phase: "fabric",
+    blurb: "Ground vs pile GSM split and towel weight",
+    resultLabel: "Pile GSM",
+    resultUnit: "GSM",
+    formula: "Pile GSM = total GSM × pile ratio%; towel weight = total GSM × width × length",
+    note: "Typical pile ratio: 60–75% of total GSM. Higher pile = softer and heavier towel. Always confirm with a lab cut before bulk production.",
+    isNew: true,
+    fields: [
+      f("totalGsm", "Total GSM", "", 450, "Terry towel total weight."),
+      f("pileRatio", "Pile ratio", "%", 68, "Pile as % of total GSM (typically 60–75%)."),
+      f("width", "Towel width (finished)", "cm", 70, "Finished towel width.", "length"),
+      f("length", "Towel length (finished)", "cm", 140, "Finished towel length.", "length"),
+    ],
+    calc: (v) => (v.totalGsm * v.pileRatio) / 100,
+    detail: (v, r) => {
+      const groundGsm = v.totalGsm - r;
+      const towelGrams = v.totalGsm * (v.width * v.length);
+      return `Ground GSM: ${fmt(groundGsm)} · Pile GSM: ${fmt(r)} · Single towel weight ≈ ${fmt(towelGrams)} g.`;
+    },
+    metrics: (v, r) => {
+      const groundGsm = v.totalGsm - r;
+      const towelGrams = v.totalGsm * (v.width * v.length);
+      return [
+        { label: "Ground GSM", value: fmt(groundGsm) },
+        { label: "Pile GSM", value: fmt(r) },
+        { label: "Towel weight", value: `${fmt(towelGrams)} g` },
+        { label: "Pile ratio", value: `${fmt((r / v.totalGsm) * 100)}%` },
+      ];
+    },
   },
 
   // ════════ DYEING & FINISHING ════════
@@ -1065,9 +1230,10 @@ export const TOOLS: Record<string, ToolDef> = {
       f("seam", "Seam length / unit", "m", 3.2, "Total seam length.", "length"),
       f("ratio", "Thread ratio", "×", 3.5, "Stitch-type multiplier."),
       f("qty", "Quantity", "pcs", 5000, "Order quantity."),
+      f("cone", "Cone size", "m", 5000, "Thread metres per cone."),
     ],
     calc: (v) => v.seam * v.ratio * v.qty,
-    detail: (v, r) => `≈ ${fmt(r / 5000)} cones of 5,000 m thread (before wastage).`,
+    detail: (v, r) => `≈ ${Math.ceil(r / Math.max(v.cone, 1)).toLocaleString("en-US")} cones of ${v.cone.toLocaleString("en-US")} m thread (before wastage).`,
   },
   "Garment Weight Calculator": {
     phase: "production",
@@ -1086,6 +1252,38 @@ export const TOOLS: Record<string, ToolDef> = {
   },
 
   // ════════ QUALITY CONTROL ════════
+  "AQL Sample Size": {
+    phase: "qa",
+    blurb: "ISO 2859-1 sample size from lot quantity",
+    resultLabel: "Sample Size",
+    resultUnit: "pcs",
+    formula: "ISO 2859-1 Table I (lot → code letter) → Table II-A (code + AQL → n, Ac, Re)",
+    note: "Standard inspection levels: I (reduced), II (normal, most common), III (tightened). AQL 2.5 is the buyer default for general merchandise; 1.5 for higher-risk apparel.",
+    isNew: true,
+    fields: [
+      f("lot", "Lot size", "pcs", 5000, "Total units in the inspection lot."),
+      f("insp", "Inspection level", "", 2, "1=Level I  2=Level II (normal)  3=Level III"),
+      f("aql", "AQL value", "", 2.5, "Acceptance quality limit: 1.0, 1.5, 2.5, 4.0 or 6.5"),
+    ],
+    calc: (v) => {
+      const r = aqlLookup(v.lot, v.aql, v.insp);
+      return r ? r.n : 0;
+    },
+    display: (v) => {
+      const r = aqlLookup(v.lot, v.aql, v.insp);
+      return r ? `${r.n} pcs (Code ${r.code})` : "—";
+    },
+    detail: (v) => {
+      const r = aqlLookup(v.lot, v.aql, v.insp);
+      if (!r) return "Lot size out of table range.";
+      const acRe = r.acRe ? `Accept ≤ ${r.acRe[0]} defect(s) · Reject ≥ ${r.acRe[1]} defect(s)` : "See expanded table";
+      return `Code letter ${r.code} · AQL ${r.aqlKey} · ${acRe}.`;
+    },
+    status: (v) => {
+      const r = aqlLookup(v.lot, v.aql, v.insp);
+      return r ? ["READY", "ok"] : ["CHECK TABLE", "check"];
+    },
+  },
   "AQL Defect Check": {
     phase: "qa",
     blurb: "Pass/fail against the acceptance number",
@@ -1189,7 +1387,7 @@ export const TOOLS: Record<string, ToolDef> = {
       f("required", "Required grade", "", 4, "Buyer minimum grade."),
     ],
     calc: (v) => v.actual - v.required,
-    status: (v, r) => (r >= 0.5 ? ["PASS — SAFE", "ok"] : r >= 0 ? ["PASS — BORDERLINE", "check"] : ["FAIL", "fail"]),
+    status: (v, r) => (r >= 0 ? ["PASS", "ok"] : r >= -0.5 ? ["BORDERLINE", "check"] : ["FAIL", "fail"]),
   },
   "Cost of Poor Quality": {
     phase: "qa",
@@ -1455,6 +1653,38 @@ export const TOOLS: Record<string, ToolDef> = {
     ],
     calc: (v) => (v.freight + v.local) / v.qty,
   },
+  "FOB to CIF / CFR": {
+    phase: "logistics",
+    blurb: "Convert FOB to CIF or CFR for buyer quoting",
+    resultLabel: "CIF / CFR",
+    resultUnit: "USD per unit",
+    formula: "CIF = FOB + (freight ÷ qty) + FOB × insurance%",
+    note: "CFR excludes insurance — set insurance to 0 for a CFR quote. Use CIF when the buyer requests insurance in the shipment terms.",
+    isNew: true,
+    fields: [
+      f("fob", "FOB per unit", "USD", 8.5, "FOB price per piece."),
+      f("freight", "Total freight cost", "USD", 1800, "Full ocean or air freight charge."),
+      f("qty", "Quantity", "pcs", 5000, "Units in the shipment."),
+      f("ins", "Insurance rate", "%", 0.15, "Typically 0.1–0.2% of FOB for general cargo."),
+    ],
+    calc: (v) => v.fob + v.freight / Math.max(v.qty, 1) + (v.fob * v.ins) / 100,
+    detail: (v, r) => {
+      const freightPerUnit = v.freight / Math.max(v.qty, 1);
+      const insPerUnit = (v.fob * v.ins) / 100;
+      const uplift = ((r - v.fob) / v.fob) * 100;
+      return `Freight/unit: ${fmt(freightPerUnit)} + Insurance/unit: ${fmt(insPerUnit)} → Uplift: ${fmt(uplift)}% over FOB.`;
+    },
+    metrics: (v, r) => {
+      const freightPerUnit = v.freight / Math.max(v.qty, 1);
+      const insPerUnit = (v.fob * v.ins) / 100;
+      return [
+        { label: "FOB / unit", value: `${fmt(v.fob)} USD` },
+        { label: "Freight / unit", value: `${fmt(freightPerUnit)} USD` },
+        { label: "Insurance / unit", value: `${fmt(insPerUnit)} USD` },
+        { label: "CIF / unit", value: `${fmt(r)} USD` },
+      ];
+    },
+  },
   "Landed Cost Calculator": {
     phase: "logistics",
     blurb: "FOB to door — duty, freight and clearance",
@@ -1546,9 +1776,11 @@ export const NEW_TOOL_COUNT = TOOL_NAMES.filter((n) => TOOLS[n].isNew).length;
 const PERCENT_CAP_FIELDS = new Set(["eff", "reject", "recovery", "rating", "primary", "margin", "rework"]);
 
 export function validateValues(tool: ToolDef, v: Values): string {
-  for (const key of Object.keys(v)) {
-    if (!isFinite(v[key]) || v[key] < 0) return "Enter valid positive numbers only.";
-    if (PERCENT_CAP_FIELDS.has(key) && v[key] > 100) return "Percentage values above 100% are not practical here — check the input.";
+  for (const fl of tool.fields) {
+    const val = v[fl.id];
+    if (!isFinite(val)) return "Enter valid numbers only.";
+    if (!fl.allowNeg && val < 0) return "Enter valid positive numbers only.";
+    if (PERCENT_CAP_FIELDS.has(fl.id) && val > 100) return "Percentage values above 100% are not practical here — check the input.";
   }
   if (tool.validate) {
     const msg = tool.validate(v);
