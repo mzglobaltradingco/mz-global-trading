@@ -284,7 +284,7 @@ export default function CertificationsContent() {
                 {/* Header row */}
                 <div className="flex items-start gap-4 mb-4">
                   <div
-                    className="flex-shrink-0 bg-white border border-gray-100 rounded-xl flex items-center justify-center overflow-hidden"
+                    className="shrink-0 bg-white border border-gray-100 rounded-xl flex items-center justify-center overflow-hidden"
                     style={{ width: 100, height: 60 }}
                   >
                     <Image
@@ -364,7 +364,7 @@ export default function CertificationsContent() {
               <div key={step.num} className="flex items-start flex-1">
                 <motion.div
                   variants={staggerItemVariants}
-                  className="flex flex-col items-center text-center flex-shrink-0 w-full group"
+                  className="flex flex-col items-center text-center shrink-0 w-full group"
                 >
                   <div className="w-14 h-14 rounded-full bg-navy-900 border-2 border-navy-800 flex items-center justify-center mb-5 group-hover:border-gold transition-colors duration-300">
                     <span className="text-gold font-bold text-sm">{step.num}</span>
@@ -373,7 +373,7 @@ export default function CertificationsContent() {
                   <p className="text-gray-500 text-sm leading-relaxed px-2">{step.desc}</p>
                 </motion.div>
                 {i < accessSteps.length - 1 && (
-                  <div className="flex-shrink-0 w-8 mt-[26px]">
+                  <div className="shrink-0 w-8 mt-[26px]">
                     <div className="border-t-2 border-dashed border-gold/25 w-full" />
                   </div>
                 )}
@@ -393,7 +393,7 @@ export default function CertificationsContent() {
             <div className="space-y-8">
               {accessSteps.map((step) => (
                 <motion.div key={step.num} variants={staggerItemVariants} className="flex items-start gap-5">
-                  <div className="w-10 h-10 rounded-full bg-navy-900 border-2 border-navy-800 flex items-center justify-center flex-shrink-0 relative z-10">
+                  <div className="w-10 h-10 rounded-full bg-navy-900 border-2 border-navy-800 flex items-center justify-center shrink-0 relative z-10">
                     <span className="text-gold font-bold text-xs">{step.num}</span>
                   </div>
                   <div className="pt-1.5">
@@ -421,7 +421,7 @@ export default function CertificationsContent() {
             </div>
             <Link
               href="/contact-us/"
-              className="flex-shrink-0 inline-flex items-center gap-2 px-5 py-2.5 bg-gold text-navy-900 font-bold text-sm rounded hover:bg-yellow-400 transition-colors"
+              className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 bg-gold text-navy-900 font-bold text-sm rounded hover:bg-yellow-400 transition-colors"
             >
               Contact Us →
             </Link>
@@ -459,7 +459,7 @@ export default function CertificationsContent() {
                 key={card.title}
                 variants={cardVariant}
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow"
               >
                 <Link href={card.href} className="block">
                   <div className="relative h-64 overflow-hidden">

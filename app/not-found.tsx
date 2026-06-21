@@ -32,7 +32,7 @@ export default function NotFound() {
         initial={{ scaleY: 0, scaleX: 0 }}
         animate={{ scaleY: 1, scaleX: 1 }}
         transition={{ duration: 0.6, delay: 0.35, ease: "easeOut" }}
-        className="h-1.5 md:h-auto md:w-1.5 bg-gold flex-shrink-0 origin-center"
+        className="h-1.5 md:h-auto md:w-1.5 bg-gold shrink-0 origin-center"
       />
 
       {/* ── Right — dark navy, 404 + buttons ─────────────────────────────── */}

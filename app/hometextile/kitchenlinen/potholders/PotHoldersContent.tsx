@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +20,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
       >
         <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
@@ -881,7 +881,7 @@ export default function PotHoldersContent() {
                 className="relative mb-5 last:mb-0"
               >
                 <div className="absolute -left-5 top-4 w-4 h-4 rounded-full bg-gold border-4 border-white" aria-hidden="true" />
-                <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm grid sm:grid-cols-3 gap-4 items-center">
+                <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-xs grid sm:grid-cols-3 gap-4 items-center">
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Layer {i + 1}</p>
                     <h3 className="text-base font-bold text-navy-900">{f.layer}</h3>
@@ -977,7 +977,7 @@ export default function PotHoldersContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 flex flex-col gap-3"
+                className="bg-white/10 backdrop-blur-xs border border-white/20 rounded-2xl p-5 flex flex-col gap-3"
               >
                 <div className="w-full h-12 bg-white/90 rounded-xl flex items-center justify-center p-2">
                   <Image src={c.img} alt={c.full} width={64} height={40} className="object-contain w-full h-full" />
@@ -1007,7 +1007,7 @@ export default function PotHoldersContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
+                className="bg-white/10 backdrop-blur-xs border border-white/20 rounded-2xl p-6"
               >
                 <div className="w-10 h-10 rounded-xl bg-gold/20 border border-gold/30 flex items-center justify-center mb-3">
                   <span className="text-gold text-sm font-bold">{e.term}</span>
@@ -1023,7 +1023,7 @@ export default function PotHoldersContent() {
               { val: "20–26 days", label: "UK / Europe", flag: "🇬🇧🇪🇺" },
               { val: "8–14 days", label: "Middle East", flag: "🌍" },
             ].map((item) => (
-              <div key={item.label} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center">
+              <div key={item.label} className="bg-white/10 backdrop-blur-xs border border-white/20 rounded-2xl p-6 text-center">
                 <p className="text-3xl mb-2" aria-hidden="true">{item.flag}</p>
                 <p className="text-2xl font-bold text-white">{item.val}</p>
                 <p className="text-sm text-teal-300 mt-1">{item.label}</p>
@@ -1050,7 +1050,7 @@ export default function PotHoldersContent() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: i * 0.07 }}
-                    className="bg-white rounded-2xl p-5 shadow-sm"
+                    className="bg-white rounded-2xl p-5 shadow-xs"
                     style={{ borderRadius: "20px" }}
                   >
                     <span className="text-xl" aria-hidden="true">{s.icon}</span>
@@ -1072,7 +1072,7 @@ export default function PotHoldersContent() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: i * 0.08 }}
-                    className="bg-white rounded-2xl p-5 shadow-sm flex gap-4 items-start"
+                    className="bg-white rounded-2xl p-5 shadow-xs flex gap-4 items-start"
                     style={{ borderRadius: "20px" }}
                   >
                     <div className="w-10 h-10 rounded-full bg-gold flex items-center justify-center shrink-0">
@@ -1145,7 +1145,7 @@ export default function PotHoldersContent() {
               { name: "Bar Mops", desc: "Absorbent cotton bar mops for restaurant, bar and commercial kitchen programmes.", href: "/hometextile/kitchenlinen/barmops/", img: "/images/hero/hero-bar-mops.webp", alt: "Pakistan bar mops manufacturer — OEM cotton bar mops for restaurant and commercial kitchen buyers worldwide" },
               { name: "Aprons", desc: "Bib, waist and chef aprons in cotton, denim and canvas. Custom embroidery.", href: "/hometextile/kitchenlinen/aprons/", img: "/images/hero/hero-aprons.webp", alt: "Pakistan aprons manufacturer — OEM cotton and canvas chef aprons for hospitality and foodservice brands" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 33vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

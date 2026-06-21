@@ -22,7 +22,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -842,7 +842,7 @@ export default function FittedSheetsContent() {
       ════════════════════════════════════════════════════════════════════════ */}
       <section id="section-tc" className="bg-gray-50 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div className="grid lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden shadow-xs border border-gray-100">
             <div className="bg-[#0D1B2A] p-10 lg:p-14 flex flex-col justify-center">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Thread Count</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">TC Selection for Fitted Sheets</h2>
@@ -965,7 +965,7 @@ export default function FittedSheetsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="border-2 border-gray-100 rounded-2xl p-7 hover:border-gold hover:shadow-sm transition-all"
+                className="border-2 border-gray-100 rounded-2xl p-7 hover:border-gold hover:shadow-xs transition-all"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-xl bg-violet-100 text-violet-700 text-sm font-black flex items-center justify-center shrink-0">{m.num}</div>
@@ -1041,7 +1041,7 @@ export default function FittedSheetsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 flex flex-col gap-3 hover:bg-white/15 transition-all"
+                className="bg-white/10 backdrop-blur-xs border border-white/20 rounded-2xl p-5 flex flex-col gap-3 hover:bg-white/15 transition-all"
               >
                 <div className="h-10 flex items-center justify-center">
                   <Image src={c.img} alt={`${c.name} certification`} width={72} height={40} className="object-contain max-h-10" />
@@ -1233,7 +1233,7 @@ export default function FittedSheetsContent() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.45 }}
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow"
               >
                 <Link href={card.href} className="block">
                   <div className="relative h-56 overflow-hidden">

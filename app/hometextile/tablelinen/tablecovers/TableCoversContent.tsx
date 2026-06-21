@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +20,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -712,7 +712,7 @@ export default function TableCoversContent() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.45, delay: i * 0.08 }}
-                  className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
+                  className="bg-white rounded-2xl p-6 shadow-xs border border-gray-100"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <h3 className="font-bold text-navy-900">{f.name}</h3>
@@ -746,7 +746,7 @@ export default function TableCoversContent() {
                 { color: "bg-yellow-400", name: "Custom PMS" },
               ].map((sw) => (
                 <div key={sw.name} className="flex flex-col items-center gap-2">
-                  <div className={`w-10 h-10 rounded-xl ${sw.color} shadow-sm`} />
+                  <div className={`w-10 h-10 rounded-xl ${sw.color} shadow-xs`} />
                   <p className="text-[11px] text-gray-500 text-center leading-tight">{sw.name}</p>
                 </div>
               ))}
@@ -1065,7 +1065,7 @@ export default function TableCoversContent() {
               { name: "Bath Linen", desc: "Towels, bathrobes, bath mats and beach towels. GOTS and OEKO-TEX certified.", href: "/hometextile/bathlinen/", img: "/images/hero/hero-bath-linen.webp", alt: "Pakistan bath linen manufacturer — OEM GOTS certified towels and bathrobes for international buyers" },
               { name: "Bed Linen", desc: "Bedsheets, duvet covers, pillow covers and curtains in any thread count.", href: "/hometextile/bedlinen/", img: "/images/hero/hero-bed-linen.webp", alt: "Pakistan bed linen manufacturer — OEM bedsheets and duvet covers for hotel and retail buyers worldwide" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 33vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

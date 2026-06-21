@@ -330,10 +330,10 @@ export default function CareersContent() {
                 className="bg-white/5 border border-white/10 rounded-2xl p-7 hover:border-gold/30 hover:bg-white/8 transition-colors group"
               >
                 <div className="flex items-start gap-4 mb-5">
-                  <span className="text-4xl font-bold text-white/5 leading-none select-none flex-shrink-0" aria-hidden="true">
+                  <span className="text-4xl font-bold text-white/5 leading-none select-none shrink-0" aria-hidden="true">
                     {v.num}
                   </span>
-                  <div className="w-10 h-10 rounded-lg bg-navy-900 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-navy-900 transition-colors flex-shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-navy-900 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-navy-900 transition-colors shrink-0">
                     {v.icon}
                   </div>
                 </div>
@@ -415,7 +415,7 @@ export default function CareersContent() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
-            className="bg-white rounded-2xl border border-gray-100 shadow-sm p-10 sm:p-14 text-center"
+            className="bg-white rounded-2xl border border-gray-100 shadow-xs p-10 sm:p-14 text-center"
           >
             <div className="w-16 h-16 rounded-2xl bg-navy-900/5 flex items-center justify-center mx-auto mb-6">
               <svg className="w-8 h-8 text-navy-900/30" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -633,7 +633,7 @@ export default function CareersContent() {
 
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-gold text-navy-900 text-sm font-bold rounded hover:bg-yellow-400 transition-colors shadow-sm shadow-gold/20"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-gold text-navy-900 text-sm font-bold rounded hover:bg-yellow-400 transition-colors shadow-xs shadow-gold/20"
                 >
                   Send Application via Email →
                 </button>
@@ -672,7 +672,7 @@ export default function CareersContent() {
               <div key={step.num} className="flex items-start flex-1">
                 <motion.div
                   variants={staggerItemVariants}
-                  className="flex flex-col items-center text-center flex-shrink-0 w-full group"
+                  className="flex flex-col items-center text-center shrink-0 w-full group"
                 >
                   <div className="w-14 h-14 rounded-full bg-navy-900 border-2 border-navy-800 flex items-center justify-center mb-5 group-hover:border-gold transition-colors duration-300">
                     <span className="text-gold font-bold text-sm">{step.num}</span>
@@ -681,7 +681,7 @@ export default function CareersContent() {
                   <p className="text-gray-500 text-xs leading-relaxed px-2">{step.desc}</p>
                 </motion.div>
                 {i < hiringSteps.length - 1 && (
-                  <div className="flex-shrink-0 w-8 mt-[26px]">
+                  <div className="shrink-0 w-8 mt-[26px]">
                     <div className="border-t-2 border-dashed border-gold/25 w-full" />
                   </div>
                 )}
@@ -705,7 +705,7 @@ export default function CareersContent() {
                   variants={staggerItemVariants}
                   className="flex items-start gap-5"
                 >
-                  <div className="w-10 h-10 rounded-full bg-navy-900 border-2 border-navy-800 flex items-center justify-center flex-shrink-0 relative z-10">
+                  <div className="w-10 h-10 rounded-full bg-navy-900 border-2 border-navy-800 flex items-center justify-center shrink-0 relative z-10">
                     <span className="text-gold font-bold text-xs">{step.num}</span>
                   </div>
                   <div className="pt-1.5">
@@ -738,7 +738,7 @@ export default function CareersContent() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
-            className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden shadow-sm"
+            className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden shadow-xs"
           >
             {faqItems.map((item, i) => (
               <motion.div key={i} variants={staggerItemVariants}>
@@ -755,7 +755,7 @@ export default function CareersContent() {
                     {item.q}
                   </span>
                   <span
-                    className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
+                    className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                       openFaq === i
                         ? "bg-gold text-navy-900"
                         : "bg-gray-100 text-gray-400 group-hover:bg-gray-200"

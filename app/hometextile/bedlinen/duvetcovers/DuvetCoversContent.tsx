@@ -22,7 +22,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -600,7 +600,7 @@ export default function DuvetCoversContent() {
               </div>
               <div className="grid grid-cols-4 gap-2 flex-1 content-start">
                 {CERTIFICATIONS.map((c) => (
-                  <div key={c.name} className="bg-gray-50 rounded-xl border border-gray-200 shadow-sm flex items-center justify-center p-2" style={{ height: 56 }}>
+                  <div key={c.name} className="bg-gray-50 rounded-xl border border-gray-200 shadow-xs flex items-center justify-center p-2" style={{ height: 56 }}>
                     <Image src={c.img} alt={`${c.name} — ${c.full}`} width={72} height={44} className="object-contain w-full h-full" />
                   </div>
                 ))}
@@ -1075,7 +1075,7 @@ export default function DuvetCoversContent() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: i * 0.08 }}
-                    className="flex gap-5 bg-white rounded-2xl p-6 shadow-sm"
+                    className="flex gap-5 bg-white rounded-2xl p-6 shadow-xs"
                   >
                     <div className="w-16 h-16 rounded-2xl bg-navy-900 flex items-center justify-center shrink-0">
                       <span className="text-gold font-black text-sm">{e.term}</span>
@@ -1099,7 +1099,7 @@ export default function DuvetCoversContent() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: i * 0.07 }}
-                    className="bg-white rounded-2xl p-5 shadow-sm flex flex-col gap-2"
+                    className="bg-white rounded-2xl p-5 shadow-xs flex flex-col gap-2"
                   >
                     <span className="text-2xl" aria-hidden="true">{p.icon}</span>
                     <p className="font-semibold text-navy-900 text-sm">{p.label}</p>
@@ -1130,7 +1130,7 @@ export default function DuvetCoversContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.08 }}
-                className="bg-white rounded-2xl p-7 shadow-sm border border-stone-200 relative overflow-hidden"
+                className="bg-white rounded-2xl p-7 shadow-xs border border-stone-200 relative overflow-hidden"
                 style={{ boxShadow: "4px 4px 0 0 rgba(180,160,120,0.25)" }}
               >
                 <div className="absolute top-0 right-0 w-16 h-16 bg-stone-100 rounded-bl-3xl" aria-hidden="true" />
@@ -1228,7 +1228,7 @@ export default function DuvetCoversContent() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.08 }}
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow"
               >
                 <Link href={card.href} className="block">
                   <div className="relative h-64 overflow-hidden">

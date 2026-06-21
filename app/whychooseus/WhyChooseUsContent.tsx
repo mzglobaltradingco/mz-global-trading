@@ -594,7 +594,7 @@ export default function WhyChooseUsContent() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="rounded-xl sm:rounded-t-none overflow-hidden border border-gray-200 shadow-sm"
+              className="rounded-xl sm:rounded-t-none overflow-hidden border border-gray-200 shadow-xs"
             >
               {(activeTab === "manufacturer" ? vsManufacturer : vsAgent).map((row, i) => (
                 <motion.div
@@ -616,7 +616,7 @@ export default function WhyChooseUsContent() {
                     <div className="px-4 py-3 border-b border-gray-100 bg-navy-900/[0.02]">
                       <p className="text-gold text-[11px] font-bold uppercase tracking-widest mb-2">MZ Global Trading</p>
                       <div className="flex items-start gap-2.5">
-                        <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
+                        <span className="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
                           <svg className="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.8} d="M5 13l4 4L19 7" />
                           </svg>
@@ -631,7 +631,7 @@ export default function WhyChooseUsContent() {
                       </p>
                       <div className="flex items-start gap-2.5">
                         {row.themType !== "win" ? (
-                          <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center">
+                          <span className="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center">
                             <svg className="w-3 h-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.8} d="M6 18L18 6M6 6l12 12" />
                             </svg>
@@ -652,7 +652,7 @@ export default function WhyChooseUsContent() {
 
                     {/* MZ Global cell */}
                     <div className="py-5 px-5 flex items-start gap-3 bg-navy-900/[0.03] border-l border-navy-900/8">
-                      <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
+                      <span className="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
                         <svg className="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.8} d="M5 13l4 4L19 7" />
                         </svg>
@@ -663,7 +663,7 @@ export default function WhyChooseUsContent() {
                     {/* Competitor cell */}
                     <div className="py-5 px-5 flex items-start gap-3 border-l border-gray-200">
                       {row.themType !== "win" && (
-                        <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center">
+                        <span className="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center">
                           <svg className="w-3 h-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.8} d="M6 18L18 6M6 6l12 12" />
                           </svg>
@@ -691,7 +691,7 @@ export default function WhyChooseUsContent() {
             </p>
             <Link
               href="/rfq/"
-              className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-2.5 bg-gold text-navy-900 font-bold text-sm rounded hover:bg-yellow-400 transition-colors shadow-md shadow-gold/20"
+              className="shrink-0 inline-flex items-center gap-2 px-6 py-2.5 bg-gold text-navy-900 font-bold text-sm rounded hover:bg-yellow-400 transition-colors shadow-md shadow-gold/20"
             >
               Request a Quote →
             </Link>
@@ -715,7 +715,7 @@ export default function WhyChooseUsContent() {
           </motion.div>
 
           {/* Mosaic grid — 1px gap creates a seamless tile effect */}
-          <div className="grid md:grid-cols-2 gap-px bg-gray-200 rounded-2xl overflow-hidden shadow-sm">
+          <div className="grid md:grid-cols-2 gap-px bg-gray-200 rounded-2xl overflow-hidden shadow-xs">
             {reasons.map((r, i) => (
               <motion.div
                 key={r.number}
@@ -726,7 +726,7 @@ export default function WhyChooseUsContent() {
                 className="bg-white p-7 group hover:bg-navy-900 transition-colors duration-300"
               >
                 <div className="flex items-start gap-5">
-                  <div className="flex-shrink-0 flex flex-col items-center gap-3">
+                  <div className="shrink-0 flex flex-col items-center gap-3">
                     <span className="text-4xl font-bold text-gray-100 leading-none group-hover:text-white/10 transition-colors select-none">
                       {r.number}
                     </span>
@@ -841,7 +841,7 @@ export default function WhyChooseUsContent() {
               <div key={step.num} className="flex items-start flex-1">
                 <motion.div
                   variants={staggerItemVariants}
-                  className="flex flex-col items-center text-center flex-shrink-0 w-full group"
+                  className="flex flex-col items-center text-center shrink-0 w-full group"
                 >
                   <div className="w-14 h-14 rounded-full bg-navy-900 border-2 border-navy-800 flex items-center justify-center mb-5 group-hover:border-gold transition-colors duration-300">
                     <span className="text-gold font-bold text-sm">{step.num}</span>
@@ -852,7 +852,7 @@ export default function WhyChooseUsContent() {
 
                 {/* Connector — shown between steps only */}
                 {i < processSteps.length - 1 && (
-                  <div className="flex-shrink-0 w-8 mt-[26px]">
+                  <div className="shrink-0 w-8 mt-[26px]">
                     <div className="border-t-2 border-dashed border-gold/25 w-full" />
                   </div>
                 )}
@@ -878,7 +878,7 @@ export default function WhyChooseUsContent() {
                   variants={staggerItemVariants}
                   className="flex items-start gap-5"
                 >
-                  <div className="w-10 h-10 rounded-full bg-navy-900 border-2 border-navy-800 flex items-center justify-center flex-shrink-0 relative z-10">
+                  <div className="w-10 h-10 rounded-full bg-navy-900 border-2 border-navy-800 flex items-center justify-center shrink-0 relative z-10">
                     <span className="text-gold font-bold text-xs">{step.num}</span>
                   </div>
                   <div className="pt-1.5">
@@ -921,7 +921,7 @@ export default function WhyChooseUsContent() {
                 key={card.title}
                 variants={cardVariant}
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow"
               >
                 <Link href={card.href} className="block">
                   <div className="relative h-64 overflow-hidden">

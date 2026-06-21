@@ -471,7 +471,7 @@ export default function OurProcessContent() {
               ))}
             </svg>
 
-            <div className="absolute bottom-4 right-4 bg-navy-900/90 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3 text-right">
+            <div className="absolute bottom-4 right-4 bg-navy-900/90 backdrop-blur-xs border border-white/10 rounded-xl px-4 py-3 text-right">
               <p className="text-gold font-bold text-xl leading-none">25+</p>
               <p className="text-gray-400 text-xs mt-0.5">Export Markets</p>
             </div>
@@ -591,7 +591,7 @@ export default function OurProcessContent() {
                   transition={{ duration: 0.45, delay: i * 0.07 }}
                   className="flex items-start gap-5"
                 >
-                  <div className="w-10 h-10 rounded-full bg-navy-800 hover:bg-orange-500 border-2 border-gold/40 hover:border-orange-500 flex items-center justify-center text-gold hover:text-white transition-all duration-300 flex-shrink-0 -ml-12 relative z-10 cursor-pointer">
+                  <div className="w-10 h-10 rounded-full bg-navy-800 hover:bg-orange-500 border-2 border-gold/40 hover:border-orange-500 flex items-center justify-center text-gold hover:text-white transition-all duration-300 shrink-0 -ml-12 relative z-10 cursor-pointer">
                     {step.icon}
                   </div>
                   <div>
@@ -629,7 +629,7 @@ export default function OurProcessContent() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
-            className="grid md:grid-cols-2 gap-px bg-gray-100 rounded-2xl overflow-hidden shadow-sm"
+            className="grid md:grid-cols-2 gap-px bg-gray-100 rounded-2xl overflow-hidden shadow-xs"
           >
             {vettingCriteria.map((c) => (
               <motion.div
@@ -638,7 +638,7 @@ export default function OurProcessContent() {
                 className="bg-white p-7 group hover:bg-navy-900 transition-colors duration-300"
               >
                 <div className="flex items-start gap-5">
-                  <div className="flex-shrink-0 flex flex-col items-center gap-3">
+                  <div className="shrink-0 flex flex-col items-center gap-3">
                     <span className="text-4xl font-bold text-gray-100 leading-none group-hover:text-white/10 transition-colors select-none">
                       {c.num}
                     </span>
@@ -684,7 +684,7 @@ export default function OurProcessContent() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
-            className="hidden lg:flex items-stretch gap-0 rounded-2xl overflow-hidden border border-gray-200 shadow-sm"
+            className="hidden lg:flex items-stretch gap-0 rounded-2xl overflow-hidden border border-gray-200 shadow-xs"
           >
             {supplyChainStages.map((stage, i) => (
               <motion.div
@@ -717,7 +717,7 @@ export default function OurProcessContent() {
             <div className="space-y-6">
               {supplyChainStages.map((stage) => (
                 <motion.div key={stage.num} variants={staggerItemVariants} className="flex items-start gap-5">
-                  <div className="w-10 h-10 rounded-xl bg-navy-900 flex items-center justify-center text-gold flex-shrink-0 -ml-10 relative z-10">
+                  <div className="w-10 h-10 rounded-xl bg-navy-900 flex items-center justify-center text-gold shrink-0 -ml-10 relative z-10">
                     {stage.icon}
                   </div>
                   <div>
@@ -776,7 +776,7 @@ export default function OurProcessContent() {
                 <div className="w-10 h-px bg-gold/30 mb-4" />
                 <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">{sourcingHubs[0].desc}</p>
               </div>
-              <div className="lg:w-56 flex-shrink-0">
+              <div className="lg:w-56 shrink-0">
                 <p className="text-white/30 text-[10px] font-semibold tracking-widest uppercase mb-3">Product Coverage</p>
                 <div className="flex flex-wrap gap-2">
                   {sourcingHubs[0].products.map((p) => (
@@ -835,7 +835,7 @@ export default function OurProcessContent() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
-            className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden shadow-sm"
+            className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden shadow-xs"
           >
             {faqItems.map((item, i) => (
               <motion.div key={i} variants={staggerItemVariants}>
@@ -847,7 +847,7 @@ export default function OurProcessContent() {
                   <span className={`font-semibold text-sm sm:text-base pr-4 transition-colors ${openFaq === i ? "text-gold" : "text-navy-900"}`}>
                     {item.q}
                   </span>
-                  <span className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${openFaq === i ? "bg-gold text-navy-900" : "bg-gray-100 text-gray-400 group-hover:bg-gray-200"}`}>
+                  <span className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${openFaq === i ? "bg-gold text-navy-900" : "bg-gray-100 text-gray-400 group-hover:bg-gray-200"}`}>
                     <svg className={`w-4 h-4 transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -898,7 +898,7 @@ export default function OurProcessContent() {
                 key={card.title}
                 variants={cardVariant}
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow"
               >
                 <Link href={card.href} className="block">
                   <div className="relative h-64 overflow-hidden">

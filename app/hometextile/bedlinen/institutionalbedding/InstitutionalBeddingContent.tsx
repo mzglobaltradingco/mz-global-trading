@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -22,7 +22,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -701,7 +701,7 @@ export default function InstitutionalBeddingContent() {
               <button key={s.id} role="tab" aria-selected={activeSector === s.id}
                 onClick={() => setActiveSector(s.id)}
                 className={`px-5 py-2.5 rounded-xl text-sm font-semibold border transition-all ${
-                  activeSector === s.id ? "bg-navy-900 text-white border-navy-900 shadow-sm" : "bg-white text-gray-600 border-gray-200 hover:border-navy-900/40"
+                  activeSector === s.id ? "bg-navy-900 text-white border-navy-900 shadow-xs" : "bg-white text-gray-600 border-gray-200 hover:border-navy-900/40"
                 }`}>
                 {s.name}
               </button>
@@ -747,7 +747,7 @@ export default function InstitutionalBeddingContent() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
             {FIBRE_BLENDS.map((f, i) => (
               <motion.div key={f.blend} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.1 }}
-                className={`rounded-2xl overflow-hidden shadow-sm border-2 ${f.featured ? "border-gold" : "border-gray-100"}`}>
+                className={`rounded-2xl overflow-hidden shadow-xs border-2 ${f.featured ? "border-gold" : "border-gray-100"}`}>
                 <div className={`h-2 ${f.featured ? "bg-gold" : "bg-gray-100"}`} aria-hidden="true" />
                 <div className="p-7">
                   {f.featured && <span className="inline-block mb-3 text-[10px] font-bold text-gold bg-gold/10 px-3 py-1 rounded-full uppercase tracking-wider">Most Ordered</span>}
@@ -785,7 +785,7 @@ export default function InstitutionalBeddingContent() {
           <div className="grid sm:grid-cols-2 gap-5 mb-10">
             {CLOSURES.map((c, i) => (
               <motion.div key={c.type} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.09 }}
-                className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm">
+                className="bg-white rounded-2xl p-7 border border-gray-100 shadow-xs">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-12 h-12 rounded-xl bg-navy-900 text-gold flex items-center justify-center text-xl shrink-0">{c.icon}</div>
                   <div>
@@ -931,7 +931,7 @@ export default function InstitutionalBeddingContent() {
               { num: "06", title: "Staggered Delivery Programme", desc: "Large institutional contracts can be delivered in scheduled tranches — factory holds production slots across the delivery programme period." },
             ].map((m, i) => (
               <motion.div key={m.num} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="border-2 border-gray-100 rounded-2xl p-7 hover:border-gold hover:shadow-sm transition-all">
+                className="border-2 border-gray-100 rounded-2xl p-7 hover:border-gold hover:shadow-xs transition-all">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 text-sm font-black flex items-center justify-center shrink-0">{m.num}</div>
                   <h3 className="text-sm font-bold text-navy-900">{m.title}</h3>
@@ -1051,7 +1051,7 @@ export default function InstitutionalBeddingContent() {
               <motion.div key={card.title}
                 initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45 }}
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <Link href={card.href} className="block">
                   <div className="relative h-56 overflow-hidden">
                     <Image src={card.image} alt={card.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105"

@@ -574,7 +574,7 @@ export default function GuidesContent() {
                     onClick={() => setActiveCategory(cat.id)}
                     className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
                       activeCategory === cat.id
-                        ? "bg-navy-900 text-white shadow-sm"
+                        ? "bg-navy-900 text-white shadow-xs"
                         : "bg-white text-gray-600 border border-gray-200 hover:border-navy-900 hover:text-navy-900"
                     }`}
                   >
@@ -585,7 +585,7 @@ export default function GuidesContent() {
                   </button>
                 ))}
               </div>
-              <div className="w-full lg:w-72 flex-shrink-0">
+              <div className="w-full lg:w-72 shrink-0">
                 <label htmlFor="guide-search" className="sr-only">Search guides</label>
                 <div className="relative">
                   <svg className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -640,7 +640,7 @@ export default function GuidesContent() {
                         </span>
                       )}
                     </span>
-                    <span className="text-gray-400 text-xs flex-shrink-0">{guide.readTime}</span>
+                    <span className="text-gray-400 text-xs shrink-0">{guide.readTime}</span>
                   </div>
 
                   <div className={`flex ${guide.wide ? "lg:flex-row lg:gap-8 lg:items-start" : "flex-col"} flex-1`}>
@@ -650,7 +650,7 @@ export default function GuidesContent() {
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ duration: 0.4, delay: 0.2 + (i % 3) * 0.08 }}
-                          className="text-3xl font-bold text-gray-200 group-hover:text-gold/30 leading-none flex-shrink-0 transition-colors duration-300 select-none"
+                          className="text-3xl font-bold text-gray-200 group-hover:text-gold/30 leading-none shrink-0 transition-colors duration-300 select-none"
                           aria-hidden="true"
                         >
                           {guide.num}
@@ -662,14 +662,14 @@ export default function GuidesContent() {
                       <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-3">{guide.description}</p>
                     </div>
 
-                    <div className={`flex-shrink-0 ${guide.wide ? "lg:w-64" : ""}`}>
+                    <div className={`shrink-0 ${guide.wide ? "lg:w-64" : ""}`}>
                       <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">
                         What You&apos;ll Learn
                       </p>
                       <ul className="space-y-1.5 mb-3">
                         {guide.topics.map((topic) => (
                           <li key={topic} className="flex items-start gap-2.5">
-                            <span className="mt-1 flex-shrink-0 w-3.5 h-3.5 rounded-full bg-gray-100 group-hover:bg-gold/15 flex items-center justify-center transition-colors">
+                            <span className="mt-1 shrink-0 w-3.5 h-3.5 rounded-full bg-gray-100 group-hover:bg-gold/15 flex items-center justify-center transition-colors">
                               <span className="w-1 h-1 rounded-full bg-gray-400 group-hover:bg-gold transition-colors" aria-hidden="true" />
                             </span>
                             <span className="text-gray-500 text-xs leading-snug">{topic}</span>
@@ -729,7 +729,7 @@ export default function GuidesContent() {
             </div>
             <Link
               href="/contact-us/"
-              className="flex-shrink-0 inline-flex items-center gap-2 px-5 py-3 bg-navy-900 text-white text-sm font-semibold rounded-lg hover:bg-navy-800 transition-colors"
+              className="shrink-0 inline-flex items-center gap-2 px-5 py-3 bg-navy-900 text-white text-sm font-semibold rounded-lg hover:bg-navy-800 transition-colors"
             >
               Request a Specific Topic
             </Link>

@@ -233,7 +233,7 @@ export default function QualityPolicyContent() {
                   <p className="text-gray-400 text-xs mt-0.5">Karachi, Pakistan</p>
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 bg-navy-900 rounded-lg w-fit">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0" aria-hidden="true" />
                   <span className="text-white text-xs font-semibold">Policy Status: Active</span>
                 </div>
               </div>
@@ -288,7 +288,7 @@ export default function QualityPolicyContent() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-px bg-gray-200 rounded-2xl overflow-hidden shadow-sm">
+          <div className="grid md:grid-cols-2 gap-px bg-gray-200 rounded-2xl overflow-hidden shadow-xs">
             {objectives.map((obj, i) => (
               <motion.div
                 key={obj.num}
@@ -299,7 +299,7 @@ export default function QualityPolicyContent() {
                 className="bg-white p-7 group hover:bg-navy-900 transition-colors duration-300"
               >
                 <div className="flex items-start gap-5">
-                  <div className="flex-shrink-0 flex flex-col items-center gap-3">
+                  <div className="shrink-0 flex flex-col items-center gap-3">
                     <span className="text-4xl font-bold text-gray-100 leading-none group-hover:text-white/10 transition-colors select-none">
                       {obj.num}
                     </span>
@@ -362,7 +362,7 @@ export default function QualityPolicyContent() {
                 <ul className="space-y-3">
                   {area.items.map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <span className="mt-1 flex-shrink-0 w-4 h-4 rounded-full bg-gold/15 flex items-center justify-center">
+                      <span className="mt-1 shrink-0 w-4 h-4 rounded-full bg-gold/15 flex items-center justify-center">
                         <span className="w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
                       </span>
                       <span className="text-gray-600 text-sm leading-relaxed">{item}</span>
@@ -405,7 +405,7 @@ export default function QualityPolicyContent() {
                 key={card.title}
                 variants={cardVariant}
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow"
               >
                 <Link href={card.href} className="block">
                   <div className="relative h-64 overflow-hidden">

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useMemo, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
@@ -374,7 +374,7 @@ export default function TextileToolsContent() {
                     role="tab"
                     aria-selected={isActive}
                     onClick={() => { setPhaseId(p.id); setSearch(""); const first = toolsForPhase(p.id)[0]; if (first) selectTool(first); }}
-                    className={`flex-shrink-0 flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all min-h-[36px] border ${
+                    className={`shrink-0 flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all min-h-[36px] border ${
                       isActive ? "bg-gold text-navy-900 border-gold" : "bg-white text-gray-500 border-gray-200 hover:border-gold/50"
                     }`}
                   >
@@ -387,7 +387,7 @@ export default function TextileToolsContent() {
               })}
             </div>
             {/* Search */}
-            <div className="sm:ml-auto w-full sm:w-64 flex-shrink-0">
+            <div className="sm:ml-auto w-full sm:w-64 shrink-0">
               <label htmlFor="tool-search" className="sr-only">Search all calculators</label>
               <div className="relative">
                 <svg className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -426,7 +426,7 @@ export default function TextileToolsContent() {
                     }`}
                   >
                     <span className="text-sm leading-tight">{p.short}</span>
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full leading-none flex-shrink-0 ${isActive ? "bg-gold/20 text-navy-900" : "bg-gray-100 text-gray-400"}`}>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full leading-none shrink-0 ${isActive ? "bg-gold/20 text-navy-900" : "bg-gray-100 text-gray-400"}`}>
                       {toolsForPhase(p.id).length}
                     </span>
                   </button>
@@ -436,7 +436,7 @@ export default function TextileToolsContent() {
 
             {/* ── Col 2: Tool list — desktop only ── */}
             <div className="hidden lg:block lg:sticky lg:top-36 lg:self-start lg:max-h-[calc(100vh-200px)] lg:overflow-y-auto lg:[scrollbar-width:thin]">
-              <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+              <div className="bg-white rounded-2xl border border-gray-100 shadow-xs overflow-hidden">
                 <div className="px-3 py-2.5 border-b border-gray-100 bg-gray-50/80">
                   <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">
                     {search.trim()
@@ -460,7 +460,7 @@ export default function TextileToolsContent() {
                         <span className={`flex items-center gap-1.5 font-semibold text-xs leading-tight ${isActive ? "text-navy-900" : "text-gray-700"}`}>
                           {name}
                           {TOOLS[name].isNew && (
-                            <span className="text-[8px] font-bold uppercase tracking-wider px-1 py-0.5 rounded bg-gold/15 text-gold leading-none flex-shrink-0">New</span>
+                            <span className="text-[8px] font-bold uppercase tracking-wider px-1 py-0.5 rounded bg-gold/15 text-gold leading-none shrink-0">New</span>
                           )}
                         </span>
                         <span className={`block text-[11px] mt-0.5 leading-tight ${isActive ? "text-gray-500" : "text-gray-400"}`}>
@@ -497,7 +497,7 @@ export default function TextileToolsContent() {
                       >
                         <span className="flex items-start gap-1 flex-wrap mb-1">
                           <span className={`font-semibold text-xs leading-tight ${isActive ? "text-navy-900" : "text-gray-700"}`}>{name}</span>
-                          {TOOLS[name].isNew && <span className="text-[8px] font-bold uppercase px-1 py-0.5 rounded bg-gold/15 text-gold leading-none flex-shrink-0">New</span>}
+                          {TOOLS[name].isNew && <span className="text-[8px] font-bold uppercase px-1 py-0.5 rounded bg-gold/15 text-gold leading-none shrink-0">New</span>}
                         </span>
                         <span className="block text-[11px] leading-tight text-gray-400 line-clamp-2">{TOOLS[name].blurb}</span>
                       </button>
@@ -512,7 +512,7 @@ export default function TextileToolsContent() {
               {/* Inputs panel */}
               <AnimatePresence mode="wait">
                 <motion.div key={`inputs-${toolName}`} variants={workspaceVariant} initial="hidden" animate="visible" exit="exit">
-                  <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
+                  <div className="bg-white rounded-2xl border border-gray-100 shadow-xs p-5">
                     <div className="flex items-start justify-between gap-2 mb-3">
                       <div className="min-w-0">
                         <div className="flex items-center gap-2 flex-wrap">
@@ -524,7 +524,7 @@ export default function TextileToolsContent() {
                       <button
                         onClick={resetToDefaults}
                         aria-label="Reset all inputs to defaults"
-                        className="flex-shrink-0 text-xs text-gray-400 hover:text-navy-900 transition-colors underline underline-offset-2 whitespace-nowrap pt-0.5"
+                        className="shrink-0 text-xs text-gray-400 hover:text-navy-900 transition-colors underline underline-offset-2 whitespace-nowrap pt-0.5"
                       >
                         Reset
                       </button>
@@ -579,7 +579,7 @@ export default function TextileToolsContent() {
             <div className="lg:sticky lg:top-36 lg:self-start lg:max-h-[calc(100vh-200px)] lg:overflow-y-auto lg:[scrollbar-width:thin]">
               <AnimatePresence mode="wait">
                 <motion.div key={`results-${toolName}`} variants={workspaceVariant} initial="hidden" animate="visible" exit="exit">
-                  <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
+                  <div className="bg-white rounded-2xl border border-gray-100 shadow-xs p-5">
                     {computed.error ? (
                       <div className="bg-amber-50 border border-amber-200 rounded-xl px-5 py-10 text-center">
                         <p className="text-amber-700 text-sm font-medium">{computed.error}</p>
@@ -698,7 +698,7 @@ export default function TextileToolsContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6"
+              className="bg-white rounded-2xl border border-gray-100 shadow-xs p-6"
             >
               <h3 className="text-navy-900 font-bold text-lg mb-4">Quick Unit Converter</h3>
               <div className="grid grid-cols-[1fr,90px,90px] gap-2 items-end">
@@ -750,7 +750,7 @@ export default function TextileToolsContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6"
+              className="bg-white rounded-2xl border border-gray-100 shadow-xs p-6"
             >
               <h3 className="text-navy-900 font-bold text-lg mb-4">Recent Calculations</h3>
               {recent.length === 0 ? (
@@ -771,7 +771,7 @@ export default function TextileToolsContent() {
                         <p className="text-navy-900 font-semibold text-sm truncate">{entry.name}</p>
                         <p className="text-gray-400 text-xs">{entry.time}</p>
                       </div>
-                      <span className="text-gold font-bold text-sm flex-shrink-0">{entry.result}</span>
+                      <span className="text-gold font-bold text-sm shrink-0">{entry.result}</span>
                     </button>
                   ))}
                 </div>
@@ -798,7 +798,7 @@ export default function TextileToolsContent() {
             animate={{ y: 0 }}
             exit={{ y: 88 }}
             transition={{ type: "spring", stiffness: 320, damping: 32 }}
-            className="lg:hidden print:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 py-3 shadow-lg"
+            className="lg:hidden print:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-xs border-t border-gray-200 px-4 py-3 shadow-lg"
           >
             <div className="flex items-center justify-between gap-3">
               <div className="min-w-0">
@@ -809,7 +809,7 @@ export default function TextileToolsContent() {
                 </p>
               </div>
               {computed.status[0] && (
-                <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-[11px] font-bold flex-shrink-0 ${STATUS_STYLES[computed.status[1]]}`}>
+                <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-[11px] font-bold shrink-0 ${STATUS_STYLES[computed.status[1]]}`}>
                   <span className={`w-1.5 h-1.5 rounded-full ${STATUS_DOT[computed.status[1]]}`} aria-hidden="true" />
                   {computed.status[0]}
                 </span>

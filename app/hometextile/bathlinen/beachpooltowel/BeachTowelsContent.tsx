@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -23,7 +23,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -768,7 +768,7 @@ export default function BeachTowelsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.08 }}
-                className={`rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all ${i === 0 ? "sm:col-span-2 lg:col-span-2" : ""}`}
+                className={`rounded-2xl overflow-hidden border border-gray-100 shadow-xs hover:shadow-lg transition-all ${i === 0 ? "sm:col-span-2 lg:col-span-2" : ""}`}
               >
                 <div className={`${c.color} px-8 py-6 flex items-center justify-between`}>
                   <div>
@@ -827,7 +827,7 @@ export default function BeachTowelsContent() {
           </p>
           <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
             <div className="min-w-[560px]">
-              <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
+              <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-xs">
                 <div className="grid grid-cols-5 bg-navy-900 px-6 py-4 text-xs font-semibold text-gray-300 uppercase tracking-wider">
                   <span>Size</span>
                   <span>Dimensions</span>
@@ -885,7 +885,7 @@ export default function BeachTowelsContent() {
               { label: "Travel / Microfiber", val: "300–380", sub: "Ultra-quick dry" },
               { label: "Constructions", val: "5", sub: "Velour to fouta" },
             ].map((m) => (
-              <div key={m.label} className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+              <div key={m.label} className="bg-white rounded-2xl p-5 border border-gray-100 shadow-xs">
                 <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">{m.label}</p>
                 <p className="text-2xl font-bold text-navy-900">{m.val}</p>
                 <p className="text-xs text-gray-500 mt-1">{m.sub}</p>
@@ -894,7 +894,7 @@ export default function BeachTowelsContent() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {GSM_TIERS.map((tier) => (
-              <div key={tier.gsm} className={`bg-white rounded-2xl p-7 border-2 ${tier.featured ? "border-gold shadow-lg" : "border-gray-100 shadow-sm"}`}>
+              <div key={tier.gsm} className={`bg-white rounded-2xl p-7 border-2 ${tier.featured ? "border-gold shadow-lg" : "border-gray-100 shadow-xs"}`}>
                 {tier.featured && (
                   <span className="inline-block mb-3 text-[10px] font-bold text-gold bg-gold/10 px-3 py-1 rounded-full uppercase tracking-wider">Resort Standard</span>
                 )}
@@ -976,7 +976,7 @@ export default function BeachTowelsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4"
+                className="bg-white/10 backdrop-blur-xs border border-white/10 rounded-2xl p-6 flex flex-col gap-4"
               >
                 <div>
                   <p className="font-semibold text-white">{d.name}</p>
@@ -1007,7 +1007,7 @@ export default function BeachTowelsContent() {
           </p>
           <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
             <div className="min-w-[640px]">
-              <div className="border border-teal-200 rounded-2xl overflow-hidden shadow-sm">
+              <div className="border border-teal-200 rounded-2xl overflow-hidden shadow-xs">
                 <div className="grid grid-cols-5 bg-navy-900 px-6 py-4 text-xs font-semibold text-gray-300 uppercase tracking-wider">
                   <span>Programme</span>
                   <span>Construction</span>
@@ -1141,7 +1141,7 @@ export default function BeachTowelsContent() {
             <span aria-hidden="true">⚠</span>
             <span>All lead time figures are <strong>indicative</strong> estimates. Confirmed timelines are agreed at quotation stage before purchase order placement and depend on construction, print method, quantity and factory scheduling.</span>
           </div>
-          <div className="bg-white rounded-2xl border border-orange-100 p-8 mb-10 shadow-sm">
+          <div className="bg-white rounded-2xl border border-orange-100 p-8 mb-10 shadow-xs">
             <h3 className="text-lg font-bold text-navy-900 mb-6">Indicative Timeline — Print Programme (Sublimation)</h3>
             <div className="flex flex-col gap-0">
               {LEAD_STAGES.map((stage, i) => (
@@ -1165,7 +1165,7 @@ export default function BeachTowelsContent() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
             {EXPORT_TERMS.map((e) => (
-              <div key={e.term} className="bg-white rounded-2xl border border-orange-100 p-6 shadow-sm">
+              <div key={e.term} className="bg-white rounded-2xl border border-orange-100 p-6 shadow-xs">
                 <div className="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 font-bold text-sm flex items-center justify-center mb-4">{e.term}</div>
                 <p className="font-semibold text-navy-900 text-sm mb-1">{e.full}</p>
                 <p className="text-xs text-gray-400 mb-3">{e.port}</p>
@@ -1176,7 +1176,7 @@ export default function BeachTowelsContent() {
           <h3 className="text-lg font-bold text-navy-900 mb-5">Packaging Options</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {PACK_OPTIONS.map((p) => (
-              <div key={p.label} className="bg-white rounded-2xl border border-orange-100 p-5 flex flex-col items-center gap-2 text-center shadow-sm">
+              <div key={p.label} className="bg-white rounded-2xl border border-orange-100 p-5 flex flex-col items-center gap-2 text-center shadow-xs">
                 <span className="text-2xl" aria-hidden="true">{p.icon}</span>
                 <p className="text-sm font-semibold text-navy-900">{p.label}</p>
                 <p className="text-xs text-gray-400">{p.note}</p>
@@ -1348,7 +1348,7 @@ export default function BeachTowelsContent() {
               { name: "Bathrobes", desc: "Terry loop, velour and waffle kimono. Shawl collar, hooded and kimono styles.", href: "/hometextile/bathlinen/bathrobes/", img: "/images/hero/hero-bathrobes.webp", alt: "Pakistan bathrobe manufacturer — OEM terry, velour and waffle kimono bathrobes for hotel and spa programmes" },
               { name: "Bath Mats", desc: "Tufted terry, chenille and memory foam. Anti-slip backing, custom sizing.", href: "/hometextile/bathlinen/bathmats/", img: "/images/hero/hero-bath-mats.webp", alt: "Pakistan bath mat manufacturer — OEM tufted and chenille bath mats with anti-slip backing for hotel and retail" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

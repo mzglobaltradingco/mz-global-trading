@@ -39,7 +39,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-3">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
+          <Link href="/" className="shrink-0">
             <img
               src="/images/logo/Master_Logo.webp"
               alt="MZ Global Trading"

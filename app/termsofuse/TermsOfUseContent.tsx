@@ -150,7 +150,7 @@ export default function TermsOfUseContent() {
           <div className="lg:flex lg:gap-16 items-start">
 
             {/* ── Sticky sidebar ──────────────────────────────────────────── */}
-            <aside className="hidden lg:block w-52 flex-shrink-0 sticky top-44 self-start">
+            <aside className="hidden lg:block w-52 shrink-0 sticky top-44 self-start">
               <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-400 mb-4">
                 Contents
               </p>
@@ -267,7 +267,7 @@ export default function TermsOfUseContent() {
                     <ul className="divide-y divide-gray-50">
                       {PERMITTED.map((item) => (
                         <li key={item} className="px-4 py-3 text-sm text-gray-600 flex gap-2.5">
-                          <span className="text-green-600 font-bold mt-0.5 flex-shrink-0">✓</span>
+                          <span className="text-green-600 font-bold mt-0.5 shrink-0">✓</span>
                           {item}
                         </li>
                       ))}
@@ -280,7 +280,7 @@ export default function TermsOfUseContent() {
                     <ul className="divide-y divide-gray-50">
                       {PROHIBITED.map((item) => (
                         <li key={item} className="px-4 py-3 text-sm text-gray-600 flex gap-2.5">
-                          <span className="text-red-500 font-bold mt-0.5 flex-shrink-0">✕</span>
+                          <span className="text-red-500 font-bold mt-0.5 shrink-0">✕</span>
                           {item}
                         </li>
                       ))}

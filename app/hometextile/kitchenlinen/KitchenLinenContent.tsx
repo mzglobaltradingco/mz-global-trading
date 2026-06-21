@@ -330,7 +330,7 @@ export default function KitchenLinenContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.08 }}
-                className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-sm transition-all"
+                className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-xs transition-all"
               >
                 <div className="flex items-center gap-3 mb-3">
                   <span className="w-8 h-8 rounded-lg bg-gold/10 text-gold text-xs font-bold flex items-center justify-center shrink-0">

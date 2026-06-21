@@ -16,9 +16,10 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const post = getPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   if (!post) return { title: "Article Not Found | MZ Global Trading" };
 
   const imageUrl = post.image
@@ -54,8 +55,9 @@ export async function generateMetadata({
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
-export default function ArticlePage({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug);
+export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   if (!post) notFound();
 
   const imageUrl = post.image

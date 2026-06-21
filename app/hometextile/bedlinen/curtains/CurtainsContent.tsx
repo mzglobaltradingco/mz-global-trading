@@ -20,7 +20,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -678,7 +678,7 @@ export default function CurtainsContent() {
               transition={{ duration: 0.2 }}
               className="grid lg:grid-cols-3 gap-6"
             >
-              <div className="lg:col-span-2 border border-gray-100 rounded-2xl p-8 shadow-sm">
+              <div className="lg:col-span-2 border border-gray-100 rounded-2xl p-8 shadow-xs">
                 <div className="flex items-center gap-3 flex-wrap mb-6">
                   <h3 className="text-2xl font-bold text-navy-900">{ac.name}</h3>
                   <span className="text-xs font-semibold text-gold bg-gold/10 px-3 py-1 rounded-full">{ac.gsm}</span>
@@ -700,7 +700,7 @@ export default function CurtainsContent() {
                 </div>
               </div>
               <div className="flex flex-col gap-4">
-                <div className="border border-gray-100 rounded-2xl p-6 shadow-sm">
+                <div className="border border-gray-100 rounded-2xl p-6 shadow-xs">
                   <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Best For</p>
                   <div className="flex flex-wrap gap-2">
                     {ac.best.map((b) => (
@@ -708,7 +708,7 @@ export default function CurtainsContent() {
                     ))}
                   </div>
                 </div>
-                <div className="border border-gray-100 rounded-2xl p-6 shadow-sm">
+                <div className="border border-gray-100 rounded-2xl p-6 shadow-xs">
                   <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Key Markets</p>
                   <div className="flex flex-wrap gap-2">
                     {ac.markets.map((m) => (
@@ -774,7 +774,7 @@ export default function CurtainsContent() {
               >
                 <div className="flex items-end gap-3 mb-4">
                   <div
-                    className="bg-white/20 rounded-sm group-hover:bg-gold/30 transition-colors"
+                    className="bg-white/20 rounded-xs group-hover:bg-gold/30 transition-colors"
                     style={{
                       width: d.size === "Custom" ? 40 : Math.round(parseInt(d.size.split("×")[0]) / 3.5),
                       height: d.size === "Custom" ? 40 : Math.round(parseInt(d.size.split("×")[1]) / 7),
@@ -896,7 +896,7 @@ export default function CurtainsContent() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.07 }}
-                  className="border border-gray-100 rounded-2xl p-6 hover:border-gold hover:shadow-sm transition-all bg-white"
+                  className="border border-gray-100 rounded-2xl p-6 hover:border-gold hover:shadow-xs transition-all bg-white"
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <span className="w-8 h-8 rounded-lg bg-gold/10 text-gold text-xs font-bold flex items-center justify-center shrink-0">{f.num}</span>
@@ -999,7 +999,7 @@ export default function CurtainsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="bg-white border border-gray-100 rounded-2xl p-5 flex flex-col items-center gap-3 hover:border-gold hover:shadow-sm transition-all"
+                className="bg-white border border-gray-100 rounded-2xl p-5 flex flex-col items-center gap-3 hover:border-gold hover:shadow-xs transition-all"
               >
                 <div className="w-full h-12 flex items-center justify-center">
                   <Image src={c.img} alt={`${c.name} — ${c.full}`} width={80} height={48} className="object-contain max-h-12" />
@@ -1126,7 +1126,7 @@ export default function CurtainsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="bg-white border border-gray-100 rounded-2xl p-6 flex flex-col gap-3 hover:border-gold hover:shadow-sm transition-all"
+                className="bg-white border border-gray-100 rounded-2xl p-6 flex flex-col gap-3 hover:border-gold hover:shadow-xs transition-all"
               >
                 <div className="flex items-center gap-3">
                   <span className="w-10 h-10 rounded-xl bg-slate-100 text-navy-900 text-sm font-bold flex items-center justify-center shrink-0">{p.num}</span>
@@ -1195,7 +1195,7 @@ export default function CurtainsContent() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.07 }}
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow"
               >
                 <Link href={card.href} className="block">
                   <div className="relative h-64 overflow-hidden">

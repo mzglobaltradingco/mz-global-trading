@@ -518,7 +518,7 @@ export default function OurCompanyContent() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-white/20">
+                  <div className="bg-white/10 backdrop-blur-xs rounded-xl px-4 py-3 border border-white/20">
                     <p className="text-white font-bold text-sm">Muhammad Muzammil</p>
                     <p className="text-gold text-xs mt-0.5">Founder &amp; CEO</p>
                   </div>
@@ -595,7 +595,7 @@ export default function OurCompanyContent() {
                 key={card.title}
                 variants={cardVariants}
                 whileHover="hover"
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow"
               >
                 <Link href={card.href} className="block">
                   <div className="relative h-64 overflow-hidden">

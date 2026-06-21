@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -22,7 +22,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -554,7 +554,7 @@ export default function ShortsContent() {
                 </div>
               ))}
             </div>
-            <div className="lg:flex-shrink-0">
+            <div className="lg:shrink-0">
               <Link
                 href="/rfq/"
                 className="inline-flex items-center gap-2 bg-gold text-navy-900 font-bold px-6 py-3 rounded-full hover:bg-yellow-400 transition-colors text-sm"
@@ -757,7 +757,7 @@ export default function ShortsContent() {
             </p>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-0 rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+          <div className="flex flex-col lg:flex-row gap-0 rounded-2xl overflow-hidden border border-gray-100 shadow-xs">
             {/* Left panel — selector */}
             <div className="lg:w-64 xl:w-72 bg-[#080E1A] flex flex-col">
               {CONSTRUCTIONS.map((c) => (
@@ -1352,12 +1352,12 @@ export default function ShortsContent() {
                   transition={{ duration: 0.4, delay: i * 0.08 }}
                   className="relative flex gap-5 sm:gap-8"
                 >
-                  <div className="relative z-10 flex-shrink-0">
+                  <div className="relative z-10 shrink-0">
                     <div className="w-12 h-12 rounded-full bg-white border-2 border-gold flex items-center justify-center shadow-md">
                       <span className="text-xs font-bold text-navy-900">{step.num}</span>
                     </div>
                   </div>
-                  <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-5 flex-1">
+                  <div className="bg-white rounded-xl border border-gray-100 shadow-xs p-5 flex-1">
                     <h3 className="font-bold text-navy-900 text-base mb-1">{step.title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">{step.detail}</p>
                   </div>
@@ -1433,7 +1433,7 @@ export default function ShortsContent() {
               { name: "Pants & Trousers", desc: "Twill, chino and stretch ponte. Business-casual to formal tailored programmes.", href: "/apparel/wovengarments/pantsandtrousers/", img: "/images/hero/hero-pants-trousers.webp", alt: "Pakistan pants and trousers manufacturer — OEM twill and chino trousers for fashion and workwear brands" },
               { name: "Cargo Pants", desc: "Ripstop, canvas and stretch ripstop. Tactical, outdoor and workwear programmes.", href: "/apparel/wovengarments/cargopants/", img: "/images/hero/hero-cargo-pants.webp", alt: "Pakistan cargo pants manufacturer — OEM ripstop and canvas cargo trousers for outdoor brands worldwide" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

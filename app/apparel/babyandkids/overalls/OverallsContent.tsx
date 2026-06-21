@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -18,7 +18,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
       <button
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
-          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -523,7 +523,7 @@ export default function OverallsContent() {
           <div className="space-y-4">
             {GSM_TIERS.map((t, i) => (
               <motion.div key={t.weight} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`rounded-2xl p-6 flex flex-col sm:flex-row gap-6 items-start ${t.featured ? "bg-[#0D1B2A] border border-gold/30" : "bg-white border border-gray-100 shadow-sm"}`}
+                className={`rounded-2xl p-6 flex flex-col sm:flex-row gap-6 items-start ${t.featured ? "bg-[#0D1B2A] border border-gold/30" : "bg-white border border-gray-100 shadow-xs"}`}
               >
                 <div className="shrink-0">
                   <div className={`text-2xl font-bold ${t.featured ? "text-gold" : "text-navy-900"}`}>{t.weight}</div>
@@ -580,11 +580,11 @@ export default function OverallsContent() {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {DYE_OPTIONS.map((d, i) => (
-              <motion.div key={d.name} initial={{ opacity: 0, y: 20, rotate: i === 1 ? -0.5 : 0.5 }} whileInView={{ opacity: 1, y: 0, rotate: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+              <motion.div key={d.name} initial={{ opacity: 0, y: 20, rotate: i === 1 ? -0.5 : 0.5 }} whileInView={{ opacity: 1, y: 0, rotate: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="bg-white rounded-2xl p-6 shadow-xs border border-gray-100">
                 <h3 className="text-sm font-bold text-navy-900 mb-1">{d.name}</h3>
                 <p className="text-xs text-gray-500 mb-4">{d.subtitle}</p>
                 <div className="flex gap-3 mb-4">
-                  {d.swatches.map((s, si) => <div key={si} className={`w-10 h-10 rounded-lg shadow-sm ${s}`} />)}
+                  {d.swatches.map((s, si) => <div key={si} className={`w-10 h-10 rounded-lg shadow-xs ${s}`} />)}
                 </div>
                 <p className="text-xs text-gray-600 leading-relaxed">{d.note}</p>
               </motion.div>
@@ -618,7 +618,7 @@ export default function OverallsContent() {
       {/* ══ SECTION 7 — MARKETS (Split-Screen UI + Cards) ════════════════════ */}
       <section id="section-markets" className="bg-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-gray-100 shadow-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-gray-100 shadow-xs">
             <div className="bg-[#0D1B2A] p-10 lg:p-14">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Export Markets</p>
               <h2 className="text-3xl font-bold text-white mb-4">Global Overalls Markets</h2>
@@ -660,7 +660,7 @@ export default function OverallsContent() {
           </motion.div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {CERTIFICATIONS.map((c, i) => (
-              <motion.div key={c.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }} className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-center">
+              <motion.div key={c.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }} className="bg-white rounded-2xl p-5 shadow-xs border border-gray-100 text-center">
                 <div className="w-12 h-12 relative mx-auto mb-3">
                   <Image src={c.img} fill alt={c.full} className="object-contain" sizes="48px" />
                 </div>
@@ -682,7 +682,7 @@ export default function OverallsContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Export Terms &amp; Packaging</h2>
           </motion.div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2 border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+            <div className="lg:col-span-2 border border-gray-100 rounded-2xl overflow-hidden shadow-xs">
               <table className="w-full text-sm">
                 <thead><tr className="bg-[#0D1B2A]">{["Term", "Full Name", "Point"].map(h => <th key={h} className="text-left px-4 py-3 text-xs font-semibold text-gray-300 uppercase tracking-wider">{h}</th>)}</tr></thead>
                 <tbody className="divide-y divide-gray-50">
@@ -730,7 +730,7 @@ export default function OverallsContent() {
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {SUSTAINABILITY_ITEMS.map((s, i) => (
-              <motion.div key={s.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.07 }} className="bg-white rounded-2xl p-5 flex gap-4 items-start shadow-sm">
+              <motion.div key={s.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.07 }} className="bg-white rounded-2xl p-5 flex gap-4 items-start shadow-xs">
                 <span className="text-3xl shrink-0" aria-hidden="true">{s.icon}</span>
                 <div>
                   <div className="flex items-center gap-2 mb-1"><h3 className="text-sm font-bold text-navy-900">{s.title}</h3></div>
@@ -777,7 +777,7 @@ export default function OverallsContent() {
           </motion.div>
           <div className="flex flex-col gap-3">
             {FAQS.map((f, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.06 }} className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+              <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.06 }} className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-xs">
                 <button className="w-full text-left px-6 py-5 flex items-center justify-between gap-4" onClick={() => setFaqOpen(faqOpen === i ? null : i)} aria-expanded={faqOpen === i}>
                   <span className="text-sm font-semibold text-navy-900 leading-snug">{f.q}</span>
                   <motion.span animate={{ rotate: faqOpen === i ? 45 : 0 }} transition={{ duration: 0.2 }} className="text-gold text-xl font-light shrink-0" aria-hidden="true">+</motion.span>
@@ -810,7 +810,7 @@ export default function OverallsContent() {
               { name: "Baby Bibs", desc: "Terry, velour and silicone bib constructions for newborn to toddler programmes.", href: "/apparel/babyandkids/babybibs/", img: "/images/hero/hero-baby-bibs.webp", alt: "Pakistan baby bib manufacturer — OEM terry and silicone bibs for infant product brands worldwide" },
               { name: "Baby Hooded Towels", desc: "OEKO-TEX terry hooded towels for infants and toddlers. Embroidery and appliqué options.", href: "/apparel/babyandkids/babyhoodedtowels/", img: "/images/hero/hero-baby-hooded-towels.webp", alt: "Pakistan baby hooded towel manufacturer — OEM OEKO-TEX terry hooded towels for infant brands worldwide" },
             ].filter(p => !p.href.includes("overalls")).map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

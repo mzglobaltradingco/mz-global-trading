@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -23,7 +23,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{
           animation: "btt-pulse 2.2s ease-out infinite",
@@ -1163,7 +1163,7 @@ export default function SweatpantsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="bg-white rounded-2xl p-6 border border-rose-100 shadow-sm flex flex-col gap-4"
+                className="bg-white rounded-2xl p-6 border border-rose-100 shadow-xs flex flex-col gap-4"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-xl bg-rose-100 flex items-center justify-center">
@@ -1195,7 +1195,7 @@ export default function SweatpantsContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.35 }}
-              className="bg-navy-900 rounded-2xl p-6 border border-navy-900 shadow-sm flex flex-col gap-4 justify-between"
+              className="bg-navy-900 rounded-2xl p-6 border border-navy-900 shadow-xs flex flex-col gap-4 justify-between"
             >
               <div>
                 <span className="text-3xl" aria-hidden="true">✏️</span>
@@ -1236,7 +1236,7 @@ export default function SweatpantsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-7"
+                className="bg-white/10 backdrop-blur-xs border border-white/20 rounded-2xl p-7"
               >
                 <div className="flex items-center justify-between mb-4">
                   <div>
@@ -1295,7 +1295,7 @@ export default function SweatpantsContent() {
                 Start Your Programme <span aria-hidden="true">→</span>
               </Link>
             </div>
-            <div className="flex flex-col gap-0 divide-y divide-sky-100 bg-white rounded-2xl border border-sky-100 overflow-hidden shadow-sm">
+            <div className="flex flex-col gap-0 divide-y divide-sky-100 bg-white rounded-2xl border border-sky-100 overflow-hidden shadow-xs">
               {OEM_FEATURES.map((f, i) => (
                 <motion.div
                   key={f.num}
@@ -1691,7 +1691,7 @@ export default function SweatpantsContent() {
               { name: "Sweatshirts & Hoodies", desc: "French terry, loop back and bonded fleece. 300–420 GSM. Embroidery and print.", href: "/apparel/knittedgarments/sweatshirtshoodies/", img: "/images/hero/hero-sweatshirts-hoodies.webp", alt: "Pakistan sweatshirt and hoodie manufacturer — OEM French terry and fleece hoodies for sportswear and retail brands" },
               { name: "Tank Tops", desc: "Single jersey, rib and mesh. Athletic and casual lifestyle programmes.", href: "/apparel/knittedgarments/tanktops/", img: "/images/hero/hero-tank-tops.webp", alt: "Pakistan tank top manufacturer — OEM single jersey, rib and mesh tanks for athletic and lifestyle brands" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

@@ -191,7 +191,7 @@ export default function ThermalBlanketsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm"
+                className="bg-white rounded-xl p-6 border border-gray-100 shadow-xs"
               >
                 <span className="text-2xl mb-3 block" aria-hidden="true">{c.icon}</span>
                 <h3 className="text-base font-bold text-navy-900 mb-2">{c.title}</h3>

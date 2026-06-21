@@ -107,9 +107,9 @@ const CountryListItems = memo(function CountryListItems({
                 : "text-gray-700 hover:bg-gray-50"
             }`}
           >
-            <FlagImage iso2={iso2} size="16px" className="flex-shrink-0" />
+            <FlagImage iso2={iso2} size="16px" className="shrink-0" />
             <span className="flex-1 truncate">{name}</span>
-            <span className="text-gray-400 text-xs flex-shrink-0">
+            <span className="text-gray-400 text-xs shrink-0">
               +{dialCode}
             </span>
           </li>
@@ -157,7 +157,7 @@ export function PhoneInputField({
   });
   const wrapperRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
-  const debounceTimer = useRef<ReturnType<typeof setTimeout>>();
+  const debounceTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
   const phoneInputRef = useRef<HTMLInputElement | null>(null);
 
   const { inputValue, country, setCountry, handlePhoneValueChange } =
@@ -265,9 +265,9 @@ export function PhoneInputField({
             aria-expanded={open}
             aria-haspopup="listbox"
             onClick={() => setOpen((o) => !o)}
-            className="flex items-center gap-1.5 pl-3 pr-2.5 py-3 border-r border-gray-200 flex-shrink-0 hover:bg-gray-50 transition-colors rounded-l-lg focus:outline-none focus:ring-2 focus:ring-gold/40 focus:z-10"
+            className="flex items-center gap-1.5 pl-3 pr-2.5 py-3 border-r border-gray-200 shrink-0 hover:bg-gray-50 transition-colors rounded-l-lg focus:outline-none focus:ring-2 focus:ring-gold/40 focus:z-10"
           >
-            <FlagImage iso2={country.iso2} size="16px" className="flex-shrink-0" />
+            <FlagImage iso2={country.iso2} size="16px" className="shrink-0" />
             <span className="text-gray-600 text-xs font-medium">
               +{country.dialCode}
             </span>

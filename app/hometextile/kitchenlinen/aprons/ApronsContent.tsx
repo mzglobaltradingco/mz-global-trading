@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +20,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
       >
         <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
@@ -802,7 +802,7 @@ export default function ApronsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="bg-white rounded-3xl p-8 shadow-sm border border-stone-100 flex gap-5"
+                className="bg-white rounded-3xl p-8 shadow-xs border border-stone-100 flex gap-5"
                 style={{ borderRadius: "24px" }}
               >
                 <div className="w-12 h-12 rounded-2xl bg-navy-900 flex items-center justify-center shrink-0">
@@ -849,7 +849,7 @@ export default function ApronsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="border border-gray-100 rounded-2xl p-6 hover:border-gold hover:shadow-sm transition-all"
+                className="border border-gray-100 rounded-2xl p-6 hover:border-gold hover:shadow-xs transition-all"
               >
                 <h3 className="text-base font-bold text-navy-900 mb-2">{f.name}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed mb-3">{f.desc}</p>
@@ -952,7 +952,7 @@ export default function ApronsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 flex flex-col gap-3"
+                className="bg-white/10 backdrop-blur-xs border border-white/20 rounded-2xl p-5 flex flex-col gap-3"
               >
                 <div className="w-full h-12 bg-white/90 rounded-xl flex items-center justify-center p-2">
                   <Image src={c.img} alt={c.full} width={64} height={40} className="object-contain w-full h-full" />
@@ -980,7 +980,7 @@ export default function ApronsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-gold/30 transition-all"
+                className="rounded-2xl p-6 border border-gray-100 shadow-xs hover:shadow-md hover:border-gold/30 transition-all"
               >
                 <div className="w-10 h-10 rounded-xl bg-navy-900 flex items-center justify-center mb-3">
                   <span className="text-gold text-sm font-bold">{e.term}</span>
@@ -1129,7 +1129,7 @@ export default function ApronsContent() {
               { name: "Bar Mops", desc: "Absorbent cotton bar mops for restaurant, bar and commercial kitchen programmes.", href: "/hometextile/kitchenlinen/barmops/", img: "/images/hero/hero-bar-mops.webp", alt: "Pakistan bar mops manufacturer — OEM cotton bar mops for restaurant and commercial kitchen buyers worldwide" },
               { name: "Pot Holders", desc: "Terry and silicone-lined pot holders. Restaurant and retail programme options.", href: "/hometextile/kitchenlinen/potholders/", img: "/images/hero/hero-pot-holders.webp", alt: "Pakistan pot holders manufacturer — OEM terry and silicone pot holders for kitchen and retail buyers worldwide" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 33vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

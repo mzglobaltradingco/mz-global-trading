@@ -282,7 +282,7 @@ export default function SupplierEvaluationContent() {
                     <div className="grid sm:grid-cols-2 gap-y-2 gap-x-6">
                       {stage.checks.map((check) => (
                         <div key={check} className="flex items-start gap-2.5">
-                          <span className="mt-1 flex-shrink-0 w-4 h-4 rounded-full bg-gold/15 flex items-center justify-center">
+                          <span className="mt-1 shrink-0 w-4 h-4 rounded-full bg-gold/15 flex items-center justify-center">
                             <span className="w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
                           </span>
                           <span className="text-gray-600 text-sm leading-relaxed">{check}</span>
@@ -330,7 +330,7 @@ export default function SupplierEvaluationContent() {
               <motion.div
                 key={crit.title}
                 variants={staggerItemVariants}
-                className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-gold/30 hover:shadow-sm transition-all duration-200 group"
+                className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-gold/30 hover:shadow-xs transition-all duration-200 group"
               >
                 <div className="w-10 h-10 rounded-lg bg-navy-900 flex items-center justify-center text-gold mb-4 group-hover:bg-gold group-hover:text-navy-900 transition-colors">
                   {crit.icon}
@@ -384,7 +384,7 @@ export default function SupplierEvaluationContent() {
                   transition={{ duration: 0.4, delay: i * 0.07 }}
                   className="flex items-start gap-4 bg-navy-800/50 rounded-xl p-5 border border-white/5"
                 >
-                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center">
+                  <div className="shrink-0 w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center">
                     <span className="w-2 h-2 rounded-full bg-gold" aria-hidden="true" />
                   </div>
                   <div>
@@ -428,7 +428,7 @@ export default function SupplierEvaluationContent() {
                 key={card.title}
                 variants={cardVariant}
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow"
               >
                 <Link href={card.href} className="block">
                   <div className="relative h-64 overflow-hidden">

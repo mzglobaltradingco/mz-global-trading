@@ -18,7 +18,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
       <button
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
-          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -543,7 +543,7 @@ export default function SwaddleMuslinContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Standard Swaddle Sizes</h2>
             <p className="text-gray-600 max-w-2xl">US 47″×47″ dominates retail; EU uses 120×120 cm. Custom sizes to any specification.</p>
           </motion.div>
-          <div className="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+          <div className="border border-gray-200 rounded-2xl overflow-hidden shadow-xs">
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-[#0D1B2A]">
@@ -627,12 +627,12 @@ export default function SwaddleMuslinContent() {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {DYE_OPTIONS.map((d, i) => (
-              <motion.div key={d.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="bg-white rounded-2xl p-6 shadow-sm">
+              <motion.div key={d.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="bg-white rounded-2xl p-6 shadow-xs">
                 <h3 className="text-base font-bold text-navy-900 mb-1">{d.name}</h3>
                 <p className="text-xs text-stone-500 mb-4">{d.subtitle}</p>
                 <div className="flex gap-3 mb-4">
                   {d.swatches.map((s, si) => (
-                    <div key={si} className={`w-12 h-12 rounded-xl shadow-sm ${s}`} />
+                    <div key={si} className={`w-12 h-12 rounded-xl shadow-xs ${s}`} />
                   ))}
                 </div>
                 <p className="text-xs text-gray-600 leading-relaxed">{d.note}</p>
@@ -847,7 +847,7 @@ export default function SwaddleMuslinContent() {
           </motion.div>
           <div className="flex flex-col gap-3">
             {FAQS.map((f, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.06 }} className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+              <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.06 }} className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-xs">
                 <button className="w-full text-left px-6 py-5 flex items-center justify-between gap-4" onClick={() => setFaqOpen(faqOpen === i ? null : i)} aria-expanded={faqOpen === i}>
                   <span className="text-sm font-semibold text-navy-900 leading-snug">{f.q}</span>
                   <motion.span animate={{ rotate: faqOpen === i ? 45 : 0 }} transition={{ duration: 0.2 }} className="text-gold text-xl font-light shrink-0" aria-hidden="true">+</motion.span>
@@ -880,7 +880,7 @@ export default function SwaddleMuslinContent() {
               { name: "Baby Bibs", desc: "Terry, velour and silicone bib constructions for newborn to toddler programmes.", href: "/apparel/babyandkids/babybibs/", img: "/images/hero/hero-baby-bibs.webp", alt: "Pakistan baby bib manufacturer — OEM terry and silicone bibs for infant product brands worldwide" },
               { name: "Baby Hooded Towels", desc: "OEKO-TEX terry hooded towels for infants and toddlers. Embroidery and appliqué options.", href: "/apparel/babyandkids/babyhoodedtowels/", img: "/images/hero/hero-baby-hooded-towels.webp", alt: "Pakistan baby hooded towel manufacturer — OEM OEKO-TEX terry hooded towels for infant brands worldwide" },
             ].filter(p => !p.href.includes("swaddlemuslinfabric")).map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

@@ -183,7 +183,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
       <button
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
-          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -553,7 +553,7 @@ export default function BabyHoodedTowelsContent() {
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">{c.desc}</p>
                 <div className="flex flex-wrap gap-2">
                   {c.properties.map((p) => (
-                    <span key={p} className="text-xs bg-white text-gray-600 px-3 py-1 rounded-full shadow-sm">{p}</span>
+                    <span key={p} className="text-xs bg-white text-gray-600 px-3 py-1 rounded-full shadow-xs">{p}</span>
                   ))}
                 </div>
               </motion.div>
@@ -571,7 +571,7 @@ export default function BabyHoodedTowelsContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0D1B2A]">Towel & Hood Sizes by Age Group</h2>
             <p className="text-gray-600 mt-3 text-sm max-w-2xl">Hood depth is proportioned to towel size. Custom hood depth adjustments available with buyer size specification.</p>
           </motion.div>
-          <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
+          <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-xs">
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-[#0D1B2A] text-white text-xs uppercase tracking-wider">
@@ -695,7 +695,7 @@ export default function BabyHoodedTowelsContent() {
                 className="flex flex-col items-center gap-2"
               >
                 <div
-                  className="w-full aspect-square rounded-xl border border-gray-200 shadow-sm"
+                  className="w-full aspect-square rounded-xl border border-gray-200 shadow-xs"
                   style={{ backgroundColor: col.hex === "custom" ? undefined : col.hex }}
                   aria-label={col.name}
                 >
@@ -758,7 +758,7 @@ export default function BabyHoodedTowelsContent() {
               <motion.div
                 key={m.region}
                 initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}
-                className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white border border-gray-100 rounded-2xl p-6 shadow-xs hover:shadow-md transition-shadow"
               >
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-3xl">{m.flag}</span>
@@ -808,7 +808,7 @@ export default function BabyHoodedTowelsContent() {
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Export & Logistics</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0D1B2A]">Lead Times & Shipping Specifications</h2>
           </motion.div>
-          <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+          <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-xs">
             {EXPORT_SPECS.map((s, i) => (
               <motion.div
                 key={s.label}
@@ -934,7 +934,7 @@ export default function BabyHoodedTowelsContent() {
               { name: "Baby Rompers", desc: "Short and long-sleeve rompers in organic cotton jersey. Snap crotch and envelope neck options.", href: "/apparel/babyandkids/babyrompers/", img: "/images/hero/hero-baby-rompers.webp", alt: "Pakistan baby romper manufacturer — OEM organic cotton infant rompers for baby boutiques worldwide" },
               { name: "Baby Bibs", desc: "Terry, velour and silicone bib constructions for newborn to toddler programmes.", href: "/apparel/babyandkids/babybibs/", img: "/images/hero/hero-baby-bibs.webp", alt: "Pakistan baby bib manufacturer — OEM terry and silicone bibs for infant product brands worldwide" },
             ].filter(p => !p.href.includes("babyhoodedtowels")).map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

@@ -257,7 +257,7 @@ export default function InspectionProcessContent() {
                   transition={{ duration: 0.45, delay: i * 0.06 }}
                   className="relative flex gap-6"
                 >
-                  <div className="flex-shrink-0 relative z-10 w-[88px] flex flex-col items-center gap-1.5">
+                  <div className="shrink-0 relative z-10 w-[88px] flex flex-col items-center gap-1.5">
                     <div className="w-14 h-14 rounded-full bg-navy-900 flex items-center justify-center border-2 border-navy-800">
                       <span className="text-gold font-bold text-sm">{step.num}</span>
                     </div>
@@ -266,10 +266,10 @@ export default function InspectionProcessContent() {
                     </span>
                   </div>
 
-                  <div className="flex-1 bg-white rounded-2xl border border-gray-100 p-6 hover:border-gold/30 hover:shadow-sm transition-all duration-200 mb-2">
+                  <div className="flex-1 bg-white rounded-2xl border border-gray-100 p-6 hover:border-gold/30 hover:shadow-xs transition-all duration-200 mb-2">
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                       <h3 className="text-navy-900 font-bold text-base">{step.title}</h3>
-                      <span className="flex-shrink-0 text-gray-400 text-xs bg-gray-50 px-2.5 py-1 rounded-full">{step.timing}</span>
+                      <span className="shrink-0 text-gray-400 text-xs bg-gray-50 px-2.5 py-1 rounded-full">{step.timing}</span>
                     </div>
                     <p className="text-gray-600 text-sm leading-relaxed mb-4">{step.desc}</p>
                     <div className="grid sm:grid-cols-2 gap-3">
@@ -316,7 +316,7 @@ export default function InspectionProcessContent() {
                 <ul className="space-y-2.5">
                   {["PDF inspection report (printable, archivable)", "Photographic evidence pack (ZIP file)", "Defect log spreadsheet (sortable by type/severity)", "Measurement report (Excel format)"].map((f) => (
                     <li key={f} className="flex items-start gap-2.5">
-                      <span className="mt-1 flex-shrink-0 w-4 h-4 rounded-full bg-gold/15 flex items-center justify-center">
+                      <span className="mt-1 shrink-0 w-4 h-4 rounded-full bg-gold/15 flex items-center justify-center">
                         <span className="w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
                       </span>
                       <span className="text-gray-300 text-sm leading-relaxed">{f}</span>
@@ -342,7 +342,7 @@ export default function InspectionProcessContent() {
                   transition={{ duration: 0.4, delay: i * 0.06 }}
                   className="flex items-start gap-4 bg-gray-50 rounded-xl p-4 border border-gray-100"
                 >
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-navy-900 flex items-center justify-center mt-0.5">
+                  <div className="shrink-0 w-6 h-6 rounded-full bg-navy-900 flex items-center justify-center mt-0.5">
                     <span className="text-gold text-[10px] font-bold">{String(i + 1).padStart(2, "0")}</span>
                   </div>
                   <div>
@@ -453,7 +453,7 @@ export default function InspectionProcessContent() {
                 key={card.title}
                 variants={cardVariant}
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow"
               >
                 <Link href={card.href} className="block">
                   <div className="relative h-64 overflow-hidden">

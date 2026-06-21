@@ -8,15 +8,16 @@ import ContentDisclaimer from "@/components/ContentDisclaimer";
 import { GUIDES, getGuide, type ContentBlock } from "@/lib/guides-content";
 
 interface GuidePageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
   return GUIDES.map((g) => ({ slug: g.slug }));
 }
 
-export function generateMetadata({ params }: GuidePageProps): Metadata {
-  const guide = getGuide(params.slug);
+export async function generateMetadata({ params }: GuidePageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const guide = getGuide(slug);
   if (!guide) return {};
   const url = `https://mzglobaltrading.com/guides/${guide.slug}/`;
   return {
@@ -64,7 +65,7 @@ function Block({ block }: { block: ContentBlock }) {
         <ul className="space-y-3 mb-6">
           {block.items.map((item) => (
             <li key={item} className="flex items-start gap-3">
-              <span className="mt-2 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
+              <span className="mt-2 shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
               <span className="text-gray-600 text-base leading-relaxed">{item}</span>
             </li>
           ))}
@@ -75,7 +76,7 @@ function Block({ block }: { block: ContentBlock }) {
         <ol className="space-y-3 mb-6 list-none counter-reset-none">
           {block.items.map((item, i) => (
             <li key={item} className="flex items-start gap-3.5">
-              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-navy-900 text-gold text-xs font-bold flex items-center justify-center mt-0.5">
+              <span className="shrink-0 w-6 h-6 rounded-full bg-navy-900 text-gold text-xs font-bold flex items-center justify-center mt-0.5">
                 {i + 1}
               </span>
               <span className="text-gray-600 text-base leading-relaxed">{item}</span>
@@ -119,11 +120,12 @@ function Block({ block }: { block: ContentBlock }) {
   }
 }
 
-export default function GuidePage({ params }: GuidePageProps) {
-  const guide = getGuide(params.slug);
+export default async function GuidePage({ params }: GuidePageProps) {
+  const { slug } = await params;
+  const guide = getGuide(slug);
   if (!guide) notFound();
   const url = `https://mzglobaltrading.com/guides/${guide.slug}/`;
-  const related = guide.related.map((slug) => getGuide(slug)).filter(Boolean);
+  const related = guide.related.map((s) => getGuide(s)).filter(Boolean);
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -195,7 +197,7 @@ export default function GuidePage({ params }: GuidePageProps) {
               <ShareBar path={`/guides/${guide.slug}/`} title={guide.title} label="Share this guide" />
               <Link
                 href="/guides/"
-                className="inline-flex items-center gap-2 text-navy-900 text-sm font-bold hover:text-gold transition-colors flex-shrink-0"
+                className="inline-flex items-center gap-2 text-navy-900 text-sm font-bold hover:text-gold transition-colors shrink-0"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />

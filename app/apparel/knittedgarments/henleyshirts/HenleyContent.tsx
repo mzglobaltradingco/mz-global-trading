@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -22,7 +22,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{
           boxShadow: dark
@@ -989,7 +989,7 @@ export default function HenleyContent() {
               { label: "Thermal Min.", val: "200 GSM", sub: "For winter positioning" },
               { label: "Constructions", val: "4", sub: "Jersey to French terry" },
             ].map((m) => (
-              <div key={m.label} className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+              <div key={m.label} className="bg-white rounded-2xl p-5 border border-gray-100 shadow-xs">
                 <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">{m.label}</p>
                 <p className="text-2xl font-bold text-navy-900">{m.val}</p>
                 <p className="text-xs text-gray-500 mt-1">{m.sub}</p>
@@ -998,7 +998,7 @@ export default function HenleyContent() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {GSM_TIERS.map((tier) => (
-              <div key={tier.gsm} className={`bg-white rounded-2xl p-7 border-2 ${tier.featured ? "border-gold shadow-lg" : "border-gray-100 shadow-sm"}`}>
+              <div key={tier.gsm} className={`bg-white rounded-2xl p-7 border-2 ${tier.featured ? "border-gold shadow-lg" : "border-gray-100 shadow-xs"}`}>
                 {tier.featured && (
                   <span className="inline-block mb-3 text-[10px] font-bold text-gold bg-gold/10 px-3 py-1 rounded-full uppercase tracking-wider">
                     Most Ordered
@@ -1100,7 +1100,7 @@ export default function HenleyContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 flex flex-col gap-4"
+                className="bg-white/10 backdrop-blur-xs border border-white/20 rounded-2xl p-6 flex flex-col gap-4"
               >
                 <div className="flex gap-2">
                   {d.swatches.map((s, idx) => (
@@ -1154,7 +1154,7 @@ export default function HenleyContent() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.07 }}
-                  className="border border-gray-100 rounded-2xl p-6 hover:border-gold hover:shadow-sm transition-all"
+                  className="border border-gray-100 rounded-2xl p-6 hover:border-gold hover:shadow-xs transition-all"
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <span className="w-8 h-8 rounded-lg bg-gold/10 text-gold text-xs font-bold flex items-center justify-center shrink-0">
@@ -1247,7 +1247,7 @@ export default function HenleyContent() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}
-                className="border border-gray-100 rounded-2xl p-6 flex flex-col gap-3 hover:border-gold hover:shadow-sm transition-all"
+                className="border border-gray-100 rounded-2xl p-6 flex flex-col gap-3 hover:border-gold hover:shadow-xs transition-all"
               >
                 <div className="flex items-start justify-between gap-2">
                   {/* Cert logo */}
@@ -1300,7 +1300,7 @@ export default function HenleyContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-col gap-3"
+                className="bg-white rounded-2xl p-6 border border-gray-100 shadow-xs flex flex-col gap-3"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-xl bg-navy-900 flex items-center justify-center shrink-0">
@@ -1558,7 +1558,7 @@ export default function HenleyContent() {
               { name: "Sweatpants & Joggers", desc: "French terry and brushed fleece. Coordinated set and standalone programmes.", href: "/apparel/knittedgarments/sweatpantsjoggers/", img: "/images/hero/hero-sweatpants-joggers.webp", alt: "Pakistan sweatpants manufacturer — OEM French terry and brushed fleece bottoms for activewear programmes" },
               { name: "Tank Tops", desc: "Single jersey, rib and mesh. Athletic and casual lifestyle programmes.", href: "/apparel/knittedgarments/tanktops/", img: "/images/hero/hero-tank-tops.webp", alt: "Pakistan tank top manufacturer — OEM single jersey, rib and mesh tanks for athletic and lifestyle brands" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

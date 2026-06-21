@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +20,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -856,7 +856,7 @@ export default function TowelsContent() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 border-2 border-gray-100 rounded-3xl overflow-hidden">
             {SECTORS.map((s, i) => (
               <motion.div key={s.name} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.35, delay: i * 0.06 }} className={`p-7 border-b-2 sm:border-r-2 border-gray-100 last:border-b-0 ${i % 3 === 2 ? "sm:border-r-0" : ""} ${i >= 3 ? "sm:border-b-0" : ""} hover:bg-gray-50 transition-colors`}>
-                <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${s.color} flex items-center justify-center text-2xl text-white mb-4 shadow-sm`} aria-hidden="true">{s.icon}</div>
+                <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${s.color} flex items-center justify-center text-2xl text-white mb-4 shadow-xs`} aria-hidden="true">{s.icon}</div>
                 <h3 className="text-base font-bold text-navy-900 mb-2">{s.name}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed mb-3">{s.desc}</p>
                 <p className="text-xs font-semibold text-gold">{s.market}</p>
@@ -994,7 +994,7 @@ export default function TowelsContent() {
       <section id="section-process" className="relative py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/hero/hero-towels.webp" fill alt="Pakistan towel sourcing process — certified mill network managed by MZ Global Trading" className="object-cover" sizes="100vw" />
-          <div className="absolute inset-0 bg-navy-900/80 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-navy-900/80 backdrop-blur-xs" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Sourcing Process</p>
@@ -1070,7 +1070,7 @@ export default function TowelsContent() {
               { name: "Bath Mats", desc: "Tufted terry, chenille and memory foam. Anti-slip backing, custom sizing.", href: "/hometextile/bathlinen/bathmats/", img: "/images/hero/hero-bath-mats.webp", alt: "Pakistan bath mat manufacturer — OEM tufted and chenille bath mats with anti-slip backing for hotel and retail" },
               { name: "Beach & Pool Towels", desc: "Velour, fouta and microfiber. Sublimation and reactive print. Resort programmes.", href: "/hometextile/bathlinen/beachpooltowel/", img: "/images/hero/hero-beach-pool-towels.webp", alt: "Pakistan beach and pool towel manufacturer — OEM velour and sublimation print towels for resort programmes" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

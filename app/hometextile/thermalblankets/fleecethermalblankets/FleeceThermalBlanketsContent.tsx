@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -18,7 +18,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
       <button
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
-          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -831,7 +831,7 @@ export default function FleeceThermalBlanketsContent() {
               { name: "Hospital Linen", desc: "Surgical gowns, medical scrubs, patient gowns and huck towels. ISO certified.", href: "/hometextile/hospitallinen/", img: "/images/hero/hero-hospital-linen.webp", alt: "Pakistan hospital linen manufacturer — OEM surgical gowns and medical scrubs for healthcare buyers worldwide" },
               { name: "Industrial Linen", desc: "Shop towels and fender covers for automotive, maintenance and industrial buyers.", href: "/hometextile/industriallinen/", img: "/images/hero/hero-industrial-linen.webp", alt: "Pakistan industrial linen manufacturer — OEM shop towels and fender covers for automotive buyers worldwide" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 33vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -15,7 +15,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
   return (
     <div className="flex justify-center mt-16">
       <button onClick={() => scrollToId("bento-grid")}
-        className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"}`}
+        className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"}`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}>
         <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75" />
@@ -209,7 +209,7 @@ export default function MedicalScrubsContent() {
               <div className="grid grid-cols-4 gap-2 flex-1">
                 {COLOUR_PROGRAMME.slice(0, 8).map((c) => (
                   <div key={c.name} className="flex flex-col items-center gap-1.5">
-                    <div className={`w-10 h-10 rounded-xl ${c.swatch} shadow-sm`} />
+                    <div className={`w-10 h-10 rounded-xl ${c.swatch} shadow-xs`} />
                     <p className="text-[10px] text-gray-500 text-center leading-tight">{c.name}</p>
                   </div>
                 ))}
@@ -640,7 +640,7 @@ export default function MedicalScrubsContent() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {SECTORS.map((s, i) => (
                 <motion.div key={s.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.07 }}
-                  className="bg-gray-50 rounded-2xl p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                  className="bg-gray-50 rounded-2xl p-5 shadow-xs border border-gray-100 hover:shadow-md transition-shadow">
                   <h3 className="font-bold text-navy-900 mb-2">{s.name}</h3>
                   <p className="text-sm text-gray-500 mb-3">{s.detail}</p>
                   <p className="text-xs font-semibold text-teal-600">{s.market}</p>
@@ -733,7 +733,7 @@ export default function MedicalScrubsContent() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {PROCESS_STEPS.map((step, i) => (
                 <motion.div key={step.num} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.07 }}
-                  className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm" style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.8), 0 2px 8px rgba(0,0,0,0.06)" }}>
+                  className="bg-white rounded-2xl p-6 border border-gray-100 shadow-xs" style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.8), 0 2px 8px rgba(0,0,0,0.06)" }}>
                   <p className="text-4xl font-black text-gray-100 mb-3">{step.num}</p>
                   <h3 className="font-bold text-navy-900 mb-2">{step.title}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>
@@ -785,7 +785,7 @@ export default function MedicalScrubsContent() {
               { name: "Patient Gowns", desc: "Cotton and poly-cotton patient gowns. Open-back and snap fastening options.", href: "/hometextile/hospitallinen/patientgowns/", img: "/images/hero/hero-patient-gowns.webp", alt: "Pakistan patient gowns manufacturer — OEM cotton and poly-cotton hospital gowns for healthcare buyers" },
               { name: "Surgical Huck Towels", desc: "Cotton huck towels for surgical and clinical use. Bulk medical supply programmes.", href: "/hometextile/hospitallinen/surgicalhucktowels/", img: "/images/hero/hero-surgical-huck-towels.webp", alt: "Pakistan surgical huck towels manufacturer — OEM cotton huck towels for hospital and clinic buyers worldwide" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 33vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

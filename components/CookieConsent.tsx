@@ -85,9 +85,9 @@ export default function CookieConsent() {
                 </div>
                 <div
                   aria-label="Essential cookies: always active"
-                  className="flex-shrink-0 w-10 h-6 rounded-full bg-navy-900 flex items-center justify-end pr-1 opacity-50 cursor-not-allowed"
+                  className="shrink-0 w-10 h-6 rounded-full bg-navy-900 flex items-center justify-end pr-1 opacity-50 cursor-not-allowed"
                 >
-                  <div className="w-4 h-4 rounded-full bg-white shadow-sm" />
+                  <div className="w-4 h-4 rounded-full bg-white shadow-xs" />
                 </div>
               </div>
 
@@ -106,11 +106,11 @@ export default function CookieConsent() {
                   aria-checked={analytics}
                   onClick={() => setAnalytics((v) => !v)}
                   aria-label={`Analytics cookies ${analytics ? "on" : "off"}`}
-                  className={`flex-shrink-0 w-10 h-6 rounded-full transition-colors duration-200 flex items-center ${
+                  className={`shrink-0 w-10 h-6 rounded-full transition-colors duration-200 flex items-center ${
                     analytics ? "bg-gold justify-end pr-1" : "bg-gray-200 justify-start pl-1"
                   }`}
                 >
-                  <div className="w-4 h-4 rounded-full bg-white shadow-sm" />
+                  <div className="w-4 h-4 rounded-full bg-white shadow-xs" />
                 </button>
               </div>
             </div>
@@ -147,7 +147,7 @@ export default function CookieConsent() {
           </Link>
           .
         </p>
-        <div className="flex items-center gap-3 flex-shrink-0">
+        <div className="flex items-center gap-3 shrink-0">
           <button
             type="button"
             onClick={() => setPanel((v) => !v)}
@@ -158,7 +158,7 @@ export default function CookieConsent() {
           <button
             type="button"
             onClick={acceptAll}
-            className="px-5 py-2.5 bg-gold text-navy-900 text-sm font-bold rounded-lg hover:bg-yellow-400 transition-colors whitespace-nowrap shadow-sm shadow-gold/20"
+            className="px-5 py-2.5 bg-gold text-navy-900 text-sm font-bold rounded-lg hover:bg-yellow-400 transition-colors whitespace-nowrap shadow-xs shadow-gold/20"
           >
             Accept All
           </button>

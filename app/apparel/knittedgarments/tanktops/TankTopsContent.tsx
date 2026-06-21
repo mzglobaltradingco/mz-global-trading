@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -22,7 +22,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -629,7 +629,7 @@ export default function TankTopsContent() {
               { icon: "📥", label: "Downloads", sub: "Spec sheets and certification docs", href: "/downloads/" },
               { icon: "📋", label: "Quick Start", sub: "Construction, GSM, fit and neckline — RFQ takes 3 minutes.", href: "/rfq/" },
             ].map((r) => (
-              <Link key={r.label} href={r.href} className="group bg-white border border-gray-100 hover:border-gold rounded-2xl p-5 flex items-start gap-4 hover:shadow-sm transition-all">
+              <Link key={r.label} href={r.href} className="group bg-white border border-gray-100 hover:border-gold rounded-2xl p-5 flex items-start gap-4 hover:shadow-xs transition-all">
                 <span className="text-2xl shrink-0" aria-hidden="true">{r.icon}</span>
                 <div>
                   <p className="font-bold text-navy-900 group-hover:text-gold transition-colors text-sm">{r.label}</p>
@@ -1244,7 +1244,7 @@ export default function TankTopsContent() {
               { name: "Sweatshirts & Hoodies", desc: "French terry, loop back and bonded fleece. 300–420 GSM. Embroidery and print.", href: "/apparel/knittedgarments/sweatshirtshoodies/", img: "/images/hero/hero-sweatshirts-hoodies.webp", alt: "Pakistan sweatshirt and hoodie manufacturer — OEM French terry and fleece hoodies for sportswear and retail brands" },
               { name: "Sweatpants & Joggers", desc: "French terry and brushed fleece. Coordinated set and standalone programmes.", href: "/apparel/knittedgarments/sweatpantsjoggers/", img: "/images/hero/hero-sweatpants-joggers.webp", alt: "Pakistan sweatpants manufacturer — OEM French terry and brushed fleece bottoms for activewear programmes" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

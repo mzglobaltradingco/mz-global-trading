@@ -186,7 +186,7 @@ export default function SearchWidget({ onOpen }: { onOpen?: () => void }) {
               className="flex items-center gap-2 px-4 py-3 border-b border-gray-100"
             >
               <svg
-                className="w-4 h-4 text-gray-400 flex-shrink-0"
+                className="w-4 h-4 text-gray-400 shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -245,7 +245,7 @@ export default function SearchWidget({ onOpen }: { onOpen?: () => void }) {
                         className="flex items-start gap-3 px-4 py-3 hover:bg-gray-50 transition-colors group"
                       >
                         <span
-                          className={`flex-shrink-0 mt-0.5 px-1.5 py-0.5 text-[10px] font-semibold rounded tracking-wide whitespace-nowrap ${
+                          className={`shrink-0 mt-0.5 px-1.5 py-0.5 text-[10px] font-semibold rounded tracking-wide whitespace-nowrap ${
                             BADGE[r.category] ?? BADGE.Pages
                           }`}
                         >
@@ -256,7 +256,7 @@ export default function SearchWidget({ onOpen }: { onOpen?: () => void }) {
                             {r.title}
                           </p>
                           <p
-                            className="text-xs text-gray-500 mt-0.5 line-clamp-1 [&_mark]:bg-gold/25 [&_mark]:text-navy-900 [&_mark]:rounded-sm"
+                            className="text-xs text-gray-500 mt-0.5 line-clamp-1 [&_mark]:bg-gold/25 [&_mark]:text-navy-900 [&_mark]:rounded-xs"
                             dangerouslySetInnerHTML={{ __html: r.excerpt }}
                           />
                         </div>

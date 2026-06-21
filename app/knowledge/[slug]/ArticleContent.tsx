@@ -91,7 +91,7 @@ export default function ArticleContent({ post }: ArticleContentProps) {
                     key={tag}
                     className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" aria-hidden="true" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" aria-hidden="true" />
                     {tag}
                   </span>
                 ))}

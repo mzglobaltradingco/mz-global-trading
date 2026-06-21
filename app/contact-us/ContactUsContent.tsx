@@ -217,7 +217,7 @@ export default function ContactUsContent() {
                 </p>
                 <ul className="space-y-6">
                   <li className="flex items-start gap-4">
-                    <span className="mt-0.5 text-gold flex-shrink-0"><IconEmail /></span>
+                    <span className="mt-0.5 text-gold shrink-0"><IconEmail /></span>
                     <div>
                       <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Email</p>
                       <a href="mailto:info@mzglobaltrading.com"
@@ -227,7 +227,7 @@ export default function ContactUsContent() {
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="mt-0.5 text-gold flex-shrink-0"><IconPhone /></span>
+                    <span className="mt-0.5 text-gold shrink-0"><IconPhone /></span>
                     <div>
                       <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Phone</p>
                       <a href="tel:+923008256203"
@@ -237,7 +237,7 @@ export default function ContactUsContent() {
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="mt-0.5 text-gold flex-shrink-0"><IconPin /></span>
+                    <span className="mt-0.5 text-gold shrink-0"><IconPin /></span>
                     <div>
                       <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Office</p>
                       <p className="text-navy-900 text-sm font-medium leading-relaxed">
@@ -248,7 +248,7 @@ export default function ContactUsContent() {
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="mt-0.5 text-gold flex-shrink-0"><IconClock /></span>
+                    <span className="mt-0.5 text-gold shrink-0"><IconClock /></span>
                     <div>
                       <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Business Hours</p>
                       <p className="text-navy-900 text-sm font-medium leading-relaxed">
@@ -286,7 +286,7 @@ export default function ContactUsContent() {
               </p>
 
               <div className="bg-gold/5 border border-gold/20 rounded-xl px-5 py-4 flex items-start gap-3 mb-6">
-                <svg className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
+                <svg className="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
                 <div>
                   <p className="text-sm font-semibold text-navy-900">Have questions before getting in touch?</p>
                   <p className="text-xs text-gray-500 mt-0.5">Browse our <Link href="/faqs/" className="text-gold hover:underline font-semibold">Frequently Asked Questions</Link> — sourcing process, lead times, certifications, and ordering covered.</p>
@@ -480,7 +480,7 @@ export default function ContactUsContent() {
             </p>
           </div>
           <Link href="/rfq/"
-            className="flex-shrink-0 inline-flex items-center gap-2 px-7 py-3.5 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors whitespace-nowrap">
+            className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors whitespace-nowrap">
             Request a Quote →
           </Link>
         </div>

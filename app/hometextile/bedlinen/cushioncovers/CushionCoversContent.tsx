@@ -20,7 +20,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -800,7 +800,7 @@ export default function CushionCoversContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 flex flex-col gap-4"
+                className="bg-white/10 backdrop-blur-xs border border-white/20 rounded-2xl p-6 flex flex-col gap-4"
               >
                 <div className="flex gap-2">
                   {p.swatches.map((s, idx) => (
@@ -842,7 +842,7 @@ export default function CushionCoversContent() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.07 }}
-                  className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-gold hover:shadow-sm transition-all flex items-start gap-4"
+                  className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-gold hover:shadow-xs transition-all flex items-start gap-4"
                 >
                   <span className="w-10 h-10 rounded-xl bg-gold/10 text-gold text-sm font-bold flex items-center justify-center shrink-0">{m.num}</span>
                   <div>
@@ -908,7 +908,7 @@ export default function CushionCoversContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 flex flex-col items-center gap-3 hover:bg-white/20 transition-colors"
+                className="bg-white/10 backdrop-blur-xs border border-white/20 rounded-2xl p-5 flex flex-col items-center gap-3 hover:bg-white/20 transition-colors"
               >
                 <div className="w-full h-12 flex items-center justify-center">
                   <Image src={c.img} alt={`${c.name} — ${c.full}`} width={80} height={48} className="object-contain max-h-12" />
@@ -1015,7 +1015,7 @@ export default function CushionCoversContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="bg-white border border-gray-100 rounded-2xl p-6 flex flex-col gap-3 hover:border-gold hover:shadow-sm transition-all"
+                className="bg-white border border-gray-100 rounded-2xl p-6 flex flex-col gap-3 hover:border-gold hover:shadow-xs transition-all"
               >
                 <span className="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 text-sm font-bold flex items-center justify-center">{p.num}</span>
                 <h3 className="text-base font-bold text-navy-900">{p.title}</h3>
@@ -1082,7 +1082,7 @@ export default function CushionCoversContent() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.07 }}
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow"
               >
                 <Link href={card.href} className="block">
                   <div className="relative h-64 overflow-hidden">

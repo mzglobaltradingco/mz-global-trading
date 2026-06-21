@@ -56,7 +56,7 @@ export default function FeaturedBanner({ post }: FeaturedBannerProps) {
             </div>
 
             {/* Image panel — shows post thumbnail if available, icon fallback otherwise */}
-            <div className="hidden lg:block w-56 h-44 flex-shrink-0 rounded-xl overflow-hidden border border-white/10 relative">
+            <div className="hidden lg:block w-56 h-44 shrink-0 rounded-xl overflow-hidden border border-white/10 relative">
               {post.image ? (
                 <Image
                   src={post.image}

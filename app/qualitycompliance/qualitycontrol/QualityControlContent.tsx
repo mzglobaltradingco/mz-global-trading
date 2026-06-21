@@ -217,7 +217,7 @@ export default function QualityControlContent() {
                   variants={staggerItemVariants}
                   className="flex items-start gap-4 bg-gray-50 rounded-xl p-4 border border-gray-100"
                 >
-                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-xs">
+                  <span className="shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-xs">
                     {item.icon}
                   </span>
                   <div>
@@ -250,7 +250,7 @@ export default function QualityControlContent() {
           </motion.div>
 
           {/* Phase tab selector */}
-          <div className="flex flex-col sm:flex-row bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden mb-6">
+          <div className="flex flex-col sm:flex-row bg-white rounded-xl border border-gray-100 shadow-xs overflow-hidden mb-6">
             {phases.map((phase) => (
               <button
                 key={phase.id}
@@ -293,7 +293,7 @@ export default function QualityControlContent() {
                   <div className="grid sm:grid-cols-2 gap-y-2.5 gap-x-8">
                     {phase.checks.map((check) => (
                       <div key={check} className="flex items-start gap-3">
-                        <span className="mt-1 flex-shrink-0 w-4 h-4 rounded-full bg-gold/15 flex items-center justify-center">
+                        <span className="mt-1 shrink-0 w-4 h-4 rounded-full bg-gold/15 flex items-center justify-center">
                           <span className="w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
                         </span>
                         <span className="text-gray-600 text-sm leading-relaxed">{check}</span>
@@ -334,7 +334,7 @@ export default function QualityControlContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={viewportOnce}
             transition={{ duration: 0.5 }}
-            className="rounded-2xl border border-gray-200 overflow-hidden shadow-sm"
+            className="rounded-2xl border border-gray-200 overflow-hidden shadow-xs"
           >
             <div className="grid grid-cols-3 bg-navy-900 px-6 py-4">
               <p className="text-gold text-xs font-semibold uppercase tracking-widest">AQL Level</p>
@@ -414,7 +414,7 @@ export default function QualityControlContent() {
                 <ul className="space-y-2.5">
                   {group.items.map((item) => (
                     <li key={item} className="flex items-start gap-2.5">
-                      <span className="mt-1 flex-shrink-0 w-3.5 h-3.5 rounded-full bg-gold/15 flex items-center justify-center">
+                      <span className="mt-1 shrink-0 w-3.5 h-3.5 rounded-full bg-gold/15 flex items-center justify-center">
                         <span className="w-1 h-1 rounded-full bg-gold" aria-hidden="true" />
                       </span>
                       <span className="text-gray-600 text-sm leading-relaxed">{item}</span>
@@ -503,7 +503,7 @@ export default function QualityControlContent() {
                 key={card.title}
                 variants={cardVariant}
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow"
               >
                 <Link href={card.href} className="block">
                   <div className="relative h-64 overflow-hidden">

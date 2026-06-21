@@ -102,7 +102,7 @@ export default function WhyUs() {
               <div className="flex items-start gap-4">
                 <motion.div
                   variants={iconVariants}
-                  className="flex-shrink-0 w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center group-hover:bg-gold/20 transition-colors"
+                  className="shrink-0 w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center group-hover:bg-gold/20 transition-colors"
                 >
                   <Image src={r.icon} alt={r.title} width={28} height={28} />
                 </motion.div>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -22,7 +22,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -588,7 +588,7 @@ export default function BathMatsContent() {
               { icon: "📥", label: "Downloads", sub: "Specification sheets and testing documentation", href: "/downloads/" },
               { icon: "📋", label: "Quick Start", sub: "Construction, GSM, backing, size — RFQ takes 3 minutes.", href: "/rfq/" },
             ].map((r) => (
-              <Link key={r.label} href={r.href} className="group bg-white border border-gray-100 hover:border-gold rounded-2xl p-5 flex items-start gap-4 hover:shadow-sm transition-all">
+              <Link key={r.label} href={r.href} className="group bg-white border border-gray-100 hover:border-gold rounded-2xl p-5 flex items-start gap-4 hover:shadow-xs transition-all">
                 <span className="text-2xl shrink-0" aria-hidden="true">{r.icon}</span>
                 <div>
                   <p className="font-bold text-navy-900 group-hover:text-gold transition-colors text-sm">{r.label}</p>
@@ -914,7 +914,7 @@ export default function BathMatsContent() {
             {CERTIFICATIONS.map((c, i) => (
               <motion.div key={c.name}
                 initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-sky-200 hover:border-gold transition-all flex flex-col gap-2"
+                className="bg-white/80 backdrop-blur-xs rounded-2xl p-5 border border-sky-200 hover:border-gold transition-all flex flex-col gap-2"
               >
                 <div className="flex items-center justify-between">
                   <p className="font-bold text-navy-900 text-sm">{c.name}</p>
@@ -1203,7 +1203,7 @@ export default function BathMatsContent() {
               { name: "Bathrobes", desc: "Terry loop, velour, waffle and microfleece. Shawl, kimono and hooded collars.", href: "/hometextile/bathlinen/bathrobes/", img: "/images/hero/hero-bathrobes.webp", alt: "Pakistan bathrobe manufacturer — OEM terry and velour bathrobes for hotels and retail brands worldwide" },
               { name: "Beach & Pool Towels", desc: "Velour, fouta and sublimation print. 350–500 GSM. All-over print and yarn-dyed stripe.", href: "/hometextile/bathlinen/beachpooltowel/", img: "/images/hero/hero-beach-pool-towels.webp", alt: "Pakistan beach towel manufacturer — OEM velour and fouta beach towels for retail and resort brands" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

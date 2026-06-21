@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +20,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -627,7 +627,7 @@ export default function PoloContent() {
           <p className="text-gray-500 mb-12 max-w-2xl leading-relaxed">Fit selection determines the commercial positioning of your polo programme. Each fit serves a distinct buyer segment with different expectations for cut, comfort and appearance.</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
             {FIT_PROFILES.map((f, i) => (
-              <motion.div key={f.code} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+              <motion.div key={f.code} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-lg transition-shadow">
                 <div className={`bg-gradient-to-br ${f.gradient} p-8 text-white`}>
                   <div className="flex items-center gap-3 mb-3">
                     <span className="w-12 h-12 rounded-xl bg-white/20 text-white text-sm font-black flex items-center justify-center">{f.code}</span>
@@ -671,7 +671,7 @@ export default function PoloContent() {
           <p className="text-white/50 mb-14 max-w-2xl leading-relaxed">GSM determines season positioning, hand-feel, decoration receptivity and retail price tier. Standard piqué polo programmes sit at 190–220 GSM.</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {GSM_TIERS.map((tier, i) => (
-              <motion.div key={tier.gsm} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.12 }} className={`rounded-2xl p-7 border ${tier.featured ? "bg-white text-navy-900 border-white shadow-2xl" : "bg-white/8 border-white/15 text-white backdrop-blur-sm"}`}>
+              <motion.div key={tier.gsm} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.12 }} className={`rounded-2xl p-7 border ${tier.featured ? "bg-white text-navy-900 border-white shadow-2xl" : "bg-white/8 border-white/15 text-white backdrop-blur-xs"}`}>
                 {tier.featured && <span className="inline-block mb-3 text-[10px] font-bold bg-gold text-navy-900 px-3 py-1 rounded-full uppercase tracking-wider">Most Ordered</span>}
                 <p className="text-4xl font-black mb-1" style={{ color: tier.featured ? "#0D1B2A" : tier.accent }}>{tier.gsm}</p>
                 <p className={`text-xs font-bold uppercase tracking-wider mb-4 ${tier.featured ? "text-gray-400" : "text-white/40"}`}>{tier.name}</p>
@@ -839,7 +839,7 @@ export default function PoloContent() {
                 <div className="flex-1">
                   <div className="flex items-center gap-3 flex-wrap">
                     <p className="font-bold text-navy-900">{c.full}</p>
-                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-sm uppercase tracking-wider ${c.tier === "Premium" ? "bg-navy-900 text-gold" : c.tier === "Optional" ? "bg-gray-200 text-gray-600" : "bg-gray-100 text-gray-700"}`}>{c.tier}</span>
+                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-xs uppercase tracking-wider ${c.tier === "Premium" ? "bg-navy-900 text-gold" : c.tier === "Optional" ? "bg-gray-200 text-gray-600" : "bg-gray-100 text-gray-700"}`}>{c.tier}</span>
                   </div>
                   <p className="text-sm text-gray-500 mt-0.5">{c.desc}</p>
                 </div>
@@ -1019,7 +1019,7 @@ export default function PoloContent() {
               { name: "Sweatpants & Joggers", desc: "French terry and brushed fleece. Coordinated set and standalone programmes.", href: "/apparel/knittedgarments/sweatpantsjoggers/", img: "/images/hero/hero-sweatpants-joggers.webp", alt: "Pakistan sweatpants manufacturer — OEM French terry and brushed fleece bottoms for activewear programmes" },
               { name: "Tank Tops", desc: "Single jersey, rib and mesh. Athletic and casual lifestyle programmes.", href: "/apparel/knittedgarments/tanktops/", img: "/images/hero/hero-tank-tops.webp", alt: "Pakistan tank top manufacturer — OEM single jersey, rib and mesh tanks for athletic and lifestyle brands" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

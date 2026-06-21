@@ -276,7 +276,7 @@ export default function DownloadsContent() {
       <section className="py-10 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-center gap-6">
-            <p className="text-white font-bold text-sm flex-shrink-0">Most Used:</p>
+            <p className="text-white font-bold text-sm shrink-0">Most Used:</p>
             <motion.div
               variants={staggerContainerVariants}
               initial="hidden"
@@ -291,7 +291,7 @@ export default function DownloadsContent() {
                     className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/10 rounded-lg text-white text-xs font-medium transition-colors"
                   >
                     <span
-                      className={`w-5 h-5 rounded flex items-center justify-center flex-shrink-0 ${kindStyles[doc.kind].icon}`}
+                      className={`w-5 h-5 rounded flex items-center justify-center shrink-0 ${kindStyles[doc.kind].icon}`}
                     >
                       <KindIcon kind={doc.kind} className="w-3.5 h-3.5" />
                     </span>
@@ -324,7 +324,7 @@ export default function DownloadsContent() {
                 onClick={() => setActiveCategory(cat.id)}
                 className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${
                   activeCategory === cat.id
-                    ? "bg-navy-900 text-white shadow-sm"
+                    ? "bg-navy-900 text-white shadow-xs"
                     : "bg-white text-gray-600 border border-gray-200 hover:border-navy-900 hover:text-navy-900"
                 }`}
               >
@@ -354,7 +354,7 @@ export default function DownloadsContent() {
                   <div className="p-6 flex flex-col flex-1">
                     <div className="flex items-start justify-between gap-3 mb-4">
                       <div
-                        className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${kindStyles[doc.kind].icon}`}
+                        className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${kindStyles[doc.kind].icon}`}
                       >
                         <KindIcon kind={doc.kind} className="w-5 h-5" />
                       </div>

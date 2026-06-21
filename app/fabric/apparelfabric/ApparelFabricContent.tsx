@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -22,7 +22,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{
           boxShadow: dark
@@ -1277,7 +1277,7 @@ export default function ApparelFabricContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.08 }}
-                className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm"
+                className="bg-white rounded-2xl p-6 border border-gray-100 shadow-xs"
               >
                 <div className="flex items-center justify-between mb-4">
                   <div>
@@ -1389,7 +1389,7 @@ export default function ApparelFabricContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.07 }}
-                className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-col gap-4"
+                className="bg-white rounded-2xl p-6 border border-gray-100 shadow-xs flex flex-col gap-4"
               >
                 <div className="flex items-center gap-3">
                   <span className="text-2xl" aria-hidden="true">{d.icon}</span>
@@ -1397,7 +1397,7 @@ export default function ApparelFabricContent() {
                 </div>
                 <div className="flex gap-1.5">
                   {d.swatches.map((s, j) => (
-                    <div key={j} className={`w-5 h-5 rounded-full ${s} border border-white shadow-sm`} aria-hidden="true" />
+                    <div key={j} className={`w-5 h-5 rounded-full ${s} border border-white shadow-xs`} aria-hidden="true" />
                   ))}
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">{d.desc}</p>
@@ -1405,7 +1405,7 @@ export default function ApparelFabricContent() {
               </motion.div>
             ))}
           </div>
-          <div className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm">
+          <div className="bg-white rounded-2xl p-7 border border-gray-100 shadow-xs">
             <h3 className="font-bold text-navy-900 text-lg mb-3">Colour Matching Standards</h3>
             <div className="grid sm:grid-cols-3 gap-5">
               {[
@@ -1515,7 +1515,7 @@ export default function ApparelFabricContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.07 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4"
+                className="bg-white/5 backdrop-blur-xs border border-white/10 rounded-2xl p-6 flex flex-col gap-4"
               >
                 <div
                   className="bg-white rounded-xl flex items-center justify-center"
@@ -1772,7 +1772,7 @@ export default function ApparelFabricContent() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.08 }}
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow"
               >
                 <Link href={card.href} className="block">
                   <div className="relative h-56 overflow-hidden">

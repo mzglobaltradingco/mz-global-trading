@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +20,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -675,7 +675,7 @@ export default function FormalShirtsContent() {
               transition={{ duration: 0.22 }}
               className="grid lg:grid-cols-3 gap-6"
             >
-              <div className="lg:col-span-2 border border-gray-100 rounded-2xl p-8 shadow-sm">
+              <div className="lg:col-span-2 border border-gray-100 rounded-2xl p-8 shadow-xs">
                 <div className="flex items-center gap-3 flex-wrap mb-6">
                   <h3 className="text-2xl font-bold text-navy-900">{ac.name}</h3>
                   {ac.badge && (
@@ -699,19 +699,19 @@ export default function FormalShirtsContent() {
                 </div>
               </div>
               <div className="flex flex-col gap-4">
-                <div className="border border-gray-100 rounded-2xl p-6 shadow-sm">
+                <div className="border border-gray-100 rounded-2xl p-6 shadow-xs">
                   <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-3">Best For</p>
                   <div className="flex flex-wrap gap-2">
                     {ac.best.map((b) => <span key={b} className="text-xs text-navy-900 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full">{b}</span>)}
                   </div>
                 </div>
-                <div className="border border-gray-100 rounded-2xl p-6 shadow-sm">
+                <div className="border border-gray-100 rounded-2xl p-6 shadow-xs">
                   <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-3">Key Markets</p>
                   <div className="flex flex-wrap gap-2">
                     {ac.markets.map((m) => <span key={m} className="text-xs text-gold bg-gold/10 border border-gold/20 px-3 py-1 rounded-full">{m}</span>)}
                   </div>
                 </div>
-                <div className="border border-gray-100 rounded-2xl p-6 shadow-sm">
+                <div className="border border-gray-100 rounded-2xl p-6 shadow-xs">
                   <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-3">Decoration</p>
                   <div className="flex flex-col gap-1.5">
                     {ac.decorations.map((d) => (
@@ -799,7 +799,7 @@ export default function FormalShirtsContent() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
             {GSM_TIERS.map((tier) => (
-              <div key={tier.gsm} className={`bg-white rounded-2xl p-7 border-2 ${tier.featured ? "border-gold shadow-lg" : "border-gray-100 shadow-sm"}`}>
+              <div key={tier.gsm} className={`bg-white rounded-2xl p-7 border-2 ${tier.featured ? "border-gold shadow-lg" : "border-gray-100 shadow-xs"}`}>
                 {tier.featured && (
                   <span className="inline-block mb-3 text-[10px] font-bold text-gold bg-gold/10 px-3 py-1 rounded-full uppercase tracking-wider">Most Ordered</span>
                 )}
@@ -875,7 +875,7 @@ export default function FormalShirtsContent() {
                   <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Compatible Constructions</p>
                   <div className="flex flex-wrap gap-2">
                     {d.compat.map((c) => (
-                      <span key={c} className="text-xs bg-white text-gray-600 border border-gray-200 px-2.5 py-1 rounded-full shadow-sm">{c}</span>
+                      <span key={c} className="text-xs bg-white text-gray-600 border border-gray-200 px-2.5 py-1 rounded-full shadow-xs">{c}</span>
                     ))}
                   </div>
                 </div>
@@ -910,7 +910,7 @@ export default function FormalShirtsContent() {
               >
                 <div className="flex gap-2">
                   {d.swatches.map((s, idx) => (
-                    <div key={idx} className={`w-7 h-7 rounded-full border-2 border-white/20 shadow-sm ${s}`} aria-hidden="true" />
+                    <div key={idx} className={`w-7 h-7 rounded-full border-2 border-white/20 shadow-xs ${s}`} aria-hidden="true" />
                   ))}
                 </div>
                 <div>
@@ -988,7 +988,7 @@ export default function FormalShirtsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md hover:border-gold/30 transition-all"
+                className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-xs hover:shadow-md hover:border-gold/30 transition-all"
               >
                 <div className={`${s.color} px-6 py-4 flex items-center gap-3`}>
                   <span className="text-2xl font-bold text-white">{s.abbr}</span>
@@ -1003,7 +1003,7 @@ export default function FormalShirtsContent() {
           </div>
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
             {[["USA / Canada", "Primary Market"], ["UK / Europe", "Key Market"], ["Middle East", "Major Market"], ["Asia / Oceania", "Growth Market"]].map(([region, tier]) => (
-              <div key={region} className="bg-white border border-gray-100 rounded-xl p-4 text-center shadow-sm">
+              <div key={region} className="bg-white border border-gray-100 rounded-xl p-4 text-center shadow-xs">
                 <p className="text-navy-900 font-semibold text-sm">{region}</p>
                 <p className="text-gold text-xs mt-1">{tier}</p>
               </div>
@@ -1067,7 +1067,7 @@ export default function FormalShirtsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.35, delay: i * 0.06 }}
-                className="border border-gray-100 rounded-2xl p-4 flex flex-col gap-3 hover:border-gold hover:shadow-sm transition-all"
+                className="border border-gray-100 rounded-2xl p-4 flex flex-col gap-3 hover:border-gold hover:shadow-xs transition-all"
               >
                 <div className="rounded-xl border border-gray-100 bg-gray-50 flex items-center justify-center p-2" style={{ height: 52 }}>
                   <Image src={c.img} alt={`${c.name} — ${c.full}`} width={64} height={44} className="object-contain w-full h-full" />
@@ -1088,7 +1088,7 @@ export default function FormalShirtsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.35, delay: i * 0.06 }}
-                className="border border-gray-100 rounded-2xl p-4 flex flex-col gap-3 hover:border-gold hover:shadow-sm transition-all"
+                className="border border-gray-100 rounded-2xl p-4 flex flex-col gap-3 hover:border-gold hover:shadow-xs transition-all"
               >
                 <div className="rounded-xl border border-gray-100 bg-gray-50 flex items-center justify-center p-2" style={{ height: 52 }}>
                   <Image src={c.img} alt={`${c.name} — ${c.full}`} width={64} height={44} className="object-contain w-full h-full" />
@@ -1120,7 +1120,7 @@ export default function FormalShirtsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex flex-col gap-3"
+                className="bg-white rounded-2xl p-5 border border-gray-100 shadow-xs flex flex-col gap-3"
               >
                 <div className="w-12 h-12 rounded-xl bg-navy-900 flex items-center justify-center">
                   <span className="text-gold text-sm font-bold">{e.term}</span>
@@ -1258,7 +1258,7 @@ export default function FormalShirtsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm hover:shadow-md hover:border-gold/20 transition-all flex flex-col gap-4"
+                className="bg-white rounded-2xl p-7 border border-gray-100 shadow-xs hover:shadow-md hover:border-gold/20 transition-all flex flex-col gap-4"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-gold/10 border-2 border-gold/30 flex items-center justify-center shrink-0">
@@ -1351,7 +1351,7 @@ export default function FormalShirtsContent() {
               { name: "Cargo Pants", desc: "Ripstop, canvas and stretch ripstop. Tactical, outdoor and trade workwear programmes.", href: "/apparel/wovengarments/cargopants/", img: "/images/hero/hero-cargo-pants.webp", alt: "Pakistan cargo pants manufacturer — OEM ripstop and canvas cargo trousers for outdoor and workwear brands" },
               { name: "Shorts", desc: "Chino, canvas, linen and nylon. Casual, athletic and resort wear programmes.", href: "/apparel/wovengarments/shorts/", img: "/images/hero/hero-shorts.webp", alt: "Pakistan shorts manufacturer — OEM chino and linen shorts for casual and resort wear brands worldwide" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

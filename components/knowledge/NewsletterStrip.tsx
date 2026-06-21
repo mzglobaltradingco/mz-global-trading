@@ -49,7 +49,7 @@ export default function NewsletterStrip() {
             <button
               onClick={handleCopy}
               aria-label={copied ? "Feed URL copied" : "Copy feed URL"}
-              className="flex items-center justify-center gap-2 px-5 py-2.5 bg-gold text-navy-900 text-sm font-bold rounded-lg hover:bg-yellow-400 transition-colors whitespace-nowrap flex-shrink-0"
+              className="flex items-center justify-center gap-2 px-5 py-2.5 bg-gold text-navy-900 text-sm font-bold rounded-lg hover:bg-yellow-400 transition-colors whitespace-nowrap shrink-0"
             >
               {copied ? (
                 <>

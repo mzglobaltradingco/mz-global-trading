@@ -20,7 +20,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -641,7 +641,7 @@ export default function TShirtsForKidsContent() {
               <motion.div
                 key={c.id}
                 initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.07 }}
-                className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm"
+                className="bg-white rounded-2xl p-6 border border-gray-100 shadow-xs"
               >
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-3xl" aria-hidden="true">{c.icon}</span>
@@ -739,7 +739,7 @@ export default function TShirtsForKidsContent() {
               <motion.div
                 key={t.gsm}
                 initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`rounded-2xl p-7 relative overflow-hidden ${t.featured ? "bg-[#0D1B2A] text-white" : "bg-white border border-gray-100 shadow-sm"}`}
+                className={`rounded-2xl p-7 relative overflow-hidden ${t.featured ? "bg-[#0D1B2A] text-white" : "bg-white border border-gray-100 shadow-xs"}`}
               >
                 {t.featured && <div className="absolute top-4 right-4 text-[10px] font-bold text-navy-900 bg-gold px-2.5 py-1 rounded-full">Primary Range</div>}
                 <div className="text-3xl font-bold mb-1" style={{ color: t.featured ? "#D4A017" : "#0D1B2A" }}>{t.gsm}</div>
@@ -773,7 +773,7 @@ export default function TShirtsForKidsContent() {
                 whileInView={{ opacity: 1, y: 0, rotate: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-sm border border-rose-50"
+                className="bg-white rounded-2xl p-6 shadow-xs border border-rose-50"
               >
                 <div className="flex items-start gap-4">
                   <span className="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 text-sm font-bold flex items-center justify-center shrink-0">{d.code}</span>
@@ -813,13 +813,13 @@ export default function TShirtsForKidsContent() {
               <motion.div
                 key={d.name}
                 initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6"
+                className="bg-white/10 backdrop-blur-xs border border-white/10 rounded-2xl p-6"
               >
                 <h3 className="text-base font-bold text-white mb-1">{d.name}</h3>
                 <p className="text-xs text-gold/80 mb-4">{d.subtitle}</p>
                 <div className="flex gap-2.5 mb-4">
                   {d.swatches.map((s, si) => (
-                    <div key={si} className={`w-10 h-10 rounded-xl shadow-sm ${s}`} />
+                    <div key={si} className={`w-10 h-10 rounded-xl shadow-xs ${s}`} />
                   ))}
                 </div>
                 <p className="text-xs text-gray-300 leading-relaxed">{d.note}</p>
@@ -923,7 +923,7 @@ export default function TShirtsForKidsContent() {
               <motion.div
                 key={c.name}
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.07 }}
-                className="backdrop-blur-md bg-white/60 border border-white/70 rounded-2xl p-5 shadow-sm"
+                className="backdrop-blur-md bg-white/60 border border-white/70 rounded-2xl p-5 shadow-xs"
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-10 h-10 relative shrink-0">
@@ -1031,7 +1031,7 @@ export default function TShirtsForKidsContent() {
               <motion.div
                 key={s.title}
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.08 }}
-                className="bg-white rounded-2xl p-6 shadow-sm"
+                className="bg-white rounded-2xl p-6 shadow-xs"
               >
                 <div className="text-3xl mb-3" aria-hidden="true">{s.icon}</div>
                 <div className="flex items-center gap-2 mb-2">
@@ -1065,7 +1065,7 @@ export default function TShirtsForKidsContent() {
                 >
                   <div className={`flex-1 ${i % 2 === 1 ? "lg:text-right" : ""}`}>
                     <div className={`inline-flex items-center gap-3 mb-3 ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
-                      <span className="w-10 h-10 rounded-full bg-sky-100 text-sky-700 text-sm font-bold flex items-center justify-center shadow-sm">{p.num}</span>
+                      <span className="w-10 h-10 rounded-full bg-sky-100 text-sky-700 text-sm font-bold flex items-center justify-center shadow-xs">{p.num}</span>
                       <h3 className="text-base font-bold text-navy-900">{p.title}</h3>
                     </div>
                     <p className="text-sm text-gray-600 leading-relaxed">{p.desc}</p>
@@ -1094,7 +1094,7 @@ export default function TShirtsForKidsContent() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.06 }}
-                className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm"
+                className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-xs"
               >
                 <button
                   className="w-full text-left px-6 py-5 flex items-center justify-between gap-4"
@@ -1141,7 +1141,7 @@ export default function TShirtsForKidsContent() {
               { name: "Baby Bibs", desc: "Terry, velour and silicone bib constructions for newborn to toddler programmes.", href: "/apparel/babyandkids/babybibs/", img: "/images/hero/hero-baby-bibs.webp", alt: "Pakistan baby bib manufacturer — OEM terry and silicone bibs for infant product brands worldwide" },
               { name: "Baby Hooded Towels", desc: "OEKO-TEX terry hooded towels for infants and toddlers. Embroidery and appliqué options.", href: "/apparel/babyandkids/babyhoodedtowels/", img: "/images/hero/hero-baby-hooded-towels.webp", alt: "Pakistan baby hooded towel manufacturer — OEM OEKO-TEX terry hooded towels for infant brands worldwide" },
             ].filter(p => !p.href.includes("tshirtsforkids")).map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

@@ -112,7 +112,7 @@ function ResultCard({ result }: { result: SearchResult }) {
         {result.title}
       </h3>
       <p
-        className="text-sm text-gray-500 leading-relaxed line-clamp-3 flex-1 [&_mark]:bg-gold/25 [&_mark]:text-navy-900 [&_mark]:rounded-sm"
+        className="text-sm text-gray-500 leading-relaxed line-clamp-3 flex-1 [&_mark]:bg-gold/25 [&_mark]:text-navy-900 [&_mark]:rounded-xs"
         dangerouslySetInnerHTML={{ __html: result.excerpt }}
       />
       <span className="inline-flex items-center gap-1 text-xs font-semibold text-gold mt-auto">
@@ -143,19 +143,19 @@ function CategorySection({
     <section>
       <div className="flex items-center gap-3 mb-5">
         <span
-          className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-lg tracking-wide flex-shrink-0 ${meta.badge}`}
+          className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-lg tracking-wide shrink-0 ${meta.badge}`}
         >
           {meta.icon}
           {category}
         </span>
-        <span className="text-xs font-semibold text-gray-400 flex-shrink-0">
+        <span className="text-xs font-semibold text-gray-400 shrink-0">
           {results.length} result{results.length !== 1 ? "s" : ""}
         </span>
         <div className="flex-1 h-px bg-gray-200" />
         {remaining > 0 && (
           <button
             onClick={() => onViewAll(category)}
-            className="flex-shrink-0 text-xs font-semibold text-gold hover:underline transition-colors"
+            className="shrink-0 text-xs font-semibold text-gold hover:underline transition-colors"
           >
             View all {results.length} →
           </button>
@@ -313,7 +313,7 @@ export default function SearchContent() {
             </label>
             <div className="flex items-center gap-2 sm:gap-3 bg-white rounded-xl px-3 sm:px-5 py-3 sm:py-4 shadow-xl">
               <svg
-                className="w-5 h-5 text-gray-400 flex-shrink-0"
+                className="w-5 h-5 text-gray-400 shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -339,7 +339,7 @@ export default function SearchContent() {
                   type="button"
                   onClick={() => setInputQuery("")}
                   aria-label="Clear search"
-                  className="flex-shrink-0 text-gray-400 hover:text-gray-600 transition-colors"
+                  className="shrink-0 text-gray-400 hover:text-gray-600 transition-colors"
                 >
                   <svg
                     className="w-5 h-5"
@@ -360,7 +360,7 @@ export default function SearchContent() {
               <button
                 type="submit"
                 aria-label="Search"
-                className="flex-shrink-0 flex items-center justify-center gap-1.5 px-3 sm:px-5 py-2 bg-gold text-navy-900 text-sm font-bold rounded-lg hover:bg-yellow-400 transition-colors"
+                className="shrink-0 flex items-center justify-center gap-1.5 px-3 sm:px-5 py-2 bg-gold text-navy-900 text-sm font-bold rounded-lg hover:bg-yellow-400 transition-colors"
               >
                 <svg
                   className="w-4 h-4 sm:hidden"

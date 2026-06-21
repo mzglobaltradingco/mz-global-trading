@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +20,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -1260,7 +1260,7 @@ export default function DenimJeansContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-col gap-3"
+                className="bg-white rounded-2xl p-6 border border-gray-100 shadow-xs flex flex-col gap-3"
               >
                 <div className="w-12 h-12 rounded-xl bg-navy-900 flex items-center justify-center">
                   <span className="text-gold text-sm font-bold">{e.term}</span>
@@ -1284,7 +1284,7 @@ export default function DenimJeansContent() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.35, delay: i * 0.05 }}
-                className="bg-white rounded-2xl p-4 border border-gray-100 flex flex-col items-center gap-2 text-center shadow-sm"
+                className="bg-white rounded-2xl p-4 border border-gray-100 flex flex-col items-center gap-2 text-center shadow-xs"
               >
                 <span className="text-2xl" aria-hidden="true">{p.icon}</span>
                 <p className="text-xs font-semibold text-navy-900 leading-snug">{p.label}</p>
@@ -1311,7 +1311,7 @@ export default function DenimJeansContent() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="flex items-center gap-4 bg-white rounded-2xl p-4 border border-gray-100 shadow-sm"
+                className="flex items-center gap-4 bg-white rounded-2xl p-4 border border-gray-100 shadow-xs"
               >
                 <div className={`shrink-0 w-10 h-10 rounded-xl ${stage.color} flex items-center justify-center`}>
                   <span className="text-white text-xs font-bold">{String(i + 1).padStart(2, "0")}</span>
@@ -1402,7 +1402,7 @@ export default function DenimJeansContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.08 }}
-                className="bg-white rounded-2xl p-7 shadow-sm hover:shadow-lg transition-shadow flex flex-col gap-4"
+                className="bg-white rounded-2xl p-7 shadow-xs hover:shadow-lg transition-shadow flex flex-col gap-4"
               >
                 <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center">
                   <span className="text-gold text-sm font-bold">{step.num}</span>
@@ -1495,7 +1495,7 @@ export default function DenimJeansContent() {
               { name: "Cargo Pants", desc: "Ripstop, canvas and stretch ripstop. Tactical, outdoor and workwear programmes.", href: "/apparel/wovengarments/cargopants/", img: "/images/hero/hero-cargo-pants.webp", alt: "Pakistan cargo pants manufacturer — OEM ripstop and canvas cargo trousers for outdoor and tactical brands worldwide" },
               { name: "Shorts", desc: "Chino, canvas, linen and ripstop. Casual, athletic and resort wear programmes.", href: "/apparel/wovengarments/shorts/", img: "/images/hero/hero-shorts.webp", alt: "Pakistan shorts manufacturer — OEM chino, canvas and linen shorts for casual, athletic and resort wear brands" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

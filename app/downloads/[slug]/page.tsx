@@ -9,15 +9,16 @@ import PrintButton from "./PrintButton";
 import { DOWNLOAD_DOCS, getDownloadDoc, type DocBlock } from "@/lib/downloads-content";
 
 interface DocPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
   return DOWNLOAD_DOCS.map((d) => ({ slug: d.slug }));
 }
 
-export function generateMetadata({ params }: DocPageProps): Metadata {
-  const doc = getDownloadDoc(params.slug);
+export async function generateMetadata({ params }: DocPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const doc = getDownloadDoc(slug);
   if (!doc) return {};
   const url = `https://mzglobaltrading.com/downloads/${doc.slug}/`;
   return {
@@ -64,7 +65,7 @@ function Block({ block }: { block: DocBlock }) {
         <ul className="space-y-2.5 mb-5">
           {block.items.map((item) => (
             <li key={item} className="flex items-start gap-3">
-              <span className="mt-2 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
+              <span className="mt-2 shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
               <span className="text-gray-600 text-[15px] leading-relaxed">{item}</span>
             </li>
           ))}
@@ -75,7 +76,7 @@ function Block({ block }: { block: DocBlock }) {
         <ol className="space-y-2.5 mb-5">
           {block.items.map((item, i) => (
             <li key={item} className="flex items-start gap-3">
-              <span className="flex-shrink-0 w-5.5 h-5.5 min-w-[22px] min-h-[22px] rounded-full bg-navy-900 text-gold text-[11px] font-bold flex items-center justify-center mt-0.5 print:bg-transparent print:border print:border-navy-900 print:text-navy-900">
+              <span className="shrink-0 w-5.5 h-5.5 min-w-[22px] min-h-[22px] rounded-full bg-navy-900 text-gold text-[11px] font-bold flex items-center justify-center mt-0.5 print:bg-transparent print:border print:border-navy-900 print:text-navy-900">
                 {i + 1}
               </span>
               <span className="text-gray-600 text-[15px] leading-relaxed">{item}</span>
@@ -118,7 +119,7 @@ function Block({ block }: { block: DocBlock }) {
             {block.items.map((item) => (
               <li key={item} className="flex items-start gap-3">
                 <span
-                  className="mt-0.5 flex-shrink-0 w-[18px] h-[18px] rounded border-2 border-navy-900/40"
+                  className="mt-0.5 shrink-0 w-[18px] h-[18px] rounded border-2 border-navy-900/40"
                   aria-hidden="true"
                 />
                 <span className="text-gray-600 text-[15px] leading-relaxed">{item}</span>
@@ -148,8 +149,9 @@ function Block({ block }: { block: DocBlock }) {
   }
 }
 
-export default function DownloadDocPage({ params }: DocPageProps) {
-  const doc = getDownloadDoc(params.slug);
+export default async function DownloadDocPage({ params }: DocPageProps) {
+  const { slug } = await params;
+  const doc = getDownloadDoc(slug);
   if (!doc) notFound();
   const url = `https://mzglobaltrading.com/downloads/${doc.slug}/`;
   const siblings = DOWNLOAD_DOCS.filter((d) => d.slug !== doc.slug && d.category === doc.category).slice(0, 3);

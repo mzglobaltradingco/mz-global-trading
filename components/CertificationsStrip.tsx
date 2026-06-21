@@ -29,7 +29,7 @@ export default function CertificationsStrip() {
           {track.map((cert, i) => (
             <div
               key={`${cert.alt}-${i}`}
-              className="flex-shrink-0 flex items-center justify-center"
+              className="shrink-0 flex items-center justify-center"
               style={{ width: 140, height: 80 }}
             >
               <Image

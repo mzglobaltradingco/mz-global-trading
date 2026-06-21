@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -23,7 +23,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{
           animation: "btt-pulse 2.2s ease-out infinite",
@@ -570,7 +570,7 @@ export default function InstitutionalTowelsContent() {
               </div>
               <div className="grid grid-cols-4 gap-2 flex-1 content-start">
                 {CERTIFICATIONS.map((c) => (
-                  <div key={c.name} className="bg-white/80 backdrop-blur-sm rounded-xl border border-purple-100 flex items-center justify-center p-2" style={{ height: 56 }}>
+                  <div key={c.name} className="bg-white/80 backdrop-blur-xs rounded-xl border border-purple-100 flex items-center justify-center p-2" style={{ height: 56 }}>
                     <Image src={c.img} alt={`${c.name} — ${c.full}`} width={72} height={44} className="object-contain w-full h-full" />
                   </div>
                 ))}
@@ -1293,7 +1293,7 @@ export default function InstitutionalTowelsContent() {
               { name: "Bath Mats", desc: "Tufted terry, chenille and memory foam. Anti-slip backing, custom sizing.", href: "/hometextile/bathlinen/bathmats/", img: "/images/hero/hero-bath-mats.webp", alt: "Pakistan bath mat manufacturer — OEM tufted and chenille bath mats with anti-slip backing for hotel and retail" },
               { name: "Beach & Pool Towels", desc: "Velour, fouta and microfiber. Sublimation and reactive print. Resort programmes.", href: "/hometextile/bathlinen/beachpooltowel/", img: "/images/hero/hero-beach-pool-towels.webp", alt: "Pakistan beach and pool towel manufacturer — OEM velour and sublimation print towels for resort programmes" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

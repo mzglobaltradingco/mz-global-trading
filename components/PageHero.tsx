@@ -109,7 +109,7 @@ export default function PageHero({
                   className="hero-fade-up inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300"
                   style={{ "--fy": "10px", "--dur": "0.35s", "--delay": `${360 + i * 100}ms` } as CSSProperties}
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" aria-hidden="true" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" aria-hidden="true" />
                   {pill}
                 </span>
               ))}

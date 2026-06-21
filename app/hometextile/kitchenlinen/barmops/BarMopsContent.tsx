@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +20,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
       >
         <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
@@ -698,7 +698,7 @@ export default function BarMopsContent() {
           <p className="text-gray-500 mb-10 max-w-2xl leading-relaxed">
             All commercial bar mop programmes are produced to verified quality specifications — independently testable at any accredited textile laboratory.
           </p>
-          <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
+          <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-xs">
             <table className="w-full min-w-[600px]">
               <thead>
                 <tr className="bg-navy-900 text-white">
@@ -876,7 +876,7 @@ export default function BarMopsContent() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.07 }}
-                  className="flex items-start gap-4 bg-white rounded-2xl p-5 border border-gray-100 shadow-sm"
+                  className="flex items-start gap-4 bg-white rounded-2xl p-5 border border-gray-100 shadow-xs"
                 >
                   <div className="w-10 h-10 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center shrink-0">
                     <span className="text-gold text-xs font-bold">{f.num}</span>
@@ -974,7 +974,7 @@ export default function BarMopsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 flex flex-col gap-2"
+                className="bg-white/10 backdrop-blur-xs border border-white/20 rounded-2xl p-5 flex flex-col gap-2"
               >
                 <div className="w-10 h-10 rounded-lg bg-gold/20 flex items-center justify-center">
                   <span className="text-gold text-sm font-bold">{e.term}</span>
@@ -990,7 +990,7 @@ export default function BarMopsContent() {
               { val: "20–26 days", label: "UK / Europe sea freight" },
               { val: "8–12 days", label: "Middle East sea freight" },
             ].map((item) => (
-              <div key={item.label} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5">
+              <div key={item.label} className="bg-white/10 backdrop-blur-xs border border-white/20 rounded-2xl p-5">
                 <p className="text-2xl font-bold text-gold mb-1">{item.val}</p>
                 <p className="text-sm text-white/60">{item.label}</p>
               </div>
@@ -1081,7 +1081,7 @@ export default function BarMopsContent() {
               { name: "Aprons", desc: "Bib, waist and chef aprons in cotton, denim and canvas. Custom embroidery.", href: "/hometextile/kitchenlinen/aprons/", img: "/images/hero/hero-aprons.webp", alt: "Pakistan aprons manufacturer — OEM cotton and canvas chef aprons for hospitality and foodservice brands" },
               { name: "Pot Holders", desc: "Terry and silicone-lined pot holders. Restaurant and retail programme options.", href: "/hometextile/kitchenlinen/potholders/", img: "/images/hero/hero-pot-holders.webp", alt: "Pakistan pot holders manufacturer — OEM terry and silicone pot holders for kitchen and retail buyers worldwide" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 33vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

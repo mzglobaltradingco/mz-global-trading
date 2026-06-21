@@ -21,7 +21,7 @@ function BackToTop({ dark }: { dark?: boolean }) {
       <button
         onClick={() => scrollToId("ww-bento")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
-          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -1221,7 +1221,7 @@ export default function WorkwearContent() {
                 </div>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                   {cat.garments.map((g) => (
-                    <div key={g.name} className="rounded-xl bg-white border border-white/60 p-4 flex flex-col shadow-sm">
+                    <div key={g.name} className="rounded-xl bg-white border border-white/60 p-4 flex flex-col shadow-xs">
                       <h4 className="text-sm font-bold text-navy-900 mb-1.5">{g.name}</h4>
                       <p className="text-xs text-gray-600 leading-relaxed flex-1 mb-3">{g.desc}</p>
                       <div className="flex flex-wrap gap-1.5">
@@ -1462,7 +1462,7 @@ export default function WorkwearContent() {
               <h3 className="text-sm font-bold text-navy-900 uppercase tracking-wider mb-4 flex items-center gap-2">
                 <span aria-hidden="true">👨</span> Men&apos;s Sizing — Body Measurements (cm)
               </h3>
-              <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+              <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-xs">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="bg-navy-900">
@@ -1502,7 +1502,7 @@ export default function WorkwearContent() {
               <h3 className="text-sm font-bold text-navy-900 uppercase tracking-wider mb-4 flex items-center gap-2">
                 <span aria-hidden="true">👩</span> Women&apos;s Sizing — Body Measurements (cm)
               </h3>
-              <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+              <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-xs">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="bg-navy-900">
@@ -1986,7 +1986,7 @@ export default function WorkwearContent() {
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeUp}
-                  className="rounded-2xl bg-white border border-gray-200 p-5 text-center shadow-sm"
+                  className="rounded-2xl bg-white border border-gray-200 p-5 text-center shadow-xs"
                 >
                   <p className="text-2xl font-bold text-gold mb-1">{s.value}</p>
                   <p className="text-navy-900 font-semibold text-sm">{s.label}</p>
@@ -1997,7 +1997,7 @@ export default function WorkwearContent() {
           </div>
 
           {/* Registry table */}
-          <div className="rounded-2xl border border-gray-200 overflow-hidden bg-white shadow-sm">
+          <div className="rounded-2xl border border-gray-200 overflow-hidden bg-white shadow-xs">
             <div className="grid grid-cols-3 bg-navy-900 px-6 py-3">
               <span className="text-xs font-semibold text-white/60 uppercase tracking-widest">Certification</span>
               <span className="text-xs font-semibold text-white/60 uppercase tracking-widest">Standard Area</span>
@@ -2319,7 +2319,7 @@ export default function WorkwearContent() {
                   <div className={`relative z-10 w-10 h-10 rounded-full flex items-center justify-center shrink-0 shadow-md border-4 border-white ${i < 3 ? "bg-navy-900" : "bg-gold"}`}>
                     <span className={`text-xs font-bold ${i < 3 ? "text-gold" : "text-navy-900"}`}>{step.n}</span>
                   </div>
-                  <div className="flex-1 rounded-2xl border border-gray-100 bg-white shadow-sm p-5 mb-2">
+                  <div className="flex-1 rounded-2xl border border-gray-100 bg-white shadow-xs p-5 mb-2">
                     <h3 className="font-bold text-navy-900 mb-1.5">{step.title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
                   </div>
@@ -2329,7 +2329,7 @@ export default function WorkwearContent() {
           </div>
 
           {/* Lead time table */}
-          <div className="mt-12 rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
+          <div className="mt-12 rounded-2xl border border-gray-100 overflow-hidden shadow-xs">
             <div className="px-6 py-4 bg-navy-900">
               <p className="text-white font-semibold text-sm">Indicative Lead Time Breakdown</p>
             </div>
@@ -2437,7 +2437,7 @@ export default function WorkwearContent() {
               { name: "Baby & Kids", desc: "OEKO-TEX certified baby rompers, bibs, overalls and muslin fabric.", href: "/apparel/babyandkids/", img: "/images/hero/hero-baby-and-kids.webp", alt: "Pakistan baby and kids garments manufacturer — OEM OEKO-TEX certified infant and children's apparel" },
               { name: "Socks", desc: "Cotton, wool, bamboo and performance sport socks. Any specification.", href: "/apparel/socks/", img: "/images/hero/hero-socks.webp", alt: "Pakistan socks manufacturer — OEM cotton, wool and performance socks for international buyers" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

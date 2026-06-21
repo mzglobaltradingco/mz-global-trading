@@ -427,7 +427,7 @@ function SubItemLink({
   onHover: (img: string, label: string, alt: string) => void;
 }) {
   return (
-    <motion.div variants={itemVariants} className="flex-shrink-0">
+    <motion.div variants={itemVariants} className="shrink-0">
       <Link
         href={item.href}
         onClick={onClose}
@@ -506,12 +506,12 @@ export default function MegaMenu() {
         )}
       </AnimatePresence>
 
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm border-b border-gray-100" data-pagefind-ignore>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-xs border-b border-gray-100" data-pagefind-ignore>
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-32">
 
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0" onClick={closeAll}>
+            <Link href="/" className="shrink-0" onClick={closeAll}>
               <img
                 src="/images/logo/mz-global-trading-logo-header.webp"
                 alt="MZ Global Trading"
@@ -616,7 +616,7 @@ export default function MegaMenu() {
                 {/* ① Left content-aware brand panel */}
                 <motion.div
                   variants={leftPanelVariants}
-                  className="flex-shrink-0 w-52 xl:w-60 border-r border-white/10 pr-8 flex flex-col"
+                  className="shrink-0 w-52 xl:w-60 border-r border-white/10 pr-8 flex flex-col"
                 >
                   <p className="text-gold text-[10px] font-bold tracking-[0.18em] uppercase mb-3">
                     MZ Global Trading
@@ -627,7 +627,7 @@ export default function MegaMenu() {
                   <ul className="space-y-2.5 mb-6 flex-1">
                     {activeItem.mega.panel.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-2.5">
-                        <span className="mt-[5px] flex-shrink-0 w-1 h-1 rounded-full bg-gold" />
+                        <span className="mt-[5px] shrink-0 w-1 h-1 rounded-full bg-gold" />
                         <span className="text-gray-400 text-[12px] leading-snug">{b}</span>
                       </li>
                     ))}
@@ -657,7 +657,7 @@ export default function MegaMenu() {
                       onMouseEnter={() => setPreview({ img: row.img, label: row.heading, alt: row.imgAlt })}
                     >
                       {/* Category label */}
-                      <div className="flex-shrink-0 w-36 xl:w-40 pt-1">
+                      <div className="shrink-0 w-36 xl:w-40 pt-1">
                         {row.href ? (
                           <Link
                             href={row.href}
@@ -716,7 +716,7 @@ export default function MegaMenu() {
                 {/* ③ Right preview zone — crossfades on hover */}
                 <motion.div
                   variants={previewZoneVariants}
-                  className="flex-shrink-0 w-44 xl:w-52 border-l border-white/10 pl-8 flex flex-col gap-3"
+                  className="shrink-0 w-44 xl:w-52 border-l border-white/10 pl-8 flex flex-col gap-3"
                 >
                   <div
                     className="relative w-full rounded-lg overflow-hidden bg-navy-800"
@@ -814,7 +814,7 @@ export default function MegaMenu() {
                             <motion.svg
                               animate={{ rotate: mobileExpanded === item.id ? 180 : 0 }}
                               transition={{ type: "spring", stiffness: 300, damping: 22 }}
-                              className="w-4 h-4 flex-shrink-0"
+                              className="w-4 h-4 shrink-0"
                               fill="none"
                               stroke="currentColor"
                               viewBox="0 0 24 24"
@@ -854,7 +854,7 @@ export default function MegaMenu() {
                                             <motion.svg
                                               animate={{ rotate: mobileRowExpanded === rowKey ? 180 : 0 }}
                                               transition={{ type: "spring", stiffness: 300, damping: 22 }}
-                                              className="w-3.5 h-3.5 text-gold/60 flex-shrink-0"
+                                              className="w-3.5 h-3.5 text-gold/60 shrink-0"
                                               fill="none"
                                               stroke="currentColor"
                                               viewBox="0 0 24 24"

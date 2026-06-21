@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
@@ -478,7 +478,7 @@ export default function FAQsContent() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search questions…"
                 aria-label="Search frequently asked questions"
-                className="w-full pl-11 pr-10 py-4 bg-white border border-gray-200 rounded-xl text-sm text-navy-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-all shadow-sm"
+                className="w-full pl-11 pr-10 py-4 bg-white border border-gray-200 rounded-xl text-sm text-navy-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-all shadow-xs"
               />
               {searchQuery && (
                 <button
@@ -497,7 +497,7 @@ export default function FAQsContent() {
           <div className="flex gap-10">
 
             {/* ── Desktop sidebar — sticky wrapper on container, NOT on buttons ──── */}
-            <div className="hidden lg:block w-52 flex-shrink-0">
+            <div className="hidden lg:block w-52 shrink-0">
               <div className="sticky top-36">
                 <motion.nav
                   variants={staggerContainerVariants}
@@ -517,8 +517,8 @@ export default function FAQsContent() {
                       onClick={() => setActiveCategory(cat.id)}
                       className={`flex items-center justify-between px-4 py-3 rounded-lg text-sm font-medium text-left transition-all ${
                         activeCategory === cat.id
-                          ? "bg-navy-900 text-white shadow-sm"
-                          : "text-gray-600 hover:bg-white hover:text-navy-900 hover:shadow-sm"
+                          ? "bg-navy-900 text-white shadow-xs"
+                          : "text-gray-600 hover:bg-white hover:text-navy-900 hover:shadow-xs"
                       }`}
                     >
                       <span>{cat.label}</span>
@@ -548,7 +548,7 @@ export default function FAQsContent() {
                     role="tab"
                     aria-selected={activeCategory === cat.id}
                     onClick={() => setActiveCategory(cat.id)}
-                    className={`flex-shrink-0 px-4 py-2 rounded-full text-xs font-semibold transition-all ${
+                    className={`shrink-0 px-4 py-2 rounded-full text-xs font-semibold transition-all ${
                       activeCategory === cat.id
                         ? "bg-navy-900 text-white"
                         : "bg-white text-gray-600 border border-gray-200"
@@ -609,7 +609,7 @@ export default function FAQsContent() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.98 }}
                         transition={{ duration: 0.22, delay: i * 0.025 }}
-                        className="bg-white rounded-xl border border-gray-100 overflow-hidden hover:border-gray-200 hover:shadow-sm transition-all"
+                        className="bg-white rounded-xl border border-gray-100 overflow-hidden hover:border-gray-200 hover:shadow-xs transition-all"
                       >
                         <button
                           onClick={() => toggle(faq.id)}
@@ -617,7 +617,7 @@ export default function FAQsContent() {
                           aria-expanded={openId === faq.id}
                         >
                           <div className="flex items-start gap-4">
-                            <span className="flex-shrink-0 mt-0.5 w-6 h-6 rounded-full bg-gray-50 group-hover:bg-gold/10 flex items-center justify-center transition-colors">
+                            <span className="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-gray-50 group-hover:bg-gold/10 flex items-center justify-center transition-colors">
                               <span className="text-[10px] font-bold text-gray-400 group-hover:text-gold transition-colors">
                                 {String(faq.id).padStart(2, "0")}
                               </span>
@@ -629,7 +629,7 @@ export default function FAQsContent() {
                           <motion.span
                             animate={{ rotate: openId === faq.id ? 180 : 0 }}
                             transition={{ duration: 0.22 }}
-                            className="flex-shrink-0 mt-0.5 text-gray-400 group-hover:text-gold transition-colors"
+                            className="shrink-0 mt-0.5 text-gray-400 group-hover:text-gold transition-colors"
                             aria-hidden="true"
                           >
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -729,7 +729,7 @@ export default function FAQsContent() {
               >
                 <Link
                   href={item.href}
-                  className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow block"
+                  className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow block"
                 >
                   <div className="relative h-64 overflow-hidden">
                     <Image

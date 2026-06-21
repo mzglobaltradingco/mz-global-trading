@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
@@ -792,7 +792,7 @@ function SpecSection({ title, number, color, children }: {
       <div className={`border-l-[3px] ${sectionBorder(color)} px-4 py-2.5 ${sectionBg(color)}`}>
         <div className="flex items-center gap-2">
           {number !== undefined && (
-            <span className={`w-[18px] h-[18px] rounded-full text-[9px] font-bold flex items-center justify-center flex-shrink-0 ${sectionBadge(color)}`}>
+            <span className={`w-[18px] h-[18px] rounded-full text-[9px] font-bold flex items-center justify-center shrink-0 ${sectionBadge(color)}`}>
               {number}
             </span>
           )}
@@ -825,7 +825,7 @@ function ReviewSection({ title, onEdit, children }: {
 function ReviewRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex gap-3 py-2 border-b border-gray-100 last:border-0">
-      <span className="text-gray-400 text-xs w-36 flex-shrink-0">{label}</span>
+      <span className="text-gray-400 text-xs w-36 shrink-0">{label}</span>
       <span className="text-navy-900 text-xs font-medium break-words min-w-0">{value || "—"}</span>
     </div>
   );
@@ -873,7 +873,7 @@ function CheckboxGrid({ options, selected, onToggle }: {
           <label key={opt} className={`flex items-center gap-2 px-3 py-2 rounded-lg border cursor-pointer transition-colors select-none ${
             checked ? "border-gold bg-gold/5 text-navy-900" : "border-gray-200 hover:border-gray-300 text-gray-600"
           }`}>
-            <input type="checkbox" className="accent-[#D4A017] w-3.5 h-3.5 flex-shrink-0"
+            <input type="checkbox" className="accent-[#D4A017] w-3.5 h-3.5 shrink-0"
               checked={checked} onChange={() => onToggle(opt)} />
             <span className="text-xs font-medium leading-tight">{opt}</span>
           </label>
@@ -1173,7 +1173,7 @@ export default function RFQContent() {
             return (
               <button key={p.id} type="button"
                 onClick={() => { setActiveProduct(idx); setErrors({}); }}
-                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg border text-xs font-semibold flex-shrink-0 transition-colors ${
+                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg border text-xs font-semibold shrink-0 transition-colors ${
                   isActive
                     ? "bg-navy-900 border-navy-900 text-white"
                     : "border-gray-200 text-gray-600 hover:border-gray-300 hover:text-navy-900"
@@ -1193,7 +1193,7 @@ export default function RFQContent() {
           })}
           {formState.products.length < 6 && (
             <button type="button" onClick={addProduct}
-              className="flex items-center gap-1 px-3 py-2 rounded-lg border border-navy-900 bg-navy-900 text-white text-xs font-medium flex-shrink-0 hover:bg-navy-900/85 transition-colors">
+              className="flex items-center gap-1 px-3 py-2 rounded-lg border border-navy-900 bg-navy-900 text-white text-xs font-medium shrink-0 hover:bg-navy-900/85 transition-colors">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
               Add Product
             </button>
@@ -1851,7 +1851,7 @@ export default function RFQContent() {
               {opts && (
                 <SpecSection title="Order Details" number={10} color="gold">
                   <div className="flex flex-wrap gap-4 items-start">
-                    <div className="w-36 flex-shrink-0">
+                    <div className="w-36 shrink-0">
                       <Field id="quantity" label="Quantity" required error={errors.quantity}>
                         <input id="quantity" type="text" aria-invalid={!!errors.quantity}
                           placeholder="e.g. 5000"
@@ -1860,7 +1860,7 @@ export default function RFQContent() {
                           className={ic(errors.quantity)} />
                       </Field>
                     </div>
-                    <div className="flex-shrink-0">
+                    <div className="shrink-0">
                       <Field id="unitOfMeasure" label="Unit">
                         <ChipSelect
                           id="unitOfMeasure"
@@ -1870,7 +1870,7 @@ export default function RFQContent() {
                         />
                       </Field>
                     </div>
-                    <div className="w-44 flex-shrink-0">
+                    <div className="w-44 shrink-0">
                       <Field id="targetPrice" label="Target Price (USD / unit)">
                         <input id="targetPrice" type="text"
                           placeholder="e.g. 3.50 (optional)"
@@ -2108,7 +2108,7 @@ export default function RFQContent() {
                 <div className="pt-1">
                   {qtyStr && (
                     <div className="flex items-center gap-2 py-2 border-b border-gray-100">
-                      <span className="text-gray-400 text-xs w-36 flex-shrink-0">Order</span>
+                      <span className="text-gray-400 text-xs w-36 shrink-0">Order</span>
                       <span className="text-navy-900 text-xs font-semibold">{qtyStr}</span>
                     </div>
                   )}
@@ -2246,7 +2246,7 @@ export default function RFQContent() {
         />
         <div className="bg-gray-50 py-20">
           <div className="max-w-lg mx-auto px-4 text-center">
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-10">
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-xs p-10">
               <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-green-600" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
               </div>
@@ -2255,7 +2255,7 @@ export default function RFQContent() {
                 Your email app has opened with the full RFQ pre-filled and addressed to <strong>info@mzglobaltrading.com</strong>. Review and click <strong>Send</strong>.
               </p>
               <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm mb-4 text-left flex items-start gap-3">
-                <svg className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2} aria-hidden="true"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
+                <svg className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2} aria-hidden="true"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
                 <div>
                   <p className="text-amber-800 font-bold text-sm">If the email body appears empty</p>
                   <p className="text-amber-700 text-xs mt-1">
@@ -2332,7 +2332,7 @@ export default function RFQContent() {
       <div ref={formRef} className="bg-gray-50">
         {/* Sticky progress bar */}
         <div
-          className="sticky left-0 right-0 z-40 bg-white border-b border-gray-100 shadow-sm"
+          className="sticky left-0 right-0 z-40 bg-white border-b border-gray-100 shadow-xs"
           style={{ top: 128, height: 48 }}>
           <div className="max-w-[1600px] mx-auto h-full px-4 sm:px-6 lg:px-10 flex items-center">
             {STEPS.map((label, idx) => {
@@ -2341,8 +2341,8 @@ export default function RFQContent() {
               const active = num === step;
               return (
                 <div key={label} className="flex items-center flex-1 last:flex-none min-w-0">
-                  <div className="flex items-center gap-2 flex-shrink-0">
-                    <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 transition-colors ${
+                  <div className="flex items-center gap-2 shrink-0">
+                    <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 transition-colors ${
                       done ? "bg-gold text-navy-900" : active ? "bg-navy-900 text-white" : "bg-gray-100 text-gray-400"
                     }`}>
                       {done ? (
@@ -2364,7 +2364,7 @@ export default function RFQContent() {
 
         <div className="py-6 sm:py-8">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm px-5 py-5 sm:px-7 sm:py-6">
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-xs px-5 py-5 sm:px-7 sm:py-6">
               <AnimatePresence mode="wait">
                 {step === 1 && renderStep1()}
                 {step === 2 && renderStep2()}

@@ -121,7 +121,7 @@ export default function KnowledgeHubContent() {
       />
 
       {/* ── Sticky search + filter bar ────────────────────────────────────── */}
-      <div className="sticky top-32 z-10 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+      <div className="sticky top-32 z-10 bg-white/95 backdrop-blur-xs border-b border-gray-100 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
           {/* Search */}
           <div className="relative flex-1 max-w-sm">
@@ -160,7 +160,7 @@ export default function KnowledgeHubContent() {
           </div>
 
           {/* Sort toggle */}
-          <div className="flex items-center gap-1 ml-auto flex-shrink-0" role="group" aria-label="Sort articles">
+          <div className="flex items-center gap-1 ml-auto shrink-0" role="group" aria-label="Sort articles">
             {(["newest", "featured"] as SortMode[]).map((mode) => (
               <button
                 key={mode}

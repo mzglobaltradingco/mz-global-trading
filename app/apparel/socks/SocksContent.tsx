@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -22,7 +22,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -1025,7 +1025,7 @@ export default function SocksContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="border border-gray-100 rounded-2xl p-7 flex flex-col gap-4 hover:border-indigo-200 hover:shadow-sm transition-all"
+                className="border border-gray-100 rounded-2xl p-7 flex flex-col gap-4 hover:border-indigo-200 hover:shadow-xs transition-all"
               >
                 <div className="flex items-start justify-between">
                   <span className="inline-flex items-center gap-2">
@@ -1105,7 +1105,7 @@ export default function SocksContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className={`bg-white rounded-2xl p-7 flex flex-col gap-4 border-2 ${f.color} shadow-sm hover:shadow-md transition-shadow`}
+                className={`bg-white rounded-2xl p-7 flex flex-col gap-4 border-2 ${f.color} shadow-xs hover:shadow-md transition-shadow`}
               >
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-700 text-base font-bold flex items-center justify-center shrink-0">{f.num}</div>
@@ -1143,7 +1143,7 @@ export default function SocksContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="bg-white border border-gray-100 rounded-2xl p-7 flex flex-col gap-3 hover:border-indigo-200 hover:shadow-sm transition-all"
+                className="bg-white border border-gray-100 rounded-2xl p-7 flex flex-col gap-3 hover:border-indigo-200 hover:shadow-xs transition-all"
               >
                 <div className="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 text-sm font-bold flex items-center justify-center">{s.abbr}</div>
                 <h3 className="text-lg font-bold text-navy-900">{s.name}</h3>
@@ -1178,7 +1178,7 @@ export default function SocksContent() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.35, delay: i * 0.05 }}
-                  className="bg-white rounded-2xl flex flex-col items-center gap-2 p-4 border border-amber-100 hover:border-gold hover:shadow-sm transition-all"
+                  className="bg-white rounded-2xl flex flex-col items-center gap-2 p-4 border border-amber-100 hover:border-gold hover:shadow-xs transition-all"
                   style={{ boxShadow: "0 4px 8px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04)" }}
                 >
                   <div className="flex items-center justify-center" style={{ width: 64, height: 44 }}>
@@ -1348,7 +1348,7 @@ export default function SocksContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.08 }}
-                className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-shadow"
+                className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-xs hover:shadow-lg transition-shadow"
               >
                 <div className="bg-indigo-700 px-6 py-4 flex items-center gap-3">
                   <span className="text-white/40 text-4xl font-black leading-none">{step.num}</span>
@@ -1439,7 +1439,7 @@ export default function SocksContent() {
               { name: "Baby & Kids", desc: "OEKO-TEX certified baby rompers, bibs, overalls and muslin fabric.", href: "/apparel/babyandkids/", img: "/images/hero/hero-baby-and-kids.webp", alt: "Pakistan baby and kids garments manufacturer — OEM OEKO-TEX certified infant and children's apparel" },
               { name: "Workwear Apparel", desc: "FR-rated, high-visibility and PPE-compliant workwear for industrial buyers.", href: "/apparel/workwearapparel/", img: "/images/hero/hero-workwear-apparel.webp", alt: "Pakistan workwear manufacturer — OEM FR-rated and high-visibility workwear for industrial buyers worldwide" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

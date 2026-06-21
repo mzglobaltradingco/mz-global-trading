@@ -22,7 +22,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -828,7 +828,7 @@ export default function PillowCoversContent() {
             <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {OEM_FEATURES.map((f, i) => (
                 <motion.div key={f.num} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.07 }}
-                  className="border border-gray-100 rounded-2xl p-6 hover:border-gold hover:shadow-sm transition-all bg-white">
+                  className="border border-gray-100 rounded-2xl p-6 hover:border-gold hover:shadow-xs transition-all bg-white">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="w-8 h-8 rounded-lg bg-gold/10 text-gold text-xs font-bold flex items-center justify-center shrink-0">{f.num}</span>
                     <h3 className="text-sm font-bold text-navy-900">{f.title}</h3>
@@ -851,7 +851,7 @@ export default function PillowCoversContent() {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 mb-8">
             {MARKET_KPIs.map((m, i) => (
               <motion.div key={m.abbr} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-sm transition-all">
+                className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-xs transition-all">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-xs font-bold text-gold bg-gold/10 px-2 py-1 rounded-full">{m.abbr}</span>
                   <span className="text-xs text-gray-400">{m.demand}%</span>
@@ -1029,7 +1029,7 @@ export default function PillowCoversContent() {
             {PAGE_SIBLINGS.map((card, i) => (
               <motion.div key={card.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.08 }}
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <Link href={card.href} className="block">
                   <div className="relative h-64 overflow-hidden">
                     <Image src={card.img} alt={`${card.title} — Pakistan bed linen manufacturer`} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />

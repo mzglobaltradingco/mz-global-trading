@@ -203,7 +203,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
       <button
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
-          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -590,7 +590,7 @@ export default function BabyBibsContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0D1B2A]">Bib Sizing by Age & Neck Circumference</h2>
             <p className="text-gray-600 mt-3 text-sm max-w-2xl">Standard neck opening accommodates the listed circumference range. Adjustable snap closure adds 2–3 cm fit range per position.</p>
           </motion.div>
-          <div className="bg-white rounded-2xl overflow-hidden border border-blue-100 shadow-sm">
+          <div className="bg-white rounded-2xl overflow-hidden border border-blue-100 shadow-xs">
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-[#0D1B2A] text-white text-xs uppercase tracking-wider">
@@ -629,7 +629,7 @@ export default function BabyBibsContent() {
               <motion.div
                 key={w.label}
                 initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-[#D4A017] transition-all"
+                className="bg-white border border-gray-200 rounded-2xl p-6 shadow-xs hover:shadow-md hover:border-[#D4A017] transition-all"
               >
                 <p className="text-2xl font-bold text-[#D4A017] mb-1">{w.gsm}</p>
                 <h3 className="font-bold text-[#0D1B2A] mb-2 text-sm">{w.label}</h3>
@@ -688,7 +688,7 @@ export default function BabyBibsContent() {
                 className="flex flex-col items-center gap-2"
               >
                 <div
-                  className="w-full aspect-square rounded-xl border border-gray-100 shadow-sm"
+                  className="w-full aspect-square rounded-xl border border-gray-100 shadow-xs"
                   style={{ backgroundColor: col.hex === "custom" ? undefined : col.hex }}
                   aria-label={col.name}
                 >
@@ -735,7 +735,7 @@ export default function BabyBibsContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0D1B2A]">Regulatory Compliance by Market</h2>
             <p className="text-gray-600 mt-3 text-sm max-w-2xl">Baby product regulations vary significantly by market. Our compliance team tracks requirements for all active export destinations.</p>
           </motion.div>
-          <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+          <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-xs">
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-[#0D1B2A] text-white text-xs uppercase tracking-wider">
@@ -771,7 +771,7 @@ export default function BabyBibsContent() {
               <motion.div
                 key={cert.name}
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
-                className="backdrop-blur-sm bg-white/70 border border-white/60 rounded-2xl p-6 shadow-sm"
+                className="backdrop-blur-xs bg-white/70 border border-white/60 rounded-2xl p-6 shadow-xs"
               >
                 <div className="flex items-start justify-between mb-2">
                   <h3 className="font-bold text-[#0D1B2A]">{cert.name}</h3>
@@ -919,7 +919,7 @@ export default function BabyBibsContent() {
               { name: "Baby Rompers", desc: "Short and long-sleeve rompers in organic cotton jersey. Snap crotch and envelope neck options.", href: "/apparel/babyandkids/babyrompers/", img: "/images/hero/hero-baby-rompers.webp", alt: "Pakistan baby romper manufacturer — OEM organic cotton infant rompers for baby boutiques worldwide" },
               { name: "Baby Hooded Towels", desc: "OEKO-TEX terry hooded towels for infants and toddlers. Embroidery and appliqué options.", href: "/apparel/babyandkids/babyhoodedtowels/", img: "/images/hero/hero-baby-hooded-towels.webp", alt: "Pakistan baby hooded towel manufacturer — OEM OEKO-TEX terry hooded towels for infant brands worldwide" },
             ].filter(p => !p.href.includes("babybibs")).map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />

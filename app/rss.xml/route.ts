@@ -1,5 +1,7 @@
 import { getAllPosts } from "@/lib/knowledge";
 
+export const dynamic = "force-static";
+
 const BASE_URL = "https://mzglobaltrading.com";
 
 export function GET() {

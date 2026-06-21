@@ -22,7 +22,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
             ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
-            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-sm"
+            : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{
           animation: "btt-pulse 2.2s ease-out infinite",
@@ -869,7 +869,7 @@ export default function BedsheetContent() {
       ════════════════════════════════════════════════════════════════════════ */}
       <section id="section-tc" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+          <div className="grid lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden border border-gray-100 shadow-xs">
             {/* Left panel — dark navy */}
             <div className="bg-[#0D1B2A] p-10 lg:p-14 flex flex-col justify-center">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Thread Count</p>
@@ -934,7 +934,7 @@ export default function BedsheetContent() {
                 <h3 className={`text-sm font-bold ${col.heading} mb-4`}>{col.market}</h3>
                 <div className="flex flex-col gap-3">
                   {col.sizes.map((s) => (
-                    <div key={s.name} className="bg-white rounded-xl p-4 border border-white shadow-sm">
+                    <div key={s.name} className="bg-white rounded-xl p-4 border border-white shadow-xs">
                       <div className="flex items-start justify-between gap-2">
                         <p className="text-sm font-bold text-navy-900">{s.name}</p>
                         <span className={`text-[10px] font-bold ${col.badge} px-2 py-0.5 rounded-full whitespace-nowrap`}>{s.dim}</span>
@@ -1008,7 +1008,7 @@ export default function BedsheetContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 flex flex-col gap-4"
+                className="bg-white/10 backdrop-blur-xs border border-white/20 rounded-2xl p-6 flex flex-col gap-4"
               >
                 <div className="flex gap-2">
                   {d.swatches.map((s, idx) => (
@@ -1057,7 +1057,7 @@ export default function BedsheetContent() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.07 }}
-                  className="border border-gray-100 rounded-2xl p-6 hover:border-gold hover:shadow-sm transition-all"
+                  className="border border-gray-100 rounded-2xl p-6 hover:border-gold hover:shadow-xs transition-all"
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <span className="w-8 h-8 rounded-lg bg-gold/10 text-gold text-xs font-bold flex items-center justify-center shrink-0">{f.num}</span>
@@ -1126,7 +1126,7 @@ export default function BedsheetContent() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: i * 0.06 }}
-                    className="flex items-center gap-5 p-4 rounded-2xl border border-gray-100 hover:border-gold/30 hover:shadow-sm transition-all"
+                    className="flex items-center gap-5 p-4 rounded-2xl border border-gray-100 hover:border-gold/30 hover:shadow-xs transition-all"
                   >
                     <div className="w-16 h-10 shrink-0 flex items-center justify-center bg-gray-50 rounded-lg border border-gray-100">
                       <Image src={c.img} alt={`${c.name} certification logo`} width={56} height={32} className="object-contain w-full h-full" />
@@ -1262,7 +1262,7 @@ export default function BedsheetContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.08 }}
-                className="border-2 border-gray-100 rounded-2xl p-7 hover:border-gold hover:shadow-sm transition-all flex flex-col gap-4"
+                className="border-2 border-gray-100 rounded-2xl p-7 hover:border-gold hover:shadow-xs transition-all flex flex-col gap-4"
               >
                 <div className="flex items-center gap-3">
                   <span className="w-10 h-10 rounded-xl bg-navy-900 text-gold text-sm font-bold flex items-center justify-center shrink-0">{p.num}</span>
@@ -1337,7 +1337,7 @@ export default function BedsheetContent() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.45 }}
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow"
               >
                 <Link href={card.href} className="block">
                   <div className="relative h-56 overflow-hidden">
