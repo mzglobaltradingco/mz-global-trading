@@ -665,17 +665,19 @@ Combined slide panel labels use frosted pill `bg-navy-950/60 backdrop-blur-sm bo
 
 ## Pages Built
 
-All product pages are complete. Actual URL count as of 2026-06-22:
+All product pages are complete. Actual URL count as of 2026-06-23:
 
 | Type | Count |
 |---|---|
-| Static page.tsx files (non-dynamic) | 80 |
-| Knowledge Hub posts `/knowledge/[slug]` | 6 |
-| Guide pages `/guides/[slug]` | 30 |
-| Downloads `/downloads/[slug]` | 12 |
-| **Total unique URLs** | **128** (130 HTML files incl. 404 + \_not-found) |
+| Static page.tsx files (non-dynamic) | 82 |
+| Knowledge Hub articles `/knowledge/[slug]` | 53 |
+| Guide pages `/guides/[slug]` | 77 |
+| Downloads `/downloads/[slug]` | 59 |
+| **Total unique URLs** | **271** (272 HTML files incl. 404) |
 
-Verified against `out/` directory after build — pagefind indexes 131 files (includes \_not-found). All dynamic slugs in `lib/guides-content.ts` and `lib/downloads-content.ts` generate correctly.
+Verified against `out/` directory after build — pagefind indexes 272 files. All dynamic slugs generate correctly.
+
+Static 82 includes: homepage, 3 category pillar pages, 14 cluster pages, 44 product leaf pages, 5 quality/compliance pages, 4 corporate pages, 3 content listing pages (/guides/, /knowledge/, /downloads/), rfq, contact, search, textile-tools-calculator, faqs, careers, privacypolicy, termsofuse, quality-policy, /_not-found, /404.
 
 > File pattern: every page follows `app/section/name/page.tsx` + `NameContent.tsx`
 
