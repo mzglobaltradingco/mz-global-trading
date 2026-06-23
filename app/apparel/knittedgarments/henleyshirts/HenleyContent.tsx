@@ -1000,11 +1000,11 @@ export default function HenleyContent() {
             {GSM_TIERS.map((tier) => (
               <div key={tier.gsm} className={`bg-white rounded-2xl p-7 border-2 ${tier.featured ? "border-gold shadow-lg" : "border-gray-100 shadow-xs"}`}>
                 {tier.featured && (
-                  <span className="inline-block mb-3 text-[10px] font-bold text-gold bg-gold/10 px-3 py-1 rounded-full uppercase tracking-wider">
+                  <span className="inline-block mb-3 text-[10px] font-bold text-[#9A6400] bg-gold/10 px-3 py-1 rounded-full uppercase tracking-wider">
                     Most Ordered
                   </span>
                 )}
-                <p className={`text-3xl font-bold mb-1 ${tier.featured ? "text-gold" : "text-navy-900"}`}>{tier.gsm}</p>
+                <p className="text-3xl font-bold mb-1 text-navy-900">{tier.gsm}</p>
                 <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">{tier.name}</p>
                 <p className="text-sm font-semibold text-navy-900 mb-3">{tier.season}</p>
                 <div className="mb-4">
@@ -1178,7 +1178,7 @@ export default function HenleyContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Markets</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Industry Applications</h2>
-          <p className="text-gray-500 mb-12 max-w-2xl leading-relaxed">
+          <p className="text-gray-400 mb-12 max-w-2xl leading-relaxed">
             Henley shirts are ordered across fashion, workwear, outdoor and corporate segments. Each sector has distinct specification requirements.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" style={{ perspective: "1000px" }}>
@@ -1211,7 +1211,7 @@ export default function HenleyContent() {
             {[["USA / Canada", "Primary Market"], ["UK / Europe", "Key Market"], ["Middle East", "Growing Market"], ["Australia / Asia", "Emerging Market"]].map(([region, tier]) => (
               <div key={region} className="bg-slate-800 border border-slate-700 rounded-xl p-4 text-center">
                 <p className="text-white font-semibold text-sm">{region}</p>
-                <p className="text-gold text-xs mt-1">{tier}</p>
+                <p className="text-gold-light text-xs mt-1">{tier}</p>
               </div>
             ))}
           </div>
@@ -1371,7 +1371,7 @@ export default function HenleyContent() {
               </motion.div>
             ))}
           </div>
-          <div className="mt-5 bg-gray-100 border border-gray-200 rounded-xl p-4 text-sm text-gray-500">
+          <div className="mt-5 bg-gray-100 border border-gray-200 rounded-xl p-4 text-sm text-gray-600">
             Indicative total programme duration: approximately 90–130 days from RFQ to departure port. Add sea freight time for your destination. These figures are for planning purposes only and are not a contractual commitment.
           </div>
           <BackToTop />
