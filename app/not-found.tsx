@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -15,7 +15,7 @@ export default function NotFound() {
         transition={{ duration: 0.65, ease: "easeOut" }}
         className="flex-1 bg-white flex items-center justify-center px-10 py-20 md:py-0"
       >
-        <Link href="/" aria-label="MZ Global Trading — Return to homepage">
+        <Link prefetch={false} href="/" aria-label="MZ Global Trading — Return to homepage">
           <Image
             src="/images/logo/mz-global-trading-logo-header.webp"
             alt="MZ Global Trading — Pakistan Textile Sourcing Partner"
@@ -120,3 +120,4 @@ export default function NotFound() {
     </div>
   );
 }
+

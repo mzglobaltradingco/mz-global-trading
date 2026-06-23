@@ -52,7 +52,7 @@ const faqs: FAQ[] = [
         MOQ varies from product to product. Normally the MOQ is 2,000 metres per colour per
         design/style. MOQs remain negotiable depending on the product type, and repeat customers
         are given special consideration. Submit your specific requirements through our{" "}
-        <Link href="/rfq/" className="text-gold hover:underline font-medium">
+        <Link prefetch={false} href="/rfq/" className="text-gold hover:underline font-medium">
           RFQ form
         </Link>{" "}
         and we will confirm the applicable MOQ.
@@ -70,11 +70,11 @@ const faqs: FAQ[] = [
         From RFQ submission to shipment, expect 45–60 days for standard apparel, 45–75 days for
         home textiles and 30–45 days for fabric. Complex apparel such as workwear and formal
         garments requires 60–90 days. These timelines include{" "}
-        <Link href="/qualitycompliance/qualitycontrol/" className="text-gold hover:underline font-medium">
+        <Link prefetch={false} href="/qualitycompliance/qualitycontrol/" className="text-gold hover:underline font-medium">
           pre-production sample approval
         </Link>
         {" "}(10–21 days), bulk production and{" "}
-        <Link href="/qualitycompliance/inspectionprocess/" className="text-gold hover:underline font-medium">
+        <Link prefetch={false} href="/qualitycompliance/inspectionprocess/" className="text-gold hover:underline font-medium">
           pre-shipment inspection
         </Link>
         . Lead times run from sample approval — not from order placement. Depending on factory
@@ -98,7 +98,7 @@ const faqs: FAQ[] = [
         10–21 days depending on product type and complexity. For standard catalogue products,
         reference samples may be available at reduced cost. Request samples
         through the{" "}
-        <Link href="/rfq/" className="text-gold hover:underline font-medium">
+        <Link prefetch={false} href="/rfq/" className="text-gold hover:underline font-medium">
           RFQ form
         </Link>
         .
@@ -126,7 +126,7 @@ const faqs: FAQ[] = [
         Shipments are only released on a PASS result. A
         CONDITIONAL PASS requires the factory to 100% sort affected units before re-inspection. A
         FAIL triggers an immediate hold at the factory&apos;s expense. Learn more on our{" "}
-        <Link href="/qualitycompliance/qualitycontrol/" className="text-gold hover:underline font-medium">
+        <Link prefetch={false} href="/qualitycompliance/qualitycontrol/" className="text-gold hover:underline font-medium">
           Quality Control page
         </Link>
         .
@@ -147,7 +147,7 @@ const faqs: FAQ[] = [
         time of pre-production samples and post-production samples, along with prior to shipment.
         Fully independent third-party inspection through SGS, Intertek or Bureau Veritas can also
         be arranged at additional cost. See our full{" "}
-        <Link href="/qualitycompliance/inspectionprocess/" className="text-gold hover:underline font-medium">
+        <Link prefetch={false} href="/qualitycompliance/inspectionprocess/" className="text-gold hover:underline font-medium">
           8-stage inspection process
         </Link>
         .
@@ -167,7 +167,7 @@ const faqs: FAQ[] = [
         specification, photographic evidence of all defects, AQL pass/fail determination and
         corrective action requirements. Reports are shared digitally within 24 hours. View the full
         scope on our{" "}
-        <Link href="/qualitycompliance/inspectionprocess/" className="text-gold hover:underline font-medium">
+        <Link prefetch={false} href="/qualitycompliance/inspectionprocess/" className="text-gold hover:underline font-medium">
           Inspection Process page
         </Link>
         .
@@ -191,13 +191,13 @@ const faqs: FAQ[] = [
     answer: (
       <>
         Our factory network covers:{" "}
-        <Link href="/qualitycompliance/certifications/" className="text-gold hover:underline font-medium">
+        <Link prefetch={false} href="/qualitycompliance/certifications/" className="text-gold hover:underline font-medium">
           GOTS, OEKO-TEX Standard 100, BSCI, Sedex, ISO 9001, GRS, WRAP, BCI, SA8000 and Bluesign
         </Link>
         . Certification availability varies by factory and product category. Please note: the more
         certified the product, the more direct the impact on its unit cost. Specify your required
         certifications in the{" "}
-        <Link href="/rfq/" className="text-gold hover:underline font-medium">
+        <Link prefetch={false} href="/rfq/" className="text-gold hover:underline font-medium">
           RFQ form
         </Link>{" "}
         and we will match you with appropriately certified factories.
@@ -217,7 +217,7 @@ const faqs: FAQ[] = [
         100 tests the finished product for harmful substances regardless of whether the input fibre
         is organic. For organic product labelling claims, GOTS is required. For chemical safety
         claims only, OEKO-TEX suffices. Full details on our{" "}
-        <Link href="/qualitycompliance/certifications/" className="text-gold hover:underline font-medium">
+        <Link prefetch={false} href="/qualitycompliance/certifications/" className="text-gold hover:underline font-medium">
           Certifications page
         </Link>
         .
@@ -236,7 +236,7 @@ const faqs: FAQ[] = [
         global-standard.org, OEKO-TEX at oeko-tex.com, BSCI through amfori.org, ISO 9001 through
         the issuing registrar. We provide certificate copies with the formal quotation. View our
         current{" "}
-        <Link href="/qualitycompliance/certifications/" className="text-gold hover:underline font-medium">
+        <Link prefetch={false} href="/qualitycompliance/certifications/" className="text-gold hover:underline font-medium">
           certifications overview
         </Link>
         {" "}and encourage independent verification before order placement.
@@ -256,7 +256,7 @@ const faqs: FAQ[] = [
         GOTS. Workwear factories hold ISO 9001 and WRAP. We maintain a certification matrix and
         match your compliance requirements to the correct factory. See all available certifications
         on our{" "}
-        <Link href="/qualitycompliance/certifications/" className="text-gold hover:underline font-medium">
+        <Link prefetch={false} href="/qualitycompliance/certifications/" className="text-gold hover:underline font-medium">
           Certifications page
         </Link>
         .
@@ -281,7 +281,7 @@ const faqs: FAQ[] = [
       <>
         Standard apparel: 45–60 days; complex apparel and workwear: 60–90 days; home textiles:
         45–75 days; fabric: 30–45 days. All lead times run from{" "}
-        <Link href="/qualitycompliance/qualitycontrol/" className="text-gold hover:underline font-medium">
+        <Link prefetch={false} href="/qualitycompliance/qualitycontrol/" className="text-gold hover:underline font-medium">
           pre-production sample approval
         </Link>
         , not from order placement. Rush production for standard products may be available on
@@ -310,7 +310,7 @@ const faqs: FAQ[] = [
         at their own cost. We coordinate factory access and provide the inspection appointment
         window. We recommend booking inspection at 80–100% production completion. At least 5
         business days&apos; notice is required. See our{" "}
-        <Link href="/qualitycompliance/inspectionprocess/" className="text-gold hover:underline font-medium">
+        <Link prefetch={false} href="/qualitycompliance/inspectionprocess/" className="text-gold hover:underline font-medium">
           inspection process
         </Link>{" "}
         for full details.
@@ -330,7 +330,7 @@ const faqs: FAQ[] = [
         lading before shipment release. Payment is by bank transfer (T/T) in USD. LC at sight is
         also entertained through reliable banking channels. We do not prefer to work on D/A terms.
         Extended terms may be discussed for established buyers with order history. Submit an{" "}
-        <Link href="/rfq/" className="text-gold hover:underline font-medium">
+        <Link prefetch={false} href="/rfq/" className="text-gold hover:underline font-medium">
           RFQ
         </Link>{" "}
         to begin the order process.
@@ -347,7 +347,7 @@ const faqs: FAQ[] = [
       <>
         FOB prices include the factory production cost, local transport to port and export
         documentation (commercial invoice, packing list, bill of lading, certificate of origin).{" "}
-        <Link href="/qualitycompliance/qualitycontrol/" className="text-gold hover:underline font-medium">
+        <Link prefetch={false} href="/qualitycompliance/qualitycontrol/" className="text-gold hover:underline font-medium">
           QC and inspection services
         </Link>{" "}
         are not included in FOB pricing and are quoted separately per the agreed scope of work.
@@ -376,7 +376,7 @@ const faqs: FAQ[] = [
         sometimes tighter; when conditions allow, they can be more flexible as well. We recommend
         confirming your order within the stated validity period to hold the quoted price. Submit a
         new{" "}
-        <Link href="/rfq/" className="text-gold hover:underline font-medium">
+        <Link prefetch={false} href="/rfq/" className="text-gold hover:underline font-medium">
           RFQ
         </Link>{" "}
         if your requirements change after expiry.
@@ -794,3 +794,4 @@ export default function FAQsContent() {
     </>
   );
 }
+

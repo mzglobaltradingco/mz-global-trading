@@ -259,11 +259,11 @@ export default function CurtainsContent() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
           <div className="max-w-3xl">
                         <motion.nav aria-label="Breadcrumb" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
-              <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+              <Link prefetch={false} href="/" className="hover:text-gold transition-colors">Home</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/hometextile/" className="hover:text-gold transition-colors">Home Textiles</Link>
+              <Link prefetch={false} href="/hometextile/" className="hover:text-gold transition-colors">Home Textiles</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/hometextile/bedlinen/" className="hover:text-gold transition-colors">Bed Linen</Link>
+              <Link prefetch={false} href="/hometextile/bedlinen/" className="hover:text-gold transition-colors">Bed Linen</Link>
               <span aria-hidden="true">&#x203A;</span>
               <span className="text-gold">Curtains</span>
             </motion.nav>
@@ -301,7 +301,7 @@ export default function CurtainsContent() {
               transition={{ duration: 0.6, delay: 0.7 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
+              <Link prefetch={false} href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
                 Request a Quote <span aria-hidden="true">→</span>
               </Link>
               <button
@@ -357,7 +357,7 @@ export default function CurtainsContent() {
                 </div>
               ))}
             </div>
-            <Link href="/rfq/" className="shrink-0 inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-yellow-400 transition-colors w-fit">
+            <Link prefetch={false} href="/rfq/" className="shrink-0 inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-yellow-400 transition-colors w-fit">
               Request a Quote <span aria-hidden="true">→</span>
             </Link>
           </motion.div>
@@ -604,28 +604,28 @@ export default function CurtainsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Link href="/knowledge/curtain-fabric-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/knowledge/curtain-fabric-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📚</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
               <p className="font-semibold text-navy-900">Curtain Fabric Guide</p>
               <p className="text-xs text-gray-500 leading-relaxed">Blackout, sheer, linen blend and velvet fabrics explained — heading types, lining options and certification for retail and contract buyers.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
             </Link>
-            <Link href="/guides/sourcing-curtains-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/guides/sourcing-curtains-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📄</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
               <p className="font-semibold text-navy-900">Sourcing Curtains from Pakistan</p>
               <p className="text-xs text-gray-500 leading-relaxed">Fabric, lining and custom heading types — 6-step sourcing guide for retail and hotel contract curtain programmes.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Guide →</span>
             </Link>
-            <Link href="/downloads/curtain-measurement-order-template/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/downloads/curtain-measurement-order-template/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">⬇️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
               <p className="font-semibold text-navy-900">Curtain Measurement &amp; Order Template</p>
               <p className="text-xs text-gray-500 leading-relaxed">Complete spec form — fabric, blackout, heading type, eyelet spec, drop and width table, fire retardancy and certification fields.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Download →</span>
             </Link>
-            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+            <Link prefetch={false} href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">✉️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
               <p className="font-semibold text-white">Ready to Source Curtains?</p>
@@ -884,7 +884,7 @@ export default function CurtainsContent() {
               <p className="text-gray-500 leading-relaxed mb-8">
                 Every specification element — from fabric construction through to FR treatment, lining and retail packaging — is managed to your programme requirements. Retail, contract and e-commerce channels all accommodated.
               </p>
-              <Link href="/rfq/" className="inline-flex items-center gap-2 bg-navy-900 text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-navy-800 transition-colors">
+              <Link prefetch={false} href="/rfq/" className="inline-flex items-center gap-2 bg-navy-900 text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-navy-800 transition-colors">
                 Start Your Programme <span aria-hidden="true">→</span>
               </Link>
             </div>
@@ -1197,7 +1197,7 @@ export default function CurtainsContent() {
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
                 className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow"
               >
-                <Link href={card.href} className="block">
+                <Link prefetch={false} href={card.href} className="block">
                   <div className="relative h-64 overflow-hidden">
                     <Image src={card.img} alt={card.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
@@ -1231,10 +1231,10 @@ export default function CurtainsContent() {
               Construction, heading type and drop confirmed — our RFQ takes 3 minutes. Factory match and quotation returned within 3–5 working days.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-bold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
+              <Link prefetch={false} href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-bold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
                 Request a Quote <span aria-hidden="true">→</span>
               </Link>
-              <Link href="/contact-us/" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl hover:border-gold hover:text-gold transition-colors text-base">
+              <Link prefetch={false} href="/contact-us/" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl hover:border-gold hover:text-gold transition-colors text-base">
                 Contact Us
               </Link>
             </div>
@@ -1245,3 +1245,4 @@ export default function CurtainsContent() {
     </div>
   );
 }
+

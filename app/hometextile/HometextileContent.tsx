@@ -140,7 +140,7 @@ export default function HometextileContent() {
               transition={{ duration: 0.4 }}
               className="flex items-center gap-2 text-gray-500 text-xs mb-6 flex-wrap"
             >
-              <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+              <Link prefetch={false} href="/" className="hover:text-gold transition-colors">Home</Link>
               <span aria-hidden="true">›</span>
               <span className="text-gold">Home Textiles</span>
             </motion.nav>
@@ -365,3 +365,4 @@ export default function HometextileContent() {
     </div>
   );
 }
+

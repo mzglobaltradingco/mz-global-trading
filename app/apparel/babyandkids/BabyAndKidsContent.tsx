@@ -106,9 +106,9 @@ export default function BabyAndKidsContent() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
           <div className="max-w-3xl">
                         <motion.nav aria-label="Breadcrumb" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
-              <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+              <Link prefetch={false} href="/" className="hover:text-gold transition-colors">Home</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/apparel/" className="hover:text-gold transition-colors">Apparel</Link>
+              <Link prefetch={false} href="/apparel/" className="hover:text-gold transition-colors">Apparel</Link>
               <span aria-hidden="true">&#x203A;</span>
               <span className="text-gold">Baby & Kids</span>
             </motion.nav>
@@ -340,3 +340,4 @@ export default function BabyAndKidsContent() {
     </div>
   );
 }
+

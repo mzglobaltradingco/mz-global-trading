@@ -289,7 +289,7 @@ export default function ContactUsContent() {
                 <svg className="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
                 <div>
                   <p className="text-sm font-semibold text-navy-900">Have questions before getting in touch?</p>
-                  <p className="text-xs text-gray-500 mt-0.5">Browse our <Link href="/faqs/" className="text-gold hover:underline font-semibold">Frequently Asked Questions</Link> — sourcing process, lead times, certifications, and ordering covered.</p>
+                  <p className="text-xs text-gray-500 mt-0.5">Browse our <Link prefetch={false} href="/faqs/" className="text-gold hover:underline font-semibold">Frequently Asked Questions</Link> — sourcing process, lead times, certifications, and ordering covered.</p>
                 </div>
               </div>
 
@@ -390,7 +390,7 @@ export default function ContactUsContent() {
                     </button>
                     <div className="flex items-center gap-2.5 flex-wrap">
                       <span className="text-gray-500 text-sm">Need a formal quote?</span>
-                      <Link href="/rfq/"
+                      <Link prefetch={false} href="/rfq/"
                         className="inline-flex items-center gap-1.5 bg-gold text-navy-900 font-bold text-xs px-4 py-2 rounded-full hover:bg-yellow-400 transition-colors whitespace-nowrap"
                         style={{ animation: "rfqGlow 2s ease-in-out infinite" }}
                       >
@@ -406,7 +406,7 @@ export default function ContactUsContent() {
                   </div>
                   <p className="text-gray-500 text-xs pt-1">
                     By submitting this form you agree that MZ Global Trading may use your details to respond to your enquiry.{" "}
-                    <Link href="/privacypolicy/" className="underline underline-offset-2 hover:text-gold transition-colors">
+                    <Link prefetch={false} href="/privacypolicy/" className="underline underline-offset-2 hover:text-gold transition-colors">
                       Privacy Policy
                     </Link>
                     .
@@ -479,7 +479,7 @@ export default function ContactUsContent() {
               Our structured RFQ form covers material specs, certifications, quantities, and delivery terms — and gets you a formal quote faster.
             </p>
           </div>
-          <Link href="/rfq/"
+          <Link prefetch={false} href="/rfq/"
             className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors whitespace-nowrap">
             Request a Quote →
           </Link>
@@ -488,3 +488,4 @@ export default function ContactUsContent() {
     </>
   );
 }
+

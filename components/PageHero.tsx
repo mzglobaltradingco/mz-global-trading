@@ -60,7 +60,7 @@ export default function PageHero({
               <span key={crumb.label} className="flex items-center gap-2">
                 {i > 0 && <span aria-hidden="true">›</span>}
                 {!isLast && crumb.href ? (
-                  <Link href={crumb.href} className="hover:text-gold transition-colors">
+                  <Link prefetch={false} href={crumb.href} className="hover:text-gold transition-colors">
                     {crumb.label}
                   </Link>
                 ) : (
@@ -120,3 +120,4 @@ export default function PageHero({
     </section>
   );
 }
+

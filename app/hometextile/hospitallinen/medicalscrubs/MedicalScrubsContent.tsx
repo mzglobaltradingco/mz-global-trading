@@ -136,11 +136,11 @@ export default function MedicalScrubsContent() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
           <div className="max-w-3xl">
                         <motion.nav aria-label="Breadcrumb" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
-              <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+              <Link prefetch={false} href="/" className="hover:text-gold transition-colors">Home</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/hometextile/" className="hover:text-gold transition-colors">Home Textiles</Link>
+              <Link prefetch={false} href="/hometextile/" className="hover:text-gold transition-colors">Home Textiles</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/hometextile/hospitallinen/" className="hover:text-gold transition-colors">Hospital Linen</Link>
+              <Link prefetch={false} href="/hometextile/hospitallinen/" className="hover:text-gold transition-colors">Hospital Linen</Link>
               <span aria-hidden="true">&#x203A;</span>
               <span className="text-gold">Medical Scrubs</span>
             </motion.nav>
@@ -152,7 +152,7 @@ export default function MedicalScrubsContent() {
               MZ Global Trading sources medical scrubs from Pakistan&rsquo;s certified healthcare textile facilities. Twill TC 65/35, 100% cotton twill and 4-way stretch poly-spandex. Anti-bacterial, moisture-wicking, fluid-repellent. ISO 13485, BSCI, Sedex certified. Custom colour and embroidery programmes. Export to hospitals, clinics and distributors worldwide.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.7 }} className="flex flex-col sm:flex-row gap-4">
-              <Link href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">Request a Quote<span aria-hidden="true">&#8594;</span></Link>
+              <Link prefetch={false} href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">Request a Quote<span aria-hidden="true">&#8594;</span></Link>
               <button onClick={() => scrollToId("bento-grid")} className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">Explore Product Guide</button>
             </motion.div>
           </div>
@@ -177,7 +177,7 @@ export default function MedicalScrubsContent() {
                 <div key={s.label} className="text-center"><p className="text-3xl font-bold text-gold">{s.val}</p><p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p></div>
               ))}
             </div>
-            <Link href="/rfq/" className="shrink-0 inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-yellow-400 transition-colors w-fit">Request a Quote <span aria-hidden="true">&#8594;</span></Link>
+            <Link prefetch={false} href="/rfq/" className="shrink-0 inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-yellow-400 transition-colors w-fit">Request a Quote <span aria-hidden="true">&#8594;</span></Link>
           </motion.div>
         </div>
       </section>
@@ -405,28 +405,28 @@ export default function MedicalScrubsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Link href="/knowledge/medical-scrubs-fabric-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/knowledge/medical-scrubs-fabric-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📚</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
               <p className="font-semibold text-navy-900">Medical Scrubs Fabric Guide: Poly-Cotton, 4-Way Stretch & Anti-Microbial</p>
               <p className="text-xs text-gray-500 leading-relaxed">Fabric construction comparison, wash durability, hospital colour-coding and certification requirements.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
             </Link>
-            <Link href="/guides/sourcing-medical-scrubs-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/guides/sourcing-medical-scrubs-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📄</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
               <p className="font-semibold text-navy-900">Sourcing Medical Scrubs from Pakistan: Fabric, Colours & Custom Embroidery</p>
               <p className="text-xs text-gray-500 leading-relaxed">Step-by-step guide — fabric selection, colour programme, embroidery specification and size distribution.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Guide →</span>
             </Link>
-            <Link href="/downloads/scrubs-size-spec-template/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/downloads/scrubs-size-spec-template/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">⬇️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
               <p className="font-semibold text-navy-900">Medical Scrubs Size & Specification Template (XS–5XL)</p>
               <p className="text-xs text-gray-500 leading-relaxed">Document fabric, wash standard, colour Pantone references, embroidery and size distribution before your RFQ.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Template →</span>
             </Link>
-            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+            <Link prefetch={false} href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">✉️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
               <p className="font-semibold text-white">Ready to Source Medical Scrubs?</p>
@@ -785,7 +785,7 @@ export default function MedicalScrubsContent() {
               { name: "Patient Gowns", desc: "Cotton and poly-cotton patient gowns. Open-back and snap fastening options.", href: "/hometextile/hospitallinen/patientgowns/", img: "/images/hero/hero-patient-gowns.webp", alt: "Pakistan patient gowns manufacturer — OEM cotton and poly-cotton hospital gowns for healthcare buyers" },
               { name: "Surgical Huck Towels", desc: "Cotton huck towels for surgical and clinical use. Bulk medical supply programmes.", href: "/hometextile/hospitallinen/surgicalhucktowels/", img: "/images/hero/hero-surgical-huck-towels.webp", alt: "Pakistan surgical huck towels manufacturer — OEM cotton huck towels for hospital and clinic buyers worldwide" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
+              <Link prefetch={false} href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 33vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
@@ -809,8 +809,8 @@ export default function MedicalScrubsContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 max-w-2xl mx-auto leading-snug">Source Medical Scrubs from Pakistan&rsquo;s Certified Facilities</h2>
             <p className="text-gray-300 text-base mb-10 max-w-xl mx-auto leading-relaxed">Share your construction, colour programme, fit preference, size distribution and certification requirements. We identify the right certified Pakistan facility and return pricing with full compliance documentation within 3&ndash;5 business days.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-10 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">Request a Quote <span aria-hidden="true">&#8594;</span></Link>
-              <Link href="/contact-us/" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-10 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">Contact Us</Link>
+              <Link prefetch={false} href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-10 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">Request a Quote <span aria-hidden="true">&#8594;</span></Link>
+              <Link prefetch={false} href="/contact-us/" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-10 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">Contact Us</Link>
             </div>
           </motion.div>
         </div>
@@ -818,3 +818,4 @@ export default function MedicalScrubsContent() {
     </div>
   );
 }
+

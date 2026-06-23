@@ -41,11 +41,11 @@ export default function ArticleContent({ post }: ArticleContentProps) {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
-            <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+            <Link prefetch={false} href="/" className="hover:text-gold transition-colors">Home</Link>
             <span aria-hidden="true">›</span>
             <span className="text-gray-500">Resources</span>
             <span aria-hidden="true">›</span>
-            <Link href="/knowledge/" className="hover:text-gold transition-colors">Knowledge Hub</Link>
+            <Link prefetch={false} href="/knowledge/" className="hover:text-gold transition-colors">Knowledge Hub</Link>
             <span aria-hidden="true">›</span>
             <span className="text-gold line-clamp-1">{post.category}</span>
           </nav>

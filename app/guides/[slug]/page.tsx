@@ -192,9 +192,9 @@ export default async function GuidePage({ params }: GuidePageProps) {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav aria-label="Breadcrumb" className="mb-8">
               <ol className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
-                <li><Link href="/" className="hover:text-gold transition-colors">Home</Link></li>
+                <li><Link prefetch={false} href="/" className="hover:text-gold transition-colors">Home</Link></li>
                 <li aria-hidden="true">/</li>
-                <li><Link href="/guides/" className="hover:text-gold transition-colors">Guides</Link></li>
+                <li><Link prefetch={false} href="/guides/" className="hover:text-gold transition-colors">Guides</Link></li>
                 <li aria-hidden="true">/</li>
                 <li className="text-gray-500" aria-current="page">Guide {guide.num}</li>
               </ol>

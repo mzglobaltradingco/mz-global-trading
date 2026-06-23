@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -63,9 +63,9 @@ export default function IndustrialLinenContent() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
           <div className="max-w-3xl">
                         <motion.nav aria-label="Breadcrumb" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
-              <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+              <Link prefetch={false} href="/" className="hover:text-gold transition-colors">Home</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/hometextile/" className="hover:text-gold transition-colors">Home Textiles</Link>
+              <Link prefetch={false} href="/hometextile/" className="hover:text-gold transition-colors">Home Textiles</Link>
               <span aria-hidden="true">&#x203A;</span>
               <span className="text-gold">Industrial Linen</span>
             </motion.nav>
@@ -81,7 +81,7 @@ export default function IndustrialLinenContent() {
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.7 }}
               className="flex flex-col sm:flex-row gap-4">
-              <Link href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
+              <Link prefetch={false} href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
                 Request a Quote <span aria-hidden="true">&#8594;</span>
               </Link>
             </motion.div>
@@ -102,7 +102,7 @@ export default function IndustrialLinenContent() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {PRODUCTS.map((p, i) => (
               <motion.div key={p.href} initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55, delay: i * 0.1 }}>
-                <Link href={p.href} className={`group block bg-gradient-to-br ${p.color} border ${p.border} rounded-2xl overflow-hidden h-full flex flex-col hover:shadow-md transition-shadow`}>
+                <Link prefetch={false} href={p.href} className={`group block bg-gradient-to-br ${p.color} border ${p.border} rounded-2xl overflow-hidden h-full flex flex-col hover:shadow-md transition-shadow`}>
                   <div className="relative h-48 overflow-hidden">
                     <Image
                       src={p.img}
@@ -171,7 +171,7 @@ export default function IndustrialLinenContent() {
           <p className="text-gray-300 text-sm leading-relaxed mb-8">
             Submit your specification — product type, construction, GSM, quantity and destination — and receive a detailed quotation within 3–5 business days.
           </p>
-          <Link href="/rfq/" className="inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold px-10 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
+          <Link prefetch={false} href="/rfq/" className="inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold px-10 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
             Request a Quote <span aria-hidden="true">&#8594;</span>
           </Link>
         </div>
@@ -179,3 +179,4 @@ export default function IndustrialLinenContent() {
     </div>
   );
 }
+

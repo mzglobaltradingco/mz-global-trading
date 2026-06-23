@@ -183,7 +183,7 @@ export default function TermsOfUseContent() {
                   <strong className="text-navy-900">Effective date: 1 June 2026.</strong>{" "}
                   These Terms of Use govern your access to and use of the MZ Global Trading
                   website at{" "}
-                  <Link href="/" className="text-gold hover:underline">
+                  <Link prefetch={false} href="/" className="text-gold hover:underline">
                     mzglobaltrading.com
                   </Link>{" "}
                   and any related services. By accessing this website you agree to be bound by
@@ -213,7 +213,7 @@ export default function TermsOfUseContent() {
                 <p>
                   These Terms apply to all visitors and users of this website, regardless of
                   geographic location. They are to be read alongside our{" "}
-                  <Link href="/privacypolicy/" className="text-gold hover:underline">
+                  <Link prefetch={false} href="/privacypolicy/" className="text-gold hover:underline">
                     Privacy Policy
                   </Link>
                   , which forms part of this agreement.
@@ -244,7 +244,7 @@ export default function TermsOfUseContent() {
                     in your jurisdiction may not apply to transactions or interactions conducted
                     on a business-to-business basis. If you are accessing this site as a private
                     individual rather than a business representative, please{" "}
-                    <Link href="/contact-us/" className="text-gold hover:underline">
+                    <Link prefetch={false} href="/contact-us/" className="text-gold hover:underline">
                       contact us
                     </Link>{" "}
                     before submitting any enquiry.
@@ -322,7 +322,7 @@ export default function TermsOfUseContent() {
                 </p>
                 <p>
                   To request permission to reproduce any content, contact us at{" "}
-                  <Link href="mailto:info@mzglobaltrading.com" className="text-gold hover:underline">
+                  <Link prefetch={false} href="mailto:info@mzglobaltrading.com" className="text-gold hover:underline">
                     info@mzglobaltrading.com
                   </Link>
                   .
@@ -522,7 +522,7 @@ export default function TermsOfUseContent() {
                 <SubHeading>Entire agreement</SubHeading>
                 <p>
                   These Terms, together with our{" "}
-                  <Link href="/privacypolicy/" className="text-gold hover:underline">
+                  <Link prefetch={false} href="/privacypolicy/" className="text-gold hover:underline">
                     Privacy Policy
                   </Link>
                   , constitute the entire agreement between you and MZ Global Trading with
@@ -577,3 +577,4 @@ export default function TermsOfUseContent() {
     </>
   );
 }
+

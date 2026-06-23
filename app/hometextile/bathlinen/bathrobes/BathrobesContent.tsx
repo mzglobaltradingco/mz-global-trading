@@ -354,11 +354,11 @@ export default function BathrobesContent() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
           <div className="max-w-3xl">
                         <motion.nav aria-label="Breadcrumb" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
-              <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+              <Link prefetch={false} href="/" className="hover:text-gold transition-colors">Home</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/hometextile/" className="hover:text-gold transition-colors">Home Textiles</Link>
+              <Link prefetch={false} href="/hometextile/" className="hover:text-gold transition-colors">Home Textiles</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/hometextile/bathlinen/" className="hover:text-gold transition-colors">Bath Linen</Link>
+              <Link prefetch={false} href="/hometextile/bathlinen/" className="hover:text-gold transition-colors">Bath Linen</Link>
               <span aria-hidden="true">&#x203A;</span>
               <span className="text-gold">Bathrobes</span>
             </motion.nav>
@@ -805,28 +805,28 @@ export default function BathrobesContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Guides &amp; Resources</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Link href="/knowledge/bathrobe-fabric-types/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/knowledge/bathrobe-fabric-types/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📚</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
               <p className="font-semibold text-navy-900">Bathrobe Fabric Types: Terry, Waffle, Velour & Microfibre Compared</p>
               <p className="text-xs text-gray-500 leading-relaxed">Absorbency, laundry durability and cost compared across all four constructions — with certification requirements by market.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
             </Link>
-            <Link href="/guides/hotel-bathrobe-sourcing-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/guides/hotel-bathrobe-sourcing-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📄</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
               <p className="font-semibold text-navy-900">Hotel Bathrobe Sourcing Guide: Certifications, GSM & Custom Embroidery</p>
               <p className="text-xs text-gray-500 leading-relaxed">Collar styles, sizing by market, embroidery spec, OEKO-TEX requirements and lead times for hotel and spa programmes.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Guide →</span>
             </Link>
-            <Link href="/downloads/bathrobe-customisation-checklist/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/downloads/bathrobe-customisation-checklist/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">⬇️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
               <p className="font-semibold text-navy-900">Bathrobe Customisation & Order Checklist</p>
               <p className="text-xs text-gray-500 leading-relaxed">Construction, collar, embroidery, sizing, packing and certification fields — complete and attach to your RFQ.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Checklist →</span>
             </Link>
-            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+            <Link prefetch={false} href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">✉️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
               <p className="font-semibold text-white">Ready to Source Bathrobes?</p>
@@ -1429,10 +1429,10 @@ export default function BathrobesContent() {
             ))}
           </div>
           <div className="mt-14 pt-8 border-t border-gray-200 flex flex-col sm:flex-row gap-4">
-            <Link href="/rfq/" className="inline-flex items-center gap-2 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors bg-[#4a7c59] hover:bg-[#3d6b4a]">
+            <Link prefetch={false} href="/rfq/" className="inline-flex items-center gap-2 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors bg-[#4a7c59] hover:bg-[#3d6b4a]">
               Request Certified Bathrobe Programme <span aria-hidden="true">→</span>
             </Link>
-            <Link href="/qualitycompliance/certifications/" className="inline-flex items-center gap-2 font-semibold px-7 py-3.5 rounded-xl border border-gray-200 text-navy-900 hover:border-navy-900 transition-colors">
+            <Link prefetch={false} href="/qualitycompliance/certifications/" className="inline-flex items-center gap-2 font-semibold px-7 py-3.5 rounded-xl border border-gray-200 text-navy-900 hover:border-navy-900 transition-colors">
               View All Certifications
             </Link>
           </div>
@@ -1481,10 +1481,10 @@ export default function BathrobesContent() {
             ))}
           </div>
           <div className="mt-10 border-t-2 border-gold pt-8 flex flex-col sm:flex-row gap-5">
-            <Link href="/rfq/" className="inline-flex items-center gap-2 bg-navy-900 text-white font-semibold px-8 py-4 rounded-xl hover:bg-navy-800 transition-colors">
+            <Link prefetch={false} href="/rfq/" className="inline-flex items-center gap-2 bg-navy-900 text-white font-semibold px-8 py-4 rounded-xl hover:bg-navy-800 transition-colors">
               Begin Your Bathrobe Programme — Step 01 <span aria-hidden="true">→</span>
             </Link>
-            <Link href="/ourprocess/" className="inline-flex items-center gap-2 border border-gray-200 text-navy-900 font-semibold px-8 py-4 rounded-xl hover:border-navy-900 transition-colors">
+            <Link prefetch={false} href="/ourprocess/" className="inline-flex items-center gap-2 border border-gray-200 text-navy-900 font-semibold px-8 py-4 rounded-xl hover:border-navy-900 transition-colors">
               View Full Process Detail
             </Link>
           </div>
@@ -1560,7 +1560,7 @@ export default function BathrobesContent() {
               { name: "Bath Mats", desc: "Tufted terry, chenille and memory foam. Anti-slip backing, custom sizing.", href: "/hometextile/bathlinen/bathmats/", img: "/images/hero/hero-bath-mats.webp", alt: "Pakistan bath mat manufacturer — OEM tufted and chenille bath mats with anti-slip backing for hotel and retail" },
               { name: "Beach & Pool Towels", desc: "Velour, fouta and microfiber. Sublimation and reactive print. Resort programmes.", href: "/hometextile/bathlinen/beachpooltowel/", img: "/images/hero/hero-beach-pool-towels.webp", alt: "Pakistan beach and pool towel manufacturer — OEM velour and sublimation print towels for resort programmes" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
+              <Link prefetch={false} href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
@@ -1595,10 +1595,10 @@ export default function BathrobesContent() {
               Shawl collar terry for city hotels, kimono waffle for boutique spas, hooded velour for resort pools — any construction, any collar, hotel logo embroidered to specification. Submit the RFQ; receive a certified Pakistan terry mill match with sample costing within 3&ndash;5 working days.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-9 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
+              <Link prefetch={false} href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-9 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
                 Request a Quote <span aria-hidden="true">&#8594;</span>
               </Link>
-              <Link href="/contact-us/" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-9 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">
+              <Link prefetch={false} href="/contact-us/" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-9 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">
                 Contact Us
               </Link>
             </div>
@@ -1608,3 +1608,4 @@ export default function BathrobesContent() {
     </div>
   );
 }
+

@@ -22,7 +22,7 @@ export default function FeaturedBanner({ post }: FeaturedBannerProps) {
     >
       <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Featured Article</p>
 
-      <Link href={`/knowledge/${post.slug}/`} className="block group">
+      <Link prefetch={false} href={`/knowledge/${post.slug}/`} className="block group">
         <article className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-navy-900 to-navy-800 border border-white/5 hover:border-gold/25 transition-colors">
           {/* Dot-grid overlay */}
           <div
@@ -79,3 +79,4 @@ export default function FeaturedBanner({ post }: FeaturedBannerProps) {
     </motion.div>
   );
 }
+

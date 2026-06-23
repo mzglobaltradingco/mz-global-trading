@@ -625,7 +625,7 @@ export default function CareersContent() {
                 <p className="text-gray-500 text-xs border-t border-gray-100 pt-5">
                   You will be prompted to attach your CV when your email client opens. Accepted formats: PDF, Word (.docx).
                   {" "}Application details are used solely to process your candidacy and retained for up to 12 months.{" "}
-                  <Link href="/privacypolicy/" className="underline underline-offset-2 hover:text-gold transition-colors">
+                  <Link prefetch={false} href="/privacypolicy/" className="underline underline-offset-2 hover:text-gold transition-colors">
                     Privacy Policy
                   </Link>
                   .
@@ -830,3 +830,4 @@ export default function CareersContent() {
     </>
   );
 }
+

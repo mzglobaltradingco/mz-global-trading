@@ -252,11 +252,11 @@ export default function TowelsContent() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
           <div className="max-w-3xl">
                         <motion.nav aria-label="Breadcrumb" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
-              <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+              <Link prefetch={false} href="/" className="hover:text-gold transition-colors">Home</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/hometextile/" className="hover:text-gold transition-colors">Home Textiles</Link>
+              <Link prefetch={false} href="/hometextile/" className="hover:text-gold transition-colors">Home Textiles</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/hometextile/bathlinen/" className="hover:text-gold transition-colors">Bath Linen</Link>
+              <Link prefetch={false} href="/hometextile/bathlinen/" className="hover:text-gold transition-colors">Bath Linen</Link>
               <span aria-hidden="true">&#x203A;</span>
               <span className="text-gold">Towels</span>
             </motion.nav>
@@ -268,7 +268,7 @@ export default function TowelsContent() {
               MZ Global Trading sources OEM bath towels from Pakistan&rsquo;s certified textile mills. Terry loop, velour, zero twist, waffle, jacquard and dobby border constructions. Hotel, hospitality, retail and spa programmes. OEKO-TEX, GOTS certified.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.7 }} className="flex flex-col sm:flex-row gap-4">
-              <Link href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">Request a Quote <span aria-hidden="true">&#8594;</span></Link>
+              <Link prefetch={false} href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">Request a Quote <span aria-hidden="true">&#8594;</span></Link>
               <button onClick={() => scrollToId("bento-grid")} className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">Explore Product Guide</button>
             </motion.div>
           </div>
@@ -296,7 +296,7 @@ export default function TowelsContent() {
                 </div>
               ))}
             </div>
-            <Link href="/rfq/" className="shrink-0 inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-yellow-400 transition-colors w-fit">Request a Quote <span aria-hidden="true">&#8594;</span></Link>
+            <Link prefetch={false} href="/rfq/" className="shrink-0 inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-yellow-400 transition-colors w-fit">Request a Quote <span aria-hidden="true">&#8594;</span></Link>
           </motion.div>
         </div>
       </section>
@@ -546,28 +546,28 @@ export default function TowelsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Guides &amp; Resources</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Link href="/knowledge/terry-towel-gsm-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/knowledge/terry-towel-gsm-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📚</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
               <p className="font-semibold text-navy-900">GSM Guide for Terry Towels: What 300 to 900 GSM Means for Buyers</p>
               <p className="text-xs text-gray-500 leading-relaxed">Every GSM tier explained — from 300 GSM institutional to 900 GSM luxury spa, with certification requirements by market.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
             </Link>
-            <Link href="/guides/how-to-source-towels-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/guides/how-to-source-towels-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📄</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
               <p className="font-semibold text-navy-900">How to Source Hotel & Hospitality Towels from Pakistan</p>
               <p className="text-xs text-gray-500 leading-relaxed">8-step sourcing process — specification, mill vetting, sampling, QC, lead times and FOB logistics for USA, UK and EU buyers.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Guide →</span>
             </Link>
-            <Link href="/downloads/towel-specification-sheet/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/downloads/towel-specification-sheet/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">⬇️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
               <p className="font-semibold text-navy-900">Towel Specification & Order Sheet</p>
               <p className="text-xs text-gray-500 leading-relaxed">Complete spec template — GSM, sizes, construction, certifications, packing and quality tests. Attach to your RFQ.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Template →</span>
             </Link>
-            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+            <Link prefetch={false} href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">✉️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
               <p className="font-semibold text-white">Ready to Source Towels?</p>
@@ -785,7 +785,7 @@ export default function TowelsContent() {
                   </div>
                 ))}
               </div>
-              <Link href="/rfq/" className="inline-flex items-center gap-2 bg-navy-900 text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-navy-900/90 transition-colors">Specify Your Colours →</Link>
+              <Link prefetch={false} href="/rfq/" className="inline-flex items-center gap-2 bg-navy-900 text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-navy-900/90 transition-colors">Specify Your Colours →</Link>
             </div>
             <div className="space-y-4">
               {DYE_OPTIONS.map((d) => (
@@ -841,7 +841,7 @@ export default function TowelsContent() {
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Start Your Towel Programme</p>
               <p className="text-white font-semibold text-lg">Every specification. Every certification. Fully managed from Pakistan&rsquo;s certified mills.</p>
             </div>
-            <Link href="/rfq/" className="shrink-0 inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors whitespace-nowrap">Request a Quote →</Link>
+            <Link prefetch={false} href="/rfq/" className="shrink-0 inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors whitespace-nowrap">Request a Quote →</Link>
           </div>
           <BackToTop />
         </div>
@@ -1070,7 +1070,7 @@ export default function TowelsContent() {
               { name: "Bath Mats", desc: "Tufted terry, chenille and memory foam. Anti-slip backing, custom sizing.", href: "/hometextile/bathlinen/bathmats/", img: "/images/hero/hero-bath-mats.webp", alt: "Pakistan bath mat manufacturer — OEM tufted and chenille bath mats with anti-slip backing for hotel and retail" },
               { name: "Beach & Pool Towels", desc: "Velour, fouta and microfiber. Sublimation and reactive print. Resort programmes.", href: "/hometextile/bathlinen/beachpooltowel/", img: "/images/hero/hero-beach-pool-towels.webp", alt: "Pakistan beach and pool towel manufacturer — OEM velour and sublimation print towels for resort programmes" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
+              <Link prefetch={false} href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
@@ -1094,8 +1094,8 @@ export default function TowelsContent() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Source Bath Towels from Pakistan&rsquo;s Certified Mills</h2>
             <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">Hotel institutional supply, premium retail sets, spa collections — towel programmes of any specification and volume. Submit the RFQ; receive a mill match with competitive quotation within 3–5 working days. Certification documentation included.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-10 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">Request a Quote <span aria-hidden="true">→</span></Link>
-              <Link href="/contact-us/" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-10 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">Contact Us</Link>
+              <Link prefetch={false} href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-10 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">Request a Quote <span aria-hidden="true">→</span></Link>
+              <Link prefetch={false} href="/contact-us/" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-10 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">Contact Us</Link>
             </div>
           </motion.div>
         </div>
@@ -1103,3 +1103,4 @@ export default function TowelsContent() {
     </div>
   );
 }
+

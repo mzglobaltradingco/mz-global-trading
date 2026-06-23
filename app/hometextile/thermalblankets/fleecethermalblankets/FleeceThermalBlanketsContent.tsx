@@ -163,11 +163,11 @@ export default function FleeceThermalBlanketsContent() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
           <div className="max-w-3xl">
                         <motion.nav aria-label="Breadcrumb" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
-              <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+              <Link prefetch={false} href="/" className="hover:text-gold transition-colors">Home</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/hometextile/" className="hover:text-gold transition-colors">Home Textiles</Link>
+              <Link prefetch={false} href="/hometextile/" className="hover:text-gold transition-colors">Home Textiles</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/hometextile/thermalblankets/" className="hover:text-gold transition-colors">Thermal Blankets</Link>
+              <Link prefetch={false} href="/hometextile/thermalblankets/" className="hover:text-gold transition-colors">Thermal Blankets</Link>
               <span aria-hidden="true">&#x203A;</span>
               <span className="text-gold">Fleece Thermal Blankets</span>
             </motion.nav>
@@ -179,7 +179,7 @@ export default function FleeceThermalBlanketsContent() {
               MZ Global Trading sources anti-pill polar fleece, sherpa double-sided and jacquard woven thermal blankets from Pakistan&rsquo;s certified mills. Retail, promotional, airline and institutional programmes. 150&ndash;300 GSM. GRS recycled polyester, OEKO-TEX, BSCI certified.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.7 }} className="flex flex-col sm:flex-row gap-4">
-              <Link href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
+              <Link prefetch={false} href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
                 Request a Quote <span aria-hidden="true">&#8594;</span>
               </Link>
               <button onClick={() => scrollToId("bento-grid")} className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">
@@ -219,7 +219,7 @@ export default function FleeceThermalBlanketsContent() {
                 </div>
               ))}
             </div>
-            <Link href="/rfq/" className="shrink-0 inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-yellow-400 transition-colors w-fit">
+            <Link prefetch={false} href="/rfq/" className="shrink-0 inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-yellow-400 transition-colors w-fit">
               Request a Quote <span aria-hidden="true">&#8594;</span>
             </Link>
           </motion.div>
@@ -467,28 +467,28 @@ export default function FleeceThermalBlanketsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Link href="/knowledge/fleece-blanket-gsm-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/knowledge/fleece-blanket-gsm-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📚</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
               <p className="font-semibold text-navy-900">Fleece Blanket GSM Guide</p>
               <p className="text-xs text-gray-500 leading-relaxed">Anti-pill, sherpa, polar and coral fleece — GSM table, pilling resistance and sublimation print explained.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
             </Link>
-            <Link href="/guides/sourcing-fleece-blankets-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/guides/sourcing-fleece-blankets-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📄</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
               <p className="font-semibold text-navy-900">Sourcing Fleece Blankets from Pakistan</p>
               <p className="text-xs text-gray-500 leading-relaxed">Anti-pill, sherpa and custom print — ISO 12945-2 pilling spec and OEKO-TEX certification guide.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Guide →</span>
             </Link>
-            <Link href="/downloads/fleece-blanket-spec-template/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/downloads/fleece-blanket-spec-template/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">⬇️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
               <p className="font-semibold text-navy-900">Fleece Blanket Specification Template</p>
               <p className="text-xs text-gray-500 leading-relaxed">Fill-in spec form for fleece type, GSM, pilling resistance, sublimation print and certification scope.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Template →</span>
             </Link>
-            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+            <Link prefetch={false} href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">✉️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
               <p className="font-semibold text-white">Ready to Source Fleece Blankets?</p>
@@ -831,7 +831,7 @@ export default function FleeceThermalBlanketsContent() {
               { name: "Hospital Linen", desc: "Surgical gowns, medical scrubs, patient gowns and huck towels. ISO certified.", href: "/hometextile/hospitallinen/", img: "/images/hero/hero-hospital-linen.webp", alt: "Pakistan hospital linen manufacturer — OEM surgical gowns and medical scrubs for healthcare buyers worldwide" },
               { name: "Industrial Linen", desc: "Shop towels and fender covers for automotive, maintenance and industrial buyers.", href: "/hometextile/industriallinen/", img: "/images/hero/hero-industrial-linen.webp", alt: "Pakistan industrial linen manufacturer — OEM shop towels and fender covers for automotive buyers worldwide" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
+              <Link prefetch={false} href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 33vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
@@ -856,10 +856,10 @@ export default function FleeceThermalBlanketsContent() {
             Share your construction type, GSM, size, decoration requirements, certifications and destination. Detailed quotation within 3–5 business days.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-10 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
+            <Link prefetch={false} href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-10 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
               Request a Quote <span aria-hidden="true">&#8594;</span>
             </Link>
-            <Link href="/contact-us/" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">
+            <Link prefetch={false} href="/contact-us/" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">
               Contact Us
             </Link>
           </div>
@@ -868,3 +868,4 @@ export default function FleeceThermalBlanketsContent() {
     </div>
   );
 }
+

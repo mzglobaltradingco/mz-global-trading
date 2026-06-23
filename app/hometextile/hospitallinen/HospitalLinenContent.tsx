@@ -74,9 +74,9 @@ export default function HospitalLinenContent() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
           <div className="max-w-3xl">
                         <motion.nav aria-label="Breadcrumb" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
-              <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+              <Link prefetch={false} href="/" className="hover:text-gold transition-colors">Home</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/hometextile/" className="hover:text-gold transition-colors">Home Textiles</Link>
+              <Link prefetch={false} href="/hometextile/" className="hover:text-gold transition-colors">Home Textiles</Link>
               <span aria-hidden="true">&#x203A;</span>
               <span className="text-gold">Hospital Linen</span>
             </motion.nav>
@@ -108,10 +108,10 @@ export default function HospitalLinenContent() {
               initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.7 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
+              <Link prefetch={false} href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
                 Request a Quote <span aria-hidden="true">&#8594;</span>
               </Link>
-              <Link href="/contact-us/" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">
+              <Link prefetch={false} href="/contact-us/" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">
                 Contact a Specialist
               </Link>
             </motion.div>
@@ -150,7 +150,7 @@ export default function HospitalLinenContent() {
                 </div>
               ))}
             </div>
-            <Link href="/rfq/" className="shrink-0 inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-yellow-400 transition-colors w-fit">
+            <Link prefetch={false} href="/rfq/" className="shrink-0 inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-yellow-400 transition-colors w-fit">
               Request a Quote <span aria-hidden="true">&#8594;</span>
             </Link>
           </motion.div>
@@ -170,7 +170,7 @@ export default function HospitalLinenContent() {
                 key={p.name}
                 initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
               >
-                <Link href={p.href} className="group block bg-blue-50 border border-blue-100 rounded-2xl overflow-hidden h-full flex flex-col hover:shadow-md transition-shadow">
+                <Link prefetch={false} href={p.href} className="group block bg-blue-50 border border-blue-100 rounded-2xl overflow-hidden h-full flex flex-col hover:shadow-md transition-shadow">
                   <div className="relative h-48 overflow-hidden">
                     <Image
                       src={p.img}
@@ -259,10 +259,10 @@ export default function HospitalLinenContent() {
               We match you with certified Pakistan medical textile facilities and return a competitive quote within 3&ndash;5 business days.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-10 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
+              <Link prefetch={false} href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-10 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
                 Request a Quote <span aria-hidden="true">&#8594;</span>
               </Link>
-              <Link href="/contact-us/" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-10 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">
+              <Link prefetch={false} href="/contact-us/" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-10 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">
                 Contact Us
               </Link>
             </div>
@@ -272,3 +272,4 @@ export default function HospitalLinenContent() {
     </div>
   );
 }
+

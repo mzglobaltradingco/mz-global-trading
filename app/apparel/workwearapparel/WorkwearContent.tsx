@@ -910,9 +910,9 @@ export default function WorkwearContent() {
           className="absolute top-6 left-0 right-0 px-6 md:px-12"
         >
           <ol className="flex flex-wrap items-center gap-1.5 text-xs text-white/60">
-            <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+            <li><Link prefetch={false} href="/" className="hover:text-white transition-colors">Home</Link></li>
             <li aria-hidden="true">/</li>
-            <li><Link href="/apparel/" className="hover:text-white transition-colors">Apparel</Link></li>
+            <li><Link prefetch={false} href="/apparel/" className="hover:text-white transition-colors">Apparel</Link></li>
             <li aria-hidden="true">/</li>
             <li className="text-white/90">Workwear Apparel</li>
           </ol>
@@ -1157,25 +1157,25 @@ export default function WorkwearContent() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Link href="/knowledge/workwear-fabric-standards/" className="rounded-2xl bg-white border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+            <Link prefetch={false} href="/knowledge/workwear-fabric-standards/" className="rounded-2xl bg-white border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
               <span className="text-2xl mb-3" aria-hidden="true">📚</span>
               <h3 className="text-sm font-bold text-navy-900 mb-1">Knowledge Hub</h3>
               <p className="text-xs text-gray-500 leading-relaxed flex-1">Hi-vis, flame resistant and industrial grade — EN ISO standards for buyers.</p>
               <span className="mt-4 text-xs font-semibold text-gold">Read Article →</span>
             </Link>
-            <Link href="/guides/sourcing-workwear-pakistan/" className="rounded-2xl bg-white border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+            <Link prefetch={false} href="/guides/sourcing-workwear-pakistan/" className="rounded-2xl bg-white border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
               <span className="text-2xl mb-3" aria-hidden="true">📋</span>
               <h3 className="text-sm font-bold text-navy-900 mb-1">Sourcing Guide</h3>
               <p className="text-xs text-gray-500 leading-relaxed flex-1">EN ISO standards, fabric selection and custom branding for international buyers.</p>
               <span className="mt-4 text-xs font-semibold text-gold">View Guide →</span>
             </Link>
-            <Link href="/downloads/workwear-spec-template/" className="rounded-2xl bg-white border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+            <Link prefetch={false} href="/downloads/workwear-spec-template/" className="rounded-2xl bg-white border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
               <span className="text-2xl mb-3" aria-hidden="true">⬇️</span>
               <h3 className="text-sm font-bold text-navy-900 mb-1">Downloads</h3>
               <p className="text-xs text-gray-500 leading-relaxed flex-1">Specification template for workwear sourcing from Pakistan.</p>
               <span className="mt-4 text-xs font-semibold text-gold">Get Template →</span>
             </Link>
-            <Link href="/rfq/" className="rounded-2xl bg-navy-900 border border-navy-900 p-6 flex flex-col hover:bg-navy-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+            <Link prefetch={false} href="/rfq/" className="rounded-2xl bg-navy-900 border border-navy-900 p-6 flex flex-col hover:bg-navy-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
               <span className="text-2xl mb-3" aria-hidden="true">✉️</span>
               <h3 className="text-sm font-bold text-white mb-1">Quick Start — Request a Quote</h3>
               <p className="text-xs text-white/60 leading-relaxed flex-1">Tell us your sector, safety standard required, and fleet size. We confirm factory match within 48 hours.</p>
@@ -2437,7 +2437,7 @@ export default function WorkwearContent() {
               { name: "Baby & Kids", desc: "OEKO-TEX certified baby rompers, bibs, overalls and muslin fabric.", href: "/apparel/babyandkids/", img: "/images/hero/hero-baby-and-kids.webp", alt: "Pakistan baby and kids garments manufacturer — OEM OEKO-TEX certified infant and children's apparel" },
               { name: "Socks", desc: "Cotton, wool, bamboo and performance sport socks. Any specification.", href: "/apparel/socks/", img: "/images/hero/hero-socks.webp", alt: "Pakistan socks manufacturer — OEM cotton, wool and performance socks for international buyers" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
+              <Link prefetch={false} href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
@@ -2492,3 +2492,4 @@ export default function WorkwearContent() {
     </div>
   );
 }
+

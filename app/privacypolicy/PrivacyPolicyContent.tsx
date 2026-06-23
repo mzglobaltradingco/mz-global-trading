@@ -490,7 +490,7 @@ export default function PrivacyPolicyContent() {
                 ]} />
                 <p>
                   To submit a CCPA request, contact us at{" "}
-                  <Link href="mailto:info@mzglobaltrading.com" className="text-gold hover:underline">
+                  <Link prefetch={false} href="mailto:info@mzglobaltrading.com" className="text-gold hover:underline">
                     info@mzglobaltrading.com
                   </Link>{" "}
                   with the subject line &ldquo;CCPA Request&rdquo;. We will respond within 45 days.
@@ -628,3 +628,4 @@ export default function PrivacyPolicyContent() {
     </>
   );
 }
+

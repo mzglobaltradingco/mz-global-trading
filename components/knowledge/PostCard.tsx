@@ -54,7 +54,7 @@ export default function PostCard({ post }: PostCardProps) {
       className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-gold/30 hover:shadow-lg transition-all duration-300 flex flex-col"
     >
       {/* Thumbnail — full link so right-click → open in new tab goes to article */}
-      <Link href={`/knowledge/${post.slug}/`} className="block relative h-44 overflow-hidden" tabIndex={-1} aria-hidden="true">
+      <Link prefetch={false} href={`/knowledge/${post.slug}/`} className="block relative h-44 overflow-hidden" tabIndex={-1} aria-hidden="true">
         {showImage ? (
           <Image
             src={post.image!}
@@ -87,7 +87,7 @@ export default function PostCard({ post }: PostCardProps) {
           {post.category}
         </span>
 
-        <Link href={`/knowledge/${post.slug}/`} className="block mb-2">
+        <Link prefetch={false} href={`/knowledge/${post.slug}/`} className="block mb-2">
           <h3 className="text-navy-900 font-bold text-base leading-snug line-clamp-2 group-hover:text-gold transition-colors">
             {post.title}
           </h3>
@@ -105,3 +105,4 @@ export default function PostCard({ post }: PostCardProps) {
     </motion.article>
   );
 }
+

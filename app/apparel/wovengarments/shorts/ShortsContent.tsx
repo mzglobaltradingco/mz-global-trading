@@ -466,11 +466,11 @@ export default function ShortsContent() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
           <div className="max-w-3xl">
                         <motion.nav aria-label="Breadcrumb" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
-              <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+              <Link prefetch={false} href="/" className="hover:text-gold transition-colors">Home</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/apparel/" className="hover:text-gold transition-colors">Apparel</Link>
+              <Link prefetch={false} href="/apparel/" className="hover:text-gold transition-colors">Apparel</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/apparel/wovengarments/" className="hover:text-gold transition-colors">Woven Garments</Link>
+              <Link prefetch={false} href="/apparel/wovengarments/" className="hover:text-gold transition-colors">Woven Garments</Link>
               <span aria-hidden="true">&#x203A;</span>
               <span className="text-gold">Shorts</span>
             </motion.nav>
@@ -723,28 +723,28 @@ export default function ShortsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Guides &amp; Resources</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Link href="/knowledge/shorts-fabric-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/knowledge/shorts-fabric-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📚</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
               <p className="font-semibold text-navy-900">Shorts Fabric Guide</p>
               <p className="text-xs text-gray-500 leading-relaxed">Chino, linen, swim and active shorts — fabric selection and inseam length guide.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
             </Link>
-            <Link href="/guides/sourcing-shorts-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/guides/sourcing-shorts-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📄</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
               <p className="font-semibold text-navy-900">Sourcing Shorts Guide</p>
               <p className="text-xs text-gray-500 leading-relaxed">Inseam lengths, fabric options, custom branding and certification for buyers.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guide →</span>
             </Link>
-            <Link href="/downloads/shorts-size-spec-template/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/downloads/shorts-size-spec-template/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">⬇️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
               <p className="font-semibold text-navy-900">Shorts Size Spec Template</p>
               <p className="text-xs text-gray-500 leading-relaxed">Size specification and measurement template for shorts sourcing.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Template →</span>
             </Link>
-            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+            <Link prefetch={false} href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">✉️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
               <p className="font-semibold text-white">Ready to Source Shorts?</p>
@@ -1190,7 +1190,7 @@ export default function ShortsContent() {
             <p className="text-gray-600 text-sm mb-4 max-w-lg mx-auto">
               Provide your buyer&apos;s destination country and we will recommend the appropriate certification set at enquiry stage.
             </p>
-            <Link href="/rfq/" className="inline-flex items-center gap-2 bg-gold text-navy-900 font-bold px-6 py-2.5 rounded-full hover:bg-yellow-400 transition-colors text-sm">
+            <Link prefetch={false} href="/rfq/" className="inline-flex items-center gap-2 bg-gold text-navy-900 font-bold px-6 py-2.5 rounded-full hover:bg-yellow-400 transition-colors text-sm">
               Enquire About Certifications →
             </Link>
           </div>
@@ -1444,7 +1444,7 @@ export default function ShortsContent() {
               { name: "Pants & Trousers", desc: "Twill, chino and stretch ponte. Business-casual to formal tailored programmes.", href: "/apparel/wovengarments/pantsandtrousers/", img: "/images/hero/hero-pants-trousers.webp", alt: "Pakistan pants and trousers manufacturer — OEM twill and chino trousers for fashion and workwear brands" },
               { name: "Cargo Pants", desc: "Ripstop, canvas and stretch ripstop. Tactical, outdoor and workwear programmes.", href: "/apparel/wovengarments/cargopants/", img: "/images/hero/hero-cargo-pants.webp", alt: "Pakistan cargo pants manufacturer — OEM ripstop and canvas cargo trousers for outdoor brands worldwide" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
+              <Link prefetch={false} href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
@@ -1489,3 +1489,4 @@ export default function ShortsContent() {
     </div>
   );
 }
+

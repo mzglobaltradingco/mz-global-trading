@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 
 const apparel = [
@@ -53,7 +53,7 @@ export default function Footer() {
 
           {/* Col 1 — Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/">
+            <Link prefetch={false} href="/">
               <Image
                 src="/images/logo/Master_Logo.webp"
                 alt="MZ Global Trading"
@@ -93,7 +93,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {apparel.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-gray-600 hover:text-gold text-sm transition-colors">
+                  <Link prefetch={false} href={item.href} className="text-gray-600 hover:text-gold text-sm transition-colors">
                     {item.label}
                   </Link>
                 </li>
@@ -107,7 +107,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {homeTextiles.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-gray-600 hover:text-gold text-sm transition-colors">
+                  <Link prefetch={false} href={item.href} className="text-gray-600 hover:text-gold text-sm transition-colors">
                     {item.label}
                   </Link>
                 </li>
@@ -118,7 +118,7 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {fabric.map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href} className="text-gray-600 hover:text-gold text-sm transition-colors">
+                    <Link prefetch={false} href={item.href} className="text-gray-600 hover:text-gold text-sm transition-colors">
                       {item.label}
                     </Link>
                   </li>
@@ -133,7 +133,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {company.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-gray-600 hover:text-gold text-sm transition-colors">
+                  <Link prefetch={false} href={item.href} className="text-gray-600 hover:text-gold text-sm transition-colors">
                     {item.label}
                   </Link>
                 </li>
@@ -153,7 +153,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {support.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-gray-600 hover:text-gold text-sm transition-colors">
+                  <Link prefetch={false} href={item.href} className="text-gray-600 hover:text-gold text-sm transition-colors">
                     {item.label}
                   </Link>
                 </li>
@@ -190,12 +190,13 @@ export default function Footer() {
           <p className="shrink-0">© {new Date().getFullYear()} MZ Global Trading. All rights reserved.</p>
           <p className="text-center hidden md:block">{certifications.join(" · ")}</p>
           <div className="flex items-center gap-3 shrink-0">
-            <Link href="/privacypolicy/" className="hover:text-gold transition-colors">Privacy Policy</Link>
+            <Link prefetch={false} href="/privacypolicy/" className="hover:text-gold transition-colors">Privacy Policy</Link>
             <span aria-hidden="true">·</span>
-            <Link href="/termsofuse/" className="hover:text-gold transition-colors">Terms of Use</Link>
+            <Link prefetch={false} href="/termsofuse/" className="hover:text-gold transition-colors">Terms of Use</Link>
           </div>
         </div>
       </div>
     </footer>
   );
 }
+

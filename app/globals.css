@@ -55,7 +55,8 @@
   color: #9A6400;
 }
 .bg-navy-900 .text-gold.text-xs,
-.bg-navy-950 .text-gold.text-xs {
+.bg-navy-950 .text-gold.text-xs,
+#section-constructions .text-gold.text-xs {
   color: #D4A017;
 }
 

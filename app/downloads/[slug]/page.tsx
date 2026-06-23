@@ -207,9 +207,9 @@ export default async function DownloadDocPage({ params }: DocPageProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4">
             <nav aria-label="Breadcrumb">
               <ol className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
-                <li><Link href="/" className="hover:text-gold transition-colors">Home</Link></li>
+                <li><Link prefetch={false} href="/" className="hover:text-gold transition-colors">Home</Link></li>
                 <li aria-hidden="true">/</li>
-                <li><Link href="/downloads/" className="hover:text-gold transition-colors">Downloads</Link></li>
+                <li><Link prefetch={false} href="/downloads/" className="hover:text-gold transition-colors">Downloads</Link></li>
                 <li aria-hidden="true">/</li>
                 <li className="text-gray-500" aria-current="page">{doc.title}</li>
               </ol>

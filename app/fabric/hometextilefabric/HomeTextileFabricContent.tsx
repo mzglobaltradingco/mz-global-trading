@@ -541,9 +541,9 @@ export default function HomeTextileFabricContent() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
           <div className="max-w-3xl">
                         <motion.nav aria-label="Breadcrumb" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
-              <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+              <Link prefetch={false} href="/" className="hover:text-gold transition-colors">Home</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/fabric/" className="hover:text-gold transition-colors">Fabric</Link>
+              <Link prefetch={false} href="/fabric/" className="hover:text-gold transition-colors">Fabric</Link>
               <span aria-hidden="true">&#x203A;</span>
               <span className="text-gold">Home Textile Fabric</span>
             </motion.nav>
@@ -1001,28 +1001,28 @@ export default function HomeTextileFabricContent() {
             Explore Our Guides &amp; Resources
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Link href="/knowledge/home-textile-fabric-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/knowledge/home-textile-fabric-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📚</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
               <p className="font-semibold text-navy-900">Home Textile Fabric Guide</p>
               <p className="text-xs text-gray-500 leading-relaxed">Terry, percale, sateen and woven constructions — GSM, width and spec guide.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
             </Link>
-            <Link href="/guides/sourcing-home-textile-fabric-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/guides/sourcing-home-textile-fabric-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📄</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
               <p className="font-semibold text-navy-900">Home Textile Fabric Sourcing Guide</p>
               <p className="text-xs text-gray-500 leading-relaxed">GSM, width, certification and roll MOQ for international buyers.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guide →</span>
             </Link>
-            <Link href="/downloads/home-textile-fabric-reference/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/downloads/home-textile-fabric-reference/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">⬇️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
               <p className="font-semibold text-navy-900">Home Textile Fabric Reference</p>
               <p className="text-xs text-gray-500 leading-relaxed">Terry, percale and sateen specifications — quick reference sheet.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Template →</span>
             </Link>
-            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+            <Link prefetch={false} href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">✉️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
               <p className="font-semibold text-white">Ready to Source Home Textile Fabric?</p>
@@ -1795,7 +1795,7 @@ export default function HomeTextileFabricContent() {
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
                 className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow"
               >
-                <Link href={card.href} className="block">
+                <Link prefetch={false} href={card.href} className="block">
                   <div className="relative h-56 overflow-hidden">
                     <Image
                       src={card.image}
@@ -1858,3 +1858,4 @@ export default function HomeTextileFabricContent() {
     </div>
   );
 }
+

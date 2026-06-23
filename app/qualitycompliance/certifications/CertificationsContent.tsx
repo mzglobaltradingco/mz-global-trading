@@ -461,7 +461,7 @@ export default function CertificationsContent() {
                 whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
                 className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow"
               >
-                <Link href={card.href} className="block">
+                <Link prefetch={false} href={card.href} className="block">
                   <div className="relative h-64 overflow-hidden">
                     <Image
                       src={card.image}
@@ -530,3 +530,4 @@ export default function CertificationsContent() {
     </>
   );
 }
+

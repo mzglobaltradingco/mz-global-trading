@@ -295,11 +295,11 @@ export default function HenleyContent() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
           <div className="max-w-3xl">
                         <motion.nav aria-label="Breadcrumb" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
-              <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+              <Link prefetch={false} href="/" className="hover:text-gold transition-colors">Home</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/apparel/" className="hover:text-gold transition-colors">Apparel</Link>
+              <Link prefetch={false} href="/apparel/" className="hover:text-gold transition-colors">Apparel</Link>
               <span aria-hidden="true">&#x203A;</span>
-              <Link href="/apparel/knittedgarments/" className="hover:text-gold transition-colors">Knitted Garments</Link>
+              <Link prefetch={false} href="/apparel/knittedgarments/" className="hover:text-gold transition-colors">Knitted Garments</Link>
               <span aria-hidden="true">&#x203A;</span>
               <span className="text-gold">Henley Shirts</span>
             </motion.nav>
@@ -775,28 +775,28 @@ export default function HenleyContent() {
             Explore Our Guides &amp; Resources
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Link href="/knowledge/henley-shirt-construction-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/knowledge/henley-shirt-construction-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📚</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
               <p className="font-semibold text-navy-900">Henley Shirt Construction Guide</p>
               <p className="text-xs text-gray-500 leading-relaxed">Placket styles, button options and fabric weight guide for international buyers.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
             </Link>
-            <Link href="/guides/sourcing-henley-shirts-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/guides/sourcing-henley-shirts-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📄</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
               <p className="font-semibold text-navy-900">Sourcing Henley Shirts Guide</p>
               <p className="text-xs text-gray-500 leading-relaxed">OEM, seasonal collections, lead times and certification requirements.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guide →</span>
             </Link>
-            <Link href="/downloads/henley-shirt-measurement-sheet/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link prefetch={false} href="/downloads/henley-shirt-measurement-sheet/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">⬇️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
               <p className="font-semibold text-navy-900">Henley Shirt Measurement Sheet</p>
               <p className="text-xs text-gray-500 leading-relaxed">Size chart and measurement template for henley shirt sourcing.</p>
               <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Template →</span>
             </Link>
-            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+            <Link prefetch={false} href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">✉️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
               <p className="font-semibold text-white">Ready to Source Henley Shirts?</p>
@@ -815,11 +815,11 @@ export default function HenleyContent() {
           <div className="flex items-start gap-4 mb-12">
             <div className="w-px h-16 bg-gold/40 mt-1 hidden sm:block" aria-hidden="true" />
             <div>
-              <p className="font-mono text-gold/70 text-xs tracking-[0.3em] uppercase mb-2">
+              <p className="font-mono text-gold text-xs tracking-[0.3em] uppercase mb-2">
                 [TECHNICAL SPECIFICATION — KNITTED CONSTRUCTIONS]
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white">Fabric Constructions</h2>
-              <p className="text-gray-500 mt-3 max-w-2xl leading-relaxed">
+              <p className="text-gray-300 mt-3 max-w-2xl leading-relaxed">
                 Every henley shirt specification starts with fabric construction. Each build has distinct hand-feel, GSM range, market positioning and decoration compatibility.
               </p>
             </div>
@@ -867,23 +867,23 @@ export default function HenleyContent() {
                 </div>
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="bg-white/5 rounded-xl p-4">
-                    <p className="font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-1">GSM_RANGE</p>
+                    <p className="font-mono text-[10px] text-gray-400 uppercase tracking-widest mb-1">GSM_RANGE</p>
                     <p className="text-lg font-bold text-gold">{ac.gsm}</p>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4">
-                    <p className="font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-1">HAND_FEEL</p>
+                    <p className="font-mono text-[10px] text-gray-400 uppercase tracking-widest mb-1">HAND_FEEL</p>
                     <p className="text-sm text-white">{ac.hand}</p>
                   </div>
                 </div>
                 <p className="text-gray-300 text-sm leading-relaxed mb-6">{ac.detail}</p>
                 <div className="border border-white/10 rounded-xl p-4">
-                  <p className="font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-2">TECHNICAL_SPEC</p>
+                  <p className="font-mono text-[10px] text-gray-400 uppercase tracking-widest mb-2">TECHNICAL_SPEC</p>
                   <p className="text-sm text-gray-300">{ac.spec}</p>
                 </div>
               </div>
               <div className="flex flex-col gap-4">
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                  <p className="font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-3">BEST_FOR[ ]</p>
+                  <p className="font-mono text-[10px] text-gray-400 uppercase tracking-widest mb-3">BEST_FOR[ ]</p>
                   <div className="flex flex-wrap gap-2">
                     {ac.best.map((b) => (
                       <span key={b} className="text-xs text-white bg-white/10 px-3 py-1 rounded-full">{b}</span>
@@ -891,7 +891,7 @@ export default function HenleyContent() {
                   </div>
                 </div>
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                  <p className="font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-3">KEY_MARKETS[ ]</p>
+                  <p className="font-mono text-[10px] text-gray-400 uppercase tracking-widest mb-3">KEY_MARKETS[ ]</p>
                   <div className="flex flex-wrap gap-2">
                     {ac.markets.map((m) => (
                       <span key={m} className="text-xs text-gold bg-gold/10 border border-gold/20 px-3 py-1 rounded-full">{m}</span>
@@ -899,7 +899,7 @@ export default function HenleyContent() {
                   </div>
                 </div>
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                  <p className="font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-3">DECORATION[ ]</p>
+                  <p className="font-mono text-[10px] text-gray-400 uppercase tracking-widest mb-3">DECORATION[ ]</p>
                   <div className="flex flex-col gap-1.5">
                     {ac.decorations.map((d) => (
                       <div key={d} className="flex items-center gap-2">
@@ -1480,10 +1480,10 @@ export default function HenleyContent() {
             ))}
           </div>
           <div className="mt-10 border-t-2 border-gold pt-8 flex flex-col sm:flex-row gap-5">
-            <Link href="/rfq/" className="inline-flex items-center gap-2 bg-navy-900 text-white font-semibold px-8 py-4 rounded-xl hover:bg-navy-800 transition-colors">
+            <Link prefetch={false} href="/rfq/" className="inline-flex items-center gap-2 bg-navy-900 text-white font-semibold px-8 py-4 rounded-xl hover:bg-navy-800 transition-colors">
               Begin Your Programme — Step 01 <span aria-hidden="true">→</span>
             </Link>
-            <Link href="/ourprocess/" className="inline-flex items-center gap-2 border border-gray-200 text-navy-900 font-semibold px-8 py-4 rounded-xl hover:border-navy-900 transition-colors">
+            <Link prefetch={false} href="/ourprocess/" className="inline-flex items-center gap-2 border border-gray-200 text-navy-900 font-semibold px-8 py-4 rounded-xl hover:border-navy-900 transition-colors">
               View Full Process Detail
             </Link>
           </div>
@@ -1558,7 +1558,7 @@ export default function HenleyContent() {
               { name: "Sweatpants & Joggers", desc: "French terry and brushed fleece. Coordinated set and standalone programmes.", href: "/apparel/knittedgarments/sweatpantsjoggers/", img: "/images/hero/hero-sweatpants-joggers.webp", alt: "Pakistan sweatpants manufacturer — OEM French terry and brushed fleece bottoms for activewear programmes" },
               { name: "Tank Tops", desc: "Single jersey, rib and mesh. Athletic and casual lifestyle programmes.", href: "/apparel/knittedgarments/tanktops/", img: "/images/hero/hero-tank-tops.webp", alt: "Pakistan tank top manufacturer — OEM single jersey, rib and mesh tanks for athletic and lifestyle brands" },
             ].map((p) => (
-              <Link href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
+              <Link prefetch={false} href={p.href} key={p.name} className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={p.img} alt={p.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/30 to-transparent" />
@@ -1593,10 +1593,10 @@ export default function HenleyContent() {
               Henley shirt sourcing from Pakistan&rsquo;s certified knitwear mills. Waffle knit, French terry, single jersey, rib — any construction, any GSM. Submit the spec; we coordinate the factory match, sampling and bulk production to your timeline.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-9 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
+              <Link prefetch={false} href="/rfq/" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-semibold px-9 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-base">
                 Request a Quote <span aria-hidden="true">&#8594;</span>
               </Link>
-              <Link href="/contact-us/" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-9 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">
+              <Link prefetch={false} href="/contact-us/" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-9 py-4 rounded-xl hover:bg-white/5 transition-colors text-base">
                 Contact Us
               </Link>
             </div>
@@ -1606,3 +1606,4 @@ export default function HenleyContent() {
     </div>
   );
 }
+

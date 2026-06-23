@@ -2499,9 +2499,9 @@ export default function RFQContent() {
 
           <div className="bg-amber-50 border border-amber-100 rounded-xl p-4 text-xs text-gray-700 leading-relaxed">
             By clicking <strong>Submit RFQ</strong>, you confirm you have read and agreed to the{" "}
-            <Link href="/termsofuse/" className="text-gold hover:underline font-semibold" target="_blank" rel="noopener noreferrer">Terms of Use</Link>
+            <Link prefetch={false} href="/termsofuse/" className="text-gold hover:underline font-semibold" target="_blank" rel="noopener noreferrer">Terms of Use</Link>
             {" "}and{" "}
-            <Link href="/privacypolicy/" className="text-gold hover:underline font-semibold" target="_blank" rel="noopener noreferrer">Privacy Policy</Link>.
+            <Link prefetch={false} href="/privacypolicy/" className="text-gold hover:underline font-semibold" target="_blank" rel="noopener noreferrer">Privacy Policy</Link>.
             Submitting opens your email app with the full RFQ pre-filled and addressed to <strong>{RECIPIENT}</strong>.
           </div>
         </div>
@@ -2585,7 +2585,7 @@ export default function RFQContent() {
                     </>
                   )}
                 </button>
-                <Link href="/" className="inline-flex items-center gap-2 px-7 py-3 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors">Back to Home</Link>
+                <Link prefetch={false} href="/" className="inline-flex items-center gap-2 px-7 py-3 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors">Back to Home</Link>
               </div>
             </div>
           </div>
@@ -2721,3 +2721,4 @@ export default function RFQContent() {
     </>
   );
 }
+
