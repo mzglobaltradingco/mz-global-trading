@@ -31,6 +31,8 @@
 
 6. **All changes apply to all platforms** — every layout, visual, or functional change covers desktop, tablet, and mobile without exception. Never make a single-breakpoint change and call it done. The user should never need to say "apply to mobile too."
 
+7. **No Google Tag Manager (GTM) — ever** — GTM is permanently banned from this site. Never add `gtm.js`, a `GTM-XXXXXXX` container ID, or a GTM `<noscript>` iframe. Analytics is handled via **direct GA4 (gtag.js)** in `app/layout.tsx` with Measurement ID `G-BEG0E64X9E`. The GA4 script loads from `googletagmanager.com/gtag/js` — this domain is allowed because it delivers the GA4 library, not GTM. Do NOT confuse them: `gtag/js?id=G-...` = GA4 ✅; `gtm.js?id=GTM-...` = GTM ❌.
+
 ---
 
 ## Priority Order
@@ -835,7 +837,7 @@ public/
 |---|---|---|---|---|---|
 | 1 | Unsized logo `<img>` (no `width`/`height`) | Site-wide | ✅ flagged | ✅ flagged | ✅ **Approved — implement** |
 | 2 | RSC prefetch 404s (`.txt` RSC payloads) | Site-wide | ✅ flagged | ✅ flagged | ✅ **Approved — implement** (`prefetch={false}`) |
-| 3 | GTM script blocking render (140ms exec) | Site-wide | — | ✅ flagged | ✅ **Approved — implement** (`strategy="lazyOnload"`) |
+| 3 | GA4 gtag.js blocking render (140ms exec) — **PSI mislabels this as "GTM"** because it loads from googletagmanager.com, but `gtag/js?id=G-BEG0E64X9E` is the GA4 library, NOT Google Tag Manager (`GTM-XXXXXXX`). No GTM container was ever installed. | Site-wide | — | ✅ flagged | ✅ **Approved — implement** (`strategy="lazyOnload"`) |
 | 4 | Legacy JS polyfills (~14 KiB) | Site-wide | ✅ flagged | ✅ flagged | ✅ **Approved — implement** (update `browserslist`) |
 | 5 | Cert images oversized (1536×1024 → 51×34px display; 233–97 KB wasted each) | Site-wide | — | ✅ flagged | ✅ **Approved — implement** — resize in-place to 280×160px using Pillow; same filenames, no code changes needed |
 | 6 | Color contrast failures | Site-wide | ✅ flagged | ✅ flagged | ✅ **Approved — implement** — gold labels on white: `#D4A017` → `#9A6400` (5.0:1); gray subtitle text: `text-gray-400` → `text-gray-500` (`#6B7280`, 4.9:1) |
@@ -860,8 +862,8 @@ public/
 **Fix 2 — prefetch={false} on nav links** (`components/MegaMenu.tsx`):
 Add `prefetch={false}` to every `<Link>` inside the mega menu nav (breadcrumb links, sub-item links). Eliminates RSC `.txt` 404 console errors on hover.
 
-**Fix 3 — GTM lazyOnload** (`app/layout.tsx`):
-Find the `<Script>` tag loading GTM (`https://www.googletagmanager.com/gtag/js?id=G-BEG0E64X9E`) and change to `strategy="lazyOnload"`.
+**Fix 3 — GA4 gtag.js lazyOnload** (`app/layout.tsx`):
+The `<Script src="https://www.googletagmanager.com/gtag/js?id=G-BEG0E64X9E">` tag is the **Google Analytics 4** library (GA4 Measurement ID `G-BEG0E64X9E`), NOT Google Tag Manager. PSI mislabeled it as GTM because both share the `googletagmanager.com` CDN domain. Changed strategy to `"lazyOnload"` to stop it blocking render.
 
 **Fix 4 — browserslist** (`package.json`):
 ```json
