@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
@@ -186,7 +186,7 @@ export default function SearchWidget({ onOpen }: { onOpen?: () => void }) {
               className="flex items-center gap-2 px-4 py-3 border-b border-gray-100"
             >
               <svg
-                className="w-4 h-4 text-gray-400 shrink-0"
+                className="w-4 h-4 text-gray-500 shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -212,7 +212,7 @@ export default function SearchWidget({ onOpen }: { onOpen?: () => void }) {
                   type="button"
                   onClick={() => setQuery("")}
                   aria-label="Clear search"
-                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                  className="text-gray-500 hover:text-gray-600 transition-colors"
                 >
                   <svg
                     className="w-4 h-4"
@@ -294,14 +294,14 @@ export default function SearchWidget({ onOpen }: { onOpen?: () => void }) {
                   <p className="text-sm font-medium text-gray-700">
                     No results for &ldquo;{query}&rdquo;
                   </p>
-                  <p className="text-xs text-gray-400 mt-1">
+                  <p className="text-xs text-gray-500 mt-1">
                     Try a different keyword or browse the menu
                   </p>
                 </div>
               )
             ) : (
               <div className="px-4 py-4">
-                <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-[0.1em] mb-3">
+                <p className="text-[11px] font-semibold text-gray-500 uppercase tracking-[0.1em] mb-3">
                   Popular searches
                 </p>
                 <div className="flex flex-wrap gap-2">

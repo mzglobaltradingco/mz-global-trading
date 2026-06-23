@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -269,16 +269,16 @@ export default function InspectionProcessContent() {
                   <div className="flex-1 bg-white rounded-2xl border border-gray-100 p-6 hover:border-gold/30 hover:shadow-xs transition-all duration-200 mb-2">
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                       <h3 className="text-navy-900 font-bold text-base">{step.title}</h3>
-                      <span className="shrink-0 text-gray-400 text-xs bg-gray-50 px-2.5 py-1 rounded-full">{step.timing}</span>
+                      <span className="shrink-0 text-gray-500 text-xs bg-gray-50 px-2.5 py-1 rounded-full">{step.timing}</span>
                     </div>
                     <p className="text-gray-600 text-sm leading-relaxed mb-4">{step.desc}</p>
                     <div className="grid sm:grid-cols-2 gap-3">
                       <div className="bg-gray-50 rounded-lg px-3 py-2.5">
-                        <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-1">Conducted By</p>
+                        <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-500 mb-1">Conducted By</p>
                         <p className="text-navy-900 text-sm font-medium">{step.who}</p>
                       </div>
                       <div className="bg-gray-50 rounded-lg px-3 py-2.5">
-                        <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-1">Output</p>
+                        <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-500 mb-1">Output</p>
                         <p className="text-navy-900 text-sm font-medium">{step.output}</p>
                       </div>
                     </div>
@@ -414,7 +414,7 @@ export default function InspectionProcessContent() {
                 </span>
                 <p className="text-gray-700 text-sm leading-relaxed mb-4">{outcome.desc}</p>
                 <div className="bg-white rounded-lg px-4 py-3">
-                  <p className="text-gray-400 text-[10px] uppercase tracking-widest mb-1">What Happens Next</p>
+                  <p className="text-gray-500 text-[10px] uppercase tracking-widest mb-1">What Happens Next</p>
                   <p className="text-navy-900 font-semibold text-sm">{outcome.next}</p>
                 </div>
               </motion.div>
@@ -499,7 +499,7 @@ export default function InspectionProcessContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Every Shipment Inspected Before It Leaves Pakistan
             </h2>
-            <p className="text-gray-400 text-base max-w-xl mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-xl mx-auto mb-8">
               An 8-stage inspection process and a written report on every order — included as standard,
               not billed as an optional extra.
             </p>

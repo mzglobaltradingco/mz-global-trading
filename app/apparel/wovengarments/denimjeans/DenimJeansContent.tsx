@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -423,7 +423,7 @@ export default function DenimJeansContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -445,7 +445,7 @@ export default function DenimJeansContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* ROW 1: 2 bentos — Constructions + Fits */}
@@ -468,7 +468,7 @@ export default function DenimJeansContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3.5 border border-stone-100">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.oz}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.oz}</p>
                     <p className="text-xs text-stone-600 mt-1 leading-tight">{c.best[0]}</p>
                     {c.badge && (
                       <span className="mt-1.5 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">
@@ -503,7 +503,7 @@ export default function DenimJeansContent() {
                     </span>
                     <div>
                       <p className="text-sm font-semibold text-navy-900">{f.name}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{f.ease}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{f.ease}</p>
                     </div>
                   </div>
                 ))}
@@ -537,7 +537,7 @@ export default function DenimJeansContent() {
                       <div className={`h-full rounded-full ${t.color}`} style={{ width: `${t.pct}%` }} aria-hidden="true" />
                     </div>
                     <p className="text-[10px] font-semibold text-neutral-600">{t.season}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{t.market}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{t.market}</p>
                   </div>
                 ))}
               </div>
@@ -562,7 +562,7 @@ export default function DenimJeansContent() {
                     </span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{d.method}</p>
-                      <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{d.compat[0]}</p>
+                      <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{d.compat[0]}</p>
                     </div>
                   </div>
                 ))}
@@ -636,7 +636,7 @@ export default function DenimJeansContent() {
                   <div key={s.abbr} className="bg-white rounded-xl p-3 border border-teal-100">
                     <p className="text-xs font-bold text-teal-600">{s.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{s.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{s.market}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -685,7 +685,7 @@ export default function DenimJeansContent() {
                     </span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{e.full}</p>
-                      <p className="text-[10px] text-gray-400">{e.port}</p>
+                      <p className="text-[10px] text-gray-500">{e.port}</p>
                     </div>
                   </div>
                 ))}
@@ -741,7 +741,7 @@ export default function DenimJeansContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -802,7 +802,7 @@ export default function DenimJeansContent() {
                 [WOVEN SPECIFICATION — DENIM CONSTRUCTIONS]
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white">Denim Constructions</h2>
-              <p className="text-gray-400 mt-3 max-w-2xl leading-relaxed">
+              <p className="text-gray-500 mt-3 max-w-2xl leading-relaxed">
                 Every denim jeans programme starts with fabric construction. Each build has distinct oz range, hand-feel, fade character and wash compatibility.
               </p>
             </div>
@@ -911,7 +911,7 @@ export default function DenimJeansContent() {
                 Six<br />Silhouettes
               </h2>
               <div className="w-14 h-0.5 bg-gold mb-6" aria-hidden="true" />
-              <p className="text-gray-400 text-base leading-relaxed mb-8 max-w-xs">
+              <p className="text-gray-500 text-base leading-relaxed mb-8 max-w-xs">
                 Denim fit determines market positioning entirely. Each silhouette addresses a distinct buyer demographic and retail channel.
               </p>
               <blockquote className="border-l-4 border-gold pl-5 text-base font-medium text-gray-300 italic leading-relaxed">
@@ -958,7 +958,7 @@ export default function DenimJeansContent() {
       <section id="section-weight" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-b-4 border-black pb-6 mb-12">
-            <p className="text-xs font-black tracking-[0.4em] uppercase text-gray-400 mb-3">Weight Specification</p>
+            <p className="text-xs font-black tracking-[0.4em] uppercase text-gray-500 mb-3">Weight Specification</p>
             <h2 className="text-5xl sm:text-6xl font-black text-black leading-none">Fabric Weight<br />Guide</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 border-2 border-black">
@@ -974,7 +974,7 @@ export default function DenimJeansContent() {
                     </span>
                   )}
                   <p className={`text-5xl font-black leading-none mb-1 ${t.featured ? "text-black" : "text-gray-800"}`}>{t.oz}</p>
-                  <p className="text-xs font-black uppercase tracking-widest text-gray-400">{t.name}</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-gray-500">{t.name}</p>
                 </div>
                 <div className="border-t-2 border-black pt-4">
                   <p className="text-sm font-bold text-black mb-1">{t.season}</p>
@@ -1158,7 +1158,7 @@ export default function DenimJeansContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Markets</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Industry Applications</h2>
-          <p className="text-gray-400 mb-12 max-w-2xl leading-relaxed">
+          <p className="text-gray-500 mb-12 max-w-2xl leading-relaxed">
             Denim jeans programmes span fashion, workwear, heritage and streetwear segments. Each sector has distinct construction, wash and specification requirements.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -1179,7 +1179,7 @@ export default function DenimJeansContent() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white">{s.name}</h3>
-                  <p className="text-sm text-gray-400 mt-1.5 leading-relaxed">{s.detail}</p>
+                  <p className="text-sm text-gray-500 mt-1.5 leading-relaxed">{s.detail}</p>
                 </div>
                 <div className="w-8 h-0.5 bg-gold/40 mt-auto" aria-hidden="true" />
               </motion.div>
@@ -1231,7 +1231,7 @@ export default function DenimJeansContent() {
                 </div>
                 <div>
                   <p className="text-sm font-bold text-navy-900">{c.name}</p>
-                  <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{c.full}</p>
+                  <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{c.full}</p>
                 </div>
               </motion.div>
             ))}
@@ -1267,7 +1267,7 @@ export default function DenimJeansContent() {
                 </div>
                 <div>
                   <p className="text-sm font-bold text-navy-900">{e.term}</p>
-                  <p className="text-xs text-gray-400">{e.full}</p>
+                  <p className="text-xs text-gray-500">{e.full}</p>
                 </div>
                 <p className="text-xs text-gold font-semibold">📍 {e.port}</p>
                 <p className="text-sm text-gray-500 leading-relaxed">{e.desc}</p>
@@ -1288,7 +1288,7 @@ export default function DenimJeansContent() {
               >
                 <span className="text-2xl" aria-hidden="true">{p.icon}</span>
                 <p className="text-xs font-semibold text-navy-900 leading-snug">{p.label}</p>
-                <p className="text-[10px] text-gray-400">{p.note}</p>
+                <p className="text-[10px] text-gray-500">{p.note}</p>
               </motion.div>
             ))}
           </div>
@@ -1318,11 +1318,11 @@ export default function DenimJeansContent() {
                 </div>
                 <div className="flex-1">
                   <p className="text-sm font-semibold text-navy-900">{stage.stage}</p>
-                  <p className="text-xs text-gray-400">{stage.desc}</p>
+                  <p className="text-xs text-gray-500">{stage.desc}</p>
                 </div>
                 <div className="text-right shrink-0">
                   <p className="text-lg font-bold text-navy-900">{stage.days}</p>
-                  <p className="text-xs text-gray-400">days (guide)</p>
+                  <p className="text-xs text-gray-500">days (guide)</p>
                 </div>
               </motion.div>
             ))}
@@ -1408,7 +1408,7 @@ export default function DenimJeansContent() {
                   <span className="text-gold text-sm font-bold">{step.num}</span>
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-1">{step.short}</p>
+                  <p className="text-xs font-bold text-gray-500 uppercase tracking-[0.2em] mb-1">{step.short}</p>
                   <h3 className="text-lg font-bold text-navy-900">{step.title}</h3>
                 </div>
                 <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>

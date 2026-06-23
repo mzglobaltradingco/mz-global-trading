@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -669,7 +669,7 @@ export default function ApparelFabricContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -691,7 +691,7 @@ export default function ApparelFabricContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Fabric Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1: 2 bentos */}
@@ -716,7 +716,7 @@ export default function ApparelFabricContent() {
                 {KNIT_CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3 border border-indigo-100">
                     <p className="text-xs font-semibold text-navy-900 leading-tight">{c.name}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5">{c.gsm}</p>
                     {c.badge && (
                       <span className="mt-1 inline-block text-[9px] font-semibold text-gold bg-gold/10 px-1.5 py-0.5 rounded-full">
                         {c.badge}
@@ -747,7 +747,7 @@ export default function ApparelFabricContent() {
                 {WOVEN_CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3 border border-violet-100">
                     <p className="text-xs font-semibold text-navy-900 leading-tight">{c.name}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5">{c.gsm}</p>
                     <p className="text-[10px] text-violet-600 mt-0.5 leading-tight line-clamp-1">{c.applications[0]}</p>
                   </div>
                 ))}
@@ -782,7 +782,7 @@ export default function ApparelFabricContent() {
                     <div className="w-full h-1.5 bg-sky-100 rounded-full overflow-hidden">
                       <div className={`h-full rounded-full ${t.color}`} style={{ width: `${t.pct}%` }} aria-hidden="true" />
                     </div>
-                    <p className="text-[9px] text-gray-400 mt-1 leading-snug">{t.label}</p>
+                    <p className="text-[9px] text-gray-500 mt-1 leading-snug">{t.label}</p>
                   </div>
                 ))}
               </div>
@@ -888,7 +888,7 @@ export default function ApparelFabricContent() {
                   <div key={s.abbr} className="bg-white rounded-xl p-3 border border-teal-100">
                     <p className="text-xs font-bold text-teal-600">{s.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5 leading-tight">{s.name}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5">{s.market}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -947,7 +947,7 @@ export default function ApparelFabricContent() {
                     <span className="w-2 h-2 rounded-full bg-orange-400 shrink-0" aria-hidden="true" />
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{r.label}</p>
-                      <p className="text-[10px] text-gray-400">{r.use}</p>
+                      <p className="text-[10px] text-gray-500">{r.use}</p>
                     </div>
                   </div>
                 ))}
@@ -1015,7 +1015,7 @@ export default function ApparelFabricContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -1076,7 +1076,7 @@ export default function ApparelFabricContent() {
                 [TECHNICAL SPECIFICATION — KNIT CONSTRUCTIONS]
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white">Knit Fabric Constructions</h2>
-              <p className="text-gray-400 mt-3 max-w-2xl leading-relaxed">
+              <p className="text-gray-500 mt-3 max-w-2xl leading-relaxed">
                 Pakistan&rsquo;s certified knitwear mills produce the full range of knit constructions — single jersey to heavy fleece — for garment manufacturers, sportswear brands and fashion labels worldwide.
               </p>
             </div>
@@ -1203,13 +1203,13 @@ export default function ApparelFabricContent() {
                     <span className="text-sm font-semibold text-gold bg-gold/10 px-3 py-1 rounded-full">{aw.gsm}</span>
                   </div>
                   <div className="bg-white rounded-xl p-5 border border-gray-200 mb-5">
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Weave Structure</p>
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">Weave Structure</p>
                     <p className="text-sm text-navy-900 leading-relaxed">{aw.structure}</p>
                   </div>
                   <p className="text-gray-600 text-sm leading-relaxed mb-5">{aw.detail}</p>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Applications</p>
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">Applications</p>
                       <div className="flex flex-col gap-1.5">
                         {aw.applications.map((a) => (
                           <div key={a} className="flex items-center gap-2">
@@ -1220,7 +1220,7 @@ export default function ApparelFabricContent() {
                       </div>
                     </div>
                     <div>
-                      <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Key Markets</p>
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">Key Markets</p>
                       <div className="flex flex-wrap gap-2">
                         {aw.markets.map((m) => (
                           <span key={m} className="text-xs font-semibold text-gold bg-gold/10 border border-gold/20 px-3 py-1 rounded-full">{m}</span>
@@ -1286,7 +1286,7 @@ export default function ApparelFabricContent() {
                       <span className="ml-3 text-xs font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">Most Popular</span>
                     )}
                   </div>
-                  <span className="text-sm font-semibold text-gray-400">{t.label}</span>
+                  <span className="text-sm font-semibold text-gray-500">{t.label}</span>
                 </div>
                 <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden mb-4">
                   <motion.div
@@ -1299,7 +1299,7 @@ export default function ApparelFabricContent() {
                   />
                 </div>
                 <p className="text-sm text-gray-600">{t.garments}</p>
-                <p className="text-xs text-gray-400 mt-1">Typical width: {t.width}</p>
+                <p className="text-xs text-gray-500 mt-1">Typical width: {t.width}</p>
               </motion.div>
             ))}
           </div>
@@ -1309,9 +1309,9 @@ export default function ApparelFabricContent() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-gray-100">
-                    <th className="text-left py-3 pr-4 text-xs font-semibold text-gray-400 uppercase tracking-widest">Width</th>
-                    <th className="text-left py-3 pr-4 text-xs font-semibold text-gray-400 uppercase tracking-widest">Metric</th>
-                    <th className="text-left py-3 text-xs font-semibold text-gray-400 uppercase tracking-widest">Typical Use</th>
+                    <th className="text-left py-3 pr-4 text-xs font-semibold text-gray-500 uppercase tracking-widest">Width</th>
+                    <th className="text-left py-3 pr-4 text-xs font-semibold text-gray-500 uppercase tracking-widest">Metric</th>
+                    <th className="text-left py-3 text-xs font-semibold text-gray-500 uppercase tracking-widest">Typical Use</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-50">
@@ -1363,7 +1363,7 @@ export default function ApparelFabricContent() {
                   <h3 className="font-bold text-navy-900 text-base leading-tight">{f.name}</h3>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">{f.desc}</p>
-                <p className="text-xs text-gray-400 font-medium border-t border-gray-200 pt-2">Applies to: {f.applies}</p>
+                <p className="text-xs text-gray-500 font-medium border-t border-gray-200 pt-2">Applies to: {f.applies}</p>
               </motion.div>
             ))}
           </div>
@@ -1401,7 +1401,7 @@ export default function ApparelFabricContent() {
                   ))}
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">{d.desc}</p>
-                <p className="text-xs text-gray-400 font-medium">Best for: {d.best}</p>
+                <p className="text-xs text-gray-500 font-medium">Best for: {d.best}</p>
               </motion.div>
             ))}
           </div>
@@ -1469,7 +1469,7 @@ export default function ApparelFabricContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Buyers</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Market Applications</h2>
-          <p className="text-gray-400 max-w-2xl leading-relaxed mb-12">
+          <p className="text-gray-500 max-w-2xl leading-relaxed mb-12">
             Apparel fabric from Pakistan&rsquo;s certified mills serves garment manufacturers, sportswear brands, fashion labels and workwear suppliers across all major export markets.
           </p>
           <div className="flex flex-col gap-4">
@@ -1489,7 +1489,7 @@ export default function ApparelFabricContent() {
                   <p className="font-bold text-white text-lg">{s.name}</p>
                   <p className="text-gold text-xs font-semibold mt-0.5">{s.market}</p>
                 </div>
-                <p className="text-gray-400 text-sm leading-relaxed max-w-sm">{s.desc}</p>
+                <p className="text-gray-500 text-sm leading-relaxed max-w-sm">{s.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -1504,7 +1504,7 @@ export default function ApparelFabricContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Standards</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Quality Certifications</h2>
-          <p className="text-gray-400 max-w-2xl leading-relaxed mb-12">
+          <p className="text-gray-500 max-w-2xl leading-relaxed mb-12">
             Pakistan&rsquo;s certified textile mills carry internationally recognised certifications. Specify your requirement in your RFQ for precise mill matching.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -1531,7 +1531,7 @@ export default function ApparelFabricContent() {
                 </div>
                 <div>
                   <p className="font-bold text-white text-sm">{c.name}</p>
-                  <p className="text-gray-400 text-xs mt-1 leading-relaxed">{c.desc}</p>
+                  <p className="text-gray-500 text-xs mt-1 leading-relaxed">{c.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -1547,7 +1547,7 @@ export default function ApparelFabricContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Packing &amp; Export</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Roll Specifications &amp; Export Packing</h2>
-          <p className="text-gray-400 max-w-2xl leading-relaxed mb-12">
+          <p className="text-gray-500 max-w-2xl leading-relaxed mb-12">
             Fabric rolls are packed to international standards for sea freight from Karachi or Port Qasim to all major global destinations.
           </p>
           <div className="grid lg:grid-cols-2 gap-8">
@@ -1556,7 +1556,7 @@ export default function ApparelFabricContent() {
               <h3 className="text-xl font-bold text-white mb-6">Roll Specifications</h3>
               <div className="space-y-4">
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Roll Length Options</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-3">Roll Length Options</p>
                   <div className="grid grid-cols-2 gap-2">
                     {ROLL_SPECS.map((r) => (
                       <div key={r.label} className="flex items-center gap-2.5 bg-white/5 rounded-xl px-3 py-2.5 border border-white/5">
@@ -1570,7 +1570,7 @@ export default function ApparelFabricContent() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Roll Core Options</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-3">Roll Core Options</p>
                   <div className="flex flex-col gap-1.5">
                     {["Paper tube core", "Plastic tube core", "No core / Bulk roll", "To be confirmed"].map((opt) => (
                       <div key={opt} className="flex items-center gap-2">
@@ -1581,7 +1581,7 @@ export default function ApparelFabricContent() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Unit of Measure</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-3">Unit of Measure</p>
                   <div className="flex gap-2">
                     {["Meters", "Kg", "Rolls"].map((uom) => (
                       <span key={uom} className="text-xs font-semibold text-gold bg-gold/10 border border-gold/20 px-3 py-1 rounded-full">{uom}</span>
@@ -1595,7 +1595,7 @@ export default function ApparelFabricContent() {
               <h3 className="text-xl font-bold text-white mb-6">Export Terms &amp; Transit Times</h3>
               <div className="space-y-4">
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Incoterms</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-3">Incoterms</p>
                   <div className="flex flex-col gap-2">
                     {EXPORT_TERMS.map((e) => (
                       <div key={e.term} className="flex items-center gap-3 bg-white/5 rounded-xl px-4 py-3 border border-white/5">
@@ -1608,7 +1608,7 @@ export default function ApparelFabricContent() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Sea Freight Transit (from Karachi)</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-3">Sea Freight Transit (from Karachi)</p>
                   <div className="flex flex-col gap-2">
                     {[
                       { dest: "USA (East Coast)", days: "22–28 days" },

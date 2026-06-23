@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -402,7 +402,7 @@ export default function HenleyContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -425,7 +425,7 @@ export default function HenleyContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">
               Click any card to jump to the full detailed section.
             </p>
           </div>
@@ -452,7 +452,7 @@ export default function HenleyContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3.5 border border-indigo-100">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                     <p className="text-xs text-indigo-600 mt-1 leading-tight">{c.best[0]}</p>
                     {c.badge && (
                       <span className="mt-1.5 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">
@@ -488,7 +488,7 @@ export default function HenleyContent() {
                     </span>
                     <div>
                       <p className="text-sm font-semibold text-navy-900">{f.name}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{f.ease}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{f.ease}</p>
                       <p className="text-xs text-amber-600 mt-0.5">{f.market}</p>
                     </div>
                   </div>
@@ -529,7 +529,7 @@ export default function HenleyContent() {
                       />
                     </div>
                     <p className="text-[10px] font-semibold text-sky-600">{t.season}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{t.market}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{t.market}</p>
                   </div>
                 ))}
               </div>
@@ -555,7 +555,7 @@ export default function HenleyContent() {
                     </span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{d.method}</p>
-                      <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{d.compat.join(", ")}</p>
+                      <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{d.compat.join(", ")}</p>
                     </div>
                   </div>
                 ))}
@@ -583,7 +583,7 @@ export default function HenleyContent() {
                         <div key={i} className={`w-4 h-4 rounded-full ${s}`} aria-hidden="true" />
                       ))}
                     </div>
-                    <p className="text-[10px] text-gray-400">{d.subtitle}</p>
+                    <p className="text-[10px] text-gray-500">{d.subtitle}</p>
                   </div>
                 ))}
               </div>
@@ -636,7 +636,7 @@ export default function HenleyContent() {
                   <div key={s.abbr} className="bg-white rounded-xl p-3 border border-teal-100">
                     <p className="text-xs font-bold text-teal-600">{s.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{s.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{s.market}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -697,7 +697,7 @@ export default function HenleyContent() {
                     </span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{e.full}</p>
-                      <p className="text-[10px] text-gray-400">{e.port}</p>
+                      <p className="text-[10px] text-gray-500">{e.port}</p>
                     </div>
                   </div>
                 ))}
@@ -758,7 +758,7 @@ export default function HenleyContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -819,7 +819,7 @@ export default function HenleyContent() {
                 [TECHNICAL SPECIFICATION — KNITTED CONSTRUCTIONS]
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white">Fabric Constructions</h2>
-              <p className="text-gray-400 mt-3 max-w-2xl leading-relaxed">
+              <p className="text-gray-500 mt-3 max-w-2xl leading-relaxed">
                 Every henley shirt specification starts with fabric construction. Each build has distinct hand-feel, GSM range, market positioning and decoration compatibility.
               </p>
             </div>
@@ -923,7 +923,7 @@ export default function HenleyContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-400 mb-4">
+              <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-500 mb-4">
                 No. 02 / Fit &amp; Sizing
               </p>
               <h2 className="text-5xl sm:text-6xl font-bold text-navy-900 leading-[1] mb-8">
@@ -964,7 +964,7 @@ export default function HenleyContent() {
             {[["XS–3XL", "Standard size range"], ["US / UK / EU", "Size standards available"], ["Custom", "Size spec on request"]].map(([val, label]) => (
               <div key={label}>
                 <p className="text-3xl font-bold text-navy-900">{val}</p>
-                <p className="text-xs text-gray-400 mt-1 uppercase tracking-wider">{label}</p>
+                <p className="text-xs text-gray-500 mt-1 uppercase tracking-wider">{label}</p>
               </div>
             ))}
           </div>
@@ -990,7 +990,7 @@ export default function HenleyContent() {
               { label: "Constructions", val: "4", sub: "Jersey to French terry" },
             ].map((m) => (
               <div key={m.label} className="bg-white rounded-2xl p-5 border border-gray-100 shadow-xs">
-                <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">{m.label}</p>
+                <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">{m.label}</p>
                 <p className="text-2xl font-bold text-navy-900">{m.val}</p>
                 <p className="text-xs text-gray-500 mt-1">{m.sub}</p>
               </div>
@@ -1005,7 +1005,7 @@ export default function HenleyContent() {
                   </span>
                 )}
                 <p className={`text-3xl font-bold mb-1 ${tier.featured ? "text-gold" : "text-navy-900"}`}>{tier.gsm}</p>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">{tier.name}</p>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">{tier.name}</p>
                 <p className="text-sm font-semibold text-navy-900 mb-3">{tier.season}</p>
                 <div className="mb-4">
                   <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
@@ -1015,7 +1015,7 @@ export default function HenleyContent() {
                       aria-hidden="true"
                     />
                   </div>
-                  <p className="text-xs text-gray-400 mt-1">{tier.pct}% of orders</p>
+                  <p className="text-xs text-gray-500 mt-1">{tier.pct}% of orders</p>
                 </div>
                 <p className="text-sm text-gray-500 leading-relaxed">{tier.desc}</p>
                 <p className="text-xs text-gold font-semibold mt-3">{tier.market}</p>
@@ -1050,7 +1050,7 @@ export default function HenleyContent() {
                 <h3 className="text-lg font-bold text-navy-900">{d.method}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed flex-1">{d.best}</p>
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Compatible with</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Compatible with</p>
                   <div className="flex flex-wrap gap-1.5">
                     {d.compat.map((c) => (
                       <span key={c} className="text-[11px] bg-gray-50 border border-gray-200 text-gray-600 px-2.5 py-1 rounded-full">{c}</span>
@@ -1178,7 +1178,7 @@ export default function HenleyContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Markets</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Industry Applications</h2>
-          <p className="text-gray-400 mb-12 max-w-2xl leading-relaxed">
+          <p className="text-gray-500 mb-12 max-w-2xl leading-relaxed">
             Henley shirts are ordered across fashion, workwear, outdoor and corporate segments. Each sector has distinct specification requirements.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" style={{ perspective: "1000px" }}>
@@ -1201,7 +1201,7 @@ export default function HenleyContent() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white">{s.name}</h3>
-                  <p className="text-sm text-gray-400 mt-1.5 leading-relaxed">{s.detail}</p>
+                  <p className="text-sm text-gray-500 mt-1.5 leading-relaxed">{s.detail}</p>
                 </div>
                 <div className="w-8 h-0.5 bg-gold/40 mt-auto" aria-hidden="true" />
               </motion.div>
@@ -1270,7 +1270,7 @@ export default function HenleyContent() {
                   </span>
                 </div>
                 <h3 className="text-sm font-bold text-navy-900">{c.name}</h3>
-                <p className="text-xs text-gray-400 leading-relaxed">{c.full}</p>
+                <p className="text-xs text-gray-500 leading-relaxed">{c.full}</p>
                 <p className="text-xs text-gray-500 leading-relaxed flex-1">{c.desc}</p>
               </motion.div>
             ))}
@@ -1308,7 +1308,7 @@ export default function HenleyContent() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-navy-900">{e.term}</p>
-                    <p className="text-xs text-gray-400">{e.full}</p>
+                    <p className="text-xs text-gray-500">{e.full}</p>
                   </div>
                 </div>
                 <p className="text-xs text-gold font-semibold">📍 {e.port}</p>
@@ -1331,7 +1331,7 @@ export default function HenleyContent() {
               >
                 <span className="text-2xl" aria-hidden="true">{p.icon}</span>
                 <p className="text-xs font-semibold text-navy-900 leading-snug">{p.label}</p>
-                <p className="text-[10px] text-gray-400">{p.note}</p>
+                <p className="text-[10px] text-gray-500">{p.note}</p>
               </motion.div>
             ))}
           </div>
@@ -1362,11 +1362,11 @@ export default function HenleyContent() {
                 </div>
                 <div className="flex-1">
                   <p className="text-sm font-semibold text-navy-900">{stage.stage}</p>
-                  <p className="text-xs text-gray-400">{stage.desc}</p>
+                  <p className="text-xs text-gray-500">{stage.desc}</p>
                 </div>
                 <div className="text-right shrink-0">
                   <p className="text-lg font-bold text-navy-900">{stage.days}</p>
-                  <p className="text-xs text-gray-400">days (guide)</p>
+                  <p className="text-xs text-gray-500">days (guide)</p>
                 </div>
               </motion.div>
             ))}
@@ -1446,12 +1446,12 @@ export default function HenleyContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-t-4 border-navy-900 pt-8 mb-12 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <div>
-              <p className="text-xs font-bold tracking-[0.4em] uppercase text-gray-400 mb-2">
+              <p className="text-xs font-bold tracking-[0.4em] uppercase text-gray-500 mb-2">
                 MZ Global Trading — Sourcing Programme
               </p>
               <h2 className="text-4xl sm:text-5xl font-bold text-navy-900">Our Process</h2>
             </div>
-            <p className="text-gray-400 text-sm max-w-xs leading-relaxed">
+            <p className="text-gray-500 text-sm max-w-xs leading-relaxed">
               Six structured steps from specification to shipment.
             </p>
           </div>
@@ -1471,7 +1471,7 @@ export default function HenleyContent() {
                 <div className="flex-1 pt-1">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-2 h-2 rounded-full bg-navy-900" aria-hidden="true" />
-                    <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em]">{step.short}</p>
+                    <p className="text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">{step.short}</p>
                   </div>
                   <h3 className="text-xl font-bold text-navy-900 mb-2">{step.title}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>

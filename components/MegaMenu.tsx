@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -429,7 +429,7 @@ function SubItemLink({
 }) {
   return (
     <motion.div variants={itemVariants} className="shrink-0">
-      <Link
+      <Link prefetch={false}
         href={item.href}
         onClick={onClose}
         onMouseEnter={() => onHover(item.img, item.label, item.imgAlt)}
@@ -523,10 +523,12 @@ export default function MegaMenu() {
           <div className="flex items-center justify-between h-32">
 
             {/* Logo */}
-            <Link href="/" className="shrink-0" onClick={closeAll}>
+            <Link prefetch={false} href="/" className="shrink-0" onClick={closeAll}>
               <img
                 src="/images/logo/mz-global-trading-logo-header.webp"
                 alt="MZ Global Trading"
+                width={220}
+                height={106}
                 className="w-[160px] md:w-[190px] lg:w-[220px] h-auto"
               />
             </Link>
@@ -535,7 +537,7 @@ export default function MegaMenu() {
             <div className="hidden lg:flex items-center gap-0.5">
               {navItems.map((item) =>
                 item.href && !item.mega ? (
-                  <Link
+                  <Link prefetch={false}
                     key={item.id}
                     href={item.href}
                     className="px-3 py-2 text-gray-700 hover:text-gold text-sm font-medium transition-colors rounded"
@@ -568,7 +570,7 @@ export default function MegaMenu() {
 
               <SearchWidget onOpen={closeAll} />
 
-              <Link
+              <Link prefetch={false}
                 href="/rfq/"
                 className="ml-2 px-5 py-2 bg-gold text-navy-900 text-sm font-bold rounded hover:bg-yellow-400 transition-colors"
                 onMouseEnter={() => { cancelClose(); setActiveMenu(null); }}
@@ -579,7 +581,7 @@ export default function MegaMenu() {
 
             {/* Mobile controls — search icon + hamburger */}
             <div className="flex items-center gap-1 lg:hidden">
-              <Link
+              <Link prefetch={false}
                 href="/search/"
                 aria-label="Search"
                 className="p-2 text-gray-700 hover:text-gold transition-colors"
@@ -637,11 +639,11 @@ export default function MegaMenu() {
                     {activeItem.mega.panel.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-2.5">
                         <span className="mt-[5px] shrink-0 w-1 h-1 rounded-full bg-gold" />
-                        <span className="text-gray-400 text-[12px] leading-snug">{b}</span>
+                        <span className="text-gray-500 text-[12px] leading-snug">{b}</span>
                       </li>
                     ))}
                   </ul>
-                  <Link
+                  <Link prefetch={false}
                     href={activeItem.mega.panel.ctaHref}
                     onClick={closeAll}
                     className="inline-flex items-center gap-1.5 self-start px-4 py-2 bg-gold text-navy-900 text-[12px] font-bold rounded hover:bg-yellow-400 transition-colors"
@@ -668,7 +670,7 @@ export default function MegaMenu() {
                       {/* Category label */}
                       <div className="shrink-0 w-36 xl:w-40 pt-1">
                         {row.href ? (
-                          <Link
+                          <Link prefetch={false}
                             href={row.href}
                             onClick={closeAll}
                             className="group inline-flex items-center gap-1 text-[10.5px] font-bold tracking-[0.14em] uppercase text-gold/75 hover:text-gold transition-colors duration-150"
@@ -705,10 +707,10 @@ export default function MegaMenu() {
                       ) : (
                         row.href && (
                           <motion.div variants={itemVariants} className="pt-1">
-                            <Link
+                            <Link prefetch={false}
                               href={row.href}
                               onClick={closeAll}
-                              className="inline-flex items-center gap-1 text-[13px] text-gray-400 hover:text-gold transition-colors duration-150"
+                              className="inline-flex items-center gap-1 text-[13px] text-gray-500 hover:text-gold transition-colors duration-150"
                             >
                               View All
                               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -774,7 +776,7 @@ export default function MegaMenu() {
                   </div>
 
                   {/* Explore link */}
-                  <Link
+                  <Link prefetch={false}
                     href={activeItem.mega.panel.ctaHref}
                     onClick={closeAll}
                     className="mt-auto text-[11px] text-gold/60 hover:text-gold text-center transition-colors duration-150"
@@ -803,7 +805,7 @@ export default function MegaMenu() {
                   {navItems.map((item) => (
                     <div key={item.id}>
                       {item.href && !item.mega ? (
-                        <Link
+                        <Link prefetch={false}
                           href={item.href}
                           onClick={() => setMobileOpen(false)}
                           className="block px-5 py-3 text-gray-200 hover:text-gold text-sm font-medium border-b border-white/5"
@@ -882,7 +884,7 @@ export default function MegaMenu() {
                                                 className="overflow-hidden px-5 pb-3"
                                               >
                                                 {row.items!.map((subItem) => (
-                                                  <Link
+                                                  <Link prefetch={false}
                                                     key={subItem.href}
                                                     href={subItem.href}
                                                     onClick={() => setMobileOpen(false)}
@@ -897,7 +899,7 @@ export default function MegaMenu() {
                                         </>
                                       ) : (
                                         row.href && (
-                                          <Link
+                                          <Link prefetch={false}
                                             href={row.href}
                                             onClick={() => setMobileOpen(false)}
                                             className="flex items-center justify-between px-5 py-2.5 text-[11px] font-bold tracking-[0.14em] uppercase text-gold/70 hover:text-gold transition-colors"
@@ -921,7 +923,7 @@ export default function MegaMenu() {
                   ))}
 
                   <div className="px-5 pt-3 pb-5">
-                    <Link
+                    <Link prefetch={false}
                       href="/rfq/"
                       onClick={() => setMobileOpen(false)}
                       className="block text-center px-5 py-3 bg-gold text-navy-900 text-sm font-bold rounded hover:bg-yellow-400 transition-colors"

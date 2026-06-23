@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -254,7 +254,7 @@ export default function BabyHoodedTowelsContent() {
             <div key={s.u}>
               <p className="text-3xl font-bold text-[#D4A017]">{s.v}</p>
               <p className="text-white font-semibold text-sm mt-0.5">{s.u}</p>
-              <p className="text-gray-400 text-xs mt-0.5">{s.s}</p>
+              <p className="text-gray-500 text-xs mt-0.5">{s.s}</p>
             </div>
           ))}
         </div>
@@ -266,7 +266,7 @@ export default function BabyHoodedTowelsContent() {
           <div className="mb-12">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0D1B2A]">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1: Constructions + Size Guide */}
@@ -288,7 +288,7 @@ export default function BabyHoodedTowelsContent() {
                       <p className="text-sm font-semibold text-[#0D1B2A]">{c.name}</p>
                       {c.tag && <span className={`shrink-0 text-[10px] font-semibold px-2 py-0.5 rounded-full ${c.tagColor}`}>{c.tag}</span>}
                     </div>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                   </div>
                 ))}
               </div>
@@ -310,9 +310,9 @@ export default function BabyHoodedTowelsContent() {
                   <div key={a.ageGroup} className="flex items-center gap-3">
                     <div className="flex-1 min-w-0">
                       <p className="text-xs font-semibold text-[#0D1B2A]">{a.ageGroup}</p>
-                      <p className="text-xs text-gray-400">{a.towelSize}</p>
+                      <p className="text-xs text-gray-500">{a.towelSize}</p>
                     </div>
-                    <span className="text-xs text-gray-400 whitespace-nowrap hidden sm:block">Hood {a.hoodDepth}</span>
+                    <span className="text-xs text-gray-500 whitespace-nowrap hidden sm:block">Hood {a.hoodDepth}</span>
                   </div>
                 ))}
               </div>
@@ -332,7 +332,7 @@ export default function BabyHoodedTowelsContent() {
                   <div key={t.range}>
                     <div className="flex justify-between text-xs mb-1">
                       <span className="font-medium text-[#0D1B2A] truncate mr-1">{t.label}</span>
-                      <span className="text-gray-400 whitespace-nowrap">{t.range} gsm</span>
+                      <span className="text-gray-500 whitespace-nowrap">{t.range} gsm</span>
                     </div>
                     <div className="h-1.5 bg-amber-100 rounded-full" />
                   </div>
@@ -448,7 +448,7 @@ export default function BabyHoodedTowelsContent() {
               <div className="flex flex-col gap-2 flex-1">
                 {EXPORT_SPECS.slice(0, 4).map((s) => (
                   <div key={s.label}>
-                    <p className="text-[10px] text-gray-400 uppercase tracking-wide">{s.label.replace(" — New Development", "").replace(" — Repeat Order", " — Repeat")}</p>
+                    <p className="text-[10px] text-gray-500 uppercase tracking-wide">{s.label.replace(" — New Development", "").replace(" — Repeat Order", " — Repeat")}</p>
                     <p className="text-xs font-semibold text-[#0D1B2A]">{s.value}</p>
                   </div>
                 ))}
@@ -605,7 +605,7 @@ export default function BabyHoodedTowelsContent() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">GSM / Weight</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">Choosing the Right Weight</h2>
-            <p className="text-gray-400 mt-3 text-sm max-w-xl mx-auto">From lightweight waffle for warm markets to ultra-plush velour for premium gift programmes.</p>
+            <p className="text-gray-500 mt-3 text-sm max-w-xl mx-auto">From lightweight waffle for warm markets to ultra-plush velour for premium gift programmes.</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {GSM_TIERS.map((g, i) => (
@@ -615,7 +615,7 @@ export default function BabyHoodedTowelsContent() {
                 className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition-colors"
               >
                 <p className="text-3xl font-black text-[#D4A017] mb-2">{g.range}</p>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">{g.label}</p>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">{g.label}</p>
                 <p className="text-gray-300 text-sm leading-relaxed">{g.note}</p>
               </motion.div>
             ))}
@@ -642,7 +642,7 @@ export default function BabyHoodedTowelsContent() {
                 <span className="text-4xl mb-3 block">{h.icon}</span>
                 <h3 className="font-bold text-[#0D1B2A] text-sm mb-1">{h.animal}</h3>
                 <p className="text-gray-500 text-xs">{h.ears}</p>
-                <p className="text-gray-400 text-xs mt-1">{h.detail}</p>
+                <p className="text-gray-500 text-xs mt-1">{h.detail}</p>
               </motion.div>
             ))}
           </div>
@@ -702,7 +702,7 @@ export default function BabyHoodedTowelsContent() {
                   {col.hex === "custom" && <div className="w-full h-full rounded-xl bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200" />}
                 </div>
                 <p className="text-xs font-semibold text-[#0D1B2A] text-center leading-tight">{col.name}</p>
-                <p className="text-xs text-gray-400 text-center">{col.note}</p>
+                <p className="text-xs text-gray-500 text-center">{col.note}</p>
               </motion.div>
             ))}
           </div>
@@ -762,7 +762,7 @@ export default function BabyHoodedTowelsContent() {
               >
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-3xl">{m.flag}</span>
-                  <span className="text-xs font-semibold text-gray-400 bg-gray-100 px-2.5 py-1 rounded-full">{m.tier}</span>
+                  <span className="text-xs font-semibold text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">{m.tier}</span>
                 </div>
                 <h3 className="font-bold text-[#0D1B2A] mb-1">{m.region}</h3>
                 <p className="text-gray-500 text-xs leading-relaxed">{m.note}</p>
@@ -793,7 +793,7 @@ export default function BabyHoodedTowelsContent() {
                     {cert.tier}
                   </span>
                 </div>
-                <p className="text-gray-400 text-xs leading-relaxed">{cert.note}</p>
+                <p className="text-gray-500 text-xs leading-relaxed">{cert.note}</p>
               </motion.div>
             ))}
           </div>
@@ -815,7 +815,7 @@ export default function BabyHoodedTowelsContent() {
                 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}
                 className={`flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-8 px-6 py-4 ${i !== 0 ? "border-t border-gray-100" : ""}`}
               >
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider sm:w-56 shrink-0">{s.label}</p>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider sm:w-56 shrink-0">{s.label}</p>
                 <p className="font-semibold text-[#0D1B2A]">{s.value}</p>
               </motion.div>
             ))}
@@ -857,7 +857,7 @@ export default function BabyHoodedTowelsContent() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-14">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Production Process</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">How We Build Your Programme</h2>
-            <p className="text-gray-400 text-sm max-w-lg mx-auto">From yarn certification to gift-wrapped shipment — a documented 6-stage workflow for every baby hooded towel order.</p>
+            <p className="text-gray-500 text-sm max-w-lg mx-auto">From yarn certification to gift-wrapped shipment — a documented 6-stage workflow for every baby hooded towel order.</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {PROCESS.map((p, i) => (
@@ -872,7 +872,7 @@ export default function BabyHoodedTowelsContent() {
                     {p.n}
                   </div>
                   <h3 className="font-bold text-white text-lg mb-2">{p.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{p.body}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed">{p.body}</p>
                 </div>
               </motion.div>
             ))}

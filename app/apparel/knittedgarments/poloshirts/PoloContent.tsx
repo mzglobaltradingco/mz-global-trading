@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -281,7 +281,7 @@ export default function PoloContent() {
               {[{ val: "50+", label: "Vetted Factories" }, { val: "35+", label: "Export Markets" }, { val: "10+", label: "Certifications" }, { val: "5", label: "Constructions" }].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -296,7 +296,7 @@ export default function PoloContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 */}
@@ -314,7 +314,7 @@ export default function PoloContent() {
                   <div key={c.id} className="bg-white rounded-xl px-4 py-3 border border-sky-100 flex items-center gap-3">
                     <div className="flex-1">
                       <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                      <p className="text-xs text-gray-400">{c.gsm}</p>
+                      <p className="text-xs text-gray-500">{c.gsm}</p>
                     </div>
                     {c.badge && <span className="text-[10px] font-semibold text-sky-700 bg-sky-100 px-2 py-0.5 rounded-full shrink-0">{c.badge}</span>}
                   </div>
@@ -461,7 +461,7 @@ export default function PoloContent() {
                 {EXPORT_TERMS.map((e) => (
                   <div key={e.term} className="flex items-center gap-2 bg-white rounded-lg px-2.5 py-2 border border-teal-100">
                     <span className="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 text-[10px] font-bold flex items-center justify-center shrink-0">{e.term}</span>
-                    <div><p className="text-xs font-semibold text-navy-900">{e.full}</p><p className="text-[10px] text-gray-400">{e.port}</p></div>
+                    <div><p className="text-xs font-semibold text-navy-900">{e.full}</p><p className="text-[10px] text-gray-500">{e.port}</p></div>
                   </div>
                 ))}
               </div>
@@ -499,10 +499,10 @@ export default function PoloContent() {
                 {PROCESS_STEPS.slice(0, 4).map((p) => (
                   <div key={p.num} className="flex items-center gap-2.5">
                     <span className="w-6 h-6 rounded-full bg-orange-200 text-orange-700 text-[10px] font-bold flex items-center justify-center shrink-0">{p.num}</span>
-                    <div><p className="text-xs font-semibold text-navy-900">{p.title}</p><p className="text-[9px] text-gray-400">{p.week}</p></div>
+                    <div><p className="text-xs font-semibold text-navy-900">{p.title}</p><p className="text-[9px] text-gray-500">{p.week}</p></div>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -551,7 +551,7 @@ export default function PoloContent() {
       <section id="section-constructions" className="bg-white py-20 lg:py-28 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
-            <p className="text-xs font-semibold tracking-[0.3em] text-gray-400 uppercase mb-2">01 / Constructions</p>
+            <p className="text-xs font-semibold tracking-[0.3em] text-gray-500 uppercase mb-2">01 / Constructions</p>
             <h2 className="text-6xl sm:text-8xl lg:text-[120px] font-black text-navy-900 leading-none mb-4 tracking-tight">
               5<span className="text-gold">.</span>
             </h2>
@@ -609,7 +609,7 @@ export default function PoloContent() {
                   <div className="flex flex-wrap gap-2">{ac.markets.map((m) => <span key={m} className="text-sm text-gold bg-gold/10 border border-gold/20 px-3 py-1.5 rounded-lg font-semibold">{m}</span>)}</div>
                 </div>
                 <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-                  <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">Decoration Methods</p>
+                  <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-3">Decoration Methods</p>
                   <div className="flex flex-col gap-2">{ac.decorations.map((d) => <div key={d} className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-navy-900 shrink-0" aria-hidden="true" /><span className="text-sm text-navy-900 font-medium">{d}</span></div>)}</div>
                 </div>
               </div>
@@ -640,7 +640,7 @@ export default function PoloContent() {
                 <div className="p-6">
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">{f.detail}</p>
                   <div className="pt-4 border-t border-gray-100">
-                    <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-1">Primary Markets</p>
+                    <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest mb-1">Primary Markets</p>
                     <p className="text-sm font-medium text-navy-900">{f.market}</p>
                   </div>
                 </div>
@@ -651,7 +651,7 @@ export default function PoloContent() {
             {[["XS–3XL", "Standard size range"], ["US / UK / EU", "Size standards available"], ["Custom", "Graded to your tech pack"]].map(([val, label]) => (
               <div key={label} className="text-center">
                 <p className="text-3xl font-bold text-gold">{val}</p>
-                <p className="text-xs text-gray-400 uppercase tracking-wider mt-1">{label}</p>
+                <p className="text-xs text-gray-500 uppercase tracking-wider mt-1">{label}</p>
               </div>
             ))}
           </div>
@@ -674,7 +674,7 @@ export default function PoloContent() {
               <motion.div key={tier.gsm} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.12 }} className={`rounded-2xl p-7 border ${tier.featured ? "bg-white text-navy-900 border-white shadow-2xl" : "bg-white/8 border-white/15 text-white backdrop-blur-xs"}`}>
                 {tier.featured && <span className="inline-block mb-3 text-[10px] font-bold bg-gold text-navy-900 px-3 py-1 rounded-full uppercase tracking-wider">Most Ordered</span>}
                 <p className="text-4xl font-black mb-1" style={{ color: tier.featured ? "#0D1B2A" : tier.accent }}>{tier.gsm}</p>
-                <p className={`text-xs font-bold uppercase tracking-wider mb-4 ${tier.featured ? "text-gray-400" : "text-white/40"}`}>{tier.name}</p>
+                <p className={`text-xs font-bold uppercase tracking-wider mb-4 ${tier.featured ? "text-gray-500" : "text-white/40"}`}>{tier.name}</p>
                 <div className={`w-full h-2 rounded-full mb-4 ${tier.featured ? "bg-gray-100" : "bg-white/10"}`}>
                   <div className="h-full rounded-full" style={{ width: `${tier.bar}%`, backgroundColor: tier.accent }} aria-hidden="true" />
                 </div>
@@ -708,7 +708,7 @@ export default function PoloContent() {
                 </div>
                 <p className={`text-sm leading-relaxed flex-1 ${i === 0 ? "text-gray-300" : "text-gray-600"}`}>{d.best}</p>
                 <div>
-                  <p className={`text-[10px] font-semibold uppercase tracking-widest mb-2 ${i === 0 ? "text-gray-500" : "text-gray-400"}`}>Compatible With</p>
+                  <p className={`text-[10px] font-semibold uppercase tracking-widest mb-2 ${i === 0 ? "text-gray-500" : "text-gray-500"}`}>Compatible With</p>
                   <div className="flex flex-wrap gap-1.5">{d.compat.map((c) => <span key={c} className={`text-[11px] px-2.5 py-1 rounded-full ${i === 0 ? "bg-white/10 text-gray-200" : "bg-gray-100 text-gray-600"}`}>{c}</span>)}</div>
                 </div>
                 <p className={`text-xs rounded-xl px-4 py-3 border ${i === 0 ? "bg-white/5 border-white/10 text-gray-300" : "bg-amber-50 border-amber-100 text-amber-700"}`}>{d.note}</p>
@@ -750,13 +750,13 @@ export default function PoloContent() {
             ))}
           </div>
           <div className="rounded-2xl p-8" style={{ backgroundColor: "#f0f0f5", boxShadow: "inset 4px 4px 8px #c8c8d0, inset -4px -4px 8px #ffffff" }}>
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Sample Colour Palette — Illustrative Only</p>
+            <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-4">Sample Colour Palette — Illustrative Only</p>
             <div className="grid grid-cols-4 sm:grid-cols-8 md:grid-cols-12 gap-2">
               {[["bg-white","#fff"],["bg-gray-100","#f3f4f6"],["bg-gray-300","#d1d5db"],["bg-gray-600","#4b5563"],["bg-navy-900","#0D1B2A"],["bg-black","#000"],["bg-red-700","#b91c1c"],["bg-red-500","#ef4444"],["bg-blue-800","#1e40af"],["bg-blue-500","#3b82f6"],["bg-sky-400","#38bdf8"],["bg-green-700","#15803d"]].map(([cls, hex]) => (
                 <div key={hex} className={`h-10 rounded-xl ${cls} border border-black/5`} title={hex} aria-hidden="true" />
               ))}
             </div>
-            <p className="text-xs text-gray-400 mt-3">Full PMS range available. Navy, white, black and corporate colours are the most frequently ordered polo shirt colours across all market segments.</p>
+            <p className="text-xs text-gray-500 mt-3">Full PMS range available. Navy, white, black and corporate colours are the most frequently ordered polo shirt colours across all market segments.</p>
           </div>
           <BackToTop />
         </div>
@@ -818,7 +818,7 @@ export default function PoloContent() {
           <div className="bg-navy-900 rounded-2xl p-8 text-center">
             <p className="text-5xl font-black text-gold mb-2">35+</p>
             <p className="text-white font-semibold mb-1">Export Markets Served</p>
-            <p className="text-gray-400 text-sm">USA · UK · EU · Middle East · SE Asia · Australia · East Asia · Russia/CIS</p>
+            <p className="text-gray-500 text-sm">USA · UK · EU · Middle East · SE Asia · Australia · East Asia · Russia/CIS</p>
           </div>
           <BackToTop />
         </div>
@@ -827,7 +827,7 @@ export default function PoloContent() {
       {/* SECTION 8 — CERTIFICATIONS — MONOCHROME UI */}
       <section id="section-certs" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold tracking-[0.3em] text-gray-400 uppercase mb-2">Standards &amp; Certifications</p>
+          <p className="text-xs font-semibold tracking-[0.3em] text-gray-500 uppercase mb-2">Standards &amp; Certifications</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-3">10 Active Certifications</h2>
           <p className="text-gray-500 mb-12 max-w-2xl leading-relaxed">Corporate polo shirt programmes entering EU and UK markets face increasing import compliance scrutiny. Every factory in our polo network is pre-screened for active certification status — OEKO-TEX, BSCI and Sedex are the three most frequently specified by corporate buyers in these markets.</p>
           <div className="grid grid-cols-1 gap-0 border-2 border-gray-900 divide-y-2 divide-gray-900">
@@ -859,14 +859,14 @@ export default function PoloContent() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
             {/* Incoterms column */}
             <div className="lg:col-span-1 flex flex-col gap-3">
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1">Incoterms Available</p>
+              <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">Incoterms Available</p>
               {EXPORT_TERMS.map((e, i) => (
                 <div key={e.term} className={`rounded-2xl p-5 ${i === 0 ? "bg-navy-900 text-white" : "bg-white border border-gray-200"}`}>
                   <div className="flex items-center gap-3 mb-2">
                     <span className={`text-sm font-black ${i === 0 ? "text-gold" : "text-navy-900"}`}>{e.term}</span>
                     <span className={`text-xs ${i === 0 ? "text-gray-300" : "text-gray-500"}`}>{e.full}</span>
                   </div>
-                  <p className={`text-xs ${i === 0 ? "text-gray-400" : "text-gray-400"}`}>{e.port}</p>
+                  <p className={`text-xs ${i === 0 ? "text-gray-500" : "text-gray-500"}`}>{e.port}</p>
                   <p className={`text-sm mt-1 leading-snug ${i === 0 ? "text-gray-200" : "text-gray-600"}`}>{e.desc}</p>
                 </div>
               ))}
@@ -874,7 +874,7 @@ export default function PoloContent() {
             {/* Packaging + Timeline */}
             <div className="lg:col-span-2 flex flex-col gap-6">
               <div>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Packaging Options</p>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-3">Packaging Options</p>
                 <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
                   {PACK_OPTIONS.map((p) => (
                     <div key={p.label} className="bg-white border border-gray-200 rounded-xl p-3 text-center hover:border-gold transition-colors">
@@ -885,7 +885,7 @@ export default function PoloContent() {
                 </div>
               </div>
               <div className="bg-white border border-gray-200 rounded-2xl p-6">
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-6">Indicative Timeline</p>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-6">Indicative Timeline</p>
                 <div className="space-y-4">
                   {LEAD_STAGES.map((s, i) => (
                     <div key={s.stage} className="flex items-center gap-4">
@@ -926,7 +926,7 @@ export default function PoloContent() {
                 </div>
                 <div>
                   <h3 className="text-base font-bold text-white mb-1">{s.title}</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">{s.desc}</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">{s.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -951,7 +951,7 @@ export default function PoloContent() {
                   </div>
                   <div className="relative z-10">
                     <span className={`inline-flex w-10 h-10 rounded-xl ${bgs[i]} text-white text-xs font-black items-center justify-center mb-4`}>{p.num}</span>
-                    <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-1">{p.week}</p>
+                    <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-1">{p.week}</p>
                     <h3 className="text-lg font-bold text-navy-900 mb-2">{p.title}</h3>
                     <p className="text-sm text-gray-600 leading-relaxed">{p.desc}</p>
                   </div>
@@ -987,7 +987,7 @@ export default function PoloContent() {
                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold" />
                       </span>
                     )}
-                    <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-bold transition-all ${faqOpen === i ? "border-gold bg-gold text-navy-900" : "border-gray-300 text-gray-400 group-hover:border-gold"}`}>{faqOpen === i ? "−" : "+"}</span>
+                    <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-bold transition-all ${faqOpen === i ? "border-gold bg-gold text-navy-900" : "border-gray-300 text-gray-500 group-hover:border-gold"}`}>{faqOpen === i ? "−" : "+"}</span>
                   </span>
                   <p className={`font-semibold leading-snug transition-colors ${faqOpen === i ? "text-navy-900" : "text-gray-700 group-hover:text-navy-900"}`}>{faq.q}</p>
                 </button>

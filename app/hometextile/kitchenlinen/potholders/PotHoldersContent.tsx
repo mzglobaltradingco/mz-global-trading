@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -341,7 +341,7 @@ export default function PotHoldersContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -358,7 +358,7 @@ export default function PotHoldersContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">All Pot Holder Specifications</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full specification section below.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full specification section below.</p>
           </div>
 
           {/* Row 1 */}
@@ -378,7 +378,7 @@ export default function PotHoldersContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3.5 border border-red-100">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">Max {c.temp}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">Max {c.temp}</p>
                     {c.badge && <span className="mt-1.5 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{c.badge}</span>}
                   </div>
                 ))}
@@ -406,7 +406,7 @@ export default function PotHoldersContent() {
                         <p className="text-sm font-bold text-navy-900">{s.name}</p>
                         <span className="text-xs font-semibold text-gold">{s.dims}</span>
                       </div>
-                      <p className="text-xs text-gray-400 mt-0.5">{s.use}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{s.use}</p>
                     </div>
                   </div>
                 ))}
@@ -428,7 +428,7 @@ export default function PotHoldersContent() {
                 {HEAT_RATINGS.slice(0, 4).map((r) => (
                   <div key={r.rating} className="bg-white rounded-lg p-2 border border-yellow-100">
                     <p className="text-xs font-bold text-navy-900">{r.rating}</p>
-                    <p className="text-[10px] text-gray-400 leading-snug">{r.name}</p>
+                    <p className="text-[10px] text-gray-500 leading-snug">{r.name}</p>
                   </div>
                 ))}
               </div>
@@ -446,7 +446,7 @@ export default function PotHoldersContent() {
                 {DECORATION.map((d) => (
                   <div key={d.method} className="bg-white rounded-lg px-3 py-2 border border-violet-50">
                     <p className="text-xs font-semibold text-navy-900">{d.method}</p>
-                    <p className="text-[10px] text-gray-400">{d.compat}</p>
+                    <p className="text-[10px] text-gray-500">{d.compat}</p>
                   </div>
                 ))}
               </div>
@@ -508,7 +508,7 @@ export default function PotHoldersContent() {
                   <div key={s.abbr} className="bg-white rounded-xl p-3 border border-cyan-100">
                     <p className="text-xs font-bold text-cyan-600">{s.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{s.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{s.market}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -549,7 +549,7 @@ export default function PotHoldersContent() {
                     <span className="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 text-[10px] font-bold flex items-center justify-center shrink-0">{e.term}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{e.full}</p>
-                      <p className="text-[10px] text-gray-400">{e.port}</p>
+                      <p className="text-[10px] text-gray-500">{e.port}</p>
                     </div>
                   </div>
                 ))}
@@ -597,7 +597,7 @@ export default function PotHoldersContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Process" />
             </motion.div>
@@ -646,7 +646,7 @@ export default function PotHoldersContent() {
       <section id="section-constructions" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-400 mb-2">01 / Constructions</p>
+            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-500 mb-2">01 / Constructions</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-3">Fabric Constructions</h2>
             <p className="text-gray-500 max-w-2xl leading-relaxed">Each construction is matched to a distinct heat protection requirement and end-use environment — from retail kitchenware to commercial professional kitchen.</p>
           </div>
@@ -678,35 +678,35 @@ export default function PotHoldersContent() {
                 </div>
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="bg-white rounded-xl p-4 border border-gray-100">
-                    <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-1">Max Temperature</p>
+                    <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Max Temperature</p>
                     <p className="text-lg font-bold text-red-600">{ac.temp}</p>
                   </div>
                   <div className="bg-white rounded-xl p-4 border border-gray-100">
-                    <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-1">Fill / Construction</p>
+                    <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Fill / Construction</p>
                     <p className="text-sm text-navy-900 font-medium">{ac.fill}</p>
                   </div>
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">{ac.detail}</p>
                 <div className="bg-navy-900 rounded-xl p-4">
-                  <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-2">Technical Specification</p>
+                  <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-2">Technical Specification</p>
                   <p className="text-sm text-gray-200 font-mono leading-relaxed">{ac.spec}</p>
                 </div>
               </div>
               <div className="flex flex-col gap-4">
                 <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6">
-                  <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-3">Best For</p>
+                  <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-3">Best For</p>
                   <div className="flex flex-wrap gap-2">
                     {ac.best.map((b) => <span key={b} className="text-xs text-navy-900 bg-white border border-gray-200 px-3 py-1 rounded-full">{b}</span>)}
                   </div>
                 </div>
                 <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6">
-                  <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-3">Key Markets</p>
+                  <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-3">Key Markets</p>
                   <div className="flex flex-wrap gap-2">
                     {ac.markets.map((m) => <span key={m} className="text-xs text-gold bg-gold/10 border border-gold/20 px-3 py-1 rounded-full">{m}</span>)}
                   </div>
                 </div>
                 <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6">
-                  <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-3">Decoration Options</p>
+                  <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-3">Decoration Options</p>
                   <div className="flex flex-col gap-1.5">
                     {ac.decoration.map((d) => (
                       <div key={d} className="flex items-center gap-2">
@@ -756,7 +756,7 @@ export default function PotHoldersContent() {
                     <h3 className="text-base font-bold text-white">{s.name}</h3>
                     <span className="text-gold text-sm font-semibold">{s.dims}</span>
                   </div>
-                  <p className="text-sm text-gray-400 leading-relaxed">{s.use}</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">{s.use}</p>
                 </div>
               </motion.div>
             ))}
@@ -785,7 +785,7 @@ export default function PotHoldersContent() {
                   <span className="text-gold text-sm font-bold">{r.rating}</span>
                 </div>
                 <h3 className="text-base font-bold text-white mb-2">{r.name}</h3>
-                <p className="text-gray-400 text-xs leading-relaxed">{r.desc}</p>
+                <p className="text-gray-500 text-xs leading-relaxed">{r.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -890,7 +890,7 @@ export default function PotHoldersContent() {
                 <div className="absolute -left-5 top-4 w-4 h-4 rounded-full bg-gold border-4 border-white" aria-hidden="true" />
                 <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-xs grid sm:grid-cols-3 gap-4 items-center">
                   <div>
-                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Layer {i + 1}</p>
+                    <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Layer {i + 1}</p>
                     <h3 className="text-base font-bold text-navy-900">{f.layer}</h3>
                   </div>
                   <p className="text-sm text-gray-600">{f.spec}</p>
@@ -990,7 +990,7 @@ export default function PotHoldersContent() {
                   <Image src={c.img} alt={c.full} width={64} height={40} className="object-contain w-full h-full" />
                 </div>
                 <p className="text-sm font-bold text-white">{c.name}</p>
-                <span className={`text-[10px] px-2 py-0.5 rounded-full font-semibold w-fit ${c.tier === "Premium" ? "bg-gold/20 text-gold" : c.tier === "Optional" ? "bg-white/10 text-gray-400" : "bg-green-900/50 text-green-400"}`}>{c.tier}</span>
+                <span className={`text-[10px] px-2 py-0.5 rounded-full font-semibold w-fit ${c.tier === "Premium" ? "bg-gold/20 text-gold" : c.tier === "Optional" ? "bg-white/10 text-gray-500" : "bg-green-900/50 text-green-400"}`}>{c.tier}</span>
               </motion.div>
             ))}
           </div>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -274,7 +274,7 @@ export default function SupplierEvaluationContent() {
                 <div className="flex flex-col sm:flex-row">
                   <div className="bg-navy-900 px-6 py-6 sm:py-8 flex sm:flex-col items-center justify-start sm:justify-center gap-3 sm:gap-2 sm:min-w-[120px] sm:text-center">
                     <span className="text-3xl sm:text-4xl font-bold text-gold leading-none">{stage.num}</span>
-                    <span className="text-gray-400 text-[10px] uppercase tracking-widest leading-tight">{stage.duration}</span>
+                    <span className="text-gray-500 text-[10px] uppercase tracking-widest leading-tight">{stage.duration}</span>
                   </div>
                   <div className="p-6 sm:p-8 flex-1">
                     <h3 className="text-navy-900 font-bold text-lg mb-2">{stage.title}</h3>
@@ -361,7 +361,7 @@ export default function SupplierEvaluationContent() {
                 Ongoing Factory Monitoring
               </h2>
               <div className="w-8 h-0.5 bg-gold/50 mb-5" />
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-500 text-sm leading-relaxed">
                 Passing the evaluation is the entry point — not a lifetime guarantee. Every factory in our
                 active network is subject to ongoing performance monitoring and periodic re-evaluation to
                 ensure standards are maintained across every order we place.
@@ -389,7 +389,7 @@ export default function SupplierEvaluationContent() {
                   </div>
                   <div>
                     <p className="text-white font-semibold text-sm mb-1">{item.title}</p>
-                    <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                    <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -474,7 +474,7 @@ export default function SupplierEvaluationContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Source From a Pre-Vetted Factory Network
             </h2>
-            <p className="text-gray-400 text-base max-w-xl mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-xl mx-auto mb-8">
               Every factory we recommend has been independently evaluated against 8 criteria across 4 stages.
               You get a thoroughly vetted supply chain without running your own audit programme.
             </p>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -199,7 +199,7 @@ export default function KnittedGarmentsContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -219,7 +219,7 @@ export default function KnittedGarmentsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Product Range</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Knitted Garment Categories</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">
               Each category page covers constructions, GSM ranges, size options, decoration methods, OEM development and export terms in full detail.
             </p>
           </div>
@@ -300,13 +300,13 @@ export default function KnittedGarmentsContent() {
           <div className="mb-8">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Compliance</p>
             <h2 className="text-2xl sm:text-3xl font-bold text-navy-900">Certifications Available</h2>
-            <p className="text-gray-400 mt-2 text-sm max-w-lg">Specify required certifications in your RFQ — we match you with factories that hold them.</p>
+            <p className="text-gray-500 mt-2 text-sm max-w-lg">Specify required certifications in your RFQ — we match you with factories that hold them.</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {CERTS.map((c) => (
               <div key={c.name} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
                 <p className="font-bold text-navy-900 text-sm">{c.name}</p>
-                <p className="text-xs text-gray-400 mt-1 leading-tight">{c.full}</p>
+                <p className="text-xs text-gray-500 mt-1 leading-tight">{c.full}</p>
               </div>
             ))}
           </div>

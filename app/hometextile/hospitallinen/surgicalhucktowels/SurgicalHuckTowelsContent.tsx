@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -167,7 +167,7 @@ export default function SurgicalHuckTowelsContent() {
             </div>
             <div className="flex flex-wrap sm:flex-nowrap gap-8 lg:gap-10 border-t border-white/10 pt-6 lg:border-t-0 lg:pt-0 lg:border-l lg:pl-10 shrink-0">
               {[{ val: "50+", label: "Vetted Mills" }, { val: "35+", label: "Export Markets" }, { val: "220", label: "Standard GSM" }, { val: "100%", label: "Cotton Only" }].map((s) => (
-                <div key={s.label} className="text-center"><p className="text-3xl font-bold text-gold">{s.val}</p><p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p></div>
+                <div key={s.label} className="text-center"><p className="text-3xl font-bold text-gold">{s.val}</p><p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p></div>
               ))}
             </div>
             <Link href="/rfq/" className="shrink-0 inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-yellow-400 transition-colors w-fit">Request a Quote <span aria-hidden="true">&#8594;</span></Link>
@@ -181,7 +181,7 @@ export default function SurgicalHuckTowelsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Everything on Surgical Huck Towels</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the detailed section.</p>
           </div>
           {/* Row 1 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
@@ -190,10 +190,10 @@ export default function SurgicalHuckTowelsContent() {
               <div className="bg-white/5 border border-white/10 rounded-xl p-4 flex-1">
                 <p className="text-sm font-bold text-white mb-2">Huck Weave — 100% Cotton ONLY</p>
                 <div className="grid grid-cols-2 gap-3">
-                  <div><p className="text-[11px] text-gray-400 uppercase tracking-wide mb-1">GSM</p><p className="text-sm font-semibold text-white">180–280 GSM</p></div>
-                  <div><p className="text-[11px] text-gray-400 uppercase tracking-wide mb-1">Standard</p><p className="text-sm font-semibold text-white">220 GSM</p></div>
-                  <div><p className="text-[11px] text-gray-400 uppercase tracking-wide mb-1">Fibre</p><p className="text-sm font-semibold text-white">100% Cotton</p></div>
-                  <div><p className="text-[11px] text-gray-400 uppercase tracking-wide mb-1">Lint Status</p><p className="text-sm font-semibold text-gold">Zero-Lint</p></div>
+                  <div><p className="text-[11px] text-gray-500 uppercase tracking-wide mb-1">GSM</p><p className="text-sm font-semibold text-white">180–280 GSM</p></div>
+                  <div><p className="text-[11px] text-gray-500 uppercase tracking-wide mb-1">Standard</p><p className="text-sm font-semibold text-white">220 GSM</p></div>
+                  <div><p className="text-[11px] text-gray-500 uppercase tracking-wide mb-1">Fibre</p><p className="text-sm font-semibold text-white">100% Cotton</p></div>
+                  <div><p className="text-[11px] text-gray-500 uppercase tracking-wide mb-1">Lint Status</p><p className="text-sm font-semibold text-gold">Zero-Lint</p></div>
                 </div>
               </div>
               <ExploreBtn sectionId="section-construction" label="Read Construction Details" />
@@ -257,7 +257,7 @@ export default function SurgicalHuckTowelsContent() {
                     <span className="text-base leading-none mt-0.5" aria-hidden="true">{v.icon}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{v.name}</p>
-                      <p className="text-[10px] text-gray-400 leading-tight mt-0.5 line-clamp-2">{v.desc.slice(0, 60)}…</p>
+                      <p className="text-[10px] text-gray-500 leading-tight mt-0.5 line-clamp-2">{v.desc.slice(0, 60)}…</p>
                     </div>
                   </div>
                 ))}
@@ -297,7 +297,7 @@ export default function SurgicalHuckTowelsContent() {
                     <span className="text-amber-500 text-xs mt-0.5 shrink-0">✓</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900 leading-tight">{c.name}</p>
-                      <p className="text-[10px] text-gray-400 leading-tight">{c.desc.split(" — ")[0]}</p>
+                      <p className="text-[10px] text-gray-500 leading-tight">{c.desc.split(" — ")[0]}</p>
                     </div>
                   </div>
                 ))}
@@ -316,7 +316,7 @@ export default function SurgicalHuckTowelsContent() {
                     <span className="text-rose-400 text-xs mt-0.5 shrink-0">▶</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900 leading-tight">{s.name}</p>
-                      <p className="text-[10px] text-gray-400">{s.market}</p>
+                      <p className="text-[10px] text-gray-500">{s.market}</p>
                     </div>
                   </div>
                 ))}
@@ -437,17 +437,17 @@ export default function SurgicalHuckTowelsContent() {
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">{CONSTRUCTION_DETAIL.description}</p>
                 </div>
                 <div className="bg-gray-50 rounded-xl p-4 border border-gray-100">
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Why 100% Cotton Only</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Why 100% Cotton Only</p>
                   <p className="text-sm text-gray-600 leading-relaxed">{CONSTRUCTION_DETAIL.why}</p>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-navy-900 rounded-xl p-4">
-                  <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Standard GSM</p>
+                  <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Standard GSM</p>
                   <p className="text-xl font-black text-gold">{CONSTRUCTION_DETAIL.gsm}</p>
                 </div>
                 <div className="bg-navy-900 rounded-xl p-4">
-                  <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Standard Dimensions</p>
+                  <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Standard Dimensions</p>
                   <p className="text-xl font-black text-gold">{CONSTRUCTION_DETAIL.sizes}</p>
                 </div>
               </div>
@@ -521,7 +521,7 @@ export default function SurgicalHuckTowelsContent() {
                   className="border border-white/10 rounded-2xl p-6 bg-white/5">
                   <span className="text-3xl mb-4 block" aria-hidden="true">{v.icon}</span>
                   <h3 className="text-xl font-bold text-white mb-3">{v.name}</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">{v.desc}</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">{v.desc}</p>
                 </motion.div>
               ))}
             </div>

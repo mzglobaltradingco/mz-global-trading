@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -98,8 +98,8 @@ export default function PostCard({ post }: PostCardProps) {
         </p>
 
         <div className="flex items-center justify-between pt-4 border-t border-gray-50">
-          <span className="text-gray-400 text-xs">{formatDate(post.date)}</span>
-          <span className="text-gray-400 text-xs">{post.readTime} min read</span>
+          <span className="text-gray-500 text-xs">{formatDate(post.date)}</span>
+          <span className="text-gray-500 text-xs">{post.readTime} min read</span>
         </div>
       </div>
     </motion.article>

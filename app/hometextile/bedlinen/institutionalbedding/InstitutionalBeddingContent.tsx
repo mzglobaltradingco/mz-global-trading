@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -351,7 +351,7 @@ export default function InstitutionalBeddingContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -370,7 +370,7 @@ export default function InstitutionalBeddingContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Institutional Bedding — Full Specification</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to navigate to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to navigate to the full detailed section.</p>
           </div>
 
           {/* Row 1 */}
@@ -389,7 +389,7 @@ export default function InstitutionalBeddingContent() {
                   <div key={p.id} className="bg-white/8 border border-white/10 rounded-xl p-3.5 flex flex-col gap-1.5">
                     <p className="text-sm font-semibold text-white">{p.name}</p>
                     <p className="text-xs text-gold/70">{p.tc}</p>
-                    <p className="text-xs text-gray-400">{p.washRating}</p>
+                    <p className="text-xs text-gray-500">{p.washRating}</p>
                     <div className="flex flex-wrap gap-1 mt-1">
                       {p.sectors.slice(0, 2).map((s) => (
                         <span key={s} className="text-[10px] font-semibold text-gray-300 bg-white/10 px-2 py-0.5 rounded-full">{s}</span>
@@ -419,7 +419,7 @@ export default function InstitutionalBeddingContent() {
                         <div className={`h-full rounded-full ${w.color}`} style={{ width: `${w.width}%` }} aria-hidden="true" />
                       </div>
                     </div>
-                    <p className={`text-[10px] leading-tight w-28 shrink-0 ${w.highlight ? "text-gray-300" : "text-gray-400"}`}>{w.label}</p>
+                    <p className={`text-[10px] leading-tight w-28 shrink-0 ${w.highlight ? "text-gray-300" : "text-gray-500"}`}>{w.label}</p>
                   </div>
                 ))}
               </div>
@@ -527,7 +527,7 @@ export default function InstitutionalBeddingContent() {
                     <p className="text-xs font-semibold text-navy-900">{s.title}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 pl-7">+ 2 more sustainability standards</p>
+                <p className="text-xs text-gray-500 pl-7">+ 2 more sustainability standards</p>
               </div>
               <ExploreBtn sectionId="section-sustainability" label="View Sustainability" />
             </motion.div>
@@ -650,24 +650,24 @@ export default function InstitutionalBeddingContent() {
           <p className="text-gray-500 mb-12 max-w-2xl leading-relaxed">Consumer bedding is typically tested to 50 wash cycles. Institutional bedding is engineered and tested to 100–200 commercial wash cycles at 60–90&deg;C. The construction, fibre blend and finishing are fundamentally different engineering decisions.</p>
           <div className="grid lg:grid-cols-2 gap-10 items-start mb-12">
             <div>
-              <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-5">Wash Cycle Benchmark Comparison</p>
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-5">Wash Cycle Benchmark Comparison</p>
               <div className="flex flex-col gap-4">
                 {WASH_PERFORMANCE.map((w) => (
                   <div key={w.cycles} className={`rounded-2xl p-5 border-2 ${w.highlight ? "border-gold bg-gold/5" : "border-gray-100 bg-gray-50"}`}>
                     <div className="flex items-center justify-between mb-3">
-                      <p className={`text-xl font-bold ${w.highlight ? "text-navy-900" : "text-gray-400"}`}>{w.cycles} Cycles</p>
+                      <p className={`text-xl font-bold ${w.highlight ? "text-navy-900" : "text-gray-500"}`}>{w.cycles} Cycles</p>
                       {w.highlight && <span className="text-xs font-bold text-gold bg-gold/10 px-3 py-1 rounded-full">Our Specification</span>}
                     </div>
                     <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden mb-2">
                       <div className={`h-full rounded-full ${w.color} transition-all duration-700`} style={{ width: `${w.width}%` }} aria-hidden="true" />
                     </div>
-                    <p className={`text-xs ${w.highlight ? "text-gray-600" : "text-gray-400"}`}>{w.label}</p>
+                    <p className={`text-xs ${w.highlight ? "text-gray-600" : "text-gray-500"}`}>{w.label}</p>
                   </div>
                 ))}
               </div>
             </div>
             <div>
-              <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-5">Construction Factors for Wash Durability</p>
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-5">Construction Factors for Wash Durability</p>
               <div className="flex flex-col gap-4">
                 {[
                   { factor: "Fibre Blend", detail: "65/35 cotton-poly provides greater dimensional stability than 100% cotton under repeated commercial wash heat. Poly binds moisture, preventing shrinkage." },
@@ -715,12 +715,12 @@ export default function InstitutionalBeddingContent() {
                   <h3 className="text-2xl font-bold text-navy-900 mb-4">{as_.name}</h3>
                   <p className="text-gray-600 text-base leading-relaxed mb-6">{as_.detail}</p>
                   <div className="bg-white rounded-xl p-4 border border-gray-100">
-                    <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Key Markets</p>
+                    <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3">Key Markets</p>
                     <p className="text-sm font-semibold text-navy-900">{as_.markets}</p>
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Standard Specifications for This Sector</p>
+                  <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">Standard Specifications for This Sector</p>
                   <div className="flex flex-col gap-3">
                     {as_.specs.map((spec, i) => (
                       <div key={i} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-gray-100">
@@ -758,11 +758,11 @@ export default function InstitutionalBeddingContent() {
                   <p className="text-sm text-gray-500 leading-relaxed mb-4">{f.note}</p>
                   <div className="grid grid-cols-2 gap-2">
                     <div className="bg-gray-50 rounded-xl p-3">
-                      <p className="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Wash Tolerance</p>
+                      <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">Wash Tolerance</p>
                       <p className="text-xs font-bold text-navy-900">{f.washTolerance}</p>
                     </div>
                     <div className="bg-gray-50 rounded-xl p-3">
-                      <p className="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Sustainability</p>
+                      <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">Sustainability</p>
                       <p className="text-xs font-bold text-navy-900">{f.sustainability}</p>
                     </div>
                   </div>
@@ -842,7 +842,7 @@ export default function InstitutionalBeddingContent() {
           <div className="grid lg:grid-cols-12 gap-10">
             <div className="lg:col-span-5">
               <div className="w-8 h-1 bg-gold mb-5" aria-hidden="true" />
-              <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-3">Export Terms</p>
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-[0.3em] mb-3">Export Terms</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-6">Export &amp; Logistics</h2>
               <p className="text-gray-500 text-sm leading-relaxed mb-8">Karachi is Pakistan&rsquo;s primary export port for institutional linen — well-connected via regular shipping lines to the USA, UK, EU, Middle East and Australia. We handle FCL and LCL shipments with full documentation for customs clearance and tender compliance.</p>
               <div className="flex flex-col gap-3">
@@ -852,7 +852,7 @@ export default function InstitutionalBeddingContent() {
                     <div>
                       <p className="text-sm font-bold text-navy-900">{e.full}</p>
                       <p className="text-xs text-gold mt-0.5">{e.port}</p>
-                      <p className="text-xs text-gray-400 mt-1.5 leading-relaxed" dangerouslySetInnerHTML={{ __html: e.desc }} />
+                      <p className="text-xs text-gray-500 mt-1.5 leading-relaxed" dangerouslySetInnerHTML={{ __html: e.desc }} />
                     </div>
                   </div>
                 ))}
@@ -860,7 +860,7 @@ export default function InstitutionalBeddingContent() {
             </div>
             <div className="lg:col-span-7">
               <div className="w-8 h-1 bg-gray-200 mb-5" aria-hidden="true" />
-              <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-3">Packaging</p>
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-[0.3em] mb-3">Packaging</p>
               <h3 className="text-xl font-bold text-navy-900 mb-6">Institutional Packaging Options</h3>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {PACK_OPTIONS.map((p) => (
@@ -872,13 +872,13 @@ export default function InstitutionalBeddingContent() {
                   </div>
                 ))}
               </div>
-              <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-4">Indicative Lead Time (Institutional Orders)</p>
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-[0.3em] mb-4">Indicative Lead Time (Institutional Orders)</p>
               <div className="flex flex-col gap-2">
                 {LEAD_STAGES.map((s) => (
                   <div key={s.stage} className="flex items-center gap-3 bg-gray-50 border border-gray-100 rounded-xl px-4 py-3">
                     <div className={`w-3 h-3 rounded-full shrink-0 ${s.color}`} aria-hidden="true" />
                     <p className="text-sm text-navy-900 flex-1">{s.stage}</p>
-                    <span className="text-xs font-bold text-gray-400 shrink-0">{s.days} days</span>
+                    <span className="text-xs font-bold text-gray-500 shrink-0">{s.days} days</span>
                   </div>
                 ))}
               </div>
@@ -989,7 +989,7 @@ export default function InstitutionalBeddingContent() {
                 className="p-7 border-r border-b border-white/10 last:border-r-0 hover:bg-white/5 transition-all">
                 <span className="text-3xl mb-4 block" aria-hidden="true">{m.icon}</span>
                 <h3 className="text-base font-bold text-white mb-2">{m.region}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{m.detail}</p>
+                <p className="text-sm text-gray-500 leading-relaxed">{m.detail}</p>
               </motion.div>
             ))}
           </div>
@@ -1001,7 +1001,7 @@ export default function InstitutionalBeddingContent() {
             ].map((s) => (
               <div key={s.label} className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center">
                 <p className="text-4xl font-bold text-gold">{s.val}</p>
-                <p className="text-sm text-gray-400 mt-1">{s.label}</p>
+                <p className="text-sm text-gray-500 mt-1">{s.label}</p>
               </div>
             ))}
           </div>
@@ -1078,7 +1078,7 @@ export default function InstitutionalBeddingContent() {
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}>
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Get Started</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Source Institutional Bedding?</h2>
-            <p className="text-gray-400 text-base max-w-xl mx-auto mb-8">Share your product type, TC specification, quantity and required wash-cycle rating — we respond with factory matches and indicative pricing within 24 hours.</p>
+            <p className="text-gray-500 text-base max-w-xl mx-auto mb-8">Share your product type, TC specification, quantity and required wash-cycle rating — we respond with factory matches and indicative pricing within 24 hours.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/rfq/"
                 className="inline-flex items-center justify-center gap-2 bg-gold text-navy-900 font-bold px-10 py-4 rounded-xl hover:bg-yellow-400 transition-colors shadow-lg shadow-gold/20">

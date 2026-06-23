@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -550,7 +550,7 @@ export default function ShortsContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.value}</p>
-                  <p className="text-gray-400 text-xs mt-1">{s.label}</p>
+                  <p className="text-gray-500 text-xs mt-1">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -885,12 +885,12 @@ export default function ShortsContent() {
                   <span className="text-2xl" aria-hidden="true">{fit.icon}</span>
                   <div>
                     <p className="font-bold text-navy-900 text-base">{fit.name}</p>
-                    <p className="text-xs text-gray-400 font-mono">Waist {fit.waist} · Inseam {fit.inseam}</p>
+                    <p className="text-xs text-gray-500 font-mono">Waist {fit.waist} · Inseam {fit.inseam}</p>
                   </div>
                 </div>
                 <div className="flex-1">
                   <p className="text-gray-600 text-sm leading-relaxed mb-1">{fit.description}</p>
-                  <p className="text-xs text-gray-400">{fit.markets}</p>
+                  <p className="text-xs text-gray-500">{fit.markets}</p>
                 </div>
               </motion.div>
             ))}
@@ -1006,7 +1006,7 @@ export default function ShortsContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Colour &amp; Dye Options
             </h2>
-            <p className="text-gray-400 text-sm max-w-xl mx-auto">
+            <p className="text-gray-500 text-sm max-w-xl mx-auto">
               Seven colour families across the full construction range. Pantone matching, lab dip approval and garment dye available to specification.
             </p>
           </div>
@@ -1029,7 +1029,7 @@ export default function ShortsContent() {
                   {family.shades.map((shade) => (
                     <div key={shade} className="flex items-center gap-2">
                       <div className="w-2 h-2 rounded-full bg-gold/60 shrink-0" />
-                      <p className="text-gray-400 text-xs">{shade}</p>
+                      <p className="text-gray-500 text-xs">{shade}</p>
                     </div>
                   ))}
                 </div>
@@ -1113,7 +1113,7 @@ export default function ShortsContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Export Markets — USA, UK, Europe &amp; Beyond
             </h2>
-            <p className="text-gray-400 text-sm max-w-xl mx-auto">
+            <p className="text-gray-500 text-sm max-w-xl mx-auto">
               35+ countries served from Karachi. Each region has distinct construction preferences — we align factory selection to your destination market.
             </p>
           </div>
@@ -1130,7 +1130,7 @@ export default function ShortsContent() {
               >
                 <span className="text-3xl block mb-3" aria-hidden="true">{m.icon}</span>
                 <h3 className="font-bold text-white text-base mb-1">{m.region}</h3>
-                <p className="text-gray-400 text-xs mb-3 font-mono">{m.countries}</p>
+                <p className="text-gray-500 text-xs mb-3 font-mono">{m.countries}</p>
                 <p className="text-gray-300 text-sm leading-relaxed">{m.notes}</p>
               </motion.div>
             ))}
@@ -1144,7 +1144,7 @@ export default function ShortsContent() {
             ].map((s) => (
               <div key={s.label} className="bg-slate-800 rounded-xl p-5 text-center border border-slate-700">
                 <p className="text-3xl font-bold text-gold">{s.value}</p>
-                <p className="text-gray-400 text-xs mt-1">{s.label}</p>
+                <p className="text-gray-500 text-xs mt-1">{s.label}</p>
               </div>
             ))}
           </div>
@@ -1266,7 +1266,7 @@ export default function ShortsContent() {
                       <td className="px-5 py-3 text-navy-900 font-medium text-sm">{ls.phase}</td>
                       <td className="px-5 py-3">
                         <span className="text-gold font-bold">{ls.weeks}</span>
-                        <span className="text-gray-400 text-xs"> wks</span>
+                        <span className="text-gray-500 text-xs"> wks</span>
                       </td>
                       <td className="px-5 py-3 text-gray-500 text-xs hidden md:table-cell">{ls.note}</td>
                     </tr>
@@ -1285,7 +1285,7 @@ export default function ShortsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-400 mb-2">Section 10</p>
+              <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500 mb-2">Section 10</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
                 Sustainable Sourcing Options
               </h2>
@@ -1315,7 +1315,7 @@ export default function ShortsContent() {
             <div className="space-y-4">
               <div className="bg-black text-white rounded-2xl p-8">
                 <p className="text-4xl font-bold mb-2">C0 DWR</p>
-                <p className="text-gray-400 text-sm">Fluorocarbon-free water repellent finish available on all swim and outdoor shorts programmes — meets EU PFAS restrictions.</p>
+                <p className="text-gray-500 text-sm">Fluorocarbon-free water repellent finish available on all swim and outdoor shorts programmes — meets EU PFAS restrictions.</p>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-100 rounded-2xl p-6">

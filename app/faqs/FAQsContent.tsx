@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
@@ -464,7 +464,7 @@ export default function FAQsContent() {
           >
             <div className="relative group">
               <svg
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-gold transition-colors"
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 group-focus-within:text-gold transition-colors"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -478,13 +478,13 @@ export default function FAQsContent() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search questions…"
                 aria-label="Search frequently asked questions"
-                className="w-full pl-11 pr-10 py-4 bg-white border border-gray-200 rounded-xl text-sm text-navy-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-all shadow-xs"
+                className="w-full pl-11 pr-10 py-4 bg-white border border-gray-200 rounded-xl text-sm text-navy-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-all shadow-xs"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery("")}
                   aria-label="Clear search"
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-navy-900 transition-colors"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-navy-900 transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -507,7 +507,7 @@ export default function FAQsContent() {
                   className="flex flex-col gap-1"
                   aria-label="FAQ categories"
                 >
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2 px-3">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2 px-3">
                     Categories
                   </p>
                   {categories.map((cat) => (
@@ -562,7 +562,7 @@ export default function FAQsContent() {
 
               {/* Result count */}
               <div className="flex items-center justify-between mb-4">
-                <p className="text-xs text-gray-400">
+                <p className="text-xs text-gray-500">
                   {filtered.length === faqs.length
                     ? `Showing all ${faqs.length} questions`
                     : `${filtered.length} of ${faqs.length} questions`}
@@ -585,7 +585,7 @@ export default function FAQsContent() {
                   className="py-16 text-center"
                 >
                   <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
@@ -618,7 +618,7 @@ export default function FAQsContent() {
                         >
                           <div className="flex items-start gap-4">
                             <span className="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-gray-50 group-hover:bg-gold/10 flex items-center justify-center transition-colors">
-                              <span className="text-[10px] font-bold text-gray-400 group-hover:text-gold transition-colors">
+                              <span className="text-[10px] font-bold text-gray-500 group-hover:text-gold transition-colors">
                                 {String(faq.id).padStart(2, "0")}
                               </span>
                             </span>
@@ -629,7 +629,7 @@ export default function FAQsContent() {
                           <motion.span
                             animate={{ rotate: openId === faq.id ? 180 : 0 }}
                             transition={{ duration: 0.22 }}
-                            className="shrink-0 mt-0.5 text-gray-400 group-hover:text-gold transition-colors"
+                            className="shrink-0 mt-0.5 text-gray-500 group-hover:text-gold transition-colors"
                             aria-hidden="true"
                           >
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -771,7 +771,7 @@ export default function FAQsContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Start Your Sourcing Enquiry
             </h2>
-            <p className="text-gray-400 text-base max-w-lg mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-lg mx-auto mb-8">
               Submit a structured RFQ and receive a formal quotation within 3–5 business days.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

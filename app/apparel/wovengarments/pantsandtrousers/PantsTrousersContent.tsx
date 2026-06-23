@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -311,7 +311,7 @@ export default function PantsTrousersContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -331,7 +331,7 @@ export default function PantsTrousersContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1: 2 large equal bentos */}
@@ -352,7 +352,7 @@ export default function PantsTrousersContent() {
                 {CONSTRUCTIONS.slice(0, 4).map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3 border border-amber-100">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                     {c.badge && <span className="mt-1 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{c.badge}</span>}
                   </div>
                 ))}
@@ -379,7 +379,7 @@ export default function PantsTrousersContent() {
                     <span className="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-700 text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">{f.code}</span>
                     <div>
                       <p className="text-sm font-semibold text-navy-900">{f.name}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{f.ease}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{f.ease}</p>
                     </div>
                   </div>
                 ))}
@@ -496,7 +496,7 @@ export default function PantsTrousersContent() {
                   <div key={s.abbr} className="bg-white rounded-xl p-3 border border-cyan-100">
                     <p className="text-xs font-bold text-cyan-700">{s.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{s.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{s.market}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -539,7 +539,7 @@ export default function PantsTrousersContent() {
                     <span className="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 text-[10px] font-bold flex items-center justify-center shrink-0">{e.term}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{e.full}</p>
-                      <p className="text-[10px] text-gray-400">{e.port}</p>
+                      <p className="text-[10px] text-gray-500">{e.port}</p>
                     </div>
                   </div>
                 ))}
@@ -589,7 +589,7 @@ export default function PantsTrousersContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -687,7 +687,7 @@ export default function PantsTrousersContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Fit &amp; Sizing</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Fit Profiles &amp; Sizing</h2>
-          <p className="text-gray-400 mb-12 max-w-2xl leading-relaxed">
+          <p className="text-gray-500 mb-12 max-w-2xl leading-relaxed">
             Silhouette is the primary commercial decision in a trouser programme. Each fit profile targets a distinct market position, buyer demographic and end-use segment.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" style={{ perspective: "1000px" }}>
@@ -711,7 +711,7 @@ export default function PantsTrousersContent() {
                 <div>
                   <h3 className="text-lg font-bold text-white mb-1">{f.name}</h3>
                   <p className="text-sm text-gold font-semibold mb-2">{f.ease}</p>
-                  <p className="text-sm text-gray-400 leading-relaxed">{f.market}</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">{f.market}</p>
                 </div>
                 <div className="w-8 h-0.5 bg-gold/40 mt-auto" aria-hidden="true" />
               </motion.div>
@@ -762,13 +762,13 @@ export default function PantsTrousersContent() {
                   <span className="inline-block mb-3 text-[10px] font-bold text-gold bg-gold/10 px-3 py-1 rounded-full uppercase tracking-wider">Most Ordered</span>
                 )}
                 <p className={`text-3xl font-bold mb-1 ${tier.featured ? "text-gold" : "text-navy-900"}`}>{tier.gsm}</p>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">{tier.name}</p>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">{tier.name}</p>
                 <p className="text-sm font-semibold text-navy-900 mb-3">{tier.season}</p>
                 <div className="mb-4">
                   <div className="w-full h-2 bg-amber-100 rounded-full overflow-hidden">
                     <div className={`h-full rounded-full ${tier.color}`} style={{ width: `${tier.pct}%` }} aria-hidden="true" />
                   </div>
-                  <p className="text-xs text-gray-400 mt-1">{tier.pct}% of orders</p>
+                  <p className="text-xs text-gray-500 mt-1">{tier.pct}% of orders</p>
                 </div>
                 <p className="text-sm text-gray-500 leading-relaxed">{tier.desc}</p>
                 <p className="text-xs text-amber-700 font-semibold mt-3">{tier.market}</p>
@@ -819,7 +819,7 @@ export default function PantsTrousersContent() {
           <div className="flex gap-6 items-start mb-12">
             <div className="w-1 bg-red-600 self-stretch shrink-0" aria-hidden="true" style={{ minHeight: 80 }} />
             <div>
-              <p className="text-xs font-bold tracking-[0.4em] uppercase text-gray-400 mb-2">MZ Global Trading — Trouser Decoration</p>
+              <p className="text-xs font-bold tracking-[0.4em] uppercase text-gray-500 mb-2">MZ Global Trading — Trouser Decoration</p>
               <h2 className="text-4xl sm:text-5xl font-bold text-navy-900">Decoration<br />Methods</h2>
             </div>
           </div>
@@ -832,7 +832,7 @@ export default function PantsTrousersContent() {
                 </div>
                 <p className="text-sm text-gray-500 leading-relaxed flex-1">{d.best}</p>
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Compatible with</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Compatible with</p>
                   <div className="flex flex-wrap gap-1.5">
                     {d.compat.map((c) => (
                       <span key={c} className="text-xs border border-gray-200 text-gray-600 px-2.5 py-1 rounded">{c}</span>
@@ -868,7 +868,7 @@ export default function PantsTrousersContent() {
                     <tr key={method} className="hover:bg-gray-50">
                       <td className="px-5 py-3 font-semibold text-navy-900">{method}</td>
                       {cells.map((cell, ci) => (
-                        <td key={ci} className={`text-center px-4 py-3 text-sm ${cell === "✓" ? "text-green-600 font-bold" : "text-gray-400"}`}>{cell}</td>
+                        <td key={ci} className={`text-center px-4 py-3 text-sm ${cell === "✓" ? "text-green-600 font-bold" : "text-gray-500"}`}>{cell}</td>
                       ))}
                     </tr>
                   ))}
@@ -966,7 +966,7 @@ export default function PantsTrousersContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Markets</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Industry Applications</h2>
-          <p className="text-gray-400 mb-12 max-w-2xl leading-relaxed">
+          <p className="text-gray-500 mb-12 max-w-2xl leading-relaxed">
             Trouser programmes span business, fashion, resort, workwear and DTC segments. Each sector demands a different construction, weight and finish profile.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -985,7 +985,7 @@ export default function PantsTrousersContent() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white mb-1">{s.name}</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">{s.detail}</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">{s.detail}</p>
                 </div>
                 <div className="w-8 h-0.5 bg-teal-400/30 mt-auto" aria-hidden="true" />
               </motion.div>
@@ -1038,7 +1038,7 @@ export default function PantsTrousersContent() {
                   <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full shrink-0 ${c.tier === "Premium" ? "bg-gold/15 text-gold" : c.tier === "Optional" ? "bg-gray-100 text-gray-500" : "bg-green-50 text-green-700"}`}>{c.tier}</span>
                 </div>
                 <h3 className="text-sm font-bold text-navy-900">{c.name}</h3>
-                <p className="text-xs text-gray-400 leading-relaxed">{c.desc}</p>
+                <p className="text-xs text-gray-500 leading-relaxed">{c.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -1071,7 +1071,7 @@ export default function PantsTrousersContent() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-navy-900">{e.term}</p>
-                    <p className="text-xs text-gray-400">{e.full}</p>
+                    <p className="text-xs text-gray-500">{e.full}</p>
                   </div>
                 </div>
                 <p className="text-xs text-gold font-semibold">📍 {e.port}</p>
@@ -1092,7 +1092,7 @@ export default function PantsTrousersContent() {
               >
                 <span className="text-2xl" aria-hidden="true">{p.icon}</span>
                 <p className="text-xs font-semibold text-navy-900 leading-snug">{p.label}</p>
-                <p className="text-[10px] text-gray-400">{p.note}</p>
+                <p className="text-[10px] text-gray-500">{p.note}</p>
               </motion.div>
             ))}
           </div>
@@ -1120,11 +1120,11 @@ export default function PantsTrousersContent() {
                 </div>
                 <div className="flex-1">
                   <p className="text-sm font-semibold text-navy-900">{stage.stage}</p>
-                  <p className="text-xs text-gray-400">{stage.desc}</p>
+                  <p className="text-xs text-gray-500">{stage.desc}</p>
                 </div>
                 <div className="text-right shrink-0">
                   <p className="text-lg font-bold text-navy-900">{stage.days}</p>
-                  <p className="text-xs text-gray-400">days (guide)</p>
+                  <p className="text-xs text-gray-500">days (guide)</p>
                 </div>
               </motion.div>
             ))}
@@ -1140,7 +1140,7 @@ export default function PantsTrousersContent() {
       <section id="section-sustainability" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-xl mb-16">
-            <p className="text-xs font-semibold tracking-[0.3em] uppercase mb-4 text-gray-400">Ethics &amp; Environment</p>
+            <p className="text-xs font-semibold tracking-[0.3em] uppercase mb-4 text-gray-500">Ethics &amp; Environment</p>
             <h2 className="text-4xl sm:text-5xl font-light text-navy-900 mb-5 leading-[1.1]">
               Sustainable<br />Trouser Sourcing
             </h2>
@@ -1209,7 +1209,7 @@ export default function PantsTrousersContent() {
                 <div>
                   <div className="flex items-center gap-2 mb-2">
                     <div className="w-2 h-2 rounded-full bg-navy-900" aria-hidden="true" />
-                    <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em]">{step.short}</p>
+                    <p className="text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">{step.short}</p>
                   </div>
                   <h3 className="text-lg font-bold text-navy-900 mb-2">{step.title}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>

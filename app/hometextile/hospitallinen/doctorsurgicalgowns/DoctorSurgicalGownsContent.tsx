@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -172,7 +172,7 @@ export default function DoctorSurgicalGownsContent() {
             </div>
             <div className="flex flex-wrap sm:flex-nowrap gap-8 lg:gap-10 border-t border-white/10 pt-6 lg:border-t-0 lg:pt-0 lg:border-l lg:pl-10 shrink-0">
               {[{ val: "50+", label: "Vetted Factories" }, { val: "35+", label: "Export Markets" }, { val: "10+", label: "Certifications" }, { val: "3", label: "Constructions" }].map((s) => (
-                <div key={s.label} className="text-center"><p className="text-3xl font-bold text-gold">{s.val}</p><p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p></div>
+                <div key={s.label} className="text-center"><p className="text-3xl font-bold text-gold">{s.val}</p><p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p></div>
               ))}
             </div>
             <Link href="/rfq/" className="shrink-0 inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-yellow-400 transition-colors w-fit">Request a Quote <span aria-hidden="true">&#8594;</span></Link>
@@ -186,7 +186,7 @@ export default function DoctorSurgicalGownsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
           {/* Row 1 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
@@ -195,7 +195,7 @@ export default function DoctorSurgicalGownsContent() {
               <div className="flex flex-col gap-3 flex-1">
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3.5 border border-blue-100 flex items-center gap-3">
-                    <div className="flex-1"><p className="text-sm font-semibold text-navy-900">{c.name}</p><p className="text-xs text-gray-400">{c.gsm}</p></div>
+                    <div className="flex-1"><p className="text-sm font-semibold text-navy-900">{c.name}</p><p className="text-xs text-gray-500">{c.gsm}</p></div>
                     {c.badge && <span className="text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full shrink-0">{c.badge}</span>}
                   </div>
                 ))}
@@ -208,7 +208,7 @@ export default function DoctorSurgicalGownsContent() {
                 {SIZES.map((s) => (
                   <div key={s.code} className="bg-white rounded-xl p-3 border border-slate-100 text-center">
                     <p className="text-sm font-bold text-navy-900">{s.code}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5 leading-tight">{s.note}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5 leading-tight">{s.note}</p>
                   </div>
                 ))}
               </div>
@@ -293,7 +293,7 @@ export default function DoctorSurgicalGownsContent() {
                     <span className="text-teal-400 text-xs mt-0.5 shrink-0">▶</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900 leading-tight">{s.name}</p>
-                      <p className="text-[10px] text-gray-400">{s.market}</p>
+                      <p className="text-[10px] text-gray-500">{s.market}</p>
                     </div>
                   </div>
                 ))}
@@ -331,7 +331,7 @@ export default function DoctorSurgicalGownsContent() {
                 ].map((f) => (
                   <div key={f.title} className="bg-white rounded-lg p-2.5 border border-indigo-100">
                     <p className="text-[11px] font-semibold text-navy-900 leading-tight">{f.title}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5">{f.note}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5">{f.note}</p>
                   </div>
                 ))}
               </div>
@@ -355,7 +355,7 @@ export default function DoctorSurgicalGownsContent() {
                     <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded shrink-0 mt-0.5 ${c.tier === "Premium" ? "bg-rose-100 text-rose-700" : "bg-white text-gray-500 border border-rose-100"}`}>{c.tier}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{c.name}</p>
-                      <p className="text-[10px] text-gray-400 leading-tight">{c.desc}</p>
+                      <p className="text-[10px] text-gray-500 leading-tight">{c.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -442,8 +442,8 @@ export default function DoctorSurgicalGownsContent() {
                     {ac.badge && <span className="text-[11px] font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full">{ac.badge}</span>}
                   </div>
                   <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div><p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Weight</p><p className="font-semibold text-navy-900 text-sm">{ac.gsm}</p></div>
-                    <div><p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Best For</p><p className="font-semibold text-navy-900 text-sm">{ac.best}</p></div>
+                    <div><p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Weight</p><p className="font-semibold text-navy-900 text-sm">{ac.gsm}</p></div>
+                    <div><p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Best For</p><p className="font-semibold text-navy-900 text-sm">{ac.best}</p></div>
                   </div>
                 </div>
                 <div><p className="text-sm text-gray-600 leading-relaxed">{ac.desc}</p></div>
@@ -466,7 +466,7 @@ export default function DoctorSurgicalGownsContent() {
                 <motion.div key={s.code} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.35, delay: i * 0.05 }}
                   className={`rounded-2xl p-4 border-2 text-center ${s.code === "Custom" ? "border-gold bg-gold/5" : "border-gray-200 bg-white"}`}>
                   <p className="text-lg font-black text-navy-900">{s.code}</p>
-                  <p className="text-[10px] text-gray-400 mt-1 leading-tight">{s.note}</p>
+                  <p className="text-[10px] text-gray-500 mt-1 leading-tight">{s.note}</p>
                 </motion.div>
               ))}
             </div>
@@ -525,7 +525,7 @@ export default function DoctorSurgicalGownsContent() {
                     <p className="font-bold text-gold">{cert.name}</p>
                     <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${cert.tier === "Premium" ? "text-gold bg-gold/20" : "text-green-400 bg-green-400/10"}`}>{cert.tier}</span>
                   </div>
-                  <p className="text-xs text-gray-400 leading-relaxed">{cert.desc}</p>
+                  <p className="text-xs text-gray-500 leading-relaxed">{cert.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -544,9 +544,9 @@ export default function DoctorSurgicalGownsContent() {
               {DECORATION.map((d, i) => (
                 <motion.div key={d.method} initial={{ opacity: 0, x: -16 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }}
                   className="border-2 border-navy-900 rounded-2xl p-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div><p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Method</p><p className="font-bold text-navy-900 text-lg">{d.method}</p></div>
-                  <div><p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Placement</p><p className="text-sm font-medium text-navy-900">{d.placement}</p></div>
-                  <div><p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Note</p><p className="text-sm text-gray-500">{d.note}</p></div>
+                  <div><p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Method</p><p className="font-bold text-navy-900 text-lg">{d.method}</p></div>
+                  <div><p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Placement</p><p className="text-sm font-medium text-navy-900">{d.placement}</p></div>
+                  <div><p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Note</p><p className="text-sm text-gray-500">{d.note}</p></div>
                 </motion.div>
               ))}
             </div>
@@ -637,7 +637,7 @@ export default function DoctorSurgicalGownsContent() {
                 <motion.div key={doc.title} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.06 }}
                   className="bg-white/5 border border-white/10 rounded-2xl p-5">
                   <p className="font-semibold text-white mb-2 text-sm">{doc.title}</p>
-                  <p className="text-xs text-gray-400 leading-relaxed">{doc.desc}</p>
+                  <p className="text-xs text-gray-500 leading-relaxed">{doc.desc}</p>
                 </motion.div>
               ))}
             </div>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useMemo, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
@@ -73,7 +73,7 @@ const RECENT_KEY = "ttx_recent_v3";
 // ─── Light theme form styles ──────────────────────────────────────────────────
 
 const inputCls =
-  "w-full px-3.5 py-2.5 bg-white border border-gray-200 rounded-lg text-sm text-navy-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold transition-all";
+  "w-full px-3.5 py-2.5 bg-white border border-gray-200 rounded-lg text-sm text-navy-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold transition-all";
 const selectCls =
   "w-full px-3 py-2.5 bg-white border border-gray-200 rounded-lg text-sm text-navy-900 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold";
 const selectSmCls =
@@ -287,7 +287,7 @@ export default function TextileToolsContent() {
       {/* ── Print-only result summary ─────────────────────────────────────── */}
       <div className="hidden print:block p-8 max-w-2xl mx-auto font-sans">
         <div className="border-b-2 border-navy-900 pb-4 mb-6">
-          <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-1">
+          <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-1">
             MZ Global Trading · mzglobaltrading.com · Textile Tools Calculator
           </p>
           <h1 className="text-2xl font-bold text-navy-900">{toolName}</h1>
@@ -296,10 +296,10 @@ export default function TextileToolsContent() {
         {!computed.error && (
           <>
             <div className="border border-gray-200 rounded-xl p-5 mb-5">
-              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">{tool.resultLabel}</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-1">{tool.resultLabel}</p>
               <p className="text-3xl font-black text-navy-900">
                 {computed.shown}{" "}
-                <span className="text-lg font-semibold text-gray-400">{computed.unit}</span>
+                <span className="text-lg font-semibold text-gray-500">{computed.unit}</span>
               </p>
               {computed.status[0] && (
                 <p className="text-sm font-semibold mt-2 text-gray-700">{computed.status[0]}</p>
@@ -322,15 +322,15 @@ export default function TextileToolsContent() {
             )}
             <div className="grid grid-cols-2 gap-4 mb-5 text-xs">
               <div>
-                <p className="font-bold uppercase tracking-wider text-gray-400 mb-1">Formula</p>
+                <p className="font-bold uppercase tracking-wider text-gray-500 mb-1">Formula</p>
                 <p className="text-gray-700 leading-relaxed">{tool.formula}</p>
               </div>
               <div>
-                <p className="font-bold uppercase tracking-wider text-gray-400 mb-1">Practical Note</p>
+                <p className="font-bold uppercase tracking-wider text-gray-500 mb-1">Practical Note</p>
                 <p className="text-gray-600 leading-relaxed">{tool.note}</p>
               </div>
             </div>
-            <p className="text-[10px] text-gray-400 border-t border-gray-100 pt-4 leading-relaxed">
+            <p className="text-[10px] text-gray-500 border-t border-gray-100 pt-4 leading-relaxed">
               Planning tool only. Verify against buyer specification, approved sample, lab report or shipment contract
               before final commitment.
             </p>
@@ -379,7 +379,7 @@ export default function TextileToolsContent() {
                     }`}
                   >
                     {p.short}
-                    <span className={`text-[9px] font-bold px-1 py-0.5 rounded-full leading-none ${isActive ? "bg-navy-900/15 text-navy-900" : "bg-gray-100 text-gray-400"}`}>
+                    <span className={`text-[9px] font-bold px-1 py-0.5 rounded-full leading-none ${isActive ? "bg-navy-900/15 text-navy-900" : "bg-gray-100 text-gray-500"}`}>
                       {toolsForPhase(p.id).length}
                     </span>
                   </button>
@@ -390,7 +390,7 @@ export default function TextileToolsContent() {
             <div className="sm:ml-auto w-full sm:w-64 shrink-0">
               <label htmlFor="tool-search" className="sr-only">Search all calculators</label>
               <div className="relative">
-                <svg className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <svg className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
                 <input
@@ -399,7 +399,7 @@ export default function TextileToolsContent() {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   placeholder={`Search ${TOTAL_TOOL_COUNT} calculators...`}
-                  className="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-full text-sm text-navy-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold transition-all"
+                  className="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-full text-sm text-navy-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold transition-all"
                 />
               </div>
             </div>
@@ -410,7 +410,7 @@ export default function TextileToolsContent() {
 
             {/* ── Col 1: Phase tabs — vertical, desktop only ── */}
             <div className="hidden lg:flex lg:flex-col lg:sticky lg:top-36 lg:self-start lg:gap-0.5">
-              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 px-3 pb-2 pt-1">Phase</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500 px-3 pb-2 pt-1">Phase</p>
               {PHASES.map((p) => {
                 const isActive = phaseId === p.id && !search.trim();
                 return (
@@ -426,7 +426,7 @@ export default function TextileToolsContent() {
                     }`}
                   >
                     <span className="text-sm leading-tight">{p.short}</span>
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full leading-none shrink-0 ${isActive ? "bg-gold/20 text-navy-900" : "bg-gray-100 text-gray-400"}`}>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full leading-none shrink-0 ${isActive ? "bg-gold/20 text-navy-900" : "bg-gray-100 text-gray-500"}`}>
                       {toolsForPhase(p.id).length}
                     </span>
                   </button>
@@ -438,7 +438,7 @@ export default function TextileToolsContent() {
             <div className="hidden lg:block lg:sticky lg:top-36 lg:self-start lg:max-h-[calc(100vh-200px)] lg:overflow-y-auto lg:[scrollbar-width:thin]">
               <div className="bg-white rounded-2xl border border-gray-100 shadow-xs overflow-hidden">
                 <div className="px-3 py-2.5 border-b border-gray-100 bg-gray-50/80">
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
                     {search.trim()
                       ? `${sidebarTools.length} result${sidebarTools.length === 1 ? "" : "s"}`
                       : `${sidebarTools.length} tools`}
@@ -463,14 +463,14 @@ export default function TextileToolsContent() {
                             <span className="text-[8px] font-bold uppercase tracking-wider px-1 py-0.5 rounded bg-gold/15 text-gold leading-none shrink-0">New</span>
                           )}
                         </span>
-                        <span className={`block text-[11px] mt-0.5 leading-tight ${isActive ? "text-gray-500" : "text-gray-400"}`}>
+                        <span className={`block text-[11px] mt-0.5 leading-tight ${isActive ? "text-gray-500" : "text-gray-500"}`}>
                           {TOOLS[name].blurb}
                         </span>
                       </button>
                     );
                   })}
                   {sidebarTools.length === 0 && (
-                    <p className="text-xs text-gray-400 px-3 py-6 text-center">No match.</p>
+                    <p className="text-xs text-gray-500 px-3 py-6 text-center">No match.</p>
                   )}
                 </div>
               </div>
@@ -483,7 +483,7 @@ export default function TextileToolsContent() {
             >
               {/* Mobile: card grid */}
               <div className="lg:hidden mb-4">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2.5">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2.5">
                   {search.trim() ? `${sidebarTools.length} result${sidebarTools.length === 1 ? "" : "s"}` : `${activePhase.label} · ${sidebarTools.length} tools`}
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -499,12 +499,12 @@ export default function TextileToolsContent() {
                           <span className={`font-semibold text-xs leading-tight ${isActive ? "text-navy-900" : "text-gray-700"}`}>{name}</span>
                           {TOOLS[name].isNew && <span className="text-[8px] font-bold uppercase px-1 py-0.5 rounded bg-gold/15 text-gold leading-none shrink-0">New</span>}
                         </span>
-                        <span className="block text-[11px] leading-tight text-gray-400 line-clamp-2">{TOOLS[name].blurb}</span>
+                        <span className="block text-[11px] leading-tight text-gray-500 line-clamp-2">{TOOLS[name].blurb}</span>
                       </button>
                     );
                   })}
                   {sidebarTools.length === 0 && (
-                    <p className="col-span-2 sm:col-span-3 text-sm text-gray-400 py-6 text-center">No calculator matches that search.</p>
+                    <p className="col-span-2 sm:col-span-3 text-sm text-gray-500 py-6 text-center">No calculator matches that search.</p>
                   )}
                 </div>
               </div>
@@ -519,23 +519,23 @@ export default function TextileToolsContent() {
                           <h2 className="text-sm font-bold text-navy-900 leading-tight">{toolName}</h2>
                           {tool.isNew && <span className="text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-gold/15 text-gold leading-none">New</span>}
                         </div>
-                        <p className="text-gray-400 text-xs mt-0.5 leading-snug">{tool.blurb}</p>
+                        <p className="text-gray-500 text-xs mt-0.5 leading-snug">{tool.blurb}</p>
                       </div>
                       <button
                         onClick={resetToDefaults}
                         aria-label="Reset all inputs to defaults"
-                        className="shrink-0 text-xs text-gray-400 hover:text-navy-900 transition-colors underline underline-offset-2 whitespace-nowrap pt-0.5"
+                        className="shrink-0 text-xs text-gray-500 hover:text-navy-900 transition-colors underline underline-offset-2 whitespace-nowrap pt-0.5"
                       >
                         Reset
                       </button>
                     </div>
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-3">Inputs</p>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-3">Inputs</p>
                     <motion.div variants={fieldsContainer} initial="hidden" animate="visible" className="space-y-3.5">
                       {tool.fields.map((fl) => (
                         <motion.div key={fl.id} variants={fieldItem}>
                           <label htmlFor={`fld-${fl.id}`} className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
                             {fl.label}
-                            {fl.unit && !fl.group && <span className="text-gray-400 normal-case font-normal"> ({fl.unit})</span>}
+                            {fl.unit && !fl.group && <span className="text-gray-500 normal-case font-normal"> ({fl.unit})</span>}
                           </label>
                           <div className={fl.group ? "grid grid-cols-[1fr,80px] gap-1.5" : ""}>
                             <input
@@ -558,7 +558,7 @@ export default function TextileToolsContent() {
                               </select>
                             )}
                           </div>
-                          <p className="text-[11px] text-gray-400 mt-1 leading-snug">{fl.help}</p>
+                          <p className="text-[11px] text-gray-500 mt-1 leading-snug">{fl.help}</p>
                         </motion.div>
                       ))}
                       {tool.resultGroup && (
@@ -597,7 +597,7 @@ export default function TextileToolsContent() {
                                 <motion.span key={computed.shown} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }} className="text-white font-black text-3xl sm:text-4xl leading-none tracking-tight">
                                   {computed.shown}
                                 </motion.span>
-                                <span className="text-gray-400 text-sm font-semibold">{computed.unit}</span>
+                                <span className="text-gray-500 text-sm font-semibold">{computed.unit}</span>
                               </div>
                             </div>
                             {computed.status[0] && (
@@ -614,7 +614,7 @@ export default function TextileToolsContent() {
                           <motion.div variants={fieldsContainer} initial="hidden" animate="visible" className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4">
                             {metricsList.map((m) => (
                               <motion.div key={m.label} variants={fieldItem} className="bg-gray-50 border border-gray-100 rounded-xl px-3 py-2.5">
-                                <p className="text-gray-400 text-[11px] font-bold uppercase tracking-wider mb-1 leading-tight">{m.label}</p>
+                                <p className="text-gray-500 text-[11px] font-bold uppercase tracking-wider mb-1 leading-tight">{m.label}</p>
                                 <p className="text-navy-900 font-bold text-sm leading-tight break-words">{m.value}</p>
                               </motion.div>
                             ))}
@@ -639,7 +639,7 @@ export default function TextileToolsContent() {
                                 );
                               })}
                             </div>
-                            {chartDef.note && <p className="text-gray-400 text-xs mt-3">{chartDef.note}</p>}
+                            {chartDef.note && <p className="text-gray-500 text-xs mt-3">{chartDef.note}</p>}
                           </div>
                         )}
 
@@ -653,11 +653,11 @@ export default function TextileToolsContent() {
                         {/* Formula + Practical Note */}
                         <div className="grid sm:grid-cols-2 gap-3 mb-4">
                           <div className="bg-gray-50 rounded-xl px-4 py-3 border border-gray-100">
-                            <p className="text-gray-400 text-[11px] font-bold uppercase tracking-wider mb-1.5">Formula</p>
+                            <p className="text-gray-500 text-[11px] font-bold uppercase tracking-wider mb-1.5">Formula</p>
                             <p className="text-navy-900 text-xs font-medium leading-relaxed">{tool.formula}</p>
                           </div>
                           <div className="bg-gray-50 rounded-xl px-4 py-3 border border-gray-100">
-                            <p className="text-gray-400 text-[11px] font-bold uppercase tracking-wider mb-1.5">Practical Note</p>
+                            <p className="text-gray-500 text-[11px] font-bold uppercase tracking-wider mb-1.5">Practical Note</p>
                             <p className="text-gray-600 text-xs leading-relaxed">{tool.note}</p>
                           </div>
                         </div>
@@ -679,7 +679,7 @@ export default function TextileToolsContent() {
                   </div>
 
                   {/* Disclaimer */}
-                  <p className="text-gray-400 text-xs mt-3 leading-relaxed px-1">
+                  <p className="text-gray-500 text-xs mt-3 leading-relaxed px-1">
                     <strong className="text-gray-500">Planning tools only.</strong> Final pass/fail, tolerances, AQL acceptance,
                     test methods, carton limits and commercial terms must follow the buyer specification, approved sample, lab
                     report, factory standard or shipment contract.
@@ -740,7 +740,7 @@ export default function TextileToolsContent() {
                 <p className="text-gold text-[10px] font-bold uppercase tracking-widest mb-1">Converted Result</p>
                 <p className="text-white font-bold text-xl">{convResult}</p>
               </div>
-              <p className="text-gray-400 text-xs mt-3">
+              <p className="text-gray-500 text-xs mt-3">
                 Length, weight, volume and yarn count (Ne / Nm / tex / denier) systems supported.
               </p>
             </motion.div>
@@ -755,7 +755,7 @@ export default function TextileToolsContent() {
               <h3 className="text-navy-900 font-bold text-lg mb-4">Recent Calculations</h3>
               {recent.length === 0 ? (
                 <div className="border border-dashed border-gray-200 rounded-xl px-5 py-8 text-center">
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-gray-500 text-sm">
                     No saved calculations yet — use &quot;Save to Recent&quot; on any result.
                   </p>
                 </div>
@@ -769,7 +769,7 @@ export default function TextileToolsContent() {
                     >
                       <div className="min-w-0">
                         <p className="text-navy-900 font-semibold text-sm truncate">{entry.name}</p>
-                        <p className="text-gray-400 text-xs">{entry.time}</p>
+                        <p className="text-gray-500 text-xs">{entry.time}</p>
                       </div>
                       <span className="text-gold font-bold text-sm shrink-0">{entry.result}</span>
                     </button>
@@ -802,10 +802,10 @@ export default function TextileToolsContent() {
           >
             <div className="flex items-center justify-between gap-3">
               <div className="min-w-0">
-                <p className="text-gray-400 text-[9px] font-bold uppercase tracking-widest">{tool.resultLabel}</p>
+                <p className="text-gray-500 text-[9px] font-bold uppercase tracking-widest">{tool.resultLabel}</p>
                 <p className="text-navy-900 font-bold text-lg leading-tight truncate">
                   {computed.shown}{" "}
-                  <span className="text-gray-400 text-xs font-semibold">{computed.unit}</span>
+                  <span className="text-gray-500 text-xs font-semibold">{computed.unit}</span>
                 </p>
               </div>
               {computed.status[0] && (
@@ -866,7 +866,7 @@ export default function TextileToolsContent() {
           >
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">From Numbers to Orders</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Put These Calculations Into a Real Quote</h2>
-            <p className="text-gray-400 text-base max-w-lg mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-lg mx-auto mb-8">
               Send us your GSM, consumption and target costs — our team matches them to the right certified Pakistani factory and
               responds within 3–5 business days.
             </p>

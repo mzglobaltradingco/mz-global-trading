@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import MegaMenu from "@/components/MegaMenu";
@@ -141,7 +141,7 @@ function Block({ block }: { block: DocBlock }) {
             <div key={fl.label}>
               <p className="text-navy-900 text-sm font-semibold mb-1">{fl.label}</p>
               <div className="border-b border-gray-300 h-6" aria-hidden="true" />
-              {fl.hint && <p className="text-gray-400 text-xs mt-1 italic">{fl.hint}</p>}
+              {fl.hint && <p className="text-gray-500 text-xs mt-1 italic">{fl.hint}</p>}
             </div>
           ))}
         </div>
@@ -206,7 +206,7 @@ export default async function DownloadDocPage({ params }: DocPageProps) {
         <div className="print:hidden bg-navy-900 py-5">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4">
             <nav aria-label="Breadcrumb">
-              <ol className="flex flex-wrap items-center gap-2 text-xs text-gray-400">
+              <ol className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
                 <li><Link href="/" className="hover:text-gold transition-colors">Home</Link></li>
                 <li aria-hidden="true">/</li>
                 <li><Link href="/downloads/" className="hover:text-gold transition-colors">Downloads</Link></li>
@@ -257,7 +257,7 @@ export default async function DownloadDocPage({ params }: DocPageProps) {
             />
 
             {/* Document footer */}
-            <footer className="mt-6 pt-5 border-t border-gray-200 flex flex-wrap items-center justify-between gap-3 text-[11px] text-gray-400">
+            <footer className="mt-6 pt-5 border-t border-gray-200 flex flex-wrap items-center justify-between gap-3 text-[11px] text-gray-500">
               <p>© {new Date().getFullYear()} MZ Global Trading — Karachi, Pakistan. Free to use with attribution.</p>
               <p className="font-semibold text-gray-500">mzglobaltrading.com/downloads/</p>
             </footer>
@@ -293,7 +293,7 @@ export default async function DownloadDocPage({ params }: DocPageProps) {
                     href={`/downloads/${s.slug}/`}
                     className="group bg-white rounded-xl border border-gray-200 p-5 hover:border-gold hover:shadow-md transition-all"
                   >
-                    <span className="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">{s.kind}</span>
+                    <span className="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-1.5">{s.kind}</span>
                     <span className="block text-navy-900 font-bold text-sm leading-snug group-hover:text-gold transition-colors">
                       {s.title}
                     </span>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -79,7 +79,7 @@ export default function CookieConsent() {
               <div className="flex items-start sm:items-center justify-between gap-4 bg-white rounded-xl border border-gray-200 px-4 py-3">
                 <div className="flex-1 min-w-0">
                   <p className="text-navy-900 text-sm font-semibold">Essential Cookies</p>
-                  <p className="text-gray-400 text-xs mt-0.5 leading-relaxed">
+                  <p className="text-gray-500 text-xs mt-0.5 leading-relaxed">
                     Required for the site to function correctly. Cannot be disabled.
                   </p>
                 </div>
@@ -95,7 +95,7 @@ export default function CookieConsent() {
               <div className="flex items-start sm:items-center justify-between gap-4 bg-white rounded-xl border border-gray-200 px-4 py-3">
                 <div className="flex-1 min-w-0">
                   <p className="text-navy-900 text-sm font-semibold">Analytics Cookies</p>
-                  <p className="text-gray-400 text-xs mt-0.5 leading-relaxed">
+                  <p className="text-gray-500 text-xs mt-0.5 leading-relaxed">
                     Google Analytics — helps us understand how visitors use the site so we can improve it.
                     No personal data is shared or sold.
                   </p>
@@ -126,7 +126,7 @@ export default function CookieConsent() {
               <button
                 type="button"
                 onClick={() => setPanel(false)}
-                className="text-gray-400 text-sm hover:text-gray-600 transition-colors"
+                className="text-gray-500 text-sm hover:text-gray-600 transition-colors"
               >
                 Cancel
               </button>
@@ -151,7 +151,7 @@ export default function CookieConsent() {
           <button
             type="button"
             onClick={() => setPanel((v) => !v)}
-            className="text-gray-400 text-xs font-medium hover:text-navy-900 transition-colors underline underline-offset-2 whitespace-nowrap"
+            className="text-gray-500 text-xs font-medium hover:text-navy-900 transition-colors underline underline-offset-2 whitespace-nowrap"
           >
             {panel ? "Hide Preferences" : "Manage Preferences"}
           </button>

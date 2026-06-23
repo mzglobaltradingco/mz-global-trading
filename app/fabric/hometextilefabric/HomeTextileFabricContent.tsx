@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -648,7 +648,7 @@ export default function HomeTextileFabricContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -670,7 +670,7 @@ export default function HomeTextileFabricContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Fabric Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1: Terry Constructions + Woven & Knit Options */}
@@ -701,7 +701,7 @@ export default function HomeTextileFabricContent() {
                       )}
                     </div>
                     <p className="text-xs text-amber-600 font-medium">{t.gsm}</p>
-                    <p className="text-xs text-gray-400 mt-0.5 leading-snug">{t.pile}</p>
+                    <p className="text-xs text-gray-500 mt-0.5 leading-snug">{t.pile}</p>
                   </div>
                 ))}
               </div>
@@ -730,7 +730,7 @@ export default function HomeTextileFabricContent() {
                       {o.category}
                     </span>
                     <p className="text-xs font-semibold text-navy-900 leading-tight">{o.name}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5">{o.tc !== "N/A" ? o.tc : o.gsm}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5">{o.tc !== "N/A" ? o.tc : o.gsm}</p>
                   </div>
                 ))}
               </div>
@@ -864,7 +864,7 @@ export default function HomeTextileFabricContent() {
                   <div key={m.title} className="bg-white rounded-xl p-3 border border-teal-100">
                     <p className="text-lg mb-0.5" aria-hidden="true">{m.flag}</p>
                     <p className="text-xs font-bold text-navy-900">{m.title}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5">{m.regions}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5">{m.regions}</p>
                   </div>
                 ))}
               </div>
@@ -984,7 +984,7 @@ export default function HomeTextileFabricContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -1039,7 +1039,7 @@ export default function HomeTextileFabricContent() {
       <section id="section-terry" className="bg-white py-20 lg:py-28 border-t-4 border-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <p className="font-black text-[10px] tracking-[0.4em] uppercase text-gray-400 mb-4">
+            <p className="font-black text-[10px] tracking-[0.4em] uppercase text-gray-500 mb-4">
               TERRY FABRIC / PAKISTAN TEXTILE MILLS / GSM 300–800
             </p>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-navy-900 leading-[0.95] mb-6 uppercase tracking-tight">
@@ -1084,28 +1084,28 @@ export default function HomeTextileFabricContent() {
                 <h3 className="text-2xl font-black text-navy-900 uppercase mb-6">{at.name}</h3>
                 <div className="grid grid-cols-2 gap-0 mb-6 border-2 border-navy-900">
                   <div className="p-4 border-r-2 border-navy-900">
-                    <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">GSM RANGE</p>
+                    <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-1">GSM RANGE</p>
                     <p className="text-xl font-black text-gold">{at.gsm}</p>
                   </div>
                   <div className="p-4">
-                    <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">ABSORBENCY</p>
+                    <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-1">ABSORBENCY</p>
                     <p className="text-sm font-bold text-navy-900">{at.absorbency}</p>
                   </div>
                 </div>
                 <div className="border-2 border-navy-900 p-4 mb-6">
-                  <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">PILE STRUCTURE</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">PILE STRUCTURE</p>
                   <p className="text-sm font-bold text-navy-900">{at.pile}</p>
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">{at.detail}</p>
                 <div className="border-2 border-navy-900 p-4">
-                  <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">TECHNICAL SPEC</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">TECHNICAL SPEC</p>
                   <p className="text-sm text-gray-700">{at.spec}</p>
                 </div>
               </div>
               {/* Side details */}
               <div className="flex flex-col divide-y-2 divide-navy-900">
                 <div className="p-6">
-                  <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-3">BEST FOR</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-3">BEST FOR</p>
                   <div className="flex flex-wrap gap-2">
                     {at.best.map((b) => (
                       <span key={b} className="text-xs font-semibold text-navy-900 border border-gray-900 px-2 py-1">{b}</span>
@@ -1113,7 +1113,7 @@ export default function HomeTextileFabricContent() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-3">KEY MARKETS</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-3">KEY MARKETS</p>
                   <div className="flex flex-wrap gap-2">
                     {at.markets.map((m) => (
                       <span key={m} className="text-xs font-bold text-gold border border-gold px-2 py-1">{m}</span>
@@ -1121,7 +1121,7 @@ export default function HomeTextileFabricContent() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-3">FINISHING</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-3">FINISHING</p>
                   <div className="flex flex-col gap-1.5">
                     {at.finishing.map((f) => (
                       <div key={f} className="flex items-center gap-2">
@@ -1152,7 +1152,7 @@ export default function HomeTextileFabricContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Woven &amp; Knit</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Woven &amp; Knit Fabric Options</h2>
-            <p className="text-gray-400 mt-3 max-w-2xl text-sm leading-relaxed">
+            <p className="text-gray-500 mt-3 max-w-2xl text-sm leading-relaxed">
               Seven woven constructions and two knit options covering every bedding, linen and home textile programme. Select a fabric type to view full technical details.
             </p>
           </div>
@@ -1177,22 +1177,22 @@ export default function HomeTextileFabricContent() {
                   </div>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
                     <div className="bg-white rounded-xl p-4 border border-gray-100">
-                      <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-1">Thread Count</p>
+                      <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest mb-1">Thread Count</p>
                       <p className="text-lg font-bold text-gold">{aw.tc}</p>
                     </div>
                     <div className="bg-white rounded-xl p-4 border border-gray-100">
-                      <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-1">GSM Range</p>
+                      <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest mb-1">GSM Range</p>
                       <p className="text-base font-bold text-navy-900">{aw.gsm}</p>
                     </div>
                     <div className="bg-white rounded-xl p-4 border border-gray-100 sm:col-span-1 col-span-2">
-                      <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-1">Hand Feel</p>
+                      <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest mb-1">Hand Feel</p>
                       <p className="text-xs text-navy-900 font-medium">{aw.hand}</p>
                     </div>
                   </div>
                   <p className="text-gray-600 text-sm leading-relaxed mb-6">{aw.detail}</p>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="bg-white rounded-xl p-4 border border-gray-100">
-                      <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-2">Best For</p>
+                      <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest mb-2">Best For</p>
                       <div className="flex flex-wrap gap-1.5">
                         {aw.best.map((b) => (
                           <span key={b} className="text-xs bg-gray-100 text-navy-900 px-2.5 py-1 rounded-full font-medium">{b}</span>
@@ -1200,7 +1200,7 @@ export default function HomeTextileFabricContent() {
                       </div>
                     </div>
                     <div className="bg-white rounded-xl p-4 border border-gray-100">
-                      <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-2">Key Markets</p>
+                      <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest mb-2">Key Markets</p>
                       <div className="flex flex-wrap gap-1.5">
                         {aw.markets.map((m) => (
                           <span key={m} className="text-xs text-gold bg-gold/10 border border-gold/20 px-2.5 py-1 rounded-full font-medium">{m}</span>
@@ -1209,7 +1209,7 @@ export default function HomeTextileFabricContent() {
                     </div>
                   </div>
                   <div className="mt-4 bg-white rounded-xl p-4 border border-gray-100">
-                    <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-2">Technical Spec</p>
+                    <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest mb-2">Technical Spec</p>
                     <p className="text-sm text-gray-600">{aw.spec}</p>
                   </div>
                 </motion.div>
@@ -1292,7 +1292,7 @@ export default function HomeTextileFabricContent() {
                         aria-hidden="true"
                       />
                     </div>
-                    <p className="text-xs text-gray-400 mt-1">{t.market}</p>
+                    <p className="text-xs text-gray-500 mt-1">{t.market}</p>
                   </div>
                 ))}
               </div>
@@ -1333,7 +1333,7 @@ export default function HomeTextileFabricContent() {
                         aria-hidden="true"
                       />
                     </div>
-                    <p className="text-xs text-gray-400 mt-1">{t.market}</p>
+                    <p className="text-xs text-gray-500 mt-1">{t.market}</p>
                   </div>
                 ))}
               </div>
@@ -1382,7 +1382,7 @@ export default function HomeTextileFabricContent() {
                 </div>
                 <h3 className="font-bold text-navy-900 text-sm leading-snug">{f.name}</h3>
                 <p className="text-xs text-gray-500 leading-relaxed flex-1">{f.desc}</p>
-                <p className="text-xs text-gray-400 font-medium border-t border-gray-100 pt-2">Applies to: {f.applies}</p>
+                <p className="text-xs text-gray-500 font-medium border-t border-gray-100 pt-2">Applies to: {f.applies}</p>
               </motion.div>
             ))}
           </div>
@@ -1422,7 +1422,7 @@ export default function HomeTextileFabricContent() {
                 </div>
                 <p className="text-xs text-gray-600 leading-relaxed flex-1">{d.desc}</p>
                 <div className="pt-2 border-t border-gray-200">
-                  <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-1">Applicable To</p>
+                  <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest mb-1">Applicable To</p>
                   <p className="text-xs text-navy-900 font-medium">{d.applicable}</p>
                 </div>
               </motion.div>
@@ -1550,7 +1550,7 @@ export default function HomeTextileFabricContent() {
                 <div className="sm:col-span-4">
                   <div className="flex items-center gap-3 mb-1">
                     <h3 className="font-bold text-navy-900 text-base">{c.name}</h3>
-                    <span className="text-xs text-gray-400 font-medium hidden sm:block">— {c.full}</span>
+                    <span className="text-xs text-gray-500 font-medium hidden sm:block">— {c.full}</span>
                   </div>
                   <p className="text-sm text-gray-500 leading-relaxed">{c.desc}</p>
                 </div>
@@ -1577,9 +1577,9 @@ export default function HomeTextileFabricContent() {
               </div>
               <div className="divide-y divide-gray-100">
                 <div className="grid grid-cols-3 px-6 py-3 bg-gray-50">
-                  <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Parameter</p>
-                  <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Terry Fabric</p>
-                  <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Woven Fabric</p>
+                  <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest">Parameter</p>
+                  <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest">Terry Fabric</p>
+                  <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest">Woven Fabric</p>
                 </div>
                 {[
                   { param: "Roll Length", terry: "50 / 100 / 150m", woven: "50 / 100 / 150m" },

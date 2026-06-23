@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -1245,7 +1245,7 @@ export default function GuidesContent() {
               <div className="w-full lg:w-72 lg:ml-auto">
                 <label htmlFor="guide-search" className="sr-only">Search guides</label>
                 <div className="relative">
-                  <svg className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <svg className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                   <input
@@ -1254,7 +1254,7 @@ export default function GuidesContent() {
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     placeholder="Search AQL, GSM, incoterms..."
-                    className="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-full text-sm text-navy-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-all"
+                    className="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-full text-sm text-navy-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-all"
                   />
                 </div>
               </div>
@@ -1272,7 +1272,7 @@ export default function GuidesContent() {
                       }`}
                     >
                       {cat.label}
-                      <span className={`ml-2 text-xs ${activeCategory === cat.id ? "text-gold" : "text-gray-400"}`}>
+                      <span className={`ml-2 text-xs ${activeCategory === cat.id ? "text-gold" : "text-gray-500"}`}>
                         {cat.id === "all" ? guides.length : guides.filter((g) => g.catId === cat.id).length}
                       </span>
                     </button>
@@ -1318,7 +1318,7 @@ export default function GuidesContent() {
                         </span>
                       )}
                     </span>
-                    <span className="text-gray-400 text-xs shrink-0">{guide.readTime}</span>
+                    <span className="text-gray-500 text-xs shrink-0">{guide.readTime}</span>
                   </div>
 
                   <div className={`flex ${guide.wide ? "lg:flex-row lg:gap-8 lg:items-start" : "flex-col"} flex-1`}>
@@ -1341,7 +1341,7 @@ export default function GuidesContent() {
                     </div>
 
                     <div className={`shrink-0 ${guide.wide ? "lg:w-64" : ""}`}>
-                      <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">
                         What You&apos;ll Learn
                       </p>
                       <ul className="space-y-1.5 mb-3">
@@ -1383,7 +1383,7 @@ export default function GuidesContent() {
 
           {filtered.length === 0 && (
             <div className="border border-dashed border-gray-200 rounded-2xl px-6 py-12 text-center">
-              <p className="text-gray-400 text-sm">No guide matches that search — try a different term or category.</p>
+              <p className="text-gray-500 text-sm">No guide matches that search — try a different term or category.</p>
             </div>
           )}
         </div>
@@ -1431,7 +1431,7 @@ export default function GuidesContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Ready to Place Your First Order?
             </h2>
-            <p className="text-gray-400 text-base max-w-lg mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-lg mx-auto mb-8">
               Submit a structured RFQ and receive a formal quotation within 3–5 business days — with factory selection, certifications and inspection built in.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

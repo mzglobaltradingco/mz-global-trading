@@ -801,6 +801,81 @@ public/
 
 ---
 
+## PageSpeed Insights Audit — 2026-06-23
+
+**Audit tool:** Google PSI API v5 (`scripts/pagespeed_audit.py --url <url>`)
+**API key location:** project session transcript (key: `AIzaSyD5AdFuKeQvFABN-ttxixrtbYPbtYZgnms`)
+**Results saved:** `pagespeed_issues.json`, `pagespeed_results.json`, `pagespeed_issues.csv`
+
+> ⚠️ **Domain note:** `mzglobaltrading.com` still points to the old WordPress/Elementor site (domain not yet migrated). Always run PSI against `https://mz-global-trading.pages.dev/` until migration is complete.
+
+**URL tested:** `https://mz-global-trading.pages.dev/apparel/knittedgarments/tshirts/`
+
+### Scores
+
+| Category | Mobile | Desktop | Target |
+|---|---|---|---|
+| Performance | 71 ❌ | 93 ✅ | Mobile 95+, Desktop 98+ |
+| Accessibility | 96 ✅ | 96 ✅ | 100 |
+| SEO | 100 ✅ | 100 ✅ | 100 |
+| Best Practices | 96 ⚠️ | 96 ⚠️ | 100 |
+
+### Core Web Vitals
+
+| Metric | Mobile | Desktop | Target |
+|---|---|---|---|
+| LCP | 6.5s ❌ | 1.6s ⚠️ | < 2.5s |
+| FCP | 3.1s ❌ | 0.8s ✅ | < 1.8s |
+| CLS | 0 ✅ | 0 ✅ | < 0.1 |
+| TBT (INP proxy) | 0ms ✅ | 30ms ✅ | < 200ms |
+
+### Issues — All 9 Unique Findings
+
+| # | Issue | Scope | Mobile | Desktop | Status |
+|---|---|---|---|---|---|
+| 1 | Unsized logo `<img>` (no `width`/`height`) | Site-wide | ✅ flagged | ✅ flagged | ✅ **Approved — implement** |
+| 2 | RSC prefetch 404s (`.txt` RSC payloads) | Site-wide | ✅ flagged | ✅ flagged | ✅ **Approved — implement** (`prefetch={false}`) |
+| 3 | GTM script blocking render (140ms exec) | Site-wide | — | ✅ flagged | ✅ **Approved — implement** (`strategy="lazyOnload"`) |
+| 4 | Legacy JS polyfills (~14 KiB) | Site-wide | ✅ flagged | ✅ flagged | ✅ **Approved — implement** (update `browserslist`) |
+| 5 | Cert images oversized (1536×1024 → 51×34px display; 233–97 KB wasted each) | Site-wide | — | ✅ flagged | ✅ **Approved — implement** — resize in-place to 280×160px using Pillow; same filenames, no code changes needed |
+| 6 | Color contrast failures | Site-wide | ✅ flagged | ✅ flagged | ✅ **Approved — implement** — gold labels on white: `#D4A017` → `#9A6400` (5.0:1); gray subtitle text: `text-gray-400` → `text-gray-500` (`#6B7280`, 4.9:1) |
+| 7 | Logo file oversized (695×335px source → ~220px display; 92 KB wasted) | Site-wide | ✅ flagged | ✅ flagged | ✅ **Approved — implement** — resize in-place to 440×212px (2× retina) using Pillow; same filename, no code changes needed |
+| 8 | Render-blocking CSS chunks (Next.js splits CSS into two files) | Site-wide | ✅ flagged | ✅ flagged | ✋ **Inherent** — Next.js static CSS chunking; no action available without ejecting build |
+| 9 | High main-thread work (6.7s mobile, 8.8s desktop) driven by Framer Motion animations | Site-wide | ✅ flagged | ✅ flagged | ✋ **Inherent** — animation library cost; acceptable given current TBT of 0ms/30ms |
+
+### Implementation — All Fixes Implemented (2026-06-23)
+
+**Fix 1 — Logo width/height** (`components/MegaMenu.tsx`):
+```tsx
+// Find the logo <img> and add explicit dimensions:
+<img
+  src="/images/logo/mz-global-trading-logo-header.webp"
+  alt="MZ Global Trading"
+  width={220}
+  height={106}
+  className="w-[160px] md:w-[190px] lg:w-[220px] h-auto"
+/>
+```
+
+**Fix 2 — prefetch={false} on nav links** (`components/MegaMenu.tsx`):
+Add `prefetch={false}` to every `<Link>` inside the mega menu nav (breadcrumb links, sub-item links). Eliminates RSC `.txt` 404 console errors on hover.
+
+**Fix 3 — GTM lazyOnload** (`app/layout.tsx`):
+Find the `<Script>` tag loading GTM (`https://www.googletagmanager.com/gtag/js?id=G-BEG0E64X9E`) and change to `strategy="lazyOnload"`.
+
+**Fix 4 — browserslist** (`package.json`):
+```json
+"browserslist": [
+  "last 2 Chrome versions",
+  "last 2 Firefox versions",
+  "last 2 Safari versions",
+  "last 2 Edge versions"
+]
+```
+Eliminates 14 KiB of polyfills for `Array.at`, `Array.flat`, `Object.fromEntries`, `Object.hasOwn`, `String.trimEnd/trimStart`.
+
+---
+
 ## Known Bugs Fixed — Do Not Repeat
 
 These bugs were each reported multiple times. Understand the root cause so they are never introduced again.

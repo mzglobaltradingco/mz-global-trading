@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -389,7 +389,7 @@ export default function BeachTowelsContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -411,7 +411,7 @@ export default function BeachTowelsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* ROW 1 */}
@@ -434,7 +434,7 @@ export default function BeachTowelsContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3.5 border border-sky-100">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                     <p className="text-xs text-sky-600 mt-1 leading-tight">{c.best[0]}</p>
                     {c.badge && (
                       <span className="mt-1.5 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{c.badge}</span>
@@ -464,7 +464,7 @@ export default function BeachTowelsContent() {
                   <div key={s.size} className="bg-gray-50 rounded-xl px-4 py-2.5 border border-gray-100 flex items-center justify-between gap-2">
                     <div>
                       <p className="text-sm font-semibold text-navy-900">{s.size}</p>
-                      <p className="text-xs text-gray-400">{s.dims}</p>
+                      <p className="text-xs text-gray-500">{s.dims}</p>
                     </div>
                     {s.note === "Most ordered" && (
                       <span className="text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full shrink-0">Popular</span>
@@ -499,7 +499,7 @@ export default function BeachTowelsContent() {
                       <div className={`h-full rounded-full ${t.color}`} style={{ width: `${t.pct}%` }} aria-hidden="true" />
                     </div>
                     <p className="text-[10px] text-amber-700 font-semibold">{t.name}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{t.market}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{t.market}</p>
                   </div>
                 ))}
               </div>
@@ -522,7 +522,7 @@ export default function BeachTowelsContent() {
                     <span className="w-6 h-6 rounded bg-fuchsia-100 text-fuchsia-700 text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">{d.code}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{d.method}</p>
-                      <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{d.compat.join(", ")}</p>
+                      <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{d.compat.join(", ")}</p>
                     </div>
                   </div>
                 ))}
@@ -549,7 +549,7 @@ export default function BeachTowelsContent() {
                         <div key={i} className={`w-4 h-4 rounded-full ${s} border border-gray-100`} aria-hidden="true" />
                       ))}
                     </div>
-                    <p className="text-[10px] text-gray-400">{d.subtitle}</p>
+                    <p className="text-[10px] text-gray-500">{d.subtitle}</p>
                   </div>
                 ))}
               </div>
@@ -572,7 +572,7 @@ export default function BeachTowelsContent() {
                     <span className="text-gold text-xs font-bold mt-0.5 shrink-0">›</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{p.prog}</p>
-                      <p className="text-[10px] text-gray-400">{p.buyer}</p>
+                      <p className="text-[10px] text-gray-500">{p.buyer}</p>
                     </div>
                   </div>
                 ))}
@@ -602,7 +602,7 @@ export default function BeachTowelsContent() {
                   <div key={r.abbr} className="bg-white rounded-xl p-3 border border-indigo-100">
                     <p className="text-xs font-bold text-indigo-600">{r.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{r.region}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{r.markets.slice(0, 2).join(" · ")}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{r.markets.slice(0, 2).join(" · ")}</p>
                   </div>
                 ))}
               </div>
@@ -649,7 +649,7 @@ export default function BeachTowelsContent() {
                     <span className="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 text-[10px] font-bold flex items-center justify-center shrink-0">{e.term}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{e.full}</p>
-                      <p className="text-[10px] text-gray-400">{e.port}</p>
+                      <p className="text-[10px] text-gray-500">{e.port}</p>
                     </div>
                   </div>
                 ))}
@@ -703,7 +703,7 @@ export default function BeachTowelsContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -783,7 +783,7 @@ export default function BeachTowelsContent() {
                 <div className="bg-white p-6 flex flex-col gap-4">
                   <p className="text-sm text-gray-600 leading-relaxed">{c.detail}</p>
                   <div>
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Best For</p>
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Best For</p>
                     <div className="flex flex-wrap gap-1.5">
                       {c.best.map((b) => (
                         <span key={b} className="text-xs bg-gray-50 border border-gray-200 text-gray-600 px-2.5 py-1 rounded-full">{b}</span>
@@ -791,7 +791,7 @@ export default function BeachTowelsContent() {
                     </div>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Print Compatible</p>
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Print Compatible</p>
                     <div className="flex flex-wrap gap-1.5">
                       {c.printMethods.map((pm) => (
                         <span key={pm} className="text-xs bg-gold/10 text-navy-900 border border-gold/20 px-2.5 py-1 rounded-full font-medium">{pm}</span>
@@ -848,7 +848,7 @@ export default function BeachTowelsContent() {
                       {s.note === "Most ordered" ? (
                         <span className="text-[11px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{s.note}</span>
                       ) : (
-                        <span className="text-xs text-gray-400">{s.note}</span>
+                        <span className="text-xs text-gray-500">{s.note}</span>
                       )}
                     </span>
                   </div>
@@ -860,7 +860,7 @@ export default function BeachTowelsContent() {
             {[["5", "Standard sizes"], ["Custom", "Dimensions on request"], ["US / UK / EU", "Market size standards"]].map(([val, label]) => (
               <div key={label}>
                 <p className="text-3xl font-bold text-navy-900">{val}</p>
-                <p className="text-xs text-gray-400 mt-1 uppercase tracking-wider">{label}</p>
+                <p className="text-xs text-gray-500 mt-1 uppercase tracking-wider">{label}</p>
               </div>
             ))}
           </div>
@@ -886,7 +886,7 @@ export default function BeachTowelsContent() {
               { label: "Constructions", val: "5", sub: "Velour to fouta" },
             ].map((m) => (
               <div key={m.label} className="bg-white rounded-2xl p-5 border border-gray-100 shadow-xs">
-                <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">{m.label}</p>
+                <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">{m.label}</p>
                 <p className="text-2xl font-bold text-navy-900">{m.val}</p>
                 <p className="text-xs text-gray-500 mt-1">{m.sub}</p>
               </div>
@@ -899,13 +899,13 @@ export default function BeachTowelsContent() {
                   <span className="inline-block mb-3 text-[10px] font-bold text-gold bg-gold/10 px-3 py-1 rounded-full uppercase tracking-wider">Resort Standard</span>
                 )}
                 <p className={`text-3xl font-bold mb-1 ${tier.featured ? "text-gold" : "text-navy-900"}`}>{tier.gsm}</p>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">{tier.name}</p>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">{tier.name}</p>
                 <p className="text-sm font-semibold text-navy-900 mb-3">{tier.season}</p>
                 <div className="mb-4">
                   <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
                     <div className={`h-full rounded-full ${tier.featured ? "bg-gold" : "bg-navy-900/30"}`} style={{ width: `${tier.pct}%` }} aria-hidden="true" />
                   </div>
-                  <p className="text-xs text-gray-400 mt-1">Programme share</p>
+                  <p className="text-xs text-gray-500 mt-1">Programme share</p>
                 </div>
                 <p className="text-sm text-gray-500 leading-relaxed">{tier.desc}</p>
                 <p className="text-xs text-gold font-semibold mt-3">{tier.market}</p>
@@ -943,7 +943,7 @@ export default function BeachTowelsContent() {
                 <h3 className="text-lg font-bold text-navy-900">{d.method}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed flex-1">{d.best}</p>
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Compatible With</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Compatible With</p>
                   <div className="flex flex-wrap gap-1.5">
                     {d.compat.map((c) => (
                       <span key={c} className="text-[11px] bg-gray-50 border border-gray-200 text-gray-600 px-2.5 py-1 rounded-full">{c}</span>
@@ -965,7 +965,7 @@ export default function BeachTowelsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Colour Programme</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Colour &amp; Print Palette Options</h2>
-          <p className="text-gray-400 mb-10 max-w-2xl leading-relaxed">
+          <p className="text-gray-500 mb-10 max-w-2xl leading-relaxed">
             Colour delivery depends on fabric construction and print method. Sublimation achieves photographic full-spectrum; reactive dye delivers deep PMS-matched solids; yarn-dyed stripe combinations are woven-in permanently.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -980,14 +980,14 @@ export default function BeachTowelsContent() {
               >
                 <div>
                   <p className="font-semibold text-white">{d.name}</p>
-                  <p className="text-xs text-gray-400 mt-0.5">{d.subtitle}</p>
+                  <p className="text-xs text-gray-500 mt-0.5">{d.subtitle}</p>
                 </div>
                 <div className="grid grid-cols-6 gap-1.5">
                   {d.swatches.map((s, idx) => (
                     <div key={idx} className={`h-7 rounded-lg ${s} border border-white/10`} aria-hidden="true" />
                   ))}
                 </div>
-                <p className="text-xs text-gray-400 leading-relaxed">{d.note}</p>
+                <p className="text-xs text-gray-500 leading-relaxed">{d.note}</p>
               </motion.div>
             ))}
           </div>
@@ -1074,7 +1074,7 @@ export default function BeachTowelsContent() {
               >
                 <p className="text-[80px] sm:text-[100px] font-black text-white/5 leading-none select-none" aria-hidden="true">{r.abbr}</p>
                 <p className="text-2xl sm:text-3xl font-bold text-white -mt-6 mb-4">{r.region}</p>
-                <p className="text-gray-400 text-sm leading-relaxed mb-5">{r.detail}</p>
+                <p className="text-gray-500 text-sm leading-relaxed mb-5">{r.detail}</p>
                 <div className="flex flex-wrap gap-2">
                   {r.markets.map((m) => (
                     <span key={m} className="text-xs bg-white/10 text-gray-300 border border-white/10 px-3 py-1 rounded-full">{m}</span>
@@ -1111,7 +1111,7 @@ export default function BeachTowelsContent() {
                   <Image src={c.img} alt={`${c.name} — ${c.full}`} width={90} height={56} className="object-contain w-full h-full" />
                 </div>
                 <p className="text-xs font-bold text-navy-900">{c.name}</p>
-                <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${c.tier === "Premium" ? "text-gold bg-gold/10" : c.tier === "Optional" ? "text-gray-400 bg-gray-100" : "text-green-700 bg-green-100"}`}>
+                <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${c.tier === "Premium" ? "text-gold bg-gold/10" : c.tier === "Optional" ? "text-gray-500 bg-gray-100" : "text-green-700 bg-green-100"}`}>
                   {c.tier}
                 </span>
               </motion.div>
@@ -1168,7 +1168,7 @@ export default function BeachTowelsContent() {
               <div key={e.term} className="bg-white rounded-2xl border border-orange-100 p-6 shadow-xs">
                 <div className="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 font-bold text-sm flex items-center justify-center mb-4">{e.term}</div>
                 <p className="font-semibold text-navy-900 text-sm mb-1">{e.full}</p>
-                <p className="text-xs text-gray-400 mb-3">{e.port}</p>
+                <p className="text-xs text-gray-500 mb-3">{e.port}</p>
                 <p className="text-xs text-gray-600 leading-relaxed">{e.desc}</p>
               </div>
             ))}
@@ -1179,7 +1179,7 @@ export default function BeachTowelsContent() {
               <div key={p.label} className="bg-white rounded-2xl border border-orange-100 p-5 flex flex-col items-center gap-2 text-center shadow-xs">
                 <span className="text-2xl" aria-hidden="true">{p.icon}</span>
                 <p className="text-sm font-semibold text-navy-900">{p.label}</p>
-                <p className="text-xs text-gray-400">{p.note}</p>
+                <p className="text-xs text-gray-500">{p.note}</p>
               </div>
             ))}
           </div>
@@ -1242,7 +1242,7 @@ export default function BeachTowelsContent() {
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Sourcing Process</p>
               <h2 className="text-4xl sm:text-5xl font-bold text-navy-900 leading-[1]">Six Defined<br />Stages</h2>
             </div>
-            <p className="text-gray-400 text-sm max-w-xs leading-relaxed">RFQ to goods at destination port — every stage has a clear deliverable and a confirmed schedule.</p>
+            <p className="text-gray-500 text-sm max-w-xs leading-relaxed">RFQ to goods at destination port — every stage has a clear deliverable and a confirmed schedule.</p>
           </div>
           <div className="border border-gray-100 rounded-2xl overflow-hidden">
             {PROCESS_STEPS.map((step, i) => (
@@ -1260,7 +1260,7 @@ export default function BeachTowelsContent() {
                 <div className="flex-1 pt-1">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-2 h-2 rounded-full bg-navy-900" aria-hidden="true" />
-                    <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em]">{step.short}</p>
+                    <p className="text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">{step.short}</p>
                   </div>
                   <h3 className="text-xl font-bold text-navy-900 mb-2">{step.title}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>

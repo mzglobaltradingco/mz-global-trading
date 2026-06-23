@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 
@@ -31,7 +31,7 @@ export default function ShareBar({ path, title, label = "Share", className = "" 
 
   return (
     <div className={`flex items-center gap-2.5 flex-wrap ${className}`}>
-      <span className="text-gray-400 text-xs font-semibold uppercase tracking-[0.12em] mr-1">{label}</span>
+      <span className="text-gray-500 text-xs font-semibold uppercase tracking-[0.12em] mr-1">{label}</span>
 
       {/* Facebook */}
       <a

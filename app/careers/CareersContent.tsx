@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -311,7 +311,7 @@ export default function CareersContent() {
           >
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">What We Stand For</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Our Culture & Values</h2>
-            <p className="text-gray-400 text-sm max-w-xl leading-relaxed">
+            <p className="text-gray-500 text-sm max-w-xl leading-relaxed">
               Three principles guide everything we do — from how we source to how we hire.
             </p>
           </motion.div>
@@ -338,7 +338,7 @@ export default function CareersContent() {
                   </div>
                 </div>
                 <h3 className="text-white font-bold text-lg mb-3">{v.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{v.desc}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -384,7 +384,7 @@ export default function CareersContent() {
                   {item.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="inline-block px-2.5 py-1 bg-gray-50 border border-gray-100 rounded text-gray-400 text-xs group-hover:border-gold/20 group-hover:text-navy-900/60 transition-colors"
+                      className="inline-block px-2.5 py-1 bg-gray-50 border border-gray-100 rounded text-gray-500 text-xs group-hover:border-gold/20 group-hover:text-navy-900/60 transition-colors"
                     >
                       {tag}
                     </span>
@@ -477,7 +477,7 @@ export default function CareersContent() {
                   Your application details have been pre-filled. Please attach your CV and send the email to
                   complete your application. We will be in touch when a relevant role arises.
                 </p>
-                <p className="text-gray-400 text-xs">
+                <p className="text-gray-500 text-xs">
                   Sending to{" "}
                   <a
                     href="mailto:info@mzglobaltrading.com"
@@ -569,7 +569,7 @@ export default function CareersContent() {
                         required
                         value={formData.area}
                         onChange={(e) => setFormData({ ...formData, area: e.target.value })}
-                        className={`w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-gold/60 focus:ring-2 focus:ring-gold/10 transition appearance-none cursor-pointer ${formData.area ? "text-navy-900" : "text-gray-400"}`}
+                        className={`w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-gold/60 focus:ring-2 focus:ring-gold/10 transition appearance-none cursor-pointer ${formData.area ? "text-navy-900" : "text-gray-500"}`}
                       >
                         <option value="" disabled>Select an area</option>
                         {areaOptions.map((opt) => (
@@ -577,7 +577,7 @@ export default function CareersContent() {
                         ))}
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
-                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
                       </div>
@@ -622,7 +622,7 @@ export default function CareersContent() {
                   />
                 </div>
 
-                <p className="text-gray-400 text-xs border-t border-gray-100 pt-5">
+                <p className="text-gray-500 text-xs border-t border-gray-100 pt-5">
                   You will be prompted to attach your CV when your email client opens. Accepted formats: PDF, Word (.docx).
                   {" "}Application details are used solely to process your candidacy and retained for up to 12 months.{" "}
                   <Link href="/privacypolicy/" className="underline underline-offset-2 hover:text-gold transition-colors">
@@ -758,7 +758,7 @@ export default function CareersContent() {
                     className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                       openFaq === i
                         ? "bg-gold text-navy-900"
-                        : "bg-gray-100 text-gray-400 group-hover:bg-gray-200"
+                        : "bg-gray-100 text-gray-500 group-hover:bg-gray-200"
                     }`}
                   >
                     <svg
@@ -805,7 +805,7 @@ export default function CareersContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Think You&apos;d Be a Good Fit?
             </h2>
-            <p className="text-gray-400 text-base max-w-xl mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-xl mx-auto mb-8">
               We are always interested in meeting people who take their work seriously.
               Submit your CV or reach out directly — we will respond within 5 business days.
             </p>

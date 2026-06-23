@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -400,7 +400,7 @@ export default function FittedSheetsContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -422,7 +422,7 @@ export default function FittedSheetsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 */}
@@ -440,7 +440,7 @@ export default function FittedSheetsContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3.5 border border-violet-100">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.tcRange}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.tcRange}</p>
                     <p className="text-xs text-violet-600 mt-1 leading-tight">{c.best[0]}</p>
                     {c.badge && <span className="mt-1.5 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{c.badge}</span>}
                   </div>
@@ -464,7 +464,7 @@ export default function FittedSheetsContent() {
                     <span className={`text-lg font-black shrink-0 ${p.featured ? "text-purple-700" : "text-gray-300"}`}>{p.depth}</span>
                     <div>
                       <p className={`text-xs font-semibold ${p.featured ? "text-purple-700" : "text-navy-900"}`}>{p.name}</p>
-                      <p className="text-[10px] text-gray-400 mt-0.5">{p.mattress}</p>
+                      <p className="text-[10px] text-gray-500 mt-0.5">{p.mattress}</p>
                     </div>
                     {p.featured && <span className="ml-auto text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full shrink-0">Most Popular</span>}
                   </div>
@@ -491,7 +491,7 @@ export default function FittedSheetsContent() {
                     <div className="w-full h-1.5 bg-sky-100 rounded-full overflow-hidden mb-1">
                       <div className={`h-full rounded-full ${t.featured ? "bg-gold" : "bg-sky-400"}`} style={{ width: `${t.pct}%` }} aria-hidden="true" />
                     </div>
-                    <p className="text-[10px] text-gray-400 leading-snug">{t.market}</p>
+                    <p className="text-[10px] text-gray-500 leading-snug">{t.market}</p>
                   </div>
                 ))}
               </div>
@@ -524,12 +524,12 @@ export default function FittedSheetsContent() {
                   <div key={d.name} className="bg-white rounded-xl p-3 border border-rose-50">
                     <div className="flex items-center justify-between mb-1.5">
                       <p className="text-xs font-semibold text-navy-900">{d.name}</p>
-                      <span className="text-[10px] text-gray-400">{d.pct}%</span>
+                      <span className="text-[10px] text-gray-500">{d.pct}%</span>
                     </div>
                     <div className="w-full h-1 bg-rose-100 rounded-full overflow-hidden">
                       <div className="h-full bg-rose-400 rounded-full" style={{ width: `${d.pct}%` }} aria-hidden="true" />
                     </div>
-                    <p className="text-[10px] text-gray-400 mt-1">{d.subtitle}</p>
+                    <p className="text-[10px] text-gray-500 mt-1">{d.subtitle}</p>
                   </div>
                 ))}
               </div>
@@ -570,7 +570,7 @@ export default function FittedSheetsContent() {
                     <span className="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 text-xs font-bold flex items-center justify-center shrink-0">{s.abbr}</span>
                     <div>
                       <p className="text-sm font-semibold text-navy-900">{s.name}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{s.market}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{s.market}</p>
                     </div>
                   </div>
                 ))}
@@ -608,7 +608,7 @@ export default function FittedSheetsContent() {
                     <span className="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 text-[10px] font-bold flex items-center justify-center shrink-0">{e.term}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{e.full}</p>
-                      <p className="text-[10px] text-gray-400">{e.port}</p>
+                      <p className="text-[10px] text-gray-500">{e.port}</p>
                     </div>
                   </div>
                 ))}
@@ -651,7 +651,7 @@ export default function FittedSheetsContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.title}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -708,7 +708,7 @@ export default function FittedSheetsContent() {
             <div>
               <p className="font-mono text-gold/70 text-xs tracking-[0.3em] uppercase mb-2">[TECHNICAL SPECIFICATION — FITTED SHEET CONSTRUCTIONS]</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white">Fabric Constructions for Fitted Sheets</h2>
-              <p className="text-gray-400 mt-3 max-w-2xl leading-relaxed">Construction choice determines elastic performance, pocket-fit accuracy, wash durability and market positioning. Each fabric behaves differently when paired with the elasticated pocket format.</p>
+              <p className="text-gray-500 mt-3 max-w-2xl leading-relaxed">Construction choice determines elastic performance, pocket-fit accuracy, wash durability and market positioning. Each fabric behaves differently when paired with the elasticated pocket format.</p>
             </div>
           </div>
           <div className="flex flex-wrap gap-2 mb-8" role="tablist">
@@ -812,13 +812,13 @@ export default function FittedSheetsContent() {
                 {p.featured && <span className="text-[10px] font-bold text-gold bg-gold/10 px-3 py-1 rounded-full w-fit uppercase tracking-wider">Most Ordered</span>}
                 <div>
                   <p className={`text-6xl sm:text-7xl font-black leading-none ${p.featured ? "text-gold" : "text-gray-100"}`}>{p.depth}</p>
-                  <p className={`text-sm font-semibold mt-1 ${p.featured ? "text-white" : "text-gray-400"}`}>{p.cm}</p>
+                  <p className={`text-sm font-semibold mt-1 ${p.featured ? "text-white" : "text-gray-500"}`}>{p.cm}</p>
                 </div>
                 <h3 className={`text-xl font-bold ${p.featured ? "text-white" : "text-navy-900"}`}>{p.name}</h3>
                 <p className={`text-sm leading-relaxed flex-1 ${p.featured ? "text-gray-300" : "text-gray-500"}`}>{p.mattress}</p>
                 <div className={`border-t pt-3 ${p.featured ? "border-white/10" : "border-gray-100"}`}>
-                  <p className={`text-xs font-semibold ${p.featured ? "text-gold/80" : "text-gray-400"}`}>{p.elastic}</p>
-                  <p className={`text-xs mt-1 ${p.featured ? "text-gray-400" : "text-gray-400"}`}>{p.market}</p>
+                  <p className={`text-xs font-semibold ${p.featured ? "text-gold/80" : "text-gray-500"}`}>{p.elastic}</p>
+                  <p className={`text-xs mt-1 ${p.featured ? "text-gray-500" : "text-gray-500"}`}>{p.market}</p>
                 </div>
               </motion.div>
             ))}
@@ -854,19 +854,19 @@ export default function FittedSheetsContent() {
               </div>
             </div>
             <div className="bg-white p-10 lg:p-14">
-              <p className="text-gray-400 text-xs font-semibold tracking-widest uppercase mb-6">TC Tiers — Fitted Sheet Reference</p>
+              <p className="text-gray-500 text-xs font-semibold tracking-widest uppercase mb-6">TC Tiers — Fitted Sheet Reference</p>
               <div className="flex flex-col gap-5">
                 {TC_TIERS.map((t) => (
                   <div key={t.tc} className={`rounded-2xl p-6 border-2 ${t.featured ? "border-gold shadow-lg" : "border-gray-100"}`}>
                     {t.featured && <span className="inline-block mb-2 text-[10px] font-bold text-gold bg-gold/10 px-3 py-1 rounded-full uppercase tracking-wider">Most Ordered</span>}
                     <div className="flex items-baseline gap-3 mb-2">
                       <p className={`text-2xl font-bold ${t.featured ? "text-gold" : "text-navy-900"}`}>{t.tc} TC</p>
-                      <p className="text-xs font-semibold text-gray-400 uppercase">{t.name}</p>
+                      <p className="text-xs font-semibold text-gray-500 uppercase">{t.name}</p>
                     </div>
                     <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden mb-3">
                       <div className={`h-full rounded-full ${t.featured ? "bg-gold" : "bg-violet-400"}`} style={{ width: `${t.pct}%` }} aria-hidden="true" />
                     </div>
-                    <p className="text-xs text-gray-400 mb-2">{t.market}</p>
+                    <p className="text-xs text-gray-500 mb-2">{t.market}</p>
                     <p className="text-sm text-gray-500 leading-relaxed">{t.desc}</p>
                   </div>
                 ))}
@@ -1010,7 +1010,7 @@ export default function FittedSheetsContent() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-white mb-2">{s.name}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{s.detail}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed">{s.detail}</p>
                 </div>
                 <div className="shrink-0 text-right">
                   <p className="text-xs font-semibold text-gold">{s.market}</p>
@@ -1075,7 +1075,7 @@ export default function FittedSheetsContent() {
                     <div>
                       <h3 className="text-sm font-bold text-white">{e.full}</h3>
                       <p className="text-xs text-cyan-400 mt-0.5">{e.port}</p>
-                      <p className="text-sm text-gray-400 mt-2 leading-relaxed">{e.desc}</p>
+                      <p className="text-sm text-gray-500 mt-2 leading-relaxed">{e.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -1100,7 +1100,7 @@ export default function FittedSheetsContent() {
                   <div key={s.stage} className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3">
                     <div className={`w-2.5 h-2.5 rounded-full shrink-0 ${s.color}`} aria-hidden="true" />
                     <p className="text-sm text-white flex-1">{s.stage}</p>
-                    <span className="text-xs font-bold text-gray-400">{s.days} days</span>
+                    <span className="text-xs font-bold text-gray-500">{s.days} days</span>
                   </div>
                 ))}
               </div>
@@ -1146,7 +1146,7 @@ export default function FittedSheetsContent() {
       ════════════════════════════════════════════════════════════════════════ */}
       <section id="section-process" className="bg-[#F5F5F0] py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-400 mb-4">No. 06 / Sourcing Process</p>
+          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-500 mb-4">No. 06 / Sourcing Process</p>
           <h2 className="text-5xl sm:text-6xl font-bold text-navy-900 leading-[1] mb-8">
             Six<br />Steps
           </h2>
@@ -1273,7 +1273,7 @@ export default function FittedSheetsContent() {
           >
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Get Started</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Source Custom Fitted Sheets?</h2>
-            <p className="text-gray-400 text-base max-w-xl mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-xl mx-auto mb-8">
               Share your construction, pocket depth, size and quantity requirements — our team responds within 24 hours with factory matches and indicative pricing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -294,7 +294,7 @@ export default function TableCoversContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -314,7 +314,7 @@ export default function TableCoversContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 */}
@@ -335,7 +335,7 @@ export default function TableCoversContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3.5 border border-amber-100">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                     {c.badge && <span className="mt-1 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{c.badge}</span>}
                   </div>
                 ))}
@@ -361,7 +361,7 @@ export default function TableCoversContent() {
                     <span className="w-8 h-8 rounded-lg bg-rose-100 text-rose-700 text-[10px] font-bold flex items-center justify-center shrink-0">{s.code}</span>
                     <div>
                       <p className="text-sm font-semibold text-navy-900">{s.name}</p>
-                      <p className="text-xs text-gray-400">{s.dim}</p>
+                      <p className="text-xs text-gray-500">{s.dim}</p>
                     </div>
                   </div>
                 ))}
@@ -504,7 +504,7 @@ export default function TableCoversContent() {
                 ].map((f) => (
                   <div key={f.title} className="bg-white rounded-xl p-3 border border-slate-100">
                     <p className="text-xs font-semibold text-navy-900 leading-tight">{f.title}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5">{f.note}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5">{f.note}</p>
                   </div>
                 ))}
               </div>
@@ -525,7 +525,7 @@ export default function TableCoversContent() {
                     <span className={`w-6 h-6 rounded-full ${s.color} text-white text-[10px] font-bold flex items-center justify-center shrink-0`}>{i + 1}</span>
                     <div className="flex-1">
                       <p className="text-xs font-semibold text-navy-900">{s.stage}</p>
-                      <p className="text-[10px] text-gray-400">{s.days} days</p>
+                      <p className="text-[10px] text-gray-500">{s.days} days</p>
                     </div>
                   </div>
                 ))}
@@ -612,8 +612,8 @@ export default function TableCoversContent() {
                     {ac.badge && <span className="text-[11px] font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full">{ac.badge}</span>}
                   </div>
                   <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div><p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Weight</p><p className="font-semibold text-navy-900 text-sm">{ac.gsm}</p></div>
-                    <div><p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Best For</p><p className="font-semibold text-navy-900 text-sm">{ac.best}</p></div>
+                    <div><p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Weight</p><p className="font-semibold text-navy-900 text-sm">{ac.gsm}</p></div>
+                    <div><p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Best For</p><p className="font-semibold text-navy-900 text-sm">{ac.best}</p></div>
                   </div>
                   <p className="text-sm text-gray-500 italic border-l-2 border-amber-300 pl-4 mb-4">{ac.look}</p>
                 </div>
@@ -646,11 +646,11 @@ export default function TableCoversContent() {
                   <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
                     <div className="shrink-0">
                       <span className="text-2xl font-bold text-navy-900">{tier.gsm}</span>
-                      <span className="text-sm text-gray-400 ml-1">GSM</span>
+                      <span className="text-sm text-gray-500 ml-1">GSM</span>
                     </div>
                     <div className="flex-1">
                       <p className="font-semibold text-navy-900">{tier.name}</p>
-                      <p className="text-xs text-gray-400">{tier.env}</p>
+                      <p className="text-xs text-gray-500">{tier.env}</p>
                     </div>
                     {tier.pct > 60 && <span className="text-[11px] font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full shrink-0">Industry Standard</span>}
                   </div>
@@ -688,7 +688,7 @@ export default function TableCoversContent() {
                     <p className="font-bold text-navy-900">{s.name}</p>
                   </div>
                   <p className="text-sm font-mono text-navy-900 mb-1">{s.dim}</p>
-                  <p className="text-xs text-gray-400 mb-2">{s.drop}</p>
+                  <p className="text-xs text-gray-500 mb-2">{s.drop}</p>
                   <p className="text-xs text-gray-500 italic">{s.use}</p>
                 </motion.div>
               ))}
@@ -777,16 +777,16 @@ export default function TableCoversContent() {
                   className="bg-white border border-gray-100 rounded-2xl p-6 grid grid-cols-1 md:grid-cols-3 gap-4"
                 >
                   <div>
-                    <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Method</p>
+                    <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Method</p>
                     <p className="font-bold text-navy-900">{d.method}</p>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Compatibility</p>
+                    <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Compatibility</p>
                     <p className="text-sm text-navy-900">{d.compatibility}</p>
                     <p className="text-xs text-teal-600 mt-1">{d.note}</p>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Typical Use</p>
+                    <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Typical Use</p>
                     <p className="text-sm text-gray-500">{d.use}</p>
                   </div>
                 </motion.div>
@@ -846,13 +846,13 @@ export default function TableCoversContent() {
                   <div className="flex items-start justify-between mb-3">
                     <div>
                       <p className="text-gold font-bold text-lg">{cert.name}</p>
-                      <p className="text-xs text-gray-400">{cert.full}</p>
+                      <p className="text-xs text-gray-500">{cert.full}</p>
                     </div>
                     <span className={`text-[11px] font-semibold px-2 py-0.5 rounded-full shrink-0 ml-2 ${
-                      cert.tier === "Premium" ? "text-gold bg-gold/20" : cert.tier === "Standard" ? "text-green-400 bg-green-400/10" : "text-gray-400 bg-white/5"
+                      cert.tier === "Premium" ? "text-gold bg-gold/20" : cert.tier === "Standard" ? "text-green-400 bg-green-400/10" : "text-gray-500 bg-white/5"
                     }`}>{cert.tier}</span>
                   </div>
-                  <p className="text-sm text-gray-400 leading-relaxed">{cert.desc}</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">{cert.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -882,7 +882,7 @@ export default function TableCoversContent() {
                     <span className="w-10 h-10 rounded-xl bg-[#0D1B2A] text-gold text-xs font-bold flex items-center justify-center shrink-0">{String(i + 1).padStart(2, "0")}</span>
                     <div>
                       <p className="font-bold text-navy-900">{p.label}</p>
-                      <p className="text-xs text-gray-400">{p.note}</p>
+                      <p className="text-xs text-gray-500">{p.note}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -911,7 +911,7 @@ export default function TableCoversContent() {
                 >
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-xl font-black text-navy-900">{t.term}</span>
-                    <span className="text-xs text-gray-400">{t.full}</span>
+                    <span className="text-xs text-gray-500">{t.full}</span>
                   </div>
                   <p className="text-xs text-gold font-medium mb-2">{t.port}</p>
                   <p className="text-sm text-gray-500">{t.desc}</p>
@@ -991,7 +991,7 @@ export default function TableCoversContent() {
                   <div key={stage.stage} className="flex items-center gap-4">
                     <div className={`${stage.color} rounded-full h-2.5 shrink-0`} style={{ width: `${Math.min(parseInt(stage.days) * 2, 120)}px` }} />
                     <p className="text-sm text-navy-900 font-medium shrink-0">{stage.stage}</p>
-                    <p className="text-xs text-gray-400 ml-auto shrink-0">{stage.days} days</p>
+                    <p className="text-xs text-gray-500 ml-auto shrink-0">{stage.days} days</p>
                   </div>
                 ))}
               </div>

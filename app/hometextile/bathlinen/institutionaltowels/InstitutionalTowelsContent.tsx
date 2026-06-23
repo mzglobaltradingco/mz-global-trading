@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -330,7 +330,7 @@ export default function InstitutionalTowelsContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -352,7 +352,7 @@ export default function InstitutionalTowelsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Specifications</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1: Constructions + Size Range */}
@@ -384,7 +384,7 @@ export default function InstitutionalTowelsContent() {
                           <span className="text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{c.badge}</span>
                         )}
                       </div>
-                      <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                       <p className="text-xs text-slate-600 mt-0.5 leading-snug">{c.bestFor[0]}</p>
                     </div>
                   </div>
@@ -415,7 +415,7 @@ export default function InstitutionalTowelsContent() {
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-navy-900">{s.size}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{s.dims} · {s.gsm}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{s.dims} · {s.gsm}</p>
                       <p className="text-xs text-gray-500 mt-0.5 leading-snug">{s.use}</p>
                     </div>
                   </div>
@@ -449,7 +449,7 @@ export default function InstitutionalTowelsContent() {
                     <div className="w-full h-1.5 bg-amber-100 rounded-full overflow-hidden mb-1.5">
                       <div className={`h-full rounded-full ${t.color}`} style={{ width: t.pct + "%" }} aria-hidden="true" />
                     </div>
-                    <p className="text-[10px] text-gray-400 leading-snug">{t.name}</p>
+                    <p className="text-[10px] text-gray-500 leading-snug">{t.name}</p>
                   </div>
                 ))}
               </div>
@@ -464,7 +464,7 @@ export default function InstitutionalTowelsContent() {
               className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-3 min-h-[280px]"
             >
               <span className="text-2xl" aria-hidden="true">🎨</span>
-              <p className="text-gray-400 text-xs font-semibold tracking-[0.2em] uppercase">Colour</p>
+              <p className="text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase">Colour</p>
               <h3 className="text-base font-bold text-navy-900 leading-tight">Border Colour Coding</h3>
               <div className="flex flex-col gap-2 flex-1">
                 {BORDER_OPTIONS.slice(0, 4).map((b) => (
@@ -472,7 +472,7 @@ export default function InstitutionalTowelsContent() {
                     <div className={`w-5 h-5 rounded-full ${b.swatch} shrink-0`} aria-hidden="true" />
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{b.name}</p>
-                      <p className="text-[10px] text-gray-400">{b.use}</p>
+                      <p className="text-[10px] text-gray-500">{b.use}</p>
                     </div>
                   </div>
                 ))}
@@ -547,7 +547,7 @@ export default function InstitutionalTowelsContent() {
                   <div key={s.abbr} className="bg-white rounded-xl p-3 border border-blue-100">
                     <p className="text-xs font-bold text-blue-600">{s.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{s.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{s.market}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -594,7 +594,7 @@ export default function InstitutionalTowelsContent() {
                     <span className="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 text-[10px] font-bold flex items-center justify-center shrink-0">{e.term}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{e.full}</p>
-                      <p className="text-[10px] text-gray-400">{e.port}</p>
+                      <p className="text-[10px] text-gray-500">{e.port}</p>
                     </div>
                   </div>
                 ))}
@@ -648,7 +648,7 @@ export default function InstitutionalTowelsContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -801,7 +801,7 @@ export default function InstitutionalTowelsContent() {
       <section id="section-sizes" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-400 mb-4">No. 02 / Dimensions</p>
+            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-500 mb-4">No. 02 / Dimensions</p>
             <h2 className="text-4xl sm:text-5xl font-bold text-navy-900 mb-4 leading-tight">
               Standard Institutional<br />Size Specifications
             </h2>
@@ -832,7 +832,7 @@ export default function InstitutionalTowelsContent() {
                 </div>
               ))}
               <div className="bg-gray-50 rounded-b-2xl px-5 py-3 border border-t-0 border-gray-100">
-                <p className="text-xs text-gray-400">All weights are indicative — actual weight varies ±5% per production batch. Custom dimensions available on request.</p>
+                <p className="text-xs text-gray-500">All weights are indicative — actual weight varies ±5% per production batch. Custom dimensions available on request.</p>
               </div>
             </div>
           </div>
@@ -900,11 +900,11 @@ export default function InstitutionalTowelsContent() {
               >
                 <div className={`w-12 h-12 rounded-full ${b.swatch}`} aria-hidden="true" />
                 <div>
-                  <p className="text-xs font-mono text-gray-400 tracking-widest">{b.code}</p>
+                  <p className="text-xs font-mono text-gray-500 tracking-widest">{b.code}</p>
                   <p className="text-sm font-semibold text-navy-900 mt-0.5">{b.name}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-snug">{b.use}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-snug">{b.use}</p>
                 </div>
-                <p className="text-[10px] text-gray-400 leading-snug">{b.note}</p>
+                <p className="text-[10px] text-gray-500 leading-snug">{b.note}</p>
               </motion.div>
             ))}
           </div>
@@ -981,7 +981,7 @@ export default function InstitutionalTowelsContent() {
                 </div>
               ))}
               <div className="bg-teal-50 rounded-b-2xl px-5 py-3">
-                <p className="text-xs text-gray-400">⚠ Lead times are indicative. Custom OEM programmes include a sample approval stage before bulk production commencement.</p>
+                <p className="text-xs text-gray-500">⚠ Lead times are indicative. Custom OEM programmes include a sample approval stage before bulk production commencement.</p>
               </div>
             </div>
           </div>
@@ -1182,12 +1182,12 @@ export default function InstitutionalTowelsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-t-4 border-navy-900 pt-8 mb-12 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <div>
-              <p className="text-xs font-bold tracking-[0.4em] uppercase text-gray-400 mb-2">
+              <p className="text-xs font-bold tracking-[0.4em] uppercase text-gray-500 mb-2">
                 MZ Global Trading — Institutional Sourcing Programme
               </p>
               <h2 className="text-4xl sm:text-5xl font-bold text-navy-900">Our Process</h2>
             </div>
-            <p className="text-gray-400 text-sm max-w-xs leading-relaxed">
+            <p className="text-gray-500 text-sm max-w-xs leading-relaxed">
               Six structured steps from case specification to shipment.
             </p>
           </div>
@@ -1207,7 +1207,7 @@ export default function InstitutionalTowelsContent() {
                 <div className="flex-1 pt-1">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-2 h-2 rounded-full bg-navy-900" aria-hidden="true" />
-                    <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em]">{step.short}</p>
+                    <p className="text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">{step.short}</p>
                   </div>
                   <h3 className="text-xl font-bold text-navy-900 mb-2">{step.title}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>

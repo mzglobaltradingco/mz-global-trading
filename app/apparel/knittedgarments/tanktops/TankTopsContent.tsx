@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -359,7 +359,7 @@ export default function TankTopsContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -378,7 +378,7 @@ export default function TankTopsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1: Constructions + Fits */}
@@ -396,7 +396,7 @@ export default function TankTopsContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3.5 border border-sky-100">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                     <p className="text-xs text-sky-600 mt-1 leading-tight">{c.best[0]}</p>
                     {c.badge && <span className="mt-1.5 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{c.badge}</span>}
                   </div>
@@ -421,7 +421,7 @@ export default function TankTopsContent() {
                     <span className="w-9 h-9 rounded-lg bg-pink-100 text-pink-700 text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">{f.code}</span>
                     <div>
                       <p className="text-sm font-semibold text-navy-900">{f.name}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{f.ease}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{f.ease}</p>
                       <p className="text-xs text-pink-600 mt-0.5">{f.market}</p>
                     </div>
                   </div>
@@ -512,7 +512,7 @@ export default function TankTopsContent() {
                   <div key={s.abbr} className="bg-white rounded-xl p-3 border border-indigo-100">
                     <p className="text-[10px] font-bold text-indigo-600">{s.abbr}</p>
                     <p className="text-xs font-semibold text-navy-900 leading-tight">{s.name}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5">{s.market}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -557,7 +557,7 @@ export default function TankTopsContent() {
                     </span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{e.full}</p>
-                      <p className="text-[10px] text-gray-400">{e.port}</p>
+                      <p className="text-[10px] text-gray-500">{e.port}</p>
                     </div>
                   </div>
                 ))}
@@ -598,7 +598,7 @@ export default function TankTopsContent() {
               <div className="flex items-start gap-3">
                 <span className="text-2xl" aria-hidden="true">⚙️</span>
                 <div>
-                  <p className="text-gray-400 text-xs font-semibold tracking-[0.2em] uppercase">Process</p>
+                  <p className="text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase">Process</p>
                   <h3 className="text-lg font-bold text-navy-900 mt-0.5">Sourcing Process</h3>
                 </div>
               </div>
@@ -607,7 +607,7 @@ export default function TankTopsContent() {
                   <div key={p.num} className="bg-gray-50 rounded-xl p-3 border border-gray-100 flex flex-col gap-1">
                     <p className="text-xl font-black text-gray-200 leading-none">{p.num}</p>
                     <p className="text-xs font-bold text-navy-900">{p.short}</p>
-                    <p className="text-[10px] text-gray-400 leading-tight">{p.desc.slice(0, 48)}…</p>
+                    <p className="text-[10px] text-gray-500 leading-tight">{p.desc.slice(0, 48)}…</p>
                   </div>
                 ))}
               </div>
@@ -728,7 +728,7 @@ export default function TankTopsContent() {
               >
                 <p className="text-3xl font-black text-pink-400 mb-2">{f.code}</p>
                 <p className="font-bold text-navy-900 text-sm">{f.name}</p>
-                <p className="text-xs text-gray-400 mt-1">{f.ease}</p>
+                <p className="text-xs text-gray-500 mt-1">{f.ease}</p>
                 <p className="text-xs text-pink-600 mt-2 leading-tight">{f.market}</p>
               </motion.div>
             ))}
@@ -741,7 +741,7 @@ export default function TankTopsContent() {
                 <div key={n} className="bg-pink-50 rounded-xl px-3 py-2.5 text-xs font-medium text-navy-900 text-center border border-pink-100">{n}</div>
               ))}
             </div>
-            <p className="text-xs text-gray-400 mt-4 italic">⚠ Neckline and strap configurations are defined at tech-pack stage. Non-standard configurations require additional sampling.</p>
+            <p className="text-xs text-gray-500 mt-4 italic">⚠ Neckline and strap configurations are defined at tech-pack stage. Non-standard configurations require additional sampling.</p>
           </div>
           <BackToTop />
         </div>
@@ -836,7 +836,7 @@ export default function TankTopsContent() {
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">05 — Colour</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Colour Programme &amp; Dye Options for Tank Tops</h2>
-            <p className="text-gray-400 max-w-2xl leading-relaxed">Full PMS colour matching available for reactive-dyed programmes. Garment dye for vintage and premium DTC positioning. Organic and low-impact dye certification for sustainable programmes. Heather mélange for performance and athletic collections.</p>
+            <p className="text-gray-500 max-w-2xl leading-relaxed">Full PMS colour matching available for reactive-dyed programmes. Garment dye for vintage and premium DTC positioning. Organic and low-impact dye certification for sustainable programmes. Heather mélange for performance and athletic collections.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -848,7 +848,7 @@ export default function TankTopsContent() {
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <h3 className="font-bold text-white text-lg">{d.name}</h3>
-                    <p className="text-gray-400 text-sm mt-0.5">{d.subtitle}</p>
+                    <p className="text-gray-500 text-sm mt-0.5">{d.subtitle}</p>
                   </div>
                 </div>
                 <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-12 gap-2 mb-4">
@@ -856,7 +856,7 @@ export default function TankTopsContent() {
                     <div key={j} className={`${sw} rounded-lg aspect-square`} />
                   ))}
                 </div>
-                <p className="text-xs text-gray-400 leading-relaxed">{d.note}</p>
+                <p className="text-xs text-gray-500 leading-relaxed">{d.note}</p>
               </motion.div>
             ))}
           </div>
@@ -1021,7 +1021,7 @@ export default function TankTopsContent() {
                 <div key={r.region} className="bg-white/5 border border-white/10 rounded-xl p-4">
                   <p className="text-white font-bold text-sm mb-1">{r.region}</p>
                   <p className="text-gold text-xs mb-2">{r.markets}</p>
-                  <p className="text-gray-400 text-xs leading-relaxed">{r.note}</p>
+                  <p className="text-gray-500 text-xs leading-relaxed">{r.note}</p>
                 </div>
               ))}
             </div>
@@ -1051,7 +1051,7 @@ export default function TankTopsContent() {
                   <Image src={c.img} alt={`${c.full} certification`} fill className="object-contain" sizes="56px" />
                 </div>
                 <p className="font-bold text-navy-900 text-sm mb-1">{c.name}</p>
-                <p className="text-[10px] text-gray-400 leading-tight">{c.desc}</p>
+                <p className="text-[10px] text-gray-500 leading-tight">{c.desc}</p>
                 <span className={`mt-2 text-[9px] font-bold px-2 py-0.5 rounded-full ${c.tier === "Premium" ? "bg-gold/20 text-gold" : c.tier === "Optional" ? "bg-gray-100 text-gray-500" : "bg-teal-100 text-teal-700"}`}>{c.tier}</span>
               </motion.div>
             ))}
@@ -1127,7 +1127,7 @@ export default function TankTopsContent() {
                       <span className="text-xl" aria-hidden="true">{p.icon}</span>
                       <div>
                         <p className="text-xs font-bold text-navy-900">{p.label}</p>
-                        <p className="text-[10px] text-gray-400">{p.note}</p>
+                        <p className="text-[10px] text-gray-500">{p.note}</p>
                       </div>
                     </div>
                   ))}
@@ -1228,7 +1228,7 @@ export default function TankTopsContent() {
                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold" />
                       </span>
                     )}
-                    <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-bold transition-all ${faqOpen === i ? "border-gold bg-gold text-navy-900" : "border-gray-200 text-gray-400 group-hover:border-gold"}`}>
+                    <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-bold transition-all ${faqOpen === i ? "border-gold bg-gold text-navy-900" : "border-gray-200 text-gray-500 group-hover:border-gold"}`}>
                       {faqOpen === i ? "−" : "+"}
                     </span>
                   </span>

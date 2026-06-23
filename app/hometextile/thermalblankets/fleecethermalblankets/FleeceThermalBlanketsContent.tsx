@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -215,7 +215,7 @@ export default function FleeceThermalBlanketsContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -232,7 +232,7 @@ export default function FleeceThermalBlanketsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Fleece Blankets — All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 — 2 large bentos */}
@@ -431,7 +431,7 @@ export default function FleeceThermalBlanketsContent() {
                 {EXPORT_TERMS.map((t) => (
                   <div key={t.term} className="bg-white/5 rounded-xl p-3.5 border border-white/10">
                     <p className="text-gold font-bold text-sm">{t.term}</p>
-                    <p className="text-gray-400 text-xs mt-0.5">{t.full}</p>
+                    <p className="text-gray-500 text-xs mt-0.5">{t.full}</p>
                     <p className="text-gray-500 text-[10px] mt-1">{t.port}</p>
                   </div>
                 ))}
@@ -546,7 +546,7 @@ export default function FleeceThermalBlanketsContent() {
                     <span className="text-2xl font-bold text-navy-900">{t.gsm} GSM</span>
                     {t.featured && <span className="ml-3 text-[10px] font-bold text-gold bg-gold/10 px-2.5 py-0.5 rounded-full">Standard</span>}
                   </div>
-                  <span className="text-xs text-gray-400 bg-gray-50 px-2.5 py-1 rounded-lg border border-gray-100 shrink-0">{t.season}</span>
+                  <span className="text-xs text-gray-500 bg-gray-50 px-2.5 py-1 rounded-lg border border-gray-100 shrink-0">{t.season}</span>
                 </div>
                 <p className="text-sm font-semibold text-gray-600 mb-3">{t.name}</p>
                 <div className="h-2 bg-gray-100 rounded-full overflow-hidden mb-3">
@@ -574,11 +574,11 @@ export default function FleeceThermalBlanketsContent() {
                 <div className="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 text-xs font-bold flex items-center justify-center mb-3">{s.code}</div>
                 <p className="text-sm font-bold text-navy-900">{s.name}</p>
                 <p className="text-xs font-mono text-sky-600 mt-1">{s.dims}</p>
-                <p className="text-xs text-gray-400 mt-2 leading-tight">{s.use}</p>
+                <p className="text-xs text-gray-500 mt-2 leading-tight">{s.use}</p>
               </motion.div>
             ))}
           </div>
-          <p className="text-gray-400 text-xs mt-5 text-center">±2 cm manufacturing tolerance. Custom dimensions available — specify in RFQ.</p>
+          <p className="text-gray-500 text-xs mt-5 text-center">±2 cm manufacturing tolerance. Custom dimensions available — specify in RFQ.</p>
           <BackToTop />
         </div>
       </section>
@@ -598,7 +598,7 @@ export default function FleeceThermalBlanketsContent() {
                   <span className="text-2xl" aria-hidden="true">{d.icon}</span>
                   <h3 className="text-base font-bold text-white">{d.method}</h3>
                 </div>
-                <p className="text-xs text-gray-400 mb-3"><span className="text-gold font-semibold">Substrates: </span>{d.substrates}</p>
+                <p className="text-xs text-gray-500 mb-3"><span className="text-gold font-semibold">Substrates: </span>{d.substrates}</p>
                 <p className="text-sm text-gray-300 leading-relaxed">{d.note}</p>
               </motion.div>
             ))}
@@ -691,7 +691,7 @@ export default function FleeceThermalBlanketsContent() {
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Export</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">Incoterms &amp; Shipping</h2>
-            <p className="text-gray-400 mt-3 text-sm">All programmes ship from Karachi or Port Qasim, Pakistan.</p>
+            <p className="text-gray-500 mt-3 text-sm">All programmes ship from Karachi or Port Qasim, Pakistan.</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {EXPORT_TERMS.map((t, i) => (
@@ -699,7 +699,7 @@ export default function FleeceThermalBlanketsContent() {
                 className="bg-white/5 border border-white/10 rounded-xl p-6">
                 <div className="flex items-center gap-3 mb-2">
                   <span className="text-xl font-black text-gold">{t.term}</span>
-                  <span className="text-xs text-gray-400">{t.full}</span>
+                  <span className="text-xs text-gray-500">{t.full}</span>
                 </div>
                 <p className="text-xs text-amber-400 mb-2">{t.port}</p>
                 <p className="text-sm text-gray-300 leading-relaxed">{t.desc}</p>
@@ -777,7 +777,7 @@ export default function FleeceThermalBlanketsContent() {
                 </div>
                 <div className="flex-1">
                   <p className="text-white font-bold text-sm">{stage.stage}</p>
-                  <p className="text-gray-400 text-xs mt-0.5">{stage.desc}</p>
+                  <p className="text-gray-500 text-xs mt-0.5">{stage.desc}</p>
                 </div>
                 <div className="text-right shrink-0">
                   <p className="text-gold font-mono font-bold text-sm">{stage.days} days</p>

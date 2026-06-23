@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -357,7 +357,7 @@ export default function KitchenTowelsContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -377,7 +377,7 @@ export default function KitchenTowelsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 */}
@@ -398,7 +398,7 @@ export default function KitchenTowelsContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3.5 border border-amber-100">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                     {c.badge && <span className="mt-1.5 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{c.badge}</span>}
                   </div>
                 ))}
@@ -425,7 +425,7 @@ export default function KitchenTowelsContent() {
                     <div>
                       <p className="text-sm font-semibold text-navy-900">{s.name}</p>
                       <p className="text-xs text-gold font-semibold mt-0.5">{s.dims}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{s.note}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{s.note}</p>
                     </div>
                   </div>
                 ))}
@@ -454,7 +454,7 @@ export default function KitchenTowelsContent() {
                     <div className="w-full h-1.5 bg-yellow-100 rounded-full overflow-hidden mb-1">
                       <div className={`h-full rounded-full ${t.color}`} style={{ width: `${t.pct}%` }} aria-hidden="true" />
                     </div>
-                    <p className="text-[10px] text-gray-400 leading-snug">{t.name}</p>
+                    <p className="text-[10px] text-gray-500 leading-snug">{t.name}</p>
                   </div>
                 ))}
               </div>
@@ -492,7 +492,7 @@ export default function KitchenTowelsContent() {
                 {COLOUR_OPTIONS.map((c) => (
                   <div key={c.name} className="bg-white rounded-lg p-2.5 border border-rose-50">
                     <p className="text-xs font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{c.note}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{c.note}</p>
                   </div>
                 ))}
               </div>
@@ -538,7 +538,7 @@ export default function KitchenTowelsContent() {
                   <div key={s.abbr} className="bg-white rounded-xl p-3 border border-teal-100">
                     <p className="text-xs font-bold text-teal-600">{s.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{s.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{s.market}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -581,7 +581,7 @@ export default function KitchenTowelsContent() {
                     <span className="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 text-[10px] font-bold flex items-center justify-center shrink-0">{e.term}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{e.full}</p>
-                      <p className="text-[10px] text-gray-400">{e.port}</p>
+                      <p className="text-[10px] text-gray-500">{e.port}</p>
                     </div>
                   </div>
                 ))}
@@ -631,7 +631,7 @@ export default function KitchenTowelsContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Process" />
             </motion.div>
@@ -680,7 +680,7 @@ export default function KitchenTowelsContent() {
       <section id="section-constructions" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
-            <p className="text-xs text-gray-400 uppercase tracking-[0.3em] mb-3">01 / Fabric Constructions</p>
+            <p className="text-xs text-gray-500 uppercase tracking-[0.3em] mb-3">01 / Fabric Constructions</p>
             <h2 className="text-4xl font-bold text-navy-900 mb-4">Four Constructions. One Expert Supply Network.</h2>
             <div className="w-12 h-0.5 bg-gold mb-4" aria-hidden="true" />
             <p className="text-gray-500 leading-relaxed">
@@ -718,35 +718,35 @@ export default function KitchenTowelsContent() {
                 </div>
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="bg-gray-50 rounded-xl p-4">
-                    <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-1">GSM Range</p>
+                    <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-1">GSM Range</p>
                     <p className="text-lg font-bold text-navy-900">{ac.gsm}</p>
                   </div>
                   <div className="bg-gray-50 rounded-xl p-4">
-                    <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-1">Hand Feel</p>
+                    <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Hand Feel</p>
                     <p className="text-sm text-navy-900">{ac.hand}</p>
                   </div>
                 </div>
                 <p className="text-gray-500 text-sm leading-relaxed mb-6">{ac.detail}</p>
                 <div className="bg-gray-50 rounded-xl p-4">
-                  <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-2">Technical Specification</p>
+                  <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-2">Technical Specification</p>
                   <p className="text-sm text-gray-600">{ac.spec}</p>
                 </div>
               </div>
               <div className="flex flex-col gap-4">
                 <div className="border border-gray-100 rounded-2xl p-6">
-                  <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-3">Best For</p>
+                  <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-3">Best For</p>
                   <div className="flex flex-wrap gap-2">
                     {ac.best.map((b) => <span key={b} className="text-xs text-navy-900 bg-gray-50 border border-gray-200 px-3 py-1 rounded-full">{b}</span>)}
                   </div>
                 </div>
                 <div className="border border-gray-100 rounded-2xl p-6">
-                  <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-3">Key Markets</p>
+                  <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-3">Key Markets</p>
                   <div className="flex flex-wrap gap-2">
                     {ac.markets.map((m) => <span key={m} className="text-xs text-gold bg-gold/10 border border-gold/20 px-3 py-1 rounded-full">{m}</span>)}
                   </div>
                 </div>
                 <div className="border border-gray-100 rounded-2xl p-6">
-                  <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-3">Decoration</p>
+                  <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-3">Decoration</p>
                   <div className="flex flex-col gap-1.5">
                     {ac.deco.map((d) => (
                       <div key={d} className="flex items-center gap-2">
@@ -804,7 +804,7 @@ export default function KitchenTowelsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Weight Classification</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">GSM Weight Guide</h2>
-            <p className="text-gray-400 max-w-2xl leading-relaxed">
+            <p className="text-gray-500 max-w-2xl leading-relaxed">
               GSM determines absorbency, durability, retail price positioning and shipping weight. Matching the right GSM to your end-channel is critical for commercial success.
             </p>
           </div>
@@ -820,7 +820,7 @@ export default function KitchenTowelsContent() {
               >
                 {t.featured && <span className="inline-block mb-3 text-[10px] font-bold text-navy-900 bg-gold px-3 py-1 rounded-full uppercase tracking-wider">Most Ordered</span>}
                 <p className={`text-3xl font-bold mb-1 ${t.featured ? "text-gold" : "text-white"}`}>{t.gsm}</p>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">{t.name}</p>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">{t.name}</p>
                 <div className="mb-4">
                   <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
                     <div className={`h-full rounded-full ${t.color}`} style={{ width: `${t.pct}%` }} aria-hidden="true" />
@@ -877,7 +877,7 @@ export default function KitchenTowelsContent() {
                 <div>
                   <h3 className="text-lg font-bold text-navy-900 mb-2">{d.method}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed mb-3">{d.best}</p>
-                  <p className="text-xs text-gray-400">Compatible: {d.compat.join(", ")}</p>
+                  <p className="text-xs text-gray-500">Compatible: {d.compat.join(", ")}</p>
                 </div>
               </motion.div>
             ))}
@@ -909,7 +909,7 @@ export default function KitchenTowelsContent() {
               <p className="text-gray-300 leading-relaxed mb-8">
                 For kitchen towel programmes, colour is the primary visual differentiator on-shelf. Yarn-dyed stripe and check programmes are woven-in — delivering consistent, wash-durable colour that printed programmes cannot match across multiple wash cycles.
               </p>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-500 text-sm leading-relaxed">
                 Lab dip approval is required before all bulk reactive-dyed orders. Yarn-dyed programmes are confirmed via strike-off sample on the correct yarn count and weave structure.
               </p>
             </div>
@@ -1016,7 +1016,7 @@ export default function KitchenTowelsContent() {
           <div className="border-l-4 border-gold pl-6 mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Standards</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Quality Certifications</h2>
-            <p className="text-gray-400 max-w-2xl leading-relaxed">
+            <p className="text-gray-500 max-w-2xl leading-relaxed">
               Kitchen towel programmes are sourced through factories carrying the exact certifications required by major retail and institutional buyers across all key markets.
             </p>
           </div>
@@ -1036,9 +1036,9 @@ export default function KitchenTowelsContent() {
                 <div>
                   <div className="flex items-center gap-2 mb-1">
                     <p className="text-sm font-bold text-white">{c.name}</p>
-                    <span className={`text-[10px] px-2 py-0.5 rounded-full font-semibold ${c.tier === "Premium" ? "bg-gold/20 text-gold" : c.tier === "Optional" ? "bg-white/10 text-gray-400" : "bg-green-900/50 text-green-400"}`}>{c.tier}</span>
+                    <span className={`text-[10px] px-2 py-0.5 rounded-full font-semibold ${c.tier === "Premium" ? "bg-gold/20 text-gold" : c.tier === "Optional" ? "bg-white/10 text-gray-500" : "bg-green-900/50 text-green-400"}`}>{c.tier}</span>
                   </div>
-                  <p className="text-xs text-gray-400 leading-snug">{c.full}</p>
+                  <p className="text-xs text-gray-500 leading-snug">{c.full}</p>
                 </div>
               </motion.div>
             ))}
@@ -1098,7 +1098,7 @@ export default function KitchenTowelsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-400 mb-4">10 / Ethics &amp; Sustainability</p>
+              <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-500 mb-4">10 / Ethics &amp; Sustainability</p>
               <h2 className="text-5xl sm:text-6xl font-bold text-navy-900 leading-[1] mb-8">
                 Sourced<br />Responsibly.
               </h2>

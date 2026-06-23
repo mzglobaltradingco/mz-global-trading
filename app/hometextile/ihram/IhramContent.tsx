@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -508,7 +508,7 @@ export default function IhramContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -530,7 +530,7 @@ export default function IhramContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 — 2 large bentos */}
@@ -550,7 +550,7 @@ export default function IhramContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3.5 border border-stone-200">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                     <p className="text-xs text-stone-600 mt-1 leading-tight">{c.best[0]}</p>
                     {c.badge && (
                       <span className="mt-1.5 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{c.badge}</span>
@@ -582,11 +582,11 @@ export default function IhramContent() {
                         {s.tag && <span className={`text-[9px] font-semibold px-1.5 py-0.5 rounded-full ${s.featured ? "text-navy-900 bg-gold" : "text-gold bg-gold/10"}`}>{s.tag}</span>}
                       </div>
                       <p className={`text-[10px] mt-0.5 ${s.featured ? "text-gray-300" : "text-gray-500"}`}>Each piece: {s.ridaSize}</p>
-                      <p className={`text-[10px] mt-0.5 leading-snug ${s.featured ? "text-gray-400" : "text-gray-400"}`}>{s.target}</p>
+                      <p className={`text-[10px] mt-0.5 leading-snug ${s.featured ? "text-gray-500" : "text-gray-500"}`}>{s.target}</p>
                     </div>
                   </div>
                 ))}
-                <p className="text-[10px] text-gray-400 mt-1 pl-1">+ Custom dimensions available on request</p>
+                <p className="text-[10px] text-gray-500 mt-1 pl-1">+ Custom dimensions available on request</p>
               </div>
               <ExploreBtn sectionId="section-dimensions" label="View Dimensions" />
             </motion.div>
@@ -613,7 +613,7 @@ export default function IhramContent() {
                     </div>
                     <p className="text-[10px] font-semibold text-blue-600">{t.label}</p>
                     <p className="text-[10px] font-medium text-amber-700 mt-0.5">{t.pairWeight}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{t.season}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{t.season}</p>
                   </div>
                 ))}
               </div>
@@ -649,7 +649,7 @@ export default function IhramContent() {
                 <div className="bg-white rounded-xl p-3 border border-zinc-200">
                   <p className="text-xs font-semibold text-navy-900 mb-1">Whiteness Target</p>
                   <p className="text-2xl font-bold text-navy-900">≥90 CIE</p>
-                  <p className="text-[10px] text-gray-400 mt-0.5">Batch tolerance ±3 CIE units</p>
+                  <p className="text-[10px] text-gray-500 mt-0.5">Batch tolerance ±3 CIE units</p>
                 </div>
                 <div className="bg-white rounded-xl p-3 border border-zinc-200">
                   <p className="text-xs font-semibold text-navy-900 mb-1">Process</p>
@@ -699,7 +699,7 @@ export default function IhramContent() {
                   <div key={m.region} className="bg-white rounded-xl p-3 border border-teal-100">
                     <p className="text-lg leading-none">{m.flag}</p>
                     <p className="text-xs font-bold text-teal-600 mt-1">{m.region}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{m.buyers.split(",")[0]}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{m.buyers.split(",")[0]}</p>
                   </div>
                 ))}
               </div>
@@ -785,7 +785,7 @@ export default function IhramContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -842,7 +842,7 @@ export default function IhramContent() {
             <div>
               <p className="font-mono text-gold/70 text-xs tracking-[0.3em] uppercase mb-2">[TECHNICAL SPECIFICATION — WEAVE CONSTRUCTIONS]</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white">Fabric Constructions</h2>
-              <p className="text-gray-400 mt-3 max-w-2xl leading-relaxed">
+              <p className="text-gray-500 mt-3 max-w-2xl leading-relaxed">
                 Every Ihram sourcing programme begins with construction selection. Each weave type has distinct hand-feel, GSM range, absorbency properties and procurement positioning — all within the unstitched, undyed, undecorated requirement of the Shariah specification.
               </p>
             </div>
@@ -992,7 +992,7 @@ export default function IhramContent() {
                     <td className="px-6 py-4 text-amber-700 font-medium text-xs">700–1,150 g / pair</td>
                     <td className="px-6 py-4 text-gray-600">✓ Available</td>
                     <td className="px-6 py-4 text-gray-600">✓ Available (primary)</td>
-                    <td className="px-6 py-4 text-gray-400">— Not standard</td>
+                    <td className="px-6 py-4 text-gray-500">— Not standard</td>
                   </tr>
                   <tr className="bg-gold/5">
                     <td className="px-6 py-4 font-semibold text-navy-900">Standard 230–305 gsm <span className="text-[10px] text-gold font-bold ml-2">★ MOST ORDERED</span></td>
@@ -1005,7 +1005,7 @@ export default function IhramContent() {
                     <td className="px-6 py-4 font-semibold text-navy-900">Heavyweight 320–420 gsm</td>
                     <td className="px-6 py-4 text-amber-700 font-medium text-xs">1,650–2,200 g / pair</td>
                     <td className="px-6 py-4 text-gray-600">✓ Available</td>
-                    <td className="px-6 py-4 text-gray-400">— Not standard</td>
+                    <td className="px-6 py-4 text-gray-500">— Not standard</td>
                     <td className="px-6 py-4 text-gray-600">✓ Available</td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -1053,21 +1053,21 @@ export default function IhramContent() {
                 </div>
                 <h3 className={`text-base font-bold mb-3 ${s.featured ? "text-white" : "text-navy-900"}`}>{s.name}</h3>
                 <div className={`rounded-xl p-3 mb-3 ${s.featured ? "bg-white/5 border border-white/10" : "bg-gray-50 border border-gray-200"}`}>
-                  <p className={`text-[10px] font-semibold uppercase tracking-wider mb-2 ${s.featured ? "text-gray-400" : "text-gray-500"}`}>Each piece</p>
+                  <p className={`text-[10px] font-semibold uppercase tracking-wider mb-2 ${s.featured ? "text-gray-500" : "text-gray-500"}`}>Each piece</p>
                   <div className="grid grid-cols-2 gap-2">
                     <div>
-                      <p className={`text-[9px] ${s.featured ? "text-gray-500" : "text-gray-400"}`}>Rida</p>
+                      <p className={`text-[9px] ${s.featured ? "text-gray-500" : "text-gray-500"}`}>Rida</p>
                       <p className={`text-sm font-bold ${s.featured ? "text-gold" : "text-navy-900"}`}>{s.ridaSize}</p>
                     </div>
                     <div>
-                      <p className={`text-[9px] ${s.featured ? "text-gray-500" : "text-gray-400"}`}>Izar</p>
+                      <p className={`text-[9px] ${s.featured ? "text-gray-500" : "text-gray-500"}`}>Izar</p>
                       <p className={`text-sm font-bold ${s.featured ? "text-gold" : "text-navy-900"}`}>{s.izarSize}</p>
                     </div>
                   </div>
                 </div>
                 <p className={`text-xs leading-relaxed mb-2 ${s.featured ? "text-gray-300" : "text-gray-600"}`}>{s.target}</p>
-                <p className={`text-[10px] leading-relaxed ${s.featured ? "text-gray-400" : "text-gray-500"}`}>{s.notes}</p>
-                <p className={`text-[10px] mt-2 ${s.featured ? "text-gray-500" : "text-gray-400"}`}>Tolerance: ±2 cm</p>
+                <p className={`text-[10px] leading-relaxed ${s.featured ? "text-gray-500" : "text-gray-500"}`}>{s.notes}</p>
+                <p className={`text-[10px] mt-2 ${s.featured ? "text-gray-500" : "text-gray-500"}`}>Tolerance: ±2 cm</p>
               </motion.div>
             ))}
           </div>
@@ -1076,7 +1076,7 @@ export default function IhramContent() {
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-1">Bespoke Sizing</p>
               <h3 className="text-base font-bold text-white mb-1">Custom Dimensions Available</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-500 text-sm leading-relaxed">
                 Non-standard dimensions — extra-wide, extra-long or specific institutional specifications — produced to your requirements. Include the required piece dimensions in your RFQ and we confirm feasibility and pricing within 3–5 working days.
               </p>
             </div>
@@ -1297,7 +1297,7 @@ export default function IhramContent() {
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-1">
                     <p className="font-bold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400">{c.full}</p>
+                    <p className="text-xs text-gray-500">{c.full}</p>
                   </div>
                   <p className="text-sm text-gray-600 leading-relaxed">{c.desc}</p>
                 </div>
@@ -1316,7 +1316,7 @@ export default function IhramContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Logistics</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">Export &amp; Packaging</h2>
-            <p className="text-gray-400 mt-3 max-w-2xl leading-relaxed">
+            <p className="text-gray-500 mt-3 max-w-2xl leading-relaxed">
               Packaging, incoterms and sea freight transit times for Ihram export from Pakistan.
             </p>
           </div>
@@ -1330,7 +1330,7 @@ export default function IhramContent() {
                       <span className="w-9 h-9 rounded-lg bg-gold/20 text-gold text-xs font-bold flex items-center justify-center shrink-0">{e.code}</span>
                       <p className="font-semibold text-white">{e.name}</p>
                     </div>
-                    <p className="text-gray-400 text-xs leading-relaxed">{e.desc}</p>
+                    <p className="text-gray-500 text-xs leading-relaxed">{e.desc}</p>
                   </div>
                 ))}
               </div>
@@ -1345,7 +1345,7 @@ export default function IhramContent() {
                 ].map((inc) => (
                   <div key={inc.term} className="bg-white/5 border border-white/10 rounded-xl p-4 shadow-lg shadow-black/20">
                     <p className="text-lg font-bold text-gold mb-1">{inc.term}</p>
-                    <p className="text-gray-400 text-xs leading-relaxed">{inc.desc}</p>
+                    <p className="text-gray-500 text-xs leading-relaxed">{inc.desc}</p>
                   </div>
                 ))}
               </div>
@@ -1414,7 +1414,7 @@ export default function IhramContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">How We Work</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">Our Sourcing Process</h2>
-            <p className="text-gray-400 mt-3 max-w-2xl leading-relaxed">
+            <p className="text-gray-500 mt-3 max-w-2xl leading-relaxed">
               From specification to delivery — a structured six-step process designed for procurement managers, hajj operators and government buyers.
             </p>
           </div>
@@ -1436,7 +1436,7 @@ export default function IhramContent() {
                 </span>
                 <p className="text-gold font-bold text-sm mb-3">{p.num}</p>
                 <h3 className="text-lg font-bold text-white mb-3 relative z-10">{p.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed relative z-10">{p.desc}</p>
+                <p className="text-gray-500 text-sm leading-relaxed relative z-10">{p.desc}</p>
               </motion.div>
             ))}
           </div>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -267,7 +267,7 @@ export default function QualityControlContent() {
                 <span className={`font-bold text-sm ${activePhase === phase.id ? "text-white" : "text-navy-900"}`}>
                   {phase.title}
                 </span>
-                <span className="text-[10px] mt-0.5 leading-tight text-gray-400">
+                <span className="text-[10px] mt-0.5 leading-tight text-gray-500">
                   {phase.timing}
                 </span>
               </button>
@@ -367,7 +367,7 @@ export default function QualityControlContent() {
             whileInView={{ opacity: 1 }}
             viewport={viewportOnce}
             transition={{ duration: 0.4, delay: 0.2 }}
-            className="text-gray-400 text-xs mt-4 text-center"
+            className="text-gray-500 text-xs mt-4 text-center"
           >
             Custom AQL thresholds can be agreed at the RFQ stage for buyers with stricter compliance requirements.
           </motion.p>
@@ -464,7 +464,7 @@ export default function QualityControlContent() {
                 <h3 className={`font-bold text-base mb-3 ${res.color}`}>{res.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-5">{res.desc}</p>
                 <div className="bg-white rounded-lg px-4 py-3">
-                  <p className="text-gray-400 text-[10px] uppercase tracking-widest mb-1">Outcome</p>
+                  <p className="text-gray-500 text-[10px] uppercase tracking-widest mb-1">Outcome</p>
                   <p className="text-navy-900 font-semibold text-sm">{res.outcome}</p>
                 </div>
               </motion.div>
@@ -549,7 +549,7 @@ export default function QualityControlContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Source With Independent QC on Every Order
             </h2>
-            <p className="text-gray-400 text-base max-w-xl mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-xl mx-auto mb-8">
               Pre-production sign-off, in-line inspection and a full AQL pre-shipment report — included on every
               order, not billed as an add-on.
             </p>

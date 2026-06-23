@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -274,7 +274,7 @@ export default function BabyBibsContent() {
             <div key={s.u}>
               <p className="text-3xl font-bold text-[#D4A017]">{s.v}</p>
               <p className="text-white font-semibold text-sm mt-0.5">{s.u}</p>
-              <p className="text-gray-400 text-xs mt-0.5">{s.s}</p>
+              <p className="text-gray-500 text-xs mt-0.5">{s.s}</p>
             </div>
           ))}
         </div>
@@ -286,7 +286,7 @@ export default function BabyBibsContent() {
           <div className="mb-12">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0D1B2A]">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1: Bib Types + Size Guide */}
@@ -308,7 +308,7 @@ export default function BabyBibsContent() {
                       <p className="text-sm font-semibold text-[#0D1B2A]">{b.type}</p>
                       {b.tag && <span className="shrink-0 text-[10px] font-semibold text-[#D4A017] bg-[#D4A017]/10 px-2 py-0.5 rounded-full">{b.tag}</span>}
                     </div>
-                    <p className="text-xs text-gray-400 mt-0.5">{b.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{b.gsm}</p>
                   </div>
                 ))}
               </div>
@@ -330,9 +330,9 @@ export default function BabyBibsContent() {
                   <div key={a.ageGroup} className="flex items-center gap-3">
                     <div className="flex-1 min-w-0">
                       <p className="text-xs font-semibold text-[#0D1B2A]">{a.ageGroup}</p>
-                      <p className="text-xs text-gray-400 truncate">{a.bibType}</p>
+                      <p className="text-xs text-gray-500 truncate">{a.bibType}</p>
                     </div>
-                    <span className="text-xs text-gray-400 whitespace-nowrap hidden sm:block">{a.bibSize}</span>
+                    <span className="text-xs text-gray-500 whitespace-nowrap hidden sm:block">{a.bibSize}</span>
                   </div>
                 ))}
               </div>
@@ -352,7 +352,7 @@ export default function BabyBibsContent() {
                   <div key={t.label}>
                     <div className="flex justify-between text-xs mb-1">
                       <span className="font-medium text-[#0D1B2A] truncate mr-1">{t.label}</span>
-                      <span className="text-gray-400 whitespace-nowrap">{t.gsm}</span>
+                      <span className="text-gray-500 whitespace-nowrap">{t.gsm}</span>
                     </div>
                     <div className="h-1.5 bg-gray-100 rounded-full" />
                   </div>
@@ -458,7 +458,7 @@ export default function BabyBibsContent() {
               <div className="flex flex-col gap-2 flex-1">
                 {EXPORT_SPECS.slice(0, 4).map((s) => (
                   <div key={s.label}>
-                    <p className="text-[10px] text-gray-400 uppercase tracking-wide">{s.label}</p>
+                    <p className="text-[10px] text-gray-500 uppercase tracking-wide">{s.label}</p>
                     <p className="text-xs font-semibold text-[#0D1B2A]">{s.value}</p>
                   </div>
                 ))}
@@ -567,11 +567,11 @@ export default function BabyBibsContent() {
                 </div>
                 <div className="md:col-span-1 space-y-2">
                   <div>
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Backing</p>
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Backing</p>
                     <p className="text-xs text-gray-600">{b.backing}</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Standard Sizes</p>
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Standard Sizes</p>
                     <p className="text-xs text-gray-600">{b.sizes}</p>
                   </div>
                 </div>
@@ -635,7 +635,7 @@ export default function BabyBibsContent() {
                 <h3 className="font-bold text-[#0D1B2A] mb-2 text-sm">{w.label}</h3>
                 <p className="text-gray-500 text-xs mb-3">{w.note}</p>
                 <div className="border-t border-gray-100 pt-3">
-                  <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Best for</p>
+                  <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Best for</p>
                   <p className="text-xs text-gray-600">{w.best}</p>
                 </div>
               </motion.div>
@@ -695,7 +695,7 @@ export default function BabyBibsContent() {
                   {col.hex === "custom" && <div className="w-full h-full rounded-xl bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200" />}
                 </div>
                 <p className="text-xs font-semibold text-[#0D1B2A] text-center leading-tight">{col.name}</p>
-                <p className="text-xs text-gray-400 text-center leading-tight hidden sm:block">{col.market}</p>
+                <p className="text-xs text-gray-500 text-center leading-tight hidden sm:block">{col.market}</p>
               </motion.div>
             ))}
           </div>
@@ -709,7 +709,7 @@ export default function BabyBibsContent() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">OEM Capabilities</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">Custom Development — Full Service</h2>
-            <p className="text-gray-400 mt-3 text-sm max-w-xl">From closure safety testing to custom silhouette development — every OEM detail managed in-programme.</p>
+            <p className="text-gray-500 mt-3 text-sm max-w-xl">From closure safety testing to custom silhouette development — every OEM detail managed in-programme.</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {OEM_FEATURES.map((f, i) => (
@@ -816,7 +816,7 @@ export default function BabyBibsContent() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Sustainability</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">Mouthing-Safe from Farm to Shelf</h2>
-            <p className="text-gray-400 mt-3 text-sm max-w-xl">OEKO-TEX Class 1 treats infants as the most vulnerable consumer group — assuming fabric and accessories will be mouthed. Every material in our bib programmes is tested to that standard.</p>
+            <p className="text-gray-500 mt-3 text-sm max-w-xl">OEKO-TEX Class 1 treats infants as the most vulnerable consumer group — assuming fabric and accessories will be mouthed. Every material in our bib programmes is tested to that standard.</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {SUSTAINABILITY.map((s, i) => (
@@ -828,7 +828,7 @@ export default function BabyBibsContent() {
                 <span className="text-3xl shrink-0">{s.icon}</span>
                 <div>
                   <h3 className="font-bold text-white mb-1">{s.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{s.body}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed">{s.body}</p>
                 </div>
               </motion.div>
             ))}

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -43,7 +43,7 @@ export default function ArticleContent({ post }: ArticleContentProps) {
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap">
             <Link href="/" className="hover:text-gold transition-colors">Home</Link>
             <span aria-hidden="true">›</span>
-            <span className="text-gray-400">Resources</span>
+            <span className="text-gray-500">Resources</span>
             <span aria-hidden="true">›</span>
             <Link href="/knowledge/" className="hover:text-gold transition-colors">Knowledge Hub</Link>
             <span aria-hidden="true">›</span>
@@ -63,7 +63,7 @@ export default function ArticleContent({ post }: ArticleContentProps) {
               </h1>
 
               {/* Meta row */}
-              <div className="flex items-center flex-wrap gap-x-6 gap-y-2 text-gray-400 text-sm mb-6">
+              <div className="flex items-center flex-wrap gap-x-6 gap-y-2 text-gray-500 text-sm mb-6">
                 <span className="flex items-center gap-1.5">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -162,7 +162,7 @@ export default function ArticleContent({ post }: ArticleContentProps) {
             <h2 className="text-white font-bold text-xl sm:text-2xl mb-3">
               Put this knowledge to work.
             </h2>
-            <p className="text-gray-400 text-sm mb-6 max-w-md mx-auto">
+            <p className="text-gray-500 text-sm mb-6 max-w-md mx-auto">
               Speak with our team about your sourcing requirement. No commitment — just a direct conversation.
             </p>
             <Link

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -300,7 +300,7 @@ export default function BarMopsContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -317,7 +317,7 @@ export default function BarMopsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Complete Bar Mop Specification</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any section to jump to full specification details.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any section to jump to full specification details.</p>
           </div>
 
           {/* Row 1 */}
@@ -340,7 +340,7 @@ export default function BarMopsContent() {
                       <p className="text-sm font-bold text-navy-900">{c.name}</p>
                       <span className="text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full shrink-0">{c.badge}</span>
                     </div>
-                    <p className="text-xs text-gray-400 mt-1">{c.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-1">{c.gsm}</p>
                     <p className="text-xs text-sky-600 mt-1 leading-tight">{c.hand}</p>
                   </div>
                 ))}
@@ -366,7 +366,7 @@ export default function BarMopsContent() {
                       <p className="text-xs font-semibold text-navy-900">{q.spec}</p>
                       <span className="text-[10px] text-indigo-600 font-semibold shrink-0">{q.method}</span>
                     </div>
-                    <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{q.value}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{q.value}</p>
                   </div>
                 ))}
               </div>
@@ -393,7 +393,7 @@ export default function BarMopsContent() {
                     <div className="w-full h-1.5 bg-amber-100 rounded-full overflow-hidden mb-1">
                       <div className={`h-full rounded-full ${t.color}`} style={{ width: `${t.pct}%` }} aria-hidden="true" />
                     </div>
-                    <p className="text-[10px] text-gray-400 leading-snug">{t.name}</p>
+                    <p className="text-[10px] text-gray-500 leading-snug">{t.name}</p>
                   </div>
                 ))}
               </div>
@@ -412,7 +412,7 @@ export default function BarMopsContent() {
                   <div key={s.code} className="bg-white rounded-xl px-3 py-3 border border-slate-100">
                     <p className="text-xs font-bold text-navy-900">{s.name}</p>
                     <p className="text-sm font-bold text-gold mt-0.5">{s.dims}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{s.note}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{s.note}</p>
                   </div>
                 ))}
               </div>
@@ -433,7 +433,7 @@ export default function BarMopsContent() {
                       <p className="text-xs font-semibold text-navy-900">{c.name}</p>
                       {c.popular && <span className="text-[10px] font-semibold text-gold bg-gold/10 px-1.5 py-0.5 rounded-full">Popular</span>}
                     </div>
-                    <p className="text-[10px] text-gray-400 leading-snug">{c.note}</p>
+                    <p className="text-[10px] text-gray-500 leading-snug">{c.note}</p>
                   </div>
                 ))}
               </div>
@@ -453,7 +453,7 @@ export default function BarMopsContent() {
                     <span className="text-base shrink-0" aria-hidden="true">{p.icon}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{p.format}</p>
-                      <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{p.note}</p>
+                      <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{p.note}</p>
                     </div>
                   </div>
                 ))}
@@ -480,7 +480,7 @@ export default function BarMopsContent() {
                   <div key={s.abbr} className="bg-white rounded-xl p-3 border border-teal-100">
                     <p className="text-xs font-bold text-teal-600">{s.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{s.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{s.market}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -521,7 +521,7 @@ export default function BarMopsContent() {
                     <span className="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 text-[10px] font-bold flex items-center justify-center shrink-0">{e.term}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{e.full}</p>
-                      <p className="text-[10px] text-gray-400">{e.port}</p>
+                      <p className="text-[10px] text-gray-500">{e.port}</p>
                     </div>
                   </div>
                 ))}
@@ -568,7 +568,7 @@ export default function BarMopsContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Process" />
             </motion.div>
@@ -621,7 +621,7 @@ export default function BarMopsContent() {
             <p className="font-mono text-gold text-xs tracking-[0.3em] uppercase">CONSTRUCTION SPEC — COMMERCIAL GRADE</p>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 ml-5">Fabric Constructions</h2>
-          <p className="text-gray-400 mb-10 max-w-2xl leading-relaxed ml-5">
+          <p className="text-gray-500 mb-10 max-w-2xl leading-relaxed ml-5">
             Two proven commercial constructions — each optimised for a specific foodservice application and laundry specification.
           </p>
           <div className="flex flex-wrap gap-2 mb-8 ml-5" role="tablist">
@@ -830,7 +830,7 @@ export default function BarMopsContent() {
           <div className="mb-12">
             <p className="font-mono text-green-400 text-xs tracking-[0.3em] uppercase mb-2">&#x25B6; ORDER FORMATS // COMMERCIAL DISTRIBUTION</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Packing &amp; Order Formats</h2>
-            <p className="text-gray-400 max-w-2xl leading-relaxed">Commercial bar mop distribution requires specific packing configurations for efficient handling, storage and distribution.</p>
+            <p className="text-gray-500 max-w-2xl leading-relaxed">Commercial bar mop distribution requires specific packing configurations for efficient handling, storage and distribution.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {PACKING.map((p, i) => (
@@ -845,7 +845,7 @@ export default function BarMopsContent() {
                 <span className="text-3xl" aria-hidden="true">{p.icon}</span>
                 <div>
                   <h3 className="text-base font-bold text-white mb-1">{p.format}</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">{p.note}</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">{p.note}</p>
                 </div>
               </motion.div>
             ))}
@@ -1012,7 +1012,7 @@ export default function BarMopsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="font-mono text-green-400 text-xs tracking-[0.2em] mb-2"># sourcing_process.sh</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">From RFQ to Delivery</h2>
-          <p className="text-gray-400 mb-12 max-w-2xl leading-relaxed">A transparent, sequenced process from specification through to vessel loading.</p>
+          <p className="text-gray-500 mb-12 max-w-2xl leading-relaxed">A transparent, sequenced process from specification through to vessel loading.</p>
           <div className="flex flex-col gap-3">
             {PROCESS.map((p, i) => (
               <motion.div
@@ -1027,7 +1027,7 @@ export default function BarMopsContent() {
                 <span className="text-yellow-400 text-sm shrink-0">./run</span>
                 <div>
                   <span className="text-white text-sm font-bold">{p.short}</span>
-                  <p className="text-gray-400 text-xs mt-1 font-sans">{p.desc}</p>
+                  <p className="text-gray-500 text-xs mt-1 font-sans">{p.desc}</p>
                 </div>
               </motion.div>
             ))}

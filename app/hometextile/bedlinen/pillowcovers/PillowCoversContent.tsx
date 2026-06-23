@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -362,7 +362,7 @@ export default function PillowCoversContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -379,7 +379,7 @@ export default function PillowCoversContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 */}
@@ -398,7 +398,7 @@ export default function PillowCoversContent() {
                   <div key={c.id} className="bg-white rounded-xl p-3.5 border border-pink-100">
                     <span className="text-lg" aria-hidden="true">{c.icon}</span>
                     <p className="text-sm font-semibold text-navy-900 mt-1">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.tc}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.tc}</p>
                     <p className="text-xs text-pink-600 mt-1 leading-tight">{c.best}</p>
                   </div>
                 ))}
@@ -439,7 +439,7 @@ export default function PillowCoversContent() {
                 {SIZES.map((s) => (
                   <div key={s.market} className="bg-white rounded-lg p-2.5 border border-sky-100">
                     <p className="text-xs font-bold text-navy-900">{s.flag} {s.market}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5">{s.sizes.length} size options</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5">{s.sizes.length} size options</p>
                   </div>
                 ))}
               </div>
@@ -515,7 +515,7 @@ export default function PillowCoversContent() {
                   <div key={m.abbr} className="bg-white rounded-xl p-3 border border-teal-100">
                     <p className="text-xs font-bold text-teal-600">{m.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{m.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{m.geo}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{m.geo}</p>
                   </div>
                 ))}
               </div>
@@ -593,7 +593,7 @@ export default function PillowCoversContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.title}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -666,11 +666,11 @@ export default function PillowCoversContent() {
                 <p className="text-gray-700 leading-relaxed mb-6">{ac.desc}</p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-white rounded-xl p-4 border border-pink-100">
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Hand Feel</p>
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Hand Feel</p>
                     <p className="text-sm text-navy-900">{ac.feel}</p>
                   </div>
                   <div className="bg-white rounded-xl p-4 border border-pink-100">
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Best For</p>
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Best For</p>
                     <p className="text-sm text-pink-700 font-semibold">{ac.best}</p>
                   </div>
                 </div>
@@ -703,7 +703,7 @@ export default function PillowCoversContent() {
           <div className="grid lg:grid-cols-2 gap-8 mb-10">
             {CLOSURE_TYPES.map((side, si) => (
               <div key={side.side} className={`rounded-2xl p-8 ${si === 0 ? "bg-white border-2 border-gray-100" : "bg-navy-900 text-white"}`}>
-                <p className={`text-xs font-bold uppercase tracking-widest mb-6 ${si === 0 ? "text-gray-400" : "text-gold"}`}>
+                <p className={`text-xs font-bold uppercase tracking-widest mb-6 ${si === 0 ? "text-gray-500" : "text-gold"}`}>
                   {si === 0 ? "Traditional / No Hardware" : "Engineered Closures"}
                 </p>
                 <div className="flex flex-col gap-6">
@@ -748,7 +748,7 @@ export default function PillowCoversContent() {
                     <div key={sz.name} className="bg-white rounded-xl p-4 border border-gray-100">
                       <p className="text-sm font-bold text-navy-900">{sz.name}</p>
                       <p className="text-base font-bold text-pink-600 mt-0.5">{sz.dims}</p>
-                      <p className="text-xs text-gray-400 mt-1">{sz.note}</p>
+                      <p className="text-xs text-gray-500 mt-1">{sz.note}</p>
                     </div>
                   ))}
                 </div>
@@ -805,7 +805,7 @@ export default function PillowCoversContent() {
                   ))}
                 </div>
                 <p className="text-sm text-gray-500 leading-relaxed mb-3">{p.desc}</p>
-                <p className="text-xs text-gray-400">Full PMS range available · Lab dip approval before bulk production</p>
+                <p className="text-xs text-gray-500">Full PMS range available · Lab dip approval before bulk production</p>
               </motion.div>
             ))}
           </div>
@@ -854,14 +854,14 @@ export default function PillowCoversContent() {
                 className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-xs transition-all">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-xs font-bold text-gold bg-gold/10 px-2 py-1 rounded-full">{m.abbr}</span>
-                  <span className="text-xs text-gray-400">{m.demand}%</span>
+                  <span className="text-xs text-gray-500">{m.demand}%</span>
                 </div>
                 <h3 className="text-base font-bold text-navy-900 mb-1">{m.name}</h3>
                 <p className="text-xs text-pink-600 font-semibold mb-3">{m.geo}</p>
                 <div className="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden mb-2">
                   <div className="h-full rounded-full bg-pink-400" style={{ width: `${m.demand}%` }} aria-hidden="true" />
                 </div>
-                <p className="text-xs text-gray-400">{m.note}</p>
+                <p className="text-xs text-gray-500">{m.note}</p>
               </motion.div>
             ))}
           </div>
@@ -875,7 +875,7 @@ export default function PillowCoversContent() {
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Standards</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-3">Certifications for International Pillowcase Supply</h2>
           <p className="text-gray-500 mb-2 max-w-2xl text-lg font-semibold">10+ certifications supporting EU, UK and US import compliance</p>
-          <p className="text-gray-400 mb-10 max-w-2xl text-sm">From organic fibre traceability (GOTS) to chemical safety (OEKO-TEX) and ethical audit (BSCI/SA8000) — the full certification matrix for retail and hospitality buyers.</p>
+          <p className="text-gray-500 mb-10 max-w-2xl text-sm">From organic fibre traceability (GOTS) to chemical safety (OEKO-TEX) and ethical audit (BSCI/SA8000) — the full certification matrix for retail and hospitality buyers.</p>
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-5 mb-8">
             {CERTIFICATIONS.map((c, i) => (
               <motion.div key={c.name} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.05 }}
@@ -900,13 +900,13 @@ export default function PillowCoversContent() {
           </div>
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6 border-b border-gray-100 pb-3">INCOTERMS — PORT OF EXPORT: KARACHI / PORT QASIM</p>
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6 border-b border-gray-100 pb-3">INCOTERMS — PORT OF EXPORT: KARACHI / PORT QASIM</p>
               <div className="flex flex-col gap-0 divide-y divide-gray-100">
                 {EXPORT_TERMS.map((e) => (
                   <div key={e.term} className="py-6 grid grid-cols-3 gap-4 items-start">
                     <div>
                       <p className="text-3xl font-black text-navy-900">{e.term}</p>
-                      <p className="text-xs text-gray-400 mt-1">{e.port}</p>
+                      <p className="text-xs text-gray-500 mt-1">{e.port}</p>
                     </div>
                     <div className="col-span-2">
                       <p className="text-sm font-bold text-navy-900 mb-1">{e.full}</p>
@@ -917,14 +917,14 @@ export default function PillowCoversContent() {
               </div>
             </div>
             <div>
-              <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6 border-b border-gray-100 pb-3">PACKAGING OPTIONS</p>
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6 border-b border-gray-100 pb-3">PACKAGING OPTIONS</p>
               <div className="flex flex-col gap-4 mb-8">
                 {PACK_OPTIONS.map((p) => (
                   <div key={p.label} className="flex items-center gap-5 py-4 border-b border-gray-50">
                     <span className="text-2xl w-8 shrink-0" aria-hidden="true">{p.icon}</span>
                     <div className="flex-1">
                       <p className="font-semibold text-navy-900 text-sm">{p.label}</p>
-                      <p className="text-xs text-gray-400">{p.note}</p>
+                      <p className="text-xs text-gray-500">{p.note}</p>
                     </div>
                     <span className="w-6 h-6 rounded-full border-2 border-gray-200 flex items-center justify-center shrink-0">
                       <span className="w-2.5 h-2.5 rounded-full bg-pink-400" aria-hidden="true" />
@@ -1052,7 +1052,7 @@ export default function PillowCoversContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Get Started</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Source Pillow Covers?</h2>
-          <p className="text-gray-400 max-w-xl mx-auto mb-8 leading-relaxed">
+          <p className="text-gray-500 max-w-xl mx-auto mb-8 leading-relaxed">
             Construction, size and embellishment confirmed — submit your RFQ and receive factory matches and pricing within 3–5 working days.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

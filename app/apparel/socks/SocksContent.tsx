@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -370,7 +370,7 @@ export default function SocksContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 — 2 large cards */}
@@ -563,7 +563,7 @@ export default function SocksContent() {
                   <div key={s.abbr} className="bg-white rounded-xl p-3 border border-purple-100">
                     <p className="text-xs font-bold text-purple-600">{s.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{s.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{s.market}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -584,7 +584,7 @@ export default function SocksContent() {
                     <span className="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 text-[10px] font-bold flex items-center justify-center shrink-0">{e.term}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{e.full}</p>
-                      <p className="text-[10px] text-gray-400">{e.port}</p>
+                      <p className="text-[10px] text-gray-500">{e.port}</p>
                     </div>
                   </div>
                 ))}
@@ -634,7 +634,7 @@ export default function SocksContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -897,7 +897,7 @@ export default function SocksContent() {
                   <span className="absolute -top-3 left-6 text-[10px] font-bold text-gold bg-navy-900 px-3 py-1 rounded-full uppercase tracking-wider">Most Ordered</span>
                 )}
                 <p className={`text-2xl font-bold ${tier.featured ? "text-gold" : "text-navy-900"}`}>{tier.weight}</p>
-                <p className="text-xs text-gray-400 font-semibold">{tier.oz}</p>
+                <p className="text-xs text-gray-500 font-semibold">{tier.oz}</p>
                 <p className="text-sm font-bold text-gray-500 uppercase tracking-wider">{tier.label}</p>
                 <div className="w-full h-2 rounded-full overflow-hidden" style={{ background: "#c8cdd6", boxShadow: "inset 2px 2px 4px #b8bec8, inset -2px -2px 4px #f8fbff" }}>
                   <div className={`h-full rounded-full ${tier.color}`} style={{ width: `${tier.pct}%` }} aria-hidden="true" />
@@ -907,7 +907,7 @@ export default function SocksContent() {
             ))}
           </div>
           <div className="bg-white rounded-2xl p-6 border border-gray-200">
-            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Weight by Application</p>
+            <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">Weight by Application</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 ["No-Show / Liner Socks", "25–50 g/pair", "Smooth fine hand for formal and hidden footwear"],
@@ -935,7 +935,7 @@ export default function SocksContent() {
           <p className="text-gray-500 mb-3 max-w-2xl leading-relaxed">
             The most common sock composition worldwide is cotton / nylon / spandex. Below are the industry&rsquo;s leading commercial blends — the most frequently specified across fashion, athletic, medical and eco programmes globally.
           </p>
-          <p className="text-gray-400 text-sm mb-10 max-w-2xl leading-relaxed">
+          <p className="text-gray-500 text-sm mb-10 max-w-2xl leading-relaxed">
             The blends below cover the most commonly ordered compositions across global hosiery programmes. Bespoke ratios, custom yarn counts and blends not listed here are all available — state your exact specification in your RFQ and we source accordingly.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -1035,7 +1035,7 @@ export default function SocksContent() {
                 </div>
                 <p className="text-sm text-gray-500 leading-relaxed">{d.best}</p>
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Works with</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Works with</p>
                   <div className="flex flex-wrap gap-1.5">
                     {d.compat.map((c) => (
                       <span key={c} className="text-xs border border-indigo-100 text-indigo-700 bg-indigo-50 px-2.5 py-0.5 rounded-full">{c}</span>
@@ -1060,7 +1060,7 @@ export default function SocksContent() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Colour</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Colour Options</h2>
-          <p className="text-gray-400 mb-12 max-w-2xl leading-relaxed">
+          <p className="text-gray-500 mb-12 max-w-2xl leading-relaxed">
             Every colour programme from plain PMS-matched solids to full sublimation photographic prints. Lab dip approval before bulk production on all programmes.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -1081,7 +1081,7 @@ export default function SocksContent() {
                 <div>
                   <h3 className="text-base font-bold text-white">{c.type}</h3>
                 </div>
-                <p className="text-sm text-gray-400 leading-relaxed flex-1">{c.note}</p>
+                <p className="text-sm text-gray-500 leading-relaxed flex-1">{c.note}</p>
               </motion.div>
             ))}
           </div>
@@ -1291,7 +1291,7 @@ export default function SocksContent() {
       <section id="section-sustainability" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-xl mb-16">
-            <p className="text-xs font-semibold tracking-[0.3em] uppercase mb-4 text-gray-400">Ethics &amp; Environment</p>
+            <p className="text-xs font-semibold tracking-[0.3em] uppercase mb-4 text-gray-500">Ethics &amp; Environment</p>
             <h2 className="text-4xl sm:text-5xl font-light text-navy-900 mb-5 leading-[1.1]">
               Sustainable<br />Hosiery Sourcing
             </h2>

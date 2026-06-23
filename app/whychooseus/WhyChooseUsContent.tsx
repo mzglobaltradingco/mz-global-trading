@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -398,7 +398,7 @@ export default function WhyChooseUsContent() {
                 <h3 className="text-white text-xl sm:text-2xl font-bold leading-snug mb-3">
                   The Sourcing Partner<br />That Owns the Outcome
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-500 text-sm leading-relaxed">
                   From factory selection to pre-shipment inspection — every stage is managed,
                   documented and delivered to your standard. Not an order-placer. An accountable partner.
                 </p>
@@ -446,7 +446,7 @@ export default function WhyChooseUsContent() {
                 </svg>
               </div>
               <h3 className="text-navy-900 group-hover:text-white font-bold text-base mb-1.5 transition-colors">Certified Ethical Chain</h3>
-              <p className="text-gray-500 group-hover:text-gray-400 text-sm leading-relaxed transition-colors">
+              <p className="text-gray-500 group-hover:text-gray-500 text-sm leading-relaxed transition-colors">
                 GOTS, BSCI, Sedex, SA8000 — every factory meets your compliance requirements before we place an order.
               </p>
             </motion.div>
@@ -462,7 +462,7 @@ export default function WhyChooseUsContent() {
                 </svg>
               </div>
               <h3 className="text-navy-900 group-hover:text-white font-bold text-base mb-1.5 transition-colors">Custom OEM Programs</h3>
-              <p className="text-gray-500 group-hover:text-gray-400 text-sm leading-relaxed transition-colors">
+              <p className="text-gray-500 group-hover:text-gray-500 text-sm leading-relaxed transition-colors">
                 First sample to branded packaging — we manage the full development cycle to your exact specifications.
               </p>
             </motion.div>
@@ -475,7 +475,7 @@ export default function WhyChooseUsContent() {
               <p className="text-gold/70 text-xs font-semibold tracking-[0.2em] uppercase">Certifications</p>
               <div>
                 <p className="text-5xl font-bold text-white leading-none mt-3">10+</p>
-                <p className="text-gray-400 text-sm mt-1">International quality &amp; compliance standards recognised</p>
+                <p className="text-gray-500 text-sm mt-1">International quality &amp; compliance standards recognised</p>
               </div>
             </motion.div>
 
@@ -519,7 +519,7 @@ export default function WhyChooseUsContent() {
                 className={`w-full sm:w-auto px-6 py-3 rounded-lg text-sm font-bold transition-all duration-200 ${
                   activeTab === "manufacturer"
                     ? "bg-gold text-navy-900 shadow-md"
-                    : "text-gray-400 hover:text-white"
+                    : "text-gray-500 hover:text-white"
                 }`}
               >
                 vs. Direct Manufacturer
@@ -529,7 +529,7 @@ export default function WhyChooseUsContent() {
                 className={`w-full sm:w-auto px-6 py-3 rounded-lg text-sm font-bold transition-all duration-200 ${
                   activeTab === "agent"
                     ? "bg-gold text-navy-900 shadow-md"
-                    : "text-gray-400 hover:text-white"
+                    : "text-gray-500 hover:text-white"
                 }`}
               >
                 vs. Sourcing Agent
@@ -545,7 +545,7 @@ export default function WhyChooseUsContent() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -6 }}
               transition={{ duration: 0.2 }}
-              className="text-center text-gray-400 text-sm mb-8"
+              className="text-center text-gray-500 text-sm mb-8"
             >
               {activeTab === "manufacturer"
                 ? "Buying direct from a factory sounds simpler — until the first production problem."
@@ -564,7 +564,7 @@ export default function WhyChooseUsContent() {
               className="hidden sm:grid sm:grid-cols-[1fr_1fr_1fr] gap-x-3 mb-0"
             >
               <div className="px-4 py-3">
-                <p className="text-gray-400 text-xs font-semibold uppercase tracking-widest">Criteria</p>
+                <p className="text-gray-500 text-xs font-semibold uppercase tracking-widest">Criteria</p>
               </div>
               {/* MZ Global header */}
               <div className="bg-navy-900 rounded-t-xl px-5 py-4 flex flex-col items-center text-center relative">
@@ -572,14 +572,14 @@ export default function WhyChooseUsContent() {
                   Recommended
                 </span>
                 <p className="text-gold font-bold text-base mt-1">MZ Global Trading</p>
-                <p className="text-gray-400 text-xs mt-0.5">Sourcing Partner</p>
+                <p className="text-gray-500 text-xs mt-0.5">Sourcing Partner</p>
               </div>
               {/* Competitor header */}
               <div className="bg-gray-100 rounded-t-xl px-5 py-4 flex flex-col items-center text-center">
                 <p className="text-gray-600 font-semibold text-base mt-1">
                   {activeTab === "manufacturer" ? "Direct Manufacturer" : "Standard Sourcing Agent"}
                 </p>
-                <p className="text-gray-400 text-xs mt-0.5">
+                <p className="text-gray-500 text-xs mt-0.5">
                   {activeTab === "manufacturer" ? "Single Factory" : "Order Forwarder"}
                 </p>
               </div>
@@ -626,7 +626,7 @@ export default function WhyChooseUsContent() {
                     </div>
                     {/* Competitor row */}
                     <div className="px-4 py-3">
-                      <p className="text-gray-400 text-[11px] font-bold uppercase tracking-widest mb-2">
+                      <p className="text-gray-500 text-[11px] font-bold uppercase tracking-widest mb-2">
                         {activeTab === "manufacturer" ? "Direct Manufacturer" : "Sourcing Agent"}
                       </p>
                       <div className="flex items-start gap-2.5">
@@ -738,7 +738,7 @@ export default function WhyChooseUsContent() {
                     <h3 className="text-navy-900 font-bold text-base mb-2 group-hover:text-white transition-colors">
                       {r.title}
                     </h3>
-                    <p className="text-gray-500 text-sm leading-relaxed group-hover:text-gray-400 transition-colors">
+                    <p className="text-gray-500 text-sm leading-relaxed group-hover:text-gray-500 transition-colors">
                       {r.desc}
                     </p>
                   </div>
@@ -767,7 +767,7 @@ export default function WhyChooseUsContent() {
                 The World Buys From Pakistan. Here&apos;s Why.
               </h2>
               <div className="w-8 h-0.5 bg-gold/50 mb-6" />
-              <div className="space-y-4 text-gray-400 text-base leading-relaxed">
+              <div className="space-y-4 text-gray-500 text-base leading-relaxed">
                 <p>
                   Pakistan&apos;s textile industry isn&apos;t a hidden gem — it supplies some of the world&apos;s
                   largest retail brands, hospitality chains and institutional buyers. With a fully
@@ -963,7 +963,7 @@ export default function WhyChooseUsContent() {
           >
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Ready to Partner?</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Let&apos;s Work Together</h2>
-            <p className="text-gray-400 text-base max-w-xl mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-xl mx-auto mb-8">
               Tell us your sourcing requirements and we&apos;ll respond with a tailored proposal within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

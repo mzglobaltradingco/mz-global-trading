@@ -1,4 +1,4 @@
-import type { CSSProperties } from "react";
+﻿import type { CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -64,7 +64,7 @@ export default function PageHero({
                     {crumb.label}
                   </Link>
                 ) : (
-                  <span className={isLast ? "text-gold" : "text-gray-400"}>
+                  <span className={isLast ? "text-gold" : "text-gray-500"}>
                     {crumb.label}
                   </span>
                 )}

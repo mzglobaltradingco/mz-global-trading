@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -292,7 +292,7 @@ export default function TowelsContent() {
               {[{ val: "50+", label: "Vetted Factories" }, { val: "35+", label: "Export Markets" }, { val: "10+", label: "Certifications" }, { val: "6", label: "Constructions" }].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -307,7 +307,7 @@ export default function TowelsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 — Constructions (large) + Sizes + GSM */}
@@ -325,7 +325,7 @@ export default function TowelsContent() {
                   <div key={c.id} className="bg-white rounded-xl px-4 py-3 border border-amber-100 flex items-center gap-3">
                     <div className="flex-1">
                       <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                      <p className="text-xs text-gray-400">{c.gsm}</p>
+                      <p className="text-xs text-gray-500">{c.gsm}</p>
                     </div>
                     {c.badge && <span className="text-[10px] font-semibold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full shrink-0">{c.badge}</span>}
                   </div>
@@ -347,7 +347,7 @@ export default function TowelsContent() {
                   <div key={s.code} className="bg-white rounded-xl px-3 py-2.5 border border-sky-100 grid grid-cols-3 items-center gap-2">
                     <p className="text-xs font-bold text-sky-700">{s.code}</p>
                     <p className="text-xs font-semibold text-navy-900">{s.dims}</p>
-                    <p className="text-[10px] text-gray-400">{s.gsm}</p>
+                    <p className="text-[10px] text-gray-500">{s.gsm}</p>
                   </div>
                 ))}
               </div>
@@ -375,7 +375,7 @@ export default function TowelsContent() {
                     <div className="w-full h-1.5 bg-lime-100 rounded-full overflow-hidden">
                       <div className="h-full rounded-full" style={{ width: `${g.pct}%`, backgroundColor: g.hex }} aria-hidden="true" />
                     </div>
-                    <p className="text-[9px] text-gray-400 mt-0.5">{g.label}</p>
+                    <p className="text-[9px] text-gray-500 mt-0.5">{g.label}</p>
                   </div>
                 ))}
               </div>
@@ -399,7 +399,7 @@ export default function TowelsContent() {
                     <p className="text-xs font-semibold text-navy-900">{b.style}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 pl-1">+ 2 more border styles</p>
+                <p className="text-xs text-gray-500 pl-1">+ 2 more border styles</p>
               </div>
               <ExploreBtn sectionId="section-design" label="Explore Design Options" />
             </motion.div>
@@ -417,7 +417,7 @@ export default function TowelsContent() {
                   <div key={d.name} className="bg-white rounded-xl p-3 border border-slate-100">
                     <div className="flex justify-between items-start mb-2">
                       <p className="text-xs font-bold text-navy-900">{d.name}</p>
-                      <p className="text-[9px] text-gray-400">{d.subtitle}</p>
+                      <p className="text-[9px] text-gray-500">{d.subtitle}</p>
                     </div>
                     <div className="flex gap-1.5">{d.swatches.map((s, i) => <div key={i} className={`w-4 h-4 rounded-full ${s}`} aria-hidden="true" />)}</div>
                   </div>
@@ -493,7 +493,7 @@ export default function TowelsContent() {
                 {EXPORT_TERMS.map((e) => (
                   <div key={e.term} className="flex items-center gap-2 bg-white rounded-lg px-2.5 py-2 border border-teal-100">
                     <span className="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 text-[10px] font-bold flex items-center justify-center shrink-0">{e.term}</span>
-                    <div><p className="text-xs font-semibold text-navy-900">{e.full}</p><p className="text-[10px] text-gray-400">{e.port}</p></div>
+                    <div><p className="text-xs font-semibold text-navy-900">{e.full}</p><p className="text-[10px] text-gray-500">{e.port}</p></div>
                   </div>
                 ))}
               </div>
@@ -666,7 +666,7 @@ export default function TowelsContent() {
                 <div className="p-6">
                   <p className="text-2xl font-black text-navy-900 mb-1">{s.dims}</p>
                   <p className="font-semibold text-gray-600 mb-3">{s.name}</p>
-                  <p className="text-sm text-gray-400">{s.note}</p>
+                  <p className="text-sm text-gray-500">{s.note}</p>
                 </div>
               </motion.div>
             ))}
@@ -707,13 +707,13 @@ export default function TowelsContent() {
                 </div>
                 <div className="col-span-10 sm:col-span-3">
                   <p className={`font-bold text-sm ${g.featured ? "text-white" : "text-navy-900"}`}>{g.label}</p>
-                  <p className={`text-xs mt-0.5 ${g.featured ? "text-gray-300" : "text-gray-400"}`}>{g.note}</p>
+                  <p className={`text-xs mt-0.5 ${g.featured ? "text-gray-300" : "text-gray-500"}`}>{g.note}</p>
                 </div>
                 <div className="col-span-12 sm:col-span-5">
                   <div className={`w-full h-3 rounded-full ${g.featured ? "bg-white/10" : "bg-gray-200"}`} aria-hidden="true">
                     <div className="h-full rounded-full" style={{ width: `${g.pct}%`, backgroundColor: g.hex }} />
                   </div>
-                  <p className={`text-[10px] mt-1 ${g.featured ? "text-gray-400" : "text-gray-400"}`}>{g.pct}% of towel programmes</p>
+                  <p className={`text-[10px] mt-1 ${g.featured ? "text-gray-500" : "text-gray-500"}`}>{g.pct}% of towel programmes</p>
                 </div>
                 <div className="col-span-12 sm:col-span-3">
                   <p className={`text-xs font-semibold ${g.featured ? "text-gray-300" : "text-gray-500"}`}>{g.use}</p>
@@ -725,7 +725,7 @@ export default function TowelsContent() {
             {[["450–550 GSM", "Hotel standard — highest demand globally"], ["500 GSM", "Most-specified single GSM for retail bath towels"], ["550–650 GSM", "Luxury hotel and premium retail bath sheets"]].map(([val, label]) => (
               <div key={val} className="bg-navy-900 rounded-2xl p-6 text-center">
                 <p className="text-xl font-black text-gold">{val}</p>
-                <p className="text-xs text-gray-400 mt-1">{label}</p>
+                <p className="text-xs text-gray-500 mt-1">{label}</p>
               </div>
             ))}
           </div>
@@ -761,7 +761,7 @@ export default function TowelsContent() {
             {[["Dobby Border", "Most ordered border style for hotel institutional programmes"], ["Embroidery", "Standard logo branding for premium hotel and spa collections"], ["Sublimation Print", "Full-face design for beach and lifestyle retail towels"]].map(([title, desc]) => (
               <div key={title} className="text-center">
                 <p className="font-bold text-gold text-base mb-1">{title}</p>
-                <p className="text-xs text-gray-400 leading-relaxed">{desc}</p>
+                <p className="text-xs text-gray-500 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -793,7 +793,7 @@ export default function TowelsContent() {
                   <div className="flex items-center justify-between mb-3">
                     <div>
                       <p className="font-bold text-navy-900">{d.name}</p>
-                      <p className="text-xs text-gray-400">{d.subtitle}</p>
+                      <p className="text-xs text-gray-500">{d.subtitle}</p>
                     </div>
                     <div className="flex gap-2">
                       {d.swatches.map((s, i) => <div key={i} className={`w-6 h-6 rounded-full ${s}`} aria-hidden="true" />)}
@@ -866,7 +866,7 @@ export default function TowelsContent() {
           <div className="mt-8 bg-navy-900 rounded-2xl p-8 text-center">
             <p className="text-5xl font-black text-gold mb-2">35+</p>
             <p className="text-white font-semibold mb-1">Export Markets Served</p>
-            <p className="text-gray-400 text-sm">USA · UK · EU · Middle East · SE Asia · Australia · East Asia · South America · Russia/CIS</p>
+            <p className="text-gray-500 text-sm">USA · UK · EU · Middle East · SE Asia · Australia · East Asia · South America · Russia/CIS</p>
           </div>
           <BackToTop />
         </div>
@@ -903,16 +903,16 @@ export default function TowelsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Logistics</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Export, Packaging &amp; Indicative Timeline</h2>
-          <p className="text-gray-400 mb-14 max-w-2xl leading-relaxed">Pakistan towel export via Karachi Port Qasim. All major incoterms available. Packaging options from bulk carton to premium gift box.</p>
+          <p className="text-gray-500 mb-14 max-w-2xl leading-relaxed">Pakistan towel export via Karachi Port Qasim. All major incoterms available. Packaging options from bulk carton to premium gift box.</p>
 
           {/* Incoterms — industrial panel row */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
             {EXPORT_TERMS.map((e, i) => (
               <div key={e.term} className={`rounded-2xl p-5 border ${i === 0 ? "border-gold bg-gold/10" : "border-white/10 bg-white/5"}`}>
                 <p className={`text-2xl font-black mb-1 ${i === 0 ? "text-gold" : "text-white"}`}>{e.term}</p>
-                <p className="text-xs text-gray-400 mb-2">{e.full}</p>
+                <p className="text-xs text-gray-500 mb-2">{e.full}</p>
                 <p className="text-[10px] text-gold/70">{e.port}</p>
-                <p className="text-xs text-gray-400 mt-2 leading-snug">{e.desc}</p>
+                <p className="text-xs text-gray-500 mt-2 leading-snug">{e.desc}</p>
               </div>
             ))}
           </div>
@@ -965,7 +965,7 @@ export default function TowelsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Sustainability</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Responsible Towel Sourcing</h2>
-          <p className="text-gray-400 mb-12 max-w-2xl leading-relaxed">Our factory network holds GOTS, OEKO-TEX and BSCI certifications. Organic cotton, ethical audits, low-impact dyeing and eco packaging are all available on demand for any programme.</p>
+          <p className="text-gray-500 mb-12 max-w-2xl leading-relaxed">Our factory network holds GOTS, OEKO-TEX and BSCI certifications. Organic cotton, ethical audits, low-impact dyeing and eco packaging are all available on demand for any programme.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
             {SUSTAINABILITY_ITEMS.map((s, i) => (
               <motion.div key={s.title} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }} className="bg-white/5 border border-white/8 rounded-2xl p-6 hover:bg-white/8 transition-colors">
@@ -974,7 +974,7 @@ export default function TowelsContent() {
                   <span className="text-[10px] font-bold text-emerald-400 bg-emerald-900/30 border border-emerald-800/50 px-2.5 py-1 rounded-full">{s.tag}</span>
                 </div>
                 <h3 className="font-bold text-white mb-2">{s.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{s.desc}</p>
+                <p className="text-sm text-gray-500 leading-relaxed">{s.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -1039,7 +1039,7 @@ export default function TowelsContent() {
                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold" />
                       </span>
                     )}
-                    <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-bold transition-all ${faqOpen === i ? "border-gold bg-gold text-navy-900" : "border-gray-300 text-gray-400 group-hover:border-gold"}`}>{faqOpen === i ? "−" : "+"}</span>
+                    <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-bold transition-all ${faqOpen === i ? "border-gold bg-gold text-navy-900" : "border-gray-300 text-gray-500 group-hover:border-gold"}`}>{faqOpen === i ? "−" : "+"}</span>
                   </span>
                   <p className={`font-semibold leading-snug transition-colors ${faqOpen === i ? "text-navy-900" : "text-gray-700 group-hover:text-navy-900"}`}>{faq.q}</p>
                 </button>

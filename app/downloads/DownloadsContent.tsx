@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -752,7 +752,7 @@ export default function DownloadsContent() {
             <div className="w-full lg:w-96">
               <label htmlFor="doc-search" className="sr-only">Search documents</label>
               <div className="relative">
-                <svg className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <svg className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
                 <input
@@ -761,7 +761,7 @@ export default function DownloadsContent() {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   placeholder="Search checklists, templates, references..."
-                  className="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-full text-sm text-navy-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-all"
+                  className="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-full text-sm text-navy-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-all"
                 />
               </div>
             </div>
@@ -779,7 +779,7 @@ export default function DownloadsContent() {
                     }`}
                   >
                     {cat.label}
-                    <span className={`ml-2 text-xs ${activeCategory === cat.id ? "text-gold" : "text-gray-400"}`}>
+                    <span className={`ml-2 text-xs ${activeCategory === cat.id ? "text-gold" : "text-gray-500"}`}>
                       {cat.id === "all"
                         ? documents.length
                         : documents.filter((d) => d.category === cat.id).length}
@@ -830,7 +830,7 @@ export default function DownloadsContent() {
                     </p>
 
                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-50">
-                      <span className="text-gray-400 text-xs">{doc.length}</span>
+                      <span className="text-gray-500 text-xs">{doc.length}</span>
                       <Link
                         href={`/downloads/${doc.slug}/`}
                         className="inline-flex items-center gap-1.5 text-navy-900 text-xs font-bold hover:text-gold transition-colors group/btn"
@@ -856,7 +856,7 @@ export default function DownloadsContent() {
 
           {filtered.length === 0 && (
             <div className="border border-dashed border-gray-200 rounded-2xl px-6 py-12 text-center">
-              <p className="text-gray-400 text-sm">No document matches — try a different search or category.</p>
+              <p className="text-gray-500 text-sm">No document matches — try a different search or category.</p>
             </div>
           )}
         </div>
@@ -878,7 +878,7 @@ export default function DownloadsContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Request a Custom Document
             </h2>
-            <p className="text-gray-400 text-base max-w-lg mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-lg mx-auto mb-8">
               Size charts, market-specific compliance summaries, custom QC checklists — tell us what
               your team needs and we&apos;ll prepare it for your program.
             </p>

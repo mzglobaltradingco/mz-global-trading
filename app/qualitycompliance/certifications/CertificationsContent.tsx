@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -414,7 +414,7 @@ export default function CertificationsContent() {
           >
             <div className="flex-1">
               <p className="text-white font-semibold text-sm">Need compliance documentation before submitting an RFQ?</p>
-              <p className="text-gray-400 text-sm mt-1 leading-relaxed">
+              <p className="text-gray-500 text-sm mt-1 leading-relaxed">
                 Contact us with the certification standards your supply chain requires and we will confirm
                 which factories hold current, valid certifications for your product category.
               </p>
@@ -505,7 +505,7 @@ export default function CertificationsContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Ready to Source From Certified Factories?
             </h2>
-            <p className="text-gray-400 text-base max-w-xl mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-xl mx-auto mb-8">
               Tell us your product requirements and compliance standards — we will match you with the right
               certified factory from our network.
             </p>

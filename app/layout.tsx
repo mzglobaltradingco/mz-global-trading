@@ -162,7 +162,7 @@ export default function RootLayout({
             Consent state is already applied by consent-init above. */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-BEG0E64X9E"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script id="ga4-config" strategy="afterInteractive">{`
           gtag('js', new Date());

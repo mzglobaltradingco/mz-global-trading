@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import "react-international-phone/style.css";
 
@@ -81,7 +81,7 @@ const CountryListItems = memo(function CountryListItems({
 
   if (filtered.length === 0) {
     return (
-      <li className="px-3 py-6 text-center text-gray-400 text-sm list-none">
+      <li className="px-3 py-6 text-center text-gray-500 text-sm list-none">
         No results
       </li>
     );
@@ -109,7 +109,7 @@ const CountryListItems = memo(function CountryListItems({
           >
             <FlagImage iso2={iso2} size="16px" className="shrink-0" />
             <span className="flex-1 truncate">{name}</span>
-            <span className="text-gray-400 text-xs shrink-0">
+            <span className="text-gray-500 text-xs shrink-0">
               +{dialCode}
             </span>
           </li>
@@ -281,7 +281,7 @@ export function PhoneInputField({
               strokeLinecap="round"
               strokeLinejoin="round"
               aria-hidden="true"
-              className={`text-gray-400 transition-transform duration-150 ${
+              className={`text-gray-500 transition-transform duration-150 ${
                 open ? "rotate-180" : ""
               }`}
             >
@@ -361,7 +361,7 @@ export function PhoneInputField({
             Mobile only — landlines and VoIP not accepted
           </p>
         ) : (
-          <p className="text-xs text-gray-400">Mobile number — include country code</p>
+          <p className="text-xs text-gray-500">Mobile number — include country code</p>
         )
       )}
     </div>

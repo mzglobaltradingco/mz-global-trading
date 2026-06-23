@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -219,7 +219,7 @@ export default function ContactUsContent() {
                   <li className="flex items-start gap-4">
                     <span className="mt-0.5 text-gold shrink-0"><IconEmail /></span>
                     <div>
-                      <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Email</p>
+                      <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">Email</p>
                       <a href="mailto:info@mzglobaltrading.com"
                         className="text-navy-900 hover:text-gold transition-colors text-sm font-medium">
                         info@mzglobaltrading.com
@@ -229,7 +229,7 @@ export default function ContactUsContent() {
                   <li className="flex items-start gap-4">
                     <span className="mt-0.5 text-gold shrink-0"><IconPhone /></span>
                     <div>
-                      <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Phone</p>
+                      <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">Phone</p>
                       <a href="tel:+923008256203"
                         className="text-navy-900 hover:text-gold transition-colors text-sm font-medium">
                         +92 300 8256203
@@ -239,7 +239,7 @@ export default function ContactUsContent() {
                   <li className="flex items-start gap-4">
                     <span className="mt-0.5 text-gold shrink-0"><IconPin /></span>
                     <div>
-                      <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Office</p>
+                      <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">Office</p>
                       <p className="text-navy-900 text-sm font-medium leading-relaxed">
                         Office G20, Ground Floor<br />
                         Columbus Tower, Main Clifton Road<br />
@@ -250,7 +250,7 @@ export default function ContactUsContent() {
                   <li className="flex items-start gap-4">
                     <span className="mt-0.5 text-gold shrink-0"><IconClock /></span>
                     <div>
-                      <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Business Hours</p>
+                      <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">Business Hours</p>
                       <p className="text-navy-900 text-sm font-medium leading-relaxed">
                         Monday – Friday<br />
                         9:00 AM – 6:00 PM PKT (UTC +5)
@@ -404,7 +404,7 @@ export default function ContactUsContent() {
                       `}</style>
                     </div>
                   </div>
-                  <p className="text-gray-400 text-xs pt-1">
+                  <p className="text-gray-500 text-xs pt-1">
                     By submitting this form you agree that MZ Global Trading may use your details to respond to your enquiry.{" "}
                     <Link href="/privacypolicy/" className="underline underline-offset-2 hover:text-gold transition-colors">
                       Privacy Policy
@@ -449,7 +449,7 @@ export default function ContactUsContent() {
                 <div className="relative text-center">
                   <span className="text-gold mb-3 block"><IconMapPin /></span>
                   <p className="text-white font-semibold text-base mb-1">Columbus Tower, Clifton</p>
-                  <p className="text-gray-400 text-sm mb-6">Main Clifton Road, Karachi 75600, Pakistan</p>
+                  <p className="text-gray-500 text-sm mb-6">Main Clifton Road, Karachi 75600, Pakistan</p>
                   <button onClick={() => setMapLoaded(true)}
                     className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-navy-900 font-bold text-sm rounded-lg hover:bg-yellow-400 transition-colors">
                     Load Map
@@ -475,7 +475,7 @@ export default function ContactUsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="text-white font-bold text-lg">Have a specific product in mind?</p>
-            <p className="text-gray-400 text-sm mt-1">
+            <p className="text-gray-500 text-sm mt-1">
               Our structured RFQ form covers material specs, certifications, quantities, and delivery terms — and gets you a formal quote faster.
             </p>
           </div>

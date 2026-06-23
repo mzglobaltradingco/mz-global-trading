@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -37,7 +37,7 @@ export default function NewsletterStrip() {
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Subscribe via RSS
           </h2>
-          <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-lg mx-auto">
+          <p className="text-gray-500 text-sm leading-relaxed mb-8 max-w-lg mx-auto">
             Get new articles the moment they publish — no email required. Paste the feed URL into any RSS reader: Feedly, Apple News, Outlook, or your browser.
           </p>
 

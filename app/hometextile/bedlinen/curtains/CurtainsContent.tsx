@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -353,7 +353,7 @@ export default function CurtainsContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -370,7 +370,7 @@ export default function CurtainsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 */}
@@ -388,7 +388,7 @@ export default function CurtainsContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3 border border-slate-100">
                     <p className="text-xs font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5">{c.gsm}</p>
                     <p className="text-[10px] text-slate-500 mt-1 leading-snug">{c.light}</p>
                   </div>
                 ))}
@@ -591,7 +591,7 @@ export default function CurtainsContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.title}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -642,7 +642,7 @@ export default function CurtainsContent() {
           <div className="flex items-start gap-4 mb-12">
             <div className="w-px h-16 bg-gold/40 mt-1 hidden sm:block" aria-hidden="true" />
             <div>
-              <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-400 mb-4">No. 01 / Fabric</p>
+              <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-500 mb-4">No. 01 / Fabric</p>
               <h2 className="text-5xl sm:text-6xl font-bold text-navy-900 leading-[1] mb-8">
                 Six<br />Constructions
               </h2>
@@ -685,11 +685,11 @@ export default function CurtainsContent() {
                 </div>
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="bg-gray-50 rounded-xl p-4">
-                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Light Performance</p>
+                    <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Light Performance</p>
                     <p className="text-sm font-semibold text-navy-900">{ac.light}</p>
                   </div>
                   <div className="bg-gray-50 rounded-xl p-4">
-                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">GSM Range</p>
+                    <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">GSM Range</p>
                     <p className="text-sm font-bold text-gold">{ac.gsm}</p>
                   </div>
                 </div>
@@ -701,7 +701,7 @@ export default function CurtainsContent() {
               </div>
               <div className="flex flex-col gap-4">
                 <div className="border border-gray-100 rounded-2xl p-6 shadow-xs">
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Best For</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Best For</p>
                   <div className="flex flex-wrap gap-2">
                     {ac.best.map((b) => (
                       <span key={b} className="text-xs text-navy-900 bg-gray-100 px-3 py-1 rounded-full">{b}</span>
@@ -709,7 +709,7 @@ export default function CurtainsContent() {
                   </div>
                 </div>
                 <div className="border border-gray-100 rounded-2xl p-6 shadow-xs">
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Key Markets</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Key Markets</p>
                   <div className="flex flex-wrap gap-2">
                     {ac.markets.map((m) => (
                       <span key={m} className="text-xs text-gold bg-gold/10 border border-gold/20 px-3 py-1 rounded-full">{m}</span>
@@ -744,7 +744,7 @@ export default function CurtainsContent() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 leading-tight tracking-tight">{h.name.toUpperCase()}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-3 max-w-lg">{h.desc}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-3 max-w-lg">{h.desc}</p>
                   <span className="inline-block text-xs font-semibold text-gold/80 bg-gold/10 border border-gold/20 px-3 py-1 rounded-full">{h.market}</span>
                 </div>
               </motion.div>
@@ -788,7 +788,7 @@ export default function CurtainsContent() {
                     <p className="text-gold text-xs font-semibold">{d.name}</p>
                   </div>
                 </div>
-                <p className="text-gray-400 text-xs leading-relaxed">{d.market}</p>
+                <p className="text-gray-500 text-xs leading-relaxed">{d.market}</p>
               </motion.div>
             ))}
           </div>
@@ -796,7 +796,7 @@ export default function CurtainsContent() {
             <span className="text-gold text-lg shrink-0" aria-hidden="true">📏</span>
             <div>
               <p className="text-white text-sm font-semibold mb-1">Hotel Contract Specification</p>
-              <p className="text-gray-400 text-sm leading-relaxed">Hotel room curtains are always specified to exact floor-to-ceiling drop per room type. Include architectural drawings or room specifications in your RFQ for contract supply.</p>
+              <p className="text-gray-500 text-sm leading-relaxed">Hotel room curtains are always specified to exact floor-to-ceiling drop per room type. Include architectural drawings or room specifications in your RFQ for contract supply.</p>
             </div>
           </div>
           <BackToTop dark />
@@ -822,10 +822,10 @@ export default function CurtainsContent() {
                   <span className="w-10 h-10 rounded-xl bg-gold/10 text-gold text-xs font-bold flex items-center justify-center shrink-0">{d.code}</span>
                   <h3 className="text-white font-bold text-base leading-tight">{d.name}</h3>
                 </div>
-                <p className="text-gray-400 text-xs uppercase tracking-wider font-semibold">{d.method}</p>
+                <p className="text-gray-500 text-xs uppercase tracking-wider font-semibold">{d.method}</p>
                 <p className="text-gray-300 text-sm leading-relaxed">{d.best}</p>
                 <div className="bg-white/5 border border-white/10 rounded-lg px-4 py-3">
-                  <p className="text-gray-400 text-xs leading-relaxed">{d.note}</p>
+                  <p className="text-gray-500 text-xs leading-relaxed">{d.note}</p>
                 </div>
               </motion.div>
             ))}
@@ -837,7 +837,7 @@ export default function CurtainsContent() {
       {/* ═══════ SECTION 5 — COLOURS — MONOCHROME UI ═══════ */}
       <section id="section-colours" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-gray-400 text-xs font-semibold tracking-[0.2em] uppercase mb-2">Colour</p>
+          <p className="text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase mb-2">Colour</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-3">Colour Programs for Curtains</h2>
           <p className="text-gray-500 mb-10 max-w-2xl leading-relaxed">
             Curtain colour specification is more constrained than bedding — blackout-backed panels have a reduced reactive dye colour range versus unlined constructions. Full PMS available on unlined and lined plain weave.
@@ -861,7 +861,7 @@ export default function CurtainsContent() {
                   <h3 className="text-base font-bold text-navy-900">{c.name}</h3>
                   <p className="text-sm text-gray-500 mt-0.5">{c.desc}</p>
                 </div>
-                <p className="text-xs text-gray-400 shrink-0 sm:text-right">{i === 4 ? "Lab dip approval required" : "Available in stock colours"}</p>
+                <p className="text-xs text-gray-500 shrink-0 sm:text-right">{i === 4 ? "Lab dip approval required" : "Available in stock colours"}</p>
               </motion.div>
             ))}
           </div>
@@ -962,7 +962,7 @@ export default function CurtainsContent() {
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-1">
                         <span className="text-xs font-semibold text-navy-900">{s.name}</span>
-                        <span className="text-xs text-gray-400">{s.share}%</span>
+                        <span className="text-xs text-gray-500">{s.share}%</span>
                       </div>
                       <div className="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
                         <div className={`h-full rounded-full ${s.color}`} style={{ width: `${s.share}%` }} aria-hidden="true" />
@@ -971,7 +971,7 @@ export default function CurtainsContent() {
                   </div>
                 ))}
               </div>
-              <p className="text-xs text-gray-400 mt-6">Indicative demand distribution — actual split varies by season and market.</p>
+              <p className="text-xs text-gray-500 mt-6">Indicative demand distribution — actual split varies by season and market.</p>
             </div>
           </div>
           <BackToTop />
@@ -1005,7 +1005,7 @@ export default function CurtainsContent() {
                   <Image src={c.img} alt={`${c.name} — ${c.full}`} width={80} height={48} className="object-contain max-h-12" />
                 </div>
                 <p className="text-navy-900 text-xs font-bold text-center">{c.name}</p>
-                <p className="text-gray-400 text-[10px] text-center leading-snug">{c.full}</p>
+                <p className="text-gray-500 text-[10px] text-center leading-snug">{c.full}</p>
               </motion.div>
             ))}
           </div>
@@ -1023,13 +1023,13 @@ export default function CurtainsContent() {
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
               <div className="border-t border-gray-200 pt-8 mb-8">
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-6">Incoterms</p>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6">Incoterms</p>
                 <div className="flex flex-col gap-0 divide-y divide-gray-100">
                   {EXPORT_TERMS.map((e) => (
                     <div key={e.term} className="py-5 flex items-start gap-6">
                       <div className="shrink-0 w-16">
                         <p className="text-2xl font-bold text-navy-900">{e.term}</p>
-                        <p className="text-xs text-gray-400">{e.port}</p>
+                        <p className="text-xs text-gray-500">{e.port}</p>
                       </div>
                       <div>
                         <p className="text-sm font-semibold text-navy-900">{e.full}</p>
@@ -1042,7 +1042,7 @@ export default function CurtainsContent() {
             </div>
             <div>
               <div className="border-t border-gray-200 pt-8 mb-8">
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-6">Packaging Options</p>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6">Packaging Options</p>
                 <div className="flex flex-col gap-4">
                   {[
                     { label: "Individual polybag per panel", note: "Standard retail and wholesale" },
@@ -1054,14 +1054,14 @@ export default function CurtainsContent() {
                       <div className="w-2 h-2 rounded-full bg-gold shrink-0 mt-1.5" aria-hidden="true" />
                       <div>
                         <p className="text-sm font-semibold text-navy-900">{p.label}</p>
-                        <p className="text-xs text-gray-400">{p.note}</p>
+                        <p className="text-xs text-gray-500">{p.note}</p>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
               <div className="border-t border-gray-200 pt-6">
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">Lead Time Note</p>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Lead Time Note</p>
                 <div className="bg-amber-50 border border-amber-200 rounded-xl px-5 py-4">
                   <p className="text-amber-800 text-sm leading-relaxed">Lead times are indicative only and subject to factory scheduling, material availability and order complexity. FR treatment or embroidery on curtain panels typically adds 7–10 working days.</p>
                 </div>
@@ -1227,7 +1227,7 @@ export default function CurtainsContent() {
           >
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Get Started</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Source Curtains?</h2>
-            <p className="text-gray-400 max-w-xl mx-auto mb-8 leading-relaxed">
+            <p className="text-gray-500 max-w-xl mx-auto mb-8 leading-relaxed">
               Construction, heading type and drop confirmed — our RFQ takes 3 minutes. Factory match and quotation returned within 3–5 working days.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

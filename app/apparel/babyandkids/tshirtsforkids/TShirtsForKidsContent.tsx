@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -354,7 +354,7 @@ export default function TShirtsForKidsContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -371,7 +371,7 @@ export default function TShirtsForKidsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1: Constructions + Age Size Guide */}
@@ -390,7 +390,7 @@ export default function TShirtsForKidsContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3 border border-green-100">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                     {c.badge && <span className="mt-1.5 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{c.badge}</span>}
                   </div>
                 ))}
@@ -414,9 +414,9 @@ export default function TShirtsForKidsContent() {
                     <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap ${a.color}`}>{a.tag}</span>
                     <div className="flex-1 min-w-0">
                       <p className="text-xs font-semibold text-navy-900">{a.group}</p>
-                      <p className="text-xs text-gray-400 truncate">{a.ages}</p>
+                      <p className="text-xs text-gray-500 truncate">{a.ages}</p>
                     </div>
-                    <span className="text-xs text-gray-400 whitespace-nowrap hidden sm:block">{a.chest}</span>
+                    <span className="text-xs text-gray-500 whitespace-nowrap hidden sm:block">{a.chest}</span>
                   </div>
                 ))}
               </div>
@@ -436,7 +436,7 @@ export default function TShirtsForKidsContent() {
                   <div key={t.gsm}>
                     <div className="flex justify-between text-xs mb-1">
                       <span className="font-medium text-navy-900">{t.gsm}</span>
-                      <span className="text-gray-400">{t.name}</span>
+                      <span className="text-gray-500">{t.name}</span>
                     </div>
                     <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
                       <div className={`h-full rounded-full ${t.color}`} style={{ width: `${t.pct}%` }} />
@@ -653,7 +653,7 @@ export default function TShirtsForKidsContent() {
                 <p className="text-xs font-semibold text-green-600 mb-3">{c.gsm}</p>
                 <p className="text-xs text-gray-500 leading-relaxed mb-4">{c.detail}</p>
                 <div className="border-t border-gray-100 pt-3">
-                  <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-1">Best for</p>
+                  <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-1">Best for</p>
                   <div className="flex flex-wrap gap-1.5">
                     {c.best.map((b) => (
                       <span key={b} className="text-[10px] bg-green-50 text-green-700 px-2 py-0.5 rounded-full">{b}</span>
@@ -661,7 +661,7 @@ export default function TShirtsForKidsContent() {
                   </div>
                 </div>
                 <div className="mt-3 border-t border-gray-100 pt-3">
-                  <p className="text-[10px] text-gray-400 leading-relaxed">{c.spec}</p>
+                  <p className="text-[10px] text-gray-500 leading-relaxed">{c.spec}</p>
                 </div>
               </motion.div>
             ))}
@@ -696,19 +696,19 @@ export default function TShirtsForKidsContent() {
                     <div className="hidden lg:block absolute left-0 top-2 w-3 h-3 rounded-full border-2 border-blue-300 bg-white" aria-hidden="true" />
                     <div className="bg-blue-50 rounded-xl p-4 grid grid-cols-2 lg:grid-cols-4 gap-3">
                       <div>
-                        <p className="text-[10px] text-gray-400 font-semibold uppercase tracking-wider">Age Range</p>
+                        <p className="text-[10px] text-gray-500 font-semibold uppercase tracking-wider">Age Range</p>
                         <p className="text-sm font-semibold text-navy-900 mt-0.5">{a.ages}</p>
                       </div>
                       <div>
-                        <p className="text-[10px] text-gray-400 font-semibold uppercase tracking-wider">Chest</p>
+                        <p className="text-[10px] text-gray-500 font-semibold uppercase tracking-wider">Chest</p>
                         <p className="text-sm font-semibold text-navy-900 mt-0.5">{a.chest}</p>
                       </div>
                       <div>
-                        <p className="text-[10px] text-gray-400 font-semibold uppercase tracking-wider">Height</p>
+                        <p className="text-[10px] text-gray-500 font-semibold uppercase tracking-wider">Height</p>
                         <p className="text-sm font-semibold text-navy-900 mt-0.5">{a.height}</p>
                       </div>
                       <div>
-                        <p className="text-[10px] text-gray-400 font-semibold uppercase tracking-wider">Notes</p>
+                        <p className="text-[10px] text-gray-500 font-semibold uppercase tracking-wider">Notes</p>
                         <p className="text-xs text-gray-600 mt-0.5 leading-tight">{a.note}</p>
                       </div>
                     </div>
@@ -747,7 +747,7 @@ export default function TShirtsForKidsContent() {
                 <div className={`text-xs font-semibold mb-4 ${t.featured ? "text-gold/80" : "text-purple-600"}`}>{t.season}</div>
                 <p className={`text-sm leading-relaxed mb-4 ${t.featured ? "text-gray-300" : "text-gray-600"}`}>{t.desc}</p>
                 <div className={`border-t pt-4 ${t.featured ? "border-white/10" : "border-gray-100"}`}>
-                  <p className={`text-[10px] font-semibold uppercase tracking-wider mb-1 ${t.featured ? "text-gray-400" : "text-gray-400"}`}>Primary Markets</p>
+                  <p className={`text-[10px] font-semibold uppercase tracking-wider mb-1 ${t.featured ? "text-gray-500" : "text-gray-500"}`}>Primary Markets</p>
                   <p className={`text-xs ${t.featured ? "text-gray-300" : "text-gray-600"}`}>{t.market}</p>
                 </div>
               </motion.div>
@@ -876,7 +876,7 @@ export default function TShirtsForKidsContent() {
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Export Markets</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Kids Apparel Export Markets</h2>
-            <p className="text-gray-400 max-w-2xl">Serving children&rsquo;s brands, baby boutiques and wholesale distributors across 35+ markets. Certification requirements vary by market — GOTS and OEKO-TEX Class 1 demanded in EU, Japan and premium USA.</p>
+            <p className="text-gray-500 max-w-2xl">Serving children&rsquo;s brands, baby boutiques and wholesale distributors across 35+ markets. Certification requirements vary by market — GOTS and OEKO-TEX Class 1 demanded in EU, Japan and premium USA.</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {SECTORS.map((s, i) => (
@@ -889,7 +889,7 @@ export default function TShirtsForKidsContent() {
                   <span className="w-9 h-9 rounded-xl bg-gold/20 text-gold text-xs font-bold flex items-center justify-center">{s.abbr}</span>
                   <h3 className="text-sm font-bold text-white">{s.name}</h3>
                 </div>
-                <p className="text-xs text-gray-400 leading-relaxed mb-3">{s.detail}</p>
+                <p className="text-xs text-gray-500 leading-relaxed mb-3">{s.detail}</p>
                 <p className="text-[10px] text-gold/70 font-semibold">{s.market}</p>
               </motion.div>
             ))}
@@ -902,7 +902,7 @@ export default function TShirtsForKidsContent() {
             ].map((stat) => (
               <div key={stat.label} className="text-center border border-white/10 rounded-xl p-5">
                 <p className="text-3xl font-bold text-gold">{stat.val}</p>
-                <p className="text-xs text-gray-400 mt-1">{stat.label}</p>
+                <p className="text-xs text-gray-500 mt-1">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -975,7 +975,7 @@ export default function TShirtsForKidsContent() {
                         </td>
                         <td className="px-4 py-3">
                           <p className="text-xs font-semibold text-navy-900">{t.full}</p>
-                          <p className="text-xs text-gray-400 mt-0.5">{t.desc}</p>
+                          <p className="text-xs text-gray-500 mt-0.5">{t.desc}</p>
                         </td>
                         <td className="px-4 py-3 hidden sm:table-cell">
                           <p className="text-xs text-gray-500">{t.port}</p>

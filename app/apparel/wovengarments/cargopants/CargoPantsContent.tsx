@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -396,7 +396,7 @@ export default function CargoPantsContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -418,7 +418,7 @@ export default function CargoPantsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* ROW 1 */}
@@ -442,7 +442,7 @@ export default function CargoPantsContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3.5 border border-neutral-200">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                     <p className="text-xs text-neutral-600 mt-1 leading-tight">{c.best[0]}</p>
                     {c.badge && (
                       <span className="mt-1.5 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">
@@ -478,7 +478,7 @@ export default function CargoPantsContent() {
                     </span>
                     <div>
                       <p className="text-sm font-semibold text-navy-900">{f.name}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{f.ease}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{f.ease}</p>
                       <p className="text-xs text-stone-600 mt-0.5">{f.market}</p>
                     </div>
                   </div>
@@ -512,7 +512,7 @@ export default function CargoPantsContent() {
                       <div className={`h-full rounded-full ${t.color}`} style={{ width: `${t.pct}%` }} aria-hidden="true" />
                     </div>
                     <p className="text-[10px] font-semibold text-amber-700">{t.season}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{t.market}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{t.market}</p>
                   </div>
                 ))}
               </div>
@@ -536,7 +536,7 @@ export default function CargoPantsContent() {
                     <span className="w-6 h-6 rounded bg-zinc-100 text-zinc-700 text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">{d.code}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{d.method}</p>
-                      <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{d.compat[0]}{d.compat.length > 1 ? ` +${d.compat.length - 1}` : ""}</p>
+                      <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{d.compat[0]}{d.compat.length > 1 ? ` +${d.compat.length - 1}` : ""}</p>
                     </div>
                   </div>
                 ))}
@@ -564,7 +564,7 @@ export default function CargoPantsContent() {
                         <div key={i} className={`w-4 h-4 rounded-full ${s}`} aria-hidden="true" />
                       ))}
                     </div>
-                    <p className="text-[10px] text-gray-400">{d.subtitle}</p>
+                    <p className="text-[10px] text-gray-500">{d.subtitle}</p>
                   </div>
                 ))}
               </div>
@@ -616,7 +616,7 @@ export default function CargoPantsContent() {
                   <div key={s.abbr} className="bg-white rounded-xl p-3 border border-teal-100">
                     <p className="text-xs font-bold text-teal-600">{s.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{s.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{s.market}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -665,7 +665,7 @@ export default function CargoPantsContent() {
                     <span className="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 text-[10px] font-bold flex items-center justify-center shrink-0">{e.term}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{e.full}</p>
-                      <p className="text-[10px] text-gray-400">{e.port}</p>
+                      <p className="text-[10px] text-gray-500">{e.port}</p>
                     </div>
                   </div>
                 ))}
@@ -721,7 +721,7 @@ export default function CargoPantsContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -778,7 +778,7 @@ export default function CargoPantsContent() {
             <div>
               <p className="font-mono text-teal-400/70 text-xs tracking-[0.3em] uppercase mb-2">[TECHNICAL SPECIFICATION — CARGO CONSTRUCTIONS]</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white">Fabric Constructions</h2>
-              <p className="text-gray-400 mt-3 max-w-2xl leading-relaxed">
+              <p className="text-gray-500 mt-3 max-w-2xl leading-relaxed">
                 Cargo pants performance starts with fabric construction. Each build has distinct durability profile, finish compatibility and end-use application.
               </p>
             </div>
@@ -912,7 +912,7 @@ export default function CargoPantsContent() {
             {[["XS–3XL", "Standard size range"], ["US / UK / EU", "Size standards"], ["Custom", "Size spec accepted"]].map(([val, label]) => (
               <div key={label}>
                 <p className="text-2xl sm:text-3xl font-bold text-navy-900">{val}</p>
-                <p className="text-xs text-gray-400 mt-1 uppercase tracking-wider">{label}</p>
+                <p className="text-xs text-gray-500 mt-1 uppercase tracking-wider">{label}</p>
               </div>
             ))}
           </div>
@@ -938,7 +938,7 @@ export default function CargoPantsContent() {
               { label: "FR Min.", val: "250 GSM", sub: "For FR treatment" },
             ].map((m) => (
               <div key={m.label} className="bg-gray-50 rounded-2xl p-5 border border-gray-100 shadow-xs">
-                <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">{m.label}</p>
+                <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">{m.label}</p>
                 <p className="text-2xl font-bold text-navy-900">{m.val}</p>
                 <p className="text-xs text-gray-500 mt-1">{m.sub}</p>
               </div>
@@ -951,13 +951,13 @@ export default function CargoPantsContent() {
                   <span className="inline-block mb-3 text-[10px] font-bold text-gold bg-gold/10 px-3 py-1 rounded-full uppercase tracking-wider">Most Ordered</span>
                 )}
                 <p className={`text-3xl font-bold mb-1 ${tier.featured ? "text-gold" : "text-navy-900"}`}>{tier.gsm}</p>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">{tier.name}</p>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">{tier.name}</p>
                 <p className="text-sm font-semibold text-navy-900 mb-3">{tier.season}</p>
                 <div className="mb-4">
                   <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
                     <div className={`h-full rounded-full ${tier.featured ? "bg-gold" : "bg-navy-900/30"}`} style={{ width: `${tier.pct}%` }} aria-hidden="true" />
                   </div>
-                  <p className="text-xs text-gray-400 mt-1">{tier.pct}% of orders</p>
+                  <p className="text-xs text-gray-500 mt-1">{tier.pct}% of orders</p>
                 </div>
                 <p className="text-sm text-gray-500 leading-relaxed">{tier.desc}</p>
                 <p className="text-xs text-gold font-semibold mt-3">{tier.market}</p>
@@ -1024,7 +1024,7 @@ export default function CargoPantsContent() {
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed flex-1">{d.best}</p>
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Compatible Constructions</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Compatible Constructions</p>
                   <div className="flex flex-wrap gap-1.5">
                     {d.compat.map((c) => (
                       <span key={c} className="text-[11px] bg-white border border-gray-200 text-gray-600 px-2.5 py-1 rounded">{c}</span>
@@ -1068,7 +1068,7 @@ export default function CargoPantsContent() {
                   <h3 className="text-base font-bold text-white">{d.name}</h3>
                   <p className="text-xs text-gray-500 mt-0.5">{d.subtitle}</p>
                 </div>
-                <p className="text-sm text-gray-400 leading-relaxed flex-1">{d.note}</p>
+                <p className="text-sm text-gray-500 leading-relaxed flex-1">{d.note}</p>
               </motion.div>
             ))}
           </div>
@@ -1196,7 +1196,7 @@ export default function CargoPantsContent() {
                     <Image src={c.img} alt={`${c.name} — ${c.full}`} width={80} height={40} className="object-contain h-full w-auto" />
                   </div>
                   <p className="text-sm font-bold text-navy-900">{c.name}</p>
-                  <p className="text-[11px] text-gray-400 leading-snug flex-1">{c.desc}</p>
+                  <p className="text-[11px] text-gray-500 leading-snug flex-1">{c.desc}</p>
                   <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full w-fit ${
                     c.tier === "Premium" ? "bg-gold/15 text-gold" : c.tier === "Optional" ? "bg-gray-100 text-gray-500" : "bg-green-50 text-green-700"
                   }`}>{c.tier}</span>
@@ -1235,7 +1235,7 @@ export default function CargoPantsContent() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-navy-900">{e.term}</p>
-                    <p className="text-xs text-gray-400">{e.full}</p>
+                    <p className="text-xs text-gray-500">{e.full}</p>
                   </div>
                 </div>
                 <p className="text-xs text-gold font-semibold">📍 {e.port}</p>
@@ -1256,7 +1256,7 @@ export default function CargoPantsContent() {
               >
                 <span className="text-2xl" aria-hidden="true">{p.icon}</span>
                 <p className="text-xs font-semibold text-navy-900 leading-snug">{p.label}</p>
-                <p className="text-[10px] text-gray-400">{p.note}</p>
+                <p className="text-[10px] text-gray-500">{p.note}</p>
               </motion.div>
             ))}
           </div>
@@ -1285,11 +1285,11 @@ export default function CargoPantsContent() {
                 </div>
                 <div className="flex-1">
                   <p className="text-sm font-semibold text-navy-900">{stage.stage}</p>
-                  <p className="text-xs text-gray-400">{stage.desc}</p>
+                  <p className="text-xs text-gray-500">{stage.desc}</p>
                 </div>
                 <div className="text-right shrink-0">
                   <p className="text-lg font-bold text-navy-900">{stage.days}</p>
-                  <p className="text-xs text-gray-400">days (guide)</p>
+                  <p className="text-xs text-gray-500">days (guide)</p>
                 </div>
               </motion.div>
             ))}
@@ -1360,9 +1360,9 @@ export default function CargoPantsContent() {
       <section id="section-process" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-t-4 border-black pt-8 mb-12">
-            <p className="text-xs font-bold tracking-[0.4em] uppercase text-gray-400 mb-2">MZ GLOBAL TRADING — SOURCING PROGRAMME</p>
+            <p className="text-xs font-bold tracking-[0.4em] uppercase text-gray-500 mb-2">MZ GLOBAL TRADING — SOURCING PROGRAMME</p>
             <h2 className="text-4xl sm:text-5xl font-bold text-navy-900">Our Process</h2>
-            <p className="text-gray-400 text-sm mt-2 max-w-xs leading-relaxed">Six structured steps from specification to shipment.</p>
+            <p className="text-gray-500 text-sm mt-2 max-w-xs leading-relaxed">Six structured steps from specification to shipment.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             {PROCESS_STEPS.map((step, i) => (
@@ -1381,7 +1381,7 @@ export default function CargoPantsContent() {
                 <div className="flex-1 pt-2">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-2 h-2 bg-black" aria-hidden="true" />
-                    <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em]">{step.short}</p>
+                    <p className="text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">{step.short}</p>
                   </div>
                   <h3 className="text-xl font-bold text-navy-900 mb-2">{step.title}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>

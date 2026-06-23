@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
@@ -739,7 +739,7 @@ function SearchableSelect({
           className="bg-white border border-gray-200 rounded-lg shadow-lg max-h-52 overflow-y-auto"
         >
           {filtered.length === 0
-            ? <li className="px-3 py-2 text-sm text-gray-400">No results</li>
+            ? <li className="px-3 py-2 text-sm text-gray-500">No results</li>
             : filtered.map((c, i) => (
                 <li
                   key={c}
@@ -801,7 +801,7 @@ function SearchableSelect({
           className="shrink-0"
         >
           <svg
-            className={`w-4 h-4 text-gray-400 transition-transform ${open ? "rotate-180" : ""}`}
+            className={`w-4 h-4 text-gray-500 transition-transform ${open ? "rotate-180" : ""}`}
             fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"
             aria-hidden="true"
           >
@@ -834,7 +834,7 @@ function Field({
         {label}{required && <span className="text-gold ml-0.5" aria-hidden="true">*</span>}
       </label>
       {children}
-      {hint && !error && <p className="text-gray-400 text-[11px]">{hint}</p>}
+      {hint && !error && <p className="text-gray-500 text-[11px]">{hint}</p>}
       {error && <p className="text-red-500 text-[11px] mt-0.5 flex items-center gap-1" role="alert"><span aria-hidden="true">↑</span> {error}</p>}
     </div>
   );
@@ -924,7 +924,7 @@ function ReviewSection({ title, onEdit, children }: {
 function ReviewRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex gap-3 py-2 border-b border-gray-100 last:border-0">
-      <span className="text-gray-400 text-xs w-36 shrink-0">{label}</span>
+      <span className="text-gray-500 text-xs w-36 shrink-0">{label}</span>
       <span className="text-navy-900 text-xs font-medium break-words min-w-0">{value || "—"}</span>
     </div>
   );
@@ -1455,12 +1455,12 @@ export default function RFQContent() {
                     ? "bg-navy-900 border-navy-900 text-white"
                     : "border-gray-200 text-gray-600 hover:border-gray-300 hover:text-navy-900"
                 }`}>
-                <span className={isActive ? "text-gold" : "text-gray-400"}>{getCategoryIcon(cat)}</span>
+                <span className={isActive ? "text-gold" : "text-gray-500"}>{getCategoryIcon(cat)}</span>
                 <span className="max-w-[110px] truncate">{label}</span>
                 {formState.products.length > 1 && (
                   <span
                     onClick={(e) => { e.stopPropagation(); removeProduct(idx); }}
-                    className={`ml-0.5 text-sm leading-none transition-opacity ${isActive ? "text-white/60 hover:text-white" : "text-gray-400 hover:text-red-400"}`}
+                    className={`ml-0.5 text-sm leading-none transition-opacity ${isActive ? "text-white/60 hover:text-white" : "text-gray-500 hover:text-red-400"}`}
                     aria-label={`Remove ${label}`}>
                     ×
                   </span>
@@ -1729,7 +1729,7 @@ export default function RFQContent() {
                   <SpecSection title="Dimensions & Sizing" number={4} color="green">
                     <div>
                       <p className="text-xs font-semibold text-navy-900/80 mb-2">
-                        {opts.sizeLabel} <span className="text-gray-400 font-normal text-[11px]">(select all that apply)</span>
+                        {opts.sizeLabel} <span className="text-gray-500 font-normal text-[11px]">(select all that apply)</span>
                       </p>
                       <CheckboxGrid options={opts.sizeOptions} selected={product.sizeRange} onToggle={v => toggleArr("sizeRange", v)} />
                       {errors.sizeRange && <p className="text-red-500 text-[11px] mt-1.5 flex items-center gap-1" role="alert"><span aria-hidden="true">↑</span> {errors.sizeRange}</p>}
@@ -1969,7 +1969,7 @@ export default function RFQContent() {
                     <SpecSection title="Embellishments & Accessories / Trims" number={6} color="indigo">
                       <div className="space-y-3">
                         <div>
-                          <p className="text-xs font-semibold text-navy-900/80 mb-2">Embellishments <span className="text-gray-400 font-normal text-[11px]">(select all that apply)</span></p>
+                          <p className="text-xs font-semibold text-navy-900/80 mb-2">Embellishments <span className="text-gray-500 font-normal text-[11px]">(select all that apply)</span></p>
                           <CheckboxGrid options={opts.embellishmentOptions} selected={product.embellishments} onToggle={v => toggleArr("embellishments", v)} />
                           {product.embellishments.includes("Other") && (
                             <input type="text" placeholder="Describe other embellishment"
@@ -1979,7 +1979,7 @@ export default function RFQContent() {
                         </div>
                         {opts.accessoryOptions && opts.accessoryOptions.length > 0 && (
                           <div>
-                            <p className="text-xs font-semibold text-navy-900/80 mb-2">Accessories & Trims <span className="text-gray-400 font-normal text-[11px]">(select all that apply)</span></p>
+                            <p className="text-xs font-semibold text-navy-900/80 mb-2">Accessories & Trims <span className="text-gray-500 font-normal text-[11px]">(select all that apply)</span></p>
                             <CheckboxGrid options={opts.accessoryOptions} selected={product.accessories} onToggle={v => toggleArr("accessories", v)} />
                             {product.accessories.includes("Other") && (
                               <input type="text" placeholder="Describe other accessories / trims"
@@ -2387,7 +2387,7 @@ export default function RFQContent() {
                 <div className="pt-1">
                   {qtyStr && (
                     <div className="flex items-center gap-2 py-2 border-b border-gray-100">
-                      <span className="text-gray-400 text-xs w-36 shrink-0">Order</span>
+                      <span className="text-gray-500 text-xs w-36 shrink-0">Order</span>
                       <span className="text-navy-900 text-xs font-semibold">{qtyStr}</span>
                     </div>
                   )}
@@ -2558,7 +2558,7 @@ export default function RFQContent() {
                     pdfState === "error"
                       ? "bg-red-50 border-red-200 text-red-700 hover:bg-red-100"
                       : pdfState === "loading"
-                      ? "bg-gray-50 border-gray-200 text-gray-400 cursor-wait"
+                      ? "bg-gray-50 border-gray-200 text-gray-500 cursor-wait"
                       : "bg-white border-navy-900/20 text-navy-900 hover:bg-navy-900 hover:text-white hover:border-navy-900"
                   }`}
                   aria-label="Download a PDF copy of your RFQ submission"
@@ -2622,14 +2622,14 @@ export default function RFQContent() {
                 <div key={label} className="flex items-center flex-1 last:flex-none min-w-0">
                   <div className="flex items-center gap-2 shrink-0">
                     <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 transition-colors ${
-                      done ? "bg-gold text-navy-900" : active ? "bg-navy-900 text-white" : "bg-gray-100 text-gray-400"
+                      done ? "bg-gold text-navy-900" : active ? "bg-navy-900 text-white" : "bg-gray-100 text-gray-500"
                     }`}>
                       {done ? (
                         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
                       ) : num}
                     </div>
                     <span className={`text-xs font-medium hidden md:block whitespace-nowrap transition-colors ${
-                      active ? "text-navy-900 font-semibold" : done ? "text-gold" : "text-gray-400"
+                      active ? "text-navy-900 font-semibold" : done ? "text-gold" : "text-gray-500"
                     }`}>{label}</span>
                   </div>
                   {idx < STEPS.length - 1 && (

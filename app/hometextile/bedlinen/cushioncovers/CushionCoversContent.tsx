@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -332,7 +332,7 @@ export default function CushionCoversContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -349,7 +349,7 @@ export default function CushionCoversContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 */}
@@ -389,7 +389,7 @@ export default function CushionCoversContent() {
                     <span className="w-9 h-9 rounded-lg bg-cyan-100 text-cyan-700 text-xs font-bold flex items-center justify-center shrink-0">{c.code}</span>
                     <div>
                       <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                      <p className="text-xs text-gray-400 mt-0.5 leading-snug">{c.spec}</p>
+                      <p className="text-xs text-gray-500 mt-0.5 leading-snug">{c.spec}</p>
                     </div>
                   </div>
                 ))}
@@ -486,7 +486,7 @@ export default function CushionCoversContent() {
                   <div key={s.abbr} className="bg-white rounded-xl p-3 border border-indigo-100">
                     <p className="text-xs font-bold text-indigo-600">{s.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{s.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{s.market}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -563,7 +563,7 @@ export default function CushionCoversContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.title}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -627,7 +627,7 @@ export default function CushionCoversContent() {
                 <h3 className="text-lg font-bold text-navy-900">{c.name}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed flex-1 italic">&ldquo;{c.mood}&rdquo;</p>
                 <div className="border-t border-gray-200 pt-3">
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Best for</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Best for</p>
                   <p className="text-xs text-navy-900 font-semibold">{c.market}</p>
                 </div>
               </motion.div>
@@ -645,7 +645,7 @@ export default function CushionCoversContent() {
             <div>
               <p className="font-mono text-gold/70 text-xs tracking-[0.3em] uppercase mb-2">[TECHNICAL SPECIFICATION — CLOSURE ENGINEERING]</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white">Cushion Cover Closure Engineering</h2>
-              <p className="text-gray-400 mt-3 max-w-2xl leading-relaxed">
+              <p className="text-gray-500 mt-3 max-w-2xl leading-relaxed">
                 Closure type determines functional performance, visual finish and wash durability. Each system has distinct specifications and fabric compatibility requirements.
               </p>
             </div>
@@ -738,7 +738,7 @@ export default function CushionCoversContent() {
                 <div className={`bg-teal-200/60 rounded-lg ${i < 4 ? `w-${8 + i * 4} h-${8 + i * 4}` : i === 4 ? "w-16 h-10" : "w-12 h-8 border-2 border-dashed border-teal-400 bg-transparent"}`} aria-hidden="true" style={{ width: `${Math.min(32 + i * 8, 64)}px`, height: `${i === 4 ? 40 : i === 5 ? 32 : Math.min(32 + i * 8, 64)}px` }} />
                 <p className="text-sm font-bold text-navy-900">{s.size}</p>
                 <p className="text-xs font-semibold text-teal-600">{s.label}</p>
-                <p className="text-[10px] text-gray-400 leading-snug">{s.market}</p>
+                <p className="text-[10px] text-gray-500 leading-snug">{s.market}</p>
               </motion.div>
             ))}
           </div>
@@ -771,7 +771,7 @@ export default function CushionCoversContent() {
                   <p className="text-xs text-amber-800">{d.note}</p>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Market fit</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Market fit</p>
                   <p className="text-xs text-navy-900 font-semibold">{d.best.split(".")[0]}</p>
                 </div>
               </motion.div>
@@ -880,7 +880,7 @@ export default function CushionCoversContent() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-bold text-white">{s.name}</h3>
-                  <p className="text-gray-400 text-sm mt-0.5">{s.detail}</p>
+                  <p className="text-gray-500 text-sm mt-0.5">{s.detail}</p>
                 </div>
                 <span className="text-xs font-semibold text-gold bg-gold/10 border border-gold/20 px-3 py-1 rounded-full whitespace-nowrap">{s.market}</span>
               </motion.div>
@@ -927,7 +927,7 @@ export default function CushionCoversContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-teal-400 text-xs font-semibold tracking-[0.2em] uppercase mb-2">Export</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Export Terms &amp; Packaging</h2>
-          <p className="text-gray-400 mb-12 max-w-2xl leading-relaxed">
+          <p className="text-gray-500 mb-12 max-w-2xl leading-relaxed">
             Cushion covers ship from Karachi or Port Qasim under internationally recognised Incoterms. Packaging options range from individual polybag to retail-ready presentation.
           </p>
           <div className="grid lg:grid-cols-2 gap-8 mb-10">
@@ -940,7 +940,7 @@ export default function CushionCoversContent() {
                     <div>
                       <p className="text-white font-semibold">{e.full}</p>
                       <p className="text-teal-400 text-xs mt-0.5">{e.port}</p>
-                      <p className="text-gray-400 text-sm mt-1 leading-relaxed">{e.desc}</p>
+                      <p className="text-gray-500 text-sm mt-1 leading-relaxed">{e.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -954,7 +954,7 @@ export default function CushionCoversContent() {
                     <span className="text-xl" aria-hidden="true">{p.icon}</span>
                     <div>
                       <p className="text-white text-sm font-semibold">{p.label}</p>
-                      <p className="text-gray-400 text-xs">{p.note}</p>
+                      <p className="text-gray-500 text-xs">{p.note}</p>
                     </div>
                   </div>
                 ))}
@@ -1114,7 +1114,7 @@ export default function CushionCoversContent() {
           >
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Get Started</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Source Cushion Covers?</h2>
-            <p className="text-gray-400 max-w-xl mx-auto mb-8 leading-relaxed">
+            <p className="text-gray-500 max-w-xl mx-auto mb-8 leading-relaxed">
               Construction, size, closure and design confirmed — our RFQ takes 3 minutes. Factory match and quotation returned within 3–5 working days.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

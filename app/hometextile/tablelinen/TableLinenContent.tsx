@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -143,7 +143,7 @@ export default function TableLinenContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -259,7 +259,7 @@ export default function TableLinenContent() {
                 className="bg-gray-50 border border-gray-100 rounded-xl p-4 text-center"
               >
                 <p className="text-sm font-bold text-navy-900 mb-1">{cert.name}</p>
-                <p className="text-[11px] text-gray-400 leading-tight">{cert.desc}</p>
+                <p className="text-[11px] text-gray-500 leading-tight">{cert.desc}</p>
               </motion.div>
             ))}
           </div>

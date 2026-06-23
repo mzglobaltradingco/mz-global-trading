@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -187,7 +187,7 @@ export default function FenderCoversContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -204,7 +204,7 @@ export default function FenderCoversContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Fender Covers — All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 */}
@@ -231,7 +231,7 @@ export default function FenderCoversContent() {
                   <p className="text-sm font-bold text-navy-900">{ac.name}</p>
                   {ac.badge && <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full bg-gold/15 text-gold`}>{ac.badge}</span>}
                 </div>
-                <p className="text-xs text-gray-400 mb-2">{ac.gsm}</p>
+                <p className="text-xs text-gray-500 mb-2">{ac.gsm}</p>
                 <p className="text-xs text-gray-600 leading-relaxed">{ac.desc.slice(0, 200)}...</p>
               </div>
               <ExploreBtn sectionId="section-constructions" label="All Constructions" />
@@ -252,7 +252,7 @@ export default function FenderCoversContent() {
                     <span className="w-10 h-8 rounded-lg bg-slate-100 text-slate-700 text-xs font-bold flex items-center justify-center shrink-0">{s.code}</span>
                     <div>
                       <p className="text-sm font-semibold text-navy-900">{s.name} — <span className="font-mono text-blue-600">{s.dims}</span></p>
-                      <p className="text-xs text-gray-400 mt-0.5">{s.use}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{s.use}</p>
                     </div>
                   </div>
                 ))}
@@ -341,7 +341,7 @@ export default function FenderCoversContent() {
                 {EXPORT_TERMS.map((t) => (
                   <div key={t.term} className="flex items-center gap-2">
                     <span className="w-10 text-center font-bold text-sm text-gold bg-gold/15 rounded px-1 py-0.5">{t.term}</span>
-                    <span className="text-xs text-gray-400">{t.full}</span>
+                    <span className="text-xs text-gray-500">{t.full}</span>
                   </div>
                 ))}
               </div>
@@ -470,7 +470,7 @@ export default function FenderCoversContent() {
                 <p className={`text-xs font-semibold ${c.accent} mb-2`}>{c.gsm}</p>
                 <p className="text-sm text-gray-500 italic mb-3">{c.hand}</p>
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">{c.desc}</p>
-                <p className="text-xs text-gray-400 leading-relaxed border-t border-white/50 pt-3">{c.spec}</p>
+                <p className="text-xs text-gray-500 leading-relaxed border-t border-white/50 pt-3">{c.spec}</p>
               </motion.div>
             ))}
           </div>
@@ -498,7 +498,7 @@ export default function FenderCoversContent() {
               </motion.div>
             ))}
           </div>
-          <p className="text-gray-400 text-xs mt-5 text-center">±2 cm manufacturing tolerance. Custom dimensions available — include vehicle type and application in RFQ.</p>
+          <p className="text-gray-500 text-xs mt-5 text-center">±2 cm manufacturing tolerance. Custom dimensions available — include vehicle type and application in RFQ.</p>
           <BackToTop />
         </div>
       </section>
@@ -540,9 +540,9 @@ export default function FenderCoversContent() {
                 className="bg-white/5 border border-white/10 rounded-2xl p-7">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-base font-bold text-white">{f.title}</h3>
-                  <span className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full shrink-0 ${f.tag === "Core Feature" ? "bg-gold/20 text-gold" : "bg-white/10 text-gray-400"}`}>{f.tag}</span>
+                  <span className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full shrink-0 ${f.tag === "Core Feature" ? "bg-gold/20 text-gold" : "bg-white/10 text-gray-500"}`}>{f.tag}</span>
                 </div>
-                <p className="text-sm text-gray-400 leading-relaxed">{f.desc}</p>
+                <p className="text-sm text-gray-500 leading-relaxed">{f.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -605,7 +605,7 @@ export default function FenderCoversContent() {
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Key Markets</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">Geographic Reach</h2>
-            <p className="text-gray-400 mt-3 text-sm">Export programmes active across all major automotive markets.</p>
+            <p className="text-gray-500 mt-3 text-sm">Export programmes active across all major automotive markets.</p>
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
@@ -697,7 +697,7 @@ export default function FenderCoversContent() {
                 </div>
                 <div className="flex-1">
                   <p className="text-white font-bold text-sm">{stage.stage}</p>
-                  <p className="text-gray-400 text-xs mt-0.5">{stage.desc}</p>
+                  <p className="text-gray-500 text-xs mt-0.5">{stage.desc}</p>
                 </div>
                 <div className="text-right shrink-0">
                   <p className="text-gold font-mono font-bold">{stage.days} days</p>

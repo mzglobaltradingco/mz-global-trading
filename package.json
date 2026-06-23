@@ -22,6 +22,12 @@
     "react-dom": "^19.2.7",
     "react-international-phone": "^4.8.0"
   },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions"
+  ],
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.1",
     "@types/node": "^20",

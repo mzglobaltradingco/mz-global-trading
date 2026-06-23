@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -309,7 +309,7 @@ export default function TShirtsContent() {
               {[{ val: "50+", label: "Vetted Factories" }, { val: "35+", label: "Export Markets" }, { val: "10+", label: "Certifications" }, { val: "7", label: "Constructions" }].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -324,7 +324,7 @@ export default function TShirtsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 */}
@@ -341,7 +341,7 @@ export default function TShirtsContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3 border border-emerald-100">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                     {c.badge && <span className="mt-1 inline-block text-[10px] font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">{c.badge}</span>}
                   </div>
                 ))}
@@ -363,7 +363,7 @@ export default function TShirtsContent() {
                     <span className={`w-8 h-8 rounded-lg ${f.color} text-white text-[10px] font-bold flex items-center justify-center shrink-0`}>{f.code}</span>
                     <div>
                       <p className="text-sm font-semibold text-navy-900">{f.name}</p>
-                      <p className="text-xs text-gray-400">{f.ease}</p>
+                      <p className="text-xs text-gray-500">{f.ease}</p>
                     </div>
                   </div>
                 ))}
@@ -483,7 +483,7 @@ export default function TShirtsContent() {
                 {EXPORT_TERMS.map((e) => (
                   <div key={e.term} className="flex items-center gap-2 bg-white rounded-lg px-2.5 py-2 border border-sky-100">
                     <span className="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 text-[10px] font-bold flex items-center justify-center shrink-0">{e.term}</span>
-                    <div><p className="text-xs font-semibold text-navy-900">{e.full}</p><p className="text-[10px] text-gray-400">{e.port}</p></div>
+                    <div><p className="text-xs font-semibold text-navy-900">{e.full}</p><p className="text-[10px] text-gray-500">{e.port}</p></div>
                   </div>
                 ))}
               </div>
@@ -524,7 +524,7 @@ export default function TShirtsContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -573,7 +573,7 @@ export default function TShirtsContent() {
       <section id="section-constructions" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-16">
-            <p className="text-xs font-semibold tracking-[0.3em] text-gray-400 uppercase mb-4">01 / Fabric Constructions</p>
+            <p className="text-xs font-semibold tracking-[0.3em] text-gray-500 uppercase mb-4">01 / Fabric Constructions</p>
             <h2 className="text-4xl sm:text-5xl font-bold text-navy-900 mb-6">Seven Constructions</h2>
             <div className="w-12 h-0.5 bg-gold mb-6" aria-hidden="true" />
             <p className="text-gray-500 leading-relaxed">Each construction delivers a distinct hand-feel, weight range, market position and decoration profile. Select the construction that matches your programme requirements.</p>
@@ -592,7 +592,7 @@ export default function TShirtsContent() {
                       <p className="text-lg font-semibold text-navy-900">{c.name}</p>
                       {c.badge && <span className="mt-1 inline-block text-[10px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">{c.badge}</span>}
                     </div>
-                    <p className="text-sm text-gray-400">{c.gsm}</p>
+                    <p className="text-sm text-gray-500">{c.gsm}</p>
                     <p className="text-sm text-gray-500 hidden sm:block">{c.best.join(" · ")}</p>
                   </div>
                   <span className="relative shrink-0">
@@ -602,7 +602,7 @@ export default function TShirtsContent() {
                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold" />
                       </span>
                     )}
-                    <span className={`w-6 h-6 rounded-full border flex items-center justify-center text-xs transition-all ${activeConstruction === c.id ? "border-gold bg-gold text-navy-900" : "border-gray-200 text-gray-400"}`} aria-hidden="true">{activeConstruction === c.id ? "−" : "+"}</span>
+                    <span className={`w-6 h-6 rounded-full border flex items-center justify-center text-xs transition-all ${activeConstruction === c.id ? "border-gold bg-gold text-navy-900" : "border-gray-200 text-gray-500"}`} aria-hidden="true">{activeConstruction === c.id ? "−" : "+"}</span>
                   </span>
                 </button>
                 <AnimatePresence>
@@ -613,21 +613,21 @@ export default function TShirtsContent() {
                           <div className="lg:col-span-2">
                             <p className="text-gray-600 leading-relaxed mb-6">{c.detail}</p>
                             <div className="bg-gray-50 rounded-xl p-5 border border-gray-100">
-                              <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Technical Specification</p>
+                              <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">Technical Specification</p>
                               <p className="text-sm text-gray-700">{c.spec}</p>
                             </div>
                           </div>
                           <div className="space-y-4">
                             <div>
-                              <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Hand Feel</p>
+                              <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">Hand Feel</p>
                               <p className="text-sm text-navy-900">{c.hand}</p>
                             </div>
                             <div>
-                              <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Key Markets</p>
+                              <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">Key Markets</p>
                               <div className="flex flex-wrap gap-1.5">{c.markets.map((m) => <span key={m} className="text-xs text-gold bg-gold/10 border border-gold/20 px-2.5 py-1 rounded-full">{m}</span>)}</div>
                             </div>
                             <div>
-                              <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Decoration Options</p>
+                              <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">Decoration Options</p>
                               <div className="flex flex-wrap gap-1.5">{c.decorations.map((d) => <span key={d} className="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full">{d}</span>)}</div>
                             </div>
                           </div>
@@ -670,7 +670,7 @@ export default function TShirtsContent() {
                 </div>
                 <p className="text-gray-600 leading-relaxed">{FIT_PROFILES[activeFit].detail}</p>
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Primary Market</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">Primary Market</p>
                   <p className="text-sm text-navy-900 font-medium">{FIT_PROFILES[activeFit].market}</p>
                 </div>
                 <ul className="space-y-2">
@@ -691,7 +691,7 @@ export default function TShirtsContent() {
       <section id="section-gsm" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-4 border-navy-900 p-8 mb-12">
-            <p className="text-xs font-black tracking-[0.4em] uppercase text-gray-400 mb-2">WEIGHT SELECTION GUIDE</p>
+            <p className="text-xs font-black tracking-[0.4em] uppercase text-gray-500 mb-2">WEIGHT SELECTION GUIDE</p>
             <h2 className="text-5xl sm:text-7xl font-black text-navy-900 leading-none">GSM</h2>
             <p className="text-sm text-gray-600 mt-4 max-w-xl leading-relaxed">GSM determines season positioning, decoration receptivity, drape and retail price tier. Select your weight before specifying construction.</p>
           </div>
@@ -700,7 +700,7 @@ export default function TShirtsContent() {
               <div key={tier.gsm} className={`p-8 ${i < 2 ? "border-b-4 sm:border-b-0 sm:border-r-4 border-navy-900" : ""} ${tier.featured ? "bg-navy-900 text-white" : "bg-white"}`}>
                 {tier.featured && <span className="inline-block mb-3 text-[10px] font-black tracking-[0.3em] uppercase bg-gold text-navy-900 px-3 py-1">MOST ORDERED</span>}
                 <p className={`text-4xl font-black mb-1 ${tier.featured ? "text-gold" : "text-navy-900"}`}>{tier.gsm}</p>
-                <p className={`text-xs font-black tracking-[0.2em] uppercase mb-4 ${tier.featured ? "text-gray-300" : "text-gray-400"}`}>{tier.name}</p>
+                <p className={`text-xs font-black tracking-[0.2em] uppercase mb-4 ${tier.featured ? "text-gray-300" : "text-gray-500"}`}>{tier.name}</p>
                 <div className={`w-full h-3 mb-4 ${tier.featured ? "bg-white/20" : "bg-gray-200"}`}>
                   <div className={`h-full ${tier.featured ? "bg-gold" : "bg-navy-900"}`} style={{ width: `${tier.pct}%` }} aria-hidden="true" />
                 </div>
@@ -739,7 +739,7 @@ export default function TShirtsContent() {
                   </div>
                   <p className="text-sm text-gray-500 leading-relaxed mb-4">{d.best}</p>
                   <div className="mb-3">
-                    <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-1.5">Compatible with</p>
+                    <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest mb-1.5">Compatible with</p>
                     <div className="flex flex-wrap gap-1">{d.compat.map((c) => <span key={c} className="text-[11px] bg-gray-50 border border-gray-200 text-gray-600 px-2 py-0.5 rounded-full">{c}</span>)}</div>
                   </div>
                   <p className="text-[11px] text-amber-700 bg-amber-50 rounded-lg px-3 py-2 border border-amber-100">{d.note}</p>
@@ -854,7 +854,7 @@ export default function TShirtsContent() {
             </div>
             <div className="shrink-0 text-right">
               <p className="text-5xl font-black text-navy-900">10<span className="text-gold">+</span></p>
-              <p className="text-xs text-gray-400 uppercase tracking-wider mt-1">Active Certifications</p>
+              <p className="text-xs text-gray-500 uppercase tracking-wider mt-1">Active Certifications</p>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -884,7 +884,7 @@ export default function TShirtsContent() {
           <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">Incoterms, Packaging &amp; Indicative Timeline</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
             <div>
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Incoterms Available</p>
+              <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-4">Incoterms Available</p>
               <div className="grid grid-cols-2 gap-3">
                 {EXPORT_TERMS.map((e) => (
                   <div key={e.term} className="bg-white border border-gray-200 rounded-xl p-4 hover:border-gold transition-colors">
@@ -892,27 +892,27 @@ export default function TShirtsContent() {
                       <span className="w-10 h-10 rounded-lg bg-navy-900 text-gold text-xs font-bold flex items-center justify-center">{e.term}</span>
                       <p className="text-xs font-semibold text-navy-900 leading-tight">{e.full}</p>
                     </div>
-                    <p className="text-xs text-gray-400 mb-1">{e.port}</p>
+                    <p className="text-xs text-gray-500 mb-1">{e.port}</p>
                     <p className="text-xs text-gray-600 leading-snug">{e.desc}</p>
                   </div>
                 ))}
               </div>
             </div>
             <div>
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Packaging Options</p>
+              <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-4">Packaging Options</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {PACK_OPTIONS.map((p) => (
                   <div key={p.label} className="bg-white border border-gray-200 rounded-xl p-4 text-center hover:border-gold transition-colors">
                     <span className="text-2xl mb-2 block" aria-hidden="true">{p.icon}</span>
                     <p className="text-xs font-semibold text-navy-900">{p.label}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5">{p.note}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5">{p.note}</p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
           <div className="bg-white border border-gray-200 rounded-2xl p-8">
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-6">Indicative Production &amp; Delivery Timeline</p>
+            <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-6">Indicative Production &amp; Delivery Timeline</p>
             <div className="flex flex-col sm:flex-row gap-0">
               {LEAD_STAGES.map((s, i) => (
                 <div key={s.stage} className={`flex-1 ${i < LEAD_STAGES.length - 1 ? "border-b-2 sm:border-b-0 sm:border-r-2 border-gray-100 pb-4 sm:pb-0 sm:pr-4 mb-4 sm:mb-0 sm:mr-4" : ""}`}>
@@ -1020,7 +1020,7 @@ export default function TShirtsContent() {
                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold" />
                       </span>
                     )}
-                    <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-bold transition-all ${faqOpen === i ? "border-gold bg-gold text-navy-900" : "border-gray-200 text-gray-400 group-hover:border-gold"}`}>{faqOpen === i ? "−" : "+"}</span>
+                    <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-bold transition-all ${faqOpen === i ? "border-gold bg-gold text-navy-900" : "border-gray-200 text-gray-500 group-hover:border-gold"}`}>{faqOpen === i ? "−" : "+"}</span>
                   </span>
                   <p className={`font-semibold leading-snug transition-colors ${faqOpen === i ? "text-navy-900" : "text-gray-700 group-hover:text-navy-900"}`}>{faq.q}</p>
                 </button>

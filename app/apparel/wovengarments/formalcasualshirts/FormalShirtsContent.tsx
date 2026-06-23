@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -316,7 +316,7 @@ export default function FormalShirtsContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -338,7 +338,7 @@ export default function FormalShirtsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* ROW 1: 2 bentos equal */}
@@ -358,7 +358,7 @@ export default function FormalShirtsContent() {
                 {CONSTRUCTIONS.slice(0, 6).map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3 border border-blue-100">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                     {c.badge && (
                       <span className="mt-1 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{c.badge}</span>
                     )}
@@ -385,7 +385,7 @@ export default function FormalShirtsContent() {
                     <span className="w-9 h-9 rounded-lg bg-violet-100 text-violet-700 text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">{f.code}</span>
                     <div>
                       <p className="text-sm font-semibold text-navy-900">{f.name}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{f.ease}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{f.ease}</p>
                       <p className="text-xs text-violet-600 mt-0.5 leading-snug">{f.market}</p>
                     </div>
                   </div>
@@ -414,7 +414,7 @@ export default function FormalShirtsContent() {
                     <div className="w-full h-1.5 bg-sky-100 rounded-full overflow-hidden mb-1">
                       <div className={`h-full rounded-full ${t.color}`} style={{ width: `${t.pct}%` }} aria-hidden="true" />
                     </div>
-                    <p className="text-[10px] text-gray-400 leading-snug">{t.season}</p>
+                    <p className="text-[10px] text-gray-500 leading-snug">{t.season}</p>
                   </div>
                 ))}
               </div>
@@ -434,7 +434,7 @@ export default function FormalShirtsContent() {
                     <span className="w-6 h-6 rounded bg-indigo-100 text-indigo-700 text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">{d.code}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{d.method}</p>
-                      <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{d.compat.join(", ")}</p>
+                      <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{d.compat.join(", ")}</p>
                     </div>
                   </div>
                 ))}
@@ -458,7 +458,7 @@ export default function FormalShirtsContent() {
                         <div key={i} className={`w-4 h-4 rounded-full border border-gray-200 ${s}`} aria-hidden="true" />
                       ))}
                     </div>
-                    <p className="text-[10px] text-gray-400 mt-1">{d.subtitle}</p>
+                    <p className="text-[10px] text-gray-500 mt-1">{d.subtitle}</p>
                   </div>
                 ))}
               </div>
@@ -502,7 +502,7 @@ export default function FormalShirtsContent() {
                   <div key={s.abbr} className="bg-white rounded-xl p-3 border border-purple-100">
                     <p className="text-xs font-bold text-purple-600">{s.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{s.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{s.market}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -543,7 +543,7 @@ export default function FormalShirtsContent() {
                     <span className="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 text-[10px] font-bold flex items-center justify-center shrink-0">{e.term}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{e.full}</p>
-                      <p className="text-[10px] text-gray-400">{e.port}</p>
+                      <p className="text-[10px] text-gray-500">{e.port}</p>
                     </div>
                   </div>
                 ))}
@@ -591,7 +591,7 @@ export default function FormalShirtsContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -694,25 +694,25 @@ export default function FormalShirtsContent() {
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">{ac.detail}</p>
                 <div className="bg-gray-50 border border-gray-100 rounded-xl p-4">
-                  <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-2">Technical Specification</p>
+                  <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest mb-2">Technical Specification</p>
                   <p className="text-sm text-gray-600">{ac.spec}</p>
                 </div>
               </div>
               <div className="flex flex-col gap-4">
                 <div className="border border-gray-100 rounded-2xl p-6 shadow-xs">
-                  <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-3">Best For</p>
+                  <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest mb-3">Best For</p>
                   <div className="flex flex-wrap gap-2">
                     {ac.best.map((b) => <span key={b} className="text-xs text-navy-900 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full">{b}</span>)}
                   </div>
                 </div>
                 <div className="border border-gray-100 rounded-2xl p-6 shadow-xs">
-                  <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-3">Key Markets</p>
+                  <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest mb-3">Key Markets</p>
                   <div className="flex flex-wrap gap-2">
                     {ac.markets.map((m) => <span key={m} className="text-xs text-gold bg-gold/10 border border-gold/20 px-3 py-1 rounded-full">{m}</span>)}
                   </div>
                 </div>
                 <div className="border border-gray-100 rounded-2xl p-6 shadow-xs">
-                  <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-3">Decoration</p>
+                  <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest mb-3">Decoration</p>
                   <div className="flex flex-col gap-1.5">
                     {ac.decorations.map((d) => (
                       <div key={d} className="flex items-center gap-2">
@@ -735,7 +735,7 @@ export default function FormalShirtsContent() {
       <section id="section-fits" className="bg-gray-50 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-400 mb-3">Fit &amp; Sizing</p>
+            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-500 mb-3">Fit &amp; Sizing</p>
             <h2 className="text-4xl sm:text-5xl font-bold text-navy-900">Fit Profiles &amp; Sizing</h2>
             <div className="w-16 h-0.5 bg-gold mt-4" aria-hidden="true" />
           </div>
@@ -767,7 +767,7 @@ export default function FormalShirtsContent() {
             {[["S / M / L / XL / XXL", "Standard collar sizes"], ["US / UK / EU", "Size standards available"], ["Custom", "Pattern grading on request"]].map(([val, label]) => (
               <div key={label}>
                 <p className="text-2xl font-bold text-navy-900">{val}</p>
-                <p className="text-xs text-gray-400 mt-1 uppercase tracking-wider">{label}</p>
+                <p className="text-xs text-gray-500 mt-1 uppercase tracking-wider">{label}</p>
               </div>
             ))}
           </div>
@@ -791,7 +791,7 @@ export default function FormalShirtsContent() {
               { label: "Linen Maximum", val: "200 GSM", sub: "Heavyweight summer linen" },
             ].map((m) => (
               <div key={m.label} className="bg-gray-50 rounded-2xl p-5 border border-gray-100">
-                <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">{m.label}</p>
+                <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">{m.label}</p>
                 <p className="text-2xl font-bold text-navy-900">{m.val}</p>
                 <p className="text-xs text-gray-500 mt-1">{m.sub}</p>
               </div>
@@ -804,13 +804,13 @@ export default function FormalShirtsContent() {
                   <span className="inline-block mb-3 text-[10px] font-bold text-gold bg-gold/10 px-3 py-1 rounded-full uppercase tracking-wider">Most Ordered</span>
                 )}
                 <p className={`text-3xl font-bold mb-1 ${tier.featured ? "text-gold" : "text-navy-900"}`}>{tier.gsm}</p>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">{tier.name}</p>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">{tier.name}</p>
                 <p className="text-sm font-semibold text-navy-900 mb-3">{tier.season}</p>
                 <div className="mb-4">
                   <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
                     <div className={`h-full rounded-full ${tier.featured ? "bg-gold" : "bg-navy-900/30"}`} style={{ width: `${tier.pct}%` }} aria-hidden="true" />
                   </div>
-                  <p className="text-xs text-gray-400 mt-1">{tier.pct}% of orders</p>
+                  <p className="text-xs text-gray-500 mt-1">{tier.pct}% of orders</p>
                 </div>
                 <p className="text-sm text-gray-500 leading-relaxed">{tier.desc}</p>
                 <p className="text-xs text-gold font-semibold mt-3">{tier.market}</p>
@@ -822,9 +822,9 @@ export default function FormalShirtsContent() {
             <table className="w-full text-xs min-w-[480px]">
               <thead>
                 <tr className="border-b border-gray-200">
-                  <th className="text-left py-2 pr-4 text-gray-400 font-semibold">Construction</th>
-                  <th className="text-center py-2 px-2 text-gray-400 font-semibold">GSM Range</th>
-                  <th className="text-left py-2 pl-4 text-gray-400 font-semibold">Primary Season</th>
+                  <th className="text-left py-2 pr-4 text-gray-500 font-semibold">Construction</th>
+                  <th className="text-center py-2 px-2 text-gray-500 font-semibold">GSM Range</th>
+                  <th className="text-left py-2 pl-4 text-gray-500 font-semibold">Primary Season</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
@@ -872,7 +872,7 @@ export default function FormalShirtsContent() {
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">{d.best}</p>
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Compatible Constructions</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Compatible Constructions</p>
                   <div className="flex flex-wrap gap-2">
                     {d.compat.map((c) => (
                       <span key={c} className="text-xs bg-white text-gray-600 border border-gray-200 px-2.5 py-1 rounded-full shadow-xs">{c}</span>
@@ -940,7 +940,7 @@ export default function FormalShirtsContent() {
             <div className="lg:col-span-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">OEM &amp; Custom</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Custom Development Programs</h2>
-              <p className="text-gray-400 leading-relaxed mb-8">Every aspect of your shirt programme — from fabric construction through to retail packaging — can be developed to your brand specification. We manage the detail so you manage the brand.</p>
+              <p className="text-gray-500 leading-relaxed mb-8">Every aspect of your shirt programme — from fabric construction through to retail packaging — can be developed to your brand specification. We manage the detail so you manage the brand.</p>
               <Link
                 href="/rfq/"
                 className="inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold px-6 py-3.5 rounded-xl hover:bg-yellow-400 transition-colors"
@@ -963,7 +963,7 @@ export default function FormalShirtsContent() {
                     <span className="w-8 h-8 rounded-lg bg-gold/10 text-gold text-xs font-bold flex items-center justify-center shrink-0">{f.num}</span>
                     <h3 className="text-sm font-bold text-white">{f.title}</h3>
                   </div>
-                  <p className="text-sm text-gray-400 leading-relaxed">{f.desc}</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">{f.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -1051,7 +1051,7 @@ export default function FormalShirtsContent() {
                     <h3 className="text-base font-bold text-navy-900">{c.name}</h3>
                     <span className="text-[10px] font-semibold text-gold bg-gold/15 px-2 py-0.5 rounded-full">{c.tier}</span>
                   </div>
-                  <p className="text-xs text-gray-400 mb-1">{c.full}</p>
+                  <p className="text-xs text-gray-500 mb-1">{c.full}</p>
                   <p className="text-xs text-gray-500 leading-relaxed">{c.desc}</p>
                 </div>
               </motion.div>
@@ -1073,7 +1073,7 @@ export default function FormalShirtsContent() {
                   <Image src={c.img} alt={`${c.name} — ${c.full}`} width={64} height={44} className="object-contain w-full h-full" />
                 </div>
                 <h3 className="text-sm font-bold text-navy-900">{c.name}</h3>
-                <p className="text-xs text-gray-400 leading-relaxed flex-1">{c.desc}</p>
+                <p className="text-xs text-gray-500 leading-relaxed flex-1">{c.desc}</p>
                 <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full w-fit ${c.tier === "Standard" ? "bg-green-50 text-green-700" : "bg-gray-100 text-gray-500"}`}>{c.tier}</span>
               </motion.div>
             ))}
@@ -1094,7 +1094,7 @@ export default function FormalShirtsContent() {
                   <Image src={c.img} alt={`${c.name} — ${c.full}`} width={64} height={44} className="object-contain w-full h-full" />
                 </div>
                 <h3 className="text-sm font-bold text-navy-900">{c.name}</h3>
-                <p className="text-xs text-gray-400 leading-relaxed flex-1">{c.desc}</p>
+                <p className="text-xs text-gray-500 leading-relaxed flex-1">{c.desc}</p>
                 <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full w-fit ${c.tier === "Premium" ? "bg-gold/15 text-gold" : c.tier === "Standard" ? "bg-green-50 text-green-700" : "bg-gray-100 text-gray-500"}`}>{c.tier}</span>
               </motion.div>
             ))}
@@ -1127,7 +1127,7 @@ export default function FormalShirtsContent() {
                 </div>
                 <div>
                   <p className="text-sm font-bold text-navy-900">{e.term}</p>
-                  <p className="text-xs text-gray-400">{e.full}</p>
+                  <p className="text-xs text-gray-500">{e.full}</p>
                 </div>
                 <p className="text-xs text-gold font-semibold">📍 {e.port}</p>
                 <p className="text-xs text-gray-500 leading-relaxed flex-1">{e.desc}</p>
@@ -1148,7 +1148,7 @@ export default function FormalShirtsContent() {
               >
                 <span className="text-2xl" aria-hidden="true">{p.icon}</span>
                 <p className="text-xs font-semibold text-navy-900 leading-snug">{p.label}</p>
-                <p className="text-[10px] text-gray-400">{p.note}</p>
+                <p className="text-[10px] text-gray-500">{p.note}</p>
               </motion.div>
             ))}
           </div>
@@ -1177,11 +1177,11 @@ export default function FormalShirtsContent() {
                 </div>
                 <div className="flex-1">
                   <p className="text-sm font-semibold text-navy-900">{stage.stage}</p>
-                  <p className="text-xs text-gray-400">{stage.desc}</p>
+                  <p className="text-xs text-gray-500">{stage.desc}</p>
                 </div>
                 <div className="text-right shrink-0">
                   <p className="text-lg font-bold text-navy-900">{stage.days}</p>
-                  <p className="text-xs text-gray-400">days (guide)</p>
+                  <p className="text-xs text-gray-500">days (guide)</p>
                 </div>
               </motion.div>
             ))}
@@ -1264,7 +1264,7 @@ export default function FormalShirtsContent() {
                   <div className="w-10 h-10 rounded-full bg-gold/10 border-2 border-gold/30 flex items-center justify-center shrink-0">
                     <span className="text-gold text-sm font-bold">{step.num}</span>
                   </div>
-                  <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">{step.short}</span>
+                  <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">{step.short}</span>
                 </div>
                 <h3 className="text-lg font-bold text-navy-900">{step.title}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed flex-1">{step.desc}</p>

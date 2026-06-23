@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 
@@ -21,7 +21,7 @@ const track = [...certs, ...certs];
 export default function CertificationsStrip() {
   return (
     <section className="py-12 bg-white border-t border-gray-100 overflow-hidden">
-      <p className="text-center text-gray-400 text-xs font-semibold tracking-[0.2em] uppercase mb-8">
+      <p className="text-center text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase mb-8">
         Our Factories Are Certified By
       </p>
       <div className="overflow-hidden">

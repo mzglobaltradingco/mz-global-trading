@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import MegaMenu from "@/components/MegaMenu";
@@ -191,7 +191,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         <section className="bg-navy-900 pt-12 pb-14 sm:pt-16 sm:pb-18">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav aria-label="Breadcrumb" className="mb-8">
-              <ol className="flex flex-wrap items-center gap-2 text-xs text-gray-400">
+              <ol className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
                 <li><Link href="/" className="hover:text-gold transition-colors">Home</Link></li>
                 <li aria-hidden="true">/</li>
                 <li><Link href="/guides/" className="hover:text-gold transition-colors">Guides</Link></li>
@@ -208,7 +208,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
             <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight mb-5">
               {guide.title}
             </h1>
-            <p className="text-gray-400 text-base sm:text-lg leading-relaxed">{guide.description}</p>
+            <p className="text-gray-500 text-base sm:text-lg leading-relaxed">{guide.description}</p>
           </div>
         </section>
 
@@ -250,7 +250,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
                     href={`/guides/${r!.slug}/`}
                     className="group bg-white rounded-2xl border border-gray-100 p-6 hover:border-gold hover:shadow-lg transition-all flex flex-col"
                   >
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">
                       {r!.category} · {r!.readTime}
                     </span>
                     <span className="text-navy-900 font-bold text-sm leading-snug group-hover:text-gold transition-colors flex-1">
@@ -269,7 +269,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Apply the Knowledge</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Source from Pakistan?</h2>
-            <p className="text-gray-400 text-base max-w-lg mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-lg mx-auto mb-8">
               Submit a structured RFQ and receive a formal quotation within 3–5 business days — with factory
               selection, certifications and inspection built in.
             </p>

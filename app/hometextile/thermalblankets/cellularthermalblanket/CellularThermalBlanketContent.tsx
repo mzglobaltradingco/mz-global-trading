@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -227,7 +227,7 @@ export default function CellularThermalBlanketContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -244,7 +244,7 @@ export default function CellularThermalBlanketContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Cellular Blanket — All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 — 2 large bentos */}
@@ -267,7 +267,7 @@ export default function CellularThermalBlanketContent() {
                   { label: "Breathability", val: "Clinical Grade" },
                 ].map((r) => (
                   <div key={r.label} className="bg-white rounded-xl p-3 border border-blue-100">
-                    <p className="text-[10px] text-gray-400 uppercase tracking-wide">{r.label}</p>
+                    <p className="text-[10px] text-gray-500 uppercase tracking-wide">{r.label}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{r.val}</p>
                   </div>
                 ))}
@@ -386,7 +386,7 @@ export default function CellularThermalBlanketContent() {
                     <span className="w-8 h-6 bg-purple-100 rounded text-purple-700 text-[9px] font-bold flex items-center justify-center shrink-0 mt-0.5">{s.abbr}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{s.name}</p>
-                      <p className="text-[10px] text-gray-400">{s.market}</p>
+                      <p className="text-[10px] text-gray-500">{s.market}</p>
                     </div>
                   </div>
                 ))}
@@ -449,7 +449,7 @@ export default function CellularThermalBlanketContent() {
                     <span className={`w-6 h-6 rounded-full ${s.color} text-white text-[10px] font-bold flex items-center justify-center shrink-0`}>{i + 1}</span>
                     <div className="flex-1">
                       <p className="text-xs font-semibold text-navy-900">{s.stage}</p>
-                      <p className="text-[10px] text-gray-400">{s.days} days</p>
+                      <p className="text-[10px] text-gray-500">{s.days} days</p>
                     </div>
                   </div>
                 ))}
@@ -542,7 +542,7 @@ export default function CellularThermalBlanketContent() {
                     { metric: "Whiteness", val: "≥88 CIE" },
                   ].map((m) => (
                     <div key={m.metric} className="bg-white rounded-xl p-3.5 border border-blue-100">
-                      <p className="text-[10px] text-gray-400 uppercase tracking-wide">{m.metric}</p>
+                      <p className="text-[10px] text-gray-500 uppercase tracking-wide">{m.metric}</p>
                       <p className="text-sm font-bold text-navy-900 mt-0.5">{m.val}</p>
                     </div>
                   ))}
@@ -579,7 +579,7 @@ export default function CellularThermalBlanketContent() {
             className="mb-12">
             <p className="text-indigo-600 text-xs font-semibold tracking-[0.2em] uppercase mb-2">Weight Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">GSM by Clinical Setting</h2>
-            <p className="text-gray-400 mt-3 text-sm">Select the weight that matches your patient population and environment specification.</p>
+            <p className="text-gray-500 mt-3 text-sm">Select the weight that matches your patient population and environment specification.</p>
           </motion.div>
           <div className="space-y-6">
             {GSM_TIERS.map((tier, i) => (
@@ -594,7 +594,7 @@ export default function CellularThermalBlanketContent() {
                     <p className="text-base font-semibold text-gray-600">{tier.name}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-xs text-gray-400 mb-1">Procurement share</p>
+                    <p className="text-xs text-gray-500 mb-1">Procurement share</p>
                     <p className="text-2xl font-bold text-navy-900">{tier.pct}%</p>
                   </div>
                 </div>
@@ -603,7 +603,7 @@ export default function CellularThermalBlanketContent() {
                     className={`h-full ${tier.color} rounded-full`} />
                 </div>
                 <p className="text-sm text-gray-500 mb-3">{tier.market}</p>
-                <p className="text-xs text-gray-400 leading-relaxed">{tier.note}</p>
+                <p className="text-xs text-gray-500 leading-relaxed">{tier.note}</p>
               </motion.div>
             ))}
           </div>
@@ -618,7 +618,7 @@ export default function CellularThermalBlanketContent() {
             className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Size Matrix</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">Blanket Size Programme</h2>
-            <p className="text-gray-400 mt-3 text-sm">Standard and custom dimensions for all care environments.</p>
+            <p className="text-gray-500 mt-3 text-sm">Standard and custom dimensions for all care environments.</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {SIZES.map((s, i) => (
@@ -631,7 +631,7 @@ export default function CellularThermalBlanketContent() {
                     <p className="text-gold text-sm font-mono">{s.dims}</p>
                   </div>
                 </div>
-                <p className="text-gray-400 text-xs leading-relaxed">{s.use}</p>
+                <p className="text-gray-500 text-xs leading-relaxed">{s.use}</p>
               </motion.div>
             ))}
           </div>
@@ -704,7 +704,7 @@ export default function CellularThermalBlanketContent() {
             className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Certifications</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">Quality &amp; Compliance Marks</h2>
-            <p className="text-gray-400 mt-3 text-sm max-w-lg">The certification stack required by NHS, hospital and government procurement programmes globally.</p>
+            <p className="text-gray-500 mt-3 text-sm max-w-lg">The certification stack required by NHS, hospital and government procurement programmes globally.</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {CERTIFICATIONS.map((cert, i) => (
@@ -719,8 +719,8 @@ export default function CellularThermalBlanketContent() {
                     <p className="text-gold text-xs">{cert.full}</p>
                   </div>
                 </div>
-                <p className="text-gray-400 text-xs leading-relaxed">{cert.desc}</p>
-                <span className={`self-start text-[10px] font-bold px-2.5 py-0.5 rounded-full ${cert.tier === "Required" || cert.tier === "Premium" ? "bg-gold/20 text-gold" : "bg-white/10 text-gray-400"}`}>
+                <p className="text-gray-500 text-xs leading-relaxed">{cert.desc}</p>
+                <span className={`self-start text-[10px] font-bold px-2.5 py-0.5 rounded-full ${cert.tier === "Required" || cert.tier === "Premium" ? "bg-gold/20 text-gold" : "bg-white/10 text-gray-500"}`}>
                   {cert.tier}
                 </span>
               </motion.div>
@@ -779,7 +779,7 @@ export default function CellularThermalBlanketContent() {
                 <div className="pl-4">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-xl font-black text-navy-900">{t.term}</span>
-                    <span className="text-xs text-gray-400">{t.full}</span>
+                    <span className="text-xs text-gray-500">{t.full}</span>
                   </div>
                   <p className="text-xs text-gold font-semibold mb-2">{t.port}</p>
                   <p className="text-sm text-gray-500 leading-relaxed">{t.desc}</p>
@@ -864,7 +864,7 @@ export default function CellularThermalBlanketContent() {
                 </div>
                 <div className="flex-1">
                   <p className="text-white font-bold text-sm">{stage.stage}</p>
-                  <p className="text-gray-400 text-xs mt-0.5">{stage.desc}</p>
+                  <p className="text-gray-500 text-xs mt-0.5">{stage.desc}</p>
                 </div>
                 <div className="text-right shrink-0">
                   <p className="text-gold font-mono font-bold text-sm">{stage.days} days</p>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -474,7 +474,7 @@ export default function BedsheetContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -496,7 +496,7 @@ export default function BedsheetContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 */}
@@ -514,7 +514,7 @@ export default function BedsheetContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3.5 border border-emerald-100">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.tcRange}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.tcRange}</p>
                     <p className="text-xs text-emerald-600 mt-1 leading-tight">{c.best[0]}</p>
                     {c.badge && (
                       <span className="mt-1.5 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{c.badge}</span>
@@ -545,7 +545,7 @@ export default function BedsheetContent() {
                       <div className={`h-full rounded-full ${t.color}`} style={{ width: `${t.pct}%` }} aria-hidden="true" />
                     </div>
                     <p className="text-[10px] font-semibold text-teal-600">{t.name}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{t.market}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{t.market}</p>
                   </div>
                 ))}
               </div>
@@ -564,7 +564,7 @@ export default function BedsheetContent() {
                 {[...BED_SIZES_US.slice(0, 2), ...BED_SIZES_UK.slice(2, 4)].map((s) => (
                   <div key={s.name} className="bg-white rounded-lg px-3 py-2 border border-sky-100">
                     <p className="text-xs font-semibold text-navy-900">{s.name}</p>
-                    <p className="text-[10px] text-gray-400">{s.dim}</p>
+                    <p className="text-[10px] text-gray-500">{s.dim}</p>
                   </div>
                 ))}
                 <p className="text-[10px] text-sky-600 font-semibold mt-1">US · UK · EU all available</p>
@@ -602,7 +602,7 @@ export default function BedsheetContent() {
                         <div key={i} className={`w-4 h-4 rounded-full ${s}`} aria-hidden="true" />
                       ))}
                     </div>
-                    <p className="text-[10px] text-gray-400 mt-1">{d.subtitle}</p>
+                    <p className="text-[10px] text-gray-500 mt-1">{d.subtitle}</p>
                   </div>
                 ))}
               </div>
@@ -642,7 +642,7 @@ export default function BedsheetContent() {
                   <div key={s.abbr} className="bg-white rounded-xl p-3 border border-indigo-100">
                     <p className="text-xs font-bold text-indigo-600">{s.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{s.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{s.market}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -679,7 +679,7 @@ export default function BedsheetContent() {
                     <span className="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 text-[10px] font-bold flex items-center justify-center shrink-0">{e.term}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{e.full}</p>
-                      <p className="text-[10px] text-gray-400">{e.port}</p>
+                      <p className="text-[10px] text-gray-500">{e.port}</p>
                     </div>
                   </div>
                 ))}
@@ -723,7 +723,7 @@ export default function BedsheetContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -780,7 +780,7 @@ export default function BedsheetContent() {
               ◼ WEAVE CONSTRUCTION DATABASE
             </p>
             <h2 className="text-3xl sm:text-4xl font-black text-white uppercase tracking-tight">Fabric Weave Constructions</h2>
-            <p className="text-gray-400 mt-3 max-w-2xl leading-relaxed">
+            <p className="text-gray-500 mt-3 max-w-2xl leading-relaxed">
               Bedsheets fall into two categories: <span className="text-white font-semibold">woven</span> (percale, sateen, jacquard, oxford, flannel, linen — structured, stable, measured in TC) and <span className="text-white font-semibold">knitted</span> (jersey knit — stretchy, casual, measured in GSM). Microfiber is a woven polyester construction also measured in GSM. Each structure has a distinct hand feel, market positioning and washing durability.
             </p>
           </div>
@@ -888,24 +888,24 @@ export default function BedsheetContent() {
               </div>
               <div className="border border-white/10 rounded-xl p-4 bg-white/5">
                 <p className="text-white text-xs font-bold uppercase tracking-wider mb-2">GSM vs Thread Count</p>
-                <p className="text-gray-400 text-xs leading-relaxed">Microfiber and jersey knit bedsheets are measured in GSM (grams per square metre), not thread count. TC applies only to woven constructions. Specify GSM when requesting quotes for microfiber or jersey programmes.</p>
+                <p className="text-gray-500 text-xs leading-relaxed">Microfiber and jersey knit bedsheets are measured in GSM (grams per square metre), not thread count. TC applies only to woven constructions. Specify GSM when requesting quotes for microfiber or jersey programmes.</p>
               </div>
             </div>
             {/* Right panel — white */}
             <div className="bg-white p-10 lg:p-14">
-              <p className="text-gray-400 text-xs font-semibold tracking-[0.2em] uppercase mb-6">TC Tiers — Commercial Reference</p>
+              <p className="text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase mb-6">TC Tiers — Commercial Reference</p>
               <div className="flex flex-col gap-5">
                 {TC_TIERS.map((t) => (
                   <div key={t.tc} className={`rounded-2xl p-6 border-2 ${t.featured ? "border-gold shadow-lg" : "border-gray-100"}`}>
                     {t.featured && <span className="inline-block mb-2 text-[10px] font-bold text-gold bg-gold/10 px-3 py-1 rounded-full uppercase tracking-wider">Most Ordered</span>}
                     <div className="flex items-baseline gap-3 mb-2">
                       <p className={`text-2xl font-bold ${t.featured ? "text-gold" : "text-navy-900"}`}>{t.tc} TC</p>
-                      <p className="text-xs font-semibold text-gray-400 uppercase">{t.name}</p>
+                      <p className="text-xs font-semibold text-gray-500 uppercase">{t.name}</p>
                     </div>
                     <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden mb-3">
                       <div className={`h-full rounded-full ${t.featured ? "bg-gold" : "bg-navy-900/30"}`} style={{ width: `${t.pct}%` }} aria-hidden="true" />
                     </div>
-                    <p className="text-xs text-gray-400 mb-2">{t.market}</p>
+                    <p className="text-xs text-gray-500 mb-2">{t.market}</p>
                     <p className="text-sm text-gray-500 leading-relaxed">{t.desc}</p>
                   </div>
                 ))}
@@ -939,7 +939,7 @@ export default function BedsheetContent() {
                         <p className="text-sm font-bold text-navy-900">{s.name}</p>
                         <span className={`text-[10px] font-bold ${col.badge} px-2 py-0.5 rounded-full whitespace-nowrap`}>{s.dim}</span>
                       </div>
-                      <p className="text-xs text-gray-400 mt-1">{s.note}</p>
+                      <p className="text-xs text-gray-500 mt-1">{s.note}</p>
                     </div>
                   ))}
                 </div>
@@ -978,7 +978,7 @@ export default function BedsheetContent() {
                 <h3 className="text-lg font-bold text-navy-900">{e.name}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed flex-1">{e.best}</p>
                 <div className="border-t border-gray-100 pt-4">
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Best Market</p>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Best Market</p>
                   <p className="text-xs text-navy-900 font-semibold">{e.market}</p>
                 </div>
                 <p className="text-xs text-amber-700 bg-amber-50 rounded-lg px-3 py-2 border border-amber-100">{e.note}</p>
@@ -1079,7 +1079,7 @@ export default function BedsheetContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Market Applications</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Bedsheet Market Sectors &amp; Applications</h2>
-          <p className="text-gray-400 mb-10 max-w-2xl leading-relaxed">Pakistan bedsheets serve every major B2B bedding segment — from institutional hotel programmes to premium DTC brands.</p>
+          <p className="text-gray-500 mb-10 max-w-2xl leading-relaxed">Pakistan bedsheets serve every major B2B bedding segment — from institutional hotel programmes to premium DTC brands.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {SECTORS.map((s, i) => (
               <motion.div
@@ -1093,7 +1093,7 @@ export default function BedsheetContent() {
               >
                 <span className="w-12 h-12 rounded-xl bg-gold/15 text-gold text-sm font-bold flex items-center justify-center">{s.abbr}</span>
                 <h3 className="text-lg font-bold text-white">{s.name}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed flex-1">{s.detail}</p>
+                <p className="text-sm text-gray-500 leading-relaxed flex-1">{s.detail}</p>
                 <p className="text-xs font-semibold text-gold">{s.market}</p>
               </motion.div>
             ))}
@@ -1136,7 +1136,7 @@ export default function BedsheetContent() {
                         <h3 className="text-sm font-bold text-navy-900">{c.name}</h3>
                         <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${c.tier === "Premium" ? "bg-gold/15 text-gold" : c.tier === "Standard" ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-500"}`}>{c.tier}</span>
                       </div>
-                      <p className="text-xs text-gray-400 mt-0.5 truncate">{c.full}</p>
+                      <p className="text-xs text-gray-500 mt-0.5 truncate">{c.full}</p>
                       <p className="text-xs text-gray-500 leading-relaxed mt-1">{c.desc}</p>
                     </div>
                   </motion.div>
@@ -1163,7 +1163,7 @@ export default function BedsheetContent() {
 
           <div className="grid lg:grid-cols-2 gap-10 mb-12">
             <div>
-              <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6 border-b border-gray-200 pb-3">Incoterms — Bedsheet Export</p>
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6 border-b border-gray-200 pb-3">Incoterms — Bedsheet Export</p>
               <div className="flex flex-col gap-0 divide-y divide-gray-100">
                 {EXPORT_TERMS.map((e, i) => (
                   <div key={e.term} className="py-5 flex gap-6 items-start">
@@ -1181,20 +1181,20 @@ export default function BedsheetContent() {
               </div>
             </div>
             <div>
-              <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6 border-b border-gray-200 pb-3">Packaging Options</p>
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6 border-b border-gray-200 pb-3">Packaging Options</p>
               <div className="grid grid-cols-2 gap-3 mb-8">
                 {PACK_OPTIONS.map((p) => (
                   <div key={p.label} className="bg-white rounded-xl p-4 border border-gray-100 flex items-start gap-3">
                     <span className="text-xl" aria-hidden="true">{p.icon}</span>
                     <div>
                       <p className="text-sm font-semibold text-navy-900">{p.label}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{p.note}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{p.note}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 border-b border-gray-200 pb-3">Lead Time Overview (Indicative)</p>
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4 border-b border-gray-200 pb-3">Lead Time Overview (Indicative)</p>
               <div className="flex flex-col gap-2">
                 {LEAD_STAGES.map((s) => (
                   <div key={s.stage} className="flex items-center gap-3">
@@ -1267,7 +1267,7 @@ export default function BedsheetContent() {
                 <div className="flex items-center gap-3">
                   <span className="w-10 h-10 rounded-xl bg-navy-900 text-gold text-sm font-bold flex items-center justify-center shrink-0">{p.num}</span>
                   <div>
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">{p.short}</p>
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">{p.short}</p>
                     <h3 className="text-base font-bold text-navy-900">{p.title}</h3>
                   </div>
                 </div>
@@ -1377,7 +1377,7 @@ export default function BedsheetContent() {
           >
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Get Started</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Source Custom Bedsheets?</h2>
-            <p className="text-gray-400 text-base max-w-xl mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-xl mx-auto mb-8">
               Share your construction, thread count and size requirements — our team responds within 24 hours with factory matches and indicative pricing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

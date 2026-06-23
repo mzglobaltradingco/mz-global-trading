@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -80,7 +80,7 @@ export default function WhyUs() {
           <motion.h2 variants={headingItemVariants} className="text-3xl sm:text-4xl font-bold text-white">
             Built on Trust, Driven by Quality
           </motion.h2>
-          <motion.p variants={headingItemVariants} className="text-gray-400 text-base mt-3 max-w-2xl mx-auto">
+          <motion.p variants={headingItemVariants} className="text-gray-500 text-base mt-3 max-w-2xl mx-auto">
             We&apos;ve spent over a decade building the systems, relationships, and expertise that international buyers demand.
           </motion.p>
         </motion.div>
@@ -108,7 +108,7 @@ export default function WhyUs() {
                 </motion.div>
                 <div>
                   <h3 className="text-white font-semibold text-base mb-1.5">{r.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{r.desc}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed">{r.desc}</p>
                 </div>
               </div>
             </motion.div>

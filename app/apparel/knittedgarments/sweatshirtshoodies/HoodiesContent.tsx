@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -434,7 +434,7 @@ export default function HoodiesContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -456,7 +456,7 @@ export default function HoodiesContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1: Constructions + Fit Profiles */}
@@ -476,7 +476,7 @@ export default function HoodiesContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3.5 border border-amber-100">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                     <p className="text-xs text-amber-600 mt-1 leading-tight">{c.best[0]}</p>
                     {c.badge && (
                       <span className="mt-1.5 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{c.badge}</span>
@@ -506,7 +506,7 @@ export default function HoodiesContent() {
                     </span>
                     <div>
                       <p className="text-sm font-semibold text-navy-900">{f.name}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{f.ease}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{f.ease}</p>
                       <p className="text-xs text-rose-600 mt-0.5">{f.market}</p>
                     </div>
                   </div>
@@ -536,7 +536,7 @@ export default function HoodiesContent() {
                       <div className={`h-full rounded-full ${t.color}`} style={{ width: `${t.pct}%` }} aria-hidden="true" />
                     </div>
                     <p className="text-[10px] font-semibold text-slate-500">{t.season}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{t.market}</p>
+                    <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{t.market}</p>
                   </div>
                 ))}
               </div>
@@ -558,7 +558,7 @@ export default function HoodiesContent() {
                     </span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{d.method}</p>
-                      <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{d.compat.join(", ")}</p>
+                      <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{d.compat.join(", ")}</p>
                     </div>
                   </div>
                 ))}
@@ -582,7 +582,7 @@ export default function HoodiesContent() {
                         <div key={i} className={`w-4 h-4 rounded-full ${s}`} aria-hidden="true" />
                       ))}
                     </div>
-                    <p className="text-[10px] text-gray-400">{d.subtitle}</p>
+                    <p className="text-[10px] text-gray-500">{d.subtitle}</p>
                   </div>
                 ))}
               </div>
@@ -631,7 +631,7 @@ export default function HoodiesContent() {
                   <div key={s.abbr} className="bg-white rounded-xl p-3 border border-sky-100">
                     <p className="text-xs font-bold text-sky-600">{s.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{s.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{s.market}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -672,7 +672,7 @@ export default function HoodiesContent() {
                     <span className="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 text-[10px] font-bold flex items-center justify-center shrink-0">{e.term}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{e.full}</p>
-                      <p className="text-[10px] text-gray-400">{e.port}</p>
+                      <p className="text-[10px] text-gray-500">{e.port}</p>
                     </div>
                   </div>
                 ))}
@@ -720,7 +720,7 @@ export default function HoodiesContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -773,7 +773,7 @@ export default function HoodiesContent() {
       <section id="section-constructions" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-l-4 border-navy-900 pl-6 mb-12">
-            <p className="font-mono text-[11px] text-gray-400 uppercase tracking-[0.25em] mb-2">FABRIC CONSTRUCTION SCORECARDS</p>
+            <p className="font-mono text-[11px] text-gray-500 uppercase tracking-[0.25em] mb-2">FABRIC CONSTRUCTION SCORECARDS</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Sweatshirt &amp; Hoodie Fleece Constructions</h2>
             <p className="text-gray-500 mt-3 max-w-2xl leading-relaxed">
               Six distinct fleece and terry builds for Pakistan OEM production — each with different weight range, market position and decoration compatibility.
@@ -892,7 +892,7 @@ export default function HoodiesContent() {
               {[["XS–3XL", "Standard range"], ["Plus sizes", "Available"], ["Custom", "Spec on request"]].map(([v, l]) => (
                 <div key={l}>
                   <p className="text-lg font-bold text-navy-900">{v}</p>
-                  <p className="text-[10px] text-gray-400 uppercase tracking-wider">{l}</p>
+                  <p className="text-[10px] text-gray-500 uppercase tracking-wider">{l}</p>
                 </div>
               ))}
             </div>
@@ -914,7 +914,7 @@ export default function HoodiesContent() {
                 </div>
                 <p className="text-xs text-gray-500 leading-relaxed flex-1">{f.market}</p>
                 <div className="pt-3 border-t border-rose-100">
-                  <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Size Standards</p>
+                  <p className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Size Standards</p>
                   <p className="text-xs text-navy-900 font-semibold mt-1">US / UK / EU</p>
                 </div>
               </motion.div>
@@ -930,7 +930,7 @@ export default function HoodiesContent() {
       <section id="section-gsm" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-14">
-            <p className="text-gray-400 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Weight Selection — Sweatshirts &amp; Hoodies</p>
+            <p className="text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Weight Selection — Sweatshirts &amp; Hoodies</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Choosing GSM for Your Fleece Programme</h2>
             <p className="text-gray-500 leading-relaxed">
               GSM determines season positioning, warmth rating, decoration compatibility and retail price tier. The range is wide — 300 GSM to 420+ GSM — and construction choice is as important as the number.
@@ -945,7 +945,7 @@ export default function HoodiesContent() {
               { label: "Constructions", val: "6", sub: "Terry to bonded fleece" },
             ].map((m) => (
               <div key={m.label} className="border border-gray-100 rounded-2xl p-5">
-                <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">{m.label}</p>
+                <p className="text-xs text-gray-500 uppercase tracking-wider mb-2">{m.label}</p>
                 <p className="text-2xl font-bold text-navy-900">{m.val}</p>
                 <p className="text-xs text-gray-500 mt-1">{m.sub}</p>
               </div>
@@ -959,13 +959,13 @@ export default function HoodiesContent() {
                   <span className="inline-block mb-3 text-[10px] font-bold text-gold bg-gold/10 px-3 py-1 rounded-full uppercase tracking-wider">Most Ordered</span>
                 )}
                 <p className={`text-3xl font-bold mb-1 ${tier.featured ? "text-gold" : "text-navy-900"}`}>{tier.gsm}</p>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">{tier.name}</p>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">{tier.name}</p>
                 <p className="text-sm font-semibold text-navy-900 mb-3">{tier.season}</p>
                 <div className="mb-4">
                   <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
                     <div className={`h-full rounded-full ${tier.featured ? "bg-gold" : "bg-gray-300"}`} style={{ width: `${tier.pct}%` }} aria-hidden="true" />
                   </div>
-                  <p className="text-[10px] text-gray-400 mt-1">{tier.market}</p>
+                  <p className="text-[10px] text-gray-500 mt-1">{tier.market}</p>
                 </div>
                 <p className="text-sm text-gray-500 leading-relaxed">{tier.desc}</p>
               </div>
@@ -1023,7 +1023,7 @@ export default function HoodiesContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Colour &amp; Dye Programs</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">Fleece Colour &amp; Dye Programme Options</h2>
-            <p className="text-gray-400 mt-3 max-w-2xl leading-relaxed">
+            <p className="text-gray-500 mt-3 max-w-2xl leading-relaxed">
               Full PMS-matched reactive dyeing, vintage garment dye, contemporary space dye and GOTS-certified organic low-impact options. Lab dip approval before bulk production.
             </p>
           </div>
@@ -1031,7 +1031,7 @@ export default function HoodiesContent() {
             {DYE_OPTIONS.map((d) => (
               <div key={d.name} className="bg-white/10 backdrop-blur-xs border border-white/10 rounded-2xl p-6 hover:bg-white/15 transition-colors">
                 <p className="text-gold font-bold text-base mb-1">{d.name}</p>
-                <p className="text-xs text-gray-400 mb-4">{d.subtitle}</p>
+                <p className="text-xs text-gray-500 mb-4">{d.subtitle}</p>
                 <div className="flex gap-3 mb-4">
                   {d.swatches.map((s, i) => (
                     <div key={i} className={`w-8 h-8 rounded-full ${s} border-2 border-white/20`} aria-hidden="true" />
@@ -1055,7 +1055,7 @@ export default function HoodiesContent() {
                 <div key={i} className={`${c} rounded-lg aspect-square border border-white/10`} aria-hidden="true" />
               ))}
             </div>
-            <p className="text-gray-400 text-xs mt-3">Full PMS-matched reactive dyeing — lab dip approval required before bulk production.</p>
+            <p className="text-gray-500 text-xs mt-3">Full PMS-matched reactive dyeing — lab dip approval required before bulk production.</p>
           </div>
           <div className="flex justify-center mt-16">
             <button
@@ -1108,7 +1108,7 @@ export default function HoodiesContent() {
           {/* Comparison table: OEM tiers */}
           <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
             <div className="min-w-[520px]">
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">Programme Comparison</p>
+              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Programme Comparison</p>
               <div className="border border-gray-200 rounded-2xl overflow-hidden">
                 <div className="grid grid-cols-4 bg-gray-50 border-b border-gray-200 text-xs font-semibold text-gray-500 uppercase tracking-wider">
                   <div className="p-4">Feature</div>
@@ -1173,7 +1173,7 @@ export default function HoodiesContent() {
             ))}
           </div>
           <div className="bg-white rounded-2xl p-8 border border-sky-100">
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-5">Key Export Destinations</p>
+            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-5">Key Export Destinations</p>
             <div className="flex flex-wrap gap-3">
               {["USA", "Canada", "UK", "Germany", "France", "Netherlands", "Sweden", "Norway", "Australia", "UAE", "Saudi Arabia", "Japan", "South Korea", "Brazil", "South Africa"].map((m) => (
                 <span key={m} className="text-sm font-semibold text-navy-900 bg-sky-50 border border-sky-100 px-4 py-2 rounded-full hover:border-gold transition-colors">
@@ -1330,7 +1330,7 @@ export default function HoodiesContent() {
                           <p className="text-white text-xs font-semibold">{s.stage}</p>
                           <p className="text-teal-300 text-xs font-bold">{s.days} days</p>
                         </div>
-                        <p className="text-gray-400 text-[10px] mt-0.5">{s.desc}</p>
+                        <p className="text-gray-500 text-[10px] mt-0.5">{s.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -1464,7 +1464,7 @@ export default function HoodiesContent() {
                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold" />
                       </span>
                     )}
-                    <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-bold transition-all ${faqOpen === i ? "border-gold bg-gold text-navy-900" : "border-gray-300 text-gray-400 group-hover:border-gold"}`}>
+                    <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-bold transition-all ${faqOpen === i ? "border-gold bg-gold text-navy-900" : "border-gray-300 text-gray-500 group-hover:border-gold"}`}>
                       {faqOpen === i ? "−" : "+"}
                     </span>
                   </span>

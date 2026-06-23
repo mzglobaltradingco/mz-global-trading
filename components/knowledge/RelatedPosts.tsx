@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { formatDate } from "@/lib/knowledge";
 import type { KnowledgePost } from "@/types/knowledge";
 
@@ -30,7 +30,7 @@ export default function RelatedPosts({ posts }: RelatedPostsProps) {
             <p className="text-gray-500 text-xs leading-relaxed line-clamp-2 mb-4">
               {post.excerpt}
             </p>
-            <div className="flex items-center justify-between text-gray-400 text-xs pt-3 border-t border-gray-50">
+            <div className="flex items-center justify-between text-gray-500 text-xs pt-3 border-t border-gray-50">
               <span>{formatDate(post.date)}</span>
               <span>{post.readTime} min read</span>
             </div>

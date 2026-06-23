@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -221,7 +221,7 @@ export default function ShopTowelsContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -238,7 +238,7 @@ export default function ShopTowelsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Shop Towels — All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 */}
@@ -512,7 +512,7 @@ export default function ShopTowelsContent() {
                 <p className="text-xs font-mono text-slate-500 mb-3">{c.gsm}</p>
                 <p className="text-sm text-gray-500 mb-4 font-medium">{c.hand}</p>
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">{c.detail}</p>
-                <p className="text-xs text-gray-400 leading-relaxed border-t border-gray-100 pt-3">{c.spec}</p>
+                <p className="text-xs text-gray-500 leading-relaxed border-t border-gray-100 pt-3">{c.spec}</p>
                 <div className="flex flex-wrap gap-1.5 mt-3">
                   {c.best.map((b) => (
                     <span key={b} className="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded">{b}</span>
@@ -531,7 +531,7 @@ export default function ShopTowelsContent() {
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Weight Specification</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">GSM by Application Duty</h2>
-            <p className="text-gray-400 mt-3 text-sm">Match weight to application severity — heavier GSM means more pile, more absorbency, higher cost.</p>
+            <p className="text-gray-500 mt-3 text-sm">Match weight to application severity — heavier GSM means more pile, more absorbency, higher cost.</p>
           </motion.div>
           <div className="space-y-4">
             {GSM_TIERS.map((t, i) => (
@@ -549,7 +549,7 @@ export default function ShopTowelsContent() {
                     <motion.div initial={{ width: 0 }} whileInView={{ width: `${t.pct}%` }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}
                       className={`h-full ${t.colour} rounded-full`} />
                   </div>
-                  <p className="text-gray-400 text-xs">{t.market}</p>
+                  <p className="text-gray-500 text-xs">{t.market}</p>
                 </div>
                 <p className="text-gray-500 text-xs max-w-xs leading-relaxed">{t.note}</p>
               </motion.div>
@@ -588,7 +588,7 @@ export default function ShopTowelsContent() {
               </tbody>
             </table>
           </div>
-          <p className="text-gray-400 text-xs mt-4">±2 cm manufacturing tolerance. Custom dimensions and industrial roll configurations available on request.</p>
+          <p className="text-gray-500 text-xs mt-4">±2 cm manufacturing tolerance. Custom dimensions and industrial roll configurations available on request.</p>
           <BackToTop />
         </div>
       </section>
@@ -679,7 +679,7 @@ export default function ShopTowelsContent() {
                   <Image src={cert.img} alt={cert.name} width={56} height={40} className="object-contain" sizes="56px" />
                 </div>
                 <div>
-                  <p className="text-base font-bold text-navy-900">{cert.name} <span className="text-sm font-normal text-gray-400">— {cert.full}</span></p>
+                  <p className="text-base font-bold text-navy-900">{cert.name} <span className="text-sm font-normal text-gray-500">— {cert.full}</span></p>
                   <p className="text-sm text-gray-500 mt-1 leading-relaxed">{cert.desc}</p>
                 </div>
               </motion.div>
@@ -695,7 +695,7 @@ export default function ShopTowelsContent() {
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Export</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">Incoterms &amp; Shipping</h2>
-            <p className="text-gray-400 mt-3 text-sm">All programmes ship from Karachi or Port Qasim, Pakistan.</p>
+            <p className="text-gray-500 mt-3 text-sm">All programmes ship from Karachi or Port Qasim, Pakistan.</p>
           </motion.div>
           <div className="space-y-4">
             {EXPORT_TERMS.map((t, i) => (
@@ -792,8 +792,8 @@ export default function ShopTowelsContent() {
                   <span className="text-white text-sm font-bold">{String(i + 1).padStart(2, "0")}</span>
                 </div>
                 <p className="text-white font-bold text-sm">{stage.stage}</p>
-                <p className="text-gold font-mono font-bold text-xl">{stage.days} <span className="text-xs text-gray-400 font-normal">days indicative</span></p>
-                <p className="text-gray-400 text-xs leading-relaxed">{stage.desc}</p>
+                <p className="text-gold font-mono font-bold text-xl">{stage.days} <span className="text-xs text-gray-500 font-normal">days indicative</span></p>
+                <p className="text-gray-500 text-xs leading-relaxed">{stage.desc}</p>
               </motion.div>
             ))}
           </div>

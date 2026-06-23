@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef, useState } from "react";
 import Link from "next/link";
@@ -473,7 +473,7 @@ export default function OurProcessContent() {
 
             <div className="absolute bottom-4 right-4 bg-navy-900/90 backdrop-blur-xs border border-white/10 rounded-xl px-4 py-3 text-right">
               <p className="text-gold font-bold text-xl leading-none">25+</p>
-              <p className="text-gray-400 text-xs mt-0.5">Export Markets</p>
+              <p className="text-gray-500 text-xs mt-0.5">Export Markets</p>
             </div>
           </motion.div>
         </div>
@@ -524,7 +524,7 @@ export default function OurProcessContent() {
                             transition={{ duration: 0.4, delay: i * 0.06 + 0.2 }}
                           >{step.num}</motion.span>
                           <h3 className="text-white font-bold text-lg mt-1 mb-3">{step.title}</h3>
-                          <p className="text-gray-400 text-sm leading-relaxed">{step.desc}</p>
+                          <p className="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
                         </motion.div>
                       )}
                     </div>
@@ -568,7 +568,7 @@ export default function OurProcessContent() {
                             transition={{ duration: 0.4, delay: i * 0.06 + 0.2 }}
                           >{step.num}</motion.span>
                           <h3 className="text-white font-bold text-lg mt-1 mb-3">{step.title}</h3>
-                          <p className="text-gray-400 text-sm leading-relaxed">{step.desc}</p>
+                          <p className="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
                         </motion.div>
                       )}
                     </div>
@@ -597,7 +597,7 @@ export default function OurProcessContent() {
                   <div>
                     <span className="text-gold/40 text-2xl font-bold leading-none select-none block">{step.num}</span>
                     <h3 className="text-white font-bold text-base mt-1 mb-2">{step.title}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">{step.desc}</p>
+                    <p className="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -650,7 +650,7 @@ export default function OurProcessContent() {
                     <h3 className="text-navy-900 font-bold text-base mb-2 group-hover:text-white transition-colors">
                       {c.title}
                     </h3>
-                    <p className="text-gray-500 text-sm leading-relaxed group-hover:text-gray-400 transition-colors">
+                    <p className="text-gray-500 text-sm leading-relaxed group-hover:text-gray-500 transition-colors">
                       {c.desc}
                     </p>
                   </div>
@@ -700,7 +700,7 @@ export default function OurProcessContent() {
                 </div>
                 <span className="text-gold text-xs font-bold mb-1 group-hover:text-gold/80">{stage.num}</span>
                 <h3 className="text-navy-900 font-bold text-sm mb-1.5 group-hover:text-white transition-colors">{stage.title}</h3>
-                <p className="text-gray-400 text-xs leading-relaxed group-hover:text-gray-400 transition-colors">{stage.detail}</p>
+                <p className="text-gray-500 text-xs leading-relaxed group-hover:text-gray-500 transition-colors">{stage.detail}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -744,7 +744,7 @@ export default function OurProcessContent() {
           >
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Where We Source</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Pakistan&apos;s Manufacturing Hubs</h2>
-            <p className="text-gray-400 text-sm max-w-xl leading-relaxed">
+            <p className="text-gray-500 text-sm max-w-xl leading-relaxed">
               Pakistan&apos;s textile industry is geographically concentrated across five specialised cities.
               We source across all of them — matching every product to the hub that knows it best.
             </p>
@@ -774,7 +774,7 @@ export default function OurProcessContent() {
                 <h3 className="text-gold font-bold text-2xl leading-tight mb-1">{sourcingHubs[0].city}</h3>
                 <p className="text-white/55 text-sm mb-4">{sourcingHubs[0].label}</p>
                 <div className="w-10 h-px bg-gold/30 mb-4" />
-                <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">{sourcingHubs[0].desc}</p>
+                <p className="text-gray-500 text-sm leading-relaxed max-w-2xl">{sourcingHubs[0].desc}</p>
               </div>
               <div className="lg:w-56 shrink-0">
                 <p className="text-white/30 text-[10px] font-semibold tracking-widest uppercase mb-3">Product Coverage</p>
@@ -801,10 +801,10 @@ export default function OurProcessContent() {
                     <p className="text-white/60 text-xs mt-0.5">{hub.label}</p>
                   </div>
                   <div className="w-8 h-px bg-gold/30 mb-4" />
-                  <p className="text-gray-400 text-xs leading-relaxed mb-4">{hub.desc}</p>
+                  <p className="text-gray-500 text-xs leading-relaxed mb-4">{hub.desc}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {hub.products.map((p) => (
-                      <span key={p} className="inline-block px-2 py-0.5 bg-white/5 border border-white/10 rounded text-gray-400 text-[10px] group-hover:border-gold/20 transition-colors">
+                      <span key={p} className="inline-block px-2 py-0.5 bg-white/5 border border-white/10 rounded text-gray-500 text-[10px] group-hover:border-gold/20 transition-colors">
                         {p}
                       </span>
                     ))}
@@ -847,7 +847,7 @@ export default function OurProcessContent() {
                   <span className={`font-semibold text-sm sm:text-base pr-4 transition-colors ${openFaq === i ? "text-gold" : "text-navy-900"}`}>
                     {item.q}
                   </span>
-                  <span className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${openFaq === i ? "bg-gold text-navy-900" : "bg-gray-100 text-gray-400 group-hover:bg-gray-200"}`}>
+                  <span className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${openFaq === i ? "bg-gold text-navy-900" : "bg-gray-100 text-gray-500 group-hover:bg-gray-200"}`}>
                     <svg className={`w-4 h-4 transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -942,7 +942,7 @@ export default function OurProcessContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Ready to Source From Pakistan?
             </h2>
-            <p className="text-gray-400 text-base max-w-xl mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-xl mx-auto mb-8">
               Tell us what you need. We&apos;ll respond within 24 hours with a factory recommendation and pricing overview.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

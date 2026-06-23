@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -200,7 +200,7 @@ export default function BabyAndKidsContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -220,7 +220,7 @@ export default function BabyAndKidsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Product Range</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Baby &amp; Kids Product Categories</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">
               Each category page covers construction options, certification requirements, size ranges, decoration methods, packing formats and full export terms.
             </p>
           </div>
@@ -301,7 +301,7 @@ export default function BabyAndKidsContent() {
           <div className="mb-8">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Baby Textile Compliance</p>
             <h2 className="text-2xl sm:text-3xl font-bold text-navy-900">Certifications — Specify in Your RFQ</h2>
-            <p className="text-gray-400 mt-2 text-sm max-w-lg">GOTS and OEKO-TEX Class 1 are the primary mandatory certifications for baby textile buyers in USA, UK and EU markets.</p>
+            <p className="text-gray-500 mt-2 text-sm max-w-lg">GOTS and OEKO-TEX Class 1 are the primary mandatory certifications for baby textile buyers in USA, UK and EU markets.</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {CERTS.map((c) => (

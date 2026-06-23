@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -420,7 +420,7 @@ export default function DuvetCoversContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -440,7 +440,7 @@ export default function DuvetCoversContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 */}
@@ -458,7 +458,7 @@ export default function DuvetCoversContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3.5 border border-amber-100">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.tc}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.tc}</p>
                     <p className="text-xs text-amber-600 mt-1 leading-tight">{c.best[0]}</p>
                   </div>
                 ))}
@@ -505,7 +505,7 @@ export default function DuvetCoversContent() {
                     <div className="w-full h-1 bg-sky-100 rounded-full overflow-hidden">
                       <div className="h-full rounded-full bg-sky-400" style={{ width: `${t.pct}%` }} aria-hidden="true" />
                     </div>
-                    <p className="text-[10px] text-gray-400 mt-1">{t.name}</p>
+                    <p className="text-[10px] text-gray-500 mt-1">{t.name}</p>
                   </div>
                 ))}
               </div>
@@ -538,7 +538,7 @@ export default function DuvetCoversContent() {
                   <div key={d.name} className="bg-white rounded-xl p-2.5 border border-rose-50">
                     <div className="flex items-center justify-between mb-1">
                       <p className="text-xs font-semibold text-navy-900">{d.name}</p>
-                      <span className="text-[10px] text-gray-400">{d.pct}%</span>
+                      <span className="text-[10px] text-gray-500">{d.pct}%</span>
                     </div>
                     <div className="w-full h-1 bg-rose-100 rounded-full overflow-hidden">
                       <div className={`h-full rounded-full ${d.color}`} style={{ width: `${d.pct}%` }} aria-hidden="true" />
@@ -582,7 +582,7 @@ export default function DuvetCoversContent() {
                   <div key={s.abbr} className="bg-white rounded-xl p-3 border border-teal-100">
                     <p className="text-xs font-bold text-teal-600">{s.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{s.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{s.market}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -660,7 +660,7 @@ export default function DuvetCoversContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.title}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Our Process" />
             </motion.div>
@@ -710,7 +710,7 @@ export default function DuvetCoversContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start mb-16">
             <div>
-              <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-400 mb-4">No. 01 / Fabric Construction</p>
+              <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-500 mb-4">No. 01 / Fabric Construction</p>
               <h2 className="text-5xl sm:text-6xl font-bold text-navy-900 leading-[1] mb-8">
                 Six<br />Constructions
               </h2>
@@ -750,11 +750,11 @@ export default function DuvetCoversContent() {
                   <p className="text-gray-600 leading-relaxed mb-6">{ac.desc}</p>
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
-                      <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Hand Feel</p>
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Hand Feel</p>
                       <p className="text-sm text-navy-900">{ac.feel}</p>
                     </div>
                     <div>
-                      <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Key Markets</p>
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Key Markets</p>
                       <div className="flex flex-wrap gap-1.5">
                         {ac.markets.map((m) => (
                           <span key={m} className="text-xs bg-amber-50 text-amber-700 border border-amber-200 px-2 py-0.5 rounded-full">{m}</span>
@@ -763,7 +763,7 @@ export default function DuvetCoversContent() {
                     </div>
                   </div>
                   <div className="bg-white rounded-xl p-4 border border-gray-200">
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Technical Note</p>
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Technical Note</p>
                     <p className="text-sm text-gray-600">{ac.note}</p>
                   </div>
                 </motion.div>
@@ -800,11 +800,11 @@ export default function DuvetCoversContent() {
                 <p className="text-gray-600 leading-relaxed mb-4">{cl.desc}</p>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Best For</p>
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Best For</p>
                     <p className="text-navy-900 font-medium">{cl.best}</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Markets</p>
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Markets</p>
                     <p className="text-navy-900 font-medium">{cl.markets}</p>
                   </div>
                 </div>
@@ -834,7 +834,7 @@ export default function DuvetCoversContent() {
               >
                 {t.featured && <span className="inline-block mb-3 text-[10px] font-bold text-navy-900 bg-gold px-3 py-1 rounded-full uppercase tracking-wider">Most Ordered</span>}
                 <p className={`text-3xl font-bold mb-1 ${t.featured ? "text-navy-900" : "text-white"}`}>{t.range}</p>
-                <p className={`text-xs font-bold uppercase tracking-widest mb-3 ${t.featured ? "text-gray-400" : "text-white/30"}`}>{t.name}</p>
+                <p className={`text-xs font-bold uppercase tracking-widest mb-3 ${t.featured ? "text-gray-500" : "text-white/30"}`}>{t.name}</p>
                 <p className={`text-sm mb-3 font-semibold ${t.featured ? "text-navy-900" : "text-white/80"}`}>{t.feel}</p>
                 <p className={`text-xs leading-relaxed mb-3 ${t.featured ? "text-gray-500" : "text-white/40"}`}>{t.use}</p>
                 <p className={`text-xs font-semibold ${t.featured ? "text-amber-600" : "text-white/30"}`}>{t.buyer}</p>
@@ -932,7 +932,7 @@ export default function DuvetCoversContent() {
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <p className="text-3xl font-bold text-navy-900">4</p>
-                  <p className="text-xs text-gray-400">Dye Types</p>
+                  <p className="text-xs text-gray-500">Dye Types</p>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-3">
@@ -941,7 +941,7 @@ export default function DuvetCoversContent() {
                     <div className={`w-3 h-3 rounded-full ${d.color} shrink-0`} aria-hidden="true" />
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{d.name}</p>
-                      <p className="text-xs text-gray-400">{d.pct}% of orders</p>
+                      <p className="text-xs text-gray-500">{d.pct}% of orders</p>
                     </div>
                   </div>
                 ))}
@@ -960,7 +960,7 @@ export default function DuvetCoversContent() {
                       <div key={idx} className={`flex-1 h-8 rounded-lg ${s}`} aria-hidden="true" />
                     ))}
                   </div>
-                  <p className="text-xs text-gray-400">Full PMS range · Lab dip approval included</p>
+                  <p className="text-xs text-gray-500">Full PMS range · Lab dip approval included</p>
                 </div>
               ))}
             </div>
@@ -1050,7 +1050,7 @@ export default function DuvetCoversContent() {
                   <Image src={c.img} alt={`${c.name} — ${c.full}`} width={96} height={56} className="object-contain max-h-14" />
                 </div>
                 <p className="text-sm font-bold text-navy-900 text-center">{c.name}</p>
-                <p className="text-[10px] text-gray-400 text-center leading-tight">{c.full}</p>
+                <p className="text-[10px] text-gray-500 text-center leading-tight">{c.full}</p>
               </motion.div>
             ))}
           </div>
@@ -1103,7 +1103,7 @@ export default function DuvetCoversContent() {
                   >
                     <span className="text-2xl" aria-hidden="true">{p.icon}</span>
                     <p className="font-semibold text-navy-900 text-sm">{p.label}</p>
-                    <p className="text-xs text-gray-400">{p.note}</p>
+                    <p className="text-xs text-gray-500">{p.note}</p>
                   </motion.div>
                 ))}
               </div>
@@ -1254,7 +1254,7 @@ export default function DuvetCoversContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Get Started</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Source Duvet Covers?</h2>
-          <p className="text-gray-400 max-w-xl mx-auto mb-8 leading-relaxed">
+          <p className="text-gray-500 max-w-xl mx-auto mb-8 leading-relaxed">
             Construction, closure and sizing confirmed — submit your RFQ and receive factory matches and pricing within 3–5 working days.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

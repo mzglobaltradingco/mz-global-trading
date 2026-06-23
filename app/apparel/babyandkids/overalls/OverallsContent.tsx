@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -283,7 +283,7 @@ export default function OverallsContent() {
               {[{ val: "5", label: "Constructions" }, { val: "0–12", label: "Years Range" }, { val: "50+", label: "Vetted Factories" }, { val: "10+", label: "Certifications" }].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -298,7 +298,7 @@ export default function OverallsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 */}
@@ -316,7 +316,7 @@ export default function OverallsContent() {
                   <div key={c.id} className="bg-white rounded-xl p-3 border border-indigo-100">
                     <span className="text-lg" aria-hidden="true">{c.icon}</span>
                     <p className="text-xs font-bold text-navy-900 mt-1">{c.name}</p>
-                    <p className="text-[10px] text-gray-400">{c.weight}</p>
+                    <p className="text-[10px] text-gray-500">{c.weight}</p>
                     {c.badge && <span className="mt-1 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{c.badge}</span>}
                   </div>
                 ))}
@@ -337,7 +337,7 @@ export default function OverallsContent() {
                   <div key={a.tag} className="flex items-center gap-3 bg-white rounded-xl px-3 py-2 border border-orange-100">
                     <span className="text-[10px] font-bold bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full whitespace-nowrap">{a.tag}</span>
                     <span className="text-xs font-semibold text-navy-900">{a.group}</span>
-                    <span className="text-[10px] text-gray-400 ml-auto">{a.chest}</span>
+                    <span className="text-[10px] text-gray-500 ml-auto">{a.chest}</span>
                   </div>
                 ))}
               </div>
@@ -475,7 +475,7 @@ export default function OverallsContent() {
                 <p className="text-gold text-xs font-bold mb-3">{c.weight}</p>
                 <p className="text-xs text-gray-300 leading-relaxed mb-3">{c.detail}</p>
                 <div className="border-t border-white/10 pt-3">
-                  <p className="text-[10px] text-gray-400">{c.spec}</p>
+                  <p className="text-[10px] text-gray-500">{c.spec}</p>
                 </div>
                 <div className="flex flex-wrap gap-1 mt-3">
                   {c.best.map((b) => <span key={b} className="text-[10px] border border-white/20 text-gray-300 px-2 py-0.5 rounded">{b}</span>)}
@@ -501,8 +501,8 @@ export default function OverallsContent() {
                 <span className="inline-block text-xs font-bold text-orange-700 bg-orange-100 px-3 py-1 rounded-full mb-3">{a.tag}</span>
                 <h3 className="text-base font-bold text-navy-900 mb-2">{a.group}</h3>
                 <div className="grid grid-cols-2 gap-2 mb-3">
-                  <div><p className="text-[10px] text-gray-400 uppercase tracking-wider">Chest</p><p className="text-sm font-bold text-navy-900">{a.chest}</p></div>
-                  <div><p className="text-[10px] text-gray-400 uppercase tracking-wider">Height</p><p className="text-sm font-bold text-navy-900">{a.height}</p></div>
+                  <div><p className="text-[10px] text-gray-500 uppercase tracking-wider">Chest</p><p className="text-sm font-bold text-navy-900">{a.chest}</p></div>
+                  <div><p className="text-[10px] text-gray-500 uppercase tracking-wider">Height</p><p className="text-sm font-bold text-navy-900">{a.height}</p></div>
                 </div>
                 <p className="text-xs text-gray-600 leading-tight">{a.note}</p>
               </motion.div>
@@ -533,7 +533,7 @@ export default function OverallsContent() {
                 <div className="flex-1">
                   <p className={`text-sm leading-relaxed ${t.featured ? "text-gray-300" : "text-gray-600"}`}>{t.desc}</p>
                 </div>
-                <div className={`shrink-0 text-right ${t.featured ? "text-gray-400" : "text-gray-500"}`}>
+                <div className={`shrink-0 text-right ${t.featured ? "text-gray-500" : "text-gray-500"}`}>
                   <p className="text-xs font-semibold">{t.season}</p>
                   <p className="text-xs mt-1">{t.market}</p>
                 </div>
@@ -600,14 +600,14 @@ export default function OverallsContent() {
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">OEM Development</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Custom Overalls Development</h2>
-            <p className="text-gray-400 max-w-2xl">From snap hardware specification and wash development through graded size ranges and retail packaging — full OEM management for baby and kids overalls programmes.</p>
+            <p className="text-gray-500 max-w-2xl">From snap hardware specification and wash development through graded size ranges and retail packaging — full OEM management for baby and kids overalls programmes.</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {OEM_FEATURES.map((f, i) => (
               <motion.div key={f.num} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.07 }} className="bg-white/5 border border-white/10 rounded-2xl p-5">
                 <span className="text-2xl font-bold text-gold/30">{f.num}</span>
                 <h3 className="text-sm font-bold text-white mt-2 mb-2">{f.title}</h3>
-                <p className="text-xs text-gray-400 leading-relaxed">{f.desc}</p>
+                <p className="text-xs text-gray-500 leading-relaxed">{f.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -622,12 +622,12 @@ export default function OverallsContent() {
             <div className="bg-[#0D1B2A] p-10 lg:p-14">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Export Markets</p>
               <h2 className="text-3xl font-bold text-white mb-4">Global Overalls Markets</h2>
-              <p className="text-gray-400 text-sm leading-relaxed mb-6">Serving kids boutiques, retail chains and wholesale distributors across 35+ markets. EU premium demands GOTS and OEKO-TEX Class 1; USA mass retail prioritises price and delivery reliability.</p>
+              <p className="text-gray-500 text-sm leading-relaxed mb-6">Serving kids boutiques, retail chains and wholesale distributors across 35+ markets. EU premium demands GOTS and OEKO-TEX Class 1; USA mass retail prioritises price and delivery reliability.</p>
               <div className="grid grid-cols-3 gap-4 mt-8">
                 {[{ val: "35+", label: "Markets" }, { val: "50+", label: "Factories" }, { val: "95%", label: "On-Time" }].map(s => (
                   <div key={s.label} className="text-center border border-white/10 rounded-xl p-4">
                     <p className="text-2xl font-bold text-gold">{s.val}</p>
-                    <p className="text-xs text-gray-400 mt-1">{s.label}</p>
+                    <p className="text-xs text-gray-500 mt-1">{s.label}</p>
                   </div>
                 ))}
               </div>
@@ -689,7 +689,7 @@ export default function OverallsContent() {
                   {EXPORT_TERMS.map((t) => (
                     <tr key={t.term}>
                       <td className="px-4 py-3"><span className="text-xs font-bold text-navy-900 bg-amber-50 px-2 py-0.5 rounded">{t.term}</span></td>
-                      <td className="px-4 py-3"><p className="text-xs font-semibold text-navy-900">{t.full}</p><p className="text-xs text-gray-400">{t.desc}</p></td>
+                      <td className="px-4 py-3"><p className="text-xs font-semibold text-navy-900">{t.full}</p><p className="text-xs text-gray-500">{t.desc}</p></td>
                       <td className="px-4 py-3 text-xs text-gray-500">{t.port}</td>
                     </tr>
                   ))}
@@ -750,7 +750,7 @@ export default function OverallsContent() {
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">How It Works</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Sourcing Process</h2>
-            <p className="text-gray-400 max-w-xl mx-auto text-sm">From RFQ to shipment — wash development, OEKO-TEX testing and snap hardware verification built into every stage.</p>
+            <p className="text-gray-500 max-w-xl mx-auto text-sm">From RFQ to shipment — wash development, OEKO-TEX testing and snap hardware verification built into every stage.</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {PROCESS_STEPS.map((p, i) => (
@@ -759,7 +759,7 @@ export default function OverallsContent() {
                 <div className="relative z-10">
                   <span className="w-8 h-8 rounded-full bg-gold text-navy-900 text-xs font-bold flex items-center justify-center mb-4">{p.num}</span>
                   <h3 className="text-sm font-bold text-white mb-2">{p.title}</h3>
-                  <p className="text-xs text-gray-400 leading-relaxed">{p.desc}</p>
+                  <p className="text-xs text-gray-500 leading-relaxed">{p.desc}</p>
                 </div>
               </motion.div>
             ))}

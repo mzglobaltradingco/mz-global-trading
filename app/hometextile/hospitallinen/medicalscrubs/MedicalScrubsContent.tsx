@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -174,7 +174,7 @@ export default function MedicalScrubsContent() {
             </div>
             <div className="flex flex-wrap sm:flex-nowrap gap-8 lg:gap-10 border-t border-white/10 pt-6 lg:border-t-0 lg:pt-0 lg:border-l lg:pl-10 shrink-0">
               {[{ val: "50+", label: "Vetted Factories" }, { val: "35+", label: "Export Markets" }, { val: "10+", label: "Certifications" }, { val: "3", label: "Constructions" }].map((s) => (
-                <div key={s.label} className="text-center"><p className="text-3xl font-bold text-gold">{s.val}</p><p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p></div>
+                <div key={s.label} className="text-center"><p className="text-3xl font-bold text-gold">{s.val}</p><p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p></div>
               ))}
             </div>
             <Link href="/rfq/" className="shrink-0 inline-flex items-center gap-2 bg-gold text-navy-900 font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-yellow-400 transition-colors w-fit">Request a Quote <span aria-hidden="true">&#8594;</span></Link>
@@ -188,7 +188,7 @@ export default function MedicalScrubsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
           {/* Row 1 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
@@ -197,7 +197,7 @@ export default function MedicalScrubsContent() {
               <div className="flex flex-col gap-3 flex-1">
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3.5 border border-teal-100 flex items-start gap-3">
-                    <div className="flex-1"><p className="text-sm font-semibold text-navy-900">{c.name}</p><p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p></div>
+                    <div className="flex-1"><p className="text-sm font-semibold text-navy-900">{c.name}</p><p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p></div>
                     {c.badge && <span className="text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full shrink-0 mt-0.5">{c.badge}</span>}
                   </div>
                 ))}
@@ -301,7 +301,7 @@ export default function MedicalScrubsContent() {
                 {CERTIFICATIONS.map((c) => (
                   <div key={c.name} className="bg-white rounded-lg px-2 py-1 border border-green-100">
                     <p className="text-[10px] font-bold text-navy-900">{c.name}</p>
-                    <p className="text-[9px] text-gray-400">{c.full}</p>
+                    <p className="text-[9px] text-gray-500">{c.full}</p>
                   </div>
                 ))}
               </div>
@@ -319,7 +319,7 @@ export default function MedicalScrubsContent() {
                     <span className="text-orange-400 text-xs mt-0.5 shrink-0">▶</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900 leading-tight">{s.name}</p>
-                      <p className="text-[10px] text-gray-400">{s.market}</p>
+                      <p className="text-[10px] text-gray-500">{s.market}</p>
                     </div>
                   </div>
                 ))}
@@ -343,7 +343,7 @@ export default function MedicalScrubsContent() {
                     <span className="text-slate-400 text-xs">✓</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900 leading-tight">{p.label}</p>
-                      <p className="text-[10px] text-gray-400">{p.note}</p>
+                      <p className="text-[10px] text-gray-500">{p.note}</p>
                     </div>
                   </div>
                 ))}
@@ -454,8 +454,8 @@ export default function MedicalScrubsContent() {
                 <div>
                   <div className="flex items-center gap-3 mb-4"><h3 className="text-xl font-bold text-navy-900">{ac.name}</h3>{ac.badge && <span className="text-[11px] font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full">{ac.badge}</span>}</div>
                   <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div><p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Weight</p><p className="font-semibold text-navy-900 text-sm">{ac.gsm}</p></div>
-                    <div><p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Primary Use</p><p className="font-semibold text-navy-900 text-sm">{ac.use}</p></div>
+                    <div><p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Weight</p><p className="font-semibold text-navy-900 text-sm">{ac.gsm}</p></div>
+                    <div><p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Primary Use</p><p className="font-semibold text-navy-900 text-sm">{ac.use}</p></div>
                   </div>
                 </div>
                 <div><p className="text-sm text-gray-600 leading-relaxed">{ac.detail}</p></div>
@@ -492,7 +492,7 @@ export default function MedicalScrubsContent() {
                   <div key={s.code} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
                     <p className="font-bold text-navy-900 text-sm">{s.code}</p>
                     <p className="text-xs text-teal-600 font-medium">{s.type}</p>
-                    <p className="text-xs text-gray-400 mt-1">{s.note}</p>
+                    <p className="text-xs text-gray-500 mt-1">{s.note}</p>
                   </div>
                 ))}
               </div>
@@ -516,7 +516,7 @@ export default function MedicalScrubsContent() {
                     <span className="text-2xl font-bold text-navy-900 shrink-0">{tier.gsm} GSM</span>
                     <div className="flex-1">
                       <p className="font-semibold text-navy-900">{tier.name}</p>
-                      <p className="text-xs text-gray-400">{tier.season}</p>
+                      <p className="text-xs text-gray-500">{tier.season}</p>
                     </div>
                     {tier.pct > 65 && <span className="text-[11px] font-semibold text-teal-700 bg-teal-50 border border-teal-200 px-2.5 py-1 rounded-full shrink-0">Institutional Standard</span>}
                   </div>
@@ -544,7 +544,7 @@ export default function MedicalScrubsContent() {
                 <motion.div key={c.name} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.35, delay: i * 0.05 }} className="flex flex-col items-center gap-2">
                   <div className={`w-14 h-14 rounded-2xl ${c.swatch} shadow-md`} />
                   <p className="text-xs font-semibold text-navy-900 text-center leading-tight">{c.name}</p>
-                  <p className="text-[10px] text-gray-400 text-center leading-tight">{c.use}</p>
+                  <p className="text-[10px] text-gray-500 text-center leading-tight">{c.use}</p>
                 </motion.div>
               ))}
             </div>
@@ -619,10 +619,10 @@ export default function MedicalScrubsContent() {
                 <motion.div key={cert.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.07 }}
                   className="border border-gold/20 rounded-2xl p-6 bg-white/5">
                   <div className="flex items-start justify-between mb-3">
-                    <div><p className="text-gold font-bold text-xl">{cert.name}</p><p className="text-xs text-gray-400">{cert.full}</p></div>
+                    <div><p className="text-gold font-bold text-xl">{cert.name}</p><p className="text-xs text-gray-500">{cert.full}</p></div>
                     <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full shrink-0 ml-2 ${cert.tier === "Premium" ? "text-gold bg-gold/20" : "text-green-400 bg-green-400/10"}`}>{cert.tier}</span>
                   </div>
-                  <p className="text-sm text-gray-400 leading-relaxed">{cert.desc}</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">{cert.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -682,7 +682,7 @@ export default function MedicalScrubsContent() {
                 ].map((p) => (
                   <div key={p.label} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
                     <p className="font-semibold text-navy-900 text-sm">{p.label}</p>
-                    <p className="text-xs text-gray-400 mt-1">{p.note}</p>
+                    <p className="text-xs text-gray-500 mt-1">{p.note}</p>
                   </div>
                 ))}
               </div>

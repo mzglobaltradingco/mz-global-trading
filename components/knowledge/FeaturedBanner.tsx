@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -42,7 +42,7 @@ export default function FeaturedBanner({ post }: FeaturedBannerProps) {
               <h2 className="text-white font-bold text-xl sm:text-2xl lg:text-3xl leading-snug mb-3 group-hover:text-gold/90 transition-colors max-w-2xl">
                 {post.title}
               </h2>
-              <p className="text-gray-400 text-sm leading-relaxed max-w-xl mb-6">
+              <p className="text-gray-500 text-sm leading-relaxed max-w-xl mb-6">
                 {post.excerpt}
               </p>
               <div className="flex items-center gap-6 text-gray-500 text-xs mb-6">

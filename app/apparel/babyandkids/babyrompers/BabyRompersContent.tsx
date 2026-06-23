@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -348,7 +348,7 @@ export default function BabyRompersContent() {
             <div key={s.u}>
               <p className="text-3xl font-bold text-[#D4A017]">{s.v}</p>
               <p className="text-white font-semibold text-sm mt-0.5">{s.u}</p>
-              <p className="text-gray-400 text-xs mt-0.5">{s.s}</p>
+              <p className="text-gray-500 text-xs mt-0.5">{s.s}</p>
             </div>
           ))}
         </div>
@@ -360,7 +360,7 @@ export default function BabyRompersContent() {
           <div className="mb-12">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0D1B2A]">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1: Constructions + Age Size Guide */}
@@ -379,7 +379,7 @@ export default function BabyRompersContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3 border border-green-100">
                     <p className="text-sm font-semibold text-[#0D1B2A]">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                     {c.tag && <span className="mt-1.5 inline-block text-[10px] font-semibold text-[#D4A017] bg-[#D4A017]/10 px-2 py-0.5 rounded-full">{c.tag}</span>}
                   </div>
                 ))}
@@ -402,9 +402,9 @@ export default function BabyRompersContent() {
                   <div key={a.age} className="flex items-center gap-3">
                     <div className="flex-1 min-w-0">
                       <p className="text-xs font-semibold text-[#0D1B2A]">{a.age}</p>
-                      <p className="text-xs text-gray-400 truncate">{a.weight} · {a.height}</p>
+                      <p className="text-xs text-gray-500 truncate">{a.weight} · {a.height}</p>
                     </div>
-                    <span className="text-xs text-gray-400 whitespace-nowrap hidden sm:block">{a.chest}</span>
+                    <span className="text-xs text-gray-500 whitespace-nowrap hidden sm:block">{a.chest}</span>
                   </div>
                 ))}
               </div>
@@ -424,7 +424,7 @@ export default function BabyRompersContent() {
                   <div key={t.range}>
                     <div className="flex justify-between text-xs mb-1">
                       <span className="font-medium text-[#0D1B2A]">{t.range}</span>
-                      <span className="text-gray-400 truncate ml-1">{t.label}</span>
+                      <span className="text-gray-500 truncate ml-1">{t.label}</span>
                     </div>
                     <div className="h-1.5 bg-gray-100 rounded-full" />
                   </div>
@@ -530,7 +530,7 @@ export default function BabyRompersContent() {
               <div className="flex flex-col gap-2 flex-1">
                 {EXPORT_DATA.slice(0, 4).map((t) => (
                   <div key={t.label}>
-                    <p className="text-[10px] text-gray-400 uppercase tracking-wide">{t.label}</p>
+                    <p className="text-[10px] text-gray-500 uppercase tracking-wide">{t.label}</p>
                     <p className="text-xs font-semibold text-[#0D1B2A]">{t.value}</p>
                   </div>
                 ))}
@@ -652,7 +652,7 @@ export default function BabyRompersContent() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Age / Size Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">Preemie to 24 Months — 8 Size Groups</h2>
-            <p className="text-gray-400 mt-3 max-w-2xl text-sm">Standard sizes listed. Custom grading available with buyer-supplied size specification sheets.</p>
+            <p className="text-gray-500 mt-3 max-w-2xl text-sm">Standard sizes listed. Custom grading available with buyer-supplied size specification sheets.</p>
           </motion.div>
           <div className="overflow-x-auto rounded-2xl border border-white/10">
             <table className="w-full text-sm">
@@ -820,7 +820,7 @@ export default function BabyRompersContent() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Export Markets</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">Supplying Baby Brands in 35+ Countries</h2>
-            <p className="text-gray-400 mt-3 text-sm max-w-2xl">Each market has specific chemical regulatory requirements for infant clothing. Our compliance team keeps certifications current for all active markets.</p>
+            <p className="text-gray-500 mt-3 text-sm max-w-2xl">Each market has specific chemical regulatory requirements for infant clothing. Our compliance team keeps certifications current for all active markets.</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {MARKETS.map((m, i) => (
@@ -831,7 +831,7 @@ export default function BabyRompersContent() {
               >
                 <div className="text-3xl mb-3">{m.flag}</div>
                 <h3 className="font-bold text-white text-sm mb-1">{m.region}</h3>
-                <p className="text-gray-400 text-xs">{m.note}</p>
+                <p className="text-gray-500 text-xs">{m.note}</p>
               </motion.div>
             ))}
           </div>
@@ -885,7 +885,7 @@ export default function BabyRompersContent() {
                 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}
                 className="bg-white px-6 py-5 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6"
               >
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider sm:w-48 shrink-0">{row.label}</p>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider sm:w-48 shrink-0">{row.label}</p>
                 <p className="font-medium text-[#0D1B2A]">{row.value}</p>
               </motion.div>
             ))}
@@ -925,7 +925,7 @@ export default function BabyRompersContent() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Production Process</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">6-Stage Safety-First Workflow</h2>
-            <p className="text-gray-400 mt-3 text-sm max-w-xl mx-auto">From fabric certification to final pre-shipment audit — every baby romper programme follows a documented safety protocol.</p>
+            <p className="text-gray-500 mt-3 text-sm max-w-xl mx-auto">From fabric certification to final pre-shipment audit — every baby romper programme follows a documented safety protocol.</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {PROCESS.map((p, i) => (
@@ -937,7 +937,7 @@ export default function BabyRompersContent() {
                 <span className="absolute top-4 right-5 text-6xl font-black text-white/5 select-none leading-none">{p.step}</span>
                 <p className="text-[#D4A017] text-xs font-semibold tracking-widest uppercase mb-3">Step {p.step}</p>
                 <h3 className="font-bold text-white text-lg mb-3 relative z-10">{p.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed relative z-10">{p.body}</p>
+                <p className="text-gray-500 text-sm leading-relaxed relative z-10">{p.body}</p>
               </motion.div>
             ))}
           </div>

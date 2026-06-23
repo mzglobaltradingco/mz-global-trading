@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -1628,7 +1628,7 @@ export default function WorkwearContent() {
             </table>
           </div>
 
-          <p className="mt-4 text-xs text-gray-400 italic">GSM values are indicative for standard production. FR and hi-vis shell constructions may vary by product standard requirement.</p>
+          <p className="mt-4 text-xs text-gray-500 italic">GSM values are indicative for standard production. FR and hi-vis shell constructions may vary by product standard requirement.</p>
         </div>
         <BackToTop />
       </section>
@@ -1990,7 +1990,7 @@ export default function WorkwearContent() {
                 >
                   <p className="text-2xl font-bold text-gold mb-1">{s.value}</p>
                   <p className="text-navy-900 font-semibold text-sm">{s.label}</p>
-                  <p className="text-gray-400 text-xs mt-0.5">{s.sub}</p>
+                  <p className="text-gray-500 text-xs mt-0.5">{s.sub}</p>
                 </motion.div>
               ))}
             </div>
@@ -2180,7 +2180,7 @@ export default function WorkwearContent() {
                   </div>
                 ))}
               </div>
-              <p className="text-xs text-gray-400">Port: Karachi (PKKHIA). Alternative: Port Qasim.</p>
+              <p className="text-xs text-gray-500">Port: Karachi (PKKHIA). Alternative: Port Qasim.</p>
             </div>
           </div>
         </div>
@@ -2348,7 +2348,7 @@ export default function WorkwearContent() {
                       <td className="px-6 py-3 text-navy-900 font-medium">{ls.phase}</td>
                       <td className="px-6 py-3">
                         <span className="text-gold font-bold">{ls.weeks}</span>
-                        <span className="text-gray-400 text-xs"> wks</span>
+                        <span className="text-gray-500 text-xs"> wks</span>
                       </td>
                       <td className="px-6 py-3 text-gray-500 hidden md:table-cell">{ls.note}</td>
                     </tr>

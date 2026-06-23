@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -164,7 +164,7 @@ export default function PrivacyPolicyContent() {
 
             {/* ── Sticky sidebar ──────────────────────────────────────────── */}
             <aside className="hidden lg:block w-52 shrink-0 sticky top-44 self-start">
-              <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-400 mb-4">
+              <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-500 mb-4">
                 Contents
               </p>
               <nav aria-label="Policy sections">
@@ -610,7 +610,7 @@ export default function PrivacyPolicyContent() {
                 ]} />
 
                 <div className="mt-8 pt-6 border-t border-gray-100">
-                  <p className="text-sm text-gray-400">
+                  <p className="text-sm text-gray-500">
                     This policy was last reviewed and updated on <strong className="text-gray-500">1 June 2026</strong>.
                     Previous versions are available on request.
                     This policy does not create or modify any contractual relationship between you

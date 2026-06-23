@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -230,7 +230,7 @@ export default function QualityPolicyContent() {
                 <div>
                   <p className="text-navy-900 font-bold text-sm">Muhammad Muzammil</p>
                   <p className="text-gray-500 text-xs mt-0.5">Founder & CEO, MZ Global Trading</p>
-                  <p className="text-gray-400 text-xs mt-0.5">Karachi, Pakistan</p>
+                  <p className="text-gray-500 text-xs mt-0.5">Karachi, Pakistan</p>
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 bg-navy-900 rounded-lg w-fit">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0" aria-hidden="true" />
@@ -311,7 +311,7 @@ export default function QualityPolicyContent() {
                     <h3 className="text-navy-900 font-bold text-base mb-2 group-hover:text-white transition-colors">
                       {obj.title}
                     </h3>
-                    <p className="text-gray-500 text-sm leading-relaxed group-hover:text-gray-400 transition-colors">
+                    <p className="text-gray-500 text-sm leading-relaxed group-hover:text-gray-500 transition-colors">
                       {obj.desc}
                     </p>
                   </div>
@@ -451,7 +451,7 @@ export default function QualityPolicyContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Start an Order With Quality Assurance Built In
             </h2>
-            <p className="text-gray-400 text-base max-w-xl mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-xl mx-auto mb-8">
               Orders placed through MZ Global Trading are managed under this quality policy — from factory
               selection to pre-shipment sign-off.
             </p>

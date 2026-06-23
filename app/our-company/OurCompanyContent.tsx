@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef, useEffect, useState } from "react";
 import Link from "next/link";
@@ -411,7 +411,7 @@ export default function OurCompanyContent() {
               </div>
               <div className="w-8 h-0.5 bg-gold/50 mb-6" />
               <h3 className="text-white text-2xl font-bold mb-4">Our Mission</h3>
-              <p className="text-gray-400 text-base leading-relaxed">
+              <p className="text-gray-500 text-base leading-relaxed">
                 To make Pakistani textile manufacturing accessible to international buyers through
                 transparency, certified quality, and reliable delivery — giving every client a
                 sourcing partner they can depend on, order after order.
@@ -478,7 +478,7 @@ export default function OurCompanyContent() {
                   {v.icon}
                 </div>
                 <h3 className="text-white font-bold text-base mb-2">{v.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{v.desc}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -637,7 +637,7 @@ export default function OurCompanyContent() {
           >
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Get Started</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Start Sourcing?</h2>
-            <p className="text-gray-400 text-base max-w-xl mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-xl mx-auto mb-8">
               Tell us what you need. Our team responds within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

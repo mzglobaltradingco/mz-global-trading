@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -324,7 +324,7 @@ export default function ApronsContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -341,7 +341,7 @@ export default function ApronsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">All Apron Specifications</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to explore the full specification section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to explore the full specification section.</p>
           </div>
 
           {/* Row 1 */}
@@ -361,7 +361,7 @@ export default function ApronsContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3.5 border border-stone-100">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                     {c.badge && <span className="mt-1.5 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{c.badge}</span>}
                   </div>
                 ))}
@@ -389,7 +389,7 @@ export default function ApronsContent() {
                         <p className="text-sm font-bold text-navy-900">{s.name}</p>
                         <span className="text-xs font-semibold text-gold">{s.dims}</span>
                       </div>
-                      <p className="text-xs text-gray-400 mt-0.5">{s.use}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{s.use}</p>
                     </div>
                   </div>
                 ))}
@@ -417,7 +417,7 @@ export default function ApronsContent() {
                     <div className="w-full h-1.5 bg-yellow-100 rounded-full overflow-hidden mb-1">
                       <div className={`h-full rounded-full ${t.color}`} style={{ width: `${t.pct}%` }} aria-hidden="true" />
                     </div>
-                    <p className="text-[10px] text-gray-400 leading-snug">{t.construction}</p>
+                    <p className="text-[10px] text-gray-500 leading-snug">{t.construction}</p>
                   </div>
                 ))}
               </div>
@@ -497,7 +497,7 @@ export default function ApronsContent() {
                   <div key={s.abbr} className="bg-white rounded-xl p-3 border border-teal-100">
                     <p className="text-xs font-bold text-teal-600">{s.abbr}</p>
                     <p className="text-sm font-semibold text-navy-900 mt-0.5">{s.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{s.market}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{s.market}</p>
                   </div>
                 ))}
               </div>
@@ -538,7 +538,7 @@ export default function ApronsContent() {
                     <span className="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 text-[10px] font-bold flex items-center justify-center shrink-0">{e.term}</span>
                     <div>
                       <p className="text-xs font-semibold text-navy-900">{e.full}</p>
-                      <p className="text-[10px] text-gray-400">{e.port}</p>
+                      <p className="text-[10px] text-gray-500">{e.port}</p>
                     </div>
                   </div>
                 ))}
@@ -586,7 +586,7 @@ export default function ApronsContent() {
                     <p className="text-xs font-semibold text-navy-900">{p.short}</p>
                   </div>
                 ))}
-                <p className="text-xs text-gray-400 mt-1 pl-8">+ 2 more steps</p>
+                <p className="text-xs text-gray-500 mt-1 pl-8">+ 2 more steps</p>
               </div>
               <ExploreBtn sectionId="section-process" label="View Process" />
             </motion.div>
@@ -637,7 +637,7 @@ export default function ApronsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Constructions</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Four Constructions, Four Use Cases</h2>
-            <p className="text-gray-400 max-w-2xl leading-relaxed">Each construction serves a distinct end-use — matching material properties to operational requirements and aesthetic positioning.</p>
+            <p className="text-gray-500 max-w-2xl leading-relaxed">Each construction serves a distinct end-use — matching material properties to operational requirements and aesthetic positioning.</p>
           </div>
           <div className="flex flex-wrap gap-2 mb-8" role="tablist">
             {CONSTRUCTIONS.map((c) => (
@@ -722,7 +722,7 @@ export default function ApronsContent() {
               <div className="h-px w-16 bg-gold" />
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Apron Styles</h2>
-            <p className="text-gray-400 max-w-xl mx-auto leading-relaxed">
+            <p className="text-gray-500 max-w-xl mx-auto leading-relaxed">
               Two standard silhouettes — each serving a distinct operational role. Both available in all four constructions and all decoration methods.
             </p>
           </div>
@@ -740,7 +740,7 @@ export default function ApronsContent() {
                 <div className="w-8 h-px bg-gold mx-auto" aria-hidden="true" />
                 <h3 className="text-xl font-bold text-white">{s.name}</h3>
                 <p className="text-gold text-lg font-bold">{s.dims}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">{s.use}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">{s.use}</p>
               </motion.div>
             ))}
           </div>
@@ -752,7 +752,7 @@ export default function ApronsContent() {
             ].map(([label, desc]) => (
               <div key={label}>
                 <p className="text-gold text-sm font-bold mb-2">{label}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -765,7 +765,7 @@ export default function ApronsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Weight Classification</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">GSM Weight Guide</h2>
-          <p className="text-gray-400 mb-12 max-w-2xl leading-relaxed">GSM determines durability, protection level, decoration receptivity and commercial pricing tier.</p>
+          <p className="text-gray-500 mb-12 max-w-2xl leading-relaxed">GSM determines durability, protection level, decoration receptivity and commercial pricing tier.</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {GSM_TIERS.map((t, i) => (
               <motion.div
@@ -778,14 +778,14 @@ export default function ApronsContent() {
               >
                 {t.popular && <span className="inline-block mb-3 text-[10px] font-bold text-navy-900 bg-gold px-3 py-1 rounded-full uppercase tracking-wider">Most Ordered</span>}
                 <p className={`text-3xl font-bold mb-1 ${t.popular ? "text-gold" : "text-white"}`}>{t.gsm}</p>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">{t.name}</p>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">{t.name}</p>
                 <p className="text-sm text-gray-300 mb-4">{t.construction}</p>
                 <div className="mb-4">
                   <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
                     <div className={`h-full rounded-full ${t.color}`} style={{ width: `${t.pct}%` }} aria-hidden="true" />
                   </div>
                 </div>
-                <p className="text-xs text-gray-400 leading-relaxed">{t.use}</p>
+                <p className="text-xs text-gray-500 leading-relaxed">{t.use}</p>
               </motion.div>
             ))}
           </div>
@@ -818,7 +818,7 @@ export default function ApronsContent() {
                 <div>
                   <h3 className="text-lg font-bold text-navy-900 mb-2">{d.method}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed mb-3">{d.best}</p>
-                  <p className="text-xs text-gray-400">Compatible: {d.compat.join(", ")}</p>
+                  <p className="text-xs text-gray-500">Compatible: {d.compat.join(", ")}</p>
                 </div>
               </motion.div>
             ))}
@@ -843,7 +843,7 @@ export default function ApronsContent() {
       <section id="section-finishes" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
-            <p className="text-xs text-gray-400 uppercase tracking-[0.3em] mb-3">05 / Applied Finishes</p>
+            <p className="text-xs text-gray-500 uppercase tracking-[0.3em] mb-3">05 / Applied Finishes</p>
             <h2 className="text-4xl font-bold text-navy-900 mb-4">Performance Finishing Options</h2>
             <div className="w-12 h-0.5 bg-gold mb-4" aria-hidden="true" />
             <p className="text-gray-500 leading-relaxed">Performance finishes extend the functional life of apron programmes and meet the hygiene and safety standards of commercial kitchen environments.</p>
@@ -934,7 +934,7 @@ export default function ApronsContent() {
                   <span className="text-gold text-xs font-bold">{s.abbr}</span>
                 </div>
                 <h3 className="text-sm font-bold text-white mb-1">{s.name}</h3>
-                <p className="text-xs text-gray-400 leading-snug mb-2">{s.detail}</p>
+                <p className="text-xs text-gray-500 leading-snug mb-2">{s.detail}</p>
                 <p className="text-xs font-semibold text-gold">{s.market}</p>
               </motion.div>
             ))}
@@ -965,7 +965,7 @@ export default function ApronsContent() {
                   <Image src={c.img} alt={c.full} width={64} height={40} className="object-contain w-full h-full" />
                 </div>
                 <p className="text-sm font-bold text-white">{c.name}</p>
-                <span className={`text-[10px] px-2 py-0.5 rounded-full font-semibold w-fit ${c.tier === "Premium" ? "bg-gold/20 text-gold" : c.tier === "Optional" ? "bg-white/10 text-gray-400" : "bg-green-900/50 text-green-400"}`}>{c.tier}</span>
+                <span className={`text-[10px] px-2 py-0.5 rounded-full font-semibold w-fit ${c.tier === "Premium" ? "bg-gold/20 text-gold" : c.tier === "Optional" ? "bg-white/10 text-gray-500" : "bg-green-900/50 text-green-400"}`}>{c.tier}</span>
               </motion.div>
             ))}
           </div>
@@ -1019,7 +1019,7 @@ export default function ApronsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-400 mb-4">10 / Sustainability</p>
+              <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-500 mb-4">10 / Sustainability</p>
               <h2 className="text-5xl font-bold text-navy-900 leading-[1] mb-8">
                 Certified.<br />Compliant.<br />Responsible.
               </h2>

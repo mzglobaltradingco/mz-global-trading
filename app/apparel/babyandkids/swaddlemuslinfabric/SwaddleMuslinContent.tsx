@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -301,7 +301,7 @@ export default function SwaddleMuslinContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -318,7 +318,7 @@ export default function SwaddleMuslinContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1 */}
@@ -336,7 +336,7 @@ export default function SwaddleMuslinContent() {
                   <div key={c.id} className="bg-white rounded-xl p-3 border border-stone-100 flex items-center justify-between">
                     <div>
                       <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                     </div>
                     {c.badge && <span className="text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full whitespace-nowrap">{c.badge}</span>}
                   </div>
@@ -359,7 +359,7 @@ export default function SwaddleMuslinContent() {
                     <span className="text-xs font-bold text-sky-700 bg-sky-100 px-2 py-1 rounded whitespace-nowrap">{s.size}</span>
                     <div className="min-w-0">
                       <p className="text-xs font-semibold text-navy-900">{s.label}</p>
-                      <p className="text-[10px] text-gray-400 truncate">{s.market}</p>
+                      <p className="text-[10px] text-gray-500 truncate">{s.market}</p>
                     </div>
                   </div>
                 ))}
@@ -520,7 +520,7 @@ export default function SwaddleMuslinContent() {
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">{c.detail}</p>
                 <div className="bg-gray-50 rounded-xl p-3 mb-3">
-                  <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-1">Spec</p>
+                  <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-1">Spec</p>
                   <p className="text-xs text-gray-600">{c.spec}</p>
                 </div>
                 <div className="flex flex-wrap gap-1.5">
@@ -574,7 +574,7 @@ export default function SwaddleMuslinContent() {
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Weight Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">GSM Weight Guide</h2>
-            <p className="text-gray-400 max-w-2xl">Lighter is not always better for swaddles — the right weight depends on target climate, age group and market expectations.</p>
+            <p className="text-gray-500 max-w-2xl">Lighter is not always better for swaddles — the right weight depends on target climate, age group and market expectations.</p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {GSM_TIERS.map((t, i) => (
@@ -585,7 +585,7 @@ export default function SwaddleMuslinContent() {
                 <div className={`text-lg font-bold mb-1 ${t.featured ? "text-navy-900" : "text-white"}`}>{t.name}</div>
                 <div className={`text-xs font-semibold mb-4 ${t.featured ? "text-navy-900/70" : "text-gold/70"}`}>{t.season}</div>
                 <p className={`text-sm leading-relaxed mb-4 ${t.featured ? "text-navy-900/80" : "text-gray-300"}`}>{t.desc}</p>
-                <p className={`text-[10px] font-semibold ${t.featured ? "text-navy-900/60" : "text-gray-400"}`}>{t.market}</p>
+                <p className={`text-[10px] font-semibold ${t.featured ? "text-navy-900/60" : "text-gray-500"}`}>{t.market}</p>
               </motion.div>
             ))}
           </div>
@@ -676,7 +676,7 @@ export default function SwaddleMuslinContent() {
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Export Markets</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Global Baby Market Coverage</h2>
-            <p className="text-gray-400 max-w-2xl">Serving baby boutiques, DTC brands and distributors across 35+ markets. GOTS and OEKO-TEX Class 1 documentation available for all premium market requirements.</p>
+            <p className="text-gray-500 max-w-2xl">Serving baby boutiques, DTC brands and distributors across 35+ markets. GOTS and OEKO-TEX Class 1 documentation available for all premium market requirements.</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {SECTORS.map((s, i) => (
@@ -687,7 +687,7 @@ export default function SwaddleMuslinContent() {
                   <span className="w-10 h-10 rounded-xl bg-gold/15 text-gold text-xs font-bold flex items-center justify-center">{s.abbr}</span>
                   <h3 className="text-sm font-bold text-white">{s.name}</h3>
                 </div>
-                <p className="text-xs text-gray-400 leading-relaxed mb-3">{s.detail}</p>
+                <p className="text-xs text-gray-500 leading-relaxed mb-3">{s.detail}</p>
                 <p className="text-[10px] text-gold/70 font-semibold">{s.market}</p>
               </motion.div>
             ))}
@@ -696,7 +696,7 @@ export default function SwaddleMuslinContent() {
             {[{ val: "35+", label: "Export Markets" }, { val: "50+", label: "Vetted Factories" }, { val: "95%", label: "On-Time Delivery" }].map((stat) => (
               <div key={stat.label} className="text-center border border-white/10 rounded-xl p-5">
                 <p className="text-3xl font-bold text-gold">{stat.val}</p>
-                <p className="text-xs text-gray-400 mt-1">{stat.label}</p>
+                <p className="text-xs text-gray-500 mt-1">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -830,7 +830,7 @@ export default function SwaddleMuslinContent() {
                 )}
                 <div className="w-12 h-12 rounded-2xl bg-stone-100 text-navy-900 text-lg font-bold flex items-center justify-center mx-auto mb-3">{p.num}</div>
                 <p className="text-xs font-bold text-navy-900 mb-1">{p.title}</p>
-                <p className="text-[10px] text-gray-400 leading-tight">{p.desc.slice(0, 60)}…</p>
+                <p className="text-[10px] text-gray-500 leading-tight">{p.desc.slice(0, 60)}…</p>
               </motion.div>
             ))}
           </div>

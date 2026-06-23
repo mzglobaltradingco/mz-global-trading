@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -355,7 +355,7 @@ export default function BathMatsContent() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-3xl font-bold text-gold">{s.val}</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 leading-tight whitespace-nowrap">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -374,7 +374,7 @@ export default function BathMatsContent() {
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Complete Product Guide</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Explore All Aspects</h2>
-            <p className="text-gray-400 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
+            <p className="text-gray-500 mt-3 max-w-lg text-sm">Click any card to jump to the full detailed section.</p>
           </div>
 
           {/* Row 1: Constructions + Anti-Slip Backing */}
@@ -392,7 +392,7 @@ export default function BathMatsContent() {
                 {CONSTRUCTIONS.map((c) => (
                   <div key={c.id} className="bg-white rounded-xl p-3 border border-slate-100">
                     <p className="text-sm font-semibold text-navy-900">{c.name}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{c.gsm}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{c.gsm}</p>
                     {c.badge && <span className="mt-1.5 inline-block text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">{c.badge}</span>}
                   </div>
                 ))}
@@ -415,7 +415,7 @@ export default function BathMatsContent() {
                     <span className="text-xl shrink-0" aria-hidden="true">{b.icon}</span>
                     <div>
                       <p className="font-bold text-navy-900 text-sm">{b.type}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{b.safety}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{b.safety}</p>
                       <p className="text-xs text-sky-600 mt-0.5">{b.best}</p>
                     </div>
                   </div>
@@ -468,7 +468,7 @@ export default function BathMatsContent() {
                 {SIZES.map((s) => (
                   <div key={s.size} className="flex items-start gap-2">
                     <span className="font-bold text-navy-900 text-xs shrink-0">{s.size}</span>
-                    <span className="text-xs text-gray-400 leading-tight">{s.name}</span>
+                    <span className="text-xs text-gray-500 leading-tight">{s.name}</span>
                   </div>
                 ))}
               </div>
@@ -546,11 +546,11 @@ export default function BathMatsContent() {
                     <div className="flex-1 bg-white rounded-full h-2">
                       <div className={`${r.bar} bg-orange-400 h-2 rounded-full`} />
                     </div>
-                    <span className="text-[10px] text-gray-400 shrink-0">{r.cycles}+</span>
+                    <span className="text-[10px] text-gray-500 shrink-0">{r.cycles}+</span>
                   </div>
                 ))}
               </div>
-              <p className="text-[10px] text-gray-400 mt-3">Indicative wash cycle resistance. Actual performance varies with laundering conditions.</p>
+              <p className="text-[10px] text-gray-500 mt-3">Indicative wash cycle resistance. Actual performance varies with laundering conditions.</p>
               <ExploreBtn sectionId="section-constructions" label="Construction Details" />
             </motion.div>
 
@@ -644,11 +644,11 @@ export default function BathMatsContent() {
                   </div>
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     <div className="bg-gray-50 rounded-xl p-3">
-                      <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Backing</p>
+                      <p className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1">Backing</p>
                       <p className="text-xs text-gray-600">{c.backing}</p>
                     </div>
                     <div className="bg-gray-50 rounded-xl p-3">
-                      <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Wash Cycles</p>
+                      <p className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1">Wash Cycles</p>
                       <p className="text-xs text-gray-600">{c.washCycles}</p>
                     </div>
                   </div>
@@ -696,7 +696,7 @@ export default function BathMatsContent() {
                     { label: "Durability", val: b.durability },
                   ].map((r) => (
                     <div key={r.label}>
-                      <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">{r.label}</p>
+                      <p className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">{r.label}</p>
                       <p className="text-sm text-gray-700 mt-0.5">{r.val}</p>
                     </div>
                   ))}
@@ -769,7 +769,7 @@ export default function BathMatsContent() {
                 ))}
               </div>
             </div>
-            <p className="text-xs text-gray-400 mt-3 italic">⚠ Indicative values. Actual drying time and cycle resistance depend on construction, pile density and laundering conditions.</p>
+            <p className="text-xs text-gray-500 mt-3 italic">⚠ Indicative values. Actual drying time and cycle resistance depend on construction, pile density and laundering conditions.</p>
           </div>
           <BackToTop />
         </div>
@@ -783,7 +783,7 @@ export default function BathMatsContent() {
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">04 — Design</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Pattern, Colour and Decoration Options for Bath Mats</h2>
-            <p className="text-gray-400 max-w-2xl leading-relaxed">Bath mat design is constrained by construction — you cannot screen print onto terry loop pile, and sublimation requires flat polyester faces. Each pattern and decoration method has a defined compatibility list. Specify construction and pattern together, not independently.</p>
+            <p className="text-gray-500 max-w-2xl leading-relaxed">Bath mat design is constrained by construction — you cannot screen print onto terry loop pile, and sublimation requires flat polyester faces. Each pattern and decoration method has a defined compatibility list. Specify construction and pattern together, not independently.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
@@ -796,7 +796,7 @@ export default function BathMatsContent() {
                   <div className="w-10 h-10 rounded-xl bg-gray-700 text-gray-300 font-black text-sm flex items-center justify-center shrink-0">{p.code}</div>
                   <h3 className="font-bold text-white mt-1.5">{p.name}</h3>
                 </div>
-                <p className="text-sm text-gray-400 leading-relaxed mb-3">{p.note}</p>
+                <p className="text-sm text-gray-500 leading-relaxed mb-3">{p.note}</p>
                 <div className="flex flex-wrap gap-1.5">
                   {p.compat.map((c) => <span key={c} className="text-[10px] bg-gray-700 text-gray-300 px-2 py-0.5 rounded-full">{c}</span>)}
                 </div>
@@ -814,7 +814,7 @@ export default function BathMatsContent() {
                 { palette: "Custom PMS Match", swatches: ["bg-gray-300", "bg-gray-400", "bg-gray-500", "bg-gray-600"] },
               ].map((col) => (
                 <div key={col.palette}>
-                  <p className="text-xs text-gray-400 mb-2">{col.palette}</p>
+                  <p className="text-xs text-gray-500 mb-2">{col.palette}</p>
                   <div className="grid grid-cols-4 gap-1">
                     {col.swatches.map((s, j) => (
                       <div key={j} className={`${s} rounded-md aspect-square border border-gray-600`} />
@@ -849,7 +849,7 @@ export default function BathMatsContent() {
                 <p className="text-3xl font-black text-navy-900">{s.size}</p>
                 <p className="text-lg font-bold text-rose-600 mt-1 mb-3">{s.name}</p>
                 <p className="text-sm text-gray-600 leading-relaxed flex-1">{s.use}</p>
-                <p className="text-xs text-gray-400 mt-4">{s.market}</p>
+                <p className="text-xs text-gray-500 mt-4">{s.market}</p>
               </motion.div>
             ))}
           </div>
@@ -905,7 +905,7 @@ export default function BathMatsContent() {
                 <div key={r.region} className="bg-white/5 border border-white/10 rounded-xl p-4">
                   <p className="text-white font-bold text-sm mb-1">{r.region}</p>
                   <p className="text-gold text-xs mb-2">{r.markets}</p>
-                  <p className="text-gray-400 text-xs leading-relaxed">{r.note}</p>
+                  <p className="text-gray-500 text-xs leading-relaxed">{r.note}</p>
                 </div>
               ))}
             </div>
@@ -935,7 +935,7 @@ export default function BathMatsContent() {
                   <p className="font-bold text-navy-900 text-sm">{c.name}</p>
                   <span className={`text-[9px] font-bold px-2 py-0.5 rounded-full ${c.tier === "Essential" ? "bg-red-100 text-red-700" : c.tier === "Premium" ? "bg-gold/20 text-gold" : c.tier === "Optional" ? "bg-gray-100 text-gray-500" : "bg-teal-100 text-teal-700"}`}>{c.tier}</span>
                 </div>
-                <p className="text-[10px] text-gray-400 leading-relaxed">{c.desc}</p>
+                <p className="text-[10px] text-gray-500 leading-relaxed">{c.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -960,7 +960,7 @@ export default function BathMatsContent() {
                     <div className="px-4 py-3 font-semibold text-navy-900">{r.prog}</div>
                     <div className="px-4 py-3 text-red-600 font-medium">{r.req}</div>
                     <div className="px-4 py-3 text-sky-600">{r.rec}</div>
-                    <div className="px-4 py-3 text-gray-400">{r.opt}</div>
+                    <div className="px-4 py-3 text-gray-500">{r.opt}</div>
                   </div>
                 ))}
               </div>
@@ -1181,7 +1181,7 @@ export default function BathMatsContent() {
                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold" />
                       </span>
                     )}
-                    <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-bold transition-all ${faqOpen === i ? "border-gold bg-gold text-navy-900" : "border-gray-200 text-gray-400 group-hover:border-gold"}`}>
+                    <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-bold transition-all ${faqOpen === i ? "border-gold bg-gold text-navy-900" : "border-gray-200 text-gray-500 group-hover:border-gold"}`}>
                       {faqOpen === i ? "−" : "+"}
                     </span>
                   </span>
