@@ -121,15 +121,10 @@ const BORDER_TYPES = [
   "Plain border / hem", "Satin border", "Jacquard woven border", "Dobby border", "No border", "Other",
 ];
 const SAMPLE_OPTIONS = [
-  "Pre-production sample",
   "Counter sample (match our reference)",
   "No sample needed",
 ];
 const SAMPLE_NOTES: Record<string, { note: string; sub?: string }> = {
-  "Pre-production sample": {
-    note: "We will produce a pre-production sample for your approval before bulk manufacturing begins.",
-    sub: "A confirmed order (PO or signed PI) is required before PP sample production.",
-  },
   "Counter sample (match our reference)": {
     note: "Please courier your reference sample to our Karachi office. We will produce a counter sample for your approval.",
     sub: "Sample + courier cost is at buyer's account and will be credited against the bulk order upon approval.",
@@ -1030,6 +1025,181 @@ function getCategoryIcon(cat: string) {
   return null;
 }
 
+// ── Grouped product data (mirrors mega-menu structure) ────────────────────────
+
+const APPAREL_GROUPS: { group: string; items: string[] }[] = [
+  { group: "Knitted Garments", items: ["T-Shirts", "Polo Shirts", "Henley Shirts", "Sweatshirts & Hoodies", "Sweatpants & Joggers", "Tank Tops"] },
+  { group: "Woven Garments", items: ["Denim Jeans", "Formal & Casual Shirts", "Pants & Trousers", "Cargo Pants", "Shorts"] },
+  { group: "Baby & Kids", items: ["T-Shirts for Kids", "Swaddle Muslin Fabric", "Overalls", "Baby Rompers", "Baby Bibs", "Baby Hooded Towels"] },
+  { group: "Specialty", items: ["Workwear Apparel", "Socks", "Other / Multiple"] },
+];
+
+const HOME_TEXTILE_GROUPS: { group: string; items: string[] }[] = [
+  { group: "Bath Linen", items: ["Towels", "Institutional Towels", "Bathrobes", "Bath Mats", "Beach & Pool Towels"] },
+  { group: "Bed Linen", items: ["Bedsheets", "Fitted Sheets", "Duvet Covers", "Pillow Covers", "Cushion Covers", "Curtains"] },
+  { group: "Kitchen Linen", items: ["Kitchen Towels", "Bar Mops", "Aprons", "Pot Holders"] },
+  { group: "Table & Thermal", items: ["Table Covers", "Cellular Thermal Blanket", "Fleece Thermal Blankets"] },
+  { group: "Hospital Linen", items: ["Doctor Surgical Gowns", "Medical Scrubs", "Patient Gowns", "Surgical Huck Towels"] },
+  { group: "Industrial & Specialty", items: ["Shop Towels", "Fender Covers", "Ihram", "Other / Multiple"] },
+];
+
+const FABRIC_GROUPS: { group: string; items: string[] }[] = [
+  { group: "Fabric Type", items: ["Apparel Fabric", "Home Textile Fabric"] },
+];
+
+function getProductGroups(category: string) {
+  if (category === "Apparel") return APPAREL_GROUPS;
+  if (category === "Home Textiles") return HOME_TEXTILE_GROUPS;
+  if (category === "Fabric") return FABRIC_GROUPS;
+  return [];
+}
+
+// ── Grouped product selector (two-level: sub-category pill → product chips) ───
+
+const GROUP_DOT: Record<string, string> = {
+  "Knitted Garments":       "bg-indigo-400",
+  "Woven Garments":         "bg-violet-400",
+  "Baby & Kids":            "bg-pink-400",
+  "Specialty":              "bg-gray-400",
+  "Bath Linen":             "bg-teal-400",
+  "Bed Linen":              "bg-blue-400",
+  "Kitchen Linen":          "bg-amber-400",
+  "Table & Thermal":        "bg-orange-400",
+  "Hospital Linen":         "bg-red-400",
+  "Industrial & Specialty": "bg-slate-400",
+  "Fabric Type":            "bg-amber-400",
+};
+
+function GroupedProductSelector({
+  category,
+  value,
+  onChange,
+  error,
+}: {
+  category: string;
+  value: string;
+  onChange: (v: string) => void;
+  error?: string;
+}) {
+  const groups = getProductGroups(category);
+  const ownerGroup = groups.find(g => g.items.includes(value))?.group ?? "";
+  const [openGroup, setOpenGroup] = useState<string>(ownerGroup);
+
+  useEffect(() => {
+    setOpenGroup(groups.find(g => g.items.includes(value))?.group ?? "");
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [category]);
+
+  const activeItems = groups.find(g => g.group === openGroup)?.items ?? [];
+
+  // Fabric only has 2 options — skip sub-category level entirely
+  if (category === "Fabric") {
+    return (
+      <div>
+        <div className="flex flex-wrap gap-2">
+          {groups.flatMap(g => g.items).map(item => {
+            const sel = value === item;
+            return (
+              <button key={item} type="button" onClick={() => onChange(item)}
+                className={`px-3.5 py-2 rounded-xl border text-sm font-medium transition-all ${
+                  sel ? "border-gold bg-gold/10 text-navy-900 shadow-sm" : "border-gray-200 text-gray-600 hover:border-gray-300 hover:text-navy-900"
+                }`}>
+                {sel && <span className="inline-block w-1.5 h-1.5 rounded-full bg-gold mr-1.5 mb-px align-middle" aria-hidden="true" />}
+                {item}
+              </button>
+            );
+          })}
+        </div>
+        {error && <p className="text-red-500 text-[11px] mt-1.5 flex items-center gap-1" role="alert"><span aria-hidden="true">↑</span> {error}</p>}
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      {/* Level 1 — sub-category pills (always visible, one row wraps on mobile) */}
+      <div className="flex flex-wrap gap-1.5">
+        {groups.map(({ group, items }) => {
+          const dot   = GROUP_DOT[group] ?? "bg-gray-300";
+          const isOpen    = group === openGroup;
+          const hasValue  = items.includes(value);
+          return (
+            <button
+              key={group}
+              type="button"
+              onClick={() => setOpenGroup(isOpen ? "" : group)}
+              className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-xs font-semibold transition-all ${
+                isOpen
+                  ? "border-navy-900 bg-navy-900 text-white"
+                  : hasValue
+                  ? "border-gold bg-gold/10 text-navy-900"
+                  : error
+                  ? "border-red-200 text-gray-600 hover:border-red-300"
+                  : "border-gray-200 text-gray-600 hover:border-gray-300 hover:text-navy-900"
+              }`}
+            >
+              <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${isOpen ? "bg-gold" : dot}`} aria-hidden="true" />
+              {group}
+              {hasValue && !isOpen && (
+                <svg className="w-3 h-3 text-gold shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              )}
+              <svg
+                className={`w-3 h-3 shrink-0 transition-transform ${isOpen ? "rotate-180 text-gold" : "text-current opacity-50"}`}
+                fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Level 2 — product chips for the open sub-category */}
+      <AnimatePresence>
+        {openGroup && (
+          <motion.div
+            key={openGroup}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.16 }}
+            className="overflow-hidden"
+          >
+            <div className="mt-2 p-2.5 bg-gray-50 rounded-xl border border-gray-100 flex flex-wrap gap-1.5">
+              {activeItems.map(item => {
+                const sel = value === item;
+                return (
+                  <button
+                    key={item}
+                    type="button"
+                    onClick={() => onChange(item)}
+                    className={`px-2.5 py-1.5 rounded-lg border text-xs font-medium transition-all leading-tight ${
+                      sel
+                        ? "border-gold bg-white text-navy-900 shadow-sm"
+                        : "border-gray-200 bg-white text-gray-600 hover:border-gray-300 hover:text-navy-900"
+                    }`}
+                  >
+                    {sel && <span className="inline-block w-1.5 h-1.5 rounded-full bg-gold mr-1.5 mb-px align-middle" aria-hidden="true" />}
+                    {item}
+                  </button>
+                );
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {error && (
+        <p className="text-red-500 text-[11px] mt-1.5 flex items-center gap-1" role="alert">
+          <span aria-hidden="true">↑</span> {error}
+        </p>
+      )}
+    </div>
+  );
+}
+
 // ── Main component ────────────────────────────────────────────────────────────
 
 export default function RFQContent() {
@@ -1049,7 +1219,10 @@ export default function RFQContent() {
       const saved = localStorage.getItem("rfq_wizard_draft_v2");
       if (saved) {
         const parsed = JSON.parse(saved) as Partial<RFQFormState>;
-        setFormState(prev => ({ ...prev, ...parsed }));
+        // Restore personal/logistics details only — products always start blank
+        // so the user is never dropped into a pre-selected product state on load.
+        const { products: _p, ...rest } = parsed;
+        setFormState(prev => ({ ...prev, ...rest }));
       }
     } catch { /* ignore */ }
     hasMounted.current = true;
@@ -1358,18 +1531,20 @@ export default function RFQContent() {
             </div>
 
             {product.category && (
-              <Field id="productType" label="Product Type" required error={errors.productType}>
-                <select id="productType" name="productType" aria-invalid={!!errors.productType}
+              <div className="flex flex-col gap-1">
+                <p className="text-xs font-semibold text-navy-900/80">
+                  Product Type <span className="text-gold ml-0.5" aria-hidden="true">*</span>
+                </p>
+                <GroupedProductSelector
+                  category={product.category}
                   value={product.productType}
-                  onChange={(e) => {
-                    updateProduct(activeProduct, { ...specReset(product), productType: e.target.value, productTypeOther: "" });
+                  onChange={(v) => {
+                    updateProduct(activeProduct, { ...specReset(product), productType: v, productTypeOther: "" });
                     if (errors.productType) setErrors(prev => ({ ...prev, productType: "" }));
                   }}
-                  className={ic(errors.productType)}>
-                  <option value="">Select product type…</option>
-                  {productTypes.map(t => <option key={t} value={t}>{t}</option>)}
-                </select>
-              </Field>
+                  error={errors.productType}
+                />
+              </div>
             )}
 
             {product.productType === "Other / Multiple" && (
