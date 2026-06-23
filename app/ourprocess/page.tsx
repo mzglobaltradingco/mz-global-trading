@@ -6,7 +6,7 @@ import OurProcessContent from "./OurProcessContent";
 export const metadata = buildMetadata({
   title: "Our Process | MZ Global Trading",
   description:
-    "See how MZ Global Trading sources textiles from Pakistan to 25+ countries — factory matching, production oversight, QC inspection and global export.",
+    "See how MZ Global Trading sources textiles from Pakistan to 35+ countries — factory matching, production oversight, QC inspection and global export.",
   canonical: "/ourprocess/",
   ogImage: "/images/og/homepage-og-image.webp",
   ogImageAlt: "MZ Global Trading sourcing network — Pakistan to USA, UK and Europe",
@@ -26,7 +26,7 @@ const pageSchema = {
   url: "https://mzglobaltrading.com/ourprocess/",
   name: "Our Process | MZ Global Trading",
   description:
-    "The MZ Global Trading sourcing process — factory matching, production oversight, QC inspection and export to 25+ countries.",
+    "The MZ Global Trading sourcing process — factory matching, production oversight, QC inspection and export to 35+ countries.",
   inLanguage: "en",
   isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
   about: { "@id": "https://mzglobaltrading.com/#organization" },

@@ -55,6 +55,16 @@ const markets = [
   { name: "Singapore",    x: 800, y: 362, region: "Asia Pacific",  delay: 1.55 },
   { name: "Kuala Lumpur", x: 788, y: 353, region: "Asia Pacific",  delay: 1.58 },
   { name: "Jakarta",      x: 806, y: 390, region: "Asia Pacific",  delay: 1.62 },
+  { name: "Miami",        x: 268, y: 267, region: "North America", delay: 1.25 },
+  { name: "Seattle",      x: 150, y: 212, region: "North America", delay: 1.18 },
+  { name: "Houston",      x: 226, y: 261, region: "North America", delay: 1.22 },
+  { name: "Vancouver",    x: 146, y: 207, region: "North America", delay: 1.05 },
+  { name: "Montreal",     x: 294, y: 202, region: "North America", delay: 1.08 },
+  { name: "Dublin",       x: 479, y: 177, region: "Europe",        delay: 0.57 },
+  { name: "Copenhagen",   x: 540, y: 161, region: "Europe",        delay: 0.66 },
+  { name: "Vienna",       x: 548, y: 193, region: "Europe",        delay: 0.69 },
+  { name: "Melbourne",    x: 871, y: 500, region: "Asia Pacific",  delay: 1.78 },
+  { name: "Brisbane",     x: 895, y: 466, region: "Asia Pacific",  delay: 1.72 },
 ];
 
 const regionColors: Record<string, string> = {
@@ -383,7 +393,7 @@ export default function OurProcessContent() {
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Global Reach</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-3">Our Sourcing Network</h2>
             <p className="text-gray-500 text-sm max-w-lg mx-auto">
-              Pakistan is our manufacturing base. Your business is our destination — in 25+ countries across every major market.
+              Pakistan is our manufacturing base. Your business is our destination — in 35+ countries across every major market.
             </p>
           </motion.div>
 
@@ -472,8 +482,8 @@ export default function OurProcessContent() {
             </svg>
 
             <div className="absolute bottom-4 right-4 bg-navy-900/90 backdrop-blur-xs border border-white/10 rounded-xl px-4 py-3 text-right">
-              <p className="text-gold font-bold text-xl leading-none">25+</p>
-              <p className="text-gray-500 text-xs mt-0.5">Export Markets</p>
+              <p className="text-[#D4A017] font-bold text-xl leading-none">35+</p>
+              <p className="text-gray-300 text-xs mt-0.5">Export Markets</p>
             </div>
           </motion.div>
         </div>

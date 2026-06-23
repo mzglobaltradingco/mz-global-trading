@@ -66,13 +66,42 @@
   color: #D4A017;
 }
 
-/* ── Accessible gray inside dark navy sections ── */
-/* gray-500 (#6B7280) on navy-900 = 3.36:1 (fails WCAG AA for normal text). */
-/* gray-400 (#9CA3AF) on navy-900 = 6.15:1 (passes comfortably).            */
+/* ── Globally promote text-gray-500 to WCAG AA on light backgrounds ── */
+/* #6B7280 on white = 3.96:1 (fails). #4B5563 (gray-600) = 5.71:1 (passes). */
+.text-gray-500 {
+  color: #4B5563;
+}
+/* Restore lighter gray inside dark navy so it remains legible on dark bg.   */
+/* #4B5563 on navy-900 = 3.23:1 (fails); #9CA3AF = 6.15:1 (passes).        */
 .bg-navy-900 .text-gray-500,
 .bg-navy-950 .text-gray-500 {
   color: #9CA3AF;
 }
+
+/* ── Fix accent -600 colours that fail on white/light backgrounds ── */
+/* text-sky-600 on white = 3.78:1 (fails). sky-700 (#0369A1) = 5.3:1. */
+/* text-teal-600 on white = 3.51:1 (fails). teal-700 (#0F766E) = 5.9:1. */
+/* text-orange-600 on white = 3.39:1 (fails). orange-700 (#C2410C) = 4.9:1. */
+/* text-rose-600 on white = 4.45:1 (fails). rose-700 (#BE123C) = 5.9:1. */
+/* text-pink-600 on white = 4.29:1 (fails). pink-700 (#BE185D) = 5.8:1. */
+.text-sky-600    { color: #0369A1; }
+.text-teal-600   { color: #0F766E; }
+.text-orange-600 { color: #C2410C; }
+.text-rose-600   { color: #BE123C; }
+.text-pink-600   { color: #BE185D; }
+/* Restore on dark backgrounds where -600 passes and -700 would fail. */
+.bg-navy-900 .text-sky-600,    .bg-navy-950 .text-sky-600,
+.bg-slate-900 .text-sky-600,   .bg-slate-800 .text-sky-600,
+#section-markets .text-sky-600,#section-constructions .text-sky-600   { color: #0284C7; }
+.bg-navy-900 .text-teal-600,   .bg-navy-950 .text-teal-600,
+.bg-slate-900 .text-teal-600,  .bg-slate-800 .text-teal-600,
+#section-markets .text-teal-600,#section-constructions .text-teal-600  { color: #0D9488; }
+.bg-navy-900 .text-orange-600, .bg-navy-950 .text-orange-600,
+.bg-slate-900 .text-orange-600,.bg-slate-800 .text-orange-600          { color: #EA580C; }
+.bg-navy-900 .text-rose-600,   .bg-navy-950 .text-rose-600,
+.bg-slate-900 .text-rose-600,  .bg-slate-800 .text-rose-600            { color: #E11D48; }
+.bg-navy-900 .text-pink-600,   .bg-navy-950 .text-pink-600,
+.bg-slate-900 .text-pink-600,  .bg-slate-800 .text-pink-600            { color: #DB2777; }
 
 /* ── Glow pulse keyframe ── */
 @keyframes glowPulse {

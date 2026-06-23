@@ -17,7 +17,7 @@ const stats = [
   },
   {
     icon: "/images/icons/stats/icon-global-quality.svg",
-    value: "25+",
+    value: "35+",
     label: "Countries Served",
   },
   {

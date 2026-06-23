@@ -47,6 +47,8 @@ export interface ProductOptions {
   headingOptions?: string[];
   showLiningType?: boolean;
   liningOptions?: string[];
+  showPileHeight?: boolean;
+  pileHeightOptions?: string[];
 }
 
 // ─── Shared certification sets ────────────────────────────────────────────────
@@ -111,8 +113,8 @@ const UOM_PIECES_DOZENS: string[] = ["Pieces", "Dozens"];
 const UOM_PIECES_SETS_DOZENS: string[] = ["Pieces", "Sets", "Dozens"];
 
 const BED_LINEN_SIZES: string[] = [
-  "Twin / Single 96×183 cm", "Full / Double 137×190 cm", "Queen 152×203 cm",
-  "King 183×203 cm", "Cal King 183×213 cm", "EU Single 140×200 cm",
+  "Twin / Single 96×190 cm", "Full / Double 137×190 cm", "Queen 152×203 cm",
+  "King 193×203 cm", "Cal King 183×213 cm", "EU Single 140×200 cm",
   "EU Double 200×200 cm", "EU King 240×220 cm", "Custom",
 ];
 
@@ -122,7 +124,7 @@ const BED_LINEN_FINISHING: string[] = [
 ];
 
 const BED_LINEN_CONSTRUCTION: string[] = [
-  "Percale (200–400 TC)", "Sateen (300–600 TC)", "Oxford Weave",
+  "Percale (200–400 TC)", "Sateen (300–600 TC)", "Poplin (fine plain weave)",
   "Flannel / Brushed Cotton", "Jersey Knit (stretch)", "Jacquard", "Dobby Stripe",
   "Linen / Linen Blend", "Other",
 ];
@@ -1155,7 +1157,7 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     sizeLabel: "Standard Size",
     sizeOptions: [
       "Face Towel 30×30 cm", "Guest Towel 30×50 cm", "Hand Towel 40×70 cm",
-      "Bath Towel 70×140 cm", "Bath Sheet 90×150 cm", "Gym Towel 50×100 cm", "Custom",
+      "Bath Towel 70×140 cm", "Bath Sheet 90×150 cm", "Sports / Gym Towel 70×130 cm", "Custom",
     ],
     showFitType: false,
     fitOptions: [],
@@ -1175,8 +1177,11 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
       "Face (sublimation print)", "No decoration",
     ],
     finishingOptions: [
-      "Soft hand / Silicone finish", "Anti-bacterial", "Zero Twist effect",
-      "Velour shearing", "No special finish",
+      "Soft hand / Silicone finish", "Anti-bacterial", "Velour shearing", "No special finish",
+    ],
+    showPileHeight: true,
+    pileHeightOptions: [
+      "8–10 mm (light / budget)", "10–13 mm (standard retail)", "13–16 mm (hotel premium)", "16+ mm (luxury / spa)",
     ],
     individualPackOptions: [
       "Individual polybag", "Rolled & banded", "Retail box (single)",
@@ -1206,11 +1211,18 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     styleLabel: "Institution Type",
     styleOptions: ["Hotel / hospitality chain", "Healthcare / hospital", "Airline / transport", "Gym / sports facility", "Other"],
     designLabel: "Design",
-    printTypeOptions: ["Plain white", "White with dobby stripe border"],
+    printTypeOptions: [
+      "Plain white", "Plain ecru / natural colour", "Solid colour (specify Pantone)",
+      "White with dobby border stripe", "With embroidered logo / monogram",
+    ],
     printPlacementLabel: "Placement",
-    printPlacementOptions: ["Border stripe", "Plain / no decoration"],
+    printPlacementOptions: ["Border stripe", "Embroidered corner / hem", "All-over solid", "Plain / no decoration"],
     finishingOptions: [
       "Soft hand / Silicone finish", "Anti-bacterial", "No special finish",
+    ],
+    showPileHeight: true,
+    pileHeightOptions: [
+      "8–10 mm (airline / healthcare)", "10–13 mm (hotel standard)", "13–16 mm (premium hotel)",
     ],
     individualPackOptions: [
       "Dozen (12 pcs) banded", "Case (120 pcs) bulk", "Bulk / no individual packing",
@@ -1231,8 +1243,7 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     weightPlaceholder: "e.g. 400 gsm",
     sizeLabel: "Size Range",
     sizeOptions: [
-      "XS/S (fits 32–36\")", "M/L (fits 38–42\")", "XL/XXL (fits 44–50\")",
-      "One Size Fits Most", "Custom",
+      "One Size (hotel standard — fits most adults)", "S", "M", "L", "XL", "XXL", "Custom",
     ],
     showFitType: false,
     fitOptions: [],
@@ -1253,6 +1264,10 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     finishingOptions: [
       "Soft hand / Silicone finish", "Anti-bacterial", "Velour shearing", "No special finish",
     ],
+    showPileHeight: true,
+    pileHeightOptions: [
+      "4–6 mm (velour / sheared)", "8–10 mm (standard terry)", "12–15 mm (luxury terry)",
+    ],
     individualPackOptions: [
       "Individual polybag + hanger", "Retail box", "Cloth / non-woven gift bag", "Bulk folded",
     ],
@@ -1271,12 +1286,18 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     weightLabel: "GSM",
     weightPlaceholder: "e.g. 1000 gsm",
     sizeLabel: "Standard Size",
-    sizeOptions: ["Small 40×60 cm", "Standard 50×80 cm", "Large 60×100 cm", "Custom"],
+    sizeOptions: [
+      "Small 40×60 cm", "Standard 50×80 cm", "Large 60×90 cm", "XL 70×110 cm",
+      "Pedestal mat 45×45 cm", "Bath runner 50×160 cm", "Custom",
+    ],
     showFitType: false,
     fitOptions: [],
     showSizeStandard: false,
     showBackingType: true,
-    backingOptions: ["Latex backing (anti-slip)", "Rubber spray backing", "No backing", "Other"],
+    backingOptions: [
+      "SBR latex (standard anti-slip)", "Natural rubber latex (premium)",
+      "TPR thermoplastic rubber (high durability)", "PVC spray (budget)", "None", "Other",
+    ],
     showPileGround: true,
     styleLabel: "Mat Shape",
     styleOptions: ["Rectangular (standard)", "Contour / U-shape (toilet mat)", "Oval", "Round", "Other"],
@@ -1287,8 +1308,12 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     printPlacementLabel: "Placement",
     printPlacementOptions: ["All-over (woven pattern)", "Plain / no decoration"],
     finishingOptions: [
-      "Anti-slip backing (latex)", "Anti-slip backing (rubber spray)",
       "Soft hand finish", "Anti-bacterial", "No special finish",
+    ],
+    showPileHeight: true,
+    pileHeightOptions: [
+      "8–10 mm (600–800 GSM)", "10–13 mm (800–1,000 GSM)",
+      "13–16 mm (1,000–1,400 GSM)", "16–20 mm (1,400+ GSM luxury)",
     ],
     individualPackOptions: [
       "Individual polybag", "Retail header card", "Retail box", "Bulk",
@@ -1309,8 +1334,8 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     weightPlaceholder: "e.g. 420 gsm",
     sizeLabel: "Standard Size",
     sizeOptions: [
-      "Standard 75×150 cm", "Large 90×170 cm", "Oversized 100×180 cm",
-      "Kids 60×120 cm", "Custom",
+      "Standard 70×140 cm", "USA-format 76×152 cm", "Large 90×170 cm", "Oversized 100×180 cm",
+      "Kids 60×120 cm", "Round Ø150 cm", "Custom",
     ],
     showFitType: false,
     fitOptions: [],
@@ -1326,8 +1351,8 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     printPlacementLabel: "Design Placement",
     printPlacementOptions: ["All-over (sublimation / reactive)", "Woven stripe / border", "No decoration"],
     finishingOptions: [
-      "Chlorine / Salt Resistant", "Color Fast treatment",
-      "Soft hand finish", "No special finish",
+      "Chlorine-Resistant (pool programme — ISO 105-E03)", "Salt / Seawater Resistant",
+      "Color Fast treatment", "Soft hand finish", "No special finish",
     ],
     individualPackOptions: [
       "Individual polybag", "Retail roll (paper band)", "Branded bag", "Retail box", "Bulk",
@@ -1385,7 +1410,7 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     fitOptions: [],
     showSizeStandard: false,
     showPocketDepth: true,
-    pocketDepthOptions: ["12\" / 30 cm", "15\" / 38 cm", "18\" / 46 cm", "21\" / 53 cm", "Deep pocket 26\"+"],
+    pocketDepthOptions: ["14\" / 35 cm (residential standard)", "16\" / 40 cm", "18\" / 46 cm (deep)", "21\" / 53 cm (extra deep)", "Deep pocket 25\"+"],
     showWarpWeft: true,
     styleLabel: "Sheet Application",
     styleOptions: [

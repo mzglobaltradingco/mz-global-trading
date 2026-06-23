@@ -69,13 +69,14 @@ const FIBER_CONTENT_FABRIC = [
   "Recycled Polyester (GRS)", "Modal", "Other",
 ];
 
-const YARN_TYPES = ["Ring Spun", "Open End (OE)", "Compact Spun", "Combed", "Carded", "Air-Jet Spun", "Other"];
+const YARN_TYPES = ["Ring Spun", "Open End (OE)", "Compact Spun", "Combed", "Carded", "Air-Jet Spun", "Zero Twist", "Other"];
 const SIZE_STANDARDS = ["US / ASTM", "EU Standard", "UK Standard", "Brand's own size guide", "Custom"];
 const DYEING_METHODS = [
   "Solid / Piece Dyed", "Yarn Dyed", "Garment Dyed", "Tie Dye / Hand Dyed",
   "Space Dyed", "Raw / Undyed", "To be discussed",
 ];
 const NUMBER_OF_COLORS = [
+  "White / undyed (no colour specification)",
   "1 color", "2 colors", "3 colors", "4 colors", "5+ colors",
   "All-over / Multicolor", "TBC",
 ];
@@ -87,7 +88,7 @@ const CARE_LABELS = [
   "Sewn-in care label", "Heat transfer care label", "No care label", "To be discussed",
 ];
 const STITCH_TYPES = [
-  "Overlock (Serger)", "Flatlock", "Chain Stitch", "Cover Stitch", "Double Needle", "To be confirmed",
+  "Lock Stitch (standard seam)", "Overlock (Serger)", "Flatlock", "Chain Stitch", "Cover Stitch", "Double Needle", "To be confirmed",
 ];
 const MASTER_CARTONS = [
   "12 pcs per carton", "24 pcs per carton", "36 pcs per carton",
@@ -171,6 +172,7 @@ export interface ProductSpec {
   collarType: string;
   collarTypeOther: string;
   heatRating: string;
+  pileHeight: string;
   backingType: string;
   backingTypeOther: string;
   headingType: string;
@@ -248,7 +250,7 @@ function mkProduct(): ProductSpec {
     borderType: "", borderTypeOther: "", pocketDepth: "",
     closureType: "", closureTypeOther: "",
     collarType: "", collarTypeOther: "",
-    heatRating: "", backingType: "", backingTypeOther: "",
+    heatRating: "", pileHeight: "", backingType: "", backingTypeOther: "",
     headingType: "", headingTypeOther: "",
     liningType: "", liningTypeOther: "",
     warpYarn: "", weftYarn: "", pileYarn: "", groundYarn: "", picksPerCm: "",
@@ -285,6 +287,7 @@ function specReset(p: ProductSpec): ProductSpec {
       pocketDepth: fresh.pocketDepth, closureType: fresh.closureType,
       closureTypeOther: fresh.closureTypeOther, collarType: fresh.collarType,
       collarTypeOther: fresh.collarTypeOther, heatRating: fresh.heatRating,
+      pileHeight: fresh.pileHeight,
       backingType: fresh.backingType, backingTypeOther: fresh.backingTypeOther,
       headingType: fresh.headingType, headingTypeOther: fresh.headingTypeOther,
       liningType: fresh.liningType, liningTypeOther: fresh.liningTypeOther,
@@ -441,10 +444,10 @@ function buildEmailBody(f: RFQFormState): string {
         ].filter(Boolean);
         if (yarnRows.length) lines.push(subHead("WARP & WEFT SPECIFICATION"), ...yarnRows);
       }
-      if (p.pileYarn || p.groundYarn || (p.construction === "Terry" && p.picksPerCm)) {
+      if (p.pileYarn || p.groundYarn || (p.construction === "Terry" && p.picksPerCm) || p.pileHeight) {
         const pileRows = [
           row("Pile Yarn", p.pileYarn), row("Ground Yarn", p.groundYarn),
-          row("Loop Density", p.picksPerCm),
+          row("Loop Density", p.picksPerCm), row("Pile Height", p.pileHeight),
         ].filter(Boolean);
         if (pileRows.length) lines.push(subHead("PILE YARN SPECIFICATION"), ...pileRows);
       }
@@ -550,10 +553,10 @@ function buildEmailBody(f: RFQFormState): string {
         if (warpRows.length) lines.push(subHead("YARN SPECIFICATION — WARP & WEFT"), ...warpRows);
       }
 
-      if (opts?.showPileGround && (p.pileYarn || p.groundYarn || p.picksPerCm)) {
+      if (opts?.showPileGround && (p.pileYarn || p.groundYarn || p.picksPerCm || p.pileHeight)) {
         const pileRows = [
           row("Pile Yarn", p.pileYarn), row("Ground Yarn", p.groundYarn),
-          row("Loop Density", p.picksPerCm),
+          row("Loop Density", p.picksPerCm), row("Pile Height", p.pileHeight),
         ].filter(Boolean);
         if (pileRows.length) lines.push(subHead("YARN SPECIFICATION — PILE & GROUND"), ...pileRows);
       }
@@ -1718,6 +1721,15 @@ export default function RFQContent() {
                         <input id="picksPerCm" type="text" placeholder="e.g. 8 pile rows per cm"
                           value={product.picksPerCm} onChange={e => setP("picksPerCm", e.target.value)} className={ic()} />
                       </Field>
+                      {opts?.showPileHeight && opts.pileHeightOptions && (
+                        <Field id="pileHeight" label="Pile Height">
+                          <select id="pileHeight" value={product.pileHeight}
+                            onChange={e => setP("pileHeight", e.target.value)} className={ic()}>
+                            <option value="">Select pile height…</option>
+                            {opts.pileHeightOptions.map(o => <option key={o} value={o}>{o}</option>)}
+                          </select>
+                        </Field>
+                      )}
                     </SpecSection>
                   )}
                 </div>
@@ -2411,6 +2423,7 @@ export default function RFQContent() {
                   {opts?.showPileGround && p.pileYarn && <ReviewRow label="Pile Yarn" value={p.pileYarn} />}
                   {opts?.showPileGround && p.groundYarn && <ReviewRow label="Ground Yarn" value={p.groundYarn} />}
                   {opts?.showPileGround && p.picksPerCm && !opts?.showWarpWeft && <ReviewRow label="Loop Density" value={p.picksPerCm} />}
+                  {opts?.showPileHeight && p.pileHeight && <ReviewRow label="Pile Height" value={p.pileHeight} />}
 
                   {/* Sizing */}
                   {sizeDisplay && <ReviewRow label={opts?.sizeLabel ?? "Size"} value={sizeDisplay} />}

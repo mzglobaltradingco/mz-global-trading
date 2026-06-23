@@ -649,7 +649,7 @@ export default function TShirtsContent() {
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Fit &amp; Sizing</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">Six Fit Profiles for Six Market Positions</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-            <div className="bg-[#0D1B2A] divide-y divide-white/10">
+            <div className="bg-navy-900 divide-y divide-white/10">
               {FIT_PROFILES.map((f, i) => (
                 <button key={f.code} onClick={() => setActiveFit(i)} className={`w-full flex items-center gap-5 px-8 py-5 text-left transition-all ${activeFit === i ? "bg-white/10" : "hover:bg-white/5"}`}>
                   <span className={`w-10 h-10 rounded-xl ${f.color} flex items-center justify-center text-white text-xs font-bold shrink-0`}>{f.code}</span>
@@ -824,7 +824,7 @@ export default function TShirtsContent() {
             </div>
             <div className="lg:col-span-2 flex items-center justify-center">
               <div className="text-center">
-                <p className="text-7xl sm:text-9xl font-black text-white/8 leading-none select-none">35+</p>
+                <p className="text-7xl sm:text-9xl font-black text-white/20 leading-none select-none">35+</p>
                 <p className="text-sm font-semibold text-gold -mt-4">Export Markets Served</p>
               </div>
             </div>
