@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import SweatpantsContent from "./SweatpantsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Sweatpants Manufacturer Pakistan | MZ Global Trading",
   description:
     "Source OEM sweatpants and joggers from Pakistan — French terry, brushed fleece, cotton-spandex. Co-ordinated set programmes. OEKO-TEX certified.",
+  canonical: "/apparel/knittedgarments/sweatpantsjoggers/",
+  ogImage: "/images/og/sweatpants-joggers-og.webp",
+  ogImageAlt: "Pakistan sweatpants and jogger manufacturer — OEM French terry and fleece bottoms for activewear programmes worldwide",
   keywords: [
     "sweatpants manufacturer Pakistan",
     "jogger pants OEM Pakistan",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "athletic bottoms supplier Pakistan",
     "activewear manufacturer Pakistan export",
   ],
-  alternates: {
-    canonical: "/apparel/knittedgarments/sweatpantsjoggers/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/knittedgarments/sweatpantsjoggers/",
-      "x-default": "https://mzglobaltrading.com/apparel/knittedgarments/sweatpantsjoggers/",
-    },
-  },
-  openGraph: {
-    title: "Sweatpants & Jogger Manufacturer Pakistan | OEM Fleece Bottoms | MZ Global Trading",
-    description:
-      "Pakistan OEM sweatpants and jogger manufacturer. French terry, brushed fleece, cotton-spandex. Co-ord set programmes. GOTS, OEKO-TEX certified for USA, UK, Europe.",
-    url: "https://mzglobaltrading.com/apparel/knittedgarments/sweatpantsjoggers/",
-    images: [
-      {
-        url: "/images/og/sweatpants-joggers-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan sweatpants and jogger manufacturer — OEM French terry and fleece bottoms for activewear programmes worldwide",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Sweatpants & Jogger Manufacturer Pakistan | OEM Fleece Bottoms | MZ Global Trading",
-    description:
-      "Pakistan OEM sweatpants and jogger manufacturer. French terry, brushed fleece, cotton-spandex. Co-ord set programmes. GOTS, OEKO-TEX certified.",
-  },
-};
+});
 
 export default function SweatpantsJoggersPage() {
   return (

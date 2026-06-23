@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BedLinenContent from "./BedLinenContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Bed Linen Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan bed linen manufacturer — bedsheets, fitted sheets, duvet covers, pillow covers, cushion covers, curtains and institutional bedding. Percale, sateen, microfiber. OEKO-TEX certified.",
+  canonical: "/hometextile/bedlinen/",
+  ogImage: "/images/og/bed-linen-og.webp",
+  ogImageAlt: "Pakistan bed linen manufacturer — bedsheets, duvet covers and fitted sheets for hotels and retailers worldwide",
   keywords: [
     "bed linen manufacturer Pakistan",
     "bedsheet manufacturer Pakistan",
@@ -18,34 +21,7 @@ export const metadata: Metadata = {
     "sateen bedding supplier Pakistan",
     "OEKO-TEX bed linen Pakistan",
   ],
-  alternates: {
-    canonical: "/hometextile/bedlinen/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/bedlinen/",
-      "x-default": "https://mzglobaltrading.com/hometextile/bedlinen/",
-    },
-  },
-  openGraph: {
-    title: "Bed Linen Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan bed linen manufacturer supplying bedsheets, fitted sheets, duvet covers, pillow covers, cushion covers, curtains and institutional bedding. Percale (200–400 TC), sateen (300–800 TC), microfiber constructions. OEKO-TEX, GOTS, BSCI certified. FOB/CIF export to USA, UK, EU, Australia, Middle East.",
-    url: "https://mzglobaltrading.com/hometextile/bedlinen/",
-    images: [
-      {
-        url: "/images/og/bed-linen-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan bed linen manufacturer — bedsheets, duvet covers and fitted sheets for hotels and retailers worldwide",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Bed Linen Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Bedsheets, fitted sheets, duvet covers, pillow covers, cushion covers and curtains from Pakistan's certified woven mills. OEKO-TEX, GOTS, BSCI. FOB/CIF export worldwide.",
-  },
-};
+});
 
 export default function BedLinenPage() {
   return (

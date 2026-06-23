@@ -149,6 +149,434 @@ const documents: DocumentCard[] = [
     description: "Every document a shipment needs and what to verify on each — commercial set, origin preferences, compliance certificates and pre-arrival actions.",
     length: "25+ check items",
   },
+  // ── Bath Linen ──────────────────────────────────────────────────────────────
+  {
+    id: 13,
+    slug: "towel-specification-sheet",
+    category: "technical",
+    kind: "Template",
+    title: "Towel Specification & Order Sheet",
+    description: "Complete specification and order template for bath towels — GSM, construction, colour, certifications, packing and logistics fields. For hotel, retail and institutional programmes.",
+    length: "8 sections",
+    popular: true,
+  },
+  {
+    id: 14,
+    slug: "institutional-towel-tech-pack",
+    category: "technical",
+    kind: "Template",
+    title: "Institutional Towel Tech Pack Template",
+    description: "Specification template for hospital, hotel and gym towel programmes — laundry performance requirements, certification compliance and packing fields for institutional buyers.",
+    length: "6 sections",
+  },
+  {
+    id: 15,
+    slug: "bathrobe-customisation-checklist",
+    category: "technical",
+    kind: "Checklist",
+    title: "Bathrobe Customisation & Order Checklist",
+    description: "Specification and customisation checklist for hotel, spa and retail bathrobe programmes — construction, collar, GSM, sizing, embroidery, packing and certification fields.",
+    length: "40+ check items",
+  },
+  {
+    id: 16,
+    slug: "bath-mat-size-weight-reference",
+    category: "technical",
+    kind: "Reference",
+    title: "Bath Mat Size & Weight Reference Chart",
+    description: "Standard sizes by market, GSM grades by application, anti-slip backing comparison, OEKO-TEX scope requirements and a specification order template for bath mat sourcing.",
+    length: "4 reference tables",
+  },
+  {
+    id: 17,
+    slug: "beach-towel-artwork-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Beach Towel Artwork Specification Template",
+    description: "Complete artwork brief and order specification for custom beach and pool towels — print technique, design brief, size, chlorine fastness requirements, certification and packing fields.",
+    length: "8 sections",
+  },
+  // ───────────────────────────────────────── Bed Linen
+  {
+    id: 18,
+    slug: "bedsheet-size-chart-international",
+    category: "technical",
+    kind: "Reference",
+    title: "International Bedsheet Size Chart (UK, US, EU, AU)",
+    description: "Finished flat bedsheet dimensions across UK, USA, EU, Middle East and Australia — all standard size-runs with hem allowance guidance. For use with RFQ submissions and Tech Packs.",
+    length: "5 market size tables",
+  },
+  {
+    id: 19,
+    slug: "fitted-sheet-measurement-template",
+    category: "technical",
+    kind: "Template",
+    title: "Fitted Sheet Measurement & Specification Template",
+    description: "Complete specification form for fitted sheet programmes — mattress depth, pocket depth, elastic type, corner construction, certification and programme volume. For hotel and institutional sourcing.",
+    length: "7 sections",
+  },
+  {
+    id: 20,
+    slug: "duvet-cover-spec-order-sheet",
+    category: "technical",
+    kind: "Template",
+    title: "Duvet Cover Specification & Order Sheet",
+    description: "Fill-in specification template for duvet cover programmes — fabric, thread count, closure type, button and zip specification, size range table, certification and logistics fields.",
+    length: "6 sections",
+  },
+  {
+    id: 21,
+    slug: "pillow-cover-size-reference",
+    category: "technical",
+    kind: "Reference",
+    title: "Pillow Cover Size Reference Chart (Standard, King, EU, Body)",
+    description: "International pillow cover finished dimensions across UK, USA, EU, Middle East and Australia — including Oxford flange sizes and ease allowance guidance by fill type.",
+    length: "6 market size tables",
+  },
+  {
+    id: 22,
+    slug: "cushion-cover-artwork-brief-template",
+    category: "technical",
+    kind: "Template",
+    title: "Cushion Cover Artwork Brief Template",
+    description: "Artwork, print and order brief for decorative cushion cover programmes — fabric, print technique, artwork specs, closure, size range table, certification and packing fields.",
+    length: "7 sections",
+  },
+  {
+    id: 23,
+    slug: "curtain-measurement-order-template",
+    category: "technical",
+    kind: "Template",
+    title: "Curtain Measurement & Order Template",
+    description: "Complete curtain specification form — fabric, blackout and lining spec, heading type, eyelet spec, drop and width table, fire retardancy and certification requirements.",
+    length: "8 sections",
+  },
+  {
+    id: 24,
+    slug: "institutional-bedding-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Institutional Bedding Specification Template",
+    description: "Complete specification form for hotel, hospital and airline bedding programmes — laundry standard, thread count, fibre blend, size range table, certification and performance test requirements.",
+    length: "8 sections",
+  },
+  {
+    id: 25,
+    slug: "kitchen-towel-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Kitchen Towel Specification Template",
+    description: "Fill-in specification template for retail and hospitality kitchen towel programmes — construction, GSM, size, print method, certification scope and packing format.",
+    length: "7 sections",
+  },
+  {
+    id: 26,
+    slug: "bar-mop-spec-reference",
+    category: "technical",
+    kind: "Reference",
+    title: "Bar Mop Specification & Weight Reference Sheet",
+    description: "GSM grades by application, standard USA and EU sizes, HACCP stripe colour coding and packing formats for commercial bar mop procurement.",
+    length: "6 tables",
+  },
+  {
+    id: 27,
+    slug: "apron-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Apron Specification Template",
+    description: "Complete specification form for foodservice, hospitality and retail apron programmes — fabric, style, pocket configuration, branding method and certification scope.",
+    length: "9 sections",
+  },
+  {
+    id: 28,
+    slug: "pot-holder-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Pot Holder Specification Template",
+    description: "Fill-in specification template for pot holder programmes — layer construction, batting material, heat performance, size, custom print and OEKO-TEX certification scope.",
+    length: "7 sections",
+  },
+  {
+    id: 29,
+    slug: "table-cover-size-reference",
+    category: "technical",
+    kind: "Reference",
+    title: "Table Cover Size Reference Chart",
+    description: "Standard sizes for round, rectangular and banquet table covers — USA, UK/EU and Middle East formats with drop calculation guide and napkin/runner sizes.",
+    length: "6 tables",
+  },
+  {
+    id: 30,
+    slug: "cellular-blanket-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Cellular Blanket Specification Template",
+    description: "Complete specification form for NHS, hospital, institutional and airline cellular blanket programmes — GSM, fibre content, wash standard, compliance and packing.",
+    length: "7 sections",
+  },
+  {
+    id: 31,
+    slug: "fleece-blanket-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Fleece Blanket Specification Template",
+    description: "Fill-in specification template for retail and institutional fleece blanket programmes — fleece type, GSM, pilling resistance, sublimation print and OEKO-TEX certification.",
+    length: "8 sections",
+  },
+  {
+    id: 32,
+    slug: "surgical-gown-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Surgical Gown Specification Template",
+    description: "Document AAMI PB70 protection level, SMS or woven fabric construction, sterilisation compatibility, size distribution and certification requirements for surgical gown orders.",
+    length: "7 sections",
+  },
+  {
+    id: 33,
+    slug: "scrubs-size-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Medical Scrubs Size & Specification Template (XS–5XL)",
+    description: "Document fabric construction, wash standard, colour programme (with Pantone references), embroidery specification and size distribution for medical scrubs procurement.",
+    length: "7 sections",
+  },
+  {
+    id: 34,
+    slug: "patient-gown-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Patient Gown Specification Template",
+    description: "Document closure type, fabric, wash standard, size range (including bariatric and paediatric) and certification requirements for patient gown orders from Pakistan.",
+    length: "6 sections",
+  },
+  {
+    id: 35,
+    slug: "huck-towel-spec-reference",
+    category: "technical",
+    kind: "Reference",
+    title: "Huck Towel Specification & Size Reference",
+    description: "Clinical GSM grades, USA and UK/EU size formats, sterilisation compatibility by method and colour specification reference for surgical huck towel procurement.",
+    length: "5 sections",
+  },
+  {
+    id: 36,
+    slug: "shop-towel-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Shop Towel Specification Template",
+    description: "Document construction, GSM, USA and EU size standards, custom print specification, packing format and certification requirements for industrial shop towel orders.",
+    length: "6 sections",
+  },
+  {
+    id: 37,
+    slug: "fender-cover-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Fender Cover Specification Template",
+    description: "Document construction, backing type, size, custom print or embroidery branding specification and packing format for fender cover orders for automotive programmes.",
+    length: "6 sections",
+  },
+  {
+    id: 38,
+    slug: "ihram-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Ihram Specification & Order Template",
+    description: "Religious compliance checklist, GSM by Hajj season, size specification (Ridaa + Izaar), hem details, packing format and Hajj season timing reference for pilgrimage supply.",
+    length: "7 sections",
+  },
+  {
+    id: 39,
+    slug: "tshirt-size-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "T-Shirt Size Spec & Measurement Template (S–5XL)",
+    description: "Fabric GSM, construction (jersey/piqué/rib), neck style, sleeve type, decoration method and size grading for custom T-shirt OEM orders from Pakistan. Covers S through 5XL with key points of measure.",
+    length: "6 sections",
+  },
+  {
+    id: 40,
+    slug: "polo-shirt-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Polo Shirt Specification Template",
+    description: "Piqué construction type, collar style and length, placket specification, button material and count, branding placement and size grading S to 5XL for polo shirt OEM orders from Pakistan.",
+    length: "6 sections",
+  },
+  {
+    id: 41,
+    slug: "henley-shirt-measurement-sheet",
+    category: "technical",
+    kind: "Template",
+    title: "Henley Shirt Measurement Sheet",
+    description: "Placket style (clean-finished/overlapping/pocket), button count and type, neckline finish, fabric GSM and size grading S to 5XL with key points of measure for Henley shirt OEM orders.",
+    length: "5 sections",
+  },
+  {
+    id: 42,
+    slug: "hoodie-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Hoodie & Sweatshirt Specification Template",
+    description: "Fleece type and GSM, hood style and lining, zip or pullover configuration, drawstring and cuff specification, decoration method and size grading XS to 5XL for hoodie OEM orders from Pakistan.",
+    length: "6 sections",
+  },
+  {
+    id: 43,
+    slug: "jogger-size-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Jogger & Sweatpant Size Specification Template",
+    description: "Fleece GSM, waistband style (elastic/drawstring/combination), cuff type, pocket configuration and size grading XS to 5XL with all key points of measure for jogger OEM orders.",
+    length: "6 sections",
+  },
+  {
+    id: 44,
+    slug: "tank-top-measurement-template",
+    category: "technical",
+    kind: "Template",
+    title: "Tank Top Measurement Template",
+    description: "Fabric type and GSM, armhole depth, strap width, neckline style, decoration method and size grading XS to 5XL with key points of measure for tank top OEM orders from Pakistan.",
+    length: "5 sections",
+  },
+  {
+    id: 45,
+    slug: "denim-jeans-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Denim Jeans Specification Template",
+    description: "Denim weight (6–14 oz), stretch content, wash type and distressing spec, fit profile, hardware details and size grading W28 to W44 for denim jeans OEM orders from Pakistan.",
+    length: "7 sections",
+  },
+  {
+    id: 46,
+    slug: "shirt-spec-grading-template",
+    category: "technical",
+    kind: "Template",
+    title: "Shirt Specification & Grading Template",
+    description: "Woven fabric construction (poplin/Oxford/twill), collar style and interlining, cuff type, placket detail, easy-iron finish and size grading neck 14\" to 19\" for formal and casual shirt orders.",
+    length: "6 sections",
+  },
+  {
+    id: 47,
+    slug: "trouser-measurement-template",
+    category: "technical",
+    kind: "Template",
+    title: "Trouser Measurement & Grading Template",
+    description: "Fabric construction (chino/stretch twill/linen), waistband style, pleat and fit selection, pocket configuration and size grading W28 to W44 for woven trouser OEM orders from Pakistan.",
+    length: "6 sections",
+  },
+  {
+    id: 48,
+    slug: "cargo-pants-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Cargo Pants Specification Template",
+    description: "Fabric type (ripstop/canvas/twill), pocket count and placement, knee pad and seat reinforcement, hardware specification and size grading W28 to W48 for cargo pants orders — fashion and workwear grade.",
+    length: "6 sections",
+  },
+  {
+    id: 49,
+    slug: "shorts-size-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Shorts Size Specification Template",
+    description: "Fabric and category (chino/linen/swim/active), inseam length, waistband style, pocket configuration and size grading XS/W28 to 5XL/W44 for shorts OEM orders from Pakistan.",
+    length: "5 sections",
+  },
+  {
+    id: 50,
+    slug: "kids-size-chart-template",
+    category: "technical",
+    kind: "Reference",
+    title: "Kids Apparel Size Chart (3M–14Y, US/EU/UK)",
+    description: "International size conversion table covering US, EU and UK sizing from 3 months to 14 years with key body measurements, mandatory safety label requirements and choking hazard compliance checklist.",
+    length: "5 sections",
+    popular: true,
+  },
+  {
+    id: 51,
+    slug: "swaddle-blanket-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Swaddle Blanket Specification Template",
+    description: "Muslin construction (single/double gauze), GSM, print method (reactive/pigment), hem finish, finished dimensions by size category, OEKO-TEX Class 1 and GOTS certification checklist for baby swaddle orders.",
+    length: "6 sections",
+  },
+  {
+    id: 52,
+    slug: "baby-overalls-size-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Baby Overalls Size & Specification Template",
+    description: "Fabric type, snap count and material, adjustable strap system, bib pocket style, size grading 0M to 5Y and OEKO-TEX Class 1 safety compliance checklist for baby overalls OEM orders.",
+    length: "6 sections",
+  },
+  {
+    id: 53,
+    slug: "baby-romper-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Baby Romper Specification Template",
+    description: "Fabric type (rib/interlock/muslin), neckline opening style, snap count and material, sleeve type, size grading newborn to 24M and OEKO-TEX Class 1 and GOTS compliance checklist for infant romper orders.",
+    length: "5 sections",
+  },
+  {
+    id: 54,
+    slug: "baby-bib-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Baby Bib Specification Template",
+    description: "Bib style (drool/feeding/bandana), absorbency layer construction, closure type (snap/velcro/tie), print specification, finished dimensions and OEKO-TEX Class 1 and GOTS certification checklist.",
+    length: "6 sections",
+  },
+  {
+    id: 55,
+    slug: "baby-hooded-towel-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Baby Hooded Towel Specification Template",
+    description: "Terry GSM, hood style (triangle/animal ear/peaked), embroidery placement, border construction, finished dimensions 70×70 cm to 100×100 cm and OEKO-TEX Class 1 compliance checklist for baby hooded towel orders.",
+    length: "6 sections",
+  },
+  {
+    id: 56,
+    slug: "workwear-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Workwear Specification Template",
+    description: "Workwear category and application, fabric standard (hi-vis/FR/general duty), reflective tape specification, pocket configuration, size grading XS to 5XL and EN ISO certification documentation checklist.",
+    length: "7 sections",
+  },
+  {
+    id: 57,
+    slug: "socks-spec-template",
+    category: "technical",
+    kind: "Template",
+    title: "Socks Specification & Size Template",
+    description: "Sock style and category, fibre blend ratios, knit gauge, cushioning zone, toe closure, compression class (if applicable), jacquard pattern and colour count, international size reference and packing specification.",
+    length: "7 sections",
+  },
+  {
+    id: 58,
+    slug: "apparel-fabric-reference-sheet",
+    category: "technical",
+    kind: "Reference",
+    title: "Apparel Fabric Reference Sheet: Common Types, GSM & Uses",
+    description: "Quick reference covering 18 common apparel fabric types — knitted and woven — with GSM ranges, fibre options, primary end use and certification compatibility. For buyers sourcing garments from Pakistan.",
+    length: "4 reference tables",
+    popular: true,
+  },
+  {
+    id: 59,
+    slug: "home-textile-fabric-reference",
+    category: "technical",
+    kind: "Reference",
+    title: "Home Textile Fabric Reference Sheet",
+    description: "Quick reference covering terry, percale, sateen, muslin and woven home textile fabrics — construction, GSM, thread count, end use and OEKO-TEX/GOTS certification compatibility. For bath, bed, kitchen and table linen buyers.",
+    length: "5 reference tables",
+  },
 ];
 
 const kindStyles: Record<DocKind, { pill: string; icon: string }> = {
@@ -191,10 +619,14 @@ function KindIcon({ kind, className }: { kind: DocKind; className?: string }) {
 
 export default function DownloadsContent() {
   const [activeCategory, setActiveCategory] = useState<DocCategory>("all");
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const filtered = documents.filter(
-    (d) => activeCategory === "all" || d.category === activeCategory
-  );
+  const filtered = documents.filter((d) => {
+    const matchesCat = activeCategory === "all" || d.category === activeCategory;
+    const q = searchTerm.toLowerCase();
+    const matchesSearch = !q || d.title.toLowerCase().includes(q) || d.description.toLowerCase().includes(q);
+    return matchesCat && matchesSearch;
+  });
 
   const popularDocs = documents.filter((d) => d.popular);
 
@@ -213,7 +645,7 @@ export default function DownloadsContent() {
         title="Document"
         titleGold="Library"
         description="Inspection checklists, Tech Pack templates, AQL tables and trade references — read online, then print or save any document as a branded PDF."
-        pills={["12 Documents", "4 Categories", "Print or Save as PDF"]}
+        pills={["59 Documents", "4 Categories", "Print or Save as PDF"]}
       />
 
       {/* ── Intro ─────────────────────────────────────────────────────────────── */}
@@ -253,7 +685,7 @@ export default function DownloadsContent() {
               className="grid grid-cols-3 gap-3"
             >
               {[
-                { num: "12", label: "Documents", sub: "Across 4 categories" },
+                { num: "59", label: "Documents", sub: "Across 4 categories" },
                 { num: "0", label: "Wait Time", sub: "Read instantly online" },
                 { num: "PDF", label: "Print Ready", sub: "Branded & watermarked" },
               ].map((s) => (
@@ -308,34 +740,54 @@ export default function DownloadsContent() {
       <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          {/* Category filter */}
+          {/* Search + category filter */}
           <motion.div
             variants={fadeUpVariants}
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
-            className="mb-10 flex flex-wrap gap-2"
-            role="group"
-            aria-label="Filter documents by category"
+            className="mb-10 flex flex-col gap-3"
           >
-            {docCategories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${
-                  activeCategory === cat.id
-                    ? "bg-navy-900 text-white shadow-xs"
-                    : "bg-white text-gray-600 border border-gray-200 hover:border-navy-900 hover:text-navy-900"
-                }`}
-              >
-                {cat.label}
-                <span className={`ml-2 text-xs ${activeCategory === cat.id ? "text-gold" : "text-gray-400"}`}>
-                  {cat.id === "all"
-                    ? documents.length
-                    : documents.filter((d) => d.category === cat.id).length}
-                </span>
-              </button>
-            ))}
+            {/* Search input */}
+            <div className="w-full lg:w-96">
+              <label htmlFor="doc-search" className="sr-only">Search documents</label>
+              <div className="relative">
+                <svg className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input
+                  id="doc-search"
+                  type="search"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  placeholder="Search checklists, templates, references..."
+                  className="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-full text-sm text-navy-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-all"
+                />
+              </div>
+            </div>
+            {/* Category pills — horizontal scroll on mobile, wraps on desktop */}
+            <div className="-mx-4 sm:-mx-6 lg:mx-0 overflow-x-auto">
+              <div className="flex gap-2 px-4 sm:px-6 lg:px-0 pb-1 flex-nowrap lg:flex-wrap" role="group" aria-label="Filter documents by category">
+                {docCategories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => setActiveCategory(cat.id)}
+                    className={`whitespace-nowrap shrink-0 px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${
+                      activeCategory === cat.id
+                        ? "bg-navy-900 text-white shadow-xs"
+                        : "bg-white text-gray-600 border border-gray-200 hover:border-navy-900 hover:text-navy-900"
+                    }`}
+                  >
+                    {cat.label}
+                    <span className={`ml-2 text-xs ${activeCategory === cat.id ? "text-gold" : "text-gray-400"}`}>
+                      {cat.id === "all"
+                        ? documents.length
+                        : documents.filter((d) => d.category === cat.id).length}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
           </motion.div>
 
           {/* Cards grid */}
@@ -401,6 +853,12 @@ export default function DownloadsContent() {
               ))}
             </AnimatePresence>
           </motion.div>
+
+          {filtered.length === 0 && (
+            <div className="border border-dashed border-gray-200 rounded-2xl px-6 py-12 text-center">
+              <p className="text-gray-400 text-sm">No document matches — try a different search or category.</p>
+            </div>
+          )}
         </div>
       </section>
 

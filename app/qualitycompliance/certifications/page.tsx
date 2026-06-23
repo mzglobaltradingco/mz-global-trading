@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import CertificationsContent from "./CertificationsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Certifications | Quality & Compliance | MZ Global Trading",
   description:
     "MZ Global Trading's factory network holds GOTS, OEKO-TEX, BSCI, ISO 9001, Sedex, GRS, WRAP, BCI, SA8000 and Bluesign certifications for global buyers.",
+  canonical: "/qualitycompliance/certifications/",
+  ogImage: "/images/og/certifications-og.webp",
+  ogImageAlt: "Certified textile factory certifications — GOTS, OEKO-TEX, BSCI and more",
   keywords: [
     "GOTS certified textile manufacturer Pakistan",
     "OEKO-TEX certified fabric supplier",
@@ -16,35 +19,7 @@ export const metadata: Metadata = {
     "SA8000 garment manufacturer",
     "certified textile sourcing Pakistan",
   ],
-  alternates: {
-    canonical: "/qualitycompliance/certifications/",
-    languages: {
-      en: "https://mzglobaltrading.com/qualitycompliance/certifications/",
-      "x-default": "https://mzglobaltrading.com/",
-    },
-  },
-  openGraph: {
-    title: "Certifications | Quality & Compliance | MZ Global Trading",
-    description:
-      "GOTS, OEKO-TEX, BSCI, ISO 9001, Sedex, GRS, WRAP, BCI, SA8000 and Bluesign — certified factory network for international textile buyers in USA, UK and Europe.",
-    url: "https://mzglobaltrading.com/qualitycompliance/certifications/",
-    images: [
-      {
-        url: "/images/og/certifications-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Certified textile factory certifications — GOTS, OEKO-TEX, BSCI and more",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Certifications | Quality & Compliance | MZ Global Trading",
-    description:
-      "10+ international certifications including GOTS, OEKO-TEX, BSCI, ISO 9001 and SA8000 — available across our Pakistan factory network.",
-  },
-};
+});
 
 const pageSchema = {
   "@context": "https://schema.org",

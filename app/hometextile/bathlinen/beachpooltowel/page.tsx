@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BeachTowelsContent from "./BeachTowelsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Beach & Pool Towel Manufacturer Pakistan | MZ Global Trading",
   description:
     "Source OEM beach and pool towels from Pakistan — velour, fouta, microfiber, 350–500 GSM. Sublimation all-over print. GOTS, OEKO-TEX certified.",
+  canonical: "/hometextile/bathlinen/beachpooltowel/",
+  ogImage: "/images/og/beach-pool-towels-og.webp",
+  ogImageAlt: "Pakistan beach towel manufacturer — OEM velour and sublimation print pool towels for resorts and retailers worldwide",
   keywords: [
     "beach towel manufacturer Pakistan",
     "pool towel OEM Pakistan",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "beach towel export Pakistan",
     "OEM beach towel factory Pakistan",
   ],
-  alternates: {
-    canonical: "/hometextile/bathlinen/beachpooltowel/",
-    languages: {
-      "en": "https://mzglobaltrading.com/hometextile/bathlinen/beachpooltowel/",
-      "x-default": "https://mzglobaltrading.com/hometextile/bathlinen/beachpooltowel/",
-    },
-  },
-  openGraph: {
-    title: "Beach Towel Manufacturer Pakistan | OEM Pool Towels Wholesale | MZ Global Trading",
-    description:
-      "Pakistan OEM beach and pool towel manufacturer. Velour, fouta, microfiber, 350–500 GSM. Sublimation all-over print. Resort, retail and corporate programmes worldwide.",
-    url: "https://mzglobaltrading.com/hometextile/bathlinen/beachpooltowel/",
-    images: [
-      {
-        url: "/images/og/beach-pool-towels-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan beach towel manufacturer — OEM velour and sublimation print pool towels for resorts and retailers worldwide",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Beach Towel Manufacturer Pakistan | OEM Pool Towels Wholesale | MZ Global Trading",
-    description:
-      "Pakistan OEM beach and pool towel manufacturer. Velour, fouta, microfiber. Sublimation print. Resort, retail and corporate programmes worldwide.",
-  },
-};
+});
 
 export default function BeachPoolTowelPage() {
   const jsonLd = {

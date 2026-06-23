@@ -735,26 +735,26 @@ export default function HoodiesContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Link href="/knowledge/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link href="/knowledge/fleece-fabric-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📚</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
-              <p className="font-semibold text-navy-900">Sweatshirt &amp; Hoodie Buying Guide</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Fleece construction guide, GSM selection and market positioning for international buyers.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Explore Hub →</span>
+              <p className="font-semibold text-navy-900">Fleece Fabric Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Polar, French terry and brushed fleece — GSM, fibre and construction guide for buyers.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
             </Link>
-            <Link href="/guides/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link href="/guides/hoodie-sweatshirt-sourcing-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📄</span>
-              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Guides</p>
-              <p className="font-semibold text-navy-900">Pakistan Fleece Knitwear Export Guide</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Sourcing process, lead times, certification requirements and factory audit overview.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guides →</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
+              <p className="font-semibold text-navy-900">Hoodie &amp; Sweatshirt Sourcing Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">GSM, lining, custom print options and certification for international buyers.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guide →</span>
             </Link>
-            <Link href="/downloads/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link href="/downloads/hoodie-spec-template/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">⬇️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
-              <p className="font-semibold text-navy-900">Fleece Spec Sheets &amp; Size Charts</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Construction spec sheets, standard size charts and certification documentation.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Downloads →</span>
+              <p className="font-semibold text-navy-900">Hoodie &amp; Sweatshirt Spec Template</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Fill-in specification covering construction, GSM, pockets, lining and certifications.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Template →</span>
             </Link>
             <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">✉️</span>

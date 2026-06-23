@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BabyHoodedTowelsContent from "./BabyHoodedTowelsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Baby Hooded Towels Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan OEM baby hooded towels — GOTS organic and OEKO-TEX Class 1 certified terry and velour. Animal hood styles, custom embroidery. Newborn to kids 4Y.",
+  canonical: "/apparel/babyandkids/babyhoodedtowels/",
+  ogImage: "/images/og/baby-hooded-towels-og.webp",
+  ogImageAlt: "Pakistan baby hooded towels manufacturer — OEM organic cotton terry hooded bath towels for USA, UK and Europe",
   keywords: [
     "baby hooded towels manufacturer Pakistan",
     "infant hooded bath towels OEM",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "animal hooded towel OEM export",
     "newborn hooded towel bulk order",
   ],
-  alternates: {
-    canonical: "/apparel/babyandkids/babyhoodedtowels/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/babyandkids/babyhoodedtowels/",
-      "x-default": "https://mzglobaltrading.com/apparel/babyandkids/babyhoodedtowels/",
-    },
-  },
-  openGraph: {
-    title: "Baby Hooded Towels Manufacturer Pakistan | OEM Infant Bath Towels | MZ Global Trading",
-    description:
-      "Pakistan OEM baby hooded towels — GOTS organic terry and velour. Animal hood styles, custom embroidery. Newborn to 4Y. Bulk sourcing for USA, UK and Europe.",
-    url: "https://mzglobaltrading.com/apparel/babyandkids/babyhoodedtowels/",
-    images: [
-      {
-        url: "/images/og/baby-hooded-towels-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan baby hooded towels manufacturer — OEM organic cotton terry hooded bath towels for USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Baby Hooded Towels Manufacturer Pakistan | OEM Infant Bath Towels | MZ Global Trading",
-    description:
-      "Pakistan OEM baby hooded towels — organic terry and velour, animal hoods. Bulk for USA, UK and Europe.",
-  },
-};
+});
 
 export default function BabyHoodedTowelsPage() {
   const jsonLd = {

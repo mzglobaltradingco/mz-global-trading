@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import WovenGarmentsContent from "./WovenGarmentsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Woven Garments Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan woven garment manufacturer — denim jeans, formal shirts, trousers, cargo pants and shorts. Denim, twill, poplin, canvas constructions. GOTS, OEKO-TEX. FOB/CIF export.",
+  canonical: "/apparel/wovengarments/",
+  ogImage: "/images/og/woven-garments-og.webp",
+  ogImageAlt: "Pakistan woven garments manufacturer — denim jeans, shirts and trousers OEM supplier for international brands",
   keywords: [
     "woven garments manufacturer Pakistan",
     "denim jeans manufacturer Pakistan",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "OEM woven garments Pakistan",
     "BSCI certified woven garments",
   ],
-  alternates: {
-    canonical: "/apparel/wovengarments/",
-    languages: {
-      en: "https://mzglobaltrading.com/apparel/wovengarments/",
-      "x-default": "https://mzglobaltrading.com/apparel/wovengarments/",
-    },
-  },
-  openGraph: {
-    title: "Woven Garments Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan woven garment manufacturer — denim jeans, formal & casual shirts, pants & trousers, cargo pants and shorts. Denim, twill, poplin, canvas, Oxford weave. GOTS, OEKO-TEX, BSCI certified. FOB/CIF export to USA, UK, EU, Middle East.",
-    url: "https://mzglobaltrading.com/apparel/wovengarments/",
-    images: [
-      {
-        url: "/images/og/woven-garments-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan woven garments manufacturer — denim jeans, shirts and trousers OEM supplier for international brands",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Woven Garments Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Denim jeans, formal shirts, trousers, cargo pants and shorts from Pakistan's certified woven garment factories. GOTS, OEKO-TEX, BSCI. FOB/CIF worldwide.",
-  },
-};
+});
 
 export default function WovenGarmentsPage() {
   return (

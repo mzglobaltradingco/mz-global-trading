@@ -791,11 +791,11 @@ public/
 
 ## Known Pending Items
 
-- **hreflang tags:** Add `<link rel="alternate" hreflang="en">` and `hreflang="x-default"` to `app/layout.tsx`
+- **hreflang tags:** ✅ DONE — `buildMetadata()` in `lib/metadata.ts` auto-generates `en` + `x-default` on all 82 static pages. Dynamic pages (`/guides/[slug]`, `/knowledge/[slug]`, `/downloads/[slug]`) use `generateMetadata()` which also include hreflang.
 - **Missing menu images:** Doctor Surgical Gowns, Shop Towels — awaiting user-supplied WebP files
 - **Google Search Console:** After launch, set preferred country to USA
 - **Sitemap update:** `public/sitemap.xml` needs to be regenerated to include all 128 URLs including dynamic guide, knowledge, and download pages
-- **Next.js upgrade:** Upgrade to v16 at ~v16.5+ (est. late 2026) — skip v15
+- **Next.js upgrade:** Upgrade to v17 when it stabilises (est. 2027) — v16 is current stable
 
 ---
 
@@ -1064,3 +1064,484 @@ Other
 ```
 
 Section numbers shift from old 5-step: contact = [1], product+specs = [2], logistics = [3], notes = [4] if present.
+
+---
+
+## Content Creation Standards — Core Objective (Always Apply)
+
+**Primary objective:** Every piece of content (KH article, Guide, Download) must deliver two things simultaneously:
+1. **Excellent international SEO** — target procurement managers, import directors and brand owners in USA, Canada, UK, Europe (all), South America, Middle East, Southeast Asia, Australia, East Asia, Russia/CIS. Front-load primary keywords. Use keyword-rich internal anchor text.
+2. **Real business value to the reader** — the content must genuinely help a buyer make a sourcing decision. No filler. No vague claims. Facts, specifications, tables, comparisons, and actionable guidance.
+
+**Internal linking rules (SEO):**
+- Every KH article links to: (a) its product page with exact-match anchor text, (b) related product pages, (c) `/rfq/` with "Request a Quote" CTA at the end
+- Every Guide links to: its product page, related guides, and `/rfq/`
+- Every Download links to: its product page and `/rfq/`
+- Anchor text must use SEO keywords — NEVER "click here", "read more", "this page"
+- Link text examples: "Pakistan bath towel manufacturer", "source towels from Pakistan", "hotel towel specification"
+
+**Certification mentions:** Always mention which certifications apply to the product's target markets (OEKO-TEX for EU/UK/USA retail; GOTS for organic claims; BSCI/Sedex/WRAP for social compliance; ISO 9001 universally)
+
+**Copy tone:** Professional, direct, B2B. Reader is a procurement manager with 10+ years experience. No consumer-friendly simplification. Specific numbers, not vague claims.
+
+---
+
+## Content Build Pillars — Rules & Pre-Write Checklist
+
+Every KH article, Guide, and Download must deliver two things simultaneously: (1) excellent international SEO targeting procurement managers in USA, Canada, UK, Europe, South America, Middle East, SE Asia, Australia, East Asia, Russia/CIS; and (2) real business value — facts, specifications, tables, comparisons, and actionable guidance a buyer can act on.
+
+### The Three Content Types
+
+| Type | Location | SEO link syntax | Auto-discovered? |
+|---|---|---|---|
+| KH Article | `content/knowledge/[slug].ts` | `[anchor text](/url/)` markdown | ✅ Yes — `getAllPosts()` finds all `.ts` files |
+| Guide | `lib/guides-content.ts` — add to `GUIDES` array | `<a href="/url/">anchor text</a>` HTML in `{ type: "p" }` blocks | ❌ No — must add card to `GuidesContent.tsx` hardcoded array |
+| Download | `lib/downloads-content.ts` — add to `DOWNLOAD_DOCS` array | n/a (no inline links in downloads) | ❌ No — must add card to `DownloadsContent.tsx` hardcoded array |
+
+### Inline Link Rules — Non-Negotiable
+
+**KH articles** use markdown syntax: `[anchor text](/url/)`
+- Links must appear throughout the body — in every major section (h3 subsection, bullet explanations, table footnotes, closing paragraph)
+- Minimum 3–5 inline links per article body, spread across sections — NOT just in the intro and outro
+- Every article must link to: (a) its product page, (b) 2+ related product pages, (c) `/rfq/`
+- Use SEO keyword anchor text — never "click here", "read more", "this page"
+
+**Guides** use raw HTML syntax in `{ type: "p", text: "..." }` blocks:
+- `{ type: "p", text: "...text with <a href=\"/url/\">SEO anchor text</a> more text..." }`
+- The guide renderer uses `dangerouslySetInnerHTML` on `"p"` blocks — this is safe because all content is hardcoded in TypeScript, never user-supplied
+- Links must appear throughout the body — in every step, sub-section or specification paragraph
+- Minimum 3–5 inline links per guide body section, spread across sections — NOT just in the intro and outro
+- Every guide must also end with a `{ type: "seealso", ... }` block listing 4–6 related product pages and guides
+- Every guide must link to: its product page, 2+ related product pages, and `/rfq/`
+
+**Downloads** do NOT have inline HTML links — they are fill-in templates and reference sheets. No links required in blocks.
+
+### Pre-Write Checklist — Run BEFORE Writing Any Content
+
+Before writing a KH article, Guide, or Download for a product, verify:
+
+1. **KH listing** — `app/knowledge/KnowledgeHubContent.tsx` is dynamic (uses `getAllPosts()`) — no action needed; new files auto-appear
+2. **Guides listing** — `app/guides/GuidesContent.tsx` is hardcoded. You MUST:
+   - Add the guide card object to the `guides[]` array in this file
+   - Add the correct `catId` — use an existing category or add a new one to both the `type` union and `guideCategories[]` array
+   - Update the hero `description`, `pills`, stats bar `val`, and h2 heading to reflect the new count
+   - Remove any "upcoming" mention of this guide from the "More coming" section
+3. **Downloads listing** — `app/downloads/DownloadsContent.tsx` is hardcoded. You MUST:
+   - Add the download card object to the `documents[]` array in this file
+   - Update hero `pills` (`"N Documents"`) and stats box `num` value to reflect the new count
+4. **Bento on product page** — after all 3 content pieces are created, update the product page's `*Content.tsx` bento grid from generic links (`/knowledge/`, `/guides/`, `/downloads/`) to specific slug links with real titles
+5. **Verify build passes** — `npm run build` must complete with zero errors before marking any cluster done
+
+### Content Piece Template Reminders
+
+- **KH date**: stagger — no two articles in the same batch share the same date
+- **Guide `seealso` block**: always the last block; lists 4–6 related product pages + related guides
+- **4-box bento** on product page: KH (white) · Guide (white) · Download (white) · RFQ (navy). All 4 boxes required. Template in Bento Standard Template section above.
+
+---
+
+## Content Build Plan — Knowledge Hub, Guides & Downloads Per Product
+
+**Goal:** Every product leaf page gets 1 KH article + 1 Guide + 1 Download with specific, SEO-optimised content. After creating all three pieces, update the bento grid on the product page to show real titles and direct slug links instead of generic `/knowledge/`, `/guides/`, `/downloads/`.
+
+**Status key:** ⬜ Not started · 🔄 In progress · ✅ Complete
+
+### Rules for every content piece
+1. KH articles go in `content/knowledge/[slug].ts` — add slug to `content/knowledge/` (auto-discovered)
+2. Guides go in `lib/guides-content.ts` — add entry to the `GUIDES` array
+3. Downloads go in `lib/downloads-content.ts` — add entry to the `DOWNLOADS` array
+4. After all 3 pieces created for a product → update that product's `*Content.tsx` bento grid with specific titles and slugs
+5. Each content piece must internally link back to its product page AND to 2+ related product pages using SEO keywords as anchor text
+6. **KH articles**: links use `[keyword text](url)` markdown syntax — `renderMarkdown()` in `lib/knowledge.ts` handles it
+7. **Guides**: links use raw HTML `<a href="...">keyword anchor</a>` directly in `{ type: "p", text: "..." }` blocks — the guide renderer uses `dangerouslySetInnerHTML` on `"p"` blocks (safe: all content hardcoded in TS)
+8. **Each guide must also end with a `{ type: "seealso", ... }` block** listing 4–6 related product pages and guides
+9. Keyword strategy: content piece targets long-tail variants of the product page's primary keyword
+10. Dates: stagger over 18 months — no two KH articles or guides in same batch should share a date
+
+### Bento Standard Template — ALL 4 BOXES REQUIRED
+Every product page must have exactly 4 resource boxes in the RESOURCES section. Standard class: `grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5`.
+```tsx
+{/* Box 1 — Knowledge Hub (white card) */}
+<Link href="/knowledge/[slug]/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+  <span className="text-2xl" aria-hidden="true">📚</span>
+  <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
+  <p className="font-semibold text-navy-900">Article Title</p>
+  <p className="text-xs text-gray-500 leading-relaxed">Short description.</p>
+  <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
+</Link>
+{/* Box 2 — Guide (white card) */}
+<Link href="/guides/[slug]/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+  <span className="text-2xl" aria-hidden="true">📄</span>
+  <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
+  ...
+</Link>
+{/* Box 3 — Download (white card) */}
+<Link href="/downloads/[slug]/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+  <span className="text-2xl" aria-hidden="true">⬇️</span>
+  <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
+  ...
+</Link>
+{/* Box 4 — RFQ (navy background) */}
+<Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+  <span className="text-2xl" aria-hidden="true">✉️</span>
+  <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
+  <p className="font-semibold text-white">Ready to Source [Product]?</p>
+  <p className="text-xs text-gray-300 leading-relaxed">...</p>
+  <span className="text-xs font-semibold text-gold group-hover:text-yellow-300 transition-colors mt-auto">Request a Quote →</span>
+</Link>
+```
+Pages without specific content yet: KH box links to `/knowledge/`, Guide to `/guides/`, Download to `/downloads/`.
+
+---
+
+### CLUSTER 1 — Bath Linen (`/hometextile/bathlinen/`) ✅ COMPLETE
+
+#### Towels (`/hometextile/bathlinen/towels/`)
+- ✅ KH article: `terry-towel-gsm-guide` (date: 2025-11-20)
+- ✅ Guide: `how-to-source-towels-pakistan` (date: 2025-12-10)
+- ✅ Download: `towel-specification-sheet`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+#### Institutional Towels (`/hometextile/bathlinen/institutionaltowels/`)
+- ✅ KH article: `institutional-towel-standards` (date: 2026-01-14)
+- ✅ Guide: `bulk-institutional-towel-sourcing` (date: 2026-01-28)
+- ✅ Download: `institutional-towel-tech-pack`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+#### Bathrobes (`/hometextile/bathlinen/bathrobes/`)
+- ✅ KH article: `bathrobe-fabric-types` (date: 2026-02-18)
+- ✅ Guide: `hotel-bathrobe-sourcing-guide` (date: 2026-03-04)
+- ✅ Download: `bathrobe-customisation-checklist`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+#### Bath Mats (`/hometextile/bathlinen/bathmats/`)
+- ✅ KH article: `bath-mat-construction-guide` (date: 2026-03-25)
+- ✅ Guide: `sourcing-bath-mats-pakistan` (date: 2026-04-15)
+- ✅ Download: `bath-mat-size-weight-reference`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+#### Beach & Pool Towels (`/hometextile/bathlinen/beachpooltowel/`)
+- ✅ KH article: `beach-towel-print-techniques` (date: 2026-05-06)
+- ✅ Guide: `beach-pool-towel-sourcing-guide` (date: 2026-05-22)
+- ✅ Download: `beach-towel-artwork-spec-template`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+---
+
+### CLUSTER 2 — Bed Linen (`/hometextile/bedlinen/`) ✅ COMPLETE
+
+#### Bedsheets (`/hometextile/bedlinen/bedsheets/`)
+- ✅ KH article: `bedsheet-thread-count-guide` (date: 2025-10-08)
+- ✅ Guide: `sourcing-bedsheets-pakistan` (date: 2025-10-20)
+- ✅ Download: `bedsheet-size-chart-international`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+#### Fitted Sheets (`/hometextile/bedlinen/fittedsheets/`)
+- ✅ KH article: `fitted-sheet-pocket-depth-guide` (date: 2025-11-03)
+- ✅ Guide: `hotel-fitted-sheet-sourcing` (date: 2025-11-18)
+- ✅ Download: `fitted-sheet-measurement-template`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+#### Duvet Covers (`/hometextile/bedlinen/duvetcovers/`)
+- ✅ KH article: `duvet-cover-closure-types` (date: 2025-12-02)
+- ✅ Guide: `sourcing-duvet-covers-pakistan` (date: 2025-12-15)
+- ✅ Download: `duvet-cover-spec-order-sheet`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+#### Pillow Covers (`/hometextile/bedlinen/pillowcovers/`)
+- ✅ KH article: `pillow-cover-fabric-guide` (date: 2026-01-07)
+- ✅ Guide: `custom-pillow-cover-sourcing` (date: 2026-01-15)
+- ✅ Download: `pillow-cover-size-reference`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+#### Cushion Covers (`/hometextile/bedlinen/cushioncovers/`)
+- ✅ KH article: `cushion-cover-filling-guide` (date: 2026-02-03)
+- ✅ Guide: `decorative-cushion-cover-sourcing` (date: 2026-02-17)
+- ✅ Download: `cushion-cover-artwork-brief-template`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+#### Curtains (`/hometextile/bedlinen/curtains/`)
+- ✅ KH article: `curtain-fabric-guide` (date: 2026-03-04)
+- ✅ Guide: `sourcing-curtains-pakistan` (date: 2026-03-17)
+- ✅ Download: `curtain-measurement-order-template`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+---
+
+### CLUSTER 3 — Knitted Garments (`/apparel/knittedgarments/`)
+
+#### T-Shirts (`/apparel/knittedgarments/tshirts/`)
+- ⬜ KH article: slug `tshirt-fabric-weight-guide` — "T-Shirt Fabric Weight Guide: 130gsm to 280gsm for Fashion, Workwear & Promo"
+- ⬜ Guide: slug `custom-tshirt-sourcing-pakistan` — "Custom T-Shirt Sourcing from Pakistan: Fabric, Fit & Decoration Options"
+- ⬜ Download: slug `tshirt-size-spec-template` — "T-Shirt Size Spec & Measurement Template (S–5XL)"
+- ⬜ Bento update on `app/apparel/knittedgarments/tshirts/TshirtsContent.tsx`
+
+#### Polo Shirts (`/apparel/knittedgarments/poloshirts/`)
+- ⬜ KH article: slug `polo-shirt-pique-guide` — "Polo Shirt Piqué Fabric Guide: Single, Double & Waffle Weaves for B2B Buyers"
+- ⬜ Guide: slug `polo-shirt-sourcing-pakistan` — "Polo Shirt Sourcing from Pakistan: Collar Types, Placket Options & Branding"
+- ⬜ Download: slug `polo-shirt-spec-template` — "Polo Shirt Specification Template"
+- ⬜ Bento update on `app/apparel/knittedgarments/poloshirts/PoloShirtsContent.tsx`
+
+#### Henley Shirts (`/apparel/knittedgarments/henleyshirts/`)
+- ⬜ KH article: slug `henley-shirt-construction-guide` — "Henley Shirt Construction Guide: Placket Styles, Fabric & Button Options"
+- ⬜ Guide: slug `sourcing-henley-shirts-pakistan` — "Sourcing Henley Shirts from Pakistan: OEM, Seasonal Collections & Lead Times"
+- ⬜ Download: slug `henley-shirt-measurement-sheet` — "Henley Shirt Measurement Sheet"
+- ⬜ Bento update on `app/apparel/knittedgarments/henleyshirts/HenleyShirtsContent.tsx`
+
+#### Sweatshirts & Hoodies (`/apparel/knittedgarments/sweatshirtshoodies/`)
+- ⬜ KH article: slug `fleece-fabric-guide` — "Fleece Fabric Guide: Polar, French Terry & Brushed Fleece for Buyers"
+- ⬜ Guide: slug `hoodie-sweatshirt-sourcing-pakistan` — "Hoodie & Sweatshirt Sourcing from Pakistan: GSM, Lining & Custom Print Options"
+- ⬜ Download: slug `hoodie-spec-template` — "Hoodie & Sweatshirt Specification Template"
+- ⬜ Bento update on `app/apparel/knittedgarments/sweatshirtshoodies/SweatshirtsHoodiesContent.tsx`
+
+#### Sweatpants & Joggers (`/apparel/knittedgarments/sweatpantsjoggers/`)
+- ⬜ KH article: slug `jogger-waistband-guide` — "Jogger & Sweatpant Waistband Guide: Drawstring, Elastic & Rib Trim Options"
+- ⬜ Guide: slug `sourcing-joggers-sweatpants-pakistan` — "Sourcing Joggers & Sweatpants from Pakistan: Fabric, Fit & OEM Options"
+- ⬜ Download: slug `jogger-size-spec-template` — "Jogger & Sweatpant Size Specification Template"
+- ⬜ Bento update on `app/apparel/knittedgarments/sweatpantsjoggers/SweatpantsJoggersContent.tsx`
+
+#### Tank Tops (`/apparel/knittedgarments/tanktops/`)
+- ⬜ KH article: slug `tank-top-fabric-guide` — "Tank Top Fabric Guide: Cotton Jersey, Rib & Performance Fabrics for B2B"
+- ⬜ Guide: slug `tank-top-sourcing-pakistan` — "Sourcing Tank Tops from Pakistan: Fabric Options, Sizing & Custom Branding"
+- ⬜ Download: slug `tank-top-measurement-template` — "Tank Top Measurement Template"
+- ⬜ Bento update on `app/apparel/knittedgarments/tanktops/TankTopsContent.tsx`
+
+---
+
+### CLUSTER 4 — Woven Garments (`/apparel/woven/`)
+
+#### Denim Jeans (`/apparel/woven/denimjeans/`)
+- ⬜ KH article: slug `denim-weight-guide` — "Denim Weight Guide: 6oz to 14oz — What Buyers Need to Know"
+- ⬜ Guide: slug `sourcing-denim-jeans-pakistan` — "Sourcing Denim Jeans from Pakistan: Wash Types, Fits & Certification"
+- ⬜ Download: slug `denim-jeans-spec-template` — "Denim Jeans Specification Template"
+- ⬜ Bento update on `app/apparel/woven/denimjeans/DenimJeansContent.tsx`
+
+#### Formal & Casual Shirts (`/apparel/woven/formalcasualshirts/`)
+- ⬜ KH article: slug `dress-shirt-fabric-guide` — "Dress Shirt Fabric Guide: Poplin, Oxford, Twill & End-on-End for B2B"
+- ⬜ Guide: slug `formal-casual-shirt-sourcing-pakistan` — "Formal & Casual Shirt Sourcing from Pakistan: Collar Styles, Fabric & MOQ"
+- ⬜ Download: slug `shirt-spec-grading-template` — "Shirt Specification & Grading Template"
+- ⬜ Bento update on `app/apparel/woven/formalcasualshirts/FormalCasualShirtsContent.tsx`
+
+#### Pants & Trousers (`/apparel/woven/pantstrousers/`)
+- ⬜ KH article: slug `trouser-fabric-guide` — "Trouser Fabric Guide: Chino, Twill, Stretch & Linen for International Buyers"
+- ⬜ Guide: slug `pants-trousers-sourcing-pakistan` — "Pants & Trousers Sourcing from Pakistan: Fabric, Fit & Construction"
+- ⬜ Download: slug `trouser-measurement-template` — "Trouser Measurement & Grading Template"
+- ⬜ Bento update on `app/apparel/woven/pantstrousers/PantsTrousersContent.tsx`
+
+#### Cargo Pants (`/apparel/woven/cargopants/`)
+- ⬜ KH article: slug `cargo-pants-construction-guide` — "Cargo Pants Construction Guide: Pocket Placement, Fabric & Durability Standards"
+- ⬜ Guide: slug `sourcing-cargo-pants-pakistan` — "Sourcing Cargo Pants from Pakistan: Workwear Grade, Fabric & Custom Options"
+- ⬜ Download: slug `cargo-pants-spec-template` — "Cargo Pants Specification Template"
+- ⬜ Bento update on `app/apparel/woven/cargopants/CargoPantsContent.tsx`
+
+#### Shorts (`/apparel/woven/shorts/`)
+- ⬜ KH article: slug `shorts-fabric-guide` — "Shorts Fabric Guide: Chino, Linen, Swim & Active for B2B Buyers"
+- ⬜ Guide: slug `sourcing-shorts-pakistan` — "Sourcing Shorts from Pakistan: Inseam Lengths, Fabric & Custom Branding"
+- ⬜ Download: slug `shorts-size-spec-template` — "Shorts Size Specification Template"
+- ⬜ Bento update on `app/apparel/woven/shorts/ShortsContent.tsx`
+
+---
+
+### CLUSTER 5 — Baby & Kids (`/apparel/babyandkids/`)
+
+#### T-Shirts for Kids (`/apparel/babyandkids/kidsshirts/`)
+- ⬜ KH article: slug `kids-apparel-safety-standards` — "Kids Apparel Safety Standards: GOTS, OEKO-TEX & Age-Appropriate Requirements"
+- ⬜ Guide: slug `kids-tshirt-sourcing-pakistan` — "Kids T-Shirt Sourcing from Pakistan: Fabric Safety, Sizing & Compliance"
+- ⬜ Download: slug `kids-size-chart-template` — "Kids Apparel Size Chart (3M–14Y, US/EU/UK)"
+- ⬜ Bento update on `app/apparel/babyandkids/kidsshirts/KidsShirtsContent.tsx`
+
+#### Swaddle Muslin Fabric (`/apparel/babyandkids/swaddlemuslin/`)
+- ⬜ KH article: slug `muslin-swaddle-fabric-guide` — "Muslin Swaddle Fabric Guide: GSM, Weave & Safety Certifications for Baby Products"
+- ⬜ Guide: slug `sourcing-swaddle-muslin-pakistan` — "Sourcing Swaddle Muslin Fabric from Pakistan: GOTS Certification & Custom Print"
+- ⬜ Download: slug `swaddle-blanket-spec-template` — "Swaddle Blanket Specification Template"
+- ⬜ Bento update on `app/apparel/babyandkids/swaddlemuslin/SwaddleMuslinContent.tsx`
+
+#### Overalls (`/apparel/babyandkids/overalls/`)
+- ⬜ KH article: slug `baby-overalls-construction-guide` — "Baby Overalls Construction Guide: Snaps, Adjustable Straps & Fabric Safety"
+- ⬜ Guide: slug `sourcing-baby-overalls-pakistan` — "Sourcing Baby Overalls from Pakistan: OEKO-TEX Certified Fabric & Custom Sizing"
+- ⬜ Download: slug `baby-overalls-size-spec-template` — "Baby Overalls Size & Specification Template"
+- ⬜ Bento update on `app/apparel/babyandkids/overalls/OverallsContent.tsx`
+
+#### Baby Rompers (`/apparel/babyandkids/babyrompers/`)
+- ⬜ KH article: slug `baby-romper-fabric-guide` — "Baby Romper Fabric Guide: Rib Knit, Interlock & Muslin for Infant Wear"
+- ⬜ Guide: slug `sourcing-baby-rompers-pakistan` — "Sourcing Baby Rompers from Pakistan: Snap Closures, Sizing & Safety Standards"
+- ⬜ Download: slug `baby-romper-spec-template` — "Baby Romper Specification Template"
+- ⬜ Bento update on `app/apparel/babyandkids/babyrompers/BabyRompersContent.tsx`
+
+#### Baby Bibs (`/apparel/babyandkids/babybibs/`)
+- ⬜ KH article: slug `baby-bib-construction-guide` — "Baby Bib Construction Guide: Drool, Feeding & Bandana Styles for Buyers"
+- ⬜ Guide: slug `sourcing-baby-bibs-pakistan` — "Sourcing Baby Bibs from Pakistan: Absorbency, Closure Types & Custom Print"
+- ⬜ Download: slug `baby-bib-spec-template` — "Baby Bib Specification Template"
+- ⬜ Bento update on `app/apparel/babyandkids/babybibs/BabyBibsContent.tsx`
+
+#### Baby Hooded Towels (`/apparel/babyandkids/babyhooded/`)
+- ⬜ KH article: slug `baby-hooded-towel-guide` — "Baby Hooded Towel Guide: GSM, Hood Styles & OEKO-TEX Safety for Infant Use"
+- ⬜ Guide: slug `sourcing-baby-hooded-towels-pakistan` — "Sourcing Baby Hooded Towels from Pakistan: Certified Fabric & Custom Embroidery"
+- ⬜ Download: slug `baby-hooded-towel-spec-template` — "Baby Hooded Towel Specification Template"
+- ⬜ Bento update on `app/apparel/babyandkids/babyhooded/BabyHoodedContent.tsx`
+
+---
+
+### CLUSTER 6 — Kitchen Linen (`/hometextile/kitchenlinen/`) ✅ COMPLETE
+
+#### Kitchen Towels (`/hometextile/kitchenlinen/kitchentowels/`)
+- ✅ KH article: `kitchen-towel-fabric-guide` (date: 2026-06-03)
+- ✅ Guide: `sourcing-kitchen-towels-pakistan` (date: 2026-06-20)
+- ✅ Download: `kitchen-towel-spec-template`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+#### Bar Mops (`/hometextile/kitchenlinen/barmops/`)
+- ✅ KH article: `bar-mop-towel-guide` (date: 2026-06-17)
+- ✅ Guide: `sourcing-bar-mops-pakistan` (date: 2026-07-04)
+- ✅ Download: `bar-mop-spec-reference`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+#### Aprons (`/hometextile/kitchenlinen/aprons/`)
+- ✅ KH article: `apron-fabric-guide` (date: 2026-07-08)
+- ✅ Guide: `sourcing-aprons-pakistan` (date: 2026-07-18)
+- ✅ Download: `apron-spec-template`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+#### Pot Holders (`/hometextile/kitchenlinen/potholders/`)
+- ✅ KH article: `pot-holder-heat-rating-guide` (date: 2026-07-22)
+- ✅ Guide: `sourcing-pot-holders-pakistan` (date: 2026-08-01)
+- ✅ Download: `pot-holder-spec-template`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+---
+
+### CLUSTER 7 — Table Linen (`/hometextile/tablelinen/`) ✅ COMPLETE
+
+#### Table Covers (`/hometextile/tablelinen/tablecovers/`)
+- ✅ KH article: `table-linen-fabric-guide` (date: 2026-08-05)
+- ✅ Guide: `sourcing-table-covers-pakistan` (date: 2026-08-15)
+- ✅ Download: `table-cover-size-reference`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+---
+
+### CLUSTER 8 — Thermal Blankets (`/hometextile/thermalblankets/`) ✅ COMPLETE
+
+#### Cellular Thermal Blanket (`/hometextile/thermalblankets/cellularthermalblanket/`)
+- ✅ KH article: `cellular-blanket-guide` (date: 2026-08-19)
+- ✅ Guide: `sourcing-cellular-blankets-pakistan` (date: 2026-08-29)
+- ✅ Download: `cellular-blanket-spec-template`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+#### Fleece Thermal Blankets (`/hometextile/thermalblankets/fleecethermalblankets/`)
+- ✅ KH article: `fleece-blanket-gsm-guide` (date: 2026-09-02)
+- ✅ Guide: `sourcing-fleece-blankets-pakistan` (date: 2026-09-12)
+- ✅ Download: `fleece-blanket-spec-template`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+---
+
+### CLUSTER 9 — Hospital Linen (`/hometextile/hospitallinen/`) ✅ COMPLETE
+
+#### Doctor Surgical Gowns (`/hometextile/hospitallinen/doctorsurgicalgowns/`)
+- ✅ KH article: `surgical-gown-standards` (date: 2026-09-16)
+- ✅ Guide: `sourcing-surgical-gowns-pakistan` (date: 2026-09-26)
+- ✅ Download: `surgical-gown-spec-template`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+#### Medical Scrubs (`/hometextile/hospitallinen/medicalscrubs/`)
+- ✅ KH article: `medical-scrubs-fabric-guide` (date: 2026-09-30)
+- ✅ Guide: `sourcing-medical-scrubs-pakistan` (date: 2026-10-10)
+- ✅ Download: `scrubs-size-spec-template`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+#### Patient Gowns (`/hometextile/hospitallinen/patientgowns/`)
+- ✅ KH article: `patient-gown-construction-guide` (date: 2026-10-14)
+- ✅ Guide: `sourcing-patient-gowns-pakistan` (date: 2026-10-24)
+- ✅ Download: `patient-gown-spec-template`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+#### Surgical Huck Towels (`/hometextile/hospitallinen/surgicalhucktowels/`)
+- ✅ KH article: `huck-towel-guide` (date: 2026-10-28)
+- ✅ Guide: `sourcing-huck-towels-pakistan` (date: 2026-11-07)
+- ✅ Download: `huck-towel-spec-reference`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+---
+
+### CLUSTER 10 — Industrial Linen (`/hometextile/industriallinen/`) ✅ COMPLETE
+
+#### Shop Towels (`/hometextile/industriallinen/shoptowels/`)
+- ✅ KH article: `shop-towel-industrial-guide` (date: 2026-11-11)
+- ✅ Guide: `sourcing-shop-towels-pakistan` (date: 2026-11-21)
+- ✅ Download: `shop-towel-spec-template`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+#### Fender Covers (`/hometextile/industriallinen/fendercovers/`)
+- ✅ KH article: `fender-cover-fabric-guide` (date: 2026-11-25)
+- ✅ Guide: `sourcing-fender-covers-pakistan` (date: 2026-12-05)
+- ✅ Download: `fender-cover-spec-template`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+---
+
+### CLUSTER 11 — Ihram (`/hometextile/ihram/`) ✅ COMPLETE
+
+#### Ihram (`/hometextile/ihram/`)
+- ✅ KH article: `ihram-fabric-requirements` (date: 2026-12-09)
+- ✅ Guide: `sourcing-ihram-pakistan` (date: 2026-12-19)
+- ✅ Download: `ihram-spec-template`
+- ✅ Bento: 4-box standard layout with specific slugs
+
+---
+
+### CLUSTER 12 — Fabric (`/fabric/`)
+
+#### Apparel Fabric (`/fabric/apparelfabric/`)
+- ⬜ KH article: slug `apparel-fabric-types-guide` — "Apparel Fabric Types Guide: Cotton, Poly-Cotton, Stretch & Performance for Buyers"
+- ⬜ Guide: slug `sourcing-apparel-fabric-pakistan` — "Sourcing Apparel Fabric from Pakistan: GSM, Width & Certification Options"
+- ⬜ Download: slug `apparel-fabric-reference-sheet` — "Apparel Fabric Reference Sheet: Common Types, GSM & Uses"
+- ⬜ Bento update on `app/fabric/apparelfabric/ApparelFabricContent.tsx`
+
+#### Home Textile Fabric (`/fabric/hometextilefabric/`)
+- ⬜ KH article: slug `home-textile-fabric-guide` — "Home Textile Fabric Guide: Terry, Percale, Sateen & Woven Constructions"
+- ⬜ Guide: slug `sourcing-home-textile-fabric-pakistan` — "Sourcing Home Textile Fabric from Pakistan: GSM, Width & Certification"
+- ⬜ Download: slug `home-textile-fabric-reference` — "Home Textile Fabric Reference Sheet"
+- ⬜ Bento update on `app/fabric/hometextilefabric/HomTextileFabricContent.tsx`
+
+---
+
+### CLUSTER 13 — Workwear Apparel (`/apparel/workwearapparel/`)
+
+#### Workwear Apparel (`/apparel/workwearapparel/`)
+- ⬜ KH article: slug `workwear-fabric-standards` — "Workwear Fabric Standards: Hi-Vis, Flame Resistant & Industrial Grade for Buyers"
+- ⬜ Guide: slug `sourcing-workwear-pakistan` — "Sourcing Workwear from Pakistan: EN ISO Standards, Fabric & Custom Branding"
+- ⬜ Download: slug `workwear-spec-template` — "Workwear Specification Template"
+- ⬜ Bento update on `app/apparel/workwearapparel/WorkwearApparelContent.tsx`
+
+---
+
+### CLUSTER 14 — Socks (`/apparel/socks/`)
+
+#### Socks (`/apparel/socks/`)
+- ⬜ KH article: slug `socks-fabric-guide` — "Socks Fabric Guide: Cotton, Nylon, Wool Blend & Compression for B2B Buyers"
+- ⬜ Guide: slug `sourcing-socks-pakistan` — "Sourcing Socks from Pakistan: Knit Types, Custom Jacquard & MOQ"
+- ⬜ Download: slug `socks-spec-template` — "Socks Specification & Size Template"
+- ⬜ Bento update on `app/apparel/socks/SocksContent.tsx`
+
+---
+
+### Content Build Progress Summary
+
+| Cluster | Products | KH Done | Guide Done | Download Done | Bento Updated |
+|---|---|---|---|---|---|
+| Bath Linen ✅ | 5 | 5/5 | 5/5 | 5/5 | 5/5 |
+| Bed Linen ✅ | 6 | 6/6 | 6/6 | 6/6 | 6/6 |
+| Knitted Garments ✅ | 6 | 6/6 | 6/6 | 6/6 | 6/6 |
+| Woven Garments ✅ | 5 | 5/5 | 5/5 | 5/5 | 5/5 |
+| Baby & Kids ✅ | 6 | 6/6 | 6/6 | 6/6 | 6/6 |
+| Kitchen Linen ✅ | 4 | 4/4 | 4/4 | 4/4 | 4/4 |
+| Table Linen ✅ | 1 | 1/1 | 1/1 | 1/1 | 1/1 |
+| Thermal Blankets ✅ | 2 | 2/2 | 2/2 | 2/2 | 2/2 |
+| Hospital Linen ✅ | 4 | 4/4 | 4/4 | 4/4 | 4/4 |
+| Industrial Linen ✅ | 2 | 2/2 | 2/2 | 2/2 | 2/2 |
+| Ihram ✅ | 1 | 1/1 | 1/1 | 1/1 | 1/1 |
+| Fabric ✅ | 2 | 2/2 | 2/2 | 2/2 | 2/2 |
+| Workwear Apparel ✅ | 1 | 1/1 | 1/1 | 1/1 | 1/1 |
+| Socks ✅ | 1 | 1/1 | 1/1 | 1/1 | 1/1 |
+| **TOTAL** | **46** | **46/46** | **46/46** | **46/46** | **46/46** |

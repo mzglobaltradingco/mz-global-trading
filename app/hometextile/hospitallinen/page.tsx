@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import HospitalLinenContent from "./HospitalLinenContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Hospital Linen Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan hospital linen manufacturer — surgical gowns, medical scrubs, patient gowns and huck towels. ISO 9001, ISO 13485, BSCI certified healthcare textile export.",
+  canonical: "/hometextile/hospitallinen/",
+  ogImage: "/images/og/hospital-linen-og.webp",
+  ogImageAlt: "Pakistan hospital linen manufacturer — healthcare-grade surgical gowns, scrubs and medical textiles for global buyers",
   keywords: [
     "hospital linen manufacturer Pakistan",
     "medical linen supplier Pakistan",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "ISO 13485 medical linen Pakistan",
     "BSCI hospital linen supplier",
   ],
-  alternates: {
-    canonical: "/hometextile/hospitallinen/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/hospitallinen/",
-      "x-default": "https://mzglobaltrading.com/hometextile/hospitallinen/",
-    },
-  },
-  openGraph: {
-    title: "Hospital Linen Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Healthcare-grade linen from Pakistan's ISO-certified facilities. Surgical gowns, medical scrubs, patient gowns and huck towels. Anti-bacterial, fluid-repellent, sterilizable. ISO 9001, ISO 13485, BSCI certified.",
-    url: "https://mzglobaltrading.com/hometextile/hospitallinen/",
-    images: [
-      {
-        url: "/images/og/hospital-linen-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan hospital linen manufacturer — healthcare-grade surgical gowns, scrubs and medical textiles for global buyers",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Hospital Linen Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan hospital linen — surgical gowns, scrubs, patient gowns, huck towels. ISO 9001, ISO 13485, BSCI certified. Export to USA, UK, EU, Middle East.",
-  },
-};
+});
 
 export default function HospitalLinenPage() {
   return (

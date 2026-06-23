@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import DuvetCoversContent from "./DuvetCoversContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Duvet Covers Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan duvet cover manufacturer for wholesale buyers in UK, Europe and USA. Custom cotton percale, sateen and jacquard comforter covers in UK.",
+  canonical: "/hometextile/bedlinen/duvetcovers/",
+  ogImage: "/images/og/duvet-covers-og.webp",
+  ogImageAlt: "Pakistan duvet cover manufacturer — wholesale comforter covers for USA, UK and Europe",
   keywords: [
     "duvet covers manufacturer Pakistan",
     "comforter cover wholesale Pakistan",
@@ -15,34 +18,7 @@ export const metadata: Metadata = {
     "hotel duvet covers manufacturer",
     "bedding manufacturer Pakistan",
   ],
-  alternates: {
-    canonical: "/hometextile/bedlinen/duvetcovers/",
-    languages: {
-      "en": "https://mzglobaltrading.com/hometextile/bedlinen/duvetcovers/",
-      "x-default": "https://mzglobaltrading.com/hometextile/bedlinen/duvetcovers/",
-    },
-  },
-  openGraph: {
-    title: "Duvet Covers Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan duvet cover manufacturer — percale, sateen and jacquard. UK, US and EU sizing. Button, zip and envelope closure. GOTS and OEKO-TEX certified. FOB / CIF export.",
-    url: "https://mzglobaltrading.com/hometextile/bedlinen/duvetcovers/",
-    images: [
-      {
-        url: "/images/og/duvet-covers-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan duvet cover manufacturer — wholesale comforter covers for USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Duvet Covers Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan duvet cover manufacturer — percale, sateen and jacquard in UK, US and EU sizes. GOTS certified. FOB / CIF export.",
-  },
-};
+});
 
 export default function DuvetCoversPage() {
   return (

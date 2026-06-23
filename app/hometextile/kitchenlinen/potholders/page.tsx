@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import PotHoldersContent from "./PotHoldersContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Pot Holders Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan pot holders manufacturer: quilted cotton, silicone-lined and terry constructions. EN407 heat ratings. OEKO-TEX, BSCI. Bulk export to USA, UK, EU, Australia.",
+  canonical: "/hometextile/kitchenlinen/potholders/",
+  ogImage: "/images/og/pot-holders-og.webp",
+  ogImageAlt: "Pakistan pot holders manufacturer — quilted cotton and silicone oven mitts for kitchenware retail and foodservice buyers in USA, UK and Europe",
   keywords: [
     "pot holders manufacturer Pakistan",
     "oven mitts supplier Pakistan",
@@ -18,35 +21,7 @@ export const metadata: Metadata = {
     "OEKO-TEX pot holders Pakistan",
     "restaurant kitchen gloves Pakistan",
   ],
-  alternates: {
-    canonical: "/hometextile/kitchenlinen/potholders/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/kitchenlinen/potholders/",
-      "x-default":
-        "https://mzglobaltrading.com/hometextile/kitchenlinen/potholders/",
-    },
-  },
-  openGraph: {
-    title: "Pot Holders Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "OEM pot holders and oven mitts from Pakistan. Quilted cotton, silicone-lined and terry constructions. Heat ratings to EN407. OEKO-TEX, BSCI certified. Bulk export to USA, UK, EU and worldwide.",
-    url: "https://mzglobaltrading.com/hometextile/kitchenlinen/potholders/",
-    images: [
-      {
-        url: "/images/og/pot-holders-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan pot holders manufacturer — quilted cotton and silicone oven mitts for kitchenware retail and foodservice buyers in USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Pot Holders Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pot holders and oven mitts from Pakistan: quilted cotton, silicone-lined, terry. EN407 heat ratings. OEKO-TEX, BSCI. Export to USA, UK, EU.",
-  },
-};
+});
 
 export default function PotHoldersPage() {
   return (

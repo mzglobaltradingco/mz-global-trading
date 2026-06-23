@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import IndustrialLinenContent from "./IndustrialLinenContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Industrial Linen Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan industrial linen manufacturer — heavy-duty shop towels for automotive workshops and terry fender covers for auto dealerships. ISO 9001, BSCI certified. Export to USA, UK, EU.",
+  canonical: "/hometextile/industriallinen/",
+  ogImage: "/images/og/industrial-linen-og.webp",
+  ogImageAlt: "Pakistan industrial linen manufacturer — shop towels and automotive fender covers for workshops worldwide",
   keywords: [
     "industrial linen manufacturer Pakistan",
     "shop towels manufacturer Pakistan",
@@ -16,35 +19,7 @@ export const metadata: Metadata = {
     "bulk shop towels export",
     "automotive textile manufacturer Pakistan",
   ],
-  alternates: {
-    canonical: "/hometextile/industriallinen/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/industriallinen/",
-      "x-default": "https://mzglobaltrading.com/hometextile/industriallinen/",
-    },
-  },
-  openGraph: {
-    title: "Industrial Linen Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Heavy-duty shop towels and automotive fender covers sourced from Pakistan. High-absorbency terry, huck weave and knitted terry stretch constructions. ISO 9001, BSCI. Export to USA, UK, EU, Australia.",
-    url: "https://mzglobaltrading.com/hometextile/industriallinen/",
-    images: [
-      {
-        url: "/images/og/industrial-linen-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan industrial linen manufacturer — shop towels and automotive fender covers for workshops worldwide",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Industrial Linen Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Shop towels and fender covers from Pakistan. Heavy cotton terry and knitted stretch constructions. ISO 9001, BSCI. Export to USA, UK, EU.",
-  },
-};
+});
 
 export default function IndustrialLinenPage() {
   return (

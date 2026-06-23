@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
 import PageTransitionWrapper from "./PageTransitionWrapper";
+import ScrollToTop from "./ScrollToTop";
 import CookieConsent from "@/components/CookieConsent";
 
 const geistSans = localFont({
@@ -136,6 +137,9 @@ export default function RootLayout({
         {/* ── Google Consent Mode v2 defaults ─────────────────────────────────
             beforeInteractive: Next.js injects this into <head> before any JS.
             Reads the consent cookie so returning visitors never see a flicker. */}
+        {/* Disable browser scroll restoration before React hydrates so pages always start at top */}
+        <Script id="scroll-config" strategy="beforeInteractive">{`history.scrollRestoration = "manual";`}</Script>
+
         <Script id="consent-init" strategy="beforeInteractive">{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -178,6 +182,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
 
+        <ScrollToTop />
         <PageTransitionWrapper>{children}</PageTransitionWrapper>
 
         {/* Cookie consent banner — renders after hydration, z-40 */}

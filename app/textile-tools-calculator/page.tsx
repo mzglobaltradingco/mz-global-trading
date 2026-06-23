@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TextileToolsContent from "./TextileToolsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Textile Tools Calculator | MZ Global Trading",
   description:
     "55+ free textile calculators — order costing, GSM, yarn count, AQL inspection, CBM, landed cost and break-even tools for international B2B buyers.",
+  canonical: "/textile-tools-calculator/",
+  ogImage: "/images/og/textile-tools-calculator-og.webp",
+  ogImageAlt: "MZ Global Trading textile tools calculator — free online tools for buyers",
   keywords: [
     "textile calculator online free",
     "GSM calculator textile",
@@ -19,35 +22,7 @@ export const metadata: Metadata = {
     "SMV calculator garment",
     "fabric booking calculator merchandiser",
   ],
-  alternates: {
-    canonical: "/textile-tools-calculator/",
-    languages: {
-      "en": "https://mzglobaltrading.com/textile-tools-calculator/",
-      "x-default": "https://mzglobaltrading.com/textile-tools-calculator/",
-    },
-  },
-  openGraph: {
-    title: "Textile Tools Calculator | MZ Global Trading",
-    description:
-      "55+ free calculators for costing, GSM, yarn, QA, packing and shipment planning — built for textile buyers and every factory desk.",
-    url: "https://mzglobaltrading.com/textile-tools-calculator/",
-    images: [
-      {
-        url: "/images/og/textile-tools-calculator-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "MZ Global Trading textile tools calculator — free online tools for buyers",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Textile Tools Calculator | MZ Global Trading",
-    description:
-      "Order costing, GSM, AQL, CBM, landed cost and 50+ more free textile calculators for buyers and factory teams.",
-  },
-};
+});
 
 const pageSchema = {
   "@context": "https://schema.org",

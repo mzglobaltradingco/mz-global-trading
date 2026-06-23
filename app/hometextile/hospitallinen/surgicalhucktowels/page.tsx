@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import SurgicalHuckTowelsContent from "./SurgicalHuckTowelsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Surgical Huck Towels Manufacturer Pakistan | MZ Global",
   description:
     "Pakistan surgical huck towel manufacturer — 100% cotton honeycomb weave, pre-washed, lint-free. Hospital and surgical suite supply. ISO 9001, BSCI certified export.",
+  canonical: "/hometextile/hospitallinen/surgicalhucktowels/",
+  ogImage: "/images/og/surgical-huck-towels-og.webp",
+  ogImageAlt: "Pakistan surgical huck towel manufacturer — 100% cotton honeycomb weave lint-free surgical towels for hospitals worldwide",
   keywords: [
     "surgical huck towels manufacturer Pakistan",
     "huck towels wholesale Pakistan",
@@ -18,35 +21,7 @@ export const metadata: Metadata = {
     "ISO 9001 huck towels Pakistan",
     "operating theatre towels supplier",
   ],
-  alternates: {
-    canonical: "/hometextile/hospitallinen/surgicalhucktowels/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/hospitallinen/surgicalhucktowels/",
-      "x-default":
-        "https://mzglobaltrading.com/hometextile/hospitallinen/surgicalhucktowels/",
-    },
-  },
-  openGraph: {
-    title: "Surgical Huck Towels Manufacturer Pakistan | MZ Global",
-    description:
-      "Surgical huck towels sourced from Pakistan's ISO-certified weaving mills. 100% cotton honeycomb huck weave. Pre-washed, lint-free, high absorbency. ISO 9001, BSCI certified. Export to USA, UK, Australia.",
-    url: "https://mzglobaltrading.com/hometextile/hospitallinen/surgicalhucktowels/",
-    images: [
-      {
-        url: "/images/og/surgical-huck-towels-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan surgical huck towel manufacturer — 100% cotton honeycomb weave lint-free surgical towels for hospitals worldwide",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Surgical Huck Towels Manufacturer Pakistan | MZ Global",
-    description:
-      "Pakistan surgical huck towels — 100% cotton honeycomb weave, pre-washed, lint-free. ISO 9001, BSCI certified. Export to USA, UK, Australia, Canada.",
-  },
-};
+});
 
 export default function SurgicalHuckTowelsPage() {
   return (

@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import PantsTrousersContent from "./PantsTrousersContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Pants & Trousers Manufacturer Pakistan | MZ Global Trading",
   description:
     "Source custom pants and trousers from Pakistan's certified woven factories. Twill, chino, linen, ponte and stretch sateen. 180–280 GSM.",
+  canonical: "/apparel/wovengarments/pantsandtrousers/",
+  ogImage: "/images/og/pants-trousers-og.webp",
+  ogImageAlt: "Pakistan pants and trousers manufacturer — OEM woven trousers for fashion and corporate brands in USA, UK and Europe",
   keywords: [
     "pants manufacturer Pakistan",
     "trousers manufacturer Pakistan",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "linen pants supplier Pakistan",
     "formal trousers OEM",
   ],
-  alternates: {
-    canonical: "/apparel/wovengarments/pantsandtrousers/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/wovengarments/pantsandtrousers/",
-      "x-default": "https://mzglobaltrading.com/apparel/wovengarments/pantsandtrousers/",
-    },
-  },
-  openGraph: {
-    title: "Pants & Trousers Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Custom pants and trousers from Pakistan's certified woven factories. Twill chino, linen, ponte and stretch sateen. 180–280 GSM. OEKO-TEX, BSCI, Sedex available.",
-    url: "https://mzglobaltrading.com/apparel/wovengarments/pantsandtrousers/",
-    images: [
-      {
-        url: "/images/og/pants-trousers-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan pants and trousers manufacturer — OEM woven trousers for fashion and corporate brands in USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Pants & Trousers Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Custom pants and trousers from Pakistan's certified woven factories. Twill, chino, linen, ponte. 180–280 GSM. OEKO-TEX, BSCI available.",
-  },
-};
+});
 
 export default function PantsTrousersPage() {
   return (

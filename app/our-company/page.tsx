@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import OurCompanyContent from "./OurCompanyContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "About Us | MZ Global Trading",
   description:
     "MZ Global Trading — Pakistan B2B textile sourcing partner for brands in USA, UK and Europe. 50+ vetted factories, 10+ certifications, 35+ markets.",
+  canonical: "/our-company/",
+  ogImage: "/images/og/homepage-og-image.webp",
+  ogImageAlt: "About MZ Global Trading — Pakistan Textile Sourcing Company",
   keywords: [
     "about MZ Global Trading",
     "Pakistan textile sourcing company",
@@ -16,35 +19,7 @@ export const metadata: Metadata = {
     "apparel home textiles fabric sourcing Pakistan",
     "textile exporter Pakistan USA UK Europe",
   ],
-  alternates: {
-    canonical: "/our-company/",
-    languages: {
-      "en": "https://mzglobaltrading.com/our-company/",
-      "x-default": "https://mzglobaltrading.com/",
-    },
-  },
-  openGraph: {
-    title: "About MZ Global Trading | Pakistan Textile Sourcing Partner",
-    description:
-      "Pakistan's B2B textile sourcing partner — 50+ vetted factories, 10+ certifications, serving brands and importers across USA, UK, Europe and South America.",
-    url: "https://mzglobaltrading.com/our-company/",
-    images: [
-      {
-        url: "/images/og/homepage-og-image.webp",
-        width: 1200,
-        height: 630,
-        alt: "About MZ Global Trading — Pakistan Textile Sourcing Company",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "About MZ Global Trading | Pakistan Textile Sourcing Partner",
-    description:
-      "Pakistan's B2B textile sourcing partner — 50+ vetted factories, 10+ certifications, serving brands and importers across USA, UK, Europe and South America.",
-  },
-};
+});
 
 export default function OurCompanyPage() {
   return (

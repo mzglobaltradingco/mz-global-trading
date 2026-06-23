@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import GuidesContent from "./GuidesContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Sourcing Guides | MZ Global Trading",
   description:
     "In-depth sourcing guides for textile buyers — AQL, incoterms, Tech Pack writing and GSM selection. Covers apparel, home textiles and fabric sourcing.",
+  canonical: "/guides/",
+  ogImage: "/images/og/hero-knowledge.webp",
+  ogImageAlt: "MZ Global Trading sourcing guides — in-depth textile buyer resources",
   keywords: [
     "textile sourcing guide",
     "AQL inspection guide buyer",
@@ -15,35 +18,7 @@ export const metadata: Metadata = {
     "incoterms textile importer",
     "Tech Pack template guide",
   ],
-  alternates: {
-    canonical: "/guides/",
-    languages: {
-      "en": "https://mzglobaltrading.com/guides/",
-      "x-default": "https://mzglobaltrading.com/guides/",
-    },
-  },
-  openGraph: {
-    title: "Textile Sourcing Guides | MZ Global Trading",
-    description:
-      "Eight comprehensive guides covering AQL, incoterms, certifications, Tech Packs and sourcing strategy for textile buyers in the USA, UK and Europe.",
-    url: "https://mzglobaltrading.com/guides/",
-    images: [
-      {
-        url: "/images/og/hero-knowledge.webp",
-        width: 1200,
-        height: 630,
-        alt: "MZ Global Trading sourcing guides — in-depth textile buyer resources",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Textile Sourcing Guides | MZ Global Trading",
-    description:
-      "AQL inspection, incoterms, certifications, Tech Packs and sourcing strategy — eight guides for textile importers.",
-  },
-};
+});
 
 const pageSchema = {
   "@context": "https://schema.org",

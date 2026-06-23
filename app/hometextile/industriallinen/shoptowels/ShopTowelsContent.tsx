@@ -461,26 +461,26 @@ export default function ShopTowelsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Link href="/knowledge/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link href="/knowledge/shop-towel-industrial-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📚</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
-              <p className="font-semibold text-navy-900">Shop Towel Buying Guide</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Construction comparison, GSM selection and packing formats for industrial and distributor programmes.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Explore Hub →</span>
+              <p className="font-semibold text-navy-900">Shop Towel Guide: Absorbency, Durability & Industrial Grade Standards</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Construction types, GSM grades, colour options, packing formats and certification for industrial buyers.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
             </Link>
-            <Link href="/guides/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link href="/guides/sourcing-shop-towels-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📄</span>
-              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Guides</p>
-              <p className="font-semibold text-navy-900">Pakistan Industrial Textile Export Guide</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Sourcing process, lead times and certification requirements for industrial linen export.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guides →</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
+              <p className="font-semibold text-navy-900">Sourcing Industrial Shop Towels from Pakistan: Bulk Supply & Custom Print</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Construction selection, USA and EU sizes, custom print programmes and packing for distribution.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Guide →</span>
             </Link>
-            <Link href="/downloads/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link href="/downloads/shop-towel-spec-template/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">⬇️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
-              <p className="font-semibold text-navy-900">Spec Sheets &amp; Packing Formats</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Shop towel spec sheets, construction comparison and packing format documentation.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Downloads →</span>
+              <p className="font-semibold text-navy-900">Shop Towel Specification Template</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Document construction, GSM, size, print spec and packing format before submitting your RFQ.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Template →</span>
             </Link>
             <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">✉️</span>

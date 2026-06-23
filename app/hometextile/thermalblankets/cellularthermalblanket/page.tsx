@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import CellularThermalBlanketContent from "./CellularThermalBlanketContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Cellular Thermal Blanket Manufacturer Pakistan | MZ Global",
   description:
     "Pakistan cellular thermal blanket manufacturer supplying 100% cotton open-cell weave blankets for hospitals, NHS, neonatal and aged-care. OEKO-TEX, GOTS, ISO 9001. Export worldwide.",
+  canonical: "/hometextile/thermalblankets/cellularthermalblanket/",
+  ogImage: "/images/og/cellular-thermal-blanket-og.webp",
+  ogImageAlt: "Pakistan cellular thermal blanket manufacturer — cotton open-cell weave blankets for hospitals and NHS procurement worldwide",
   keywords: [
     "cellular thermal blanket manufacturer Pakistan",
     "hospital blankets supplier Pakistan",
@@ -18,35 +21,7 @@ export const metadata: Metadata = {
     "neonatal blankets supplier",
     "bulk cellular blankets export",
   ],
-  alternates: {
-    canonical: "/hometextile/thermalblankets/cellularthermalblanket/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/thermalblankets/cellularthermalblanket/",
-      "x-default": "https://mzglobaltrading.com/hometextile/thermalblankets/cellularthermalblanket/",
-    },
-  },
-  openGraph: {
-    title: "Cellular Thermal Blanket Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "100% cotton cellular blankets sourced from Pakistan's certified weaving mills. Open honeycomb weave — breathable, anti-shrink, hospital laundry rated. 150–250 GSM. OEKO-TEX, GOTS. Export to UK, Australia, Canada, USA and worldwide.",
-    url: "https://mzglobaltrading.com/hometextile/thermalblankets/cellularthermalblanket/",
-    images: [
-      {
-        url: "/images/og/cellular-thermal-blanket-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan cellular thermal blanket manufacturer — cotton open-cell weave blankets for hospitals and NHS procurement worldwide",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Cellular Thermal Blanket Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Cotton cellular blankets from Pakistan. Breathable open-cell weave. 150–250 GSM. NHS standard. OEKO-TEX, GOTS. Export to UK, Australia, Canada, USA.",
-  },
-};
+});
 
 export default function CellularThermalBlanketPage() {
   return (

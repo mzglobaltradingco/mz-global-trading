@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import FenderCoversContent from "./FenderCoversContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Fender Covers Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan fender cover manufacturer supplying knitted terry stretch and non-scratch automotive fender covers for dealerships, body shops and professional detailers. ISO 9001, BSCI. Export worldwide.",
+  canonical: "/hometextile/industriallinen/fendercovers/",
+  ogImage: "/images/og/fender-covers-og.webp",
+  ogImageAlt: "Pakistan fender cover manufacturer — knitted terry stretch automotive fender covers for dealerships and body shops worldwide",
   keywords: [
     "fender covers manufacturer Pakistan",
     "automotive fender covers wholesale",
@@ -17,35 +20,7 @@ export const metadata: Metadata = {
     "car protection covers manufacturer",
     "professional detailing covers Pakistan",
   ],
-  alternates: {
-    canonical: "/hometextile/industriallinen/fendercovers/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/industriallinen/fendercovers/",
-      "x-default": "https://mzglobaltrading.com/hometextile/industriallinen/fendercovers/",
-    },
-  },
-  openGraph: {
-    title: "Fender Covers Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Knitted terry stretch and non-scratch automotive fender covers from Pakistan. 300–400 GSM. Non-scratch surface. ISO 9001, BSCI. Export to USA, UK, EU, Australia automotive dealerships and body shops.",
-    url: "https://mzglobaltrading.com/hometextile/industriallinen/fendercovers/",
-    images: [
-      {
-        url: "/images/og/fender-covers-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan fender cover manufacturer — knitted terry stretch automotive fender covers for dealerships and body shops worldwide",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Fender Covers Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Knitted terry stretch automotive fender covers from Pakistan. Non-scratch. 300–400 GSM. ISO 9001, BSCI. Export to USA, UK, EU, Australia.",
-  },
-};
+});
 
 export default function FenderCoversPage() {
   return (

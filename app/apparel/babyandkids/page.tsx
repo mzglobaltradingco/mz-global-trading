@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BabyAndKidsContent from "./BabyAndKidsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Baby & Kids Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan baby and kids clothing manufacturer — t-shirts, rompers, overalls, bibs, swaddle muslin and hooded towels. GOTS, OEKO-TEX Class 1. Safe for newborns. Export worldwide.",
+  canonical: "/apparel/babyandkids/",
+  ogImage: "/images/og/baby-and-kids-og.webp",
+  ogImageAlt: "Pakistan baby and kids clothing manufacturer — GOTS certified rompers, bibs and swaddle muslin for international brands",
   keywords: [
     "baby clothing manufacturer Pakistan",
     "kids apparel manufacturer Pakistan",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "organic baby clothing manufacturer",
     "baby bibs manufacturer Pakistan export",
   ],
-  alternates: {
-    canonical: "/apparel/babyandkids/",
-    languages: {
-      en: "https://mzglobaltrading.com/apparel/babyandkids/",
-      "x-default": "https://mzglobaltrading.com/apparel/babyandkids/",
-    },
-  },
-  openGraph: {
-    title: "Baby & Kids Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan baby & kids manufacturer supplying t-shirts, rompers, overalls, bibs, swaddle muslin fabric and hooded towels. GOTS organic, OEKO-TEX Standard 100 Class 1 — safe for newborn skin. Single jersey, interlock, muslin gauze constructions. FOB/CIF export to USA, UK, EU, Australia.",
-    url: "https://mzglobaltrading.com/apparel/babyandkids/",
-    images: [
-      {
-        url: "/images/og/baby-and-kids-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan baby and kids clothing manufacturer — GOTS certified rompers, bibs and swaddle muslin for international brands",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Baby & Kids Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Baby rompers, t-shirts, overalls, bibs, swaddle muslin and hooded towels from Pakistan's GOTS-certified factories. OEKO-TEX Class 1 safe for newborns. FOB/CIF export.",
-  },
-};
+});
 
 export default function BabyAndKidsPage() {
   return (

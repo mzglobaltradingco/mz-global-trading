@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import ShortsContent from "./ShortsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Shorts Manufacturer Pakistan | MZ Global Trading",
   description:
     "Source custom shorts from Pakistan's certified factories. Chino twill, ripstop, linen blend, athletic jersey and nylon swim constructions. 160–280 GSM.",
+  canonical: "/apparel/wovengarments/shorts/",
+  ogImage: "/images/og/shorts-og.webp",
+  ogImageAlt: "Pakistan shorts manufacturer — OEM chino, ripstop and athletic shorts for wholesale buyers worldwide",
   keywords: [
     "shorts manufacturer Pakistan",
     "custom shorts OEM Pakistan",
@@ -16,34 +19,7 @@ export const metadata: Metadata = {
     "ripstop shorts wholesale",
     "linen shorts manufacturer Pakistan",
   ],
-  alternates: {
-    canonical: "/apparel/wovengarments/shorts/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/wovengarments/shorts/",
-      "x-default": "https://mzglobaltrading.com/apparel/wovengarments/shorts/",
-    },
-  },
-  openGraph: {
-    title: "Shorts Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Custom shorts from Pakistan's certified woven and knit factories. Chino, ripstop, linen blend, athletic jersey and nylon swim. OEKO-TEX, BSCI available.",
-    url: "https://mzglobaltrading.com/apparel/wovengarments/shorts/",
-    images: [
-      {
-        url: "/images/og/shorts-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan shorts manufacturer — OEM chino, ripstop and athletic shorts for wholesale buyers worldwide",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Shorts Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Custom shorts sourced from Pakistan's certified woven and knit factories. Chino, ripstop, linen blend, athletic jersey. OEKO-TEX, BSCI available.",
-  },
-};
+});
 
 export default function ShortsPage() {
   return (

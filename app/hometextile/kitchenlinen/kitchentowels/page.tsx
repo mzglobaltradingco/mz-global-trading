@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import KitchenTowelsContent from "./KitchenTowelsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Kitchen Towels Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan kitchen towel manufacturer: waffle, huck weave, terry and plain weave. 150–250 GSM, yarn-dyed programmes. OEKO-TEX, BSCI. Export to USA, UK, EU, Middle East.",
+  canonical: "/hometextile/kitchenlinen/kitchentowels/",
+  ogImage: "/images/og/kitchen-towels-og.webp",
+  ogImageAlt: "Pakistan kitchen towels manufacturer — waffle, huck weave and terry kitchen towels for retail and hospitality buyers in USA, UK and Europe",
   keywords: [
     "kitchen towels manufacturer Pakistan",
     "kitchen towels wholesale Pakistan",
@@ -18,35 +21,7 @@ export const metadata: Metadata = {
     "dish towels wholesale Pakistan",
     "OEKO-TEX kitchen towels Pakistan",
   ],
-  alternates: {
-    canonical: "/hometextile/kitchenlinen/kitchentowels/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/kitchenlinen/kitchentowels/",
-      "x-default":
-        "https://mzglobaltrading.com/hometextile/kitchenlinen/kitchentowels/",
-    },
-  },
-  openGraph: {
-    title: "Kitchen Towels Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Kitchen towels sourced from Pakistan's certified textile mills. Waffle, huck weave, terry and plain weave. 150–250 GSM. Yarn-dyed stripe and check programmes. OEKO-TEX, BSCI. FOB / CIF export.",
-    url: "https://mzglobaltrading.com/hometextile/kitchenlinen/kitchentowels/",
-    images: [
-      {
-        url: "/images/og/kitchen-towels-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan kitchen towels manufacturer — waffle, huck weave and terry kitchen towels for retail and hospitality buyers in USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Kitchen Towels Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Kitchen towels from Pakistan: waffle, huck weave, terry. 150–250 GSM. Yarn-dyed stripe/check programmes. OEKO-TEX, BSCI. FOB export to USA, UK, EU.",
-  },
-};
+});
 
 export default function KitchenTowelsPage() {
   return (

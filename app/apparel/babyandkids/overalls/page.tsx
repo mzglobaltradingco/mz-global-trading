@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import OverallsContent from "./OverallsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Baby & Kids Overalls Manufacturer Pakistan | OEM Dungarees",
   description:
     "Pakistan OEM baby and kids overalls — denim, canvas and corduroy dungarees from 0–12 years. GOTS & OEKO-TEX certified. Adjustable straps, snap crotch.",
+  canonical: "/apparel/babyandkids/overalls/",
+  ogImage: "/images/og/overalls-og.webp",
+  ogImageAlt: "Pakistan baby and kids overalls manufacturer — OEM denim and canvas dungarees for USA, UK and Europe",
   keywords: [
     "baby overalls manufacturer Pakistan",
     "kids dungarees OEM Pakistan",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "infant overalls manufacturer Pakistan",
     "toddler dungarees bulk order",
   ],
-  alternates: {
-    canonical: "/apparel/babyandkids/overalls/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/babyandkids/overalls/",
-      "x-default": "https://mzglobaltrading.com/apparel/babyandkids/overalls/",
-    },
-  },
-  openGraph: {
-    title: "Baby & Kids Overalls Manufacturer Pakistan | OEM Dungarees | MZ Global Trading",
-    description:
-      "Pakistan OEM baby and kids overalls — denim, canvas and corduroy. 0–12 years, adjustable straps, snap crotch. GOTS certified. Bulk sourcing for USA, UK and Europe.",
-    url: "https://mzglobaltrading.com/apparel/babyandkids/overalls/",
-    images: [
-      {
-        url: "/images/og/overalls-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan baby and kids overalls manufacturer — OEM denim and canvas dungarees for USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Baby & Kids Overalls Manufacturer Pakistan | OEM Dungarees | MZ Global Trading",
-    description:
-      "Pakistan OEM baby and kids overalls — denim, canvas, corduroy. 0–12 years. Bulk sourcing for USA, UK and Europe.",
-  },
-};
+});
 
 export default function OverallsPage() {
   const jsonLd = {

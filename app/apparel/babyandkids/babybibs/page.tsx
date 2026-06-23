@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BabyBibsContent from "./BabyBibsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Baby Bibs Manufacturer Pakistan | OEM Drool & Feeding Bibs",
   description:
     "Pakistan OEM baby bibs — terry, muslin and bandana drool bibs with TPU waterproof backing. GOTS & OEKO-TEX Class 1 certified. Velcro or snap closure.",
+  canonical: "/apparel/babyandkids/babybibs/",
+  ogImage: "/images/og/baby-bibs-og.webp",
+  ogImageAlt: "Pakistan baby bibs manufacturer — OEM terry and muslin drool bibs for USA, UK and Europe",
   keywords: [
     "baby bibs manufacturer Pakistan",
     "drool bibs OEM Pakistan",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "feeding bibs OEM export",
     "waterproof baby bibs bulk",
   ],
-  alternates: {
-    canonical: "/apparel/babyandkids/babybibs/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/babyandkids/babybibs/",
-      "x-default": "https://mzglobaltrading.com/apparel/babyandkids/babybibs/",
-    },
-  },
-  openGraph: {
-    title: "Baby Bibs Manufacturer Pakistan | OEM Drool & Feeding Bibs | MZ Global Trading",
-    description:
-      "Pakistan OEM baby bibs — terry, muslin and bandana drool bibs. GOTS & OEKO-TEX Class 1 certified. TPU waterproof backing option. Bulk sourcing for USA, UK and Europe.",
-    url: "https://mzglobaltrading.com/apparel/babyandkids/babybibs/",
-    images: [
-      {
-        url: "/images/og/baby-bibs-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan baby bibs manufacturer — OEM terry and muslin drool bibs for USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Baby Bibs Manufacturer Pakistan | OEM Drool & Feeding Bibs | MZ Global Trading",
-    description:
-      "Pakistan OEM baby bibs — terry, muslin, bandana styles. OEKO-TEX Class 1. Bulk for USA, UK and Europe.",
-  },
-};
+});
 
 export default function BabyBibsPage() {
   const jsonLd = {

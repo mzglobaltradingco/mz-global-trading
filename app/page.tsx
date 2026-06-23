@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Hero from "@/components/Hero";
 import StatsBar from "@/components/StatsBar";
@@ -9,15 +9,13 @@ import CertificationsStrip from "@/components/CertificationsStrip";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "/",
-    languages: {
-      "en": "https://mzglobaltrading.com/",
-      "x-default": "https://mzglobaltrading.com/",
-    },
-  },
-};
+export const metadata = buildMetadata({
+  title: "MZ Global Trading | Pakistan Textile Sourcing — Apparel, Home Textiles & Fabric",
+  description: "Pakistan textile sourcing for brands in USA, UK, Canada, Europe and South America. Certified apparel, home textiles and fabric manufacturers.",
+  canonical: "/",
+  ogImage: "/images/og/homepage-og-image.webp",
+  ogImageAlt: "MZ Global Trading — Pakistan Textile Sourcing Partner for Apparel, Home Textiles and Fabric",
+});
 
 const websiteSchema = {
   "@context": "https://schema.org",

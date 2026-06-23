@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import DoctorSurgicalGownsContent from "./DoctorSurgicalGownsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Surgical Gowns Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan surgical gown manufacturer — TC poly-cotton and 100% cotton reusable surgical gowns. Anti-bacterial, fluid repellent. ISO 13485, BSCI certified export.",
+  canonical: "/hometextile/hospitallinen/doctorsurgicalgowns/",
+  ogImage: "/images/og/doctor-surgical-gowns-og.webp",
+  ogImageAlt: "Pakistan surgical gown manufacturer — reusable TC poly-cotton and cotton surgical gowns for hospitals and medical distributors worldwide",
   keywords: [
     "surgical gowns manufacturer Pakistan",
     "doctor gowns supplier Pakistan",
@@ -18,35 +21,7 @@ export const metadata: Metadata = {
     "bulk surgical gowns export",
     "EN 13795 surgical gown supplier",
   ],
-  alternates: {
-    canonical: "/hometextile/hospitallinen/doctorsurgicalgowns/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/hospitallinen/doctorsurgicalgowns/",
-      "x-default":
-        "https://mzglobaltrading.com/hometextile/hospitallinen/doctorsurgicalgowns/",
-    },
-  },
-  openGraph: {
-    title: "Surgical Gowns Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Reusable surgical gowns sourced from Pakistan's ISO-certified medical textile facilities. TC 65/35 poly-cotton and 100% cotton. Anti-bacterial, fluid repellent, autoclave safe. ISO 13485, BSCI certified export.",
-    url: "https://mzglobaltrading.com/hometextile/hospitallinen/doctorsurgicalgowns/",
-    images: [
-      {
-        url: "/images/og/doctor-surgical-gowns-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan surgical gown manufacturer — reusable TC poly-cotton and cotton surgical gowns for hospitals and medical distributors worldwide",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Surgical Gowns Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan surgical gowns — TC poly-cotton, 100% cotton, fluid repellent, anti-bacterial. ISO 13485, BSCI certified. Export to USA, UK, EU, Middle East.",
-  },
-};
+});
 
 export default function DoctorSurgicalGownsPage() {
   return (

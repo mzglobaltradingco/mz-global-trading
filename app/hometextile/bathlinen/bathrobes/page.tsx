@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BathrobesContent from "./BathrobesContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Bathrobe Manufacturer Pakistan | Hotel & Spa OEM Terry Robes",
   description:
     "Source OEM bathrobes from Pakistan — shawl collar, kimono and hooded in terry, velour and waffle. 350–500 GSM. Hotel, spa and resort programmes.",
+  canonical: "/hometextile/bathlinen/bathrobes/",
+  ogImage: "/images/og/bathrobes-og.webp",
+  ogImageAlt: "Pakistan bathrobe manufacturer — OEM terry and velour bathrobes for hotels and spas in USA, UK and Europe",
   keywords: [
     "bathrobe manufacturer Pakistan",
     "hotel bathrobe OEM Pakistan",
@@ -18,34 +21,7 @@ export const metadata: Metadata = {
     "custom bathrobe hotel programme",
     "resort bathrobe supplier Pakistan",
   ],
-  alternates: {
-    canonical: "/hometextile/bathlinen/bathrobes/",
-    languages: {
-      "en": "https://mzglobaltrading.com/hometextile/bathlinen/bathrobes/",
-      "x-default": "https://mzglobaltrading.com/hometextile/bathlinen/bathrobes/",
-    },
-  },
-  openGraph: {
-    title: "Bathrobe Manufacturer Pakistan | Hotel & Spa OEM Terry Robes | MZ Global Trading",
-    description:
-      "Pakistan OEM bathrobe manufacturer. Shawl collar, kimono and hooded styles in terry loop, velour and waffle. 350–500 GSM. Hotel, spa and resort programmes.",
-    url: "https://mzglobaltrading.com/hometextile/bathlinen/bathrobes/",
-    images: [
-      {
-        url: "/images/og/bathrobes-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan bathrobe manufacturer — OEM terry and velour bathrobes for hotels and spas in USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Bathrobe Manufacturer Pakistan | Hotel & Spa OEM Terry Robes | MZ Global Trading",
-    description:
-      "Pakistan OEM bathrobe manufacturer. Shawl collar, kimono and hooded in terry, velour and waffle. 350–500 GSM. Hotel, spa and resort programmes.",
-  },
-};
+});
 
 export default function BathrobesPage() {
   const jsonLd = {

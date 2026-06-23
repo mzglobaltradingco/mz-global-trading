@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TankTopsContent from "./TankTopsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Tank Top Manufacturer Pakistan | MZ Global Trading",
   description:
     "Source OEM tank tops from Pakistan — single jersey, rib, mesh, slub and bamboo jersey. 130–180 GSM. Women's athleisure and performance programmes.",
+  canonical: "/apparel/knittedgarments/tanktops/",
+  ogImage: "/images/og/tank-tops-og.webp",
+  ogImageAlt: "Pakistan tank top manufacturer — OEM single jersey, rib and bamboo jersey athletic vests for USA, UK and Europe",
   keywords: [
     "tank top manufacturer Pakistan",
     "athletic vest OEM Pakistan",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "performance vest wholesale Pakistan",
     "GOTS certified tank top manufacturer",
   ],
-  alternates: {
-    canonical: "/apparel/knittedgarments/tanktops/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/knittedgarments/tanktops/",
-      "x-default": "https://mzglobaltrading.com/apparel/knittedgarments/tanktops/",
-    },
-  },
-  openGraph: {
-    title: "Tank Top Manufacturer Pakistan | OEM Athletic Vests Wholesale | MZ Global Trading",
-    description:
-      "Pakistan OEM tank top manufacturer. Single jersey, rib, mesh and bamboo jersey. 130–180 GSM. Women's athleisure and performance programmes. GOTS and OEKO-TEX certified for USA, UK, Europe.",
-    url: "https://mzglobaltrading.com/apparel/knittedgarments/tanktops/",
-    images: [
-      {
-        url: "/images/og/tank-tops-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan tank top manufacturer — OEM single jersey, rib and bamboo jersey athletic vests for USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Tank Top Manufacturer Pakistan | OEM Athletic Vests Wholesale | MZ Global Trading",
-    description:
-      "Pakistan OEM tank top manufacturer. Single jersey, rib, mesh, slub and bamboo jersey. 130–180 GSM. Athleisure and performance programmes for USA, UK and Europe.",
-  },
-};
+});
 
 export default function TankTopsPage() {
   const jsonLd = {

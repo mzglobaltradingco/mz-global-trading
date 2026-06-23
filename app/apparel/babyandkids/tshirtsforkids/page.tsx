@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TShirtsForKidsContent from "./TShirtsForKidsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Kids T-Shirts Manufacturer Pakistan | OEM Children's Apparel",
   description:
     "Pakistan OEM kids T-shirts — GOTS & OEKO-TEX Class 1 organic cotton and combed jersey. Ages 0–12 years, baby-safe inks. FOB/CIF export.",
+  canonical: "/apparel/babyandkids/tshirtsforkids/",
+  ogImage: "/images/og/t-shirts-for-kids-og.webp",
+  ogImageAlt: "Pakistan kids T-shirt manufacturer — OEM organic cotton and combed jersey children's tees for USA, UK and Europe",
   keywords: [
     "kids t-shirts manufacturer Pakistan",
     "children t-shirts wholesale Pakistan",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "toddler t-shirts supplier Pakistan",
     "infant t-shirts OEM export",
   ],
-  alternates: {
-    canonical: "/apparel/babyandkids/tshirtsforkids/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/babyandkids/tshirtsforkids/",
-      "x-default": "https://mzglobaltrading.com/apparel/babyandkids/tshirtsforkids/",
-    },
-  },
-  openGraph: {
-    title: "Kids T-Shirts Manufacturer Pakistan | OEM Children's Apparel | MZ Global Trading",
-    description:
-      "Pakistan OEM kids T-shirts — GOTS & OEKO-TEX Class 1 certified. Organic cotton, combed jersey, muslin. Age 0–12 years. Bulk sourcing for USA, UK, Europe and global retailers.",
-    url: "https://mzglobaltrading.com/apparel/babyandkids/tshirtsforkids/",
-    images: [
-      {
-        url: "/images/og/t-shirts-for-kids-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan kids T-shirt manufacturer — OEM organic cotton and combed jersey children's tees for USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Kids T-Shirts Manufacturer Pakistan | OEM Children's Apparel | MZ Global Trading",
-    description:
-      "Pakistan OEM kids T-shirts — GOTS & OEKO-TEX Class 1 certified organic cotton. Age 0–12. Bulk sourcing for USA, UK and Europe.",
-  },
-};
+});
 
 export default function TShirtsForKidsPage() {
   const jsonLd = {

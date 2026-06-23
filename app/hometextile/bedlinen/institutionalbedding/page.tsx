@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import InstitutionalBeddingContent from "./InstitutionalBeddingContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Institutional Bedding Supplier Pakistan | MZ Global Trading",
   description:
     "Pakistan institutional bedding manufacturer for hotels, hospitals and airlines in USA, UK and Europe. Rated 200+ wash cycles. FOB/CIF export.",
+  canonical: "/hometextile/bedlinen/institutionalbedding/",
+  ogImage: "/images/og/institutional-bedding-og.webp",
+  ogImageAlt: "Pakistan institutional bedding manufacturer — commercial-grade bedsheets and bed linen for hotels and hospitals",
   keywords: [
     "institutional bedding manufacturer Pakistan",
     "hotel bedding wholesale Pakistan",
@@ -18,35 +21,7 @@ export const metadata: Metadata = {
     "hotel bedsheets bulk order",
     "commercial grade bed linen supplier",
   ],
-  alternates: {
-    canonical: "/hometextile/bedlinen/institutionalbedding/",
-    languages: {
-      "en": "https://mzglobaltrading.com/hometextile/bedlinen/institutionalbedding/",
-      "x-default": "https://mzglobaltrading.com/hometextile/bedlinen/institutionalbedding/",
-    },
-  },
-  openGraph: {
-    title: "Institutional Bedding Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan institutional bedding manufacturer for hotels, hospitals, airlines and student accommodation. Commercial-grade bedsheets, pillow covers and duvet sets engineered for 100–200 wash cycles.",
-    url: "https://mzglobaltrading.com/hometextile/bedlinen/institutionalbedding/",
-    images: [
-      {
-        url: "/images/og/institutional-bedding-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan institutional bedding manufacturer — commercial-grade bedsheets and bed linen for hotels and hospitals",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Institutional Bedding Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Commercial-grade institutional bedding from Pakistan's certified mills. Hotels, hospitals, airlines and student accommodation. 100–200 wash cycles. ISO 9001, OEKO-TEX certified.",
-  },
-};
+});
 
 export default function InstitutionalBeddingPage() {
   return (

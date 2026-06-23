@@ -390,26 +390,26 @@ export default function DoctorSurgicalGownsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Link href="/knowledge/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link href="/knowledge/surgical-gown-standards/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📚</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
-              <p className="font-semibold text-navy-900">Surgical Gown Procurement Guide</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Construction types, barrier performance, certification requirements and RFQ process for hospital procurement.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Explore Hub →</span>
+              <p className="font-semibold text-navy-900">Surgical Gown Standards: AAMI Level 1–4, SMS & Woven Fabric</p>
+              <p className="text-xs text-gray-500 leading-relaxed">AAMI PB70 protection levels, fabric constructions, sterilisation compatibility and EN 13795 EU standard.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
             </Link>
-            <Link href="/guides/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link href="/guides/sourcing-surgical-gowns-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📄</span>
-              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Guides</p>
-              <p className="font-semibold text-navy-900">Pakistan Medical Textile Export Guide</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Sourcing process, EN 13795 compliance, lead times and factory certification overview.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guides →</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
+              <p className="font-semibold text-navy-900">Sourcing Surgical Gowns from Pakistan: AAMI Levels, SMS & Woven Construction</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Step-by-step sourcing guide — protection level selection, sterilisation compatibility, size distribution and certification.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Guide →</span>
             </Link>
-            <Link href="/downloads/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link href="/downloads/surgical-gown-spec-template/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">⬇️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
-              <p className="font-semibold text-navy-900">Compliance Documentation Package</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Spec sheets, ISO certificates, EN 13795 test reports and audit documentation.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Downloads →</span>
+              <p className="font-semibold text-navy-900">Surgical Gown Specification Template</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Document AAMI level, fabric type, sterilisation method, size distribution and certification before submitting your RFQ.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Template →</span>
             </Link>
             <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">✉️</span>

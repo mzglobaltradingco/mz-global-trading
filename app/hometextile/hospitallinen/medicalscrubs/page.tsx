@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import MedicalScrubsContent from "./MedicalScrubsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Medical Scrubs Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan medical scrubs manufacturer for hospitals, clinics and nursing homes. Twill poly-cotton, 4-way stretch. Anti-bacterial, moisture wicking. ISO 13485, BSCI, Sedex.",
+  canonical: "/hometextile/hospitallinen/medicalscrubs/",
+  ogImage: "/images/og/medical-scrubs-og.webp",
+  ogImageAlt: "Pakistan medical scrubs manufacturer — custom hospital scrubs for healthcare buyers in USA, UK and worldwide",
   keywords: [
     "medical scrubs manufacturer Pakistan",
     "hospital scrubs supplier Pakistan",
@@ -18,35 +21,7 @@ export const metadata: Metadata = {
     "ISO 13485 scrubs Pakistan",
     "clinic uniform supplier Pakistan",
   ],
-  alternates: {
-    canonical: "/hometextile/hospitallinen/medicalscrubs/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/hospitallinen/medicalscrubs/",
-      "x-default":
-        "https://mzglobaltrading.com/hometextile/hospitallinen/medicalscrubs/",
-    },
-  },
-  openGraph: {
-    title: "Medical Scrubs Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Custom medical scrubs from Pakistan's certified healthcare textile factories. Twill TC 65/35, 100% cotton twill, 4-way stretch. Anti-bacterial, moisture wicking. ISO 13485, BSCI, Sedex certified export.",
-    url: "https://mzglobaltrading.com/hometextile/hospitallinen/medicalscrubs/",
-    images: [
-      {
-        url: "/images/og/medical-scrubs-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan medical scrubs manufacturer — custom hospital scrubs for healthcare buyers in USA, UK and worldwide",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Medical Scrubs Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan medical scrubs — TC poly-cotton, 4-way stretch. Anti-bacterial, moisture wicking. ISO 13485, BSCI certified. Export to USA, UK, EU, Australia.",
-  },
-};
+});
 
 export default function MedicalScrubsPage() {
   return (

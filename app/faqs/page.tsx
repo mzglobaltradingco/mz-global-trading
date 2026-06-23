@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import FAQsContent from "./FAQsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "FAQs | MZ Global Trading",
   description:
     "Common questions from international textile buyers answered — MOQ, lead times, AQL inspection standards, certifications, shipping incoterms and payment terms.",
+  canonical: "/faqs/",
+  ogImage: "/images/og/faqs-og.webp",
+  ogImageAlt: "MZ Global Trading FAQ — textile sourcing questions answered for international buyers",
   keywords: [
     "textile sourcing FAQ",
     "Pakistan manufacturer MOQ",
@@ -15,35 +18,7 @@ export const metadata: Metadata = {
     "FOB incoterms textile buyer",
     "B2B textile importer FAQ",
   ],
-  alternates: {
-    canonical: "/faqs/",
-    languages: {
-      "en": "https://mzglobaltrading.com/faqs/",
-      "x-default": "https://mzglobaltrading.com/faqs/",
-    },
-  },
-  openGraph: {
-    title: "Frequently Asked Questions | MZ Global Trading",
-    description:
-      "MOQ, lead times, AQL inspection, certifications, incoterms and payment terms — common buyer questions answered by MZ Global Trading.",
-    url: "https://mzglobaltrading.com/faqs/",
-    images: [
-      {
-        url: "/images/og/faqs-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "MZ Global Trading FAQ — textile sourcing questions answered for international buyers",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Frequently Asked Questions | MZ Global Trading",
-    description:
-      "MOQ, lead times, AQL, certifications and payment terms — common buyer questions answered.",
-  },
-};
+});
 
 const pageSchema = {
   "@context": "https://schema.org",

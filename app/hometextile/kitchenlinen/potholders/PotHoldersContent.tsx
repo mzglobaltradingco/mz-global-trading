@@ -608,21 +608,28 @@ export default function PotHoldersContent() {
       {/* RESOURCES */}
       <section className="bg-gray-50 py-12 lg:py-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Resources</p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-            <Link href="/guides/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
-              <span className="text-2xl" aria-hidden="true">📄</span>
-              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Guides</p>
-              <p className="font-semibold text-navy-900">Kitchen Linen Construction Guide</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Construction selection, heat ratings and certification requirements for kitchen linen programmes.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guides →</span>
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Guides &amp; Resources</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link href="/knowledge/pot-holder-heat-rating-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📚</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
+              <p className="font-semibold text-navy-900">Pot Holder Heat Rating Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Batting types, EN 407 levels and 3-layer vs 5-layer construction — what buyers need to specify.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
             </Link>
-            <Link href="/downloads/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link href="/guides/sourcing-pot-holders-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📄</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
+              <p className="font-semibold text-navy-900">Sourcing Pot Holders from Pakistan</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Heat resistance, coordinated kitchen set programmes and certification — step-by-step sourcing guide.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Guide →</span>
+            </Link>
+            <Link href="/downloads/pot-holder-spec-template/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">⬇️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
-              <p className="font-semibold text-navy-900">Pot Holder Specification Templates</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Construction spec sheets, fill layer diagrams and OEM programme templates for pot holder buyers.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Downloads →</span>
+              <p className="font-semibold text-navy-900">Pot Holder Specification Template</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Fill-in spec form for layer construction, batting material, heat performance and certification scope.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Template →</span>
             </Link>
             <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">✉️</span>

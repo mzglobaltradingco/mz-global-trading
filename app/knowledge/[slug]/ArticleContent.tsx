@@ -107,8 +107,7 @@ export default function ArticleContent({ post }: ArticleContentProps) {
           <motion.div
             variants={fadeUpVariants}
             initial="hidden"
-            whileInView="visible"
-            viewport={viewportOnce}
+            animate="visible"
           >
             {/* Excerpt lead */}
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed border-l-4 border-gold pl-4 mb-10 italic">
@@ -128,6 +127,10 @@ export default function ArticleContent({ post }: ArticleContentProps) {
                 [&_em]:italic [&_em]:text-gray-700
                 [&_code]:bg-gray-100 [&_code]:text-navy-900 [&_code]:text-sm [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded [&_code]:font-mono
                 [&_blockquote]:border-l-4 [&_blockquote]:border-gold [&_blockquote]:pl-4 [&_blockquote]:py-1 [&_blockquote]:my-6 [&_blockquote]:text-gray-500 [&_blockquote]:italic [&_blockquote]:bg-gray-50 [&_blockquote]:rounded-r
+                [&_a]:text-gold [&_a]:underline [&_a]:underline-offset-2 [&_a]:hover:text-yellow-500 [&_a]:transition-colors [&_a]:font-medium
+                [&_th]:bg-navy-900 [&_th]:text-white [&_th]:font-semibold [&_th]:px-4 [&_th]:py-3 [&_th]:text-left [&_th]:text-sm
+                [&_td]:border-b [&_td]:border-gray-100 [&_td]:px-4 [&_td]:py-3 [&_td]:text-gray-600 [&_td]:align-top
+                [&_tr:last-child_td]:border-b-0
               "
               dangerouslySetInnerHTML={{ __html: html }}
             />

@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import CurtainsContent from "./CurtainsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Curtains Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan curtain manufacturer for wholesale buyers and interior brands in USA, UK and Europe. Custom blackout, sheer, lined and jacquard curtains.",
+  canonical: "/hometextile/bedlinen/curtains/",
+  ogImage: "/images/og/curtains-og.webp",
+  ogImageAlt: "Pakistan curtain manufacturer — blackout and jacquard curtains for wholesale buyers in USA, UK and Europe",
   keywords: [
     "curtains manufacturer Pakistan",
     "blackout curtains wholesale Pakistan",
@@ -16,34 +19,7 @@ export const metadata: Metadata = {
     "wholesale curtains UK Europe",
     "curtain panels manufacturer Pakistan",
   ],
-  alternates: {
-    canonical: "/hometextile/bedlinen/curtains/",
-    languages: {
-      "en": "https://mzglobaltrading.com/hometextile/bedlinen/curtains/",
-      "x-default": "https://mzglobaltrading.com/hometextile/bedlinen/curtains/",
-    },
-  },
-  openGraph: {
-    title: "Curtains Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan curtain manufacturer — custom blackout, sheer, lined and jacquard curtains for wholesale buyers in USA, UK and Europe. Rod pocket, eyelet and pinch pleat headings. OEKO-TEX certified.",
-    url: "https://mzglobaltrading.com/hometextile/bedlinen/curtains/",
-    images: [
-      {
-        url: "/images/og/curtains-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan curtain manufacturer — blackout and jacquard curtains for wholesale buyers in USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Curtains Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan curtain manufacturer — custom blackout, sheer and jacquard curtains. Rod pocket, eyelet and pinch pleat headings. OEKO-TEX certified. FOB/CIF export.",
-  },
-};
+});
 
 export default function CurtainsPage() {
   return (

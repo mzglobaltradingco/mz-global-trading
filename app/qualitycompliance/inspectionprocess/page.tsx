@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import InspectionProcessContent from "./InspectionProcessContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Inspection Process | Quality Compliance | MZ Global Trading",
   description:
     "Step-by-step inspection process at MZ Global Trading — material receipt to container loading. AQL sampling, inline checks and pre-shipment inspection.",
+  canonical: "/qualitycompliance/inspectionprocess/",
+  ogImage: "/images/og/inspection-process-og.webp",
+  ogImageAlt: "Textile inspection process — step-by-step shipment verification at MZ Global Trading",
   keywords: [
     "pre-shipment inspection process Pakistan",
     "textile inspection stages",
@@ -15,35 +18,7 @@ export const metadata: Metadata = {
     "third party inspection textile Pakistan",
     "AQL inspection apparel supplier",
   ],
-  alternates: {
-    canonical: "/qualitycompliance/inspectionprocess/",
-    languages: {
-      en: "https://mzglobaltrading.com/qualitycompliance/inspectionprocess/",
-      "x-default": "https://mzglobaltrading.com/",
-    },
-  },
-  openGraph: {
-    title: "Inspection Process | Quality & Compliance | MZ Global Trading",
-    description:
-      "From fabric inspection to container loading — our 8-stage inspection process ensures every shipment matches your approved specifications before it leaves Pakistan.",
-    url: "https://mzglobaltrading.com/qualitycompliance/inspectionprocess/",
-    images: [
-      {
-        url: "/images/og/inspection-process-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Textile inspection process — step-by-step shipment verification at MZ Global Trading",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Inspection Process | Quality & Compliance | MZ Global Trading",
-    description:
-      "8-stage inspection process — from fabric receipt to container loading — on every shipment from Pakistan.",
-  },
-};
+});
 
 const pageSchema = {
   "@context": "https://schema.org",

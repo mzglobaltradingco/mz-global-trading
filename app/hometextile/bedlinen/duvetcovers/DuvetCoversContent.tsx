@@ -673,26 +673,26 @@ export default function DuvetCoversContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Link href="/knowledge/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link href="/knowledge/duvet-cover-closure-types/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📚</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
-              <p className="font-semibold text-navy-900">Bed Linen Buying Guide</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Thread count, construction and closure selection for international bedding buyers.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Explore Hub →</span>
+              <p className="font-semibold text-navy-900">Duvet Cover Closure Types</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Buttons, zips, poppers and envelope closures compared — laundry durability, market preference and specification guide.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
             </Link>
-            <Link href="/guides/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link href="/guides/sourcing-duvet-covers-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📄</span>
-              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Guides</p>
-              <p className="font-semibold text-navy-900">Pakistan Home Textile Export Guide</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Sourcing process, lead times and certification requirements for bed linen programmes.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guides →</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
+              <p className="font-semibold text-navy-900">Sourcing Duvet Covers from Pakistan</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Fabric, closure selection, size ranges and certification — complete sourcing guide for hotel, retail and institutional programmes.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Guide →</span>
             </Link>
-            <Link href="/downloads/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link href="/downloads/duvet-cover-spec-order-sheet/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">⬇️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
-              <p className="font-semibold text-navy-900">Size Charts &amp; Spec Sheets</p>
-              <p className="text-xs text-gray-500 leading-relaxed">UK, US and EU size charts and construction specification sheets for duvet covers.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Downloads →</span>
+              <p className="font-semibold text-navy-900">Duvet Cover Spec &amp; Order Sheet</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Fill-in template covering fabric, closure, size range table, certification and logistics fields for duvet cover programmes.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Download →</span>
             </Link>
             <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">✉️</span>

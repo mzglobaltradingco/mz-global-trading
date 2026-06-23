@@ -1,41 +1,17 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import ContactUsContent from "./ContactUsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Contact Us | MZ Global Trading",
   description:
     "Contact MZ Global Trading — Pakistan's B2B textile sourcing partner for brands and retailers in USA, UK, Canada, Europe and South America.",
+  canonical: "/contact-us/",
+  ogImage: "/images/og/contact-us-og.webp",
+  ogImageAlt: "Contact MZ Global Trading — Pakistan B2B Textile Sourcing",
   keywords: ["contact MZ Global Trading", "textile sourcing enquiry", "Pakistan textile supplier contact"],
-  alternates: {
-    canonical: "/contact-us/",
-    languages: {
-      "en": "https://mzglobaltrading.com/contact-us/",
-      "x-default": "https://mzglobaltrading.com/contact-us/",
-    },
-  },
-  openGraph: {
-    title: "Contact Us | MZ Global Trading",
-    description:
-      "Reach out to MZ Global Trading — Pakistan's trusted B2B textile sourcing partner. We respond to all enquiries within one business day.",
-    url: "https://mzglobaltrading.com/contact-us/",
-    images: [
-      {
-        url: "/images/og/contact-us-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Contact MZ Global Trading — Pakistan B2B Textile Sourcing",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Contact Us | MZ Global Trading",
-    description:
-      "Reach out to MZ Global Trading — Pakistan's trusted B2B textile sourcing partner. Response within one business day.",
-  },
-};
+});
 
 export default function ContactUsPage() {
   return (

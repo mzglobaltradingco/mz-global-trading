@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BabyRompersContent from "./BabyRompersContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Baby Rompers Manufacturer Pakistan | OEM Infant Bodysuits",
   description:
     "Pakistan OEM baby rompers and bodysuits — GOTS & OEKO-TEX Class 1 certified organic cotton. Snap crotch, envelope neckline. Newborn to 24 months.",
+  canonical: "/apparel/babyandkids/babyrompers/",
+  ogImage: "/images/og/baby-rompers-og.webp",
+  ogImageAlt: "Pakistan baby rompers manufacturer — OEM organic cotton infant bodysuits for USA, UK and Europe",
   keywords: [
     "baby rompers manufacturer Pakistan",
     "infant bodysuits OEM Pakistan",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "newborn romper supplier Pakistan",
     "baby bodysuit OEM export",
   ],
-  alternates: {
-    canonical: "/apparel/babyandkids/babyrompers/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/babyandkids/babyrompers/",
-      "x-default": "https://mzglobaltrading.com/apparel/babyandkids/babyrompers/",
-    },
-  },
-  openGraph: {
-    title: "Baby Rompers Manufacturer Pakistan | OEM Infant Bodysuits | MZ Global Trading",
-    description:
-      "Pakistan OEM baby rompers — GOTS & OEKO-TEX Class 1 certified organic cotton. Snap crotch, envelope neckline. Newborn to 24 months. Bulk sourcing for USA, UK and Europe.",
-    url: "https://mzglobaltrading.com/apparel/babyandkids/babyrompers/",
-    images: [
-      {
-        url: "/images/og/baby-rompers-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan baby rompers manufacturer — OEM organic cotton infant bodysuits for USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Baby Rompers Manufacturer Pakistan | OEM Infant Bodysuits | MZ Global Trading",
-    description:
-      "Pakistan OEM baby rompers — GOTS & OEKO-TEX Class 1 organic cotton. Newborn to 24 months. Bulk for USA, UK and Europe.",
-  },
-};
+});
 
 export default function BabyRompersPage() {
   const jsonLd = {

@@ -498,26 +498,26 @@ export default function BabyHoodedTowelsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Link href="/knowledge/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link href="/knowledge/baby-hooded-towel-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📚</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
-              <p className="font-semibold text-navy-900">Baby Hooded Towel Buying Guide</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Terry construction guide, GSM selection, OEKO-TEX Class 1 requirements and embroidery options for hooded towels.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Explore Hub →</span>
+              <p className="font-semibold text-navy-900">Baby Hooded Towel Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">GSM, hood styles and OEKO-TEX safety requirements for infant bath towels.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
             </Link>
-            <Link href="/guides/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link href="/guides/sourcing-baby-hooded-towels-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">📄</span>
-              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Guides</p>
-              <p className="font-semibold text-navy-900">Baby Textile Export Guide</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Sourcing process, OEKO-TEX and GOTS requirements for baby linen and towel programmes.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guides →</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
+              <p className="font-semibold text-navy-900">Baby Hooded Towels Sourcing Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Certified fabric, custom embroidery and gifting options for international buyers.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guide →</span>
             </Link>
-            <Link href="/downloads/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link href="/downloads/baby-hooded-towel-spec-template/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">⬇️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
-              <p className="font-semibold text-navy-900">Hooded Towel Spec Sheets</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Baby hooded towel construction specs, GSM options and OEKO-TEX certification documentation.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Downloads →</span>
+              <p className="font-semibold text-navy-900">Baby Hooded Towel Spec Template</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Specification template for baby hooded towel sourcing.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Template →</span>
             </Link>
             <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">✉️</span>

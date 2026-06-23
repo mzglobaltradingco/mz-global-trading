@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import ShopTowelsContent from "./ShopTowelsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Shop Towels Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan shop towel manufacturer supplying heavy cotton terry and huck weave shop rags for automotive workshops, dealerships and industrial facilities. 300–450 GSM. ISO 9001, BSCI. Export to USA, Canada, UK.",
+  canonical: "/hometextile/industriallinen/shoptowels/",
+  ogImage: "/images/og/shop-towels-og.webp",
+  ogImageAlt: "Pakistan shop towel manufacturer — heavy cotton terry and huck weave shop rags for automotive and industrial buyers worldwide",
   keywords: [
     "shop towels manufacturer Pakistan",
     "shop rags wholesale Pakistan",
@@ -18,35 +21,7 @@ export const metadata: Metadata = {
     "auto workshop towels export",
     "janitorial supply towels Pakistan",
   ],
-  alternates: {
-    canonical: "/hometextile/industriallinen/shoptowels/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/industriallinen/shoptowels/",
-      "x-default": "https://mzglobaltrading.com/hometextile/industriallinen/shoptowels/",
-    },
-  },
-  openGraph: {
-    title: "Shop Towels Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Heavy cotton terry and huck weave shop towels from Pakistan. 300–450 GSM. Oil and grease absorbent. ISO 9001, BSCI, WRAP. Bulk export to USA automotive workshops, dealerships and industrial facilities.",
-    url: "https://mzglobaltrading.com/hometextile/industriallinen/shoptowels/",
-    images: [
-      {
-        url: "/images/og/shop-towels-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan shop towel manufacturer — heavy cotton terry and huck weave shop rags for automotive and industrial buyers worldwide",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Shop Towels Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Heavy cotton terry shop towels from Pakistan. 300–450 GSM. Oil-absorbent. ISO 9001, BSCI. Bulk export to USA, Canada, UK automotive and industrial sectors.",
-  },
-};
+});
 
 export default function ShopTowelsPage() {
   return (

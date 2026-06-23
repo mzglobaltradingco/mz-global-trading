@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import CareersContent from "./CareersContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Careers at MZ Global Trading | Textile Sourcing Jobs",
   description:
     "Build a career in B2B textile sourcing at MZ Global Trading. Roles in sourcing, QC, operations and business development — based in Karachi, Pakistan.",
+  canonical: "/careers/",
+  ogImage: "/images/og/hero-careers.webp",
+  ogImageAlt: "Careers at MZ Global Trading — textile sourcing jobs in Karachi, Pakistan",
   keywords: [
     "careers MZ Global Trading",
     "textile sourcing jobs Karachi",
@@ -16,35 +19,7 @@ export const metadata: Metadata = {
     "B2B sourcing careers",
     "international trade jobs Karachi",
   ],
-  alternates: {
-    canonical: "/careers/",
-    languages: {
-      en: "https://mzglobaltrading.com/careers/",
-      "x-default": "https://mzglobaltrading.com/",
-    },
-  },
-  openGraph: {
-    title: "Careers at MZ Global Trading | Textile Sourcing Jobs",
-    description:
-      "Join the team behind Pakistan's B2B textile sourcing. Explore roles in sourcing, QC, business development and operations at MZ Global Trading.",
-    url: "https://mzglobaltrading.com/careers/",
-    images: [
-      {
-        url: "/images/og/hero-careers.webp",
-        width: 1200,
-        height: 630,
-        alt: "Careers at MZ Global Trading — textile sourcing jobs in Karachi, Pakistan",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Careers at MZ Global Trading | Textile Sourcing Jobs",
-    description:
-      "Join the team behind Pakistan's B2B textile sourcing. Roles in sourcing, QC, business development and operations.",
-  },
-};
+});
 
 const pageSchema = {
   "@context": "https://schema.org",

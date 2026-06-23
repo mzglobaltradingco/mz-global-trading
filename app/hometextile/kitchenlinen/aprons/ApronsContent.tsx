@@ -598,20 +598,27 @@ export default function ApronsContent() {
       <section className="bg-gray-50 py-12 lg:py-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Resources</p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-            <Link href="/guides/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
-              <span className="text-2xl" aria-hidden="true">📄</span>
-              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Guides</p>
-              <p className="font-semibold text-navy-900">Apron Sourcing &amp; Construction Guide</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Construction selection, decoration methods and certification requirements for apron programmes.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guides →</span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link href="/knowledge/apron-fabric-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📚</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
+              <p className="font-semibold text-navy-900">Apron Fabric Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Canvas, denim and poly-cotton constructions — how to choose the right fabric for your apron programme.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
             </Link>
-            <Link href="/downloads/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+            <Link href="/guides/sourcing-aprons-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📄</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
+              <p className="font-semibold text-navy-900">Sourcing Aprons from Pakistan</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Chef, bib and waist styles with custom branding — step-by-step sourcing guide.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Guide →</span>
+            </Link>
+            <Link href="/downloads/apron-spec-template/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">⬇️</span>
               <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
-              <p className="font-semibold text-navy-900">Apron Specification Templates</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Construction spec sheets and OEM programme templates for branded apron buyers.</p>
-              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Downloads →</span>
+              <p className="font-semibold text-navy-900">Apron Specification Template</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Fill-in spec form for fabric, style, pocket configuration, branding method and certification scope.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Template →</span>
             </Link>
             <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-2xl" aria-hidden="true">✉️</span>

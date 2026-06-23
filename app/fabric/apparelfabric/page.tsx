@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import ApparelFabricContent from "./ApparelFabricContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Apparel Fabric Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan apparel fabric supplier for garment manufacturers in USA, UK and Europe. Knitted and woven — jersey to canvas. GOTS, OEKO-TEX certified.",
+  canonical: "/fabric/apparelfabric/",
+  ogImage: "/images/og/apparel-fabric-og.webp",
+  ogImageAlt: "Pakistan apparel fabric manufacturer — knitted and woven fabric rolls for garment manufacturers in USA, UK and Europe",
   keywords: [
     "apparel fabric manufacturer Pakistan",
     "knitted fabric supplier Pakistan",
@@ -19,35 +22,7 @@ export const metadata: Metadata = {
     "OEKO-TEX fabric Pakistan",
     "textile fabric wholesale Pakistan",
   ],
-  alternates: {
-    canonical: "/fabric/apparelfabric/",
-    languages: {
-      "en": "https://mzglobaltrading.com/fabric/apparelfabric/",
-      "x-default": "https://mzglobaltrading.com/fabric/apparelfabric/",
-    },
-  },
-  openGraph: {
-    title: "Apparel Fabric Manufacturer Pakistan | Knitted & Woven Fabric Export | MZ Global Trading",
-    description:
-      "Pakistan apparel fabric supplier for garment manufacturers worldwide. Knitted and woven fabric rolls, 80–450 GSM. OEKO-TEX, GOTS, BSCI certified. FOB / CIF export.",
-    url: "https://mzglobaltrading.com/fabric/apparelfabric/",
-    images: [
-      {
-        url: "/images/og/apparel-fabric-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan apparel fabric manufacturer — knitted and woven fabric rolls for garment manufacturers in USA, UK and Europe",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Apparel Fabric Manufacturer Pakistan | Knitted & Woven Fabric Export | MZ Global Trading",
-    description:
-      "Knitted and woven apparel fabric from Pakistan's certified mills. 80–450 GSM. Single jersey, french terry, denim, twill, canvas. GOTS, OEKO-TEX certified.",
-  },
-};
+});
 
 export default function ApparelFabricPage() {
   return (

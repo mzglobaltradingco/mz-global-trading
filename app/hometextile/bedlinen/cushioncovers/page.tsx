@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import CushionCoversContent from "./CushionCoversContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Cushion Covers Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan cushion cover manufacturer for wholesale buyers in USA, UK and Europe. Cotton, linen, woven and printed. GOTS, OEKO-TEX certified. FOB/CIF.",
+  canonical: "/hometextile/bedlinen/cushioncovers/",
+  ogImage: "/images/og/cushion-covers-og.webp",
+  ogImageAlt: "Pakistan cushion cover manufacturer — decorative pillow covers for wholesale buyers in USA, UK and Europe",
   keywords: [
     "cushion covers manufacturer Pakistan",
     "decorative pillow covers wholesale",
@@ -16,34 +19,7 @@ export const metadata: Metadata = {
     "cushion covers wholesale UK",
     "pakistan home textile export",
   ],
-  alternates: {
-    canonical: "/hometextile/bedlinen/cushioncovers/",
-    languages: {
-      "en": "https://mzglobaltrading.com/hometextile/bedlinen/cushioncovers/",
-      "x-default": "https://mzglobaltrading.com/hometextile/bedlinen/cushioncovers/",
-    },
-  },
-  openGraph: {
-    title: "Cushion Covers Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan cushion cover manufacturer for wholesale buyers and interior brands. Custom decorative pillow covers in cotton, linen and jacquard. Zip, button and envelope closure. OEKO-TEX certified.",
-    url: "https://mzglobaltrading.com/hometextile/bedlinen/cushioncovers/",
-    images: [
-      {
-        url: "/images/og/cushion-covers-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan cushion cover manufacturer — decorative pillow covers for wholesale buyers in USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Cushion Covers Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan cushion cover manufacturer — custom decorative pillow covers in cotton, linen and jacquard. OEKO-TEX certified. FOB/CIF export.",
-  },
-};
+});
 
 export default function CushionCoversPage() {
   return (

@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import PatientGownsContent from "./PatientGownsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Patient Gowns Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan patient gown manufacturer for hospitals and aged care. Cotton and poly-cotton constructions. Anti-bacterial, autoclave safe. ISO 9001, BSCI certified export.",
+  canonical: "/hometextile/hospitallinen/patientgowns/",
+  ogImage: "/images/og/patient-gowns-og.webp",
+  ogImageAlt: "Pakistan patient gown manufacturer — cotton and poly-cotton hospital patient gowns for healthcare buyers worldwide",
   keywords: [
     "patient gowns manufacturer Pakistan",
     "hospital gown supplier Pakistan",
@@ -18,35 +21,7 @@ export const metadata: Metadata = {
     "ISO 9001 patient gown Pakistan",
     "institutional patient gown supply",
   ],
-  alternates: {
-    canonical: "/hometextile/hospitallinen/patientgowns/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/hospitallinen/patientgowns/",
-      "x-default":
-        "https://mzglobaltrading.com/hometextile/hospitallinen/patientgowns/",
-    },
-  },
-  openGraph: {
-    title: "Patient Gowns Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Patient gowns sourced from Pakistan's ISO-certified healthcare textile facilities. 100% cotton, TC poly-cotton, jersey knit wrap-style. Anti-bacterial, autoclave safe. Adult, pediatric. ISO 9001, BSCI certified.",
-    url: "https://mzglobaltrading.com/hometextile/hospitallinen/patientgowns/",
-    images: [
-      {
-        url: "/images/og/patient-gowns-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan patient gown manufacturer — cotton and poly-cotton hospital patient gowns for healthcare buyers worldwide",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Patient Gowns Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan patient gowns — cotton, poly-cotton, jersey knit. Adult and pediatric. Anti-bacterial, autoclave safe. ISO 9001, BSCI certified. Export worldwide.",
-  },
-};
+});
 
 export default function PatientGownsPage() {
   return (

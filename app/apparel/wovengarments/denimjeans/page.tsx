@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import DenimJeansContent from "./DenimJeansContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Denim Jeans Manufacturer Pakistan | MZ Global Trading",
   description:
     "Source custom denim jeans from Pakistan's certified woven garment factories. Rigid, stretch 98/2, raw and recycled cotton denim. 8–14 oz.",
+  canonical: "/apparel/wovengarments/denimjeans/",
+  ogImage: "/images/og/denim-jeans-og.webp",
+  ogImageAlt: "Pakistan denim jeans manufacturer — OEM rigid and stretch denim for fashion brands in USA, UK and Europe",
   keywords: [
     "denim jeans manufacturer Pakistan",
     "custom denim jeans OEM",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "selvedge denim Pakistan",
     "OEKO-TEX denim jeans",
   ],
-  alternates: {
-    canonical: "/apparel/wovengarments/denimjeans/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/wovengarments/denimjeans/",
-      "x-default": "https://mzglobaltrading.com/apparel/wovengarments/denimjeans/",
-    },
-  },
-  openGraph: {
-    title: "Denim Jeans Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Custom denim jeans sourced from Pakistan's certified woven garment factories. Rigid, stretch 98/2, raw and recycled cotton denim. 8–14 oz. OEKO-TEX, GOTS available.",
-    url: "https://mzglobaltrading.com/apparel/wovengarments/denimjeans/",
-    images: [
-      {
-        url: "/images/og/denim-jeans-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan denim jeans manufacturer — OEM rigid and stretch denim for fashion brands in USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Denim Jeans Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Custom denim jeans from Pakistan's certified factories. Rigid, stretch 98/2, raw and recycled cotton. 8–14 oz. OEKO-TEX, GOTS available.",
-  },
-};
+});
 
 export default function DenimJeansPage() {
   return (

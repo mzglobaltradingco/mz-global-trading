@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import FleeceThermalBlanketsContent from "./FleeceThermalBlanketsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Fleece Thermal Blankets Manufacturer Pakistan | MZ Global",
   description:
     "Pakistan fleece blanket manufacturer — anti-pill polar fleece, sherpa and jacquard thermal blankets for retail, promotional and institutional buyers. GRS, OEKO-TEX, BSCI. Export worldwide.",
+  canonical: "/hometextile/thermalblankets/fleecethermalblankets/",
+  ogImage: "/images/og/fleece-thermal-blankets-og.webp",
+  ogImageAlt: "Pakistan fleece thermal blanket manufacturer — anti-pill polar fleece and sherpa blankets for retail and promotional buyers worldwide",
   keywords: [
     "fleece blankets manufacturer Pakistan",
     "polar fleece blankets wholesale Pakistan",
@@ -17,35 +20,7 @@ export const metadata: Metadata = {
     "GRS recycled fleece blankets",
     "institutional fleece blankets supplier",
   ],
-  alternates: {
-    canonical: "/hometextile/thermalblankets/fleecethermalblankets/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/thermalblankets/fleecethermalblankets/",
-      "x-default": "https://mzglobaltrading.com/hometextile/thermalblankets/fleecethermalblankets/",
-    },
-  },
-  openGraph: {
-    title: "Fleece Thermal Blankets Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Anti-pill polar fleece, sherpa double-sided and jacquard woven thermal blankets sourced from Pakistan. 150–300 GSM. GRS recycled polyester, OEKO-TEX, BSCI. Retail, promotional and institutional export worldwide.",
-    url: "https://mzglobaltrading.com/hometextile/thermalblankets/fleecethermalblankets/",
-    images: [
-      {
-        url: "/images/og/fleece-thermal-blankets-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan fleece thermal blanket manufacturer — anti-pill polar fleece and sherpa blankets for retail and promotional buyers worldwide",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Fleece Thermal Blankets Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Anti-pill polar fleece, sherpa and jacquard blankets from Pakistan. 150–300 GSM. GRS recycled. OEKO-TEX, BSCI. Retail and promotional export.",
-  },
-};
+});
 
 export default function FleeceThermalBlanketsPage() {
   return (

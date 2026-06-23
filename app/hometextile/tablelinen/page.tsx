@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TableLinenContent from "./TableLinenContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Table Linen Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan table linen manufacturer for hotels, restaurants and events. Cotton damask, jacquard, satin weave table covers. Custom dimensions. OEKO-TEX, BSCI certified.",
+  canonical: "/hometextile/tablelinen/",
+  ogImage: "/images/og/table-linen-og.webp",
+  ogImageAlt: "Pakistan table linen manufacturer — hotel and banquet table covers for hospitality buyers worldwide",
   keywords: [
     "table linen manufacturer Pakistan",
     "table covers wholesale Pakistan",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "banquet linen manufacturer",
     "OEKO-TEX table linen Pakistan",
   ],
-  alternates: {
-    canonical: "/hometextile/tablelinen/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/tablelinen/",
-      "x-default": "https://mzglobaltrading.com/hometextile/tablelinen/",
-    },
-  },
-  openGraph: {
-    title: "Table Linen Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan-sourced table linen for hospitality, events and food service. Cotton damask, jacquard, satin weave, poly-cotton. Custom dimensions and branding. OEKO-TEX, BSCI certified export.",
-    url: "https://mzglobaltrading.com/hometextile/tablelinen/",
-    images: [
-      {
-        url: "/images/og/table-linen-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan table linen manufacturer — hotel and banquet table covers for hospitality buyers worldwide",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Table Linen Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan table linen — cotton damask, jacquard, satin weave. Hotels, restaurants, events. Custom dimensions. OEKO-TEX, BSCI certified export.",
-  },
-};
+});
 
 export default function TableLinenPage() {
   return (

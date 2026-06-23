@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BedsheetContent from "./BedsheetContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Bedsheets Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan bedsheet manufacturer for wholesale buyers in USA, UK and Europe. Percale, sateen, jacquard and microfiber. GOTS, OEKO-TEX certified. FOB/CIF export.",
+  canonical: "/hometextile/bedlinen/bedsheets/",
+  ogImage: "/images/og/bedsheets-og.webp",
+  ogImageAlt: "Pakistan bedsheet manufacturer — wholesale cotton percale and sateen sheets for USA, UK and Europe",
   keywords: [
     "bedsheets manufacturer Pakistan",
     "cotton bedsheets wholesale",
@@ -15,34 +18,7 @@ export const metadata: Metadata = {
     "custom bedsheets export Pakistan",
     "hotel bedsheets wholesale",
   ],
-  alternates: {
-    canonical: "/hometextile/bedlinen/bedsheets/",
-    languages: {
-      "en": "https://mzglobaltrading.com/hometextile/bedlinen/bedsheets/",
-      "x-default": "https://mzglobaltrading.com/hometextile/bedlinen/bedsheets/",
-    },
-  },
-  openGraph: {
-    title: "Bedsheets Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan bedsheet manufacturer for wholesale buyers in USA, UK and Europe. Percale, sateen, jacquard and microfiber. GOTS, OEKO-TEX certified. FOB/CIF export.",
-    url: "https://mzglobaltrading.com/hometextile/bedlinen/bedsheets/",
-    images: [
-      {
-        url: "/images/og/bedsheets-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan bedsheet manufacturer — wholesale cotton percale and sateen sheets for USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Bedsheets Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan bedsheet manufacturer — percale, sateen, jacquard and microfiber. GOTS, OEKO-TEX certified. FOB/CIF export.",
-  },
-};
+});
 
 export default function BedsheetPage() {
   return (

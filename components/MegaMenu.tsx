@@ -210,7 +210,7 @@ const navItems: NavItem[] = [
             { label: "Pillow Covers",  href: "/hometextile/bedlinen/pillowcovers/",  img: "/images/menu/menu-pillowcovers.webp",  imgAlt: "Pakistan pillow cover manufacturer — custom cotton and satin pillowcases wholesale" },
             { label: "Cushion Covers",        href: "/hometextile/bedlinen/cushioncovers/",         img: "/images/menu/menu-cushioncovers.webp",        imgAlt: "Pakistan cushion cover manufacturer — custom decorative pillow covers wholesale" },
             { label: "Curtains",              href: "/hometextile/bedlinen/curtains/",               img: "/images/menu/menu-curtains.webp",             imgAlt: "Pakistan curtain manufacturer — custom woven and printed curtains wholesale export" },
-            { label: "Institutional Bedding", href: "/hometextile/bedlinen/institutionalbedding/",   img: "/images/menu/menu-institutionaltowels.webp",  imgAlt: "Pakistan institutional bedding manufacturer — hotel and hospital bed linen wholesale" },
+            { label: "Institutional Bedding", href: "/hometextile/bedlinen/institutionalbedding/",   img: "/images/menu/menu-bedsheets.webp",            imgAlt: "Pakistan institutional bedding manufacturer — hotel and hospital bed linen wholesale" },
           ],
         },
         {

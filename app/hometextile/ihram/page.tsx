@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import IhramContent from "./IhramContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Ihram Sets Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan ihram manufacturer supplying plain white cotton ihram sets for Hajj and Umrah. Three weave constructions: plain weave, terry, dobby stripe.",
+  canonical: "/hometextile/ihram/",
+  ogImage: "/images/og/ihram-og.webp",
+  ogImageAlt: "Pakistan ihram manufacturer — plain white cotton ihram sets for Hajj and Umrah pilgrims worldwide",
   keywords: [
     "ihram manufacturer Pakistan",
     "ihram sets wholesale Pakistan",
@@ -18,35 +21,7 @@ export const metadata: Metadata = {
     "OEKO-TEX ihram manufacturer",
     "hajj operator ihram supply",
   ],
-  alternates: {
-    canonical: "/hometextile/ihram/",
-    languages: {
-      "en": "https://mzglobaltrading.com/hometextile/ihram/",
-      "x-default": "https://mzglobaltrading.com/hometextile/ihram/",
-    },
-  },
-  openGraph: {
-    title: "Ihram Sets Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Plain white cotton Ihram sets sourced from Pakistan's certified weaving mills. Plain weave, terry and dobby stripe constructions. 200–350 GSM. GOTS, OEKO-TEX. FOB / CIF export to Saudi Arabia, UAE, Malaysia and worldwide.",
-    url: "https://mzglobaltrading.com/hometextile/ihram/",
-    images: [
-      {
-        url: "/images/og/ihram-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan ihram manufacturer — plain white cotton ihram sets for Hajj and Umrah pilgrims worldwide",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Ihram Sets Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Plain white cotton Ihram sets from Pakistan's certified weaving mills. Plain weave, terry and dobby stripe. 200–350 GSM. GOTS, OEKO-TEX. Export to Saudi Arabia, UAE, Malaysia and worldwide.",
-  },
-};
+});
 
 export default function IhramPage() {
   return (

@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import SupplierEvaluationContent from "./SupplierEvaluationContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Supplier Evaluation | Quality Compliance | MZ Global Trading",
   description:
     "How MZ Global Trading vets every factory before onboarding — a rigorous 4-stage evaluation covering capacity, certifications and compliance standards.",
+  canonical: "/qualitycompliance/supplierevaluation/",
+  ogImage: "/images/og/supplier-evaluation-og.webp",
+  ogImageAlt: "Supplier evaluation process — factory vetting and compliance audit at MZ Global Trading",
   keywords: [
     "supplier evaluation textile Pakistan",
     "factory vetting process sourcing",
@@ -15,35 +18,7 @@ export const metadata: Metadata = {
     "supplier qualification textile manufacturer",
     "factory onboarding process B2B",
   ],
-  alternates: {
-    canonical: "/qualitycompliance/supplierevaluation/",
-    languages: {
-      en: "https://mzglobaltrading.com/qualitycompliance/supplierevaluation/",
-      "x-default": "https://mzglobaltrading.com/",
-    },
-  },
-  openGraph: {
-    title: "Supplier Evaluation | Quality & Compliance | MZ Global Trading",
-    description:
-      "Only 1 in 3 factories we review makes it into our network. See our 4-stage supplier evaluation process — capacity audit, compliance review, on-site visit and pilot order.",
-    url: "https://mzglobaltrading.com/qualitycompliance/supplierevaluation/",
-    images: [
-      {
-        url: "/images/og/supplier-evaluation-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Supplier evaluation process — factory vetting and compliance audit at MZ Global Trading",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Supplier Evaluation | Quality & Compliance | MZ Global Trading",
-    description:
-      "A 4-stage supplier evaluation — capability, compliance, on-site audit and pilot order — before any factory joins our network.",
-  },
-};
+});
 
 const pageSchema = {
   "@context": "https://schema.org",

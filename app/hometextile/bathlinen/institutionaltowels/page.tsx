@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import InstitutionalTowelsContent from "./InstitutionalTowelsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Institutional Towel Supplier Pakistan | MZ Global Trading",
   description:
     "Pakistan institutional towel manufacturer — 400–550 GSM plain white and dobby border terry for hotels, hospitals and laundry services. Case packs of 120.",
+  canonical: "/hometextile/bathlinen/institutionaltowels/",
+  ogImage: "/images/og/institutional-towels-og.webp",
+  ogImageAlt: "Pakistan institutional towel manufacturer — bulk hotel and healthcare terry supply, 400–550 GSM, case packs of 120",
   keywords: [
     "institutional towel manufacturer Pakistan",
     "bulk hotel towels Pakistan",
@@ -19,34 +22,7 @@ export const metadata: Metadata = {
     "commercial laundry towels supplier",
     "OEM institutional terry",
   ],
-  alternates: {
-    canonical: "/hometextile/bathlinen/institutionaltowels/",
-    languages: {
-      "en": "https://mzglobaltrading.com/hometextile/bathlinen/institutionaltowels/",
-      "x-default": "https://mzglobaltrading.com/hometextile/bathlinen/institutionaltowels/",
-    },
-  },
-  openGraph: {
-    title: "Institutional Towel Manufacturer Pakistan | Bulk Hotel & Healthcare Terry Supply",
-    description:
-      "Pakistan institutional towel manufacturer — 400–550 GSM plain white and dobby border terry for hotels, hospitals and commercial laundry. Case packs of 120. OEKO-TEX and GOTS certified.",
-    url: "https://mzglobaltrading.com/hometextile/bathlinen/institutionaltowels/",
-    images: [
-      {
-        url: "/images/og/institutional-towels-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan institutional towel manufacturer — bulk hotel and healthcare terry supply, 400–550 GSM, case packs of 120",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Institutional Towel Manufacturer Pakistan | Bulk Hotel & Healthcare Terry",
-    description:
-      "Bulk hotel and healthcare terry from Pakistan — 400–550 GSM plain white and dobby border terry. Case packs of 120. OEKO-TEX, GOTS, ISO 9001 certified.",
-  },
-};
+});
 
 export default function InstitutionalTowelsPage() {
   return (

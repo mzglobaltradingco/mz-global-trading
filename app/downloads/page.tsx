@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import DownloadsContent from "./DownloadsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Downloads | MZ Global Trading",
   description:
     "Free textile trade documents — company profile, AQL tables, inspection checklists, Tech Pack templates and incoterms references. For B2B buyers.",
+  canonical: "/downloads/",
+  ogImage: "/images/og/hero-our-process.webp",
+  ogImageAlt: "MZ Global Trading resource downloads — textile buyer documentation and templates",
   keywords: [
     "textile supplier company profile download",
     "AQL inspection checklist download",
@@ -14,35 +17,7 @@ export const metadata: Metadata = {
     "textile sourcing documentation",
     "Pakistan manufacturer profile PDF",
   ],
-  alternates: {
-    canonical: "/downloads/",
-    languages: {
-      "en": "https://mzglobaltrading.com/downloads/",
-      "x-default": "https://mzglobaltrading.com/downloads/",
-    },
-  },
-  openGraph: {
-    title: "Resource Downloads | MZ Global Trading",
-    description:
-      "Company profile, inspection checklists, Tech Pack templates and trade documentation — practical resources for textile buyers.",
-    url: "https://mzglobaltrading.com/downloads/",
-    images: [
-      {
-        url: "/images/og/hero-our-process.webp",
-        width: 1200,
-        height: 630,
-        alt: "MZ Global Trading resource downloads — textile buyer documentation and templates",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Resource Downloads | MZ Global Trading",
-    description:
-      "Company profile, AQL checklists, Tech Pack templates and trade guides — read online, print or save as PDF.",
-  },
-};
+});
 
 const pageSchema = {
   "@context": "https://schema.org",

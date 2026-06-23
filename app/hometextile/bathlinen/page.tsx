@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BathLinenContent from "./BathLinenContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Bath Linen Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan bath linen manufacturer — towels, institutional towels, bathrobes, bath mats, beach and pool towels. Terry loop, velour, zero-twist constructions. OEKO-TEX, GOTS. Export worldwide.",
+  canonical: "/hometextile/bathlinen/",
+  ogImage: "/images/og/bath-linen-og.webp",
+  ogImageAlt: "Pakistan bath linen manufacturer — towels, bathrobes and bath mats supplier for hotels and retailers worldwide",
   keywords: [
     "bath linen manufacturer Pakistan",
     "towel manufacturer Pakistan",
@@ -18,34 +21,7 @@ export const metadata: Metadata = {
     "OEKO-TEX towel manufacturer Pakistan",
     "GOTS certified bath linen Pakistan",
   ],
-  alternates: {
-    canonical: "/hometextile/bathlinen/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/bathlinen/",
-      "x-default": "https://mzglobaltrading.com/hometextile/bathlinen/",
-    },
-  },
-  openGraph: {
-    title: "Bath Linen Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan bath linen manufacturer supplying towels, institutional towels, bathrobes, bath mats and beach & pool towels. Terry loop, velour, zero-twist, waffle constructions. 300–900 GSM. OEKO-TEX, GOTS, BSCI, ISO 9001 certified. FOB/CIF export to USA, UK, EU, Middle East.",
-    url: "https://mzglobaltrading.com/hometextile/bathlinen/",
-    images: [
-      {
-        url: "/images/og/bath-linen-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan bath linen manufacturer — towels, bathrobes and bath mats supplier for hotels and retailers worldwide",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Bath Linen Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Towels, institutional towels, bathrobes, bath mats and beach towels from Pakistan's certified terry mills. OEKO-TEX, GOTS, BSCI. FOB/CIF export worldwide.",
-  },
-};
+});
 
 export default function BathLinenPage() {
   return (

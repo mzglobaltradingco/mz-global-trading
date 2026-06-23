@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TowelsContent from "./TowelsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Towel Manufacturer Pakistan | Bath Towels Wholesale OEM",
   description:
     "Source OEM bath towels from Pakistan — 6 weave constructions, terry loop to zero twist, OEKO-TEX & GOTS certified. Custom GSM 400–700. FOB/CIF.",
+  canonical: "/hometextile/bathlinen/towels/",
+  ogImage: "/images/og/towels-og.webp",
+  ogImageAlt: "Pakistan bath towel manufacturer — OEM terry cotton towels for hotels and retailers in USA, UK and Europe",
   keywords: [
     "towel manufacturer Pakistan",
     "bath towel wholesale OEM Pakistan",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "cotton bath towel supplier",
     "home textile manufacturer Pakistan",
   ],
-  alternates: {
-    canonical: "/hometextile/bathlinen/towels/",
-    languages: {
-      "en": "https://mzglobaltrading.com/hometextile/bathlinen/towels/",
-      "x-default": "https://mzglobaltrading.com/hometextile/bathlinen/towels/",
-    },
-  },
-  openGraph: {
-    title: "Towel Manufacturer Pakistan | Bath Towels Wholesale OEM | MZ Global Trading",
-    description:
-      "Pakistan OEM bath towel manufacturer. 6 weave constructions, OEKO-TEX and GOTS certified terry. Hotel, retail and hospitality supply for USA, UK, Europe and Middle East.",
-    url: "https://mzglobaltrading.com/hometextile/bathlinen/towels/",
-    images: [
-      {
-        url: "/images/og/towels-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan bath towel manufacturer — OEM terry cotton towels for hotels and retailers in USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Towel Manufacturer Pakistan | Bath Towels Wholesale OEM | MZ Global Trading",
-    description:
-      "Pakistan OEM bath towel manufacturer. 6 weave constructions, OEKO-TEX & GOTS certified. Hotel, retail and hospitality supply for USA, UK and Europe.",
-  },
-};
+});
 
 export default function TowelsPage() {
   const jsonLd = {

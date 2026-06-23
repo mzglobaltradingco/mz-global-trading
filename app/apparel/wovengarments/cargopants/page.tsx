@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import CargoPantsContent from "./CargoPantsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Cargo Pants Manufacturer Pakistan | MZ Global Trading",
   description:
     "Source custom cargo pants from Pakistan's certified woven factories. Ripstop, canvas, TC poly-cotton and stretch ripstop. 200–300 GSM. OEKO-TEX, BSCI.",
+  canonical: "/apparel/wovengarments/cargopants/",
+  ogImage: "/images/og/cargo-pants-og.webp",
+  ogImageAlt: "Pakistan cargo pants manufacturer — OEM ripstop and canvas cargo for outdoor, tactical and workwear brands worldwide",
   keywords: [
     "cargo pants manufacturer Pakistan",
     "cargo trousers supplier Pakistan",
@@ -16,34 +19,7 @@ export const metadata: Metadata = {
     "canvas cargo pants export",
     "outdoor pants manufacturer Pakistan",
   ],
-  alternates: {
-    canonical: "/apparel/wovengarments/cargopants/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/wovengarments/cargopants/",
-      "x-default": "https://mzglobaltrading.com/apparel/wovengarments/cargopants/",
-    },
-  },
-  openGraph: {
-    title: "Cargo Pants Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Custom cargo pants sourced from Pakistan's certified woven factories. Ripstop, canvas, TC poly-cotton and stretch ripstop. 200–300 GSM. OEKO-TEX, BSCI available.",
-    url: "https://mzglobaltrading.com/apparel/wovengarments/cargopants/",
-    images: [
-      {
-        url: "/images/og/cargo-pants-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan cargo pants manufacturer — OEM ripstop and canvas cargo for outdoor, tactical and workwear brands worldwide",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Cargo Pants Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Custom cargo pants from Pakistan's certified woven factories. Ripstop, canvas, TC poly-cotton, stretch ripstop. OEKO-TEX, BSCI available.",
-  },
-};
+});
 
 export default function CargoPantsPage() {
   return (

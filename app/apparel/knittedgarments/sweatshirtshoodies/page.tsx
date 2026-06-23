@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import HoodiesContent from "./HoodiesContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Sweatshirt & Hoodie Manufacturer Pakistan | OEM Fleece",
   description:
     "Source OEM sweatshirts and hoodies from Pakistan — French terry, loop-back fleece, brushed fleece, 300–420 GSM. GOTS and OEKO-TEX certified.",
+  canonical: "/apparel/knittedgarments/sweatshirtshoodies/",
+  ogImage: "/images/og/sweatshirts-hoodies-og.webp",
+  ogImageAlt: "Pakistan sweatshirt and hoodie manufacturer — OEM French terry and fleece hoodies for sportswear and retail brands worldwide",
   keywords: [
     "sweatshirt manufacturer Pakistan",
     "hoodie manufacturer Pakistan",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "custom sweatshirt OEM Pakistan",
     "Pakistan fleece garment exporter",
   ],
-  alternates: {
-    canonical: "/apparel/knittedgarments/sweatshirtshoodies/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/knittedgarments/sweatshirtshoodies/",
-      "x-default": "https://mzglobaltrading.com/apparel/knittedgarments/sweatshirtshoodies/",
-    },
-  },
-  openGraph: {
-    title: "Sweatshirt & Hoodie Manufacturer Pakistan | OEM Fleece | MZ Global Trading",
-    description:
-      "Pakistan OEM sweatshirt and hoodie manufacturer. French terry, loop-back fleece, brushed fleece, 300–420 GSM. GOTS and OEKO-TEX certified. Sportswear, streetwear and corporate programmes.",
-    url: "https://mzglobaltrading.com/apparel/knittedgarments/sweatshirtshoodies/",
-    images: [
-      {
-        url: "/images/og/sweatshirts-hoodies-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan sweatshirt and hoodie manufacturer — OEM French terry and fleece hoodies for sportswear and retail brands worldwide",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Sweatshirt & Hoodie Manufacturer Pakistan | OEM Fleece | MZ Global Trading",
-    description:
-      "Pakistan OEM sweatshirt and hoodie manufacturer. French terry, loop-back fleece, brushed fleece, 300–420 GSM. GOTS and OEKO-TEX certified.",
-  },
-};
+});
 
 export default function SweatshirtsHoodiesPage() {
   const jsonLd = {

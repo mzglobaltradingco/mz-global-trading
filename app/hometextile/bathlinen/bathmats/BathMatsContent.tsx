@@ -579,23 +579,38 @@ export default function BathMatsContent() {
       {/* ════════════════════════════════════════════════════════════════════════
           RESOURCES ROW
       ════════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-gray-50 py-10">
+      <section className="bg-gray-50 py-12 lg:py-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { icon: "📚", label: "Knowledge Hub", sub: "Pakistan home textile export guides", href: "/knowledge/" },
-              { icon: "📖", label: "Sourcing Guides", sub: "Construction, certification and spec guides", href: "/guides/" },
-              { icon: "📥", label: "Downloads", sub: "Specification sheets and testing documentation", href: "/downloads/" },
-              { icon: "📋", label: "Quick Start", sub: "Construction, GSM, backing, size — RFQ takes 3 minutes.", href: "/rfq/" },
-            ].map((r) => (
-              <Link key={r.label} href={r.href} className="group bg-white border border-gray-100 hover:border-gold rounded-2xl p-5 flex items-start gap-4 hover:shadow-xs transition-all">
-                <span className="text-2xl shrink-0" aria-hidden="true">{r.icon}</span>
-                <div>
-                  <p className="font-bold text-navy-900 group-hover:text-gold transition-colors text-sm">{r.label}</p>
-                  <p className="text-xs text-gray-400 mt-0.5 leading-relaxed">{r.sub}</p>
-                </div>
-              </Link>
-            ))}
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Guides &amp; Resources</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link href="/knowledge/bath-mat-construction-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📚</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
+              <p className="font-semibold text-navy-900">Bath Mat Construction: Tufted, Woven & Memory Foam Options for Buyers</p>
+              <p className="text-xs text-gray-500 leading-relaxed">GSM grades, backing types and durability compared across all five constructions.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
+            </Link>
+            <Link href="/guides/sourcing-bath-mats-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📄</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
+              <p className="font-semibold text-navy-900">Sourcing Bath Mats from Pakistan: Quality Grades & Anti-Slip Standards</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Anti-slip backing compliance, OEKO-TEX scope, MOQ and lead times for hotel and retail buyers.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Guide →</span>
+            </Link>
+            <Link href="/downloads/bath-mat-size-weight-reference/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">⬇️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
+              <p className="font-semibold text-navy-900">Bath Mat Size & Weight Reference Chart</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Standard sizes, GSM grades, backing comparison and specification order template.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Reference →</span>
+            </Link>
+            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">✉️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
+              <p className="font-semibold text-white">Ready to Source Bath Mats?</p>
+              <p className="text-xs text-gray-300 leading-relaxed">Construction, GSM, backing, size — RFQ takes 3 minutes.</p>
+              <span className="text-xs font-semibold text-gold group-hover:text-yellow-300 transition-colors mt-auto">Request a Quote →</span>
+            </Link>
           </div>
         </div>
       </section>

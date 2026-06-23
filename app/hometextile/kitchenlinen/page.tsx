@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import KitchenLinenContent from "./KitchenLinenContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Kitchen Linen Supplier Pakistan | MZ Global Trading",
   description:
     "Pakistan kitchen linen manufacturer: kitchen towels, bar mops, aprons and pot holders. OEKO-TEX, BSCI, ISO 9001 certified. FOB export to USA, UK, EU, Middle East.",
+  canonical: "/hometextile/kitchenlinen/",
+  ogImage: "/images/og/kitchen-linen-og.webp",
+  ogImageAlt: "Pakistan kitchen linen manufacturer — kitchen towels, bar mops, aprons and pot holders for F&B and hospitality buyers worldwide",
   keywords: [
     "kitchen linen manufacturer Pakistan",
     "kitchen linen supplier Pakistan",
@@ -18,34 +21,7 @@ export const metadata: Metadata = {
     "F&B linen wholesale Pakistan",
     "hospitality kitchen textiles supplier",
   ],
-  alternates: {
-    canonical: "/hometextile/kitchenlinen/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/kitchenlinen/",
-      "x-default": "https://mzglobaltrading.com/hometextile/kitchenlinen/",
-    },
-  },
-  openGraph: {
-    title: "Kitchen Linen Supplier Pakistan | MZ Global Trading",
-    description:
-      "Kitchen towels, bar mops, aprons and pot holders sourced from Pakistan's certified textile mills. OEKO-TEX, BSCI, ISO 9001. FOB / CIF export to USA, UK, EU and worldwide.",
-    url: "https://mzglobaltrading.com/hometextile/kitchenlinen/",
-    images: [
-      {
-        url: "/images/og/kitchen-linen-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan kitchen linen manufacturer — kitchen towels, bar mops, aprons and pot holders for F&B and hospitality buyers worldwide",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Kitchen Linen Supplier Pakistan | MZ Global Trading",
-    description:
-      "Kitchen towels, bar mops, aprons and pot holders from Pakistan's certified textile mills. OEKO-TEX, BSCI, ISO 9001. Export to USA, UK, EU and worldwide.",
-  },
-};
+});
 
 export default function KitchenLinenPage() {
   return (

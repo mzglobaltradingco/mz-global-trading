@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import SwaddleMuslinContent from "./SwaddleMuslinContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Swaddle Muslin Fabric Manufacturer Pakistan | OEM Baby Wraps",
   description:
     "Pakistan OEM swaddle muslin wraps — GOTS certified organic cotton double gauze. 120×120 cm and custom sizes. Baby-safe azo-free dyes.",
+  canonical: "/apparel/babyandkids/swaddlemuslinfabric/",
+  ogImage: "/images/og/swaddle-muslin-fabric-og.webp",
+  ogImageAlt: "Pakistan swaddle muslin manufacturer — GOTS organic cotton double gauze baby wraps for USA, UK and Europe",
   keywords: [
     "swaddle muslin manufacturer Pakistan",
     "muslin swaddle wrap wholesale Pakistan",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "muslin wrap OEM export Pakistan",
     "OEKO-TEX Class 1 swaddle muslin",
   ],
-  alternates: {
-    canonical: "/apparel/babyandkids/swaddlemuslinfabric/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/babyandkids/swaddlemuslinfabric/",
-      "x-default": "https://mzglobaltrading.com/apparel/babyandkids/swaddlemuslinfabric/",
-    },
-  },
-  openGraph: {
-    title: "Swaddle Muslin Fabric Manufacturer Pakistan | OEM Baby Wraps | MZ Global Trading",
-    description:
-      "Pakistan OEM swaddle muslin — GOTS certified organic cotton double gauze. 120×120 cm and custom sizes. Baby-safe. Bulk sourcing for USA, UK and Europe.",
-    url: "https://mzglobaltrading.com/apparel/babyandkids/swaddlemuslinfabric/",
-    images: [
-      {
-        url: "/images/og/swaddle-muslin-fabric-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan swaddle muslin manufacturer — GOTS organic cotton double gauze baby wraps for USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Swaddle Muslin Fabric Manufacturer Pakistan | OEM Baby Wraps | MZ Global Trading",
-    description:
-      "Pakistan OEM swaddle muslin — GOTS organic cotton double gauze. Custom sizes. Bulk sourcing for USA, UK and Europe.",
-  },
-};
+});
 
 export default function SwaddleMuslinPage() {
   const jsonLd = {

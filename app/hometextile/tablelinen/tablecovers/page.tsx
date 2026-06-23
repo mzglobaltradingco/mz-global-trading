@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TableCoversContent from "./TableCoversContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Table Covers Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan table cover manufacturer supplying hotels, banquets and event companies. Damask, jacquard, satin, poly-cotton. Custom sizes. OEKO-TEX, BSCI certified export.",
+  canonical: "/hometextile/tablelinen/tablecovers/",
+  ogImage: "/images/og/table-covers-og.webp",
+  ogImageAlt: "Pakistan table cover manufacturer — custom damask and jacquard tablecloths for hotels, restaurants and events worldwide",
   keywords: [
     "table covers manufacturer Pakistan",
     "tablecloth wholesale Pakistan",
@@ -18,35 +21,7 @@ export const metadata: Metadata = {
     "BSCI table covers Pakistan",
     "restaurant tablecloth supplier",
   ],
-  alternates: {
-    canonical: "/hometextile/tablelinen/tablecovers/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/tablelinen/tablecovers/",
-      "x-default":
-        "https://mzglobaltrading.com/hometextile/tablelinen/tablecovers/",
-    },
-  },
-  openGraph: {
-    title: "Table Covers Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Custom table covers sourced from Pakistan's certified linen mills. Cotton damask, jacquard, satin weave, poly-cotton easy-care. Custom rectangular, round and square sizes. OEKO-TEX, BSCI export.",
-    url: "https://mzglobaltrading.com/hometextile/tablelinen/tablecovers/",
-    images: [
-      {
-        url: "/images/og/table-covers-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan table cover manufacturer — custom damask and jacquard tablecloths for hotels, restaurants and events worldwide",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Table Covers Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Custom table covers from Pakistan — damask, jacquard, satin weave, poly-cotton. Hotels, banquets, events. Custom dimensions. OEKO-TEX, BSCI certified.",
-  },
-};
+});
 
 export default function TableCoversPage() {
   return (

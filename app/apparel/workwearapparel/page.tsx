@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import WorkwearContent from "./WorkwearContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Workwear Apparel Manufacturer Pakistan | MZ Global Trading",
   description:
     "Source custom workwear apparel from Pakistan's certified factories. Canvas, ripstop, FR cotton and hi-vis. 240–400 GSM. ISO 9001, BSCI, Sedex certified.",
+  canonical: "/apparel/workwearapparel/",
+  ogImage: "/images/og/workwear-apparel-og.webp",
+  ogImageAlt: "Pakistan workwear apparel manufacturer — OEM safety workwear and uniforms for industrial and trade sectors worldwide",
   keywords: [
     "workwear manufacturer Pakistan",
     "safety workwear supplier Pakistan",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "trade workwear wholesale Pakistan",
     "workwear apparel export",
   ],
-  alternates: {
-    canonical: "/apparel/workwearapparel/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/workwearapparel/",
-      "x-default": "https://mzglobaltrading.com/apparel/workwearapparel/",
-    },
-  },
-  openGraph: {
-    title: "Workwear Apparel Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Custom workwear from Pakistan's certified factories. Canvas, ripstop, FR cotton and hi-vis. 240–400 GSM. ISO 9001, BSCI, Sedex certified.",
-    url: "https://mzglobaltrading.com/apparel/workwearapparel/",
-    images: [
-      {
-        url: "/images/og/workwear-apparel-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan workwear apparel manufacturer — OEM safety workwear and uniforms for industrial and trade sectors worldwide",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Workwear Apparel Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Custom workwear from Pakistan's certified factories. Canvas, ripstop, FR cotton, hi-vis. ISO 9001, BSCI, Sedex. FOB / CIF export.",
-  },
-};
+});
 
 export default function WorkwearApparelPage() {
   return (

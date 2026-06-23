@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import PageHero from "@/components/PageHero";
@@ -649,68 +650,171 @@ function SearchableSelect({
 }) {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const [activeIdx, setActiveIdx] = useState(-1);
+  const [menuStyle, setMenuStyle] = useState<React.CSSProperties>({});
+  const inputRef = useRef<HTMLInputElement>(null);
+  const listRef = useRef<HTMLUListElement>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const listboxId = `${id}-lb`;
 
-  const filtered = query.trim()
+  const filtered = query
     ? options.filter(o => o.toLowerCase().includes(query.toLowerCase()))
     : options;
 
-  useEffect(() => {
-    function handleClick(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
-    }
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
-  }, []);
+  function reposition() {
+    const r = wrapRef.current?.getBoundingClientRect();
+    if (!r) return;
+    setMenuStyle({ position: "fixed", top: r.bottom + 4, left: r.left, width: r.width, zIndex: 9999 });
+  }
 
-  const listboxId = `${id}-listbox`;
+  function openMenu() {
+    reposition();
+    setQuery("");
+    setOpen(true);
+    setActiveIdx(value ? options.indexOf(value) : -1);
+  }
+
+  function closeMenu() {
+    setOpen(false);
+    setQuery("");
+    setActiveIdx(-1);
+  }
+
+  function pick(opt: string) {
+    onChange(opt);
+    closeMenu();
+  }
+
+  useEffect(() => {
+    if (!open) return;
+    function onDown(e: PointerEvent) {
+      if (wrapRef.current?.contains(e.target as Node)) return;
+      if (listRef.current?.contains(e.target as Node)) return;
+      closeMenu();
+    }
+    document.addEventListener("pointerdown", onDown);
+    return () => document.removeEventListener("pointerdown", onDown);
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return;
+    function onScroll() { closeMenu(); }
+    window.addEventListener("scroll", onScroll, { capture: true, passive: true });
+    return () => window.removeEventListener("scroll", onScroll, { capture: true });
+  }, [open]);
+
+  useEffect(() => {
+    if (activeIdx < 0 || !listRef.current) return;
+    (listRef.current.children[activeIdx] as HTMLElement)?.scrollIntoView({ block: "nearest" });
+  }, [activeIdx]);
+
+  function onKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+    switch (e.key) {
+      case "ArrowDown":
+        e.preventDefault();
+        if (!open) openMenu();
+        else setActiveIdx(i => Math.min(i + 1, filtered.length - 1));
+        break;
+      case "ArrowUp":
+        e.preventDefault();
+        if (open) setActiveIdx(i => Math.max(i - 1, 0));
+        break;
+      case "Enter":
+        e.preventDefault();
+        if (open && activeIdx >= 0 && filtered[activeIdx]) pick(filtered[activeIdx]);
+        else if (!open) openMenu();
+        break;
+      case "Escape":
+        e.preventDefault();
+        closeMenu();
+        break;
+      case "Tab":
+        if (open) closeMenu();
+        break;
+    }
+  }
+
+  const menu = open && typeof window !== "undefined"
+    ? createPortal(
+        <ul
+          ref={listRef}
+          id={listboxId}
+          role="listbox"
+          style={menuStyle}
+          className="bg-white border border-gray-200 rounded-lg shadow-lg max-h-52 overflow-y-auto"
+        >
+          {filtered.length === 0
+            ? <li className="px-3 py-2 text-sm text-gray-400">No results</li>
+            : filtered.map((c, i) => (
+                <li
+                  key={c}
+                  id={`${id}-o-${i}`}
+                  role="option"
+                  aria-selected={value === c}
+                  onPointerDown={e => e.preventDefault()}
+                  onClick={() => pick(c)}
+                  className={`px-3 py-2 text-sm cursor-pointer transition-colors ${
+                    i === activeIdx
+                      ? "bg-gold/10 text-navy-900 font-semibold"
+                      : value === c
+                      ? "bg-gold/5 text-navy-900"
+                      : "hover:bg-gray-50 text-gray-700"
+                  }`}
+                >
+                  {c}
+                </li>
+              ))
+          }
+        </ul>,
+        document.body
+      )
+    : null;
 
   return (
-    <div ref={ref} id={id} className="relative">
+    <div ref={wrapRef} id={id}>
       <div
-        className={`${ic(error)} flex items-center justify-between cursor-pointer`}
-        onClick={() => setOpen(v => !v)}
-        role="combobox"
-        aria-expanded={open}
-        aria-haspopup="listbox"
-        aria-controls={listboxId}
-        tabIndex={0}
-        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setOpen(v => !v); } }}
+        className={`${ic(error)} flex items-center gap-2`}
+        style={{ cursor: "text" }}
+        onClick={() => { if (!open) inputRef.current?.focus(); }}
       >
-        <span className={value ? "text-gray-900" : "text-gray-400"}>
-          {value || placeholder}
-        </span>
-        <svg className={`w-4 h-4 text-gray-400 transition-transform shrink-0 ${open ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9" /></svg>
+        <input
+          ref={inputRef}
+          type="text"
+          role="combobox"
+          aria-expanded={open}
+          aria-haspopup="listbox"
+          aria-controls={open ? listboxId : undefined}
+          aria-activedescendant={open && activeIdx >= 0 ? `${id}-o-${activeIdx}` : undefined}
+          aria-autocomplete="list"
+          placeholder={open ? (value || placeholder) : placeholder}
+          value={open ? query : value}
+          readOnly={!open}
+          className="flex-1 bg-transparent outline-none text-sm min-w-0 text-gray-900 placeholder-gray-400"
+          onFocus={() => { if (!open) openMenu(); }}
+          onChange={e => { if (open) { setQuery(e.target.value); setActiveIdx(-1); } }}
+          onKeyDown={onKeyDown}
+        />
+        <button
+          type="button"
+          tabIndex={-1}
+          onPointerDown={e => {
+            e.preventDefault();
+            if (open) closeMenu();
+            else { inputRef.current?.focus(); openMenu(); }
+          }}
+          aria-hidden="true"
+          className="shrink-0"
+        >
+          <svg
+            className={`w-4 h-4 text-gray-400 transition-transform ${open ? "rotate-180" : ""}`}
+            fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
       </div>
-      {open && (
-        <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
-          <div className="p-2 border-b border-gray-100">
-            <input
-              type="text"
-              placeholder="Search country…"
-              value={query}
-              onChange={e => setQuery(e.target.value)}
-              className="w-full px-2 py-1.5 text-sm border border-gray-200 rounded focus:outline-none focus:border-gold"
-              autoFocus
-            />
-          </div>
-          <ul id={listboxId} className="max-h-52 overflow-y-auto" role="listbox">
-            {filtered.length === 0 ? (
-              <li className="px-3 py-2 text-sm text-gray-400">No results</li>
-            ) : filtered.map(c => (
-              <li
-                key={c}
-                role="option"
-                aria-selected={value === c}
-                onClick={() => { onChange(c); setQuery(""); setOpen(false); }}
-                className={`px-3 py-2 text-sm cursor-pointer transition-colors ${value === c ? "bg-gold/10 text-navy-900 font-semibold" : "hover:bg-gray-50 text-gray-700"}`}
-              >
-                {c}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      {menu}
     </div>
   );
 }

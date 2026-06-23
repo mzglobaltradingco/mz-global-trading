@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BarMopsContent from "./BarMopsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Bar Mops Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan bar mops manufacturer: heavy terry and huck weave. 400–600 GSM commercial grade. OEKO-TEX, BSCI. Bulk export to USA, UK, Canada, Middle East, Australia.",
+  canonical: "/hometextile/kitchenlinen/barmops/",
+  ogImage: "/images/og/bar-mops-og.webp",
+  ogImageAlt: "Pakistan bar mops manufacturer — heavy terry and huck weave commercial bar mops for restaurant and foodservice buyers in USA, UK and Canada",
   keywords: [
     "bar mops manufacturer Pakistan",
     "bar mops wholesale Pakistan",
@@ -18,35 +21,7 @@ export const metadata: Metadata = {
     "huck weave bar mops supplier",
     "institutional kitchen cloths Pakistan",
   ],
-  alternates: {
-    canonical: "/hometextile/kitchenlinen/barmops/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/kitchenlinen/barmops/",
-      "x-default":
-        "https://mzglobaltrading.com/hometextile/kitchenlinen/barmops/",
-    },
-  },
-  openGraph: {
-    title: "Bar Mops Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Commercial-grade bar mops sourced from Pakistan's certified mills. Heavy terry loop and huck weave. 400–600 GSM. Anti-bacterial treatment standard. OEKO-TEX, BSCI. Bulk export to USA, UK, Canada and worldwide.",
-    url: "https://mzglobaltrading.com/hometextile/kitchenlinen/barmops/",
-    images: [
-      {
-        url: "/images/og/bar-mops-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan bar mops manufacturer — heavy terry and huck weave commercial bar mops for restaurant and foodservice buyers in USA, UK and Canada",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Bar Mops Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Bar mops from Pakistan: heavy terry and huck weave, 400–600 GSM. Anti-bacterial treatment. OEKO-TEX, BSCI. Bulk export to USA, UK, Canada.",
-  },
-};
+});
 
 export default function BarMopsPage() {
   return (

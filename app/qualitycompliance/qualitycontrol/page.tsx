@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import QualityControlContent from "./QualityControlContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Quality Control | Quality & Compliance | MZ Global Trading",
   description:
     "MZ Global Trading's end-to-end quality control process — pre-production checks, in-line inspections and AQL pre-shipment inspections by an independent QC.",
+  canonical: "/qualitycompliance/qualitycontrol/",
+  ogImage: "/images/og/quality-control-og.webp",
+  ogImageAlt: "Quality control inspection process — textile QC team at MZ Global Trading",
   keywords: [
     "textile quality control Pakistan",
     "pre-shipment inspection textiles",
@@ -15,35 +18,7 @@ export const metadata: Metadata = {
     "independent QC inspection Pakistan",
     "quality assurance apparel sourcing",
   ],
-  alternates: {
-    canonical: "/qualitycompliance/qualitycontrol/",
-    languages: {
-      en: "https://mzglobaltrading.com/qualitycompliance/qualitycontrol/",
-      "x-default": "https://mzglobaltrading.com/",
-    },
-  },
-  openGraph: {
-    title: "Quality Control | Quality & Compliance | MZ Global Trading",
-    description:
-      "Three-phase QC on every order — pre-production material checks, in-line production monitoring and AQL pre-shipment inspection by our independent QC team.",
-    url: "https://mzglobaltrading.com/qualitycompliance/qualitycontrol/",
-    images: [
-      {
-        url: "/images/og/quality-control-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Quality control inspection process — textile QC team at MZ Global Trading",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Quality Control | Quality & Compliance | MZ Global Trading",
-    description:
-      "Pre-production, in-line and pre-shipment AQL inspection — independent quality control on every order from Pakistan.",
-  },
-};
+});
 
 const pageSchema = {
   "@context": "https://schema.org",

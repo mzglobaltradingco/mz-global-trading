@@ -1157,23 +1157,23 @@ export default function WorkwearContent() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Explore Our Guides &amp; Resources</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Link href="/guides/" className="rounded-2xl bg-white border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+            <Link href="/knowledge/workwear-fabric-standards/" className="rounded-2xl bg-white border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
               <span className="text-2xl mb-3" aria-hidden="true">📚</span>
               <h3 className="text-sm font-bold text-navy-900 mb-1">Knowledge Hub</h3>
-              <p className="text-xs text-gray-500 leading-relaxed flex-1">Workwear standards, fabric guides, and compliance references for procurement teams.</p>
-              <span className="mt-4 text-xs font-semibold text-gold">Browse Knowledge Hub →</span>
+              <p className="text-xs text-gray-500 leading-relaxed flex-1">Hi-vis, flame resistant and industrial grade — EN ISO standards for buyers.</p>
+              <span className="mt-4 text-xs font-semibold text-gold">Read Article →</span>
             </Link>
-            <Link href="/guides/" className="rounded-2xl bg-white border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+            <Link href="/guides/sourcing-workwear-pakistan/" className="rounded-2xl bg-white border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
               <span className="text-2xl mb-3" aria-hidden="true">📋</span>
-              <h3 className="text-sm font-bold text-navy-900 mb-1">Workwear Sourcing Guide</h3>
-              <p className="text-xs text-gray-500 leading-relaxed flex-1">Step-by-step guide for specifying and procuring workwear for industrial fleet programmes.</p>
-              <span className="mt-4 text-xs font-semibold text-gold">Read the Guide →</span>
+              <h3 className="text-sm font-bold text-navy-900 mb-1">Sourcing Guide</h3>
+              <p className="text-xs text-gray-500 leading-relaxed flex-1">EN ISO standards, fabric selection and custom branding for international buyers.</p>
+              <span className="mt-4 text-xs font-semibold text-gold">View Guide →</span>
             </Link>
-            <Link href="/downloads/" className="rounded-2xl bg-white border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+            <Link href="/downloads/workwear-spec-template/" className="rounded-2xl bg-white border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
               <span className="text-2xl mb-3" aria-hidden="true">⬇️</span>
               <h3 className="text-sm font-bold text-navy-900 mb-1">Downloads</h3>
-              <p className="text-xs text-gray-500 leading-relaxed flex-1">Certification documents, compliance spec sheets, and product data sheets available for download.</p>
-              <span className="mt-4 text-xs font-semibold text-gold">Go to Downloads →</span>
+              <p className="text-xs text-gray-500 leading-relaxed flex-1">Specification template for workwear sourcing from Pakistan.</p>
+              <span className="mt-4 text-xs font-semibold text-gold">Get Template →</span>
             </Link>
             <Link href="/rfq/" className="rounded-2xl bg-navy-900 border border-navy-900 p-6 flex flex-col hover:bg-navy-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
               <span className="text-2xl mb-3" aria-hidden="true">✉️</span>

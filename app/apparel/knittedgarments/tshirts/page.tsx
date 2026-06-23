@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TShirtsContent from "./TShirtsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "T-Shirt Manufacturer Pakistan | OEM & Wholesale",
   description:
     "Source custom T-shirts from Pakistan — 7 fabric constructions, GOTS & OEKO-TEX certified cotton, full PMS colour matching. FOB/CIF export.",
+  canonical: "/apparel/knittedgarments/tshirts/",
+  ogImage: "/images/og/t-shirts-og.webp",
+  ogImageAlt: "Pakistan t-shirt manufacturer — OEM cotton t-shirts wholesale for brands in USA, UK and Europe",
   keywords: [
     "t-shirt manufacturer Pakistan",
     "custom t-shirt OEM manufacturer",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "knitted garment manufacturer Pakistan",
     "bulk t-shirt sourcing Pakistan",
   ],
-  alternates: {
-    canonical: "/apparel/knittedgarments/tshirts/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/knittedgarments/tshirts/",
-      "x-default": "https://mzglobaltrading.com/apparel/knittedgarments/tshirts/",
-    },
-  },
-  openGraph: {
-    title: "T-Shirt Manufacturer Pakistan | OEM & Wholesale | MZ Global Trading",
-    description:
-      "OEM t-shirt manufacturer in Pakistan. 7 fabric constructions, GOTS & OEKO-TEX certified cotton, full PMS colour. Supplying brands in USA, UK and Europe.",
-    url: "https://mzglobaltrading.com/apparel/knittedgarments/tshirts/",
-    images: [
-      {
-        url: "/images/og/t-shirts-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan t-shirt manufacturer — OEM cotton t-shirts wholesale for brands in USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "T-Shirt Manufacturer Pakistan | OEM & Wholesale | MZ Global Trading",
-    description:
-      "OEM t-shirt manufacturer in Pakistan. 7 fabric constructions, certified cotton, full PMS colour. USA, UK and Europe supply.",
-  },
-};
+});
 
 export default function TShirtsPage() {
   const jsonLd = {

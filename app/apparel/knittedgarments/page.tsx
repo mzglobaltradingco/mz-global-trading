@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import KnittedGarmentsContent from "./KnittedGarmentsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Knitted Garments Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan knitted garment manufacturer — T-shirts, polo shirts, henley shirts, sweatshirts, hoodies, joggers and tank tops. GOTS, OEKO-TEX certified. FOB/CIF export to USA, UK, EU.",
+  canonical: "/apparel/knittedgarments/",
+  ogImage: "/images/og/knitted-garments-og.webp",
+  ogImageAlt: "Pakistan knitted garments manufacturer — knitwear OEM supplier for brands in USA, UK and Europe",
   keywords: [
     "knitted garments manufacturer Pakistan",
     "knitwear manufacturer Pakistan",
@@ -18,34 +21,7 @@ export const metadata: Metadata = {
     "jersey garment manufacturer Pakistan",
     "GOTS certified knitwear Pakistan",
   ],
-  alternates: {
-    canonical: "/apparel/knittedgarments/",
-    languages: {
-      en: "https://mzglobaltrading.com/apparel/knittedgarments/",
-      "x-default": "https://mzglobaltrading.com/apparel/knittedgarments/",
-    },
-  },
-  openGraph: {
-    title: "Knitted Garments Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan knitwear manufacturer supplying T-shirts, polo shirts, henley shirts, sweatshirts, hoodies, joggers and tank tops. Single jersey, rib, waffle, French terry constructions. 140–350 GSM. GOTS, OEKO-TEX, BSCI. FOB/CIF export worldwide.",
-    url: "https://mzglobaltrading.com/apparel/knittedgarments/",
-    images: [
-      {
-        url: "/images/og/knitted-garments-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan knitted garments manufacturer — knitwear OEM supplier for brands in USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Knitted Garments Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "T-shirts, polo shirts, sweatshirts, hoodies, henley shirts, joggers and tank tops from Pakistan's certified knitwear mills. GOTS, OEKO-TEX. FOB/CIF worldwide.",
-  },
-};
+});
 
 export default function KnittedGarmentsPage() {
   return (

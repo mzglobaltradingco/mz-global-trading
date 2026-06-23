@@ -59,7 +59,7 @@ function Block({ block }: { block: ContentBlock }) {
     case "h3":
       return <h3 className="text-xl font-bold text-navy-900 mt-8 mb-3 leading-tight">{block.text}</h3>;
     case "p":
-      return <p className="text-gray-600 text-base leading-relaxed mb-5">{block.text}</p>;
+      return <p className="text-gray-600 text-base leading-relaxed mb-5 [&_a]:text-gold [&_a]:underline [&_a]:underline-offset-2 [&_a]:hover:text-yellow-500 [&_a]:transition-colors [&_a]:font-medium" dangerouslySetInnerHTML={{ __html: block.text }} />;
     case "ul":
       return (
         <ul className="space-y-3 mb-6">
@@ -115,6 +115,33 @@ function Block({ block }: { block: ContentBlock }) {
       return (
         <div className="bg-gold/5 border-l-4 border-gold rounded-r-xl px-6 py-5 mb-6">
           <p className="text-navy-900 text-base leading-relaxed">{block.text}</p>
+        </div>
+      );
+    case "seealso":
+      return (
+        <div className="border border-gray-200 rounded-2xl p-6 mb-8 bg-gray-50">
+          <p className="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-4">
+            {block.title ?? "Related Products & Pages"}
+          </p>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {block.links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="group flex items-start gap-3 bg-white rounded-xl border border-gray-100 hover:border-gold hover:shadow-sm transition-all p-4"
+              >
+                <span className="mt-0.5 shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
+                <span>
+                  <span className="block text-navy-900 font-semibold text-sm group-hover:text-gold transition-colors leading-snug">
+                    {link.text}
+                  </span>
+                  {link.description && (
+                    <span className="block text-gray-500 text-xs mt-0.5 leading-snug">{link.description}</span>
+                  )}
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       );
   }

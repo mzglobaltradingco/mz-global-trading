@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import KnowledgeHubContent from "./KnowledgeHubContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Knowledge Hub | MZ Global Trading",
   description:
     "Trade guides, sourcing insights and company updates from MZ Global Trading — practical knowledge for procurement managers and textile buyers in USA, UK.",
+  canonical: "/knowledge/",
+  ogImage: "/images/og/hero-about.webp",
+  ogImageAlt: "MZ Global Trading Knowledge Hub — textile sourcing guides and trade insights",
   keywords: [
     "textile sourcing guide",
     "Pakistan textile export",
@@ -16,34 +19,7 @@ export const metadata: Metadata = {
     "pre-shipment inspection",
     "textile tech pack",
   ],
-  alternates: {
-    canonical: "/knowledge/",
-    languages: {
-      "en": "https://mzglobaltrading.com/knowledge/",
-      "x-default": "https://mzglobaltrading.com/knowledge/",
-    },
-  },
-  openGraph: {
-    title: "Knowledge Hub | MZ Global Trading",
-    description:
-      "Trade guides, sourcing insights and company updates from MZ Global Trading — practical knowledge for procurement managers and textile buyers in USA, UK, Europe and Canada.",
-    url: "https://mzglobaltrading.com/knowledge/",
-    images: [
-      {
-        url: "/images/og/hero-about.webp",
-        width: 1200,
-        height: 630,
-        alt: "MZ Global Trading Knowledge Hub — textile sourcing guides and trade insights",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Knowledge Hub | MZ Global Trading",
-    description:
-      "Trade guides, sourcing insights and company updates from MZ Global Trading — practical knowledge for procurement managers and textile buyers.",
-  },
-};
+});
 
 const knowledgeSchema = {
   "@context": "https://schema.org",

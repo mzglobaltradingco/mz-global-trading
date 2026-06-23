@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import ApronsContent from "./ApronsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Aprons Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan aprons manufacturer: canvas, denim, terry and poplin. Bib and waist styles. Screen print, embroidery. OEKO-TEX, BSCI. Export to USA, UK, EU, Middle East.",
+  canonical: "/hometextile/kitchenlinen/aprons/",
+  ogImage: "/images/og/aprons-og.webp",
+  ogImageAlt: "Pakistan aprons manufacturer — canvas, denim and terry aprons for restaurant, hospitality and corporate buyers in USA, UK and Europe",
   keywords: [
     "aprons manufacturer Pakistan",
     "aprons wholesale Pakistan",
@@ -18,35 +21,7 @@ export const metadata: Metadata = {
     "custom aprons Pakistan export",
     "OEKO-TEX aprons Pakistan",
   ],
-  alternates: {
-    canonical: "/hometextile/kitchenlinen/aprons/",
-    languages: {
-      en: "https://mzglobaltrading.com/hometextile/kitchenlinen/aprons/",
-      "x-default":
-        "https://mzglobaltrading.com/hometextile/kitchenlinen/aprons/",
-    },
-  },
-  openGraph: {
-    title: "Aprons Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "OEM aprons sourced from Pakistan's certified textile mills. Canvas, denim, terry and poplin constructions. Bib and waist styles. Screen print and embroidery decoration. OEKO-TEX, BSCI. Export to USA, UK, EU and worldwide.",
-    url: "https://mzglobaltrading.com/hometextile/kitchenlinen/aprons/",
-    images: [
-      {
-        url: "/images/og/aprons-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan aprons manufacturer — canvas, denim and terry aprons for restaurant, hospitality and corporate buyers in USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Aprons Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "OEM aprons from Pakistan: canvas, denim, terry, poplin. Bib and waist styles. Screen print, embroidery. OEKO-TEX, BSCI. Export to USA, UK, EU.",
-  },
-};
+});
 
 export default function ApronsPage() {
   return (

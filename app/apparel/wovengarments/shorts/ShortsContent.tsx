@@ -719,27 +719,38 @@ export default function ShortsContent() {
       </section>
 
       {/* ── Resources Row ─────────────────────────────────────────────────── */}
-      <section className="bg-gray-50 py-12">
+      <section className="bg-gray-50 py-12 lg:py-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { icon: "📚", label: "Knowledge Hub", desc: "Fabric guides, GSM tables, certification explainers", href: "/knowledge" },
-              { icon: "📖", label: "Sourcing Guides", desc: "Step-by-step buyer guides for woven garment programmes", href: "/guides" },
-              { icon: "📥", label: "Downloads", desc: "Factory profile, quality policy, company overview", href: "/downloads" },
-              { icon: "📋", label: "Request a Quote", desc: "Submit specs — we respond within 24–48 hours", href: "/rfq/" },
-            ].map((r) => (
-              <Link
-                key={r.label}
-                href={r.href}
-                className="bg-white rounded-2xl p-5 flex gap-4 items-start hover:shadow-md transition-shadow group"
-              >
-                <span className="text-2xl shrink-0" aria-hidden="true">{r.icon}</span>
-                <div>
-                  <p className="font-bold text-navy-900 text-sm group-hover:text-gold transition-colors">{r.label}</p>
-                  <p className="text-gray-500 text-xs mt-0.5 leading-relaxed">{r.desc}</p>
-                </div>
-              </Link>
-            ))}
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">Guides &amp; Resources</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link href="/knowledge/shorts-fabric-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📚</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
+              <p className="font-semibold text-navy-900">Shorts Fabric Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Chino, linen, swim and active shorts — fabric selection and inseam length guide.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
+            </Link>
+            <Link href="/guides/sourcing-shorts-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📄</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
+              <p className="font-semibold text-navy-900">Sourcing Shorts Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Inseam lengths, fabric options, custom branding and certification for buyers.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">View Guide →</span>
+            </Link>
+            <Link href="/downloads/shorts-size-spec-template/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">⬇️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
+              <p className="font-semibold text-navy-900">Shorts Size Spec Template</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Size specification and measurement template for shorts sourcing.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Get Template →</span>
+            </Link>
+            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">✉️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
+              <p className="font-semibold text-white">Ready to Source Shorts?</p>
+              <p className="text-xs text-gray-300 leading-relaxed">Fabric type and inseam confirmed — RFQ takes 3 minutes. Factory match and quotation within 3–5 working days.</p>
+              <span className="text-xs font-semibold text-gold group-hover:text-yellow-300 transition-colors mt-auto">Request a Quote →</span>
+            </Link>
           </div>
         </div>
       </section>

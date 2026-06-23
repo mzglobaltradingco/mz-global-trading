@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import HenleyContent from "./HenleyContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Henley Shirt Manufacturer Pakistan | MZ Global Trading",
   description:
     "Source custom henley shirts from Pakistan's certified knitwear factories. Single jersey, waffle knit, rib, French terry. 160–240 GSM.",
+  canonical: "/apparel/knittedgarments/henleyshirts/",
+  ogImage: "/images/og/henley-shirts-og.webp",
+  ogImageAlt: "Pakistan henley shirt manufacturer — OEM henley shirts wholesale for brands in USA, UK and Europe",
   keywords: [
     "henley shirt manufacturer Pakistan",
     "henley shirts wholesale Pakistan",
@@ -18,34 +21,7 @@ export const metadata: Metadata = {
     "OEKO-TEX henley shirts Pakistan",
     "knitted henley shirt factory",
   ],
-  alternates: {
-    canonical: "/apparel/knittedgarments/henleyshirts/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/knittedgarments/henleyshirts/",
-      "x-default": "https://mzglobaltrading.com/apparel/knittedgarments/henleyshirts/",
-    },
-  },
-  openGraph: {
-    title: "Henley Shirt Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Custom henley shirts sourced from Pakistan's certified knitwear factories. Single jersey, waffle knit, rib, French terry. 160–240 GSM. GOTS, OEKO-TEX available.",
-    url: "https://mzglobaltrading.com/apparel/knittedgarments/henleyshirts/",
-    images: [
-      {
-        url: "/images/og/henley-shirts-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan henley shirt manufacturer — OEM henley shirts wholesale for brands in USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Henley Shirt Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Custom henley shirts from Pakistan's certified knitwear factories. Single jersey, waffle knit, rib. 160–240 GSM. GOTS, OEKO-TEX available.",
-  },
-};
+});
 
 export default function HenleyShritsPage() {
   return (

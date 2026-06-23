@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import FittedSheetsContent from "./FittedSheetsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Fitted Sheets Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan fitted sheet manufacturer for wholesale buyers in USA, UK and Europe. Percale, sateen, pocket depths to 26 inch. GOTS, OEKO-TEX certified. FOB/CIF.",
+  canonical: "/hometextile/bedlinen/fittedsheets/",
+  ogImage: "/images/og/fitted-sheets-og.webp",
+  ogImageAlt: "Pakistan fitted sheet manufacturer — elasticated deep pocket sheets for hotel and retail buyers",
   keywords: [
     "fitted sheets manufacturer Pakistan",
     "elasticated bedsheets wholesale",
@@ -15,34 +18,7 @@ export const metadata: Metadata = {
     "custom fitted sheets export",
     "percale fitted sheets manufacturer",
   ],
-  alternates: {
-    canonical: "/hometextile/bedlinen/fittedsheets/",
-    languages: {
-      "en": "https://mzglobaltrading.com/hometextile/bedlinen/fittedsheets/",
-      "x-default": "https://mzglobaltrading.com/hometextile/bedlinen/fittedsheets/",
-    },
-  },
-  openGraph: {
-    title: "Fitted Sheets Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan fitted sheet manufacturer for hotels and retail buyers in USA, UK and Europe. Custom elasticated sheets in percale and sateen. Pocket depths 12–26 inches. GOTS, OEKO-TEX certified.",
-    url: "https://mzglobaltrading.com/hometextile/bedlinen/fittedsheets/",
-    images: [
-      {
-        url: "/images/og/fitted-sheets-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan fitted sheet manufacturer — elasticated deep pocket sheets for hotel and retail buyers",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Fitted Sheets Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan fitted sheet manufacturer — deep pocket percale and sateen fitted sheets. GOTS, OEKO-TEX certified. FOB/CIF export.",
-  },
-};
+});
 
 export default function FittedSheetsPage() {
   return (

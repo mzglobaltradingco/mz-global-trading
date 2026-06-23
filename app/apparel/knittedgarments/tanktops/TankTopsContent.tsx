@@ -618,25 +618,47 @@ export default function TankTopsContent() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════════════
-          RESOURCES ROW
+          RESOURCES
       ════════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-gray-50 py-10">
+      <section className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { icon: "📚", label: "Knowledge Hub", sub: "Pakistan knitwear export guides", href: "/knowledge/" },
-              { icon: "📖", label: "Sourcing Guides", sub: "Fabric, certification and spec guides", href: "/guides/" },
-              { icon: "📥", label: "Downloads", sub: "Spec sheets and certification docs", href: "/downloads/" },
-              { icon: "📋", label: "Quick Start", sub: "Construction, GSM, fit and neckline — RFQ takes 3 minutes.", href: "/rfq/" },
-            ].map((r) => (
-              <Link key={r.label} href={r.href} className="group bg-white border border-gray-100 hover:border-gold rounded-2xl p-5 flex items-start gap-4 hover:shadow-xs transition-all">
-                <span className="text-2xl shrink-0" aria-hidden="true">{r.icon}</span>
-                <div>
-                  <p className="font-bold text-navy-900 group-hover:text-gold transition-colors text-sm">{r.label}</p>
-                  <p className="text-xs text-gray-400 mt-0.5 leading-relaxed">{r.sub}</p>
-                </div>
-              </Link>
-            ))}
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-10">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Resources</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Tank Top Sourcing Resources</h2>
+          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {/* Box 1 — Knowledge Hub */}
+            <Link href="/knowledge/tank-top-fabric-guide/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📚</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Knowledge Hub</p>
+              <p className="font-semibold text-navy-900">Tank Top Fabric Guide</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Cotton jersey, rib and performance fabric construction and GSM selection for B2B buyers.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Article →</span>
+            </Link>
+            {/* Box 2 — Guide */}
+            <Link href="/guides/tank-top-sourcing-pakistan/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">📄</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
+              <p className="font-semibold text-navy-900">Tank Top Sourcing from Pakistan</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Fabric options, OEM sizing, custom branding and certification for international buyers.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Guide →</span>
+            </Link>
+            {/* Box 3 — Download */}
+            <Link href="/downloads/tank-top-measurement-template/" className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-md transition-all flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">⬇️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Downloads</p>
+              <p className="font-semibold text-navy-900">Tank Top Measurement Template</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Armhole depth, strap width, neckline and size grading template XS–5XL for OEM orders.</p>
+              <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Download Template →</span>
+            </Link>
+            {/* Box 4 — RFQ */}
+            <Link href="/rfq/" className="group bg-navy-900 rounded-2xl p-6 flex flex-col gap-3">
+              <span className="text-2xl" aria-hidden="true">✉️</span>
+              <p className="text-xs font-semibold text-gold uppercase tracking-widest">Quick Start</p>
+              <p className="font-semibold text-white">Ready to Source Tank Tops?</p>
+              <p className="text-xs text-gray-300 leading-relaxed">Submit your fabric type, GSM, sizes and decoration requirements — we respond within 24 hours.</p>
+              <span className="text-xs font-semibold text-gold group-hover:text-yellow-300 transition-colors mt-auto">Request a Quote →</span>
+            </Link>
           </div>
         </div>
       </section>

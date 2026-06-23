@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import PillowCoversContent from "./PillowCoversContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Pillow Covers Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan pillowcase manufacturer for wholesale buyers in USA, UK and Europe. Cotton percale, sateen, 200–600 TC. Zip, button and envelope closure.",
+  canonical: "/hometextile/bedlinen/pillowcovers/",
+  ogImage: "/images/og/pillow-covers-og.webp",
+  ogImageAlt: "Pakistan pillow cover manufacturer — wholesale pillowcases for USA, UK and Europe",
   keywords: [
     "pillow covers manufacturer Pakistan",
     "pillowcases wholesale Pakistan",
@@ -15,34 +18,7 @@ export const metadata: Metadata = {
     "sateen pillowcases supplier Pakistan",
     "hotel pillowcases manufacturer",
   ],
-  alternates: {
-    canonical: "/hometextile/bedlinen/pillowcovers/",
-    languages: {
-      "en": "https://mzglobaltrading.com/hometextile/bedlinen/pillowcovers/",
-      "x-default": "https://mzglobaltrading.com/hometextile/bedlinen/pillowcovers/",
-    },
-  },
-  openGraph: {
-    title: "Pillow Covers Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan pillowcase manufacturer — percale, sateen and Oxford styles in standard, queen and Euro sizes. GOTS and OEKO-TEX certified. FOB / CIF export.",
-    url: "https://mzglobaltrading.com/hometextile/bedlinen/pillowcovers/",
-    images: [
-      {
-        url: "/images/og/pillow-covers-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan pillow cover manufacturer — wholesale pillowcases for USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Pillow Covers Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan pillowcase manufacturer — percale, sateen and Oxford in all standard sizes. OEKO-TEX certified. FOB / CIF export.",
-  },
-};
+});
 
 export default function PillowCoversPage() {
   return (

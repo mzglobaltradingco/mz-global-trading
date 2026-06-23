@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import HomeTextileFabricContent from "./HomeTextileFabricContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Home Textile Fabric Supplier Pakistan | MZ Global Trading",
   description:
     "Pakistan home textile fabric supplier for towel, bedding and linen manufacturers in USA, UK and Europe. Terry, percale, sateen. OEKO-TEX certified.",
+  canonical: "/fabric/hometextilefabric/",
+  ogImage: "/images/og/home-textile-fabric-og.webp",
+  ogImageAlt: "Pakistan home textile fabric manufacturer — terry and woven fabric for towel and bedding manufacturers in USA, UK and Europe",
   keywords: [
     "home textile fabric manufacturer Pakistan",
     "terry fabric supplier Pakistan",
@@ -19,35 +22,7 @@ export const metadata: Metadata = {
     "GOTS certified textile fabric Pakistan",
     "home textile fabric export Pakistan",
   ],
-  alternates: {
-    canonical: "/fabric/hometextilefabric/",
-    languages: {
-      "en": "https://mzglobaltrading.com/fabric/hometextilefabric/",
-      "x-default": "https://mzglobaltrading.com/fabric/hometextilefabric/",
-    },
-  },
-  openGraph: {
-    title: "Home Textile Fabric Manufacturer Pakistan | Terry & Woven Fabric Export | MZ Global Trading",
-    description:
-      "Pakistan home textile fabric supplier for towel and bedding manufacturers worldwide. Terry loop, velour, zero twist, percale, sateen, jacquard. OEKO-TEX, GOTS, BSCI certified. FOB / CIF export.",
-    url: "https://mzglobaltrading.com/fabric/hometextilefabric/",
-    images: [
-      {
-        url: "/images/og/home-textile-fabric-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan home textile fabric manufacturer — terry and woven fabric for towel and bedding manufacturers in USA, UK and Europe",
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Home Textile Fabric Manufacturer Pakistan | Terry & Woven Fabric Export | MZ Global Trading",
-    description:
-      "Terry loop, velour, zero twist and woven home textile fabric from Pakistan's certified mills. GSM 300–800. Percale, sateen, jacquard. GOTS, OEKO-TEX certified.",
-  },
-};
+});
 
 export default function HomeTextileFabricPage() {
   return (

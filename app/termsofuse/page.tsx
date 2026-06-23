@@ -1,45 +1,17 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TermsOfUseContent from "./TermsOfUseContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Terms of Use | MZ Global Trading",
   description:
     "Terms of use for mzglobaltrading.com — governing law, RFQ submission terms, intellectual property and liability limitations for buyers and service users.",
+  canonical: "/termsofuse/",
+  ogImage: "/images/og/termsofuse-og.webp",
+  ogImageAlt: "MZ Global Trading — Terms of Use",
   keywords: ["terms of use", "terms and conditions", "legal", "MZ Global Trading"],
-  alternates: {
-    canonical: "/termsofuse/",
-    languages: {
-      "en": "https://mzglobaltrading.com/termsofuse/",
-      "x-default": "https://mzglobaltrading.com/termsofuse/",
-    },
-  },
-  openGraph: {
-    title: "Terms of Use | MZ Global Trading",
-    description:
-      "Terms governing use of the MZ Global Trading website and B2B textile sourcing enquiry services. Governing law: Pakistan.",
-    url: "https://mzglobaltrading.com/termsofuse/",
-    images: [
-      {
-        url: "/images/og/termsofuse-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "MZ Global Trading — Terms of Use",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Terms of Use | MZ Global Trading",
-    description:
-      "Terms governing use of the MZ Global Trading website and B2B textile sourcing enquiry services.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+});
 
 export default function TermsOfUsePage() {
   return (

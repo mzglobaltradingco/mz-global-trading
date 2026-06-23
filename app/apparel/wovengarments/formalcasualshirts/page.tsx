@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import FormalShirtsContent from "./FormalShirtsContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Formal Shirts Manufacturer Pakistan | MZ Global Trading",
   description:
     "Source custom formal and casual shirts from Pakistan's certified woven factories. Poplin, Oxford, twill, linen, chambray. 80–200 GSM.",
+  canonical: "/apparel/wovengarments/formalcasualshirts/",
+  ogImage: "/images/og/formal-casual-shirts-og.webp",
+  ogImageAlt: "Pakistan formal and casual shirts manufacturer — OEM woven shirts for corporate and fashion brands in USA, UK and Europe",
   keywords: [
     "formal shirts manufacturer Pakistan",
     "casual shirts supplier Pakistan",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "corporate shirts manufacturer Pakistan",
     "woven shirts export Pakistan",
   ],
-  alternates: {
-    canonical: "/apparel/wovengarments/formalcasualshirts/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/wovengarments/formalcasualshirts/",
-      "x-default": "https://mzglobaltrading.com/apparel/wovengarments/formalcasualshirts/",
-    },
-  },
-  openGraph: {
-    title: "Formal Casual Shirts Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Custom formal and casual shirts from Pakistan's certified woven factories. Poplin, Oxford, twill, linen, chambray. 80–200 GSM. GOTS, OEKO-TEX available.",
-    url: "https://mzglobaltrading.com/apparel/wovengarments/formalcasualshirts/",
-    images: [
-      {
-        url: "/images/og/formal-casual-shirts-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan formal and casual shirts manufacturer — OEM woven shirts for corporate and fashion brands in USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Formal Casual Shirts Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Custom formal and casual shirts from Pakistan's certified woven factories. Poplin, Oxford, twill, linen, chambray. 80–200 GSM. GOTS, OEKO-TEX available.",
-  },
-};
+});
 
 export default function FormalCasualShirtsPage() {
   return (

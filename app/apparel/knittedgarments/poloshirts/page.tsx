@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import PoloContent from "./PoloContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Polo Shirt Manufacturer Pakistan | OEM & Corporate",
   description:
     "Source OEM polo shirts from Pakistan — piqué, performance and classic polo constructions. OEKO-TEX certified. Embroidery, PMS colour. FOB/CIF.",
+  canonical: "/apparel/knittedgarments/poloshirts/",
+  ogImage: "/images/og/polo-shirts-og.webp",
+  ogImageAlt: "Pakistan polo shirt manufacturer — OEM piqué polo shirts for corporate and sports brands in USA and UK",
   keywords: [
     "polo shirt manufacturer Pakistan",
     "OEM polo shirt manufacturer",
@@ -17,34 +20,7 @@ export const metadata: Metadata = {
     "embroidered polo shirt manufacturer Pakistan",
     "knitted garment manufacturer Pakistan",
   ],
-  alternates: {
-    canonical: "/apparel/knittedgarments/poloshirts/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/knittedgarments/poloshirts/",
-      "x-default": "https://mzglobaltrading.com/apparel/knittedgarments/poloshirts/",
-    },
-  },
-  openGraph: {
-    title: "Polo Shirt Manufacturer Pakistan | OEM & Corporate | MZ Global Trading",
-    description:
-      "OEM polo shirt manufacturer in Pakistan. Piqué, performance and sport polo constructions. OEKO-TEX certified. Corporate, hospitality and sports brands in USA, UK and Europe.",
-    url: "https://mzglobaltrading.com/apparel/knittedgarments/poloshirts/",
-    images: [
-      {
-        url: "/images/og/polo-shirts-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan polo shirt manufacturer — OEM piqué polo shirts for corporate and sports brands in USA and UK",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Polo Shirt Manufacturer Pakistan | OEM & Corporate | MZ Global Trading",
-    description:
-      "OEM polo shirt manufacturer in Pakistan. Piqué and performance, OEKO-TEX certified, for corporate buyers in USA, UK and Europe.",
-  },
-};
+});
 
 export default function PoloShirtsPage() {
   const jsonLd = {

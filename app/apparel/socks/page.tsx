@@ -1,12 +1,15 @@
-﻿import type { Metadata } from "next";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import SocksContent from "./SocksContent";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Socks Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan socks manufacturer — 7 knit structures from plain to compression. Athletic, fashion and institutional programmes. GOTS, OEKO-TEX, BSCI certified.",
+  canonical: "/apparel/socks/",
+  ogImage: "/images/og/socks-og.webp",
+  ogImageAlt: "Pakistan socks manufacturer — knitted performance and fashion socks for wholesale buyers in USA, UK and Europe",
   keywords: [
     "socks manufacturer Pakistan",
     "wholesale socks supplier Pakistan",
@@ -18,34 +21,7 @@ export const metadata: Metadata = {
     "bulk socks supplier",
     "GOTS certified socks Pakistan",
   ],
-  alternates: {
-    canonical: "/apparel/socks/",
-    languages: {
-      "en": "https://mzglobaltrading.com/apparel/socks/",
-      "x-default": "https://mzglobaltrading.com/apparel/socks/",
-    },
-  },
-  openGraph: {
-    title: "Socks Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan socks manufacturer — 7 knit structures from plain liner to compression. Athletic, fashion and institutional programmes. GOTS, OEKO-TEX certified.",
-    url: "https://mzglobaltrading.com/apparel/socks/",
-    images: [
-      {
-        url: "/images/og/socks-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Pakistan socks manufacturer — knitted performance and fashion socks for wholesale buyers in USA, UK and Europe",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Socks Manufacturer Pakistan | MZ Global Trading",
-    description:
-      "Pakistan socks manufacturer — 7 knit structures, athletic to compression. GOTS, OEKO-TEX certified. FOB / CIF export worldwide.",
-  },
-};
+});
 
 export default function SocksPage() {
   return (
