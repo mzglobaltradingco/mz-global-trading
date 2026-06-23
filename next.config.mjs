@@ -6,6 +6,9 @@ const nextConfig = {
     formats: ["image/webp", "image/avif"],
     unoptimized: true,
   },
+  experimental: {
+    browsersListForSwc: true,
+  },
 };
 
 export default nextConfig;
