@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -361,7 +362,7 @@ const panelVariants = {
   exit: {
     opacity: 0,
     y: -8,
-    transition: { duration: 0.13, ease: "easeIn" as const },
+    transition: { duration: 0.05, ease: "easeIn" as const },
   },
 };
 
@@ -445,6 +446,7 @@ function SubItemLink({
 // ─── Main component ───────────────────────────────────────────────────────────
 
 export default function MegaMenu() {
+  const pathname = usePathname();
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [preview, setPreview] = useState<{ img: string; label: string; alt: string } | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -472,7 +474,13 @@ export default function MegaMenu() {
     setActiveMenu(null);
   };
 
-  // Close on Escape key and on any click outside the header
+  // Close on route change (SPA navigation — MegaMenu stays mounted in layout)
+  useEffect(() => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setActiveMenu(null);
+  }, [pathname]);
+
+  // Close on Escape key
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") closeAll(); };
     document.addEventListener("keydown", onKey);
@@ -500,13 +508,17 @@ export default function MegaMenu() {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 bg-black/50 z-40 hidden lg:block"
             style={{ top: 128 }}
-            onMouseEnter={startClose}
             onClick={closeAll}
           />
         )}
       </AnimatePresence>
 
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-xs border-b border-gray-100" data-pagefind-ignore>
+      <header
+        className="fixed top-0 left-0 right-0 z-50 bg-white shadow-xs border-b border-gray-100"
+        data-pagefind-ignore
+        onMouseEnter={cancelClose}
+        onMouseLeave={startClose}
+      >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-32">
 
@@ -538,7 +550,6 @@ export default function MegaMenu() {
                       activeMenu === item.id ? "text-gold" : "text-gray-700 hover:text-gold"
                     }`}
                     onMouseEnter={() => openMenu(item.id)}
-                    onMouseLeave={startClose}
                   >
                     {item.label}
                     <motion.svg
@@ -608,8 +619,6 @@ export default function MegaMenu() {
               animate="visible"
               exit="exit"
               className="hidden lg:block absolute top-full left-0 right-0 bg-[#08111f] border-t border-gold/20 shadow-2xl z-50"
-              onMouseEnter={cancelClose}
-              onMouseLeave={startClose}
             >
               <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8 flex gap-8">
 
