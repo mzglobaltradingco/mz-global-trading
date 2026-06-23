@@ -878,6 +878,54 @@ Eliminates 14 KiB of polyfills for `Array.at`, `Array.flat`, `Object.fromEntries
 
 ---
 
+## Site-Wide Performance Optimisation — Image Compression (2026-06-23)
+
+All content images compressed using Pillow WebP encoder at optimised quality settings. **Total savings: ~8.7 MB.**
+
+| Folder | Files | Quality | Before | After | Saved |
+|---|---|---|---|---|---|
+| `public/images/hero/` | 78 | 50 | 9,213 KB | 5,749 KB | 3,464 KB (38%) |
+| `public/images/og/` | 80 | 70 | 10,484 KB | 5,898 KB | 4,586 KB (44%) |
+| `public/images/cards/` | 3 | 60 | 411 KB | 262 KB | 149 KB (36%) |
+| `public/images/menu/` | 67 | 50 | 1,054 KB | 562 KB | 492 KB (47%) |
+
+**Skipped:** `hero-polo-shirts.webp` (already at q50 from prior session); all `-og.webp` files in `public/images/hero/` kept at their OG quality.
+
+**Future images:** When adding new hero images, save at **quality 50**. OG images at **quality 70**. Menu preview images at **quality 50**. Use `method=6` in Pillow for best compression.
+
+---
+
+## Site-Wide Accessibility Improvement — WCAG AA Contrast (2026-06-23)
+
+### CSS global rule — `app/globals.css`
+Extended the accessible gold rule to cover both `text-xs` (12px) AND `text-sm` (14px) labels on light/white backgrounds. Both fail WCAG AA at `#D4A017` (2.3:1 on white); `#9A6400` gives 5.0:1.
+
+```css
+.text-gold.text-xs,
+.text-gold.text-sm {
+  color: #9A6400;
+}
+/* Restore bright gold inside dark navy sections where it already passes */
+.bg-navy-900 .text-gold.text-xs,
+.bg-navy-900 .text-gold.text-sm,
+.bg-navy-950 .text-gold.text-xs,
+.bg-navy-950 .text-gold.text-sm { color: #D4A017; }
+```
+
+Note: Arbitrary-size classes like `text-[10px]` are NOT matched by this CSS — those require inline `text-[#9A6400]` in the component JSX.
+
+### Per-file contrast rules applied across all product and cluster pages:
+- `text-[10px] text-gold` on white/light backgrounds → `text-[10px] text-[#9A6400]`
+- `text-gray-500` inside `bg-navy-900` / `bg-navy-950` panels → `text-gray-400`
+- `text-gray-500` on `bg-[#f0f0f5]` / `bg-gray-50` → `text-gray-600`
+- Coloured step badge backgrounds (bg-gold, bg-sky-500, etc.) with `text-white` → darker `-700` variants
+- `text-white/70`, `text-white/60` on medium-tone backgrounds → `text-white`
+- `text-navy-900/70` on gold/amber backgrounds → `text-navy-900`
+- `text-sky-600` on `bg-sky-50` → `text-sky-700`
+- `text-gray-400` on white sections → `text-gray-500`
+
+---
+
 ## Known Bugs Fixed — Do Not Repeat
 
 These bugs were each reported multiple times. Understand the root cause so they are never introduced again.
@@ -1064,6 +1112,69 @@ STEP 4 — Review & Submit
 | `showHeatingRating` | Pot holders only |
 | `showBackingType` | Bath mats only |
 | `showHeadingType` / `showLiningType` | Curtains only |
+| `showPileHeight` | Towels, Institutional Towels, Bathrobes, Bath Mats — dropdown for pile height in mm tiers |
+
+**`showPileHeight` — wiring:**
+- `ProductOptions`: `showPileHeight?: boolean; pileHeightOptions?: string[]`
+- `ProductSpec`: `pileHeight: string`
+- Rendered inside "Yarn Specification — Pile & Ground" `SpecSection`, shown only when `shouldShowPileGround && opts.showPileHeight`
+- Included in email body (PILE YARN SPECIFICATION block) and Review step
+- **Never add a free-text pile height override** — the dropdown tiers are deliberately limited to prevent buyers specifying non-manufacturable values
+
+**Pile height tiers by product:**
+
+| Product | Options |
+|---|---|
+| Towels | 8–10 mm (light/budget), 10–13 mm (standard retail), 13–16 mm (hotel premium), 16+ mm (luxury/spa) |
+| Institutional Towels | 8–10 mm (airline/healthcare), 10–13 mm (hotel standard), 13–16 mm (premium hotel) |
+| Bathrobes | 4–6 mm (velour/sheared), 8–10 mm (standard terry), 12–15 mm (luxury terry) |
+| Bath Mats | 8–10 mm (600–800 GSM), 10–13 mm (800–1,000 GSM), 13–16 mm (1,000–1,400 GSM), 16–20 mm (1,400+ GSM luxury) |
+
+---
+
+### RFQ Wizard — Data Accuracy Decisions (verified 2026-06-24)
+
+All values below were cross-referenced against `lib/downloads-content.ts` spec sheet templates. **Do not revert these — the previous values were wrong.**
+
+**Sizes (corrected to spec sheet standards):**
+- Beach towel standard: **70×140 cm** (was 75×150 — non-standard)
+- Beach towel USA-format: **76×152 cm** (added — distinct US retail standard)
+- Beach towel round: **Ø150 cm** (added)
+- Bath mat large: **60×90 cm** (was 60×100 — not a real standard)
+- Bath mat XL: **70×110 cm** (added — 4-star/5-star hotel standard)
+- Bath mat pedestal: **45×45 cm** (added — UK retail standard)
+- Bath mat bath runner: **50×160 cm** (added — spa/resort)
+- Sports/Gym towel: **70×130 cm** (was 50×100 — 50×100 is a hand towel, not a gym towel)
+- Bed linen Twin: **96×190 cm** (was 96×183 — mattress is 190 cm long, not 183)
+- Bed linen King: **193×203 cm** (was 183×203 — King mattress is 193 cm wide, not 183)
+
+**Construction (corrected terminology):**
+- Bed linen: **"Poplin (fine plain weave)"** replaces "Oxford Weave" — Oxford weave is a shirt fabric term; Poplin is the correct bed linen term
+- Bathrobe sizes: **"One Size (hotel standard — fits most adults)"** added as first option; S/M/L/XL/XXL listed individually — hotels universally buy one-size robes; the old XS/S merged pairs were unusual for B2B procurement
+
+**Backing options — Bath Mats (expanded to 4 industry-standard types):**
+- SBR latex (standard anti-slip)
+- Natural rubber latex (premium, very high anti-slip)
+- TPR thermoplastic rubber (high durability, washes above 60°C) — **was missing**; most durable commercial option
+- PVC spray (budget, REACH check required)
+- None
+
+**Institutional Towels design options (expanded from 2 to 5):**
+Previous: "Plain white" / "White with dobby stripe border" only
+Now: Plain white / Plain ecru / Solid colour (Pantone) / White with dobby border stripe / With embroidered logo — reflects actual hotel and gym buyer needs
+
+**Finishing options — corrections:**
+- Towels: **removed "Zero Twist effect"** — Zero Twist is a yarn/construction type set in the construction dropdown, not a post-production finish. Listing it as a finish was technically wrong and would confuse experienced buyers.
+- Beach towels: chlorine resistance label changed to **"Chlorine-Resistant (pool programme — ISO 105-E03)"** — makes the standard explicit; critical for pool programmes
+
+**Fitted sheet pocket depths (corrected):**
+- Replaced `12" / 30 cm` with **`14" / 35 cm (residential standard)`** — 30 cm is too shallow for any standard residential mattress (20–25 cm deep + 4–6 cm grip = minimum 26–31 cm needed; industry standard starts at 14")
+- Full sequence: 14" → 16" → 18" (deep) → 21" (extra deep) → 25"+ (super deep)
+
+**Constants in `app/rfq/RFQContent.tsx` (updated):**
+- `YARN_TYPES`: added **"Zero Twist"** — referenced in towel construction options but was missing from the yarn type selector
+- `STITCH_TYPES`: added **"Lock Stitch (standard seam)"** as first option — most fundamental stitch in woven garment manufacturing; was entirely absent
+- `NUMBER_OF_COLORS`: added **"White / undyed (no colour specification)"** as first option — institutional buyers ordering white hotel stock had no correct answer
 
 ---
 
