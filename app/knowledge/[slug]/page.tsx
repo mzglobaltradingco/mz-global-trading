@@ -30,7 +30,13 @@ export async function generateMetadata({
     title: `${post.title} | MZ Global Trading`,
     description: post.excerpt,
     keywords: post.tags,
-    alternates: { canonical: `/knowledge/${post.slug}/` },
+    alternates: {
+      canonical: `/knowledge/${post.slug}/`,
+      languages: {
+        en: `https://mzglobaltrading.com/knowledge/${post.slug}/`,
+        "x-default": `https://mzglobaltrading.com/knowledge/${post.slug}/`,
+      },
+    },
     openGraph: {
       title: `${post.title} | MZ Global Trading`,
       description: post.excerpt,
@@ -74,6 +80,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     inLanguage: "en",
     image: imageUrl,
     datePublished: post.date,
+    dateModified: post.date,
     isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
     author: { "@id": "https://mzglobaltrading.com/#organization" },
     publisher: { "@id": "https://mzglobaltrading.com/#organization" },

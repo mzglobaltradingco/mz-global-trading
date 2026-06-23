@@ -24,7 +24,13 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
     title: guide.seoTitle,
     description: guide.seoDescription ?? guide.description,
     keywords: guide.keywords,
-    alternates: { canonical: `/guides/${guide.slug}/` },
+    alternates: {
+      canonical: `/guides/${guide.slug}/`,
+      languages: {
+        en: `https://mzglobaltrading.com/guides/${guide.slug}/`,
+        "x-default": `https://mzglobaltrading.com/guides/${guide.slug}/`,
+      },
+    },
     openGraph: {
       title: `${guide.seoTitle} | MZ Global Trading`,
       description: guide.seoDescription ?? guide.description,
@@ -164,12 +170,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
     inLanguage: "en",
     datePublished: guide.datePublished,
     dateModified: guide.datePublished,
-    author: { "@type": "Organization", name: "MZ Global Trading", url: "https://mzglobaltrading.com/" },
-    publisher: {
-      "@type": "Organization",
-      name: "MZ Global Trading",
-      logo: { "@type": "ImageObject", url: "https://mzglobaltrading.com/images/logo/Master_Logo.webp" },
-    },
+    author: { "@id": "https://mzglobaltrading.com/#organization" },
+    publisher: { "@id": "https://mzglobaltrading.com/#organization" },
     mainEntityOfPage: { "@id": url },
     breadcrumb: {
       "@type": "BreadcrumbList",

@@ -25,7 +25,13 @@ export async function generateMetadata({ params }: DocPageProps): Promise<Metada
     title: doc.title,
     description: doc.description,
     keywords: doc.keywords,
-    alternates: { canonical: `/downloads/${doc.slug}/` },
+    alternates: {
+      canonical: `/downloads/${doc.slug}/`,
+      languages: {
+        en: `https://mzglobaltrading.com/downloads/${doc.slug}/`,
+        "x-default": `https://mzglobaltrading.com/downloads/${doc.slug}/`,
+      },
+    },
     openGraph: {
       title: `${doc.title} | MZ Global Trading`,
       description: doc.description,
