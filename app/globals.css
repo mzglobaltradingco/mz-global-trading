@@ -49,16 +49,29 @@
 
 /* ── PSI Fix 6 — Accessible gold on white/light backgrounds ── */
 /* #D4A017 on white = 2.3:1 (fails WCAG AA). #9A6400 = 5.0:1 (passes).     */
-/* The restore rule below preserves original gold on dark navy sections      */
-/* (CTABanner, WhyUs, PageHero, NewsletterStrip) where it already passes.   */
-.text-gold.text-xs {
+/* Restore rule preserves original gold on dark navy (CTABanner, WhyUs,     */
+/* PageHero, NewsletterStrip) where it already passes.                       */
+.text-gold.text-xs,
+.text-gold.text-sm {
   color: #9A6400;
 }
 .bg-navy-900 .text-gold.text-xs,
+.bg-navy-900 .text-gold.text-sm,
 .bg-navy-950 .text-gold.text-xs,
+.bg-navy-950 .text-gold.text-sm,
 #section-constructions .text-gold.text-xs,
-#section-markets .text-gold.text-xs {
+#section-constructions .text-gold.text-sm,
+#section-markets .text-gold.text-xs,
+#section-markets .text-gold.text-sm {
   color: #D4A017;
+}
+
+/* ── Accessible gray inside dark navy sections ── */
+/* gray-500 (#6B7280) on navy-900 = 3.36:1 (fails WCAG AA for normal text). */
+/* gray-400 (#9CA3AF) on navy-900 = 6.15:1 (passes comfortably).            */
+.bg-navy-900 .text-gray-500,
+.bg-navy-950 .text-gray-500 {
+  color: #9CA3AF;
 }
 
 /* ── Glow pulse keyframe ── */
