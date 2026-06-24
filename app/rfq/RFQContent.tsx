@@ -12,6 +12,7 @@ import {
   APPAREL_TYPES,
   HOME_TEXTILE_TYPES,
   FABRIC_TYPES,
+  SIZE_RANGE_EXPANSION,
 } from "@/lib/rfq-product-options";
 
 // ── Constants ─────────────────────────────────────────────────────────────────
@@ -55,49 +56,6 @@ const BLOCKED_COUNTRIES = new Set([
 
 const COUNTRIES_ALLOWED = COUNTRIES_SORTED.filter(c => !BLOCKED_COUNTRIES.has(c));
 
-// Maps each range-type size option to its individual sizes for ratio inputs.
-// Keys must exactly match the strings in rfq-product-options.ts sizeOptions arrays.
-const SIZE_RANGE_EXPANSION: Record<string, string[]> = {
-  "XS–XL":                                    ["XS", "S", "M", "L", "XL"],
-  "XS–2XL":                                   ["XS", "S", "M", "L", "XL", "2XL"],
-  "XS–3XL":                                   ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
-  "XS–5XL":                                   ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"],
-  "XXS–3XL":                                  ["XXS", "XS", "S", "M", "L", "XL", "2XL", "3XL"],
-  "S–XXL":                                    ["S", "M", "L", "XL", "XXL"],
-  "S / M / L / XL / XXL":                    ["S", "M", "L", "XL", "XXL"],
-  "S / M / L / XL / XXL / 3XL":              ["S", "M", "L", "XL", "XXL", "3XL"],
-  "Women's XS–XL":                            ["XS", "S", "M", "L", "XL"],
-  "Youth S/M/L":                              ["Youth S", "Youth M", "Youth L"],
-  "Plus sizes":                               ["1X", "2X", "3X", "4X", "5X"],
-  "Petite XS–2XL":                            ["Petite XS", "Petite S", "Petite M", "Petite L", "Petite XL", "Petite 2XL"],
-  "Tall XS–2XL":                              ["Tall XS", "Tall S", "Tall M", "Tall L", "Tall XL", "Tall 2XL"],
-  "EU 38–46":                                 ["38", "40", "42", "44", "46"],
-  // Baby & Kids age groups — each option is its own individual size, self-maps so ratio input appears
-  "Premature (<2.5 kg)":                      ["Premature (<2.5 kg)"],
-  "0–3 months":                               ["0–3 months"],
-  "3–6 months":                               ["3–6 months"],
-  "6–9 months":                               ["6–9 months"],
-  "9–12 months":                              ["9–12 months"],
-  "6–12 months":                              ["6–12 months"],
-  "12–18 months":                             ["12–18 months"],
-  "18–24 months":                             ["18–24 months"],
-  "2–3 years":                                ["2–3 years"],
-  "3–4 years":                                ["3–4 years"],
-  "4–5 years":                                ["4–5 years"],
-  "5–6 years":                                ["5–6 years"],
-  "6–8 years":                                ["6–8 years"],
-  "8–10 years":                               ["8–10 years"],
-  "10–12 years":                              ["10–12 years"],
-  "Collar 14\"–18\" (US sizing)":            ["14\"", "14.5\"", "15\"", "15.5\"", "16\"", "16.5\"", "17\"", "17.5\"", "18\""],
-  "Waist 28–36\" / Inseam 28–34\"":          ["W28", "W29", "W30", "W31", "W32", "W33", "W34", "W36"],
-  "Waist 28–40\" (extended range)":           ["W28", "W30", "W32", "W34", "W36", "W38", "W40"],
-  "Waist 28–42\" (plus range)":              ["W28", "W30", "W32", "W34", "W36", "W38", "W40", "W42"],
-  "Women's Waist 24–34\"":                   ["W24", "W25", "W26", "W27", "W28", "W29", "W30", "W32", "W34"],
-  "Waist 28–38\" standard inseam":           ["W28", "W30", "W32", "W34", "W36", "W38"],
-  "Waist 28–42\" extended":                  ["W28", "W30", "W32", "W34", "W36", "W38", "W40", "W42"],
-  "Waist 28–40\" standard inseam":           ["W28", "W30", "W32", "W34", "W36", "W38", "W40"],
-  "Waist 28–38\" / Inseam 5\"–11\"":         ["W28", "W30", "W32", "W34", "W36", "W38"],
-};
 
 const INCOTERMS = [
   "EXW – Ex Works (factory)",

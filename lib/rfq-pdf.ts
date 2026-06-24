@@ -4,7 +4,7 @@
 // ──────────────────────────────────────────────────────────────────────────────
 
 import type { RFQFormState, ProductSpec } from "@/app/rfq/RFQContent";
-import { getProductOptions } from "@/lib/rfq-product-options";
+import { getProductOptions, SIZE_RANGE_EXPANSION } from "@/lib/rfq-product-options";
 
 // ── Minimal jsPDF interface — typed against what we actually call ───────────────
 // We use a double-cast through unknown because @types/jspdf is for v1.3
@@ -234,7 +234,7 @@ export async function generateRFQPdf(
       sHead("Construction");
       row(opts?.constructionLabel ?? "Weave / Structure", or(p.construction, p.constructionOther));
       if (p.fabricSubType) row("Sub-type", or(p.fabricSubType, p.fabricSubTypeOther));
-      row(opts?.weightLabel ?? "GSM", p.weight);
+      row(opts?.weightLabel ?? "GSM", p.weight ? [p.weight, p.weightUnit].filter(Boolean).join(" ") : undefined);
       if (p.sizeRange[0]) row("Fabric Width", p.sizeRange[0]);
       if (p.warpYarn || p.weftYarn || p.picksPerCm) {
         row("Warp Yarn", p.warpYarn);
@@ -243,9 +243,10 @@ export async function generateRFQPdf(
       }
 
       sHead("State & Design");
-      row("Fabric State", p.fabricState);
-      row("Colour / Pattern Type", p.printType);
+      row("Fabric State", p.printType);
+      row("Pattern / Colour Type", p.fabricState);
       row("Pantone / Colour Reference", p.pantoneRef);
+      if (p.colorFastnessNotes) row("Colour Fastness", p.colorFastnessNotes);
 
       const fv = ar(p.finishing, p.finishingOther);
       if (fv) { sHead("Finishing"); row("Applied", fv); }
@@ -259,35 +260,60 @@ export async function generateRFQPdf(
 
     } else if (isApparel) {
       sHead("Fabric & Construction");
+      if (p.fabricType) row("Fabric Type", p.fabricType);
       row(opts?.constructionLabel ?? "Construction", or(p.construction, p.constructionOther));
-      row(opts?.weightLabel ?? "GSM", p.weight);
+      row(opts?.weightLabel ?? "GSM", p.weight ? [p.weight, p.weightUnit].filter(Boolean).join(" ") : undefined);
       row("Fiber Content", or(p.fiberContent, p.fiberContentOther));
       row("Yarn Type", or(p.yarnType, p.yarnTypeOther));
-      row("Sustainability", p.sustainability);
+      if (p.compositionNotes) row("Composition Notes", p.compositionNotes);
 
       sHead("Sizing & Fit");
       row(opts?.sizeLabel ?? "Size Range", sz());
+      // Size ratios — default to 1 for any blank entry
+      {
+        const _isDropdown = opts?.sizeSelectionType === "dropdown";
+        const _range0 = p.sizeRange[0] ?? "";
+        const allRatioSizes: string[] = _isDropdown
+          ? (_range0 && _range0 !== "Custom" ? SIZE_RANGE_EXPANSION[_range0] ?? [] : [])
+          : p.sizeRange.filter((s: string) => s !== "Custom");
+        const getRatioFn = (s: string) => parseFloat((p.sizeRatios as Record<string, string>)?.[s] ?? "") || 1;
+        const totalRatioSum = allRatioSizes.reduce((sum: number, s: string) => sum + getRatioFn(s), 0);
+        const ratioEntries = allRatioSizes.length > 0
+          ? allRatioSizes.map((s: string) => `${s}:${getRatioFn(s)}`).join(", ") : "";
+        const qtyPerSizeEntries = allRatioSizes.length > 0 && p.quantity && totalRatioSum > 0
+          ? allRatioSizes.map((s: string) => {
+              const qty = Math.round((getRatioFn(s) / totalRatioSum) * parseFloat(p.quantity));
+              return qty > 0 ? `${s}:${qty.toLocaleString()}` : null;
+            }).filter(Boolean).join(", ") : "";
+        if (ratioEntries) row("Size Ratio", ratioEntries);
+        if (qtyPerSizeEntries) row("Units per Size", qtyPerSizeEntries);
+      }
       row("Fit", p.fitType);
       row(opts?.styleLabel ?? "Style", or(p.style, p.styleOther));
+      if (p.sizeStandard) row("Size Standard", p.sizeStandard === "Custom" && p.sizeStandardOther ? `Custom — ${p.sizeStandardOther}` : p.sizeStandard);
 
       sHead("Colour & Design");
       row("Dyeing Method", p.dyeingMethod);
       row("Number of Colours", p.numberOfColors);
       row("Pantone / Colour Reference", p.pantoneRef);
       row(opts?.designLabel ?? "Print / Design Type", p.printType);
+      if (p.printPlacement) row(opts?.printPlacementLabel ?? "Placement", p.printPlacement);
       if (p.printDetail) row("Design Details", p.printDetail);
 
       const ev = ar(p.embellishments, p.embellishmentsOther);
       if (ev) { sHead("Embellishments"); row("Applied", ev); }
+      const accV = ar(p.accessories, p.accessoriesOther);
+      if (accV) { sHead("Accessories & Trims"); row("Applied", accV); }
 
       const fv = ar(p.finishing, p.finishingOther);
       if (fv) { sHead("Finishing"); row("Applied", fv); }
 
-      if (p.brandLabel || p.careLabel || p.stitchType) {
+      if (p.brandLabel || p.careLabel || p.stitchType || p.labelNotes) {
         sHead("Labels & Branding");
         row("Brand Label", p.brandLabel);
         row("Care Label", p.careLabel);
         row("Stitch Type", p.stitchType);
+        if (p.labelNotes) row("Label Notes", p.labelNotes);
       }
 
       if (p.individualPack || p.setComposition || p.masterCarton) {
@@ -303,13 +329,15 @@ export async function generateRFQPdf(
     } else {
       // Home Textiles
       sHead("Construction & Composition");
+      if (p.fabricType) row("Fabric Type", p.fabricType);
       row(opts?.constructionLabel ?? "Weave / Structure", or(p.construction, p.constructionOther));
-      row(opts?.weightLabel ?? "GSM", p.weight);
+      row(opts?.weightLabel ?? "GSM", p.weight ? [p.weight, p.weightUnit].filter(Boolean).join(" ") : undefined);
       row("Fiber Content", or(p.fiberContent, p.fiberContentOther));
-      row("Sustainability", p.sustainability);
-      if (p.pileYarn || p.groundYarn) {
+      if (p.compositionNotes) row("Composition Notes", p.compositionNotes);
+      if (p.pileYarn || p.groundYarn || p.pileHeight) {
         row("Pile Yarn", p.pileYarn);
         row("Ground Yarn", p.groundYarn);
+        if (p.pileHeight) row("Pile Height", p.pileHeight);
       }
 
       sHead("Dimensions & Specifications");
@@ -317,6 +345,10 @@ export async function generateRFQPdf(
       row(opts?.styleLabel ?? "Style", or(p.style, p.styleOther));
       if (p.borderType) row("Border / Selvedge", or(p.borderType, p.borderTypeOther));
       if (p.collarType) row("Collar Type", or(p.collarType, p.collarTypeOther));
+      if (p.beltType) row("Belt / Tie Type", or(p.beltType, p.beltTypeOther));
+      if (p.beltLoopPlacement) row("Belt Loop Placement", p.beltLoopPlacement);
+      if (p.robePockets) row("Pockets", p.robePockets);
+      if (p.cuffStyle) row("Cuff Style", or(p.cuffStyle, p.cuffStyleOther));
       if (p.backingType) row("Backing", or(p.backingType, p.backingTypeOther));
       if (p.closureType) row("Closure Type", or(p.closureType, p.closureTypeOther));
       if (p.pocketDepth) row("Pocket Depth", p.pocketDepth);
@@ -343,8 +375,8 @@ export async function generateRFQPdf(
     }
 
     // Certifications, sample & tech pack (all product types)
-    const cv = (p.certifications.includes("Other") && p.certOther)
-      ? [...p.certifications.filter(c => c !== "Other"), `Other: ${p.certOther}`].join(", ")
+    const cv = (p.certifications.includes("Other (specify below)") && p.certOther)
+      ? [...p.certifications.filter(c => c !== "Other (specify below)"), `Other: ${p.certOther}`].join(", ")
       : p.certifications.join(", ");
     if (cv) { sHead("Certifications Required"); row("Required", cv); }
     row("Sample Required", p.sampleRequired);
