@@ -2057,8 +2057,8 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
       "Other",
     ],
     constructionOtherPlaceholder: "e.g. Organic cotton plain weave",
-    weightLabel: "GSM",
-    weightPlaceholder: "e.g. 250 gsm",
+    weightLabel: "Set Weight (grams)",
+    weightPlaceholder: "e.g. 450 g per pair",
     sizeLabel: "Standard Size",
     sizeOptions: [
       "Standard pair (90×150 cm each)", "Small pair (80×140 cm)",

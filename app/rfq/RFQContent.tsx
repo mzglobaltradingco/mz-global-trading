@@ -158,6 +158,7 @@ export interface ProductSpec {
   fabricSubType: string;
   fabricSubTypeOther: string;
   sizeRange: string[];
+  sizeRatios: Record<string, string>;
   sizeRangeNotes: string;
   fitType: string;
   sizeStandard: string;
@@ -244,7 +245,7 @@ function mkProduct(): ProductSpec {
     yarnType: "", yarnTypeOther: "", sustainability: "",
     construction: "", constructionOther: "", weight: "",
     fabricSubType: "", fabricSubTypeOther: "",
-    sizeRange: [], sizeRangeNotes: "",
+    sizeRange: [], sizeRatios: {}, sizeRangeNotes: "",
     fitType: "", sizeStandard: "", sizeStandardOther: "",
     style: "", styleOther: "",
     borderType: "", borderTypeOther: "", pocketDepth: "",
@@ -280,7 +281,7 @@ function specReset(p: ProductSpec): ProductSpec {
       construction: fresh.construction, constructionOther: fresh.constructionOther,
       weight: fresh.weight, fabricSubType: fresh.fabricSubType,
       fabricSubTypeOther: fresh.fabricSubTypeOther, sizeRange: fresh.sizeRange,
-      sizeRangeNotes: fresh.sizeRangeNotes, fitType: fresh.fitType,
+      sizeRatios: fresh.sizeRatios, sizeRangeNotes: fresh.sizeRangeNotes, fitType: fresh.fitType,
       sizeStandard: fresh.sizeStandard, sizeStandardOther: fresh.sizeStandardOther,
       style: fresh.style, styleOther: fresh.styleOther,
       borderType: fresh.borderType, borderTypeOther: fresh.borderTypeOther,
@@ -341,6 +342,12 @@ function getProductTypes(category: string): string[] {
   if (category === "Home Textiles") return HOME_TEXTILE_TYPES;
   if (category === "Fabric") return FABRIC_TYPES;
   return [];
+}
+
+function filterPrintOptions(options: string[], fiberContent: string): string[] {
+  const isSublimatableFiber = ["100% Polyester", "Recycled Polyester (GRS)"].includes(fiberContent);
+  if (isSublimatableFiber) return options;
+  return options.filter(o => !/sublimation/i.test(o));
 }
 
 function getProductTabLabel(p: ProductSpec): string {
@@ -478,12 +485,12 @@ function buildEmailBody(f: RFQFormState): string {
       const fabricRows = [
         row(opts?.constructionLabel ?? "Fabric Type", constrVal),
         row(opts?.weightLabel ?? "GSM", p.weight),
-        row("Fiber Content", fiberVal), row("Yarn Type", yarnVal),
+        row("Fiber Content", fiberVal), row("Yarn Spinning", yarnVal),
         row("Composition Notes", p.compositionNotes),
       ].filter(Boolean);
       if (fabricRows.length) lines.push(subHead("FABRIC & CONSTRUCTION"), ...fabricRows);
 
-      if (opts?.showWarpWeft && (p.warpYarn || p.weftYarn || p.picksPerCm)) {
+      if (opts?.showWarpWeft && p.construction !== "Jersey Knit (stretch)" && (p.warpYarn || p.weftYarn || p.picksPerCm)) {
         const yarnRows = [
           row("Warp Yarn", p.warpYarn), row("Weft Yarn", p.weftYarn),
           row("Picks / Density", p.picksPerCm),
@@ -491,8 +498,20 @@ function buildEmailBody(f: RFQFormState): string {
         if (yarnRows.length) lines.push(subHead("YARN SPECIFICATION"), ...yarnRows);
       }
 
+      const ratioEntries = p.sizeRange.length > 0 && p.sizeRatios
+        ? p.sizeRange.filter(s => p.sizeRatios[s]).map(s => `${s}:${p.sizeRatios[s]}`).join(", ") : "";
+      const totalRatioSum = p.sizeRange.reduce((sum, s) => sum + (parseFloat(p.sizeRatios?.[s] ?? "0") || 0), 0);
+      const qtyPerSizeEntries = ratioEntries && p.quantity && totalRatioSum > 0
+        ? p.sizeRange.filter(s => p.sizeRatios?.[s]).map(s => {
+            const r = parseFloat(p.sizeRatios[s]);
+            const qty = r > 0 ? Math.round((r / totalRatioSum) * parseFloat(p.quantity)) : 0;
+            return qty > 0 ? `${s}:${qty.toLocaleString()}` : null;
+          }).filter(Boolean).join(", ") : "";
+
       const sizeRows = [
         row(opts?.sizeLabel ?? "Size Range", sizeDisplay),
+        ratioEntries ? row("Size Ratio", ratioEntries) : "",
+        qtyPerSizeEntries ? row("Qty per Size", qtyPerSizeEntries) : "",
         row("Fit", p.fitType),
         row(opts?.styleLabel ?? "Style", styleVal),
         row("Size Standard", p.sizeStandard === "Custom" && p.sizeStandardOther ? `Custom — ${p.sizeStandardOther}` : p.sizeStandard),
@@ -545,7 +564,7 @@ function buildEmailBody(f: RFQFormState): string {
       ].filter(Boolean);
       if (conRows.length) lines.push(subHead("CONSTRUCTION & COMPOSITION"), ...conRows);
 
-      if (opts?.showWarpWeft && (p.warpYarn || p.weftYarn || p.picksPerCm)) {
+      if (opts?.showWarpWeft && p.construction !== "Jersey Knit (stretch)" && (p.warpYarn || p.weftYarn || p.picksPerCm)) {
         const warpRows = [
           row("Warp Yarn", p.warpYarn), row("Weft Yarn", p.weftYarn),
           row("Picks / Thread Density", p.picksPerCm),
@@ -581,9 +600,11 @@ function buildEmailBody(f: RFQFormState): string {
 
       if (finishVal) lines.push(subHead("FINISHING"), row("Applied", finishVal));
 
+      const htCartonVal = p.masterCarton && (p.masterCarton.startsWith("Custom") && p.masterCartonOther
+        ? `Custom — ${p.masterCartonOther}` : p.masterCarton);
       const packRows = [
         row("Individual Pack", p.individualPack), row("Set Composition", p.setComposition),
-        row("Packing Notes", p.packingNotes),
+        row("Master Carton", htCartonVal || ""), row("Packing Notes", p.packingNotes),
       ].filter(Boolean);
       if (packRows.length) lines.push(subHead("PACKING"), ...packRows);
     }
@@ -1219,7 +1240,7 @@ export default function RFQContent() {
 
   useEffect(() => {
     try {
-      const saved = localStorage.getItem("rfq_wizard_draft_v2");
+      const saved = localStorage.getItem("rfq_wizard_draft_v3");
       if (saved) {
         const parsed = JSON.parse(saved) as Partial<RFQFormState>;
         // Restore personal/logistics details only — products always start blank
@@ -1234,7 +1255,7 @@ export default function RFQContent() {
   useEffect(() => {
     if (!hasMounted.current) return;
     const t = setTimeout(() => {
-      try { localStorage.setItem("rfq_wizard_draft_v2", JSON.stringify(formState)); } catch { /* ignore */ }
+      try { localStorage.setItem("rfq_wizard_draft_v3", JSON.stringify(formState)); } catch { /* ignore */ }
     }, 500);
     return () => clearTimeout(t);
   }, [formState]);
@@ -1386,7 +1407,7 @@ export default function RFQContent() {
     // Full body in mailto — desktop email clients (Outlook, Thunderbird, Mail) handle it.
     // Gmail web ignores body; clipboard copy is the fallback for those users.
     window.location.href = `mailto:${RECIPIENT}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    try { localStorage.removeItem("rfq_wizard_draft_v2"); } catch { /* ignore */ }
+    try { localStorage.removeItem("rfq_wizard_draft_v3"); } catch { /* ignore */ }
     const now = new Date();
     setSubmittedAt(
       now.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })
@@ -1426,16 +1447,26 @@ export default function RFQContent() {
 
     function toggleArr(field: "finishing" | "certifications" | "embellishments" | "accessories" | "sizeRange", val: string) {
       const arr = (product[field] as string[]) || [];
-      const next = arr.includes(val) ? arr.filter(v => v !== val) : [...arr, val];
-      updateProduct(activeProduct, { [field]: next } as Partial<ProductSpec>);
+      const isRemoving = arr.includes(val);
+      const next = isRemoving ? arr.filter(v => v !== val) : [...arr, val];
+      if (field === "sizeRange" && isRemoving) {
+        const updatedRatios = { ...(product.sizeRatios ?? {}) };
+        delete updatedRatios[val];
+        updateProduct(activeProduct, { sizeRange: next, sizeRatios: updatedRatios });
+      } else {
+        updateProduct(activeProduct, { [field]: next } as Partial<ProductSpec>);
+      }
       if (errors[field]) setErrors(prev => ({ ...prev, [field]: "" }));
     }
 
     const finishingOpts = opts ? ["Standard / No special finishing", ...opts.finishingOptions, "Other (specify below)"] : [];
+    const filteredPrintOptions = opts
+      ? filterPrintOptions(opts.printTypeOptions, product.fiberContent)
+      : [];
     const isTerrySelected = product.construction !== "" && /terry|velour/i.test(product.construction);
     const shouldShowWarpWeft = !!(opts?.showWarpWeft && (
       opts.isFabricRoll ? product.construction === "Woven"
-        : !opts.showPileGround || !isTerrySelected
+        : product.construction !== "Jersey Knit (stretch)" && (!opts.showPileGround || !isTerrySelected)
     ));
     const shouldShowPileGround = !!(opts?.showPileGround && (
       opts.isFabricRoll ? product.construction === "Terry"
@@ -1570,7 +1601,15 @@ export default function RFQContent() {
                     <div>
                       <Field id="fiberContent" label="Fiber Content" required error={errors.fiberContent}>
                         <select id="fiberContent" value={product.fiberContent}
-                          onChange={e => { setP("fiberContent", e.target.value); if (errors.fiberContent) setErrors(prev => ({ ...prev, fiberContent: "" })); }} className={ic(errors.fiberContent)}>
+                          onChange={e => {
+                            const newFiber = e.target.value;
+                            const updates: Partial<ProductSpec> = { fiberContent: newFiber };
+                            if (opts && /sublimation/i.test(product.printType) && !["100% Polyester", "Recycled Polyester (GRS)"].includes(newFiber)) {
+                              updates.printType = "";
+                            }
+                            updateProduct(activeProduct, updates);
+                            if (errors.fiberContent) setErrors(prev => ({ ...prev, fiberContent: "" }));
+                          }} className={ic(errors.fiberContent)}>
                           <option value="">Select…</option>
                           {fiberOptions.map(o => <option key={o} value={o}>{o}</option>)}
                         </select>
@@ -1581,7 +1620,7 @@ export default function RFQContent() {
                     </div>
                     {product.category === "Apparel" && (
                       <div>
-                        <Field id="yarnType" label="Yarn Type">
+                        <Field id="yarnType" label="Yarn Spinning">
                           <select id="yarnType" value={product.yarnType}
                             onChange={e => setP("yarnType", e.target.value)} className={ic()}>
                             <option value="">Select…</option>
@@ -1749,6 +1788,40 @@ export default function RFQContent() {
                         <input type="text" placeholder="Describe your custom size requirement"
                           value={product.sizeRangeNotes} onChange={e => setP("sizeRangeNotes", e.target.value)}
                           className={`mt-3 ${ic()}`} />
+                      )}
+                      {product.sizeRange.length > 1 && (
+                        <div className="mt-3 pt-3 border-t border-gray-100">
+                          <p className="text-xs font-semibold text-navy-900/80 mb-1">Size Ratios</p>
+                          <p className="text-[11px] text-gray-500 mb-2">Enter ratio per size — qty will be split proportionally from total order.</p>
+                          <div className="grid grid-cols-2 gap-2">
+                            {product.sizeRange.map(size => {
+                              const ratio = product.sizeRatios?.[size] ?? "";
+                              const totalRatio = product.sizeRange.reduce((sum, s) => {
+                                const v = parseFloat(product.sizeRatios?.[s] ?? "0");
+                                return sum + (isNaN(v) ? 0 : v);
+                              }, 0);
+                              const totalQty = parseFloat(product.quantity ?? "0");
+                              const calcQty = (ratio && totalRatio > 0 && totalQty > 0)
+                                ? Math.round((parseFloat(ratio) / totalRatio) * totalQty) : null;
+                              return (
+                                <div key={size} className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg border border-gray-200 bg-gray-50/80">
+                                  <span className="text-[11px] font-semibold text-navy-900 min-w-0 flex-1 truncate">{size}</span>
+                                  <span className="text-gray-400 text-xs shrink-0">×</span>
+                                  <input
+                                    type="number" min="0" step="1"
+                                    value={ratio}
+                                    onChange={e => updateProduct(activeProduct, { sizeRatios: { ...product.sizeRatios, [size]: e.target.value } })}
+                                    className="w-10 px-1 py-0.5 border border-gray-200 rounded text-xs text-center text-gray-900 bg-white focus:outline-none focus:ring-1 focus:ring-gold/50"
+                                    placeholder="1"
+                                  />
+                                  {calcQty !== null && (
+                                    <span className="text-[10px] text-gray-400 shrink-0">≈{calcQty.toLocaleString()}</span>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
                       )}
                     </div>
                     <div className="grid sm:grid-cols-2 gap-3">
@@ -1918,7 +1991,7 @@ export default function RFQContent() {
                         <select id="printType" value={product.printType}
                           onChange={e => setP("printType", e.target.value)} className={ic()}>
                           <option value="">Select…</option>
-                          {opts.printTypeOptions.map(o => <option key={o} value={o}>{o}</option>)}
+                          {filteredPrintOptions.map(o => <option key={o} value={o}>{o}</option>)}
                         </select>
                       </Field>
                       <Field id="printPlacement" label={opts.printPlacementLabel}>
@@ -2098,7 +2171,7 @@ export default function RFQContent() {
                               {opts.setCompositionOptions.map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
                           </Field>
-                          {product.category === "Apparel" && (
+                          {!opts.isFabricRoll && (
                             <div>
                               <Field id="masterCarton" label="Master Carton">
                                 <select id="masterCarton" value={product.masterCarton}
@@ -2407,7 +2480,7 @@ export default function RFQContent() {
                   {/* Composition */}
                   {p.fiberContent && <ReviewRow label="Fiber Content" value={p.fiberContent === "Other" ? `Other — ${p.fiberContentOther}` : p.fiberContent} />}
                   {opts?.isFabricRoll && p.sustainability && <ReviewRow label="Sustainability" value={p.sustainability} />}
-                  {p.category === "Apparel" && yarnVal && <ReviewRow label="Yarn Type" value={yarnVal} />}
+                  {p.category === "Apparel" && yarnVal && <ReviewRow label="Yarn Spinning" value={yarnVal} />}
                   {p.compositionNotes && <ReviewRow label="Composition Notes" value={p.compositionNotes} />}
 
                   {/* Construction */}
@@ -2417,9 +2490,9 @@ export default function RFQContent() {
                   {opts?.isFabricRoll && p.sizeRange[0] && <ReviewRow label="Fabric Width" value={p.sizeRange[0]} />}
 
                   {/* Yarn Specs */}
-                  {opts?.showWarpWeft && p.warpYarn && <ReviewRow label="Warp Yarn" value={p.warpYarn} />}
-                  {opts?.showWarpWeft && p.weftYarn && <ReviewRow label="Weft Yarn" value={p.weftYarn} />}
-                  {opts?.showWarpWeft && p.picksPerCm && <ReviewRow label="Picks / Thread Density" value={p.picksPerCm} />}
+                  {opts?.showWarpWeft && p.construction !== "Jersey Knit (stretch)" && p.warpYarn && <ReviewRow label="Warp Yarn" value={p.warpYarn} />}
+                  {opts?.showWarpWeft && p.construction !== "Jersey Knit (stretch)" && p.weftYarn && <ReviewRow label="Weft Yarn" value={p.weftYarn} />}
+                  {opts?.showWarpWeft && p.construction !== "Jersey Knit (stretch)" && p.picksPerCm && <ReviewRow label="Picks / Thread Density" value={p.picksPerCm} />}
                   {opts?.showPileGround && p.pileYarn && <ReviewRow label="Pile Yarn" value={p.pileYarn} />}
                   {opts?.showPileGround && p.groundYarn && <ReviewRow label="Ground Yarn" value={p.groundYarn} />}
                   {opts?.showPileGround && p.picksPerCm && !opts?.showWarpWeft && <ReviewRow label="Loop Density" value={p.picksPerCm} />}
@@ -2427,6 +2500,9 @@ export default function RFQContent() {
 
                   {/* Sizing */}
                   {sizeDisplay && <ReviewRow label={opts?.sizeLabel ?? "Size"} value={sizeDisplay} />}
+                  {p.sizeRange.length > 1 && p.sizeRatios && Object.keys(p.sizeRatios).length > 0 && (
+                    <ReviewRow label="Size Ratio" value={p.sizeRange.filter(s => p.sizeRatios[s]).map(s => `${s}:${p.sizeRatios[s]}`).join(", ")} />
+                  )}
                   {p.fitType && <ReviewRow label="Fit" value={p.fitType} />}
                   {p.style && <ReviewRow label={opts?.styleLabel ?? "Style"} value={p.style === "Other" ? `Other — ${p.styleOther}` : p.style} />}
                   {opts?.showSizeStandard && sizeStdVal && <ReviewRow label="Size Standard" value={sizeStdVal} />}
