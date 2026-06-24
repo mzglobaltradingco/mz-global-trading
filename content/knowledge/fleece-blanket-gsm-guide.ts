@@ -14,7 +14,7 @@ const post: KnowledgePost = {
   featured: false,
   content: `## Fleece Blankets: GSM Is Not the Only Performance Indicator
 
-GSM is the most commonly cited specification for fleece blankets — but GSM alone does not determine performance. A 200 GSM anti-pill fleece blanket can outperform a 300 GSM standard fleece blanket in long-term softness retention and pilling resistance. For procurement managers sourcing [fleece thermal blankets from Pakistan](/hometextile/thermalblankets/fleece/), the specification must address construction type, anti-pill treatment, and intended laundering conditions alongside GSM.
+GSM is the most commonly cited specification for fleece blankets — but GSM alone does not determine performance. A 200 GSM anti-pill fleece blanket can outperform a 300 GSM standard fleece blanket in long-term softness retention and pilling resistance. For procurement managers sourcing [fleece thermal blankets from Pakistan](/hometextile/thermalblankets/fleecethermalblankets/), the specification must address construction type, anti-pill treatment, and intended laundering conditions alongside GSM.
 
 Pakistan manufactures fleece blankets in all major constructions for retail buyers in the USA, UK, EU, Middle East and Australia, and for institutional buyers in hotels, airlines and care facilities.
 
@@ -113,7 +113,7 @@ Fleece blankets are polyester — OEKO-TEX Standard 100 certification should cov
 
 ## Sourcing Fleece Blankets from Pakistan
 
-MZ Global Trading sources [fleece thermal blankets](/hometextile/thermalblankets/fleece/) in all constructions and GSM grades from Pakistan's certified knitted textile manufacturers. Custom sublimation print, sherpa reverses and coordinated programmes with [cellular blankets](/hometextile/thermalblankets/cellular/) for hotel and institutional buyers are available.
+MZ Global Trading sources [fleece thermal blankets](/hometextile/thermalblankets/fleecethermalblankets/) in all constructions and GSM grades from Pakistan's certified knitted textile manufacturers. Custom sublimation print, sherpa reverses and coordinated programmes with [cellular blankets](/hometextile/thermalblankets/cellularthermalblanket/) for hotel and institutional buyers are available.
 
 [Request a sourcing quote](/rfq/) with your fleece type, GSM target, size range, print requirement and annual volume — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };

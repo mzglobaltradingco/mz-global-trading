@@ -40,7 +40,7 @@ Both pieces must be unsewn — no stitching, no seams joining the Ridaa or Izaar
 ### Fabric Type
 No specific fabric type is mandated by Islamic law — but the practical consensus among scholars and pilgrims is that **white terry cotton** is the dominant and most widely accepted fabric for Ihram globally. The reasons are practical: the loop pile provides warmth during night prayer in Mina and Muzdalifah (where temperatures can drop below 15°C), and the cotton absorbs perspiration during the physically demanding Hajj rituals.
 
-**Woven alternatives:** Some pilgrims use thin woven cotton (similar to [muslin](/apparel/babyandkids/swaddlemuslin/) construction) — lighter and cooler, appropriate for Umrah year-round and summer Hajj. Less commonly specified in volume buying.
+**Woven alternatives:** Some pilgrims use thin woven cotton (similar to [muslin](/apparel/babyandkids/swaddlemuslinfabric/) construction) — lighter and cooler, appropriate for Umrah year-round and summer Hajj. Less commonly specified in volume buying.
 
 ## Fabric Specifications — By Construction
 
@@ -64,7 +64,7 @@ The standard commercial specification for most [Ihram](/hometextile/ihram/) supp
 
 **GSM range:** 100–160 GSM. Lighter than terry — appropriate for warm-season use.
 
-**Construction:** Plain weave 100% cotton, similar weight to a heavy [muslin fabric](/apparel/babyandkids/swaddlemuslin/). Softer drape than terry; less warmth; lower cost.
+**Construction:** Plain weave 100% cotton, similar weight to a heavy [muslin fabric](/apparel/babyandkids/swaddlemuslinfabric/). Softer drape than terry; less warmth; lower cost.
 
 **Best for:** Umrah pilgrims, summer Hajj, Southeast Asian and South Asian pilgrim markets where heat is the primary comfort concern.
 

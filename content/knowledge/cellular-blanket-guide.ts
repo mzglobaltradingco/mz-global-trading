@@ -14,7 +14,7 @@ const post: KnowledgePost = {
   featured: false,
   content: `## Cellular Blankets: Thermal Regulation Through Open Weave
 
-A cellular blanket is not a heavy blanket — it is a thermally efficient blanket. The open-weave structure creates a visible grid of cells that trap air, providing insulation without the weight of a closed-weave fabric. For procurement managers sourcing [cellular thermal blankets from Pakistan](/hometextile/thermalblankets/cellular/), the key variables are GSM, cell size, cotton specification and wash-cycle performance.
+A cellular blanket is not a heavy blanket — it is a thermally efficient blanket. The open-weave structure creates a visible grid of cells that trap air, providing insulation without the weight of a closed-weave fabric. For procurement managers sourcing [cellular thermal blankets from Pakistan](/hometextile/thermalblankets/cellularthermalblanket/), the key variables are GSM, cell size, cotton specification and wash-cycle performance.
 
 Cellular blankets are predominantly specified for healthcare (NHS, hospitals, care homes), institutional (airlines, budget hotels, transport), and thermal-emergency applications. Pakistan produces cellular blankets for export at commercial scale, with 100% cotton specification standard for healthcare use.
 
@@ -48,7 +48,7 @@ For NHS and healthcare use, cellular blankets must be **100% cotton** — no pol
 
 These requirements rule out poly-cotton blends and finished cotton for NHS supply. Confirm with the mill that the yarn is ring-spun or open-end spun 100% cotton and that the finish is either none or a wash-out sizing only.
 
-Compare with [fleece thermal blankets](/hometextile/thermalblankets/fleece/) — fleece is polyester and therefore not suitable for healthcare applications requiring thermal disinfection.
+Compare with [fleece thermal blankets](/hometextile/thermalblankets/fleecethermalblankets/) — fleece is polyester and therefore not suitable for healthcare applications requiring thermal disinfection.
 
 ## Standard Sizes
 
@@ -81,7 +81,7 @@ Do not iron cellular blankets — the heat flattens the open-cell structure and 
 
 ## Sourcing Cellular Blankets from Pakistan
 
-MZ Global Trading sources [cellular thermal blankets](/hometextile/thermalblankets/cellular/) in healthcare-grade and institutional specifications from Pakistan's certified textile manufacturers. Programmes combining cellular blankets with [fleece thermal blankets](/hometextile/thermalblankets/fleece/) for different ward or programme types are available through a single consolidated RFQ.
+MZ Global Trading sources [cellular thermal blankets](/hometextile/thermalblankets/cellularthermalblanket/) in healthcare-grade and institutional specifications from Pakistan's certified textile manufacturers. Programmes combining cellular blankets with [fleece thermal blankets](/hometextile/thermalblankets/fleecethermalblankets/) for different ward or programme types are available through a single consolidated RFQ.
 
 [Request a sourcing quote](/rfq/) with your GSM requirement, size range, healthcare standard (NHS/GPO/EU hospital), annual volume and destination market — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };

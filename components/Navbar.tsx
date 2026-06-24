@@ -16,7 +16,7 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Our Company", href: "/our-company" },
   { label: "Quality & Suppliers", href: "/quality-suppliers" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Contact Us", href: "/contact-us/" },
 ];
 
 export default function Navbar() {
@@ -96,7 +96,7 @@ export default function Navbar() {
             </div>
 
             <Link
-              href="/contact"
+              href="/contact-us/"
               className="ml-2 px-5 py-2.5 bg-gold text-navy-900 text-sm font-bold rounded hover:bg-gold-light transition-colors"
             >
               Request a Quote
@@ -153,7 +153,7 @@ export default function Navbar() {
                 ))}
                 <div className="px-4 pt-2 pb-3">
                   <Link
-                    href="/contact"
+                    href="/contact-us/"
                     onClick={() => setMobileOpen(false)}
                     className="block text-center px-5 py-2.5 bg-gold text-navy-900 text-sm font-bold rounded hover:bg-gold-light transition-colors"
                   >
