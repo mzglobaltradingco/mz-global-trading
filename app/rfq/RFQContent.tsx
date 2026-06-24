@@ -55,6 +55,27 @@ const BLOCKED_COUNTRIES = new Set([
 
 const COUNTRIES_ALLOWED = COUNTRIES_SORTED.filter(c => !BLOCKED_COUNTRIES.has(c));
 
+// Maps each range-type size option to its individual sizes for ratio inputs.
+// Keys must exactly match the strings in rfq-product-options.ts sizeOptions arrays.
+const SIZE_RANGE_EXPANSION: Record<string, string[]> = {
+  "XS–XL":                                    ["XS", "S", "M", "L", "XL"],
+  "XS–2XL":                                   ["XS", "S", "M", "L", "XL", "2XL"],
+  "XS–3XL":                                   ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+  "S–XXL":                                    ["S", "M", "L", "XL", "XXL"],
+  "S / M / L / XL / XXL":                    ["S", "M", "L", "XL", "XXL"],
+  "S / M / L / XL / XXL / 3XL":              ["S", "M", "L", "XL", "XXL", "3XL"],
+  "EU 38–46":                                 ["38", "40", "42", "44", "46"],
+  "Collar 14\"–18\" (US sizing)":            ["14\"", "14.5\"", "15\"", "15.5\"", "16\"", "16.5\"", "17\"", "17.5\"", "18\""],
+  "Waist 28–36\" / Inseam 28–34\"":          ["W28", "W29", "W30", "W31", "W32", "W33", "W34", "W36"],
+  "Waist 28–40\" (extended range)":           ["W28", "W30", "W32", "W34", "W36", "W38", "W40"],
+  "Waist 28–42\" (plus range)":              ["W28", "W30", "W32", "W34", "W36", "W38", "W40", "W42"],
+  "Women's Waist 24–34\"":                   ["W24", "W25", "W26", "W27", "W28", "W29", "W30", "W32", "W34"],
+  "Waist 28–38\" standard inseam":           ["W28", "W30", "W32", "W34", "W36", "W38"],
+  "Waist 28–42\" extended":                  ["W28", "W30", "W32", "W34", "W36", "W38", "W40", "W42"],
+  "Waist 28–40\" standard inseam":           ["W28", "W30", "W32", "W34", "W36", "W38", "W40"],
+  "Waist 28–38\" / Inseam 5\"–11\"":         ["W28", "W30", "W32", "W34", "W36", "W38"],
+};
+
 const INCOTERMS = [
   "EXW – Ex Works (factory)",
   "FOB – Free on Board (Karachi)",
@@ -354,12 +375,20 @@ function needsPort(incoterm: string) {
 }
 
 function focusFirstError(errorMap: Record<string, string>) {
-  const firstKey = Object.keys(errorMap)[0];
-  if (!firstKey) return;
+  if (Object.keys(errorMap).length === 0) return;
+  const STICKY_OFFSET = 188; // 128px header + 48px progress bar + 12px buffer
   setTimeout(() => {
-    const el = document.getElementById(firstKey);
-    if (el) { el.scrollIntoView({ behavior: "smooth", block: "center" }); el.focus(); }
-  }, 50);
+    const firstKey = Object.keys(errorMap)[0];
+    // Try exact ID match first, then fall back to first invalid/alert element
+    let el: HTMLElement | null = document.getElementById(firstKey);
+    if (!el) el = document.querySelector('[aria-invalid="true"]') as HTMLElement | null;
+    if (!el) el = document.querySelector('[role="alert"]') as HTMLElement | null;
+    if (el) {
+      const top = window.scrollY + el.getBoundingClientRect().top - STICKY_OFFSET;
+      window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+      el.focus({ preventScroll: true });
+    }
+  }, 120);
 }
 
 function getProductTypes(category: string): string[] {
@@ -524,11 +553,12 @@ function buildEmailBody(f: RFQFormState): string {
         if (yarnRows.length) lines.push(subHead("YARN SPECIFICATION"), ...yarnRows);
       }
 
-      const ratioEntries = p.sizeRange.length > 0 && p.sizeRatios
-        ? p.sizeRange.filter(s => p.sizeRatios[s]).map(s => `${s}:${p.sizeRatios[s]}`).join(", ") : "";
-      const totalRatioSum = p.sizeRange.reduce((sum, s) => sum + (parseFloat(p.sizeRatios?.[s] ?? "0") || 0), 0);
+      const ratioSizes = Object.keys(p.sizeRatios ?? {}).filter(s => p.sizeRatios[s]);
+      const ratioEntries = ratioSizes.length > 0
+        ? ratioSizes.map(s => `${s}:${p.sizeRatios[s]}`).join(", ") : "";
+      const totalRatioSum = ratioSizes.reduce((sum, s) => sum + (parseFloat(p.sizeRatios?.[s] ?? "0") || 0), 0);
       const qtyPerSizeEntries = ratioEntries && p.quantity && totalRatioSum > 0
-        ? p.sizeRange.filter(s => p.sizeRatios?.[s]).map(s => {
+        ? ratioSizes.map(s => {
             const r = parseFloat(p.sizeRatios[s]);
             const qty = r > 0 ? Math.round((r / totalRatioSum) * parseFloat(p.quantity)) : 0;
             return qty > 0 ? `${s}:${qty.toLocaleString()}` : null;
@@ -550,7 +580,6 @@ function buildEmailBody(f: RFQFormState): string {
         row(opts?.designLabel ?? "Print Type", p.printType),
         row(opts?.printPlacementLabel ?? "Placement", p.printPlacement),
         row("Print / Design Detail", p.printDetail),
-        row("Artwork / Logo Size", p.artworkSize),
       ].filter(Boolean);
       if (colorRows.length) lines.push(subHead("COLOR & DESIGN"), ...colorRows);
 
@@ -627,7 +656,6 @@ function buildEmailBody(f: RFQFormState): string {
         row(opts?.designLabel ?? "Design", p.printType),
         row(opts?.printPlacementLabel ?? "Placement", p.printPlacement),
         row("Pantone / Color Ref", p.pantoneRef), row("Design Detail", p.printDetail),
-        row("Artwork / Logo Size", p.artworkSize),
       ].filter(Boolean);
       if (colorRows.length) lines.push(subHead("COLOR & DESIGN"), ...colorRows);
 
@@ -1268,6 +1296,7 @@ export default function RFQContent() {
   const [status, setStatus]           = useState<Status>("idle");
   const [submittedAt, setSubmittedAt] = useState("");
   const [pdfState, setPdfState]       = useState<"idle" | "loading" | "done" | "error">("idle");
+  const [showExclusionModal, setShowExclusionModal] = useState(false);
   const formRef  = useRef<HTMLDivElement>(null);
   const hasMounted = useRef(false);
 
@@ -1366,7 +1395,6 @@ export default function RFQContent() {
     // Design detail + artwork size — mandatory when print/embroidery selected
     const hasPrintOrEmb = p.printType && !/plain|no decoration/i.test(p.printType);
     if (hasPrintOrEmb && !p.printDetail.trim()) e.printDetail = "Design detail is required when a decoration type is selected";
-    if (hasPrintOrEmb && !p.artworkSize.trim()) e.artworkSize = "Artwork / logo size is required when a decoration type is selected";
     // Section 7 — brand label (Apparel only)
     if (p.productType && p.productType !== "Other / Multiple" && p.category === "Apparel" && !p.brandLabel)
       e.brandLabel = "Brand label type is required";
@@ -1527,10 +1555,14 @@ export default function RFQContent() {
             </div>
           </div>
           <ul className="text-xs text-amber-800 leading-relaxed space-y-1 pl-2">
-            <li>• All prices quoted are indicative FOB Karachi — final price confirmed on order placement after sample approval.</li>
-            <li>• Samples are available on request; approval of the counter sample is required before bulk production begins.</li>
             <li>• A PDF copy of your completed RFQ will be generated at the end for your records.</li>
             <li>• For clarifications or missing details, our team may contact you at the provided email or phone before processing.</li>
+            <li>• Inquiries from certain countries cannot currently be accepted.{" "}
+              <button type="button" onClick={() => setShowExclusionModal(true)}
+                className="font-semibold underline hover:text-amber-900 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-500">
+                View exclusion list
+              </button>
+            </li>
           </ul>
         </div>
 
@@ -1887,49 +1919,118 @@ export default function RFQContent() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 items-start">
                   <SpecSection title="Dimensions & Sizing" number={4} color="green">
                     <div>
-                      <p className="text-xs font-semibold text-navy-900/80 mb-2">
-                        {opts.sizeLabel} <span className="text-gray-500 font-normal text-[11px]">(select all that apply)</span>
-                      </p>
-                      <CheckboxGrid options={opts.sizeOptions} selected={product.sizeRange} onToggle={v => toggleArr("sizeRange", v)} />
-                      {errors.sizeRange && <p className="text-red-500 text-[11px] mt-1.5 flex items-center gap-1" role="alert"><span aria-hidden="true">↑</span> {errors.sizeRange}</p>}
-                      {product.sizeRange.includes("Custom") && (
-                        <input type="text" placeholder="Describe your custom size requirement"
-                          value={product.sizeRangeNotes} onChange={e => setP("sizeRangeNotes", e.target.value)}
-                          className={`mt-3 ${ic()}`} />
-                      )}
-                      {product.sizeRange.length >= 1 && !opts?.isFabricRoll && (
-                        <div className="mt-3 pt-3 border-t border-gray-100">
-                          <p className="text-xs font-semibold text-navy-900/80 mb-1">Size Ratios</p>
-                          <p className="text-[11px] text-gray-500 mb-2">Enter ratio per size — qty will be split proportionally from total order.</p>
-                          <div className="grid grid-cols-2 gap-2">
-                            {product.sizeRange.map(size => {
-                              const ratio = product.sizeRatios?.[size] ?? "";
-                              const totalRatio = product.sizeRange.reduce((sum, s) => {
-                                const v = parseFloat(product.sizeRatios?.[s] ?? "0");
-                                return sum + (isNaN(v) ? 0 : v);
-                              }, 0);
-                              const totalQty = parseFloat(product.quantity ?? "0");
-                              const calcQty = (ratio && totalRatio > 0 && totalQty > 0)
-                                ? Math.round((parseFloat(ratio) / totalRatio) * totalQty) : null;
-                              return (
-                                <div key={size} className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg border border-gray-200 bg-gray-50/80">
-                                  <span className="text-[11px] font-semibold text-navy-900 min-w-0 flex-1 truncate">{size}</span>
-                                  <span className="text-gray-400 text-xs shrink-0">×</span>
-                                  <input
-                                    type="number" min="0" step="1"
-                                    value={ratio}
-                                    onChange={e => updateProduct(activeProduct, { sizeRatios: { ...product.sizeRatios, [size]: e.target.value } })}
-                                    className="w-10 px-1 py-0.5 border border-gray-200 rounded text-xs text-center text-gray-900 bg-white focus:outline-none focus:ring-1 focus:ring-gold/50"
-                                    placeholder="1"
-                                  />
-                                  {calcQty !== null && (
-                                    <span className="text-[10px] text-gray-400 shrink-0">≈{calcQty.toLocaleString()}</span>
-                                  )}
+                      {opts.sizeSelectionType === "dropdown" ? (
+                        /* Dropdown mode — single range select + expanded individual ratio inputs */
+                        <>
+                          <p className="text-xs font-semibold text-navy-900/80 mb-2">
+                            {opts.sizeLabel} <span className="text-red-500">*</span>
+                          </p>
+                          <select
+                            id="sizeRange"
+                            value={product.sizeRange[0] ?? ""}
+                            onChange={e => {
+                              const v = e.target.value;
+                              updateProduct(activeProduct, { sizeRange: v ? [v] : [], sizeRatios: {} });
+                              if (errors.sizeRange) setErrors(prev => ({ ...prev, sizeRange: "" }));
+                            }}
+                            className={ic(errors.sizeRange)}
+                          >
+                            <option value="">Select range…</option>
+                            {opts.sizeOptions.map(o => <option key={o} value={o}>{o}</option>)}
+                          </select>
+                          {errors.sizeRange && <p className="text-red-500 text-[11px] mt-1.5 flex items-center gap-1" role="alert"><span aria-hidden="true">↑</span> {errors.sizeRange}</p>}
+                          {product.sizeRange[0] === "Custom" && (
+                            <input type="text" placeholder="Describe your custom size requirement"
+                              value={product.sizeRangeNotes} onChange={e => setP("sizeRangeNotes", e.target.value)}
+                              className={`mt-2 ${ic()}`} />
+                          )}
+                          {product.sizeRange[0] && product.sizeRange[0] !== "Custom" && (() => {
+                            const expanded = SIZE_RANGE_EXPANSION[product.sizeRange[0]] ?? [];
+                            if (!expanded.length) return null;
+                            const totalRatioD = expanded.reduce((sum, s) => {
+                              const v = parseFloat(product.sizeRatios?.[s] ?? "0");
+                              return sum + (isNaN(v) ? 0 : v);
+                            }, 0);
+                            const totalQtyD = parseFloat(product.quantity ?? "0");
+                            return (
+                              <div className="mt-3 pt-3 border-t border-gray-100">
+                                <p className="text-xs font-semibold text-navy-900/80 mb-1">Size Ratios</p>
+                                <p className="text-[11px] text-gray-500 mb-2">Enter ratio per size — qty will be split proportionally from total order.</p>
+                                <div className="grid grid-cols-3 gap-2">
+                                  {expanded.map(size => {
+                                    const ratio = product.sizeRatios?.[size] ?? "";
+                                    const calcQtyD = (ratio && totalRatioD > 0 && totalQtyD > 0)
+                                      ? Math.round((parseFloat(ratio) / totalRatioD) * totalQtyD) : null;
+                                    return (
+                                      <div key={size} className="flex items-center gap-1 px-2 py-1.5 rounded-lg border border-gray-200 bg-gray-50/80">
+                                        <span className="text-[11px] font-semibold text-navy-900 shrink-0">{size}</span>
+                                        <span className="text-gray-400 text-xs shrink-0">×</span>
+                                        <input
+                                          type="number" min="0" step="1"
+                                          value={ratio}
+                                          onChange={e => updateProduct(activeProduct, { sizeRatios: { ...product.sizeRatios, [size]: e.target.value } })}
+                                          className="w-10 px-1 py-0.5 border border-gray-200 rounded text-xs text-center text-gray-900 bg-white focus:outline-none focus:ring-1 focus:ring-gold/50"
+                                          placeholder="1"
+                                        />
+                                        {calcQtyD !== null && (
+                                          <span className="text-[10px] text-gray-400 shrink-0">≈{calcQtyD.toLocaleString()}</span>
+                                        )}
+                                      </div>
+                                    );
+                                  })}
                                 </div>
-                              );
-                            })}
-                          </div>
-                        </div>
+                              </div>
+                            );
+                          })()}
+                        </>
+                      ) : (
+                        /* Checkbox mode — multi-select sizes + per-size ratio inputs */
+                        <>
+                          <p className="text-xs font-semibold text-navy-900/80 mb-2">
+                            {opts.sizeLabel} <span className="text-gray-500 font-normal text-[11px]">(select all that apply)</span>
+                          </p>
+                          <CheckboxGrid options={opts.sizeOptions} selected={product.sizeRange} onToggle={v => toggleArr("sizeRange", v)} />
+                          {errors.sizeRange && <p className="text-red-500 text-[11px] mt-1.5 flex items-center gap-1" role="alert"><span aria-hidden="true">↑</span> {errors.sizeRange}</p>}
+                          {product.sizeRange.includes("Custom") && (
+                            <input type="text" placeholder="Describe your custom size requirement"
+                              value={product.sizeRangeNotes} onChange={e => setP("sizeRangeNotes", e.target.value)}
+                              className={`mt-3 ${ic()}`} />
+                          )}
+                          {product.sizeRange.length >= 1 && !opts?.isFabricRoll && (
+                            <div className="mt-3 pt-3 border-t border-gray-100">
+                              <p className="text-xs font-semibold text-navy-900/80 mb-1">Size Ratios</p>
+                              <p className="text-[11px] text-gray-500 mb-2">Enter ratio per size — qty will be split proportionally from total order.</p>
+                              <div className="grid grid-cols-2 gap-2">
+                                {product.sizeRange.map(size => {
+                                  const ratio = product.sizeRatios?.[size] ?? "";
+                                  const totalRatio = product.sizeRange.reduce((sum, s) => {
+                                    const v = parseFloat(product.sizeRatios?.[s] ?? "0");
+                                    return sum + (isNaN(v) ? 0 : v);
+                                  }, 0);
+                                  const totalQty = parseFloat(product.quantity ?? "0");
+                                  const calcQty = (ratio && totalRatio > 0 && totalQty > 0)
+                                    ? Math.round((parseFloat(ratio) / totalRatio) * totalQty) : null;
+                                  return (
+                                    <div key={size} className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg border border-gray-200 bg-gray-50/80">
+                                      <span className="text-[11px] font-semibold text-navy-900 min-w-0 flex-1 truncate">{size}</span>
+                                      <span className="text-gray-400 text-xs shrink-0">×</span>
+                                      <input
+                                        type="number" min="0" step="1"
+                                        value={ratio}
+                                        onChange={e => updateProduct(activeProduct, { sizeRatios: { ...product.sizeRatios, [size]: e.target.value } })}
+                                        className="w-10 px-1 py-0.5 border border-gray-200 rounded text-xs text-center text-gray-900 bg-white focus:outline-none focus:ring-1 focus:ring-gold/50"
+                                        placeholder="1"
+                                      />
+                                      {calcQty !== null && (
+                                        <span className="text-[10px] text-gray-400 shrink-0">≈{calcQty.toLocaleString()}</span>
+                                      )}
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          )}
+                        </>
                       )}
                     </div>
                     <div className="grid sm:grid-cols-2 gap-3">
@@ -2170,13 +2271,6 @@ export default function RFQContent() {
                               placeholder="e.g. Brand logo 8×4 cm, 2 spot colors"
                               value={product.printDetail} onChange={e => { setP("printDetail", e.target.value); if (errors.printDetail) setErrors(prev => ({ ...prev, printDetail: "" })); }} className={ic(errors.printDetail)} />
                           </Field>
-                          {hasPrintOrEmb && (
-                            <Field id="artworkSize" label="Artwork / Logo Size" required error={errors.artworkSize}>
-                              <input id="artworkSize" type="text" aria-invalid={!!errors.artworkSize}
-                                placeholder="e.g. 8×4 cm embroidery area / 30×40 cm print panel"
-                                value={product.artworkSize} onChange={e => { setP("artworkSize", e.target.value); if (errors.artworkSize) setErrors(prev => ({ ...prev, artworkSize: "" })); }} className={ic(errors.artworkSize)} />
-                            </Field>
-                          )}
                         </>
                       );
                     })()}
@@ -2670,8 +2764,8 @@ export default function RFQContent() {
 
                   {/* Sizing */}
                   {sizeDisplay && <ReviewRow label={opts?.sizeLabel ?? "Size"} value={sizeDisplay} />}
-                  {p.sizeRange.length > 1 && p.sizeRatios && Object.keys(p.sizeRatios).length > 0 && (
-                    <ReviewRow label="Size Ratio" value={p.sizeRange.filter(s => p.sizeRatios[s]).map(s => `${s}:${p.sizeRatios[s]}`).join(", ")} />
+                  {p.sizeRatios && Object.keys(p.sizeRatios).filter(s => p.sizeRatios[s]).length > 0 && (
+                    <ReviewRow label="Size Ratio" value={Object.keys(p.sizeRatios).filter(s => p.sizeRatios[s]).map(s => `${s}:${p.sizeRatios[s]}`).join(", ")} />
                   )}
                   {p.fitType && <ReviewRow label="Fit" value={p.fitType} />}
                   {p.style && <ReviewRow label={opts?.styleLabel ?? "Style"} value={p.style === "Other" ? `Other — ${p.styleOther}` : p.style} />}
@@ -2707,7 +2801,6 @@ export default function RFQContent() {
                   )}
                   {p.pantoneRef && <ReviewRow label="Pantone / Color Ref" value={p.pantoneRef} />}
                   {p.printDetail && <ReviewRow label="Design Detail" value={p.printDetail} />}
-                  {p.artworkSize && <ReviewRow label="Artwork / Logo Size" value={p.artworkSize} />}
                   {opts?.isFabricRoll && p.colorFastnessNotes && <ReviewRow label="Color Fastness" value={p.colorFastnessNotes} />}
 
                   {/* Embellishments (Apparel) */}
@@ -3007,6 +3100,79 @@ export default function RFQContent() {
           </div>
         </div>
       </section>
+
+      {/* Country exclusion list overlay */}
+      {showExclusionModal && createPortal(
+        <div
+          className="fixed inset-0 z-[300] flex items-center justify-center p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="excl-title"
+        >
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setShowExclusionModal(false)}
+            aria-hidden="true"
+          />
+          {/* Panel */}
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md flex flex-col max-h-[80vh]">
+            {/* Header */}
+            <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 shrink-0">
+              <div>
+                <p className="text-[10px] font-semibold text-[#9A6400] uppercase tracking-widest mb-0.5">RFQ Policy</p>
+                <h2 id="excl-title" className="font-bold text-navy-900 text-base">Country Exclusion List</h2>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowExclusionModal(false)}
+                aria-label="Close exclusion list"
+                className="w-8 h-8 flex items-center justify-center rounded-full text-gray-400 hover:bg-gray-100 hover:text-navy-900 transition-colors shrink-0 ml-4"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </button>
+            </div>
+            {/* Scrollable body */}
+            <div className="overflow-y-auto px-6 py-5 space-y-4">
+              <p className="text-xs text-gray-600 leading-relaxed">
+                In line with our compliance and risk management policy, we are currently unable
+                to process sourcing inquiries from the following countries. This list is reviewed
+                periodically.
+              </p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1">
+                {[...BLOCKED_COUNTRIES].sort().map(country => (
+                  <li key={country} className="flex items-center gap-2 py-1.5 border-b border-gray-50">
+                    <svg className="w-3.5 h-3.5 text-red-400 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                    <span className="text-sm text-navy-900">
+                      {country}
+                      {country === "Pakistan" && <span className="text-[11px] text-gray-400 ml-1">(no local inquiries)</span>}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs text-amber-800 leading-relaxed">
+                If your business is registered outside these countries but you are currently located
+                in one, contact us at{" "}
+                <a href="mailto:info@mzglobaltrading.com" className="font-semibold underline">
+                  info@mzglobaltrading.com
+                </a>{" "}
+                before submitting.
+              </div>
+            </div>
+            {/* Footer */}
+            <div className="px-6 py-4 border-t border-gray-100 shrink-0">
+              <button
+                type="button"
+                onClick={() => setShowExclusionModal(false)}
+                className="w-full py-2.5 bg-navy-900 text-white text-sm font-semibold rounded-lg hover:bg-navy-900/85 transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>,
+        document.body
+      )}
     </>
   );
 }

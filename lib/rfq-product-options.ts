@@ -8,6 +8,7 @@ export interface ProductOptions {
   weightPlaceholder: string;
   sizeLabel: string;
   sizeOptions: string[];
+  sizeSelectionType?: "checkbox" | "dropdown";
   showFitType: boolean;
   fitOptions: string[];
   showSizeStandard: boolean;
@@ -538,13 +539,14 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
       "Recycled Cotton Denim", "Other",
     ],
     constructionOtherPlaceholder: "e.g. Bull Denim, Overdyed Denim, Poly-Cotton Denim",
-    weightLabel: "Weight (oz)",
+    weightLabel: "Weight",
     weightPlaceholder: "e.g. 12 oz",
     sizeLabel: "Waist / Inseam Range",
     sizeOptions: [
       "Waist 28–36\" / Inseam 28–34\"", "Waist 28–40\" (extended range)",
       "Waist 28–42\" (plus range)", "Women's Waist 24–34\"", "Custom",
     ],
+    sizeSelectionType: "dropdown",
     showFitType: true,
     fitOptions: [
       "Slim Fit", "Regular / Straight Leg", "Relaxed / Baggy",
@@ -591,13 +593,14 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
       "Chambray", "End-on-End", "Dobby Weave", "Seersucker", "Other",
     ],
     constructionOtherPlaceholder: "e.g. Micro-polyester, Lyocell / Tencel blend",
-    weightLabel: "GSM",
+    weightLabel: "Weight",
     weightPlaceholder: "e.g. 100 gsm",
     sizeLabel: "Size Range",
     sizeOptions: [
       "S / M / L / XL / XXL", "XS–3XL", "Collar 14\"–18\" (US sizing)",
       "EU 38–46", "Custom",
     ],
+    sizeSelectionType: "dropdown",
     showFitType: true,
     fitOptions: ["Regular / Classic", "Slim Fit", "Relaxed", "Athletic / Trim"],
     showSizeStandard: true,
@@ -640,13 +643,14 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
       "Linen / Linen Blend", "Wool Blend", "Sateen Stretch", "Ponte (knit-look)", "Other",
     ],
     constructionOtherPlaceholder: "e.g. Crepe, Scuba, Technical polyester",
-    weightLabel: "GSM",
+    weightLabel: "Weight",
     weightPlaceholder: "e.g. 220 gsm",
     sizeLabel: "Waist / Inseam Range",
     sizeOptions: [
       "Waist 28–38\" standard inseam", "Waist 28–42\" extended",
       "S / M / L / XL / XXL", "Custom",
     ],
+    sizeSelectionType: "dropdown",
     showFitType: true,
     fitOptions: ["Regular Fit", "Slim Fit", "Relaxed / Straight", "Tapered", "Athletic / Performance"],
     showSizeStandard: false,
@@ -685,10 +689,11 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
       "Stretch Ripstop", "Other",
     ],
     constructionOtherPlaceholder: "e.g. Cordura nylon, Waxed canvas",
-    weightLabel: "GSM",
+    weightLabel: "Weight",
     weightPlaceholder: "e.g. 240 gsm",
     sizeLabel: "Waist / Inseam Range",
     sizeOptions: ["Waist 28–40\" standard inseam", "S / M / L / XL / XXL / 3XL", "Custom"],
+    sizeSelectionType: "dropdown",
     showFitType: true,
     fitOptions: ["Regular Fit", "Relaxed Fit", "Slim / Tactical"],
     showSizeStandard: false,
@@ -727,13 +732,14 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
       "Canvas", "Ripstop (cargo)", "Linen Blend", "Nylon (swim / board)", "Other",
     ],
     constructionOtherPlaceholder: "e.g. Stretch poplin, Seersucker",
-    weightLabel: "GSM",
+    weightLabel: "Weight",
     weightPlaceholder: "e.g. 200 gsm",
     sizeLabel: "Size Range",
     sizeOptions: [
       "XS–XL", "XS–3XL", "Waist 28–38\" / Inseam 5\"–11\"",
       "S / M / L / XL / XXL", "Custom",
     ],
+    sizeSelectionType: "dropdown",
     showFitType: true,
     fitOptions: ["Regular Fit", "Slim Fit", "Relaxed / Loose", "Athletic / Performance"],
     showSizeStandard: true,
@@ -2107,9 +2113,8 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
       "Other",
     ],
     constructionOtherPlaceholder: "e.g. Organic cotton plain weave",
-    weightLabel: "Weight in Grams",
-    weightPlaceholder: "e.g. 450 g per pair",
-    hideWeight: true,
+    weightLabel: "Weight per Pair (grams)",
+    weightPlaceholder: "e.g. 450",
     sizeLabel: "Standard Size",
     sizeOptions: [
       "Standard pair (90×150 cm each)", "Small pair (80×140 cm)",
