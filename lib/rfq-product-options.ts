@@ -49,6 +49,24 @@ export interface ProductOptions {
   liningOptions?: string[];
   showPileHeight?: boolean;
   pileHeightOptions?: string[];
+  // Bed linen fabric type selector
+  showFabricTypeSelector?: boolean;
+  wovenConstructionOptions?: string[];
+  knitConstructionOptions?: string[];
+  // Woven garment weight unit selector
+  showWeightUnit?: boolean;
+  weightUnitOptions?: string[];
+  // Ihram: hide weight field entirely
+  hideWeight?: boolean;
+  // Bathrobe dimension fields
+  showBeltType?: boolean;
+  beltTypeOptions?: string[];
+  showBeltLoopPlacement?: boolean;
+  beltLoopPlacementOptions?: string[];
+  showRobePockets?: boolean;
+  robePocketOptions?: string[];
+  showCuffStyle?: boolean;
+  cuffStyleOptions?: string[];
 }
 
 // ─── Shared certification sets ────────────────────────────────────────────────
@@ -533,6 +551,8 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
       "Skinny", "Bootcut", "Tapered",
     ],
     showSizeStandard: false,
+    showWeightUnit: true,
+    weightUnitOptions: ["oz/yd²", "GSM", "lb/yd²"],
     showWarpWeft: true,
     styleLabel: "Pocket Style",
     styleOptions: [
@@ -581,6 +601,8 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     showFitType: true,
     fitOptions: ["Regular / Classic", "Slim Fit", "Relaxed", "Athletic / Trim"],
     showSizeStandard: true,
+    showWeightUnit: true,
+    weightUnitOptions: ["GSM", "oz/yd²", "lb/yd²"],
     showWarpWeft: true,
     styleLabel: "Collar / Style",
     styleOptions: [
@@ -628,6 +650,8 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     showFitType: true,
     fitOptions: ["Regular Fit", "Slim Fit", "Relaxed / Straight", "Tapered", "Athletic / Performance"],
     showSizeStandard: false,
+    showWeightUnit: true,
+    weightUnitOptions: ["GSM", "oz/yd²", "lb/yd²"],
     showWarpWeft: true,
     styleLabel: "Waistband / Pocket Style",
     styleOptions: [
@@ -668,6 +692,8 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     showFitType: true,
     fitOptions: ["Regular Fit", "Relaxed Fit", "Slim / Tactical"],
     showSizeStandard: false,
+    showWeightUnit: true,
+    weightUnitOptions: ["GSM", "oz/yd²", "lb/yd²"],
     showWarpWeft: true,
     styleLabel: "Pocket Configuration",
     styleOptions: [
@@ -711,6 +737,8 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     showFitType: true,
     fitOptions: ["Regular Fit", "Slim Fit", "Relaxed / Loose", "Athletic / Performance"],
     showSizeStandard: true,
+    showWeightUnit: true,
+    weightUnitOptions: ["GSM", "oz/yd²", "lb/yd²"],
     showWarpWeft: true,
     styleLabel: "Short Style",
     styleOptions: [
@@ -1250,6 +1278,14 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     showSizeStandard: false,
     showCollarType: true,
     collarOptions: ["Shawl collar", "Kimono collar", "Hooded", "Other"],
+    showBeltType: true,
+    beltTypeOptions: ["Wrap cord (fabric tie)", "D-ring belt", "Belt with loop", "No belt / tie included", "Other"],
+    showBeltLoopPlacement: true,
+    beltLoopPlacementOptions: ["Double belt loops (waist sides)", "Single loop (back center)", "No belt loops", "Other"],
+    showRobePockets: true,
+    robePocketOptions: ["2 side pockets (standard)", "1 breast pocket + 2 side pockets", "No pockets", "Other"],
+    showCuffStyle: true,
+    cuffStyleOptions: ["Ribbed cuff", "Plain hem cuff", "Velcro cuff", "No cuff (open sleeve)", "Other"],
     showPileGround: true,
     styleLabel: "Robe Length",
     styleOptions: ["Short (above knee)", "Knee length (midi)", "Long (calf to ankle)", "Other"],
@@ -1366,6 +1402,9 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     constructionLabel: "Weave / Construction",
     constructionOptions: BED_LINEN_CONSTRUCTION,
     constructionOtherPlaceholder: "e.g. Bamboo-Cotton blend, Tencel / Lyocell",
+    showFabricTypeSelector: true,
+    wovenConstructionOptions: ["Percale (200–400 TC)", "Sateen (300–600 TC)", "Poplin (fine plain weave)", "Flannel / Brushed Cotton", "Jacquard", "Dobby Stripe", "Linen / Linen Blend", "Other"],
+    knitConstructionOptions: ["Jersey Knit (stretch)", "Interlock Knit", "Rib Knit", "French Terry", "Other"],
     weightLabel: "Thread Count (TC)",
     weightPlaceholder: "e.g. 300 TC",
     sizeLabel: "Bed Size",
@@ -1402,6 +1441,9 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     constructionLabel: "Weave / Construction",
     constructionOptions: BED_LINEN_CONSTRUCTION,
     constructionOtherPlaceholder: "e.g. Bamboo-Cotton blend, Tencel / Lyocell",
+    showFabricTypeSelector: true,
+    wovenConstructionOptions: ["Percale (200–400 TC)", "Sateen (300–600 TC)", "Poplin (fine plain weave)", "Flannel / Brushed Cotton", "Jacquard", "Dobby Stripe", "Linen / Linen Blend", "Other"],
+    knitConstructionOptions: ["Jersey Knit (stretch)", "Interlock Knit", "Rib Knit", "French Terry", "Other"],
     weightLabel: "Thread Count (TC)",
     weightPlaceholder: "e.g. 300 TC",
     sizeLabel: "Bed Size",
@@ -1437,6 +1479,9 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     constructionLabel: "Weave / Construction",
     constructionOptions: BED_LINEN_CONSTRUCTION,
     constructionOtherPlaceholder: "e.g. Bamboo-Cotton blend, Tencel / Lyocell",
+    showFabricTypeSelector: true,
+    wovenConstructionOptions: ["Percale (200–400 TC)", "Sateen (300–600 TC)", "Poplin (fine plain weave)", "Flannel / Brushed Cotton", "Jacquard", "Dobby Stripe", "Linen / Linen Blend", "Other"],
+    knitConstructionOptions: ["Jersey Knit (stretch)", "Interlock Knit", "Rib Knit", "French Terry", "Other"],
     weightLabel: "Thread Count (TC)",
     weightPlaceholder: "e.g. 300 TC",
     sizeLabel: "Bed Size",
@@ -1477,6 +1522,9 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     constructionLabel: "Weave / Construction",
     constructionOptions: BED_LINEN_CONSTRUCTION,
     constructionOtherPlaceholder: "e.g. Bamboo-Cotton, Tencel / Lyocell",
+    showFabricTypeSelector: true,
+    wovenConstructionOptions: ["Percale (200–400 TC)", "Sateen (300–600 TC)", "Poplin (fine plain weave)", "Flannel / Brushed Cotton", "Jacquard", "Dobby Stripe", "Linen / Linen Blend", "Other"],
+    knitConstructionOptions: ["Jersey Knit (stretch)", "Interlock Knit", "Rib Knit", "French Terry", "Other"],
     weightLabel: "Thread Count (TC)",
     weightPlaceholder: "e.g. 300 TC",
     sizeLabel: "Standard Size",
@@ -1842,7 +1890,9 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     constructionLabel: "Fabric Type",
     constructionOptions: [
       "Plain Weave TC 65/35 Poly-Cotton (reusable)", "Plain Weave 100% Cotton",
-      "Non-Woven Polypropylene (disposable)", "Other",
+      "SMS Non-Woven (Spunbond-Meltblown-Spunbond)", "SMMS Non-Woven (4-layer)",
+      "SSMMS Non-Woven (5-layer, barrier)", "Non-Woven Polypropylene (disposable)",
+      "Other",
     ],
     constructionOtherPlaceholder: "e.g. SMS non-woven, Spunbond polyester",
     weightLabel: "GSM",
@@ -2057,8 +2107,9 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
       "Other",
     ],
     constructionOtherPlaceholder: "e.g. Organic cotton plain weave",
-    weightLabel: "Set Weight (grams)",
+    weightLabel: "Weight in Grams",
     weightPlaceholder: "e.g. 450 g per pair",
+    hideWeight: true,
     sizeLabel: "Standard Size",
     sizeOptions: [
       "Standard pair (90×150 cm each)", "Small pair (80×140 cm)",

@@ -45,6 +45,16 @@ const COUNTRIES = [
 
 const COUNTRIES_SORTED = [...COUNTRIES].sort((a, b) => a.localeCompare(b));
 
+const BLOCKED_COUNTRIES = new Set([
+  "Afghanistan", "Armenia", "Angola", "Cameroon", "Central African Republic",
+  "Chad", "Democratic Republic of the Congo", "Ethiopia", "Haiti", "India",
+  "Iraq", "Israel", "Lebanon", "Libya", "Mali", "Myanmar", "Niger", "Nigeria",
+  "North Korea", "Pakistan", "Somalia", "South Sudan", "Sudan", "Syria",
+  "Yemen", "Mozambique",
+]);
+
+const COUNTRIES_ALLOWED = COUNTRIES_SORTED.filter(c => !BLOCKED_COUNTRIES.has(c));
+
 const INCOTERMS = [
   "EXW – Ex Works (factory)",
   "FOB – Free on Board (Karachi)",
@@ -219,6 +229,15 @@ export interface ProductSpec {
   targetPrice: string;
   sampleRequired: string;
   hasTechPack: string;
+  fabricType: string;
+  weightUnit: string;
+  artworkSize: string;
+  beltType: string;
+  beltTypeOther: string;
+  beltLoopPlacement: string;
+  robePockets: string;
+  cuffStyle: string;
+  cuffStyleOther: string;
 }
 
 export interface RFQFormState {
@@ -268,6 +287,8 @@ function mkProduct(): ProductSpec {
     certifications: [], certOther: "",
     quantity: "", unitOfMeasure: "", targetPrice: "",
     sampleRequired: "", hasTechPack: "",
+    fabricType: "", weightUnit: "", artworkSize: "",
+    beltType: "", beltTypeOther: "", beltLoopPlacement: "", robePockets: "", cuffStyle: "", cuffStyleOther: "",
   };
 }
 
@@ -308,6 +329,10 @@ function specReset(p: ProductSpec): ProductSpec {
       packingNotes: fresh.packingNotes, rollLength: fresh.rollLength,
       rollLengthOther: fresh.rollLengthOther, rollCore: fresh.rollCore,
       rollNotes: fresh.rollNotes, certifications: fresh.certifications, certOther: fresh.certOther,
+      fabricType: fresh.fabricType, weightUnit: fresh.weightUnit, artworkSize: fresh.artworkSize,
+      beltType: fresh.beltType, beltTypeOther: fresh.beltTypeOther,
+      beltLoopPlacement: fresh.beltLoopPlacement, robePockets: fresh.robePockets,
+      cuffStyle: fresh.cuffStyle, cuffStyleOther: fresh.cuffStyleOther,
     },
   };
 }
@@ -433,7 +458,7 @@ function buildEmailBody(f: RFQFormState): string {
         row("Category", constrVal),
         p.construction === "Knitted" ? row("Knit Type", subTypeVal) : "",
         p.construction === "Woven" ? row("Woven Type", subTypeVal) : "",
-        row(opts.weightLabel ?? "GSM", p.weight),
+        row(opts.weightLabel ?? "GSM", p.weight ? [p.weight, p.weightUnit].filter(Boolean).join(" ") : ""),
         row("Fabric Width", p.sizeRange[0] ?? ""),
       ].filter(Boolean);
       if (conRows.length) lines.push(subHead("CONSTRUCTION"), ...conRows);
@@ -483,8 +508,9 @@ function buildEmailBody(f: RFQFormState): string {
       })();
 
       const fabricRows = [
+        p.fabricType ? row("Fabric Type (Woven / Knitted)", p.fabricType) : "",
         row(opts?.constructionLabel ?? "Fabric Type", constrVal),
-        row(opts?.weightLabel ?? "GSM", p.weight),
+        row(opts?.weightLabel ?? "GSM", p.weight ? [p.weight, p.weightUnit].filter(Boolean).join(" ") : ""),
         row("Fiber Content", fiberVal), row("Yarn Spinning", yarnVal),
         row("Composition Notes", p.compositionNotes),
       ].filter(Boolean);
@@ -524,6 +550,7 @@ function buildEmailBody(f: RFQFormState): string {
         row(opts?.designLabel ?? "Print Type", p.printType),
         row(opts?.printPlacementLabel ?? "Placement", p.printPlacement),
         row("Print / Design Detail", p.printDetail),
+        row("Artwork / Logo Size", p.artworkSize),
       ].filter(Boolean);
       if (colorRows.length) lines.push(subHead("COLOR & DESIGN"), ...colorRows);
 
@@ -558,8 +585,9 @@ function buildEmailBody(f: RFQFormState): string {
       const borderVal  = p.borderType === "Other"   && p.borderTypeOther  ? `Other — ${p.borderTypeOther}`  : p.borderType;
 
       const conRows = [
+        p.fabricType ? row("Fabric Type (Woven / Knitted)", p.fabricType) : "",
         row(opts?.constructionLabel ?? "Weave / Structure", constrVal),
-        row(opts?.weightLabel ?? "GSM", p.weight),
+        row(opts?.weightLabel ?? "GSM", p.weight ? [p.weight, p.weightUnit].filter(Boolean).join(" ") : ""),
         row("Fiber Content", fiberVal), row("Composition Notes", p.compositionNotes),
       ].filter(Boolean);
       if (conRows.length) lines.push(subHead("CONSTRUCTION & COMPOSITION"), ...conRows);
@@ -580,10 +608,14 @@ function buildEmailBody(f: RFQFormState): string {
         if (pileRows.length) lines.push(subHead("YARN SPECIFICATION — PILE & GROUND"), ...pileRows);
       }
 
+      const beltVal     = p.beltType === "Other" && p.beltTypeOther ? `Other — ${p.beltTypeOther}` : p.beltType;
+      const cuffVal     = p.cuffStyle === "Other" && p.cuffStyleOther ? `Other — ${p.cuffStyleOther}` : p.cuffStyle;
       const dimRows = [
         row(opts?.sizeLabel ?? "Size", sizeDisplay),
         row(opts?.styleLabel ?? "Style", styleVal),
         row("Border / Selvedge", borderVal), row("Collar Type", collarVal),
+        row("Belt / Tie Type", beltVal), row("Belt Loop Placement", p.beltLoopPlacement),
+        row("Pockets", p.robePockets), row("Cuff Style", cuffVal),
         row("Backing", backVal), row("Closure", closureVal),
         row("Pocket Depth", p.pocketDepth), row("Heading Type", headVal),
         row("Lining", liningVal), row("Heat Rating", p.heatRating),
@@ -595,6 +627,7 @@ function buildEmailBody(f: RFQFormState): string {
         row(opts?.designLabel ?? "Design", p.printType),
         row(opts?.printPlacementLabel ?? "Placement", p.printPlacement),
         row("Pantone / Color Ref", p.pantoneRef), row("Design Detail", p.printDetail),
+        row("Artwork / Logo Size", p.artworkSize),
       ].filter(Boolean);
       if (colorRows.length) lines.push(subHead("COLOR & DESIGN"), ...colorRows);
 
@@ -1240,7 +1273,7 @@ export default function RFQContent() {
 
   useEffect(() => {
     try {
-      const saved = localStorage.getItem("rfq_wizard_draft_v3");
+      const saved = localStorage.getItem("rfq_wizard_draft_v4");
       if (saved) {
         const parsed = JSON.parse(saved) as Partial<RFQFormState>;
         // Restore personal/logistics details only — products always start blank
@@ -1255,7 +1288,7 @@ export default function RFQContent() {
   useEffect(() => {
     if (!hasMounted.current) return;
     const t = setTimeout(() => {
-      try { localStorage.setItem("rfq_wizard_draft_v3", JSON.stringify(formState)); } catch { /* ignore */ }
+      try { localStorage.setItem("rfq_wizard_draft_v4", JSON.stringify(formState)); } catch { /* ignore */ }
     }, 500);
     return () => clearTimeout(t);
   }, [formState]);
@@ -1306,14 +1339,18 @@ export default function RFQContent() {
     if (p.productType === "Other / Multiple" && !p.productTypeOther.trim())
       e.productTypeOther = "Please describe your product";
     const opts = p.productType ? getProductOptions(p.productType) : undefined;
-    if (p.productType && p.productType !== "Other / Multiple" && !p.weight.trim())
+    if (p.productType && p.productType !== "Other / Multiple" && !opts?.hideWeight && !p.weight.trim())
       e.weight = `${opts?.weightLabel ?? "GSM / Weight"} is required`;
     if (opts?.isFabricRoll && !p.sizeRange[0])
       e.sizeRange0 = "Fabric width is required";
     if (p.productType && p.productType !== "Other / Multiple" && !p.fiberContent)
       e.fiberContent = "Fiber content is required";
-    if (p.productType && p.productType !== "Other / Multiple" && opts?.constructionOptions?.length && !p.construction)
+    if (p.productType && p.productType !== "Other / Multiple" && opts?.constructionOptions?.length && !opts.showFabricTypeSelector && !p.construction)
       e.construction = "Construction / weave type is required";
+    if (p.productType && p.productType !== "Other / Multiple" && opts?.showFabricTypeSelector && !p.fabricType)
+      e.construction = "Please select Woven or Knitted first";
+    if (p.productType && p.productType !== "Other / Multiple" && opts?.showFabricTypeSelector && p.fabricType && !p.construction)
+      e.construction = "Construction type is required";
     // Section 4 — at least one size
     if (p.productType && p.productType !== "Other / Multiple" && opts?.sizeOptions?.length && !opts?.isFabricRoll && p.sizeRange.length === 0)
       e.sizeRange = "Please select at least one size option";
@@ -1326,6 +1363,10 @@ export default function RFQContent() {
     // Section 6 — at least one finishing option
     if (p.productType && p.productType !== "Other / Multiple" && opts?.finishingOptions?.length && p.finishing.length === 0)
       e.finishing = "Please select at least one finishing option";
+    // Design detail + artwork size — mandatory when print/embroidery selected
+    const hasPrintOrEmb = p.printType && !/plain|no decoration/i.test(p.printType);
+    if (hasPrintOrEmb && !p.printDetail.trim()) e.printDetail = "Design detail is required when a decoration type is selected";
+    if (hasPrintOrEmb && !p.artworkSize.trim()) e.artworkSize = "Artwork / logo size is required when a decoration type is selected";
     // Section 7 — brand label (Apparel only)
     if (p.productType && p.productType !== "Other / Multiple" && p.category === "Apparel" && !p.brandLabel)
       e.brandLabel = "Brand label type is required";
@@ -1339,7 +1380,8 @@ export default function RFQContent() {
       e.certifications = "Select at least one option — or choose 'No specific requirement'";
     if (!p.quantity.trim()) e.quantity = "Quantity is required";
     else if (!/\d/.test(p.quantity)) e.quantity = "Enter a numeric quantity";
-    if (p.targetPrice && !/\d/.test(p.targetPrice)) e.targetPrice = "Enter a valid price (e.g. 3.50)";
+    if (!p.targetPrice.trim()) e.targetPrice = "Target price is required (enter your target USD price per unit)";
+    else if (!/\d/.test(p.targetPrice)) e.targetPrice = "Enter a valid price (e.g. 3.50)";
     setErrors(e); focusFirstError(e);
     return Object.keys(e).length === 0;
   }
@@ -1407,7 +1449,7 @@ export default function RFQContent() {
     // Full body in mailto — desktop email clients (Outlook, Thunderbird, Mail) handle it.
     // Gmail web ignores body; clipboard copy is the fallback for those users.
     window.location.href = `mailto:${RECIPIENT}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    try { localStorage.removeItem("rfq_wizard_draft_v3"); } catch { /* ignore */ }
+    try { localStorage.removeItem("rfq_wizard_draft_v4"); } catch { /* ignore */ }
     const now = new Date();
     setSubmittedAt(
       now.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })
@@ -1475,6 +1517,23 @@ export default function RFQContent() {
 
     return (
       <motion.div key="step1" {...stepAnim}>
+        {/* Intro notice */}
+        <div className="mb-5 rounded-xl border border-amber-200 bg-amber-50 px-5 py-4 space-y-3">
+          <div className="flex items-start gap-3">
+            <svg className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2} aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <div>
+              <p className="text-amber-900 font-bold text-sm mb-0.5">Already have a complete tech pack?</p>
+              <p className="text-amber-800 text-xs leading-relaxed">Email it directly to <a href="mailto:info@mzglobaltrading.com" className="font-semibold underline">info@mzglobaltrading.com</a>. Inquiries without a tech pack or a completed RFQ will not be processed — use the wizard below if you do not have one.</p>
+            </div>
+          </div>
+          <ul className="text-xs text-amber-800 leading-relaxed space-y-1 pl-2">
+            <li>• All prices quoted are indicative FOB Karachi — final price confirmed on order placement after sample approval.</li>
+            <li>• Samples are available on request; approval of the counter sample is required before bulk production begins.</li>
+            <li>• A PDF copy of your completed RFQ will be generated at the end for your records.</li>
+            <li>• For clarifications or missing details, our team may contact you at the provided email or phone before processing.</li>
+          </ul>
+        </div>
+
         {/* Product tab strip */}
         <div className="flex items-center gap-2 overflow-x-auto pb-2 mb-5 scrollbar-none">
           {formState.products.map((p, idx) => {
@@ -1655,11 +1714,39 @@ export default function RFQContent() {
                     <SpecSection title={opts.isFabricRoll ? "Construction & Width" : "Construction & Weight"} number={3} color="amber">
                       <div className="grid sm:grid-cols-2 gap-3">
                         <div>
+                          {opts.showFabricTypeSelector && (
+                            <div className="mb-2">
+                              <p className="text-xs font-medium text-gray-700 mb-1.5">Fabric Type</p>
+                              <div className="flex gap-2">
+                                {["Woven", "Knitted"].map(ft => (
+                                  <button key={ft} type="button"
+                                    onClick={() => {
+                                      updateProduct(activeProduct, { fabricType: ft, construction: "", weight: "" });
+                                      if (errors.construction) setErrors(prev => ({ ...prev, construction: "" }));
+                                    }}
+                                    className={`px-4 py-1.5 rounded-lg border text-xs font-semibold transition-colors ${
+                                      product.fabricType === ft
+                                        ? "bg-navy-900 border-navy-900 text-white"
+                                        : "border-gray-300 text-gray-600 hover:border-navy-900 hover:text-navy-900"
+                                    }`}>
+                                    {ft}
+                                  </button>
+                                ))}
+                              </div>
+                            </div>
+                          )}
                           <Field id="construction" label={opts.constructionLabel} required error={errors.construction}>
                             <select id="construction" value={product.construction}
                               onChange={e => { setP("construction", e.target.value); if (errors.construction) setErrors(prev => ({ ...prev, construction: "" })); }} className={ic(errors.construction)}>
                               <option value="">Select…</option>
-                              {opts.constructionOptions.map(o => <option key={o} value={o}>{o}</option>)}
+                              {(() => {
+                                if (opts.showFabricTypeSelector) {
+                                  if (product.fabricType === "Woven") return opts.wovenConstructionOptions ?? opts.constructionOptions;
+                                  if (product.fabricType === "Knitted") return opts.knitConstructionOptions ?? opts.constructionOptions;
+                                  return [];
+                                }
+                                return opts.constructionOptions;
+                              })().map(o => <option key={o} value={o}>{o}</option>)}
                             </select>
                           </Field>
                           {product.construction === "Other" && (
@@ -1668,12 +1755,33 @@ export default function RFQContent() {
                               className={`mt-2 ${ic()}`} />
                           )}
                         </div>
-                        <Field id="weight" label={opts.weightLabel} required error={errors.weight}>
-                          <input id="weight" type="text" aria-invalid={!!errors.weight}
-                            placeholder={opts.weightPlaceholder}
-                            value={product.weight} onChange={e => { setP("weight", e.target.value); }}
-                            className={ic(errors.weight)} />
-                        </Field>
+                        {!opts.hideWeight && (
+                          <div>
+                            <Field id="weight"
+                              label={opts.showFabricTypeSelector ? (product.fabricType === "Knitted" ? "GSM" : "Thread Count (TC)") : opts.weightLabel}
+                              required error={errors.weight}>
+                              <input id="weight" type="text" aria-invalid={!!errors.weight}
+                                placeholder={opts.showFabricTypeSelector ? (product.fabricType === "Knitted" ? "e.g. 180 gsm" : "e.g. 300 TC") : opts.weightPlaceholder}
+                                value={product.weight} onChange={e => { setP("weight", e.target.value); }}
+                                className={ic(errors.weight)} />
+                            </Field>
+                            {opts.showWeightUnit && (
+                              <div className="flex gap-1.5 mt-1.5 flex-wrap">
+                                {opts.weightUnitOptions?.map(u => (
+                                  <button key={u} type="button"
+                                    onClick={() => updateProduct(activeProduct, { weightUnit: u })}
+                                    className={`px-3 py-1 rounded-lg border text-[11px] font-semibold transition-colors ${
+                                      product.weightUnit === u
+                                        ? "bg-navy-900 border-navy-900 text-white"
+                                        : "border-gray-300 text-gray-500 hover:border-navy-900 hover:text-navy-900"
+                                    }`}>
+                                    {u}
+                                  </button>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        )}
                       </div>
 
                       {opts.isFabricRoll && product.construction === "Knitted" && (
@@ -1789,7 +1897,7 @@ export default function RFQContent() {
                           value={product.sizeRangeNotes} onChange={e => setP("sizeRangeNotes", e.target.value)}
                           className={`mt-3 ${ic()}`} />
                       )}
-                      {product.sizeRange.length > 1 && (
+                      {product.sizeRange.length >= 1 && !opts?.isFabricRoll && (
                         <div className="mt-3 pt-3 border-t border-gray-100">
                           <p className="text-xs font-semibold text-navy-900/80 mb-1">Size Ratios</p>
                           <p className="text-[11px] text-gray-500 mb-2">Enter ratio per size — qty will be split proportionally from total order.</p>
@@ -1874,6 +1982,52 @@ export default function RFQContent() {
                           <OtherInput id="collarTypeOther" show={product.collarType === "Other"}
                             value={product.collarTypeOther} onChange={v => setP("collarTypeOther", v)}
                             placeholder="Specify collar type" />
+                        </div>
+                      )}
+                      {opts.showBeltType && (
+                        <div>
+                          <Field id="beltType" label="Belt / Tie">
+                            <select id="beltType" value={product.beltType}
+                              onChange={e => setP("beltType", e.target.value)} className={ic()}>
+                              <option value="">Select…</option>
+                              {opts.beltTypeOptions!.map(o => <option key={o} value={o}>{o}</option>)}
+                            </select>
+                          </Field>
+                          <OtherInput id="beltTypeOther" show={product.beltType === "Other"}
+                            value={product.beltTypeOther} onChange={v => setP("beltTypeOther", v)}
+                            placeholder="Specify belt / tie type" />
+                        </div>
+                      )}
+                      {opts.showBeltLoopPlacement && (
+                        <Field id="beltLoopPlacement" label="Belt Loop Placement">
+                          <select id="beltLoopPlacement" value={product.beltLoopPlacement}
+                            onChange={e => setP("beltLoopPlacement", e.target.value)} className={ic()}>
+                            <option value="">Select…</option>
+                            {opts.beltLoopPlacementOptions!.map(o => <option key={o} value={o}>{o}</option>)}
+                          </select>
+                        </Field>
+                      )}
+                      {opts.showRobePockets && (
+                        <Field id="robePockets" label="Pockets">
+                          <select id="robePockets" value={product.robePockets}
+                            onChange={e => setP("robePockets", e.target.value)} className={ic()}>
+                            <option value="">Select…</option>
+                            {opts.robePocketOptions!.map(o => <option key={o} value={o}>{o}</option>)}
+                          </select>
+                        </Field>
+                      )}
+                      {opts.showCuffStyle && (
+                        <div>
+                          <Field id="cuffStyle" label="Cuff Style">
+                            <select id="cuffStyle" value={product.cuffStyle}
+                              onChange={e => setP("cuffStyle", e.target.value)} className={ic()}>
+                              <option value="">Select…</option>
+                              {opts.cuffStyleOptions!.map(o => <option key={o} value={o}>{o}</option>)}
+                            </select>
+                          </Field>
+                          <OtherInput id="cuffStyleOther" show={product.cuffStyle === "Other"}
+                            value={product.cuffStyleOther} onChange={v => setP("cuffStyleOther", v)}
+                            placeholder="Specify cuff style" />
                         </div>
                       )}
                       {opts.showBackingType && (
@@ -2004,14 +2158,28 @@ export default function RFQContent() {
                     </div>
                     <Field id="pantoneRef" label="Pantone / Color Reference">
                       <input id="pantoneRef" type="text"
-                        placeholder="e.g. PMS 286C or describe colors"
+                        placeholder="e.g. PMS 286C — or describe as Light / Average / Dark for pricing"
                         value={product.pantoneRef} onChange={e => setP("pantoneRef", e.target.value)} className={ic()} />
                     </Field>
-                    <Field id="printDetail" label="Design Detail">
-                      <input id="printDetail" type="text"
-                        placeholder="e.g. Brand logo 8×4 cm, 2 spot colors"
-                        value={product.printDetail} onChange={e => setP("printDetail", e.target.value)} className={ic()} />
-                    </Field>
+                    {(() => {
+                      const hasPrintOrEmb = !!(product.printType && !/plain|no decoration/i.test(product.printType));
+                      return (
+                        <>
+                          <Field id="printDetail" label="Design Detail" required={hasPrintOrEmb} error={errors.printDetail}>
+                            <input id="printDetail" type="text" aria-invalid={!!errors.printDetail}
+                              placeholder="e.g. Brand logo 8×4 cm, 2 spot colors"
+                              value={product.printDetail} onChange={e => { setP("printDetail", e.target.value); if (errors.printDetail) setErrors(prev => ({ ...prev, printDetail: "" })); }} className={ic(errors.printDetail)} />
+                          </Field>
+                          {hasPrintOrEmb && (
+                            <Field id="artworkSize" label="Artwork / Logo Size" required error={errors.artworkSize}>
+                              <input id="artworkSize" type="text" aria-invalid={!!errors.artworkSize}
+                                placeholder="e.g. 8×4 cm embroidery area / 30×40 cm print panel"
+                                value={product.artworkSize} onChange={e => { setP("artworkSize", e.target.value); if (errors.artworkSize) setErrors(prev => ({ ...prev, artworkSize: "" })); }} className={ic(errors.artworkSize)} />
+                            </Field>
+                          )}
+                        </>
+                      );
+                    })()}
                   </SpecSection>
                 </div>
               )}
@@ -2235,9 +2403,9 @@ export default function RFQContent() {
                       </Field>
                     </div>
                     <div className="w-44 shrink-0">
-                      <Field id="targetPrice" label="Target Price (USD / unit)">
-                        <input id="targetPrice" type="text"
-                          placeholder="e.g. 3.50 (optional)"
+                      <Field id="targetPrice" label="Target Price (USD / unit)" required error={errors.targetPrice}>
+                        <input id="targetPrice" type="text" required aria-invalid={!!errors.targetPrice}
+                          placeholder="e.g. 3.50"
                           value={product.targetPrice}
                           onChange={e => setP("targetPrice", e.target.value)}
                           className={ic(errors.targetPrice)} />
@@ -2297,7 +2465,7 @@ export default function RFQContent() {
                   value={formState.destinationCountry}
                   onChange={v => { setGlobal("destinationCountry", v); }}
                   placeholder="Select country…"
-                  options={COUNTRIES_SORTED}
+                  options={COUNTRIES_ALLOWED}
                   error={errors.destinationCountry}
                 />
               </Field>
@@ -2376,7 +2544,7 @@ export default function RFQContent() {
                   value={formState.country}
                   onChange={v => { setGlobal("country", v); }}
                   placeholder="Select your country…"
-                  options={COUNTRIES_SORTED}
+                  options={COUNTRIES_ALLOWED}
                   error={errors.country}
                 />
               </Field>
@@ -2484,9 +2652,11 @@ export default function RFQContent() {
                   {p.compositionNotes && <ReviewRow label="Composition Notes" value={p.compositionNotes} />}
 
                   {/* Construction */}
+                  {opts?.showFabricTypeSelector && p.fabricType && <ReviewRow label="Fabric Type" value={p.fabricType} />}
                   {p.construction && <ReviewRow label={opts?.constructionLabel ?? "Construction"} value={p.construction === "Other" ? `Other — ${p.constructionOther}` : p.construction} />}
                   {opts?.isFabricRoll && subTypeVal && <ReviewRow label={subTypeLabel} value={subTypeVal} />}
                   {p.weight && <ReviewRow label={opts?.weightLabel ?? "Weight"} value={p.weight} />}
+                  {opts?.showWeightUnit && p.weightUnit && <ReviewRow label="Weight Unit" value={p.weightUnit} />}
                   {opts?.isFabricRoll && p.sizeRange[0] && <ReviewRow label="Fabric Width" value={p.sizeRange[0]} />}
 
                   {/* Yarn Specs */}
@@ -2516,6 +2686,10 @@ export default function RFQContent() {
                   {opts?.showHeadingType && p.headingType && <ReviewRow label="Heading Type" value={p.headingType === "Other" && p.headingTypeOther ? `Other — ${p.headingTypeOther}` : p.headingType} />}
                   {opts?.showLiningType && p.liningType && <ReviewRow label="Lining" value={p.liningType === "Other" && p.liningTypeOther ? `Other — ${p.liningTypeOther}` : p.liningType} />}
                   {opts?.showHeatingRating && p.heatRating && <ReviewRow label="Heat Rating" value={p.heatRating} />}
+                  {opts?.showBeltType && p.beltType && <ReviewRow label="Belt / Tie" value={p.beltType === "Other" && p.beltTypeOther ? `Other — ${p.beltTypeOther}` : p.beltType} />}
+                  {opts?.showBeltLoopPlacement && p.beltLoopPlacement && <ReviewRow label="Belt Loop Placement" value={p.beltLoopPlacement} />}
+                  {opts?.showRobePockets && p.robePockets && <ReviewRow label="Pockets" value={p.robePockets} />}
+                  {opts?.showCuffStyle && p.cuffStyle && <ReviewRow label="Cuff Style" value={p.cuffStyle === "Other" && p.cuffStyleOther ? `Other — ${p.cuffStyleOther}` : p.cuffStyle} />}
 
                   {/* Color & Design */}
                   {p.dyeingMethod && <ReviewRow label="Dyeing Method" value={p.dyeingMethod} />}
@@ -2533,6 +2707,7 @@ export default function RFQContent() {
                   )}
                   {p.pantoneRef && <ReviewRow label="Pantone / Color Ref" value={p.pantoneRef} />}
                   {p.printDetail && <ReviewRow label="Design Detail" value={p.printDetail} />}
+                  {p.artworkSize && <ReviewRow label="Artwork / Logo Size" value={p.artworkSize} />}
                   {opts?.isFabricRoll && p.colorFastnessNotes && <ReviewRow label="Color Fastness" value={p.colorFastnessNotes} />}
 
                   {/* Embellishments (Apparel) */}
@@ -2585,6 +2760,31 @@ export default function RFQContent() {
             <ReviewRow label="Phone" value={formState.phone} />
             <ReviewRow label="Country" value={formState.country} />
           </ReviewSection>
+
+          {/* File attachments notice */}
+          <div className="rounded-xl border border-blue-100 bg-blue-50 px-5 py-4">
+            <p className="text-sm font-bold text-navy-900 mb-2">Supporting Files (Recommended)</p>
+            <p className="text-xs text-gray-700 mb-3 leading-relaxed">
+              After submitting, email any of the following to <strong>info@mzglobaltrading.com</strong> quoting your company name and product. Missing files may delay your quote.
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-1 text-xs text-gray-700">
+              {[
+                "Tech pack / CAD drawing",
+                "Measurement chart / grading spec",
+                "Logo files (AI / PDF / PNG 300dpi+)",
+                "Artwork files for printing",
+                "Reference / inspiration sample photos",
+                "Approved lab dip or shade band",
+                "Previous purchase order or invoice",
+                "Any other document reducing ambiguity",
+              ].map(item => (
+                <li key={item} className="flex items-center gap-1.5">
+                  <svg className="w-3.5 h-3.5 text-blue-400 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
 
           <div className="bg-amber-50 border border-amber-100 rounded-xl p-4 text-xs text-gray-700 leading-relaxed">
             By clicking <strong>Submit RFQ</strong>, you confirm you have read and agreed to the{" "}
