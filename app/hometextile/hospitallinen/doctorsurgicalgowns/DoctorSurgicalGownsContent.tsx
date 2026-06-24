@@ -16,7 +16,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
     <div className="flex justify-center mt-16">
       <button
         onClick={() => scrollToId("bento-grid")}
-        className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"}`}
+        className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${dark ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"}`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
         <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
@@ -164,7 +164,7 @@ export default function DoctorSurgicalGownsContent() {
       {/* STATS ANCHOR */}
       <section className="bg-gray-50 py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Surgical Gown Supply — Pakistan</p>
               <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-3">Compliant Surgical Gowns for Institutional Procurement</h2>
@@ -374,7 +374,7 @@ export default function DoctorSurgicalGownsContent() {
               <div className="flex flex-col gap-3 flex-1">
                 {PROCESS_STEPS.map((s, i) => (
                   <div key={s.num} className="flex items-start gap-3">
-                    <span className="w-6 h-6 rounded-full bg-cyan-500 text-white text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">{i + 1}</span>
+                    <span className="w-6 h-6 rounded-full bg-cyan-700 text-white text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">{i + 1}</span>
                     <p className="text-xs font-semibold text-navy-900 leading-tight">{s.title}</p>
                   </div>
                 ))}
@@ -511,7 +511,7 @@ export default function DoctorSurgicalGownsContent() {
       </section>
 
       {/* SECTION 4 — CERTIFICATIONS (Glassmorphism) */}
-      <section id="section-certifications" className="bg-[#0D1B2A] py-16 lg:py-24 relative overflow-hidden">
+      <section id="section-certifications" className="bg-navy-900 py-16 lg:py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 30% 50%, #D4A017 0%, transparent 60%), radial-gradient(circle at 70% 20%, #1e40af 0%, transparent 50%)" }} aria-hidden="true" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}>
@@ -618,7 +618,7 @@ export default function DoctorSurgicalGownsContent() {
       </section>
 
       {/* SECTION 9 — COMPLIANCE DOCUMENTATION (Aurora/Gradient Mesh) */}
-      <section id="section-compliance" className="bg-[#0D1B2A] py-16 lg:py-24 relative overflow-hidden">
+      <section id="section-compliance" className="bg-navy-900 py-16 lg:py-24 relative overflow-hidden">
         <div className="absolute inset-0" style={{ backgroundImage: "linear-gradient(135deg, rgba(212,160,23,0.05) 0%, transparent 50%, rgba(30,64,175,0.08) 100%)" }} aria-hidden="true" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}>
@@ -758,7 +758,7 @@ export default function DoctorSurgicalGownsContent() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}>
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Ready to Source</p>

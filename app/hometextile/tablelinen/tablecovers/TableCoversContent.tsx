@@ -19,7 +19,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -57,7 +57,7 @@ const CONSTRUCTIONS = [
 
 const GSM_TIERS = [
   { gsm: "150–180", name: "Lightweight", env: "Café / Quick Service", pct: 30, color: "bg-sky-300", desc: "Fast-drying for high-turnover café and quick service. Lightweight drape ideal for spring/summer settings." },
-  { gsm: "200–250", name: "Hospitality Standard", env: "Restaurant / Hotel All-Day Dining", pct: 72, color: "bg-gold", desc: "Industry standard for hotel restaurant and all-day dining. Balances presentation quality with laundering practicality." },
+  { gsm: "200–250", name: "Hospitality Standard", env: "Restaurant / Hotel All-Day Dining", pct: 72, color: "bg-[#9A6400]", desc: "Industry standard for hotel restaurant and all-day dining. Balances presentation quality with laundering practicality." },
   { gsm: "250–300+", name: "Formal Banquet", env: "Ballroom / Gala / Fine Dining", pct: 55, color: "bg-amber-600", desc: "Heavy-weight damask and jacquard for formal banquet settings. Optimal drape and table coverage for floor-length formats." },
 ];
 
@@ -119,12 +119,12 @@ const PROCESS_STEPS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", color: "bg-gold" },
-  { stage: "Sample Production", days: "10–15", color: "bg-amber-500" },
-  { stage: "Sample Approval", days: "5–10", color: "bg-blue-500" },
+  { stage: "RFQ & Quotation", days: "3–5", color: "bg-[#9A6400]" },
+  { stage: "Sample Production", days: "10–15", color: "bg-amber-700" },
+  { stage: "Sample Approval", days: "5–10", color: "bg-blue-700" },
   { stage: "Bulk Production", days: "30–50", color: "bg-indigo-600" },
-  { stage: "QC & Packing", days: "3–5", color: "bg-purple-500" },
-  { stage: "Sea Freight", days: "20–35", color: "bg-teal-500" },
+  { stage: "QC & Packing", days: "3–5", color: "bg-purple-700" },
+  { stage: "Sea Freight", days: "20–35", color: "bg-teal-700" },
 ];
 
 const PACK_OPTIONS = [
@@ -270,7 +270,7 @@ export default function TableCoversContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -684,7 +684,7 @@ export default function TableCoversContent() {
                   className={`rounded-2xl p-6 border ${s.code === "CX" ? "border-gold bg-gold/5" : "border-gray-100 bg-gray-50"}`}
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="w-10 h-10 rounded-lg bg-[#0D1B2A] text-gold text-xs font-bold flex items-center justify-center shrink-0">{s.code}</span>
+                    <span className="w-10 h-10 rounded-lg bg-navy-900 text-gold text-xs font-bold flex items-center justify-center shrink-0">{s.code}</span>
                     <p className="font-bold text-navy-900">{s.name}</p>
                   </div>
                   <p className="text-sm font-mono text-navy-900 mb-1">{s.dim}</p>
@@ -828,7 +828,7 @@ export default function TableCoversContent() {
       </section>
 
       {/* ═══════════════ SECTION 8 — CERTIFICATIONS (Command Center) ═══════════════ */}
-      <section id="section-certifications" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-certifications" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}>
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Quality Standards</p>
@@ -879,7 +879,7 @@ export default function TableCoversContent() {
                     className="bg-gray-50 border border-gray-100 rounded-2xl p-5 flex items-center gap-5"
                     style={{ marginLeft: `${i * 16}px` }}
                   >
-                    <span className="w-10 h-10 rounded-xl bg-[#0D1B2A] text-gold text-xs font-bold flex items-center justify-center shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="w-10 h-10 rounded-xl bg-navy-900 text-gold text-xs font-bold flex items-center justify-center shrink-0">{String(i + 1).padStart(2, "0")}</span>
                     <div>
                       <p className="font-bold text-navy-900">{p.label}</p>
                       <p className="text-xs text-gray-500">{p.note}</p>
@@ -1082,7 +1082,7 @@ export default function TableCoversContent() {
       </section>
 
       {/* ═══════════════ FINAL CTA ═══════════════ */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}>
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Ready to Source</p>

@@ -21,7 +21,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -106,7 +106,7 @@ const SIZE_RANGES = [
 
 const WEIGHT_TIERS = [
   { label: "Lightweight / Liner", weight: "25–50 g/pr", oz: "0.9–1.8 oz", desc: "Fine dress, liner and no-show socks. Smooth hand, low bulk. Ideal for formal wear, hotel amenity and hidden footwear programmes.", pct: 30, featured: false, color: "bg-indigo-300" },
-  { label: "Standard / Fashion", weight: "50–80 g/pr", oz: "1.8–2.8 oz", desc: "The commercial baseline for crew, ankle, casual and fashion socks. Accepts all knit structures and decoration methods.", pct: 80, featured: true, color: "bg-gold" },
+  { label: "Standard / Fashion", weight: "50–80 g/pr", oz: "1.8–2.8 oz", desc: "The commercial baseline for crew, ankle, casual and fashion socks. Accepts all knit structures and decoration methods.", pct: 80, featured: true, color: "bg-[#9A6400]" },
   { label: "Athletic / Cushion", weight: "80–110 g/pr", oz: "2.8–3.9 oz", desc: "Cushioned sport, running and work socks with terry zones. Higher yarn density for durability and impact absorption.", pct: 60, featured: false, color: "bg-orange-500" },
   { label: "Heavy Work / Hiking", weight: "110–160 g/pr", oz: "3.9–5.6 oz", desc: "Full-terry construction for maximum cushioning and insulation. Heavy-duty work socks, hiking and winter programmes.", pct: 40, featured: false, color: "bg-red-600" },
 ];
@@ -189,11 +189,11 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Knit structure, yarn, pattern and pack confirmed with factory pricing", color: "bg-indigo-500" },
-  { stage: "Sample Production", days: "10–18", desc: "Knitted sample pair(s) to specification — style, composition, weight and size confirmed", color: "bg-violet-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Knit structure, yarn, pattern and pack confirmed with factory pricing", color: "bg-indigo-700" },
+  { stage: "Sample Production", days: "10–18", desc: "Knitted sample pair(s) to specification — style, composition, weight and size confirmed", color: "bg-violet-700" },
   { stage: "Bulk Production", days: "30–55", desc: "From confirmed PO and approved knit sample — duration varies with jacquard complexity", color: "bg-blue-600" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Pair count, size check, pattern accuracy and packaging audit", color: "bg-teal-500" },
-  { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim to destination port", color: "bg-pink-500" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Pair count, size check, pattern accuracy and packaging audit", color: "bg-teal-700" },
+  { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim to destination port", color: "bg-pink-700" },
 ];
 
 const SUSTAINABILITY_ITEMS = [

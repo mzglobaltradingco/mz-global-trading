@@ -22,7 +22,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -72,7 +72,7 @@ const CONSTRUCTIONS = [
     badge: "Resort Favourite",
     gsm: "380–450 GSM",
     icon: "☀️",
-    color: "bg-amber-500",
+    color: "bg-amber-700",
     best: ["Resort & Hotel", "Promotional Print", "Retail Collections"],
     markets: ["USA", "Caribbean", "EU", "Australia"],
     printMethods: ["Sublimation (all-over)", "Reactive Print"],
@@ -100,7 +100,7 @@ const CONSTRUCTIONS = [
     badge: "",
     gsm: "350–420 GSM",
     icon: "🌊",
-    color: "bg-sky-500",
+    color: "bg-sky-700",
     best: ["Hotel Pools", "Leisure Clubs", "Wholesale"],
     markets: ["USA", "UK", "Middle East", "SE Asia"],
     printMethods: ["Dobby Border", "Jacquard Woven", "Embroidery"],
@@ -114,7 +114,7 @@ const CONSTRUCTIONS = [
     badge: "Travel Specialist",
     gsm: "300–380 GSM",
     icon: "✈️",
-    color: "bg-teal-500",
+    color: "bg-teal-700",
     best: ["Travel Retail", "Outdoor Brands", "Sports & Fitness"],
     markets: ["USA", "UK", "EU", "Australia"],
     printMethods: ["Sublimation (all-over)", "Reactive Print"],
@@ -128,7 +128,7 @@ const CONSTRUCTIONS = [
     badge: "Premium Trend",
     gsm: "200–280 GSM",
     icon: "🏨",
-    color: "bg-rose-500",
+    color: "bg-rose-700",
     best: ["Boutique Hospitality", "Premium Retail", "Spa & Hammam"],
     markets: ["EU", "USA", "Middle East", "Australia"],
     printMethods: ["Yarn-Dyed Stripe", "Jacquard Woven"],
@@ -149,7 +149,7 @@ const SIZE_OPTIONS = [
 const GSM_TIERS = [
   { gsm: "200–280", name: "Lightweight (Fouta)", season: "Year-Round / Travel", market: "EU Boutique · Australia · Spa", pct: 35, featured: false, desc: "Fouta and flat-woven category. Fastest drying, most compact. Travel retail, boutique hospitality and spa programmes.", color: "bg-sky-400" },
   { gsm: "300–380", name: "Mid-Weight", season: "Year-Round / Travel", market: "USA · UK · Sports & Outdoor", pct: 55, featured: false, desc: "Microfiber and lighter velour. Travel, branded outdoor and sports retail. Sublimation printable in microfiber construction.", color: "bg-amber-400" },
-  { gsm: "380–500", name: "Standard–Heavy (Resort)", season: "Resort & Hotel", market: "All resort & retail markets", pct: 100, featured: true, desc: "The dominant weight range for resort, hotel and print programme beach towels. Velour one-sided at this weight is the global resort standard.", color: "bg-gold" },
+  { gsm: "380–500", name: "Standard–Heavy (Resort)", season: "Resort & Hotel", market: "All resort & retail markets", pct: 100, featured: true, desc: "The dominant weight range for resort, hotel and print programme beach towels. Velour one-sided at this weight is the global resort standard.", color: "bg-[#9A6400]" },
 ];
 
 const PRINT_METHODS = [
@@ -209,12 +209,12 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Construction, print method and size confirmation. Mill shortlist and pricing returned.", color: "bg-gold" },
-  { stage: "Artwork & Strike-Off", days: "5–10", desc: "Print artwork submission, colour profile lock and pre-production strike-off approval.", color: "bg-sky-500" },
-  { stage: "Sample Production", days: "15–20", desc: "Pre-production samples produced to specification. Size, construction, GSM and border confirmed.", color: "bg-blue-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Construction, print method and size confirmation. Mill shortlist and pricing returned.", color: "bg-[#9A6400]" },
+  { stage: "Artwork & Strike-Off", days: "5–10", desc: "Print artwork submission, colour profile lock and pre-production strike-off approval.", color: "bg-sky-700" },
+  { stage: "Sample Production", days: "15–20", desc: "Pre-production samples produced to specification. Size, construction, GSM and border confirmed.", color: "bg-blue-700" },
   { stage: "Bulk Production", days: "35–55", desc: "From confirmed PO and approved sample. Print programme adds 5–10 days to standard production.", color: "bg-indigo-600" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Print fidelity, GSM, sizing and packing inspection before vessel loading.", color: "bg-purple-500" },
-  { stage: "Sea Freight", days: "20–30", desc: "FCL/LCL from Karachi or Port Qasim to destination port worldwide.", color: "bg-teal-500" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Print fidelity, GSM, sizing and packing inspection before vessel loading.", color: "bg-purple-700" },
+  { stage: "Sea Freight", days: "20–30", desc: "FCL/LCL from Karachi or Port Qasim to destination port worldwide.", color: "bg-teal-700" },
 ];
 
 const SUSTAINABILITY_ITEMS = [
@@ -367,7 +367,7 @@ export default function BeachTowelsContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -1058,7 +1058,7 @@ export default function BeachTowelsContent() {
       {/* ════════════════════════════════════════════════════════════════════════
           SECTION 7 — MARKETS — TYPOGRAPHY-DRIVEN UI
       ════════════════════════════════════════════════════════════════════════ */}
-      <section id="section-markets" className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section id="section-markets" className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">International Reach</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-12">Beach Towel Export Markets Served</h2>
@@ -1367,7 +1367,7 @@ export default function BeachTowelsContent() {
       {/* ════════════════════════════════════════════════════════════════════════
           FINAL CTA
       ════════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

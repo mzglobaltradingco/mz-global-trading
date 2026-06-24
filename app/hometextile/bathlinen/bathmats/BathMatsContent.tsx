@@ -21,7 +21,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -214,12 +214,12 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Construction, GSM, backing type, size and volume confirmed; factory shortlist generated", color: "bg-gold" },
-  { stage: "Sample Production", days: "14–21", desc: "Pre-production samples to construction, colour and backing specification", color: "bg-sky-500" },
-  { stage: "Backing Approval", days: "3–5", desc: "Anti-slip performance confirmed — backing type and adhesion validated", color: "bg-amber-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Construction, GSM, backing type, size and volume confirmed; factory shortlist generated", color: "bg-[#9A6400]" },
+  { stage: "Sample Production", days: "14–21", desc: "Pre-production samples to construction, colour and backing specification", color: "bg-sky-700" },
+  { stage: "Backing Approval", days: "3–5", desc: "Anti-slip performance confirmed — backing type and adhesion validated", color: "bg-amber-700" },
   { stage: "Bulk Production", days: "45–60", desc: "From confirmed PO and approved sample", color: "bg-indigo-600" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection, weight and dimension verification before loading", color: "bg-purple-500" },
-  { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim to destination port", color: "bg-teal-500" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection, weight and dimension verification before loading", color: "bg-purple-700" },
+  { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim to destination port", color: "bg-teal-700" },
 ];
 
 const FAQS = [
@@ -337,7 +337,7 @@ export default function BathMatsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Bath Mat Supply — Safety Specification Matters</p>
@@ -731,7 +731,7 @@ export default function BathMatsContent() {
             {GSM_TIERS.map((t, i) => (
               <motion.div key={t.gsm}
                 initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`rounded-2xl p-8 relative overflow-hidden ${t.featured ? "bg-[#0D1B2A] text-white" : "bg-white border border-amber-200"}`}
+                className={`rounded-2xl p-8 relative overflow-hidden ${t.featured ? "bg-navy-900 text-white" : "bg-white border border-amber-200"}`}
               >
                 {t.featured && <div className="absolute top-3 right-3 text-[10px] bg-gold text-navy-900 font-bold px-2.5 py-1 rounded-full">Hotel Contract Standard</div>}
                 <p className={`text-4xl font-black mb-2 ${t.featured ? "text-gold" : "text-navy-900"}`}>{t.gsm} GSM</p>
@@ -893,7 +893,7 @@ export default function BathMatsContent() {
             ))}
           </div>
 
-          <div className="bg-[#0D1B2A] rounded-2xl p-8">
+          <div className="bg-navy-900 rounded-2xl p-8">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Export Destinations — 35+ Markets</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[

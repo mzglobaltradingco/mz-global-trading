@@ -53,7 +53,7 @@ const PRODUCTS = [
     spec: "280–380 GSM · Loop Back · French Terry",
     badge: "",
     color: "bg-teal-50 border-teal-100",
-    accent: "text-teal-600",
+    accent: "text-teal-700",
   },
   {
     name: "Tank Tops",
@@ -63,7 +63,7 @@ const PRODUCTS = [
     spec: "140–200 GSM · Jersey · Rib · Mesh",
     badge: "",
     color: "bg-rose-50 border-rose-100",
-    accent: "text-rose-600",
+    accent: "text-rose-700",
   },
 ];
 
@@ -174,7 +174,7 @@ export default function KnittedGarmentsContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -314,7 +314,7 @@ export default function KnittedGarmentsContent() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#0D1B2A] py-16 lg:py-20">
+      <section className="bg-navy-900 py-16 lg:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Start Your Programme</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">

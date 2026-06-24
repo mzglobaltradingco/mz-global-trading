@@ -15,7 +15,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
   return (
     <div className="flex justify-center mt-16">
       <button onClick={() => scrollToId("bento-grid")}
-        className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"}`}
+        className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${dark ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"}`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}>
         <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75" />
@@ -47,8 +47,8 @@ const CONSTRUCTION_DETAIL = {
 
 const GSM_DATA = [
   { gsm: "180–200", label: "Standard Surgical", bar: 55, note: "Lighter range — faster drying between autoclave cycles. Adequate absorbency for general surgical field use.", color: "bg-cyan-400" },
-  { gsm: "200–240", label: "Institutional Standard (220 GSM)", bar: 90, note: "The dominant US and Australian surgical huck towel specification. Optimal balance of absorbency, thickness and launder life.", color: "bg-teal-600", highlight: true },
-  { gsm: "240–280", label: "Heavy Duty", bar: 68, note: "Maximum absorbency — CSSD central sterile supply and high-volume operating theatre supply.", color: "bg-indigo-500" },
+  { gsm: "200–240", label: "Institutional Standard (220 GSM)", bar: 90, note: "The dominant US and Australian surgical huck towel specification. Optimal balance of absorbency, thickness and launder life.", color: "bg-teal-700", highlight: true },
+  { gsm: "240–280", label: "Heavy Duty", bar: 68, note: "Maximum absorbency — CSSD central sterile supply and high-volume operating theatre supply.", color: "bg-indigo-700" },
 ];
 
 const SIZES = [
@@ -159,7 +159,7 @@ export default function SurgicalHuckTowelsContent() {
       {/* STATS ANCHOR */}
       <section className="bg-gray-50 py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Surgical Huck Towels — Pakistan Cotton Mills</p>
               <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-3">Zero-Lint Huck Weave for Operating Theatres &amp; CSSD Supply</h2>
@@ -185,7 +185,7 @@ export default function SurgicalHuckTowelsContent() {
           </div>
           {/* Row 1 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="bg-[#0D1B2A] rounded-2xl p-7 flex flex-col gap-4 min-h-[300px]">
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="bg-navy-900 rounded-2xl p-7 flex flex-col gap-4 min-h-[300px]">
               <div className="flex items-start gap-3"><span className="text-2xl" aria-hidden="true">🧵</span><div><p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase">One Construction</p><h3 className="text-xl font-bold text-white mt-0.5">Huck / Honeycomb Weave</h3></div></div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-4 flex-1">
                 <p className="text-sm font-bold text-white mb-2">Huck Weave — 100% Cotton ONLY</p>
@@ -354,7 +354,7 @@ export default function SurgicalHuckTowelsContent() {
               <div className="flex flex-col gap-3 flex-1">
                 {PROCESS_STEPS.map((s, i) => (
                   <div key={s.num} className="flex items-start gap-3">
-                    <span className="w-6 h-6 rounded-full bg-cyan-500 text-white text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">{i + 1}</span>
+                    <span className="w-6 h-6 rounded-full bg-cyan-700 text-white text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">{i + 1}</span>
                     <p className="text-xs font-semibold text-navy-900 leading-tight">{s.title}</p>
                   </div>
                 ))}
@@ -510,7 +510,7 @@ export default function SurgicalHuckTowelsContent() {
       </section>
 
       {/* S4 — VARIANTS (Command Center) */}
-      <section id="section-variants" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-variants" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}>
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Visual Variants</p>
@@ -724,7 +724,7 @@ export default function SurgicalHuckTowelsContent() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}>
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Ready to Source</p>

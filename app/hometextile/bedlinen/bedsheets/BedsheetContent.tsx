@@ -21,7 +21,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{
@@ -177,9 +177,9 @@ const CONSTRUCTIONS = [
 
 const TC_TIERS = [
   { tc: "200–300", name: "Entry", season: "Institutional / Contract", market: "Hotel chains · Student accommodation", pct: 35, featured: false, desc: "Durable, cost-efficient. High wash-cycle tolerance. Preferred for high-volume institutional programmes where longevity per wash cycle is the primary metric.", color: "bg-emerald-300" },
-  { tc: "300–400", name: "Standard", season: "Mainstream Retail / Hotel", market: "USA · UK · Australia · Middle East", pct: 68, featured: true, desc: "The industry standard for retail bedsheets. Balances hand feel, durability and price point. Covers the majority of wholesale orders across all retail markets.", color: "bg-gold" },
-  { tc: "400–500", name: "Premium", season: "Premium Retail / Boutique", market: "EU · UK Premium · Japan", pct: 82, featured: false, desc: "Noticeably softer hand feel. Sateen construction at 400–500 TC delivers the smooth, cool drape associated with premium hotel bedding collections.", color: "bg-teal-500" },
-  { tc: "500+", name: "Luxury", season: "Gifting / Luxury Hotel", market: "Luxury hospitality · Gift retail · Japan · Middle East", pct: 92, featured: false, desc: "Silky, prestige bedding for luxury hotel programmes and retail gifting. Jacquard and sateen at 500+ TC command premium retail price positioning.", color: "bg-sky-500" },
+  { tc: "300–400", name: "Standard", season: "Mainstream Retail / Hotel", market: "USA · UK · Australia · Middle East", pct: 68, featured: true, desc: "The industry standard for retail bedsheets. Balances hand feel, durability and price point. Covers the majority of wholesale orders across all retail markets.", color: "bg-[#9A6400]" },
+  { tc: "400–500", name: "Premium", season: "Premium Retail / Boutique", market: "EU · UK Premium · Japan", pct: 82, featured: false, desc: "Noticeably softer hand feel. Sateen construction at 400–500 TC delivers the smooth, cool drape associated with premium hotel bedding collections.", color: "bg-teal-700" },
+  { tc: "500+", name: "Luxury", season: "Gifting / Luxury Hotel", market: "Luxury hospitality · Gift retail · Japan · Middle East", pct: 92, featured: false, desc: "Silky, prestige bedding for luxury hotel programmes and retail gifting. Jacquard and sateen at 500+ TC command premium retail price positioning.", color: "bg-sky-700" },
 ];
 
 const BED_SIZES_US = [
@@ -270,11 +270,11 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, pricing and availability confirmed", color: "bg-gold" },
-  { stage: "Sample Production", days: "15–20", desc: "Pre-production samples produced to specification", color: "bg-emerald-500" },
-  { stage: "Bulk Production", days: "45–70", desc: "From confirmed PO and approved sample", color: "bg-teal-600" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection before vessel loading", color: "bg-sky-500" },
-  { stage: "Sea Freight", days: "20–30", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-indigo-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, pricing and availability confirmed", color: "bg-[#9A6400]" },
+  { stage: "Sample Production", days: "15–20", desc: "Pre-production samples produced to specification", color: "bg-emerald-700" },
+  { stage: "Bulk Production", days: "45–70", desc: "From confirmed PO and approved sample", color: "bg-teal-700" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection before vessel loading", color: "bg-sky-700" },
+  { stage: "Sea Freight", days: "20–30", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-indigo-700" },
 ];
 
 const SUSTAINABILITY_ITEMS = [
@@ -449,7 +449,7 @@ export default function BedsheetContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -871,7 +871,7 @@ export default function BedsheetContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden border border-gray-100 shadow-xs">
             {/* Left panel — dark navy */}
-            <div className="bg-[#0D1B2A] p-10 lg:p-14 flex flex-col justify-center">
+            <div className="bg-navy-900 p-10 lg:p-14 flex flex-col justify-center">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Thread Count</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">
                 Understanding Thread Count for Retail Bedsheets
@@ -1028,7 +1028,7 @@ export default function BedsheetContent() {
               <div key={i} className={`h-10 rounded-xl ${c} opacity-90 border border-white/10`} aria-hidden="true" />
             ))}
           </div>
-          <p className="text-white/40 text-xs mt-3 text-center">Illustrative bedsheet palette — full PMS range available via reactive dyeing</p>
+          <p className="text-white/60 text-xs mt-3 text-center">Illustrative bedsheet palette — full PMS range available via reactive dyeing</p>
           <BackToTop dark />
         </div>
       </section>

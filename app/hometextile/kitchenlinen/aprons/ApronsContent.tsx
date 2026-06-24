@@ -19,7 +19,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
       >
@@ -118,8 +118,8 @@ const DECORATION = [
 
 const GSM_TIERS = [
   { gsm: "200–280", name: "Lightweight", construction: "Poplin / Plain Weave", use: "Promotional, corporate catering, print programmes", pct: 40, color: "bg-amber-300" },
-  { gsm: "280–340", name: "Mid-Weight", construction: "Canvas / Light Denim", use: "Bistro, restaurant, branded F&B programmes", pct: 65, color: "bg-amber-500" },
-  { gsm: "340–400", name: "Heavyweight", construction: "Canvas Heavy / Denim", use: "Commercial kitchens, heavy-duty workwear", pct: 85, color: "bg-gold", popular: true },
+  { gsm: "280–340", name: "Mid-Weight", construction: "Canvas / Light Denim", use: "Bistro, restaurant, branded F&B programmes", pct: 65, color: "bg-amber-700" },
+  { gsm: "340–400", name: "Heavyweight", construction: "Canvas Heavy / Denim", use: "Commercial kitchens, heavy-duty workwear", pct: 85, color: "bg-[#9A6400]", popular: true },
 ];
 
 const FINISHES = [
@@ -304,7 +304,7 @@ export default function ApronsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Apron Sourcing — Pakistan OEM</p>
@@ -906,7 +906,7 @@ export default function ApronsContent() {
       </section>
 
       {/* SECTION 7 — MARKETS — Bauhaus UI */}
-      <section id="section-markets" className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section id="section-markets" className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-4 gap-12 mb-12">
             <div className="lg:col-span-1">
@@ -1153,7 +1153,7 @@ export default function ApronsContent() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-24">
+      <section className="bg-navy-900 py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}

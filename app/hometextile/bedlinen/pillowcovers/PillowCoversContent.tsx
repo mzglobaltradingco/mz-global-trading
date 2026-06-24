@@ -21,7 +21,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -345,7 +345,7 @@ export default function PillowCoversContent() {
       <section className="bg-gray-50 py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Pillow Cover Supply — Pakistan Bed Linen</p>
               <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-3">Pillowcase Sourcing for International Retail &amp; Hospitality</h2>
@@ -965,7 +965,7 @@ export default function PillowCoversContent() {
       </section>
 
       {/* ════════ SECTION 11 — PROCESS — TYPOGRAPHY-DRIVEN UI ════════ */}
-      <section id="section-process" className="bg-[#0D1B2A] py-20 lg:py-28 overflow-hidden">
+      <section id="section-process" className="bg-navy-900 py-20 lg:py-28 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold/70 text-xs font-semibold tracking-[0.2em] uppercase mb-2">Process</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-12">Our Pillow Cover Sourcing Process</h2>

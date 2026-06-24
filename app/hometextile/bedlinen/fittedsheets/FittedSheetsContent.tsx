@@ -21,7 +21,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -207,11 +207,11 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", color: "bg-gold" },
-  { stage: "Sample Production", days: "15–20", color: "bg-violet-500" },
+  { stage: "RFQ & Quotation", days: "3–5", color: "bg-[#9A6400]" },
+  { stage: "Sample Production", days: "15–20", color: "bg-violet-700" },
   { stage: "Bulk Production", days: "45–70", color: "bg-purple-600" },
-  { stage: "QC & Inspection", days: "3–5", color: "bg-slate-500" },
-  { stage: "Sea Freight", days: "20–30", color: "bg-indigo-500" },
+  { stage: "QC & Inspection", days: "3–5", color: "bg-slate-600" },
+  { stage: "Sea Freight", days: "20–30", color: "bg-indigo-700" },
 ];
 
 const SUSTAINABILITY_ITEMS = [
@@ -378,7 +378,7 @@ export default function FittedSheetsContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -843,7 +843,7 @@ export default function FittedSheetsContent() {
       <section id="section-tc" className="bg-gray-50 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden shadow-xs border border-gray-100">
-            <div className="bg-[#0D1B2A] p-10 lg:p-14 flex flex-col justify-center">
+            <div className="bg-navy-900 p-10 lg:p-14 flex flex-col justify-center">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Thread Count</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">TC Selection for Fitted Sheets</h2>
               <p className="text-gray-300 text-sm leading-relaxed mb-5">For fitted sheets, thread count interacts with the elasticated pocket format in specific ways. Tighter weaves (higher TC percale) anchor elastic more securely and maintain pocket shape through commercial wash cycles. Sateen at equivalent TC provides a smoother surface feel but requires reinforced pocket stitching.</p>

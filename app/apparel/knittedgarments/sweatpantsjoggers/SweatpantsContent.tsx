@@ -22,7 +22,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{
@@ -177,7 +177,7 @@ const GSM_TIERS = [
     season: "Year-Round / Transitional",
     market: "Athleisure · SE Asia · Middle East · Australia",
     pct: 35,
-    color: "bg-teal-400",
+    color: "bg-teal-700",
     featured: false,
     icon: "🏃",
     desc: "Performance and athleisure constructions. Cotton-spandex and polar fleece. Lighter, flexible and moisture-managed — suited to warm-climate markets and gym-wear programmes.",
@@ -188,7 +188,7 @@ const GSM_TIERS = [
     season: "Year-Round",
     market: "USA · UK · EU mainstream retail",
     pct: 70,
-    color: "bg-gold",
+    color: "bg-[#9A6400]",
     featured: true,
     icon: "⚖️",
     desc: "Industry standard for co-ord sets and year-round retail programmes. French terry and brushed fleece in this range cover the majority of international orders.",
@@ -199,7 +199,7 @@ const GSM_TIERS = [
     season: "Autumn / Winter",
     market: "USA workwear · Canada · N. Europe",
     pct: 50,
-    color: "bg-indigo-500",
+    color: "bg-indigo-700",
     featured: false,
     icon: "🧊",
     desc: "Loop back and brushed fleece programmes for cold-climate markets. Maximum warmth, structured silhouette and durable wash performance.",
@@ -302,11 +302,11 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, pricing and co-ord capability confirmed", color: "bg-gold" },
-  { stage: "Sample Production", days: "15–20", desc: "Pre-production samples — top and bottom sampled together for sets", color: "bg-blue-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, pricing and co-ord capability confirmed", color: "bg-[#9A6400]" },
+  { stage: "Sample Production", days: "15–20", desc: "Pre-production samples — top and bottom sampled together for sets", color: "bg-blue-700" },
   { stage: "Bulk Production", days: "45–70", desc: "From confirmed PO and approved sample", color: "bg-indigo-600" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection with set matching verification", color: "bg-purple-500" },
-  { stage: "Sea Freight", days: "20–30", desc: "FCL / LCL from Karachi or Port Qasim", color: "bg-teal-500" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection with set matching verification", color: "bg-purple-700" },
+  { stage: "Sea Freight", days: "20–30", desc: "FCL / LCL from Karachi or Port Qasim", color: "bg-teal-700" },
 ];
 
 const SUSTAINABILITY_ITEMS = [
@@ -465,7 +465,7 @@ export default function SweatpantsContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -1710,7 +1710,7 @@ export default function SweatpantsContent() {
       {/* ═══════════════════════════════════════════════════════════════════════
           FINAL CTA
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

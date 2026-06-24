@@ -21,7 +21,7 @@ function BackToTop({ dark }: { dark?: boolean }) {
       <button
         onClick={() => scrollToId("ww-bento")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
-          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
+          dark ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -1733,7 +1733,7 @@ export default function WorkwearContent() {
               </motion.div>
             ))}
           </div>
-          <p className="mt-6 text-white/40 text-xs">Lab dip approval on all bulk colour orders. Pantone / RAL target matching within ΔE 1.0 tolerance.</p>
+          <p className="mt-6 text-white/60 text-xs">Lab dip approval on all bulk colour orders. Pantone / RAL target matching within ΔE 1.0 tolerance.</p>
         </div>
         <BackToTop dark />
       </section>

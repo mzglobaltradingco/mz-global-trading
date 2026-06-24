@@ -21,7 +21,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{
@@ -177,7 +177,7 @@ const GSM_TIERS = [
     pct: 65,
     featured: true,
     desc: "The standard range for boutique hotel and spa programmes. Waffle and fleece constructions fall here — balanced between weight, drape and fast drying. Majority of programme volume ordered in this tier.",
-    color: "bg-gold",
+    color: "bg-[#9A6400]",
   },
   {
     gsm: "400–480+",
@@ -187,7 +187,7 @@ const GSM_TIERS = [
     pct: 50,
     featured: false,
     desc: "Terry loop and velour at luxury weights. The substantial hand is the primary quality signal for 5-star programmes — guests equate weight with quality. Higher absorbency and longer per-launder durability at commercial laundering cycles.",
-    color: "bg-sky-500",
+    color: "bg-sky-700",
   },
 ];
 
@@ -274,11 +274,11 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Mill shortlist, pricing and construction confirmation", color: "bg-gold" },
-  { stage: "Sample Production", days: "18–25", desc: "Pre-production samples with embroidery setup and approval", color: "bg-rose-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Mill shortlist, pricing and construction confirmation", color: "bg-[#9A6400]" },
+  { stage: "Sample Production", days: "18–25", desc: "Pre-production samples with embroidery setup and approval", color: "bg-rose-700" },
   { stage: "Bulk Production", days: "50–75", desc: "From confirmed PO and approved embroidered sample", color: "bg-indigo-600" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection before vessel loading", color: "bg-teal-600" },
-  { stage: "Sea Freight", days: "20–30", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-slate-500" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection before vessel loading", color: "bg-teal-700" },
+  { stage: "Sea Freight", days: "20–30", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-slate-600" },
 ];
 
 const SUSTAINABILITY_ITEMS = [
@@ -436,7 +436,7 @@ export default function BathrobesContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -1144,7 +1144,7 @@ export default function BathrobesContent() {
               <div key={i} className={`h-10 rounded-xl ${c} opacity-85`} aria-hidden="true" />
             ))}
           </div>
-          <p className="text-white/40 text-xs mt-3 text-center">
+          <p className="text-white/60 text-xs mt-3 text-center">
             Illustrative palette — full PMS range available via reactive dyeing. Lab dip approval before bulk production.
           </p>
           <BackToTop dark />
@@ -1579,7 +1579,7 @@ export default function BathrobesContent() {
       {/* ════════════════════════════════════════════════════════════════════════
           FINAL CTA
       ════════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

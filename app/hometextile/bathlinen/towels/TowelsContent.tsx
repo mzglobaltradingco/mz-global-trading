@@ -19,7 +19,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -217,12 +217,12 @@ const SUSTAINABILITY_ITEMS = [
 ];
 
 const PROCESS_STEPS = [
-  { num: "01", title: "Submit RFQ", desc: "Specify construction, GSM, size, set composition, border style, embroidery and quantity via our RFQ form.", color: "bg-amber-500" },
-  { num: "02", title: "Mill Matching", desc: "We shortlist 2–3 Pakistan certified towel mills. Competitive quotation returned within 3–5 days.", color: "bg-sky-500" },
+  { num: "01", title: "Submit RFQ", desc: "Specify construction, GSM, size, set composition, border style, embroidery and quantity via our RFQ form.", color: "bg-amber-700" },
+  { num: "02", title: "Mill Matching", desc: "We shortlist 2–3 Pakistan certified towel mills. Competitive quotation returned within 3–5 days.", color: "bg-sky-700" },
   { num: "03", title: "Sample Development", desc: "Physical pre-production samples produced to your exact specification. 18–25 days from fabric and spec lock.", color: "bg-indigo-600" },
   { num: "04", title: "Sample Sign-Off", desc: "Approve construction, GSM, border, embroidery, colour and packaging. Revise as required before placing PO.", color: "bg-violet-600" },
-  { num: "05", title: "Bulk Production", desc: "Confirmed PO triggers bulk production across certified mills. 45–60 days from PO depending on quantity and specifications.", color: "bg-rose-500" },
-  { num: "06", title: "QC & Dispatch", desc: "Pre-shipment inspection. AQL sampling, GSM testing, colour fastness. Packing and vessel loading Karachi / Port Qasim.", color: "bg-teal-500" },
+  { num: "05", title: "Bulk Production", desc: "Confirmed PO triggers bulk production across certified mills. 45–60 days from PO depending on quantity and specifications.", color: "bg-rose-700" },
+  { num: "06", title: "QC & Dispatch", desc: "Pre-shipment inspection. AQL sampling, GSM testing, colour fastness. Packing and vessel loading Karachi / Port Qasim.", color: "bg-teal-700" },
 ];
 
 const FAQS = [
@@ -282,7 +282,7 @@ export default function TowelsContent() {
       {/* STATS ANCHOR */}
       <section className="bg-gray-50 py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Certified Home Textile Sourcing Partner</p>
               <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-3">Bath Towel Sourcing — Hotel, Hospitality &amp; Retail Programmes</h2>

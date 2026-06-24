@@ -271,7 +271,7 @@ export default function PoloContent() {
       {/* STATS ANCHOR */}
       <section className="bg-gray-50 py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Polo Shirt Sourcing — Piqué Specialist Mills</p>
               <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-3">Polo Shirt Sourcing Excellence — Corporate, Sports &amp; Hospitality</h2>

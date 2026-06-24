@@ -21,7 +21,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{
@@ -365,8 +365,8 @@ const WOVEN_CONSTRUCTIONS = [
 
 const GSM_TIERS = [
   { range: "80–130 GSM", label: "Light", pct: 20, color: "bg-sky-400", garments: "Formal shirts, blouses, shirting fabric, lining", width: "44\"–60\"" },
-  { range: "130–200 GSM", label: "Medium-Light", pct: 42, color: "bg-blue-500", garments: "T-shirts, polo shirts, casual tops, women's wear", width: "58\"–72\"" },
-  { range: "200–280 GSM", label: "Medium", pct: 62, color: "bg-indigo-500", garments: "Trousers, chinos, sweatshirts, structured jackets", width: "58\"–72\"", featured: true },
+  { range: "130–200 GSM", label: "Medium-Light", pct: 42, color: "bg-blue-700", garments: "T-shirts, polo shirts, casual tops, women's wear", width: "58\"–72\"" },
+  { range: "200–280 GSM", label: "Medium", pct: 62, color: "bg-indigo-700", garments: "Trousers, chinos, sweatshirts, structured jackets", width: "58\"–72\"", featured: true },
   { range: "280–380 GSM", label: "Medium-Heavy", pct: 80, color: "bg-violet-600", garments: "Heavy fleece, canvas shirts, denim, workwear", width: "44\"–60\"" },
   { range: "380–450 GSM", label: "Heavy", pct: 100, color: "bg-purple-700", garments: "Technical canvas, industrial workwear, heavy denim", width: "44\"–58\"" },
 ];
@@ -647,7 +647,7 @@ export default function ApparelFabricContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -1543,7 +1543,7 @@ export default function ApparelFabricContent() {
       {/* ════════════════════════════════════════════════════════════════════════
           SECTION 9 — ROLL SPECS & EXPORT — DARK MODE UI
       ════════════════════════════════════════════════════════════════════════ */}
-      <section id="section-export" className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section id="section-export" className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Packing &amp; Export</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Roll Specifications &amp; Export Packing</h2>
@@ -1802,7 +1802,7 @@ export default function ApparelFabricContent() {
       {/* ════════════════════════════════════════════════════════════════════════
           FINAL CTA
       ════════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

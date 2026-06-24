@@ -19,7 +19,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -52,7 +52,7 @@ function ExploreBtn({ sectionId, label }: { sectionId: string; label: string }) 
 
 const GSM_TIERS = [
   { gsm: "150–180", name: "Neonatal / Paediatric", market: "Neonatal ICU · Paediatric wards · Infant care", pct: 30, color: "bg-sky-300", note: "Reduced weight — gentle on sensitive infant skin" },
-  { gsm: "180–210", name: "Standard Hospital", market: "NHS general wards · Ambulance · Aged care", pct: 65, featured: true, color: "bg-blue-500", note: "NHS procurement standard for general ward use" },
+  { gsm: "180–210", name: "Standard Hospital", market: "NHS general wards · Ambulance · Aged care", pct: 65, featured: true, color: "bg-blue-700", note: "NHS procurement standard for general ward use" },
   { gsm: "210–250", name: "High-Duty Institutional", market: "Residential aged care · High-dependency units", pct: 45, color: "bg-indigo-600", note: "Greater body and weight retention for reduced mobility patients" },
 ];
 
@@ -97,11 +97,11 @@ const EXPORT_TERMS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory evaluation, construction matching and pricing", color: "bg-gold" },
-  { stage: "Sample Production", days: "12–18", desc: "Pre-production sample to your GSM, size and anti-shrink spec", color: "bg-blue-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory evaluation, construction matching and pricing", color: "bg-[#9A6400]" },
+  { stage: "Sample Production", days: "12–18", desc: "Pre-production sample to your GSM, size and anti-shrink spec", color: "bg-blue-700" },
   { stage: "Bulk Production", days: "30–50", desc: "From confirmed purchase order and approved sample", color: "bg-indigo-600" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection — shrinkage, weight, whiteness", color: "bg-purple-500" },
-  { stage: "Sea Freight", days: "8–35", desc: "FCL/LCL from Karachi — 8–14 days UK, 18–25 days Australia", color: "bg-teal-500" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection — shrinkage, weight, whiteness", color: "bg-purple-700" },
+  { stage: "Sea Freight", days: "8–35", desc: "FCL/LCL from Karachi — 8–14 days UK, 18–25 days Australia", color: "bg-teal-700" },
 ];
 
 const PROCESS_STEPS = [
@@ -208,7 +208,7 @@ export default function CellularThermalBlanketContent() {
       <section className="bg-gray-50 py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Cellular Blanket Supply — Pakistan Weaving</p>
               <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-3">
@@ -612,7 +612,7 @@ export default function CellularThermalBlanketContent() {
       </section>
 
       {/* ══ SECTION 3 — SIZE PROGRAMME (Military/Tactical) ══ */}
-      <section id="section-sizes" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-sizes" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
             className="mb-12">
@@ -698,7 +698,7 @@ export default function CellularThermalBlanketContent() {
       </section>
 
       {/* ══ SECTION 6 — CERTIFICATIONS (Luxury) ══ */}
-      <section id="section-certifications" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-certifications" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
             className="mb-12">
@@ -845,7 +845,7 @@ export default function CellularThermalBlanketContent() {
       </section>
 
       {/* ══ SECTION 11 — LEAD TIMES (Command Center) ══ */}
-      <section id="section-leadtimes" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-leadtimes" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
             className="mb-4">
@@ -964,7 +964,7 @@ export default function CellularThermalBlanketContent() {
       </section>
 
       {/* ══ FINAL CTA ══ */}
-      <section className="bg-[#0D1B2A] py-20">
+      <section className="bg-navy-900 py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Get a Quote</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">Source Cellular Blankets from Pakistan</h2>

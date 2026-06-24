@@ -19,7 +19,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -170,10 +170,10 @@ const OEM_FEATURES = [
 ];
 
 const MARKET_SECTORS = [
-  { abbr: "RR", name: "Residential Retail", detail: "USA, UK, EU and Australian home retailers — programme buying for seasonal collections", share: 45, color: "bg-blue-500" },
-  { abbr: "HC", name: "Hotel / Hospitality Contract", detail: "New hotel openings and refurbishments — blackout and pinch pleat dominant specification", share: 25, color: "bg-gold" },
-  { abbr: "EC", name: "E-commerce / DTC", detail: "Direct-to-consumer curtain brands — digital print and standard sizing", share: 15, color: "bg-teal-500" },
-  { abbr: "ID", name: "Interior Design Trade", detail: "USA and EU interior designers sourcing custom specification panels", share: 10, color: "bg-purple-500" },
+  { abbr: "RR", name: "Residential Retail", detail: "USA, UK, EU and Australian home retailers — programme buying for seasonal collections", share: 45, color: "bg-blue-700" },
+  { abbr: "HC", name: "Hotel / Hospitality Contract", detail: "New hotel openings and refurbishments — blackout and pinch pleat dominant specification", share: 25, color: "bg-[#9A6400]" },
+  { abbr: "EC", name: "E-commerce / DTC", detail: "Direct-to-consumer curtain brands — digital print and standard sizing", share: 15, color: "bg-teal-700" },
+  { abbr: "ID", name: "Interior Design Trade", detail: "USA and EU interior designers sourcing custom specification panels", share: 10, color: "bg-purple-700" },
   { abbr: "PD", name: "Property Development", detail: "BTR/BTL residential development — FF&E contract supply at scale", share: 5, color: "bg-orange-400" },
 ];
 
@@ -333,7 +333,7 @@ export default function CurtainsContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Curtain Manufacturing — Pakistan Home Textiles</p>
@@ -724,7 +724,7 @@ export default function CurtainsContent() {
       </section>
 
       {/* ═══════ SECTION 2 — HEADING TYPES — TYPOGRAPHY-DRIVEN UI ═══════ */}
-      <section id="section-headings" className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section id="section-headings" className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Heading</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-10">Curtain Heading Styles</h2>
@@ -1217,7 +1217,7 @@ export default function CurtainsContent() {
       </section>
 
       {/* ═══════ FINAL CTA ═══════ */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

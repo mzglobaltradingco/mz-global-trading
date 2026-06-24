@@ -19,7 +19,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -137,8 +137,8 @@ const AGE_SIZE_GUIDE = [
 
 const GSM_TIERS = [
   { gsm: "90–130", name: "Ultra-Light", season: "Summer / Newborn", market: "Tropical · Middle East · Australia · USA Summer", pct: 30, desc: "Muslin and gauze constructions. Maximum breathability for newborns and warm-climate infant programmes.", color: "bg-sky-300", featured: false },
-  { gsm: "130–160", name: "Standard Kids", season: "Year-Round", market: "USA · UK · EU — primary kids range", pct: 85, desc: "Single jersey combed cotton. The industry standard weight for kids T-shirts across all major markets. Covers newborn through 12 years.", color: "bg-gold", featured: true },
-  { gsm: "160–200", name: "Structured / A/W", season: "Autumn / Winter", market: "EU · UK · Canada · Nordics", pct: 55, desc: "Interlock and French terry. More body and warmth for autumn/winter kids collections and school uniform programmes.", color: "bg-green-500", featured: false },
+  { gsm: "130–160", name: "Standard Kids", season: "Year-Round", market: "USA · UK · EU — primary kids range", pct: 85, desc: "Single jersey combed cotton. The industry standard weight for kids T-shirts across all major markets. Covers newborn through 12 years.", color: "bg-[#9A6400]", featured: true },
+  { gsm: "160–200", name: "Structured / A/W", season: "Autumn / Winter", market: "EU · UK · Canada · Nordics", pct: 55, desc: "Interlock and French terry. More body and warmth for autumn/winter kids collections and school uniform programmes.", color: "bg-green-700", featured: false },
 ];
 
 const DECO_METHODS = [
@@ -200,11 +200,11 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, pricing and certification confirmation", color: "bg-gold" },
-  { stage: "Sample Production", days: "14–18", desc: "Pre-production samples to construction, size and decoration spec", color: "bg-green-500" },
-  { stage: "Bulk Production", days: "35–55", desc: "From confirmed PO and approved sample", color: "bg-teal-500" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection — OEKO-TEX test report included", color: "bg-blue-500" },
-  { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-indigo-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, pricing and certification confirmation", color: "bg-[#9A6400]" },
+  { stage: "Sample Production", days: "14–18", desc: "Pre-production samples to construction, size and decoration spec", color: "bg-green-700" },
+  { stage: "Bulk Production", days: "35–55", desc: "From confirmed PO and approved sample", color: "bg-teal-700" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection — OEKO-TEX test report included", color: "bg-blue-700" },
+  { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-indigo-700" },
 ];
 
 const SUSTAINABILITY_ITEMS = [
@@ -336,7 +336,7 @@ export default function TShirtsForKidsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Baby &amp; Kids T-Shirts — Pakistan Certified Knitwear</p>
@@ -739,7 +739,7 @@ export default function TShirtsForKidsContent() {
               <motion.div
                 key={t.gsm}
                 initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`rounded-2xl p-7 relative overflow-hidden ${t.featured ? "bg-[#0D1B2A] text-white" : "bg-white border border-gray-100 shadow-xs"}`}
+                className={`rounded-2xl p-7 relative overflow-hidden ${t.featured ? "bg-navy-900 text-white" : "bg-white border border-gray-100 shadow-xs"}`}
               >
                 {t.featured && <div className="absolute top-4 right-4 text-[10px] font-bold text-navy-900 bg-gold px-2.5 py-1 rounded-full">Primary Range</div>}
                 <div className="text-3xl font-bold mb-1" style={{ color: t.featured ? "#D4A017" : "#0D1B2A" }}>{t.gsm}</div>
@@ -871,7 +871,7 @@ export default function TShirtsForKidsContent() {
       </section>
 
       {/* ══ SECTION 7 — MARKETS (Dark Mode UI + Region Cards) ════════════════ */}
-      <section id="section-markets" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-markets" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Export Markets</p>
@@ -1158,7 +1158,7 @@ export default function TShirtsForKidsContent() {
       </section>
 
       {/* ══ FINAL CTA ════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0D1B2A] py-16 lg:py-20">
+      <section className="bg-navy-900 py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}>
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Start Your Programme</p>

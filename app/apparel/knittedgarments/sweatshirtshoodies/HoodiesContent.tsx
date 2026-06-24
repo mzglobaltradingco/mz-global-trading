@@ -21,7 +21,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{
@@ -173,7 +173,7 @@ const GSM_TIERS = [
     pct: 90,
     featured: true,
     desc: "The commercial sweet-spot for hoodies and sweatshirts. French terry at 340–360 GSM covers the majority of retail orders.",
-    color: "bg-gold",
+    color: "bg-[#9A6400]",
   },
   {
     gsm: "380–420+",
@@ -250,11 +250,11 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Mill shortlist, fleece construction pricing and availability confirmed", color: "bg-gold" },
-  { stage: "Sample Production", days: "15–25", desc: "Pre-production samples to specification including hood and cuff engineering", color: "bg-blue-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Mill shortlist, fleece construction pricing and availability confirmed", color: "bg-[#9A6400]" },
+  { stage: "Sample Production", days: "15–25", desc: "Pre-production samples to specification including hood and cuff engineering", color: "bg-blue-700" },
   { stage: "Bulk Production", days: "45–70", desc: "From confirmed PO and approved pre-production sample", color: "bg-indigo-600" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection before vessel loading", color: "bg-purple-500" },
-  { stage: "Sea Freight", days: "20–30", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-teal-500" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection before vessel loading", color: "bg-purple-700" },
+  { stage: "Sea Freight", days: "20–30", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-teal-700" },
 ];
 
 const SUSTAINABILITY_ITEMS = [
@@ -410,7 +410,7 @@ export default function HoodiesContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -1060,7 +1060,7 @@ export default function HoodiesContent() {
           <div className="flex justify-center mt-16">
             <button
               onClick={() => scrollToId("bento-grid")}
-              className="group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold border border-gold/60 text-gold hover:bg-gold hover:text-navy-900 transition-all duration-300"
+              className="group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900 transition-all duration-300"
               style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
             >
               <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
@@ -1222,7 +1222,7 @@ export default function HoodiesContent() {
                 <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Certification Mix</p>
                 <div className="flex flex-col gap-3">
                   {[
-                    { label: "Standard (mandatory)", count: 5, color: "bg-gold" },
+                    { label: "Standard (mandatory)", count: 5, color: "bg-[#9A6400]" },
                     { label: "Premium (buyer-specified)", count: 2, color: "bg-purple-300" },
                     { label: "Optional (on request)", count: 3, color: "bg-white/30" },
                   ].map((item) => (
@@ -1256,7 +1256,7 @@ export default function HoodiesContent() {
           <div className="flex justify-center mt-16">
             <button
               onClick={() => scrollToId("bento-grid")}
-              className="group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold border border-gold/60 text-gold hover:bg-gold hover:text-navy-900 transition-all duration-300"
+              className="group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900 transition-all duration-300"
               style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
             >
               <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
@@ -1344,7 +1344,7 @@ export default function HoodiesContent() {
           <div className="flex justify-center">
             <button
               onClick={() => scrollToId("bento-grid")}
-              className="group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold border border-gold/60 text-gold hover:bg-gold hover:text-navy-900 transition-all duration-300"
+              className="group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900 transition-all duration-300"
               style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
             >
               <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">

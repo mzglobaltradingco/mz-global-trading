@@ -16,7 +16,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
   return (
     <div className="flex justify-center mt-16">
       <button onClick={() => scrollToId("bento-grid")}
-        className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"}`}
+        className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${dark ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"}`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}>
         <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75" />
@@ -76,7 +76,7 @@ const CONSTRUCTIONS = [
 
 const GSM_TIERS = [
   { gsm: "300–350", name: "Standard Duty", pct: 40, colour: "bg-slate-300", market: "General workshop, light industrial, food service", note: "Entry-level industrial wiper — adequate for light maintenance tasks" },
-  { gsm: "350–400", name: "Heavy Duty", pct: 75, colour: "bg-slate-500", market: "Automotive workshops, dealerships, mechanical service", note: "USA automotive distribution standard — balance of absorbency and cost", featured: true },
+  { gsm: "350–400", name: "Heavy Duty", pct: 75, colour: "bg-slate-600", market: "Automotive workshops, dealerships, mechanical service", note: "USA automotive distribution standard — balance of absorbency and cost", featured: true },
   { gsm: "400–450+", name: "Industrial Duty", pct: 55, colour: "bg-slate-700", market: "Heavy machinery, oil field, industrial maintenance", note: "Maximum pile depth — heaviest fluid retention for severe applications" },
 ];
 
@@ -125,11 +125,11 @@ const EXPORT_TERMS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Construction, GSM, colour and pack format specification", colour: "bg-gold" },
-  { stage: "Sample Production", days: "10–15", desc: "Pre-production sample to your GSM and construction spec", colour: "bg-slate-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Construction, GSM, colour and pack format specification", colour: "bg-[#9A6400]" },
+  { stage: "Sample Production", days: "10–15", desc: "Pre-production sample to your GSM and construction spec", colour: "bg-slate-600" },
   { stage: "Bulk Production", days: "30–45", desc: "From confirmed purchase order. Volume product — predictable scheduling.", colour: "bg-slate-700" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment weight, dimension and quantity audit", colour: "bg-purple-500" },
-  { stage: "Sea Freight", days: "8–30", desc: "18–30 days to USA East/West coast, 8–14 days to UK", colour: "bg-teal-500" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment weight, dimension and quantity audit", colour: "bg-purple-700" },
+  { stage: "Sea Freight", days: "8–30", desc: "18–30 days to USA East/West coast, 8–14 days to UK", colour: "bg-teal-700" },
 ];
 
 const PROCESS_STEPS = [
@@ -204,7 +204,7 @@ export default function ShopTowelsContent() {
       <section className="bg-gray-50 py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Shop Towel Supply — Pakistan</p>
               <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-3">Heavy-Duty Industrial Cotton. High-Volume Supply.</h2>
@@ -526,7 +526,7 @@ export default function ShopTowelsContent() {
       </section>
 
       {/* SECTION 2 — GSM (Command Center) */}
-      <section id="section-gsm" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-gsm" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Weight Specification</p>
@@ -690,7 +690,7 @@ export default function ShopTowelsContent() {
       </section>
 
       {/* SECTION 8 — EXPORT TERMS (Typography-First) */}
-      <section id="section-export" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-export" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Export</p>
@@ -775,7 +775,7 @@ export default function ShopTowelsContent() {
       </section>
 
       {/* SECTION 11 — LEAD TIMES (Luxury) */}
-      <section id="section-leadtimes" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-leadtimes" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-4">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Timeline</p>
@@ -859,7 +859,7 @@ export default function ShopTowelsContent() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-[#0D1B2A] py-20">
+      <section className="bg-navy-900 py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Get a Quote</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">Source Shop Towels from Pakistan</h2>

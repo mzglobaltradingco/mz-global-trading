@@ -15,7 +15,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
   return (
     <div className="flex justify-center mt-16">
       <button onClick={() => scrollToId("bento-grid")}
-        className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"}`}
+        className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${dark ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"}`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}>
         <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75" />
@@ -171,7 +171,7 @@ export default function PatientGownsContent() {
       {/* STATS ANCHOR */}
       <section className="bg-gray-50 py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Patient Gowns Supply — Pakistan</p>
               <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-3">Hospital Patient Gown Programmes at Institutional Scale</h2>
@@ -577,7 +577,7 @@ export default function PatientGownsContent() {
       </section>
 
       {/* S7 — CERTIFICATIONS (dark) */}
-      <section id="section-certifications" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-certifications" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}>
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Compliance</p>
@@ -752,7 +752,7 @@ export default function PatientGownsContent() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}>
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Ready to Source</p>

@@ -18,7 +18,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
       <button
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
-          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
+          dark ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -114,7 +114,7 @@ const AGE_SIZE_GUIDE = [
 
 const GSM_TIERS = [
   { weight: "7–9 oz / 150–200 gsm", name: "Light–Mid Weight", season: "Year-Round Infant", market: "USA · EU · Australia", pct: 70, desc: "Stretch denim, linen. Primary weight for infant and toddler — comfortable all-day wear.", color: "bg-amber-300", featured: false },
-  { weight: "9–11 oz / 200–280 gsm", name: "Mid Weight", season: "Year-Round Kids", market: "USA · UK · EU — primary range", pct: 90, desc: "Standard denim, canvas and corduroy. Covers toddler through school-age across all major markets.", color: "bg-gold", featured: true },
+  { weight: "9–11 oz / 200–280 gsm", name: "Mid Weight", season: "Year-Round Kids", market: "USA · UK · EU — primary range", pct: 90, desc: "Standard denim, canvas and corduroy. Covers toddler through school-age across all major markets.", color: "bg-[#9A6400]", featured: true },
   { weight: "11–14 oz / 280–340 gsm", name: "Heavy Weight", season: "A/W Premium", market: "UK · EU · Canada · Nordics", pct: 45, desc: "Heavy rigid denim and canvas for structured A/W kids collections and premium heritage brands.", color: "bg-orange-700", featured: false },
 ];
 
@@ -176,11 +176,11 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, pricing and certification confirmation", color: "bg-gold" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, pricing and certification confirmation", color: "bg-[#9A6400]" },
   { stage: "Sample Production", days: "14–21", desc: "Overalls samples — construction, wash, hardware and decoration", color: "bg-orange-500" },
   { stage: "Bulk Production", days: "40–60", desc: "From confirmed PO and approved sample", color: "bg-amber-600" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection including hardware and snap testing", color: "bg-blue-500" },
-  { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-indigo-500" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection including hardware and snap testing", color: "bg-blue-700" },
+  { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-indigo-700" },
 ];
 
 const SUSTAINABILITY_ITEMS = [
@@ -273,7 +273,7 @@ export default function OverallsContent() {
       {/* ══ STATS ════════════════════════════════════════════════════════════════ */}
       <section className="bg-gray-50 py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Baby &amp; Kids Overalls — Pakistan Denim &amp; Woven</p>
               <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-3">Five Constructions. Newborn to 12 Years.</h2>
@@ -455,7 +455,7 @@ export default function OverallsContent() {
       </section>
 
       {/* ══ SECTION 1 — CONSTRUCTIONS (Brutalist UI + Scorecard) ═══════════════ */}
-      <section id="section-constructions" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-constructions" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <div className="border-l-8 border-gold pl-5 mb-8">
@@ -523,7 +523,7 @@ export default function OverallsContent() {
           <div className="space-y-4">
             {GSM_TIERS.map((t, i) => (
               <motion.div key={t.weight} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`rounded-2xl p-6 flex flex-col sm:flex-row gap-6 items-start ${t.featured ? "bg-[#0D1B2A] border border-gold/30" : "bg-white border border-gray-100 shadow-xs"}`}
+                className={`rounded-2xl p-6 flex flex-col sm:flex-row gap-6 items-start ${t.featured ? "bg-navy-900 border border-gold/30" : "bg-white border border-gray-100 shadow-xs"}`}
               >
                 <div className="shrink-0">
                   <div className={`text-2xl font-bold ${t.featured ? "text-gold" : "text-navy-900"}`}>{t.weight}</div>
@@ -595,7 +595,7 @@ export default function OverallsContent() {
       </section>
 
       {/* ══ SECTION 6 — OEM (Modular UI + Card Grid) ════════════════════════ */}
-      <section id="section-oem" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-oem" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">OEM Development</p>
@@ -619,7 +619,7 @@ export default function OverallsContent() {
       <section id="section-markets" className="bg-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-gray-100 shadow-xs">
-            <div className="bg-[#0D1B2A] p-10 lg:p-14">
+            <div className="bg-navy-900 p-10 lg:p-14">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Export Markets</p>
               <h2 className="text-3xl font-bold text-white mb-4">Global Overalls Markets</h2>
               <p className="text-gray-500 text-sm leading-relaxed mb-6">Serving kids boutiques, retail chains and wholesale distributors across 35+ markets. EU premium demands GOTS and OEKO-TEX Class 1; USA mass retail prioritises price and delivery reliability.</p>
@@ -684,7 +684,7 @@ export default function OverallsContent() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 border border-gray-100 rounded-2xl overflow-hidden shadow-xs">
               <table className="w-full text-sm">
-                <thead><tr className="bg-[#0D1B2A]">{["Term", "Full Name", "Point"].map(h => <th key={h} className="text-left px-4 py-3 text-xs font-semibold text-gray-300 uppercase tracking-wider">{h}</th>)}</tr></thead>
+                <thead><tr className="bg-navy-900">{["Term", "Full Name", "Point"].map(h => <th key={h} className="text-left px-4 py-3 text-xs font-semibold text-gray-300 uppercase tracking-wider">{h}</th>)}</tr></thead>
                 <tbody className="divide-y divide-gray-50">
                   {EXPORT_TERMS.map((t) => (
                     <tr key={t.term}>
@@ -827,7 +827,7 @@ export default function OverallsContent() {
       </section>
 
       {/* ══ FINAL CTA ════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0D1B2A] py-16 lg:py-20">
+      <section className="bg-navy-900 py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}>
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Start Your Programme</p>

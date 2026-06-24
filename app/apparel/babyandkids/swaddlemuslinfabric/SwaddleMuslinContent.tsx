@@ -18,7 +18,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
       <button
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
-          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
+          dark ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -110,7 +110,7 @@ const SIZE_GUIDE = [
 
 const GSM_TIERS = [
   { gsm: "90–110", name: "Ultra-Light", season: "Warm Climate / Summer", market: "Tropical · Middle East · Australia · SE Asia", pct: 30, desc: "Single muslin — maximum airflow. Ideal for newborns in hot climates. Highest breathability, lightest drape.", color: "bg-sky-300", featured: false },
-  { gsm: "110–130", name: "Standard Premium", season: "Year-Round", market: "USA · UK · EU — primary range", pct: 85, desc: "Double gauze and bamboo muslin. Industry standard for premium baby brands. Perfect balance of body, softness and breathability.", color: "bg-gold", featured: true },
+  { gsm: "110–130", name: "Standard Premium", season: "Year-Round", market: "USA · UK · EU — primary range", pct: 85, desc: "Double gauze and bamboo muslin. Industry standard for premium baby brands. Perfect balance of body, softness and breathability.", color: "bg-[#9A6400]", featured: true },
   { gsm: "130–160", name: "Structured Warm", season: "A/W / Cool Climate", market: "Canada · Nordics · Northern EU", pct: 50, desc: "Jersey knit swaddles. More body and warmth for cooler climates and autumn/winter baby collections.", color: "bg-indigo-400", featured: false },
 ];
 
@@ -172,11 +172,11 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, pricing and GOTS certification confirmation", color: "bg-gold" },
-  { stage: "Sample Production", days: "14–18", desc: "Swaddle samples to size, weight and print specification", color: "bg-green-500" },
-  { stage: "Bulk Production", days: "30–50", desc: "From confirmed PO and approved sample", color: "bg-teal-500" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection and OEKO-TEX test report", color: "bg-blue-500" },
-  { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-indigo-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, pricing and GOTS certification confirmation", color: "bg-[#9A6400]" },
+  { stage: "Sample Production", days: "14–18", desc: "Swaddle samples to size, weight and print specification", color: "bg-green-700" },
+  { stage: "Bulk Production", days: "30–50", desc: "From confirmed PO and approved sample", color: "bg-teal-700" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection and OEKO-TEX test report", color: "bg-blue-700" },
+  { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-indigo-700" },
 ];
 
 const SUSTAINABILITY_ITEMS = [
@@ -284,7 +284,7 @@ export default function SwaddleMuslinContent() {
       {/* ══ STATS ANCHOR ════════════════════════════════════════════════════════ */}
       <section className="bg-gray-50 py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Swaddle Muslin — Pakistan Certified Textile</p>
               <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-3">Organic. Certified. Newborn Safe.</h2>
@@ -546,7 +546,7 @@ export default function SwaddleMuslinContent() {
           <div className="border border-gray-200 rounded-2xl overflow-hidden shadow-xs">
             <table className="w-full text-sm">
               <thead>
-                <tr className="bg-[#0D1B2A]">
+                <tr className="bg-navy-900">
                   {["Size", "Format", "Primary Use", "Key Market"].map(h => (
                     <th key={h} className="text-left px-5 py-3.5 text-xs font-semibold text-gray-300 uppercase tracking-wider">{h}</th>
                   ))}
@@ -569,7 +569,7 @@ export default function SwaddleMuslinContent() {
       </section>
 
       {/* ══ SECTION 3 — GSM (Infographic UI + Layered Visual) ════════════════ */}
-      <section id="section-gsm" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-gsm" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Weight Guide</p>
@@ -897,7 +897,7 @@ export default function SwaddleMuslinContent() {
       </section>
 
       {/* ══ FINAL CTA ════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0D1B2A] py-16 lg:py-20">
+      <section className="bg-navy-900 py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}>
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Start Your Programme</p>

@@ -21,7 +21,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -486,7 +486,7 @@ export default function IhramContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -643,7 +643,7 @@ export default function IhramContent() {
               className="bg-zinc-50 border border-zinc-200 rounded-2xl p-6 flex flex-col gap-3 min-h-[280px]"
             >
               <span className="text-2xl" aria-hidden="true">⬜</span>
-              <p className="text-zinc-500 text-xs font-semibold tracking-[0.2em] uppercase">Specification</p>
+              <p className="text-zinc-600 text-xs font-semibold tracking-[0.2em] uppercase">Specification</p>
               <h3 className="text-base font-bold text-navy-900 leading-tight">White Specification</h3>
               <div className="flex flex-col gap-3 flex-1">
                 <div className="bg-white rounded-xl p-3 border border-zinc-200">
@@ -1072,7 +1072,7 @@ export default function IhramContent() {
             ))}
           </div>
           {/* Custom sizing banner */}
-          <div className="bg-[#0D1B2A] rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+          <div className="bg-navy-900 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5">
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-1">Bespoke Sizing</p>
               <h3 className="text-base font-bold text-white mb-1">Custom Dimensions Available</h3>
@@ -1153,7 +1153,7 @@ export default function IhramContent() {
               initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
               className="bg-black text-white rounded-2xl p-8"
             >
-              <p className="font-mono text-xs text-white/40 uppercase tracking-widest mb-4">WHITENESS_TARGET</p>
+              <p className="font-mono text-xs text-white/60 uppercase tracking-widest mb-4">WHITENESS_TARGET</p>
               <p className="text-7xl font-black text-white leading-none mb-2">≥90</p>
               <p className="text-2xl font-bold text-white/60 mb-6">CIE units</p>
               <p className="text-white/70 text-sm leading-relaxed">Measured per ISO 2469. Industry-standard spectrophotometric measurement. Batch-to-batch tolerance ±3 CIE units.</p>
@@ -1311,7 +1311,7 @@ export default function IhramContent() {
       {/* ════════════════════════════════════════════════════════════════════════
           SECTION 9 — EXPORT & PACKAGING — MATERIAL DESIGN (DARK)
       ════════════════════════════════════════════════════════════════════════ */}
-      <section id="section-export" className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section id="section-export" className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Logistics</p>
@@ -1409,7 +1409,7 @@ export default function IhramContent() {
       {/* ════════════════════════════════════════════════════════════════════════
           SECTION 11 — SOURCING PROCESS — TYPOGRAPHY-DRIVEN UI
       ════════════════════════════════════════════════════════════════════════ */}
-      <section id="section-process" className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section id="section-process" className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">How We Work</p>
@@ -1549,7 +1549,7 @@ export default function IhramContent() {
       {/* ════════════════════════════════════════════════════════════════════════
           FINAL CTA
       ════════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

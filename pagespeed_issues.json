@@ -1,24 +1,24 @@
 {
-  "generated": "2026-06-23T15:54:24.623329",
+  "generated": "2026-06-23T17:19:10.647836",
   "results": [
     {
       "url": "https://mz-global-trading.pages.dev/apparel/knittedgarments/henleyshirts/",
-      "strategy": "desktop",
+      "strategy": "mobile",
       "scores": {
-        "performance": 90,
-        "accessibility": 97,
+        "performance": 74,
+        "accessibility": 100,
         "seo": 100,
-        "best_practices": 96,
-        "lcp_ms": 1224,
-        "lcp": "1.2\u00a0s",
+        "best_practices": 100,
+        "lcp_ms": 5626,
+        "lcp": "5.6\u00a0s",
         "cls": "0",
         "inp_ms": null,
         "inp": null,
-        "fcp_ms": 414,
-        "fcp": "0.4\u00a0s",
-        "tbt_ms": 192,
-        "tbt": "190\u00a0ms",
-        "speed_index": "1.5\u00a0s"
+        "fcp_ms": 2134,
+        "fcp": "2.1\u00a0s",
+        "tbt_ms": 66,
+        "tbt": "70\u00a0ms",
+        "speed_index": "4.6\u00a0s"
       },
       "issues": [
         {
@@ -28,119 +28,35 @@
           "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity.",
           "score": 0,
           "score_mode": "metricSavings",
-          "display_value": "Est savings of 143\u00a0KiB",
-          "savings_ms": 80,
+          "display_value": "Est savings of 212\u00a0KiB",
+          "savings_ms": 880,
           "items": []
         },
         {
-          "audit_id": "color-contrast",
-          "category": "Accessibility",
-          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-          "description": "Low-contrast text is difficult or impossible for many users to read.",
+          "audit_id": "network-dependency-tree-insight",
+          "category": "Performance",
+          "title": "Network dependency tree",
+          "description": "",
           "score": 0,
-          "score_mode": "binary",
+          "score_mode": "numeric",
           "display_value": "",
           "savings_ms": null,
-          "items": [
-            {
-              "node": "<p class=\"font-mono text-gold/70 text-xs tracking-[0.3em] uppercase mb-2\">",
-              "subItems": "{'type': 'subitems', 'items': [{'relatedNode': {'boundingRect': {'height': 1031, 'width': 1344, 'top': 4115, 'right': 1344, 'bottom': 5146, 'left': 0}, 'type': 'node', 'snippet': '<section id=\"section-constructions\" class=\"bg-[#080E1A] py-20 lg:py-28\">', 'lhId': '1-1-SECTION', 'selector': 'div > main#main-content > div.overflow-x-clip > section#section-constructions', 'nodeLabel': '[TECHNICAL SPECIFICATION \u2014 KNITTED CONSTRUCTIONS]\\n\\nFabric Constructions\\n\\nEvery \u2026', 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION'}}]}"
-            },
-            {
-              "node": "<p class=\"text-gray-500 mt-3 max-w-2xl leading-relaxed\">",
-              "subItems": "{'type': 'subitems', 'items': [{'relatedNode': {'type': 'node', 'snippet': '<section id=\"section-constructions\" class=\"bg-[#080E1A] py-20 lg:py-28\">', 'boundingRect': {'left': 0, 'bottom': 5146, 'right': 1344, 'top': 4115, 'height': 1031, 'width': 1344}, 'nodeLabel': '[TECHNICAL SPECIFICATION \u2014 KNITTED CONSTRUCTIONS]\\n\\nFabric Constructions\\n\\nEvery \u2026', 'selector': 'div > main#main-content > div.overflow-x-clip > section#section-constructions', 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION', 'lhId': '1-1-SECTION'}}]}"
-            },
-            {
-              "node": "<span class=\"text-xs font-semibold text-gold bg-gold/15 px-3 py-1 rounded-full border b\u2026\">",
-              "subItems": "{'type': 'subitems', 'items': [{'relatedNode': {'snippet': '<div class=\"lg:col-span-2 bg-white/5 border border-white/10 rounded-2xl p-8\">', 'boundingRect': {'right': 867, 'top': 4477, 'height': 443, 'width': 803, 'bottom': 4920, 'left': 64}, 'type': 'node', 'lhId': '1-4-DIV', 'nodeLabel': 'Single Jersey\\nMost Popular\\n\\nGSM_RANGE\\n\\n160\u2013200 GSM\\n\\nHAND_FEEL\\n\\nSmooth face, nat\u2026', 'selector': 'section#section-constructions > div.max-w-7xl > div.grid > div.lg:col-span-2', 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION,0,DIV,2,DIV,0,DIV'}}, {'relatedNode': {'type': 'node', 'snippet': '<section id=\"section-constructions\" class=\"bg-[#080E1A] py-20 lg:py-28\">', 'boundingRect': {'left': 0, 'bottom': 5146, 'right': 1344, 'top': 4115, 'height': 1031, 'width': 1344}, 'lhId': '1-1-SECTION', 'selector': 'div > main#main-content > div.overflow-x-clip > section#section-constructions', 'nodeLabel': '[TECHNICAL SPECIFICATION \u2014 KNITTED CONSTRUCTIONS]\\n\\nFabric Constructions\\n\\nEvery \u2026', 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION'}}]}"
-            },
-            {
-              "subItems": "{'type': 'subitems', 'items': [{'relatedNode': {'type': 'node', 'snippet': '<div class=\"bg-white/5 rounded-xl p-4\">', 'boundingRect': {'height': 79, 'width': 360, 'top': 4566, 'right': 457, 'left': 97, 'bottom': 4645}, 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION,0,DIV,2,DIV,0,DIV,1,DIV,0,DIV', 'nodeLabel': 'GSM_RANGE\\n\\n160\u2013200 GSM', 'selector': 'div.grid > div.lg:col-span-2 > div.grid > div.bg-white/5', 'lhId': '1-6-DIV'}}, {'relatedNode': {'lhId': '1-4-DIV', 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION,0,DIV,2,DIV,0,DIV', 'nodeLabel': 'Single Jersey\\nMost Popular\\n\\nGSM_RANGE\\n\\n160\u2013200 GSM\\n\\nHAND_FEEL\\n\\nSmooth face, nat\u2026', 'selector': 'section#section-constructions > div.max-w-7xl > div.grid > div.lg:col-span-2', 'type': 'node', 'snippet': '<div class=\"lg:col-span-2 bg-white/5 border border-white/10 rounded-2xl p-8\">', 'boundingRect': {'bottom': 4920, 'left': 64, 'width': 803, 'height': 443, 'right': 867, 'top': 4477}}}, {'relatedNode': {'snippet': '<section id=\"section-constructions\" class=\"bg-[#080E1A] py-20 lg:py-28\">', 'boundingRect': {'left': 0, 'bottom': 5146, 'top': 4115, 'right': 1344, 'height': 1031, 'width': 1344}, 'type': 'node', 'lhId': '1-1-SECTION', 'selector': 'div > main#main-content > div.overflow-x-clip > section#section-constructions', 'nodeLabel': '[TECHNICAL SPECIFICATION \u2014 KNITTED CONSTRUCTIONS]\\n\\nFabric Constructions\\n\\nEvery \u2026', 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION'}}]}",
-              "node": "<p class=\"font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-1\">"
-            },
-            {
-              "subItems": "{'items': [{'relatedNode': {'snippet': '<div class=\"bg-white/5 rounded-xl p-4\">', 'boundingRect': {'top': 4566, 'right': 834, 'height': 79, 'width': 360, 'left': 473, 'bottom': 4645}, 'type': 'node', 'lhId': '1-8-DIV', 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION,0,DIV,2,DIV,0,DIV,1,DIV,1,DIV', 'nodeLabel': 'HAND_FEEL\\n\\nSmooth face, natural 4-way stretch, fine texture', 'selector': 'div.grid > div.lg:col-span-2 > div.grid > div.bg-white/5'}}, {'relatedNode': {'type': 'node', 'snippet': '<div class=\"lg:col-span-2 bg-white/5 border border-white/10 rounded-2xl p-8\">', 'boundingRect': {'left': 64, 'bottom': 4920, 'height': 443, 'width': 803, 'right': 867, 'top': 4477}, 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION,0,DIV,2,DIV,0,DIV', 'selector': 'section#section-constructions > div.max-w-7xl > div.grid > div.lg:col-span-2', 'nodeLabel': 'Single Jersey\\nMost Popular\\n\\nGSM_RANGE\\n\\n160\u2013200 GSM\\n\\nHAND_FEEL\\n\\nSmooth face, nat\u2026', 'lhId': '1-4-DIV'}}, {'relatedNode': {'selector': 'div > main#main-content > div.overflow-x-clip > section#section-constructions', 'nodeLabel': '[TECHNICAL SPECIFICATION \u2014 KNITTED CONSTRUCTIONS]\\n\\nFabric Constructions\\n\\nEvery \u2026', 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION', 'lhId': '1-1-SECTION', 'snippet': '<section id=\"section-constructions\" class=\"bg-[#080E1A] py-20 lg:py-28\">', 'boundingRect': {'height': 1031, 'width': 1344, 'right': 1344, 'top': 4115, 'left': 0, 'bottom': 5146}, 'type': 'node'}}], 'type': 'subitems'}",
-              "node": "<p class=\"font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-1\">"
-            },
-            {
-              "subItems": "{'items': [{'relatedNode': {'lhId': '1-4-DIV', 'nodeLabel': 'Single Jersey\\nMost Popular\\n\\nGSM_RANGE\\n\\n160\u2013200 GSM\\n\\nHAND_FEEL\\n\\nSmooth face, nat\u2026', 'selector': 'section#section-constructions > div.max-w-7xl > div.grid > div.lg:col-span-2', 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION,0,DIV,2,DIV,0,DIV', 'type': 'node', 'snippet': '<div class=\"lg:col-span-2 bg-white/5 border border-white/10 rounded-2xl p-8\">', 'boundingRect': {'bottom': 4920, 'left': 64, 'right': 867, 'top': 4477, 'height': 443, 'width': 803}}}, {'relatedNode': {'type': 'node', 'snippet': '<section id=\"section-constructions\" class=\"bg-[#080E1A] py-20 lg:py-28\">', 'boundingRect': {'right': 1344, 'top': 4115, 'width': 1344, 'height': 1031, 'left': 0, 'bottom': 5146}, 'nodeLabel': '[TECHNICAL SPECIFICATION \u2014 KNITTED CONSTRUCTIONS]\\n\\nFabric Constructions\\n\\nEvery \u2026', 'selector': 'div > main#main-content > div.overflow-x-clip > section#section-constructions', 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION', 'lhId': '1-1-SECTION'}}], 'type': 'subitems'}",
-              "node": "<p class=\"font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-2\">"
-            },
-            {
-              "subItems": "{'type': 'subitems', 'items': [{'relatedNode': {'nodeLabel': 'BEST_FOR[ ]\\n\\nFashion Retail\\nStreetwear\\nWarm-Climate Markets', 'selector': 'div.max-w-7xl > div.grid > div.flex > div.bg-white/5', 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION,0,DIV,2,DIV,1,DIV,0,DIV', 'lhId': '1-11-DIV', 'snippet': '<div class=\"bg-white/5 border border-white/10 rounded-2xl p-6\">', 'boundingRect': {'right': 1280, 'top': 4477, 'height': 133, 'width': 389, 'bottom': 4610, 'left': 891}, 'type': 'node'}}, {'relatedNode': {'nodeLabel': '[TECHNICAL SPECIFICATION \u2014 KNITTED CONSTRUCTIONS]\\n\\nFabric Constructions\\n\\nEvery \u2026', 'selector': 'div > main#main-content > div.overflow-x-clip > section#section-constructions', 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION', 'lhId': '1-1-SECTION', 'type': 'node', 'snippet': '<section id=\"section-constructions\" class=\"bg-[#080E1A] py-20 lg:py-28\">', 'boundingRect': {'height': 1031, 'width': 1344, 'top': 4115, 'right': 1344, 'left': 0, 'bottom': 5146}}}]}",
-              "node": "<p class=\"font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-3\">"
-            },
-            {
-              "subItems": "{'items': [{'relatedNode': {'lhId': '1-13-DIV', 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION,0,DIV,2,DIV,1,DIV,1,DIV', 'nodeLabel': 'KEY_MARKETS[ ]\\n\\nUSA\\nEU\\nAustralia\\nMiddle East', 'selector': 'div.max-w-7xl > div.grid > div.flex > div.bg-white/5', 'type': 'node', 'snippet': '<div class=\"bg-white/5 border border-white/10 rounded-2xl p-6\">', 'boundingRect': {'bottom': 4729, 'left': 891, 'top': 4626, 'right': 1280, 'height': 103, 'width': 389}}}, {'relatedNode': {'type': 'node', 'snippet': '<section id=\"section-constructions\" class=\"bg-[#080E1A] py-20 lg:py-28\">', 'boundingRect': {'right': 1344, 'top': 4115, 'height': 1031, 'width': 1344, 'bottom': 5146, 'left': 0}, 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION', 'nodeLabel': '[TECHNICAL SPECIFICATION \u2014 KNITTED CONSTRUCTIONS]\\n\\nFabric Constructions\\n\\nEvery \u2026', 'selector': 'div > main#main-content > div.overflow-x-clip > section#section-constructions', 'lhId': '1-1-SECTION'}}], 'type': 'subitems'}",
-              "node": "<p class=\"font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-3\">"
-            },
-            {
-              "node": "<span class=\"text-xs text-gold bg-gold/10 border border-gold/20 px-3 py-1 rounded-full\">",
-              "subItems": "{'items': [{'relatedNode': {'selector': 'div.max-w-7xl > div.grid > div.flex > div.bg-white/5', 'nodeLabel': 'KEY_MARKETS[ ]\\n\\nUSA\\nEU\\nAustralia\\nMiddle East', 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION,0,DIV,2,DIV,1,DIV,1,DIV', 'lhId': '1-13-DIV', 'type': 'node', 'snippet': '<div class=\"bg-white/5 border border-white/10 rounded-2xl p-6\">', 'boundingRect': {'top': 4626, 'right': 1280, 'height': 103, 'width': 389, 'left': 891, 'bottom': 4729}}}, {'relatedNode': {'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION', 'nodeLabel': '[TECHNICAL SPECIFICATION \u2014 KNITTED CONSTRUCTIONS]\\n\\nFabric Constructions\\n\\nEvery \u2026', 'selector': 'div > main#main-content > div.overflow-x-clip > section#section-constructions', 'lhId': '1-1-SECTION', 'snippet': '<section id=\"section-constructions\" class=\"bg-[#080E1A] py-20 lg:py-28\">', 'boundingRect': {'height': 1031, 'width': 1344, 'right': 1344, 'top': 4115, 'bottom': 5146, 'left': 0}, 'type': 'node'}}], 'type': 'subitems'}"
-            },
-            {
-              "subItems": "{'type': 'subitems', 'items': [{'relatedNode': {'snippet': '<div class=\"bg-white/5 border border-white/10 rounded-2xl p-6\">', 'boundingRect': {'bottom': 4729, 'left': 891, 'right': 1280, 'top': 4626, 'width': 389, 'height': 103}, 'type': 'node', 'lhId': '1-13-DIV', 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION,0,DIV,2,DIV,1,DIV,1,DIV', 'nodeLabel': 'KEY_MARKETS[ ]\\n\\nUSA\\nEU\\nAustralia\\nMiddle East', 'selector': 'div.max-w-7xl > div.grid > div.flex > div.bg-white/5'}}, {'relatedNode': {'type': 'node', 'snippet': '<section id=\"section-constructions\" class=\"bg-[#080E1A] py-20 lg:py-28\">', 'boundingRect': {'top': 4115, 'right': 1344, 'height': 1031, 'width': 1344, 'bottom': 5146, 'left': 0}, 'lhId': '1-1-SECTION', 'nodeLabel': '[TECHNICAL SPECIFICATION \u2014 KNITTED CONSTRUCTIONS]\\n\\nFabric Constructions\\n\\nEvery \u2026', 'selector': 'div > main#main-content > div.overflow-x-clip > section#section-constructions', 'path': '1,HTML,1,BODY,5,DIV,4,MAIN,0,DIV,4,SECTION'}}]}",
-              "node": "<span class=\"text-xs text-gold bg-gold/10 border border-gold/20 px-3 py-1 rounded-full\">"
-            }
-          ]
+          "items": []
         },
         {
-          "audit_id": "bootup-time",
+          "audit_id": "legacy-javascript-insight",
           "category": "Performance",
-          "title": "Reduce JavaScript execution time",
-          "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this.",
+          "title": "Legacy JavaScript",
+          "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile",
           "score": 0,
           "score_mode": "metricSavings",
-          "display_value": "2.2\u00a0s",
+          "display_value": "Est savings of 14\u00a0KiB",
           "savings_ms": null,
           "items": [
             {
-              "scripting": 934.8959999999614,
-              "total": 5857.931999999977,
-              "scriptParseCompile": 12.582,
-              "url": "https://mz-global-trading.pages.dev/_next/static/chunks/354k9qzi0mys1.js"
-            },
-            {
-              "url": "https://mz-global-trading.pages.dev/apparel/knittedgarments/henleyshirts/",
-              "scriptParseCompile": 8.699,
-              "scripting": 20.16700000000001,
-              "total": 3671.8669999999997
-            },
-            {
-              "scriptParseCompile": 36.546,
-              "scripting": 527.8779999999801,
-              "total": 705.4739999999804,
+              "wastedBytes": 13864,
+              "subItems": "{'type': 'subitems', 'items': [{'location': {'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js', 'column': 5766, 'urlProvider': 'network', 'type': 'source-location', 'line': 0}, 'signal': 'Array.prototype.at'}, {'location': {'line': 0, 'column': 5154, 'type': 'source-location', 'urlProvider': 'network', 'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js'}, 'signal': 'Array.prototype.flat'}, {'location': {'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js', 'line': 0, 'column': 5267, 'type': 'source-location', 'urlProvider': 'network'}, 'signal': 'Array.prototype.flatMap'}, {'location': {'urlProvider': 'network', 'type': 'source-location', 'column': 5643, 'line': 0, 'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js'}, 'signal': 'Object.fromEntries'}, {'location': {'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js', 'column': 5901, 'urlProvider': 'network', 'type': 'source-location', 'line': 0}, 'signal': 'Object.hasOwn'}, {'location': {'line': 0, 'column': 4896, 'urlProvider': 'network', 'type': 'source-location', 'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js'}, 'signal': 'String.prototype.trimEnd'}, {'location': {'line': 0, 'column': 4811, 'urlProvider': 'network', 'type': 'source-location', 'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js'}, 'signal': 'String.prototype.trimStart'}]}",
               "url": "https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js"
-            },
-            {
-              "url": "https://www.googletagmanager.com/gtag/js?id=G-BEG0E64X9E",
-              "scripting": 165.9629999999994,
-              "total": 296.79199999999935,
-              "scriptParseCompile": 129.78799999999998
-            },
-            {
-              "url": "Unattributable",
-              "scriptParseCompile": 0,
-              "scripting": 36.99200000000003,
-              "total": 260.57799999999645
-            },
-            {
-              "scripting": 152.01299999999992,
-              "total": 179.39599999999993,
-              "scriptParseCompile": 14.785,
-              "url": "https://mz-global-trading.pages.dev/_next/static/chunks/2t5q2f56rlt_6.js"
-            },
-            {
-              "url": "https://mz-global-trading.pages.dev/_next/static/chunks/169urjk7wpo1b.js",
-              "scriptParseCompile": 14.306000000000001,
-              "scripting": 12.186999999999998,
-              "total": 125.79400000000001
-            },
-            {
-              "url": "https://mz-global-trading.pages.dev/_next/static/chunks/1ye0jlp0mzt1m.js",
-              "scriptParseCompile": 1.5479999999999998,
-              "scripting": 120.86599999999996,
-              "total": 122.92699999999996
             }
           ]
         },
@@ -151,45 +67,67 @@
           "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this.",
           "score": 0,
           "score_mode": "metricSavings",
-          "display_value": "11.4\u00a0s",
+          "display_value": "2.2\u00a0s",
           "savings_ms": null,
           "items": [
             {
-              "group": "other",
-              "duration": 3912.6100000000106,
-              "groupLabel": "Other"
-            },
-            {
-              "group": "paintCompositeRender",
-              "duration": 2622.0680000000048,
-              "groupLabel": "Rendering"
-            },
-            {
-              "groupLabel": "Style & Layout",
-              "duration": 2451.7720000000004,
-              "group": "styleLayout"
-            },
-            {
+              "duration": 739.6079999999923,
               "groupLabel": "Script Evaluation",
-              "duration": 2014.518000000055,
               "group": "scriptEvaluation"
             },
             {
-              "groupLabel": "Script Parsing & Compilation",
-              "duration": 298.8949999999998,
-              "group": "scriptParseCompile"
+              "group": "other",
+              "duration": 477.41520000000014,
+              "groupLabel": "Other"
             },
             {
+              "duration": 411.60360000000003,
+              "groupLabel": "Style & Layout",
+              "group": "styleLayout"
+            },
+            {
+              "duration": 286.7820000000006,
+              "groupLabel": "Rendering",
+              "group": "paintCompositeRender"
+            },
+            {
+              "group": "scriptParseCompile",
+              "duration": 218.52359999999993,
+              "groupLabel": "Script Parsing & Compilation"
+            },
+            {
+              "duration": 19.014000000000003,
+              "groupLabel": "Parse HTML & CSS",
+              "group": "parseHTML"
+            },
+            {
+              "duration": 12.012000000000002,
               "groupLabel": "Garbage Collection",
-              "duration": 40.55500000000005,
               "group": "garbageCollection"
-            },
-            {
-              "duration": 23.057,
-              "group": "parseHTML",
-              "groupLabel": "Parse HTML & CSS"
             }
           ]
+        },
+        {
+          "audit_id": "largest-contentful-paint",
+          "category": "Performance",
+          "title": "Largest Contentful Paint",
+          "description": "Largest Contentful Paint marks the time at which the largest text or image is painted.",
+          "score": 17,
+          "score_mode": "numeric",
+          "display_value": "5.6\u00a0s",
+          "savings_ms": null,
+          "items": []
+        },
+        {
+          "audit_id": "forced-reflow-insight",
+          "category": "Performance",
+          "title": "Forced reflow",
+          "description": "A forced reflow occurs when JavaScript queries geometric properties (such as offsetWidth) after styles have been invalidated by a change to the DOM state. This can result in poor performance. Learn more about",
+          "score": 0,
+          "score_mode": "numeric",
+          "display_value": "",
+          "savings_ms": null,
+          "items": []
         },
         {
           "audit_id": "render-blocking-insight",
@@ -198,17 +136,132 @@
           "description": "Requests are blocking the page's initial render, which may delay LCP.",
           "score": 0,
           "score_mode": "metricSavings",
-          "display_value": "Est savings of 150\u00a0ms",
+          "display_value": "Est savings of 160\u00a0ms",
           "savings_ms": null,
           "items": [
             {
-              "totalBytes": 26167,
-              "url": "https://mz-global-trading.pages.dev/_next/static/chunks/34w7akee5zcxp.css",
-              "wastedMs": 161
+              "totalBytes": 26268,
+              "url": "https://mz-global-trading.pages.dev/_next/static/chunks/3xiafn5r3jkk7.css",
+              "wastedMs": 789
             },
             {
-              "totalBytes": 1760,
+              "wastedMs": 159,
+              "totalBytes": 1752,
               "url": "https://mz-global-trading.pages.dev/_next/static/chunks/0b-kqkrc2x3_t.css"
+            }
+          ]
+        },
+        {
+          "audit_id": "image-delivery-insight",
+          "category": "Performance",
+          "title": "Improve image delivery",
+          "description": "Reducing the download time of images can improve the perceived load time of the page and LCP.",
+          "score": 50,
+          "score_mode": "metricSavings",
+          "display_value": "Est savings of 23\u00a0KiB",
+          "savings_ms": null,
+          "items": [
+            {
+              "wastedBytes": 14971,
+              "node": "<img alt=\"Pakistan henley shirt manufacturer \u2014 OEM knitted henley shirts for brands \u2026\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" src=\"/images/hero/hero-henley-shirts.webp\">",
+              "subItems": "{'type': 'subitems', 'items': [{'reason': \"Increasing the image compression factor could improve this image's download size.\", 'wastedBytes': 14971}]}",
+              "totalBytes": 90206,
+              "url": "https://mz-global-trading.pages.dev/images/hero/hero-henley-shirts.webp"
+            },
+            {
+              "node": "<img src=\"/images/logo/mz-global-trading-logo-header.webp\" alt=\"MZ Global Trading\" width=\"220\" height=\"106\" class=\"w-[160px] md:w-[190px] lg:w-[220px] h-auto\">",
+              "totalBytes": 14810,
+              "url": "https://mz-global-trading.pages.dev/images/logo/mz-global-trading-logo-header.webp",
+              "subItems": "{'items': [{'reason': 'This image file is larger than it needs to be (440x212) for its displayed dimensions (280x135). Use responsive images to reduce the image download size.', 'wastedBytes': 8814}], 'type': 'subitems'}",
+              "wastedBytes": 8814
+            }
+          ]
+        },
+        {
+          "audit_id": "speed-index",
+          "category": "Performance",
+          "title": "Speed Index",
+          "description": "Speed Index shows how quickly the contents of a page are visibly populated.",
+          "score": 70,
+          "score_mode": "numeric",
+          "display_value": "4.6\u00a0s",
+          "savings_ms": null,
+          "items": []
+        },
+        {
+          "audit_id": "interactive",
+          "category": "Performance",
+          "title": "Time to Interactive",
+          "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive.",
+          "score": 68,
+          "score_mode": "numeric",
+          "display_value": "5.7\u00a0s",
+          "savings_ms": null,
+          "items": []
+        },
+        {
+          "audit_id": "first-contentful-paint",
+          "category": "Performance",
+          "title": "First Contentful Paint",
+          "description": "First Contentful Paint marks the time at which the first text or image is painted.",
+          "score": 80,
+          "score_mode": "numeric",
+          "display_value": "2.1\u00a0s",
+          "savings_ms": null,
+          "items": []
+        }
+      ]
+    },
+    {
+      "url": "https://mz-global-trading.pages.dev/apparel/knittedgarments/henleyshirts/",
+      "strategy": "desktop",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "seo": 100,
+        "best_practices": 100,
+        "lcp_ms": 1372,
+        "lcp": "1.4\u00a0s",
+        "cls": "0",
+        "inp_ms": null,
+        "inp": null,
+        "fcp_ms": 375,
+        "fcp": "0.4\u00a0s",
+        "tbt_ms": 14,
+        "tbt": "10\u00a0ms",
+        "speed_index": "0.8\u00a0s"
+      },
+      "issues": [
+        {
+          "audit_id": "unused-javascript",
+          "category": "Performance",
+          "title": "Reduce unused JavaScript",
+          "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity.",
+          "score": 0,
+          "score_mode": "metricSavings",
+          "display_value": "Est savings of 212\u00a0KiB",
+          "savings_ms": 200,
+          "items": []
+        },
+        {
+          "audit_id": "render-blocking-insight",
+          "category": "Performance",
+          "title": "Render-blocking requests",
+          "description": "Requests are blocking the page's initial render, which may delay LCP.",
+          "score": 0,
+          "score_mode": "metricSavings",
+          "display_value": "Est savings of 200\u00a0ms",
+          "savings_ms": null,
+          "items": [
+            {
+              "totalBytes": 26266,
+              "url": "https://mz-global-trading.pages.dev/_next/static/chunks/3xiafn5r3jkk7.css",
+              "wastedMs": 207
+            },
+            {
+              "url": "https://mz-global-trading.pages.dev/_next/static/chunks/0b-kqkrc2x3_t.css",
+              "wastedMs": 53,
+              "totalBytes": 1762
             }
           ]
         },
@@ -224,52 +277,21 @@
           "items": []
         },
         {
-          "audit_id": "errors-in-console",
-          "category": "Best Practices",
-          "title": "Browser errors were logged to the console",
-          "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns.",
+          "audit_id": "legacy-javascript-insight",
+          "category": "Performance",
+          "title": "Legacy JavaScript",
+          "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile",
           "score": 0,
-          "score_mode": "binary",
-          "display_value": "",
+          "score_mode": "metricSavings",
+          "display_value": "Est savings of 14\u00a0KiB",
           "savings_ms": null,
           "items": [
             {
-              "description": "Failed to load resource: the server responded with a status of 404 (Not Found)",
-              "source": "network",
-              "sourceLocation": "{'urlProvider': 'network', 'url': 'https://mz-global-trading.pages.dev/rfq/__next.rfq.__PAGE__.txt?_rsc=KYQIgYsb8xs9Wss2', 'column': 0, 'line': 0, 'type': 'source-location'}"
-            },
-            {
-              "sourceLocation": "{'column': 0, 'line': 0, 'type': 'source-location', 'urlProvider': 'network', 'url': 'https://mz-global-trading.pages.dev/apparel/knittedgarments/__next.apparel.knittedgarments.txt?_rsc=XFLQDy4EYK1uWKkW'}",
-              "source": "network",
-              "description": "Failed to load resource: the server responded with a status of 404 (Not Found)"
-            },
-            {
-              "description": "Failed to load resource: the server responded with a status of 404 (Not Found)",
-              "source": "network",
-              "sourceLocation": "{'urlProvider': 'network', 'url': 'https://mz-global-trading.pages.dev/apparel/knittedgarments/__next.apparel.knittedgarments.__PAGE__.txt?_rsc=8J9r-RTlJfYsnFJG', 'column': 0, 'line': 0, 'type': 'source-location'}"
-            },
-            {
-              "description": "Failed to load resource: the server responded with a status of 404 (Not Found)",
-              "sourceLocation": "{'line': 0, 'type': 'source-location', 'column': 0, 'urlProvider': 'network', 'url': 'https://mz-global-trading.pages.dev/apparel/__next.apparel.__PAGE__.txt?_rsc=pG02g1n3aGuuW-iF'}",
-              "source": "network"
-            },
-            {
-              "description": "Failed to load resource: the server responded with a status of 404 (Not Found)",
-              "sourceLocation": "{'urlProvider': 'network', 'url': 'https://mz-global-trading.pages.dev/privacypolicy/__next.privacypolicy.__PAGE__.txt?_rsc=6wXTSbYkegEjNoha', 'type': 'source-location', 'column': 0, 'line': 0}",
-              "source": "network"
+              "subItems": "{'items': [{'signal': 'Array.prototype.at', 'location': {'urlProvider': 'network', 'type': 'source-location', 'line': 0, 'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js', 'column': 5766}}, {'location': {'urlProvider': 'network', 'column': 5154, 'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js', 'type': 'source-location', 'line': 0}, 'signal': 'Array.prototype.flat'}, {'location': {'type': 'source-location', 'line': 0, 'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js', 'column': 5267, 'urlProvider': 'network'}, 'signal': 'Array.prototype.flatMap'}, {'signal': 'Object.fromEntries', 'location': {'column': 5643, 'line': 0, 'type': 'source-location', 'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js', 'urlProvider': 'network'}}, {'location': {'column': 5901, 'line': 0, 'type': 'source-location', 'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js', 'urlProvider': 'network'}, 'signal': 'Object.hasOwn'}, {'location': {'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js', 'type': 'source-location', 'line': 0, 'column': 4896, 'urlProvider': 'network'}, 'signal': 'String.prototype.trimEnd'}, {'location': {'urlProvider': 'network', 'column': 4811, 'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js', 'line': 0, 'type': 'source-location'}, 'signal': 'String.prototype.trimStart'}], 'type': 'subitems'}",
+              "wastedBytes": 13851,
+              "url": "https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js"
             }
           ]
-        },
-        {
-          "audit_id": "speed-index",
-          "category": "Performance",
-          "title": "Speed Index",
-          "description": "Speed Index shows how quickly the contents of a page are visibly populated.",
-          "score": 83,
-          "score_mode": "numeric",
-          "display_value": "1.5\u00a0s",
-          "savings_ms": null,
-          "items": []
         },
         {
           "audit_id": "image-delivery-insight",
@@ -278,75 +300,75 @@
           "description": "Reducing the download time of images can improve the perceived load time of the page and LCP.",
           "score": 50,
           "score_mode": "metricSavings",
-          "display_value": "Est savings of 114\u00a0KiB",
+          "display_value": "Est savings of 104\u00a0KiB",
           "savings_ms": null,
           "items": [
             {
-              "totalBytes": 134928,
               "node": "<img alt=\"Pakistan henley shirt manufacturer \u2014 OEM knitted henley shirts for brands \u2026\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" src=\"/images/hero/hero-henley-shirts.webp\">",
-              "subItems": "{'items': [{'wastedBytes': 32149, 'reason': 'This image file is larger than it needs to be (1583x941) for its displayed dimensions (1420x799). Use responsive images to reduce the image download size.'}], 'type': 'subitems'}",
-              "url": "https://mz-global-trading.pages.dev/images/hero/hero-henley-shirts.webp",
-              "wastedBytes": 32149
+              "subItems": "{'items': [{'wastedBytes': 21493, 'reason': 'This image file is larger than it needs to be (1583x941) for its displayed dimensions (1420x799). Use responsive images to reduce the image download size.'}], 'type': 'subitems'}",
+              "totalBytes": 90206,
+              "wastedBytes": 21493,
+              "url": "https://mz-global-trading.pages.dev/images/hero/hero-henley-shirts.webp"
             },
             {
-              "subItems": "{'type': 'subitems', 'items': [{'wastedBytes': 9362, 'reason': \"Increasing the image compression factor could improve this image's download size.\"}, {'wastedBytes': 14873, 'reason': 'This image file is larger than it needs to be (240x160) for its displayed dimensions (57x38). Use responsive images to reduce the image download size.'}]}",
               "node": "<img alt=\"WRAP \u2014 Worldwide Responsible Accredited Production\" loading=\"lazy\" width=\"72\" height=\"44\" decoding=\"async\" data-nimg=\"1\" class=\"object-contain w-full h-full\" style=\"color:transparent\" src=\"/images/certs/cert-wrap.webp\">",
+              "subItems": "{'items': [{'wastedBytes': 9362, 'reason': \"Increasing the image compression factor could improve this image's download size.\"}, {'wastedBytes': 14873, 'reason': 'This image file is larger than it needs to be (240x160) for its displayed dimensions (57x38). Use responsive images to reduce the image download size.'}], 'type': 'subitems'}",
               "totalBytes": 15762,
-              "url": "https://mz-global-trading.pages.dev/images/certs/cert-wrap.webp",
-              "wastedBytes": 15401
+              "wastedBytes": 15401,
+              "url": "https://mz-global-trading.pages.dev/images/certs/cert-wrap.webp"
             },
             {
-              "subItems": "{'type': 'subitems', 'items': [{'wastedBytes': 8671, 'reason': \"Increasing the image compression factor could improve this image's download size.\"}, {'wastedBytes': 12208, 'reason': 'This image file is larger than it needs to be (160x160) for its displayed dimensions (38x38). Use responsive images to reduce the image download size.'}]}",
               "totalBytes": 12938,
-              "node": "<img alt=\"GOTS \u2014 Global Organic Textile Standard\" loading=\"lazy\" width=\"72\" height=\"44\" decoding=\"async\" data-nimg=\"1\" class=\"object-contain w-full h-full\" style=\"color:transparent\" src=\"/images/certs/cert-gots.webp\">",
+              "wastedBytes": 12697,
               "url": "https://mz-global-trading.pages.dev/images/certs/cert-gots.webp",
-              "wastedBytes": 12697
+              "node": "<img alt=\"GOTS \u2014 Global Organic Textile Standard\" loading=\"lazy\" width=\"72\" height=\"44\" decoding=\"async\" data-nimg=\"1\" class=\"object-contain w-full h-full\" style=\"color:transparent\" src=\"/images/certs/cert-gots.webp\">",
+              "subItems": "{'items': [{'wastedBytes': 8671, 'reason': \"Increasing the image compression factor could improve this image's download size.\"}, {'wastedBytes': 12208, 'reason': 'This image file is larger than it needs to be (160x160) for its displayed dimensions (38x38). Use responsive images to reduce the image download size.'}], 'type': 'subitems'}"
             },
             {
-              "node": "<img src=\"/images/logo/mz-global-trading-logo-header.webp\" alt=\"MZ Global Trading\" width=\"220\" height=\"106\" class=\"w-[160px] md:w-[190px] lg:w-[220px] h-auto\">",
-              "totalBytes": 14810,
-              "subItems": "{'items': [{'wastedBytes': 11108, 'reason': 'This image file is larger than it needs to be (440x212) for its displayed dimensions (220x106). Use responsive images to reduce the image download size.'}], 'type': 'subitems'}",
+              "wastedBytes": 11108,
               "url": "https://mz-global-trading.pages.dev/images/logo/mz-global-trading-logo-header.webp",
-              "wastedBytes": 11108
+              "totalBytes": 14810,
+              "subItems": "{'type': 'subitems', 'items': [{'wastedBytes': 11108, 'reason': 'This image file is larger than it needs to be (440x212) for its displayed dimensions (220x106). Use responsive images to reduce the image download size.'}]}",
+              "node": "<img src=\"/images/logo/mz-global-trading-logo-header.webp\" alt=\"MZ Global Trading\" width=\"220\" height=\"106\" class=\"w-[160px] md:w-[190px] lg:w-[220px] h-auto\">"
             },
             {
-              "subItems": "{'items': [{'wastedBytes': 9874, 'reason': 'This image file is larger than it needs to be (280x157) for its displayed dimensions (68x38). Use responsive images to reduce the image download size.'}], 'type': 'subitems'}",
-              "totalBytes": 10488,
               "node": "<img alt=\"ISO 9001 \u2014 Quality Management System\" loading=\"lazy\" width=\"72\" height=\"44\" decoding=\"async\" data-nimg=\"1\" class=\"object-contain w-full h-full\" style=\"color:transparent\" src=\"/images/certs/cert-iso-9001.webp\">",
-              "wastedBytes": 10059,
-              "url": "https://mz-global-trading.pages.dev/images/certs/cert-iso-9001.webp"
+              "subItems": "{'type': 'subitems', 'items': [{'wastedBytes': 9874, 'reason': 'This image file is larger than it needs to be (280x157) for its displayed dimensions (68x38). Use responsive images to reduce the image download size.'}]}",
+              "totalBytes": 10488,
+              "url": "https://mz-global-trading.pages.dev/images/certs/cert-iso-9001.webp",
+              "wastedBytes": 10059
             },
             {
-              "wastedBytes": 8825,
-              "url": "https://mz-global-trading.pages.dev/images/certs/cert-grs.webp",
-              "totalBytes": 9186,
+              "subItems": "{'type': 'subitems', 'items': [{'wastedBytes': 8668, 'reason': 'This image file is larger than it needs to be (240x160) for its displayed dimensions (57x38). Use responsive images to reduce the image download size.'}]}",
               "node": "<img alt=\"GRS \u2014 Global Recycled Standard\" loading=\"lazy\" width=\"72\" height=\"44\" decoding=\"async\" data-nimg=\"1\" class=\"object-contain w-full h-full\" style=\"color:transparent\" src=\"/images/certs/cert-grs.webp\">",
-              "subItems": "{'items': [{'wastedBytes': 8668, 'reason': 'This image file is larger than it needs to be (240x160) for its displayed dimensions (57x38). Use responsive images to reduce the image download size.'}], 'type': 'subitems'}"
+              "url": "https://mz-global-trading.pages.dev/images/certs/cert-grs.webp",
+              "wastedBytes": 8825,
+              "totalBytes": 9186
             },
             {
-              "node": "<img alt=\"SA8000 \u2014 Social Accountability International\" loading=\"lazy\" width=\"72\" height=\"44\" decoding=\"async\" data-nimg=\"1\" class=\"object-contain w-full h-full\" style=\"color:transparent\" src=\"/images/certs/cert-sa8000.webp\">",
-              "totalBytes": 8914,
-              "subItems": "{'type': 'subitems', 'items': [{'wastedBytes': 8411, 'reason': 'This image file is larger than it needs to be (240x160) for its displayed dimensions (57x38). Use responsive images to reduce the image download size.'}]}",
               "url": "https://mz-global-trading.pages.dev/images/certs/cert-sa8000.webp",
-              "wastedBytes": 8553
+              "wastedBytes": 8553,
+              "totalBytes": 8914,
+              "subItems": "{'items': [{'wastedBytes': 8411, 'reason': 'This image file is larger than it needs to be (240x160) for its displayed dimensions (57x38). Use responsive images to reduce the image download size.'}], 'type': 'subitems'}",
+              "node": "<img alt=\"SA8000 \u2014 Social Accountability International\" loading=\"lazy\" width=\"72\" height=\"44\" decoding=\"async\" data-nimg=\"1\" class=\"object-contain w-full h-full\" style=\"color:transparent\" src=\"/images/certs/cert-sa8000.webp\">"
             },
             {
-              "subItems": "{'type': 'subitems', 'items': [{'reason': 'This image file is larger than it needs to be (240x160) for its displayed dimensions (57x38). Use responsive images to reduce the image download size.', 'wastedBytes': 6873}]}",
-              "totalBytes": 7284,
-              "node": "<img alt=\"BCI \u2014 Better Cotton Initiative\" loading=\"lazy\" width=\"72\" height=\"44\" decoding=\"async\" data-nimg=\"1\" class=\"object-contain w-full h-full\" style=\"color:transparent\" src=\"/images/certs/cert-bci.webp\">",
+              "url": "https://mz-global-trading.pages.dev/images/certs/cert-bci.webp",
               "wastedBytes": 6923,
-              "url": "https://mz-global-trading.pages.dev/images/certs/cert-bci.webp"
+              "totalBytes": 7284,
+              "subItems": "{'items': [{'wastedBytes': 6873, 'reason': 'This image file is larger than it needs to be (240x160) for its displayed dimensions (57x38). Use responsive images to reduce the image download size.'}], 'type': 'subitems'}",
+              "node": "<img alt=\"BCI \u2014 Better Cotton Initiative\" loading=\"lazy\" width=\"72\" height=\"44\" decoding=\"async\" data-nimg=\"1\" class=\"object-contain w-full h-full\" style=\"color:transparent\" src=\"/images/certs/cert-bci.webp\">"
             },
             {
-              "node": "<img alt=\"OEKO-TEX \u2014 OEKO-TEX Standard 100\" loading=\"lazy\" width=\"72\" height=\"44\" decoding=\"async\" data-nimg=\"1\" class=\"object-contain w-full h-full\" style=\"color:transparent\" src=\"/images/certs/cert-oeko-tex.webp\">",
               "totalBytes": 6240,
-              "subItems": "{'type': 'subitems', 'items': [{'wastedBytes': 5888, 'reason': 'This image file is larger than it needs to be (168x160) for its displayed dimensions (40x38). Use responsive images to reduce the image download size.'}]}",
+              "wastedBytes": 5987,
               "url": "https://mz-global-trading.pages.dev/images/certs/cert-oeko-tex.webp",
-              "wastedBytes": 5987
+              "node": "<img alt=\"OEKO-TEX \u2014 OEKO-TEX Standard 100\" loading=\"lazy\" width=\"72\" height=\"44\" decoding=\"async\" data-nimg=\"1\" class=\"object-contain w-full h-full\" style=\"color:transparent\" src=\"/images/certs/cert-oeko-tex.webp\">",
+              "subItems": "{'type': 'subitems', 'items': [{'wastedBytes': 5888, 'reason': 'This image file is larger than it needs to be (168x160) for its displayed dimensions (40x38). Use responsive images to reduce the image download size.'}]}"
             },
             {
-              "subItems": "{'items': [{'wastedBytes': 5265, 'reason': 'This image file is larger than it needs to be (160x160) for its displayed dimensions (38x38). Use responsive images to reduce the image download size.'}], 'type': 'subitems'}",
               "node": "<img alt=\"BSCI \u2014 Business Social Compliance Initiative\" loading=\"lazy\" width=\"72\" height=\"44\" decoding=\"async\" data-nimg=\"1\" class=\"object-contain w-full h-full\" style=\"color:transparent\" src=\"/images/certs/cert-bsci.webp\">",
+              "subItems": "{'type': 'subitems', 'items': [{'wastedBytes': 5265, 'reason': 'This image file is larger than it needs to be (160x160) for its displayed dimensions (38x38). Use responsive images to reduce the image download size.'}]}",
               "totalBytes": 5580,
               "wastedBytes": 5339,
               "url": "https://mz-global-trading.pages.dev/images/certs/cert-bsci.webp"
@@ -358,48 +380,9 @@
           "category": "Performance",
           "title": "Largest Contentful Paint",
           "description": "Largest Contentful Paint marks the time at which the largest text or image is painted.",
-          "score": 89,
+          "score": 84,
           "score_mode": "numeric",
-          "display_value": "1.2\u00a0s",
-          "savings_ms": null,
-          "items": []
-        },
-        {
-          "audit_id": "max-potential-fid",
-          "category": "Performance",
-          "title": "Max Potential First Input Delay",
-          "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task.",
-          "score": 67,
-          "score_mode": "numeric",
-          "display_value": "200\u00a0ms",
-          "savings_ms": null,
-          "items": []
-        },
-        {
-          "audit_id": "legacy-javascript-insight",
-          "category": "Performance",
-          "title": "Legacy JavaScript",
-          "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile",
-          "score": 50,
-          "score_mode": "metricSavings",
-          "display_value": "Est savings of 14\u00a0KiB",
-          "savings_ms": null,
-          "items": [
-            {
-              "url": "https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js",
-              "subItems": "{'type': 'subitems', 'items': [{'signal': 'Array.prototype.at', 'location': {'urlProvider': 'network', 'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js', 'column': 5766, 'line': 0, 'type': 'source-location'}}, {'signal': 'Array.prototype.flat', 'location': {'column': 5154, 'line': 0, 'type': 'source-location', 'urlProvider': 'network', 'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js'}}, {'signal': 'Array.prototype.flatMap', 'location': {'column': 5267, 'line': 0, 'type': 'source-location', 'urlProvider': 'network', 'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js'}}, {'signal': 'Object.fromEntries', 'location': {'urlProvider': 'network', 'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js', 'column': 5643, 'line': 0, 'type': 'source-location'}}, {'signal': 'Object.hasOwn', 'location': {'urlProvider': 'network', 'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js', 'type': 'source-location', 'column': 5901, 'line': 0}}, {'location': {'line': 0, 'type': 'source-location', 'column': 4896, 'urlProvider': 'network', 'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js'}, 'signal': 'String.prototype.trimEnd'}, {'signal': 'String.prototype.trimStart', 'location': {'column': 4811, 'line': 0, 'type': 'source-location', 'urlProvider': 'network', 'url': 'https://mz-global-trading.pages.dev/_next/static/chunks/161_l1j_el_mw.js'}}]}",
-              "wastedBytes": 13840
-            }
-          ]
-        },
-        {
-          "audit_id": "total-blocking-time",
-          "category": "Performance",
-          "title": "Total Blocking Time",
-          "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds.",
-          "score": 81,
-          "score_mode": "numeric",
-          "display_value": "190\u00a0ms",
+          "display_value": "1.4\u00a0s",
           "savings_ms": null,
           "items": []
         }

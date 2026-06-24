@@ -21,7 +21,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{
@@ -158,7 +158,7 @@ const GSM_TIERS = [
     pct: 75,
     featured: true,
     desc: "Industry standard for year-round retail programmes. Balances weight, drape and decoration receptivity. Covers the majority of orders across all markets.",
-    color: "bg-gold",
+    color: "bg-[#9A6400]",
   },
   {
     gsm: "200–240+",
@@ -168,7 +168,7 @@ const GSM_TIERS = [
     pct: 50,
     featured: false,
     desc: "Waffle knit and rib at this weight deliver thermal warmth. Required for USA workwear underlayers, Canadian cold-climate markets and Northern European winter retail.",
-    color: "bg-sky-500",
+    color: "bg-sky-700",
   },
 ];
 
@@ -234,11 +234,11 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, pricing and availability confirmed", color: "bg-gold" },
-  { stage: "Sample Production", days: "15–20", desc: "Pre-production samples produced to specification", color: "bg-blue-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, pricing and availability confirmed", color: "bg-[#9A6400]" },
+  { stage: "Sample Production", days: "15–20", desc: "Pre-production samples produced to specification", color: "bg-blue-700" },
   { stage: "Bulk Production", days: "45–70", desc: "From confirmed PO and approved sample", color: "bg-indigo-600" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection before vessel loading", color: "bg-purple-500" },
-  { stage: "Sea Freight", days: "20–30", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-teal-500" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection before vessel loading", color: "bg-purple-700" },
+  { stage: "Sea Freight", days: "20–30", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-teal-700" },
 ];
 
 const SUSTAINABILITY_ITEMS = [
@@ -378,7 +378,7 @@ export default function HenleyContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             {/* Left: label + heading + description */}
             <div className="flex-1">
@@ -1120,7 +1120,7 @@ export default function HenleyContent() {
               <div key={i} className={`h-10 rounded-xl ${c} opacity-90`} aria-hidden="true" />
             ))}
           </div>
-          <p className="text-white/40 text-xs mt-3 text-center">
+          <p className="text-white/60 text-xs mt-3 text-center">
             Illustrative palette — full PMS range available via reactive dyeing
           </p>
           <BackToTop dark />
@@ -1577,7 +1577,7 @@ export default function HenleyContent() {
       {/* ════════════════════════════════════════════════════════════════════════
           FINAL CTA
       ════════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

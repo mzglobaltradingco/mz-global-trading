@@ -21,7 +21,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -160,8 +160,8 @@ const FIT_PROFILES = [
 ];
 
 const GSM_TIERS = [
-  { gsm: "200–230", name: "Lightweight / Performance", season: "Multi-Season Outdoor", market: "Adventure brands · Technical outdoor · Travel programmes", pct: 35, featured: false, desc: "Nylon and stretch ripstop at this weight prioritise packability and movement over durability. Primary choice for adventure travel and performance outdoor programmes.", color: "bg-teal-400" },
-  { gsm: "230–260", name: "Standard Commercial", season: "Year-Round", market: "USA · UK · EU · Australia outdoor and workwear retail", pct: 70, featured: true, desc: "Cotton and TC ripstop at this weight delivers the commercial balance of durability, comfort and DWR finish performance across all major cargo markets.", color: "bg-gold" },
+  { gsm: "200–230", name: "Lightweight / Performance", season: "Multi-Season Outdoor", market: "Adventure brands · Technical outdoor · Travel programmes", pct: 35, featured: false, desc: "Nylon and stretch ripstop at this weight prioritise packability and movement over durability. Primary choice for adventure travel and performance outdoor programmes.", color: "bg-teal-700" },
+  { gsm: "230–260", name: "Standard Commercial", season: "Year-Round", market: "USA · UK · EU · Australia outdoor and workwear retail", pct: 70, featured: true, desc: "Cotton and TC ripstop at this weight delivers the commercial balance of durability, comfort and DWR finish performance across all major cargo markets.", color: "bg-[#9A6400]" },
   { gsm: "260–300+", name: "Heavy Duty", season: "Workwear / Industrial", market: "USA workwear · Canada trade · Industrial sectors", pct: 45, featured: false, desc: "Canvas and FR cotton at this weight for maximum durability. Required for trade workwear, industrial safety and heavy-duty outdoor programmes.", color: "bg-neutral-600" },
 ];
 
@@ -227,10 +227,10 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, construction and finish confirmed with pricing", color: "bg-gold" },
-  { stage: "Sample Production", days: "15–20", desc: "Pre-production sample with pockets, hardware and finish to spec", color: "bg-teal-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, construction and finish confirmed with pricing", color: "bg-[#9A6400]" },
+  { stage: "Sample Production", days: "15–20", desc: "Pre-production sample with pockets, hardware and finish to spec", color: "bg-teal-700" },
   { stage: "Bulk Production", days: "45–65", desc: "From confirmed PO and approved pre-production sample", color: "bg-blue-600" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Measurement, pocket spec, seam and finish inspection", color: "bg-purple-500" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Measurement, pocket spec, seam and finish inspection", color: "bg-purple-700" },
   { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim to destination", color: "bg-neutral-600" },
 ];
 
@@ -372,7 +372,7 @@ export default function CargoPantsContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -1488,7 +1488,7 @@ export default function CargoPantsContent() {
       {/* ════════════════════════════════════════════════════════════════════════
           FINAL CTA
       ════════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

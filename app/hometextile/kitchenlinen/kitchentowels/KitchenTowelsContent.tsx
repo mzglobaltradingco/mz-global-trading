@@ -19,7 +19,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
       >
@@ -111,7 +111,7 @@ const CONSTRUCTIONS = [
 
 const GSM_TIERS = [
   { gsm: "150–170", name: "Lightweight Retail", market: "Promotional, multipacks, grocery own-brand", pct: 35, featured: false, color: "bg-amber-300" },
-  { gsm: "170–200", name: "Standard Retail", market: "Grocery retail, kitchenware chains, gift sets — USA, UK, EU", pct: 78, featured: true, color: "bg-gold" },
+  { gsm: "170–200", name: "Standard Retail", market: "Grocery retail, kitchenware chains, gift sets — USA, UK, EU", pct: 78, featured: true, color: "bg-[#9A6400]" },
   { gsm: "200–220", name: "Premium Retail", market: "Upmarket retail, department store, premium gift", pct: 55, featured: false, color: "bg-amber-600" },
   { gsm: "220–250", name: "Commercial Grade", market: "Foodservice, institutional, hotel kitchen supply", pct: 40, featured: false, color: "bg-amber-800" },
 ];
@@ -332,7 +332,7 @@ export default function KitchenTowelsContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -934,7 +934,7 @@ export default function KitchenTowelsContent() {
               <div key={i} className={`h-8 rounded-lg ${c} opacity-80`} aria-hidden="true" />
             ))}
           </div>
-          <p className="text-white/30 text-xs mt-3 text-center">Illustrative swatch palette — full PMS range available</p>
+          <p className="text-white/60 text-xs mt-3 text-center">Illustrative swatch palette — full PMS range available</p>
           <BackToTop dark />
         </div>
       </section>
@@ -1011,7 +1011,7 @@ export default function KitchenTowelsContent() {
       </section>
 
       {/* SECTION 8 — CERTIFICATIONS — Neo-Brutalist UI */}
-      <section id="section-certs" className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section id="section-certs" className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-l-4 border-gold pl-6 mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Standards</p>
@@ -1243,7 +1243,7 @@ export default function KitchenTowelsContent() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-24">
+      <section className="bg-navy-900 py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

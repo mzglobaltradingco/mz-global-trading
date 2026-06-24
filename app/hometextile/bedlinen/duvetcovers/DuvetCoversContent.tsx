@@ -21,7 +21,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -188,7 +188,7 @@ const DYE_DIST = [
   { name: "Reactive Dye", pct: 60, color: "bg-amber-400", swatches: ["bg-white", "bg-stone-200", "bg-blue-200", "bg-sage-300", "bg-slate-300"] },
   { name: "Yarn-Dyed", pct: 20, color: "bg-amber-600", swatches: ["bg-slate-600", "bg-amber-300", "bg-teal-400", "bg-blue-400", "bg-stone-400"] },
   { name: "Jacquard Woven", pct: 15, color: "bg-amber-800", swatches: ["bg-white", "bg-stone-300", "bg-slate-200", "bg-amber-100", "bg-gray-100"] },
-  { name: "GOTS Organic Dye", pct: 5, color: "bg-green-500", swatches: ["bg-green-100", "bg-green-200", "bg-emerald-200", "bg-lime-200", "bg-stone-100"] },
+  { name: "GOTS Organic Dye", pct: 5, color: "bg-green-700", swatches: ["bg-green-100", "bg-green-200", "bg-emerald-200", "bg-lime-200", "bg-stone-100"] },
 ];
 
 const OEM_SERVICES = [
@@ -398,7 +398,7 @@ export default function DuvetCoversContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -817,9 +817,9 @@ export default function DuvetCoversContent() {
       </section>
 
       {/* ════════ SECTION 3 — THREAD COUNT — MONOCHROME UI ════════ */}
-      <section id="section-tc" className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section id="section-tc" className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-white/40 text-xs font-semibold tracking-[0.2em] uppercase mb-2">Thread Count</p>
+          <p className="text-white/60 text-xs font-semibold tracking-[0.2em] uppercase mb-2">Thread Count</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Thread Count for Duvet Covers</h2>
           <p className="text-white/50 mb-12 max-w-2xl">Thread count is the single most frequently misunderstood specification in bedding. The range that matters is narrower than retail marketing suggests.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -834,10 +834,10 @@ export default function DuvetCoversContent() {
               >
                 {t.featured && <span className="inline-block mb-3 text-[10px] font-bold text-navy-900 bg-gold px-3 py-1 rounded-full uppercase tracking-wider">Most Ordered</span>}
                 <p className={`text-3xl font-bold mb-1 ${t.featured ? "text-navy-900" : "text-white"}`}>{t.range}</p>
-                <p className={`text-xs font-bold uppercase tracking-widest mb-3 ${t.featured ? "text-gray-500" : "text-white/30"}`}>{t.name}</p>
+                <p className={`text-xs font-bold uppercase tracking-widest mb-3 ${t.featured ? "text-gray-500" : "text-white/60"}`}>{t.name}</p>
                 <p className={`text-sm mb-3 font-semibold ${t.featured ? "text-navy-900" : "text-white/80"}`}>{t.feel}</p>
-                <p className={`text-xs leading-relaxed mb-3 ${t.featured ? "text-gray-500" : "text-white/40"}`}>{t.use}</p>
-                <p className={`text-xs font-semibold ${t.featured ? "text-amber-600" : "text-white/30"}`}>{t.buyer}</p>
+                <p className={`text-xs leading-relaxed mb-3 ${t.featured ? "text-gray-500" : "text-white/60"}`}>{t.use}</p>
+                <p className={`text-xs font-semibold ${t.featured ? "text-amber-700" : "text-white/60"}`}>{t.buyer}</p>
               </motion.div>
             ))}
           </div>
@@ -845,10 +845,10 @@ export default function DuvetCoversContent() {
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="border-b border-white/10">
-                  <th className="text-left text-white/40 text-xs uppercase tracking-wider py-3 pr-6">TC Range</th>
-                  <th className="text-left text-white/40 text-xs uppercase tracking-wider py-3 pr-6">Hand Feel</th>
-                  <th className="text-left text-white/40 text-xs uppercase tracking-wider py-3 pr-6">Best Use</th>
-                  <th className="text-left text-white/40 text-xs uppercase tracking-wider py-3">Typical Buyer</th>
+                  <th className="text-left text-white/60 text-xs uppercase tracking-wider py-3 pr-6">TC Range</th>
+                  <th className="text-left text-white/60 text-xs uppercase tracking-wider py-3 pr-6">Hand Feel</th>
+                  <th className="text-left text-white/60 text-xs uppercase tracking-wider py-3 pr-6">Best Use</th>
+                  <th className="text-left text-white/60 text-xs uppercase tracking-wider py-3">Typical Buyer</th>
                 </tr>
               </thead>
               <tbody>

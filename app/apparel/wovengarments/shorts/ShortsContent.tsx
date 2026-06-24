@@ -21,7 +21,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -529,7 +529,7 @@ export default function ShortsContent() {
       {/* ── Stats Anchor ──────────────────────────────────────────────────── */}
       <section className="bg-gray-50 py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
+          <div className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
             <div className="lg:flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">
                 Shorts Sourcing — At a Glance
@@ -999,7 +999,7 @@ export default function ShortsContent() {
       </section>
 
       {/* ── Section 5: Colours — Maximalist UI ───────────────────────────── */}
-      <section id="sec-colours" className="py-20 bg-[#0D1B2A]">
+      <section id="sec-colours" className="py-20 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Section 05</p>
@@ -1461,7 +1461,7 @@ export default function ShortsContent() {
       </section>
 
       {/* ── Final CTA ─────────────────────────────────────────────────────── */}
-      <section className="py-20 bg-[#0D1B2A]">
+      <section className="py-20 bg-navy-900">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Ready to Source</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">

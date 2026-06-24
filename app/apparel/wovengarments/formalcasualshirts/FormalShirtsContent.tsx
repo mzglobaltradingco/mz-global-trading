@@ -19,7 +19,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -82,8 +82,8 @@ const FIT_PROFILES = [
 
 const GSM_TIERS = [
   { gsm: "80–100", name: "Fine / Lightweight", season: "Spring / Summer / Formal", market: "Formal retail · Middle East · Tropical", pct: 40, featured: false, desc: "Fine poplin, end-on-end and seersucker deliver premium drape and maximum breathability — ideal for formal and warm-climate markets.", color: "bg-sky-300" },
-  { gsm: "100–140", name: "Standard", season: "Year-Round", market: "USA · UK · EU · Australia baseline", pct: 80, featured: true, desc: "The commercial standard for year-round formal and casual shirt programmes. Covers poplin, oxford, chambray, twill and dobby constructions across all major markets.", color: "bg-gold" },
-  { gsm: "140–200", name: "Heavyweight / Seasonal", season: "Autumn / Winter / Linen", market: "Linen programmes · Oxford · Winter collections", pct: 35, featured: false, desc: "Heavier oxford weave, linen and dobby for A/W collections and linen programmes. More structured drape and premium hand feel.", color: "bg-blue-500" },
+  { gsm: "100–140", name: "Standard", season: "Year-Round", market: "USA · UK · EU · Australia baseline", pct: 80, featured: true, desc: "The commercial standard for year-round formal and casual shirt programmes. Covers poplin, oxford, chambray, twill and dobby constructions across all major markets.", color: "bg-[#9A6400]" },
+  { gsm: "140–200", name: "Heavyweight / Seasonal", season: "Autumn / Winter / Linen", market: "Linen programmes · Oxford · Winter collections", pct: 35, featured: false, desc: "Heavier oxford weave, linen and dobby for A/W collections and linen programmes. More structured drape and premium hand feel.", color: "bg-blue-700" },
 ];
 
 const DECO_METHODS = [
@@ -124,11 +124,11 @@ const OEM_FEATURES = [
 
 const SECTORS = [
   { abbr: "CO", name: "Corporate Workwear", detail: "Staff uniforms, corporate gifting, formal programmes across offices and hospitality", market: "USA · UK · EU · Middle East", color: "bg-blue-600" },
-  { abbr: "HS", name: "Hospitality & Hotel", detail: "Front-of-house, service staff and branded uniform programmes for hotel and F&B groups", market: "Middle East · EU · USA · Asia", color: "bg-sky-600" },
+  { abbr: "HS", name: "Hospitality & Hotel", detail: "Front-of-house, service staff and branded uniform programmes for hotel and F&B groups", market: "Middle East · EU · USA · Asia", color: "bg-sky-700" },
   { abbr: "FA", name: "Fashion Retail", detail: "Seasonal collections, woven shirt programmes, OEM branded formal and casual lines", market: "USA · UK · EU · Australia", color: "bg-violet-600" },
   { abbr: "EC", name: "E-commerce / DTC", detail: "Direct-to-consumer brands and online-first menswear labels with branded shirt programmes", market: "Global", color: "bg-indigo-600" },
   { abbr: "MN", name: "Premium Menswear", detail: "Fine poplin, twill and end-on-end for premium retail and luxury buyer programmes", market: "UK · EU · Japan · USA", color: "bg-slate-700" },
-  { abbr: "WS", name: "Wholesale Distribution", detail: "Multi-brand wholesale distributors supplying regional retail networks globally", market: "USA · EU · Middle East", color: "bg-teal-600" },
+  { abbr: "WS", name: "Wholesale Distribution", detail: "Multi-brand wholesale distributors supplying regional retail networks globally", market: "USA · EU · Middle East", color: "bg-teal-700" },
 ];
 
 const EXPORT_TERMS = [
@@ -148,11 +148,11 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, fabric sourcing and pricing confirmed", color: "bg-gold" },
-  { stage: "Fabric Approval", days: "5–10", desc: "Lab dip or swatch approval before cutting commences", color: "bg-blue-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, fabric sourcing and pricing confirmed", color: "bg-[#9A6400]" },
+  { stage: "Fabric Approval", days: "5–10", desc: "Lab dip or swatch approval before cutting commences", color: "bg-blue-700" },
   { stage: "Sample Production", days: "15–20", desc: "Sewn sample with all trim and decoration to specification", color: "bg-indigo-600" },
-  { stage: "Bulk Production", days: "40–60", desc: "From confirmed PO and approved pre-production sample", color: "bg-purple-500" },
-  { stage: "QC & Sea Freight", days: "25–35", desc: "Pre-shipment inspection + FCL/LCL from Karachi", color: "bg-teal-500" },
+  { stage: "Bulk Production", days: "40–60", desc: "From confirmed PO and approved pre-production sample", color: "bg-purple-700" },
+  { stage: "QC & Sea Freight", days: "25–35", desc: "Pre-shipment inspection + FCL/LCL from Karachi", color: "bg-teal-700" },
 ];
 
 const SUSTAINABILITY_ITEMS = [
@@ -292,7 +292,7 @@ export default function FormalShirtsContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -926,7 +926,7 @@ export default function FormalShirtsContent() {
               <div key={i} className={`h-10 rounded-xl ${c} border border-white/10 opacity-90`} aria-hidden="true" />
             ))}
           </div>
-          <p className="text-white/40 text-xs mt-3 text-center">Illustrative palette — full PMS range available. Formal shirt staples: white, blue, ecru, light grey, pale pink, lavender</p>
+          <p className="text-white/60 text-xs mt-3 text-center">Illustrative palette — full PMS range available. Formal shirt staples: white, blue, ecru, light grey, pale pink, lavender</p>
           <BackToTop dark />
         </div>
       </section>
@@ -1370,7 +1370,7 @@ export default function FormalShirtsContent() {
       {/* ════════════════════════════════════════════════════════════════════════
           FINAL CTA
       ════════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

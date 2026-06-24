@@ -16,7 +16,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
   return (
     <div className="flex justify-center mt-16">
       <button onClick={() => scrollToId("bento-grid")}
-        className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"}`}
+        className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${dark ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"}`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}>
         <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75" />
@@ -41,9 +41,9 @@ function ExploreBtn({ sectionId, label }: { sectionId: string; label: string }) 
 
 const CONSTRUCTIONS = [
   { id: "knit-terry", name: "Knitted Terry Stretch", badge: "Professional Standard", gsm: "300–400 GSM", hand: "Stretch-conform to any fender profile, non-scratch loop surface", desc: "The professional-grade fender cover construction. Stretch knit adapts to any vehicle profile — compact to SUV — without gaps. Non-scratch terry loops protect paintwork across the full contact area. No ravel at edges. Service life is superior to woven alternatives in high-frequency professional use.", spec: "100% cotton knitted terry. Stretch: 2-way or 4-way depending on spec. GSM 300–400. Non-scratch loop surface on both faces.", colour: "bg-blue-50 border-blue-200", accent: "text-blue-600" },
-  { id: "woven-terry", name: "Woven Terry", badge: "", gsm: "300–380 GSM", hand: "Stable lay, non-stretch, consistent pile density", desc: "Stable woven construction for mechanics who prefer a flat-lay cover that does not shift position. Non-scratch loop surface maintained. The non-stretch characteristic is preferred in some body shop applications where cover positioning must remain fixed.", spec: "100% cotton woven terry. Non-stretch. GSM 300–380. Hemmed edge. Non-scratch loop both faces.", colour: "bg-sky-50 border-sky-200", accent: "text-sky-600" },
+  { id: "woven-terry", name: "Woven Terry", badge: "", gsm: "300–380 GSM", hand: "Stable lay, non-stretch, consistent pile density", desc: "Stable woven construction for mechanics who prefer a flat-lay cover that does not shift position. Non-scratch loop surface maintained. The non-stretch characteristic is preferred in some body shop applications where cover positioning must remain fixed.", spec: "100% cotton woven terry. Non-stretch. GSM 300–380. Hemmed edge. Non-scratch loop both faces.", colour: "bg-sky-50 border-sky-200", accent: "text-sky-700" },
   { id: "chenille", name: "Chenille", badge: "Premium", gsm: "350–450 GSM", hand: "Ultra-soft velvet surface — maximum paint protection for luxury vehicles", desc: "The premium fender cover for luxury and collector vehicle care. Chenille pile is the softest surface in automotive textile protection — no fibre hardness risk. Required specification by high-end detailing businesses and luxury dealership service departments.", spec: "100% cotton chenille pile. GSM 350–450. Ultra-soft surface. No abrasive contact possible.", colour: "bg-purple-50 border-purple-200", accent: "text-purple-600" },
-  { id: "microfiber", name: "Microfiber Non-Scratch", badge: "", gsm: "300–350 GSM", hand: "Ultra-fine split-filament fibre — zero-scratch guarantee on delicate finishes", desc: "Split-filament microfiber delivers zero-scratch contact for finishes where even the softest cotton loop presents a risk. Common in ceramic coating application, paint correction and exotic vehicle care. Lightweight at equivalent protection level.", spec: "100% polyester microfiber split-filament. GSM 300–350. Zero-scratch certified. Lightweight.", colour: "bg-teal-50 border-teal-200", accent: "text-teal-600" },
+  { id: "microfiber", name: "Microfiber Non-Scratch", badge: "", gsm: "300–350 GSM", hand: "Ultra-fine split-filament fibre — zero-scratch guarantee on delicate finishes", desc: "Split-filament microfiber delivers zero-scratch contact for finishes where even the softest cotton loop presents a risk. Common in ceramic coating application, paint correction and exotic vehicle care. Lightweight at equivalent protection level.", spec: "100% polyester microfiber split-filament. GSM 300–350. Zero-scratch certified. Lightweight.", colour: "bg-teal-50 border-teal-200", accent: "text-teal-700" },
 ];
 
 const SIZES = [
@@ -91,11 +91,11 @@ const EXPORT_TERMS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Construction, size, logo/branding and pack format specification", colour: "bg-gold" },
-  { stage: "Sample & Artwork", days: "12–18", desc: "Pre-production sample and embroidery artwork placement approval", colour: "bg-blue-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Construction, size, logo/branding and pack format specification", colour: "bg-[#9A6400]" },
+  { stage: "Sample & Artwork", days: "12–18", desc: "Pre-production sample and embroidery artwork placement approval", colour: "bg-blue-700" },
   { stage: "Bulk Production", days: "30–50", desc: "From confirmed purchase order and approved sample", colour: "bg-indigo-600" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Dimension, construction and embroidery quality audit", colour: "bg-purple-500" },
-  { stage: "Sea Freight", days: "8–35", desc: "18–30 days to USA, 8–14 days to UK, 20–35 days to Australia", colour: "bg-teal-500" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Dimension, construction and embroidery quality audit", colour: "bg-purple-700" },
+  { stage: "Sea Freight", days: "8–35", desc: "18–30 days to USA, 8–14 days to UK, 20–35 days to Australia", colour: "bg-teal-700" },
 ];
 
 const PROCESS_STEPS = [
@@ -170,7 +170,7 @@ export default function FenderCoversContent() {
       <section className="bg-gray-50 py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Fender Cover Supply — Pakistan</p>
               <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-3">Precision Automotive Protection. Professional Grade.</h2>
@@ -332,7 +332,7 @@ export default function FenderCoversContent() {
           {/* Row 3 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
-              className="bg-[#0D1B2A] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 min-h-[200px]">
+              className="bg-navy-900 border border-white/10 rounded-2xl p-6 flex flex-col gap-3 min-h-[200px]">
               <div>
                 <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase">Export</p>
                 <h3 className="text-lg font-bold text-white mt-0.5">Incoterms</h3>
@@ -398,7 +398,7 @@ export default function FenderCoversContent() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-[#0D1B2A] border border-white/10 rounded-2xl p-7 flex flex-col gap-4 min-h-[260px]">
+              className="bg-navy-900 border border-white/10 rounded-2xl p-7 flex flex-col gap-4 min-h-[260px]">
               <div>
                 <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase">Branding Programme</p>
                 <h3 className="text-xl font-bold text-white mt-0.5">Dealership OEM Covers</h3>
@@ -528,7 +528,7 @@ export default function FenderCoversContent() {
       </section>
 
       {/* SECTION 4 — FINISHING (Memphis) */}
-      <section id="section-finishing" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-finishing" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Finishing</p>
@@ -679,7 +679,7 @@ export default function FenderCoversContent() {
       </section>
 
       {/* SECTION 10 — LEAD TIMES (Brutalist) */}
-      <section id="section-leadtimes" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-leadtimes" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-4">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Timeline</p>
@@ -737,7 +737,7 @@ export default function FenderCoversContent() {
               ))}
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.55, delay: 0.1 }}
-              className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col gap-6">
+              className="bg-navy-900 rounded-2xl p-8 flex flex-col gap-6">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase">Why Branded Fender Covers</p>
               <p className="text-white text-lg font-bold leading-snug">Your brand is visible in the service bay, in front of every customer who walks in.</p>
               <p className="text-gray-300 text-sm leading-relaxed">
@@ -810,7 +810,7 @@ export default function FenderCoversContent() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-[#0D1B2A] py-20">
+      <section className="bg-navy-900 py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Get a Quote</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">Source Fender Covers from Pakistan</h2>

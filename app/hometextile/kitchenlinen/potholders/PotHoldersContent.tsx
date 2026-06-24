@@ -19,7 +19,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
       >
@@ -321,7 +321,7 @@ export default function PotHoldersContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Pot Holders — OEM Pakistan</p>
@@ -724,7 +724,7 @@ export default function PotHoldersContent() {
       </section>
 
       {/* SECTION 2 — STYLES — Bauhaus UI */}
-      <section id="section-styles" className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section id="section-styles" className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-4 gap-12 mb-12">
             <div className="lg:col-span-1">
@@ -1034,7 +1034,7 @@ export default function PotHoldersContent() {
                 <p className="text-3xl mb-2" aria-hidden="true">{item.flag}</p>
                 <p className="text-2xl font-bold text-white">{item.val}</p>
                 <p className="text-sm text-teal-300 mt-1">{item.label}</p>
-                <p className="text-xs text-white/40 mt-0.5">Sea freight from Karachi</p>
+                <p className="text-xs text-white/60 mt-0.5">Sea freight from Karachi</p>
               </div>
             ))}
           </div>
@@ -1169,7 +1169,7 @@ export default function PotHoldersContent() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-24">
+      <section className="bg-navy-900 py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}

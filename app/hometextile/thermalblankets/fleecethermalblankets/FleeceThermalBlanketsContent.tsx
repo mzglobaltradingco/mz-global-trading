@@ -18,7 +18,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
       <button
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
-          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
+          dark ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -46,16 +46,16 @@ function ExploreBtn({ sectionId, label }: { sectionId: string; label: string }) 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const CONSTRUCTIONS = [
-  { id: "polar", name: "Anti-Pill Polar Fleece", badge: "Volume Standard", gsm: "150–300 GSM", desc: "100% polyester knitted fleece with anti-pill finish. Soft, warm, pill-resistant. The retail baseline construction.", colour: "bg-orange-50 border-orange-100", accent: "text-orange-600", markets: ["USA", "UK", "EU", "Canada"] },
+  { id: "polar", name: "Anti-Pill Polar Fleece", badge: "Volume Standard", gsm: "150–300 GSM", desc: "100% polyester knitted fleece with anti-pill finish. Soft, warm, pill-resistant. The retail baseline construction.", colour: "bg-orange-50 border-orange-100", accent: "text-orange-700", markets: ["USA", "UK", "EU", "Canada"] },
   { id: "sherpa", name: "Sherpa / Double-Sided", badge: "Premium", gsm: "300–500 GSM", desc: "Smooth face one side, shearling-textured reverse. Substantial hand feel and warmth. Hotel amenities and premium retail.", colour: "bg-amber-50 border-amber-100", accent: "text-amber-600", markets: ["USA", "UK", "EU", "Australia"] },
   { id: "mink", name: "Mink Touch / Velvet Print", badge: "Promotional", gsm: "200–280 GSM", desc: "Ultra-soft velvet surface accepts sublimation print at photo quality. Promotional merchandise and custom gifting.", colour: "bg-purple-50 border-purple-100", accent: "text-purple-600", markets: ["USA", "Middle East", "EU"] },
-  { id: "jacquard", name: "Woven Jacquard Fleece", badge: "Premium Retail", gsm: "250–350 GSM", desc: "Custom woven pattern in the fabric structure — elevated hand, zero print. Premium retail and hospitality programmes.", colour: "bg-teal-50 border-teal-100", accent: "text-teal-600", markets: ["UK", "EU", "Australia", "Japan"] },
+  { id: "jacquard", name: "Woven Jacquard Fleece", badge: "Premium Retail", gsm: "250–350 GSM", desc: "Custom woven pattern in the fabric structure — elevated hand, zero print. Premium retail and hospitality programmes.", colour: "bg-teal-50 border-teal-100", accent: "text-teal-700", markets: ["UK", "EU", "Australia", "Japan"] },
 ];
 
 const GSM_TIERS = [
   { gsm: "150–180", name: "Lightweight / Baby", pct: 25, colour: "bg-sky-300", market: "Infant blankets · Baby retail · Travel throw", season: "Year-round" },
   { gsm: "180–230", name: "Standard Throw / Retail", pct: 70, colour: "bg-amber-400", market: "Supermarkets · Department stores · Online retail", season: "Year-round", featured: true },
-  { gsm: "230–280", name: "Premium A/W", pct: 50, colour: "bg-orange-500", market: "Seasonal retail · Gifting · Outdoor brands", season: "Autumn / Winter" },
+  { gsm: "230–280", name: "Premium A/W", pct: 50, colour: "bg-orange-700", market: "Seasonal retail · Gifting · Outdoor brands", season: "Autumn / Winter" },
   { gsm: "280–300+", name: "Heavy / Luxury", pct: 35, colour: "bg-rose-600", market: "Bedding weight · Hotel amenities · Corporate gifts", season: "A/W / Gifting" },
 ];
 
@@ -108,11 +108,11 @@ const EXPORT_TERMS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Construction, GSM, decoration and certification matching", colour: "bg-gold" },
-  { stage: "Artwork / Sample", days: "12–18", desc: "Pre-production sample and print artwork approval", colour: "bg-orange-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Construction, GSM, decoration and certification matching", colour: "bg-[#9A6400]" },
+  { stage: "Artwork / Sample", days: "12–18", desc: "Pre-production sample and print artwork approval", colour: "bg-orange-700" },
   { stage: "Bulk Production", days: "35–55", desc: "From confirmed purchase order and approved sample", colour: "bg-amber-600" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment check — weight, anti-pill, print registration", colour: "bg-purple-500" },
-  { stage: "Sea Freight", days: "8–35", desc: "18–30 days to USA, 8–14 days to UK, 20–35 days to Australia", colour: "bg-teal-500" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment check — weight, anti-pill, print registration", colour: "bg-purple-700" },
+  { stage: "Sea Freight", days: "8–35", desc: "18–30 days to USA, 8–14 days to UK, 20–35 days to Australia", colour: "bg-teal-700" },
 ];
 
 const PROCESS_STEPS = [
@@ -198,7 +198,7 @@ export default function FleeceThermalBlanketsContent() {
       <section className="bg-gray-50 py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Fleece Blanket Supply — Pakistan</p>
               <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-3">Warm, Soft, Specification-Driven</h2>
@@ -584,7 +584,7 @@ export default function FleeceThermalBlanketsContent() {
       </section>
 
       {/* SECTION 4 — DECORATION (Glassmorphism) */}
-      <section id="section-decoration" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-decoration" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Decoration Methods</p>
@@ -686,7 +686,7 @@ export default function FleeceThermalBlanketsContent() {
       </section>
 
       {/* SECTION 8 — EXPORT TERMS */}
-      <section id="section-export" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-export" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Export</p>
@@ -722,7 +722,7 @@ export default function FleeceThermalBlanketsContent() {
               <motion.div key={step.num} initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="flex gap-6 pb-10 relative">
                 {i < PROCESS_STEPS.length - 1 && <div className="absolute left-5 top-10 bottom-0 w-px bg-gray-100" aria-hidden="true" />}
-                <div className="w-10 h-10 rounded-full bg-orange-500 text-white text-sm font-bold flex items-center justify-center shrink-0 z-10">{step.num}</div>
+                <div className="w-10 h-10 rounded-full bg-orange-700 text-white text-sm font-bold flex items-center justify-center shrink-0 z-10">{step.num}</div>
                 <div className="pt-1">
                   <h3 className="text-base font-bold text-navy-900 mb-1">{step.title}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>
@@ -759,7 +759,7 @@ export default function FleeceThermalBlanketsContent() {
       </section>
 
       {/* SECTION 11 — LEAD TIMES */}
-      <section id="section-leadtimes" className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section id="section-leadtimes" className="bg-navy-900 py-16 lg:py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-4">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Timeline</p>
@@ -848,7 +848,7 @@ export default function FleeceThermalBlanketsContent() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-[#0D1B2A] py-20">
+      <section className="bg-navy-900 py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Get a Quote</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">Source Fleece Blankets from Pakistan</h2>

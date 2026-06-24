@@ -203,7 +203,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
       <button
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
-          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
+          dark ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -263,7 +263,7 @@ export default function BabyBibsContent() {
       </section>
 
       {/* Stats bar */}
-      <section className="bg-[#0D1B2A] border-t border-white/10">
+      <section className="bg-navy-900 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { v: "5", u: "Bib Types", s: "Drool to silicone" },
@@ -593,7 +593,7 @@ export default function BabyBibsContent() {
           <div className="bg-white rounded-2xl overflow-hidden border border-blue-100 shadow-xs">
             <table className="w-full text-sm">
               <thead>
-                <tr className="bg-[#0D1B2A] text-white text-xs uppercase tracking-wider">
+                <tr className="bg-navy-900 text-white text-xs uppercase tracking-wider">
                   <th className="px-5 py-3 text-left">Age Group</th>
                   <th className="px-5 py-3 text-left">Neck Circumference</th>
                   <th className="px-5 py-3 text-left">Bib Size</th>
@@ -704,7 +704,7 @@ export default function BabyBibsContent() {
       </section>
 
       {/* S6 — OEM: Isometric-style card grid (dark bg) */}
-      <section id="s6-oem" className="py-20 bg-[#0D1B2A]">
+      <section id="s6-oem" className="py-20 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">OEM Capabilities</p>
@@ -738,7 +738,7 @@ export default function BabyBibsContent() {
           <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-xs">
             <table className="w-full text-sm">
               <thead>
-                <tr className="bg-[#0D1B2A] text-white text-xs uppercase tracking-wider">
+                <tr className="bg-navy-900 text-white text-xs uppercase tracking-wider">
                   <th className="px-5 py-3 text-left w-12" />
                   <th className="px-5 py-3 text-left">Market</th>
                   <th className="px-5 py-3 text-left">Primary Regulatory Requirement</th>
@@ -775,7 +775,7 @@ export default function BabyBibsContent() {
               >
                 <div className="flex items-start justify-between mb-2">
                   <h3 className="font-bold text-[#0D1B2A]">{cert.name}</h3>
-                  <span className={`text-xs font-semibold px-2 py-0.5 rounded-full shrink-0 ml-2 ${cert.tier === "ESSENTIAL" ? "bg-[#0D1B2A] text-white" : cert.tier === "STANDARD" ? "bg-blue-100 text-blue-800" : "bg-yellow-100 text-yellow-800"}`}>
+                  <span className={`text-xs font-semibold px-2 py-0.5 rounded-full shrink-0 ml-2 ${cert.tier === "ESSENTIAL" ? "bg-navy-900 text-white" : cert.tier === "STANDARD" ? "bg-blue-100 text-blue-800" : "bg-yellow-100 text-yellow-800"}`}>
                     {cert.tier}
                   </span>
                 </div>
@@ -811,7 +811,7 @@ export default function BabyBibsContent() {
       </section>
 
       {/* S10 — Sustainability: Data Visualization UI */}
-      <section id="s10-sustainability" className="py-20 bg-[#0D1B2A]">
+      <section id="s10-sustainability" className="py-20 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Sustainability</p>
@@ -936,7 +936,7 @@ export default function BabyBibsContent() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-[#0D1B2A]">
+      <section className="py-20 bg-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-4">Source Baby Bibs</p>

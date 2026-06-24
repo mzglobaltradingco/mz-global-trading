@@ -19,7 +19,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -160,7 +160,7 @@ const OZ_TIERS = [
     pct: 75,
     featured: true,
     desc: "The commercial standard for year-round retail denim programmes. Covers the majority of rigid, stretch 98/2 and recycled cotton orders across all major markets.",
-    color: "bg-gold",
+    color: "bg-[#9A6400]",
   },
   {
     oz: "13–14+ oz",
@@ -238,11 +238,11 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, wash recipe and pricing confirmed", color: "bg-gold" },
-  { stage: "Sample Production", days: "15–20", desc: "Pre-production samples with wash executed to specification", color: "bg-blue-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, wash recipe and pricing confirmed", color: "bg-[#9A6400]" },
+  { stage: "Sample Production", days: "15–20", desc: "Pre-production samples with wash executed to specification", color: "bg-blue-700" },
   { stage: "Bulk Production & Wash", days: "45–70", desc: "Cutting, sewing and wash house execution", color: "bg-indigo-600" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Shade band, measurement and count audit pre-shipment", color: "bg-purple-500" },
-  { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-teal-500" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Shade band, measurement and count audit pre-shipment", color: "bg-purple-700" },
+  { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-teal-700" },
 ];
 
 const SUSTAINABILITY_ITEMS = [
@@ -399,7 +399,7 @@ export default function DenimJeansContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -1011,7 +1011,7 @@ export default function DenimJeansContent() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
             {DECO_METHODS.map((d, i) => {
               const bgColors = ["bg-amber-100", "bg-stone-100", "bg-orange-100", "bg-zinc-100"];
-              const codeColors = ["bg-amber-600", "bg-stone-600", "bg-orange-600", "bg-zinc-600"];
+              const codeColors = ["bg-amber-600", "bg-stone-600", "bg-orange-700", "bg-zinc-600"];
               return (
                 <motion.div
                   key={d.code}
@@ -1514,7 +1514,7 @@ export default function DenimJeansContent() {
       {/* ════════════════════════════════════════════════════════════════════════
           FINAL CTA
       ════════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

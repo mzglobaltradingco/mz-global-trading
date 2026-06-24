@@ -21,7 +21,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -104,8 +104,8 @@ const WASH_PERFORMANCE = [
   { cycles: "50", label: "Consumer retail baseline", color: "bg-gray-200", width: 20 },
   { cycles: "75", label: "Mid-market hospitality standard", color: "bg-sky-300", width: 35 },
   { cycles: "100", label: "Premium hotel / budget contract", color: "bg-blue-400", width: 50 },
-  { cycles: "150", label: "Contract hospitality — our specification", color: "bg-indigo-500", width: 65, highlight: true },
-  { cycles: "200+", label: "Healthcare / institutional — our top specification", color: "bg-gold", width: 100, highlight: true },
+  { cycles: "150", label: "Contract hospitality — our specification", color: "bg-indigo-700", width: 65, highlight: true },
+  { cycles: "200+", label: "Healthcare / institutional — our top specification", color: "bg-[#9A6400]", width: 100, highlight: true },
 ];
 
 const SECTORS = [
@@ -197,11 +197,11 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", color: "bg-gold" },
-  { stage: "Sample / Pre-Production", days: "10–15", color: "bg-blue-500" },
+  { stage: "RFQ & Quotation", days: "3–5", color: "bg-[#9A6400]" },
+  { stage: "Sample / Pre-Production", days: "10–15", color: "bg-blue-700" },
   { stage: "Bulk Production", days: "40–60", color: "bg-indigo-600" },
-  { stage: "QC & Inspection", days: "3–5", color: "bg-slate-500" },
-  { stage: "Sea Freight to Destination", days: "20–30", color: "bg-teal-600" },
+  { stage: "QC & Inspection", days: "3–5", color: "bg-slate-600" },
+  { stage: "Sea Freight to Destination", days: "20–30", color: "bg-teal-700" },
 ];
 
 const SUSTAINABILITY = [
@@ -336,7 +336,7 @@ export default function InstitutionalBeddingContent() {
       <section className="bg-gray-50 py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Institutional Bedding Supply — Pakistan</p>
               <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-3">Contract-Grade Bedding from Pakistan&rsquo;s Certified Mills</h2>
@@ -577,7 +577,7 @@ export default function InstitutionalBeddingContent() {
       {/* ════════════════════════════════════════════════════════════════════
           SECTION 1 — PRODUCT RANGE — DASHBOARD UI
       ════════════════════════════════════════════════════════════════════ */}
-      <section id="section-products" className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section id="section-products" className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Product Range</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-10">Institutional Bedding Product Types</h2>
@@ -974,7 +974,7 @@ export default function InstitutionalBeddingContent() {
       {/* ════════════════════════════════════════════════════════════════════
           SECTION 11 — MARKETS — BRUTALIST UI
       ════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">Export Markets</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-10">Institutional Bedding Export Markets</h2>

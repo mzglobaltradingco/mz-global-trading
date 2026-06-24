@@ -21,7 +21,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{
@@ -334,14 +334,14 @@ const WOVEN_OPTIONS = [
 const GSM_TERRY = [
   { range: "200–300 GSM", label: "Microfiber / Travel", tier: "Quick-Dry", market: "Microfiber terry — sports, travel, promotional, hair towels", pct: 25, color: "bg-sky-400", popular: false },
   { range: "300–400 GSM", label: "Economy / Budget", tier: "Institutional", market: "Gym, food service, budget hospitality, beach & pool", pct: 42, color: "bg-amber-300", popular: false },
-  { range: "400–500 GSM", label: "Standard Retail", tier: "Mid-grade", market: "Most bath towel retail programmes — USA, UK, EU", pct: 62, color: "bg-amber-500", popular: true },
+  { range: "400–500 GSM", label: "Standard Retail", tier: "Mid-grade", market: "Most bath towel retail programmes — USA, UK, EU", pct: 62, color: "bg-amber-700", popular: true },
   { range: "500–600 GSM", label: "Premium Hotel Grade", tier: "Premium", market: "4–5 star hotel supply, quality branded retail", pct: 80, color: "bg-amber-600", popular: false },
   { range: "600–800+ GSM", label: "Luxury / Ultra-Premium", tier: "Luxury", market: "Spa, luxury hotel gifting, flagship retail programmes", pct: 100, color: "bg-amber-800", popular: false },
 ];
 
 const TC_TIERS = [
   { range: "200–300 TC", label: "Entry / Institutional", market: "Budget retail, hospitality economy grade, student accommodation", pct: 30, color: "bg-sky-300", popular: false },
-  { range: "300–400 TC", label: "Standard Retail", market: "Most popular segment — USA, UK, EU retail", pct: 55, color: "bg-sky-500", popular: true },
+  { range: "300–400 TC", label: "Standard Retail", market: "Most popular segment — USA, UK, EU retail", pct: 55, color: "bg-sky-700", popular: true },
   { range: "400–600 TC", label: "Premium Retail", market: "Premium branded bedding, 4-star hotel programmes", pct: 80, color: "bg-sky-700", popular: false },
   { range: "600–800+ TC", label: "Luxury / Ultra-Premium", market: "Luxury hotel chains, gift programmes, flagship retail", pct: 100, color: "bg-sky-900", popular: false },
 ];
@@ -623,7 +623,7 @@ export default function HomeTextileFabricContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -1823,7 +1823,7 @@ export default function HomeTextileFabricContent() {
       {/* ════════════════════════════════════════════════════════════════════════
           FINAL CTA
       ════════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

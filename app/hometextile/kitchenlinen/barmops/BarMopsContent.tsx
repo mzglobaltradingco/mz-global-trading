@@ -19,7 +19,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
       >
@@ -80,7 +80,7 @@ const CONSTRUCTIONS = [
 const GSM_TIERS = [
   { gsm: "400–450", name: "Light Commercial", use: "Bar counters, front-of-house service stations", pct: 30, color: "bg-sky-300" },
   { gsm: "450–500", name: "Standard Commercial", use: "Restaurants, café kitchens — moderate volume", pct: 60, color: "bg-amber-400" },
-  { gsm: "500–550", name: "Heavy Commercial", use: "High-volume restaurant and hotel kitchen supply", pct: 85, color: "bg-gold", popular: true },
+  { gsm: "500–550", name: "Heavy Commercial", use: "High-volume restaurant and hotel kitchen supply", pct: 85, color: "bg-[#9A6400]", popular: true },
   { gsm: "550–600", name: "Institutional Heavy", use: "Industrial kitchen, institutional laundry programmes", pct: 45, color: "bg-amber-700" },
 ];
 
@@ -277,7 +277,7 @@ export default function BarMopsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Commercial Bar Mop Supply — Pakistan</p>
@@ -1105,7 +1105,7 @@ export default function BarMopsContent() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-24">
+      <section className="bg-navy-900 py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}

@@ -21,7 +21,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -135,8 +135,8 @@ const FIT_PROFILES = [
 
 const GSM_TIERS = [
   { gsm: "130–150", name: "Ultra-Light", season: "Summer / Warm Climate", market: "SE Asia · Australia · Middle East · South America", pct: 35, featured: false, desc: "The lightest weight in the category. Maximum breathability for mesh and jersey tanks in tropical markets. Mesh constructions sit in this range.", color: "bg-sky-300" },
-  { gsm: "150–165", name: "Standard Athletic", season: "Year-Round Performance", market: "USA · UK · EU — primary athleisure range", pct: 80, featured: true, desc: "Industry-standard weight for women's athleisure and men's training tanks. Balanced coverage, soft drape and excellent print fidelity. Covers the majority of programmes.", color: "bg-gold" },
-  { gsm: "165–180", name: "Premium / Structured", season: "A/W & Lifestyle", market: "USA fashion retail · EU premium basics", pct: 50, featured: false, desc: "Heavier-weight tank positions itself as a fashion-led layering piece. Rib tanks at this weight deliver structured, close-fit performance for boutique fitness and premium basics.", color: "bg-sky-500" },
+  { gsm: "150–165", name: "Standard Athletic", season: "Year-Round Performance", market: "USA · UK · EU — primary athleisure range", pct: 80, featured: true, desc: "Industry-standard weight for women's athleisure and men's training tanks. Balanced coverage, soft drape and excellent print fidelity. Covers the majority of programmes.", color: "bg-[#9A6400]" },
+  { gsm: "165–180", name: "Premium / Structured", season: "A/W & Lifestyle", market: "USA fashion retail · EU premium basics", pct: 50, featured: false, desc: "Heavier-weight tank positions itself as a fashion-led layering piece. Rib tanks at this weight deliver structured, close-fit performance for boutique fitness and premium basics.", color: "bg-sky-700" },
 ];
 
 const DECO_METHODS = [
@@ -201,11 +201,11 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, pricing and availability confirmed", color: "bg-gold" },
-  { stage: "Sample Production", days: "14–18", desc: "Pre-production samples to construction and colour specification", color: "bg-sky-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, pricing and availability confirmed", color: "bg-[#9A6400]" },
+  { stage: "Sample Production", days: "14–18", desc: "Pre-production samples to construction and colour specification", color: "bg-sky-700" },
   { stage: "Bulk Production", days: "40–60", desc: "From confirmed PO and approved sample", color: "bg-indigo-600" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection before vessel loading", color: "bg-purple-500" },
-  { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-teal-500" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Pre-shipment inspection before vessel loading", color: "bg-purple-700" },
+  { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim", color: "bg-teal-700" },
 ];
 
 const SUSTAINABILITY_ITEMS = [
@@ -341,7 +341,7 @@ export default function TankTopsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Tank Top Supply — Pakistan Athleisure Knitwear</p>
@@ -762,7 +762,7 @@ export default function TankTopsContent() {
             {GSM_TIERS.map((t, i) => (
               <motion.div key={t.gsm}
                 initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`rounded-2xl p-8 relative overflow-hidden ${t.featured ? "bg-[#0D1B2A] text-white" : "bg-white border border-slate-200"}`}
+                className={`rounded-2xl p-8 relative overflow-hidden ${t.featured ? "bg-navy-900 text-white" : "bg-white border border-slate-200"}`}
               >
                 {t.featured && <div className="absolute top-3 right-3 text-[10px] bg-gold text-navy-900 font-bold px-2.5 py-1 rounded-full">Most Common</div>}
                 <p className={`text-4xl font-black mb-2 ${t.featured ? "text-gold" : "text-navy-900"}`}>{t.gsm}</p>
@@ -892,7 +892,7 @@ export default function TankTopsContent() {
             </div>
 
             <div className="bg-white rounded-2xl overflow-hidden border border-teal-100 flex flex-col">
-              <div className="bg-[#0D1B2A] px-6 py-4">
+              <div className="bg-navy-900 px-6 py-4">
                 <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase">Decoration × Construction Compatibility</p>
                 <p className="text-white text-sm mt-1">Which decoration methods work with each tank top fabric</p>
               </div>
@@ -1009,7 +1009,7 @@ export default function TankTopsContent() {
             ))}
           </div>
 
-          <div className="bg-[#0D1B2A] rounded-2xl p-8">
+          <div className="bg-navy-900 rounded-2xl p-8">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Primary Export Destinations</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[

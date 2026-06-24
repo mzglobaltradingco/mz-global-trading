@@ -19,7 +19,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -312,7 +312,7 @@ export default function CushionCoversContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Cushion Cover Supply — Pakistan Home Textiles</p>
@@ -815,7 +815,7 @@ export default function CushionCoversContent() {
               </motion.div>
             ))}
           </div>
-          <p className="text-white/40 text-xs text-center">Illustrative palettes — full PMS range available via reactive dyeing. Lab dip approval before bulk.</p>
+          <p className="text-white/60 text-xs text-center">Illustrative palettes — full PMS range available via reactive dyeing. Lab dip approval before bulk.</p>
           <BackToTop dark />
         </div>
       </section>
@@ -1104,7 +1104,7 @@ export default function CushionCoversContent() {
       </section>
 
       {/* ═══════ FINAL CTA ═══════ */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

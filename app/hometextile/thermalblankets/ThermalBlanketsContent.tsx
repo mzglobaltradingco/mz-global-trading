@@ -203,7 +203,7 @@ export default function ThermalBlanketsContent() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#0D1B2A] py-16">
+      <section className="bg-navy-900 py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">Start Your Blanket Programme</p>
           <h2 className="text-3xl font-bold text-white mb-5">Ready to Source Thermal Blankets from Pakistan?</h2>

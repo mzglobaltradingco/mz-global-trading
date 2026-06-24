@@ -183,7 +183,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
       <button
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
-          dark ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
+          dark ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900" : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
       >
@@ -243,7 +243,7 @@ export default function BabyHoodedTowelsContent() {
       </section>
 
       {/* Stats bar */}
-      <section className="bg-[#0D1B2A] border-t border-white/10">
+      <section className="bg-navy-900 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { v: "4", u: "Terry Constructions", s: "Loop to zero-twist" },
@@ -574,7 +574,7 @@ export default function BabyHoodedTowelsContent() {
           <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-xs">
             <table className="w-full text-sm">
               <thead>
-                <tr className="bg-[#0D1B2A] text-white text-xs uppercase tracking-wider">
+                <tr className="bg-navy-900 text-white text-xs uppercase tracking-wider">
                   <th className="px-5 py-3 text-left">Age Group</th>
                   <th className="px-5 py-3 text-left">Towel Size</th>
                   <th className="px-5 py-3 text-left">Hood Size</th>
@@ -600,7 +600,7 @@ export default function BabyHoodedTowelsContent() {
       </section>
 
       {/* S3 — GSM: Product Showcase UI — dark bg, feature cards */}
-      <section id="s3-weight" className="py-20 bg-[#0D1B2A]">
+      <section id="s3-weight" className="py-20 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">GSM / Weight</p>
@@ -774,7 +774,7 @@ export default function BabyHoodedTowelsContent() {
       </section>
 
       {/* S8 — Certifications: Modular UI dark bg */}
-      <section id="s8-certifications" className="py-20 bg-[#0D1B2A]">
+      <section id="s8-certifications" className="py-20 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Certifications</p>
@@ -852,7 +852,7 @@ export default function BabyHoodedTowelsContent() {
       </section>
 
       {/* S11 — Process: Hero-Centered UI + large type steps */}
-      <section id="s11-process" className="py-20 bg-[#0D1B2A]">
+      <section id="s11-process" className="py-20 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-14">
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Production Process</p>
@@ -951,7 +951,7 @@ export default function BabyHoodedTowelsContent() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-[#0D1B2A]">
+      <section className="py-20 bg-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <p className="text-[#D4A017] text-xs font-semibold tracking-[0.2em] uppercase mb-4">Source Baby Hooded Towels</p>

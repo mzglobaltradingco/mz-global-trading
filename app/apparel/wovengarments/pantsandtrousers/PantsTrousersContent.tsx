@@ -21,7 +21,7 @@ function BackToTop({ dark = false }: { dark?: boolean }) {
         onClick={() => scrollToId("bento-grid")}
         className={`group relative inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-semibold transition-all duration-300 ${
           dark
-            ? "border border-gold/60 text-gold hover:bg-gold hover:text-navy-900"
+            ? "border border-gold/60 text-[#D4A017] hover:bg-gold hover:text-navy-900"
             : "border-2 border-gold text-navy-900 hover:bg-gold shadow-xs"
         }`}
         style={{ animation: "btt-pulse 2.2s ease-out infinite" }}
@@ -67,11 +67,11 @@ function ExploreBtn({ sectionId, label }: { sectionId: string; label: string }) 
 const CONSTRUCTIONS = [
   { id: "twill-chino", name: "Twill / Chino", badge: "Most Ordered", gsm: "200–260 GSM", icon: "👖", color: "bg-amber-50 border-amber-100", accent: "text-amber-700", hand: "Smooth diagonal face, structured drape, versatile weight", best: ["Business Casual", "Fashion Retail", "Smart Casual"], markets: ["USA", "UK", "EU", "Australia"], detail: "Twill chino is the anchor construction for woven trouser programmes worldwide. The diagonal twill weave delivers a refined smooth face with structure and recovery. Available in 100% cotton, cotton-stretch (97/3) and cotton-polyester blends for wrinkle resistance.", spec: "100% cotton, 97/3 cotton-elastane, or 65/35 cotton-polyester. GSM 200–260. DWR and wrinkle-resistant finish available." },
   { id: "canvas", name: "Canvas (Heavy)", badge: "", gsm: "260–350 GSM", icon: "🔩", color: "bg-stone-50 border-stone-100", accent: "text-stone-600", hand: "Thick, durable, structured — built for durability", best: ["Work Trousers", "Outdoor", "Utility"], markets: ["USA", "Canada", "Australia", "UK"], detail: "Heavy canvas twill for work, utility and outdoor trouser programmes requiring maximum durability. Compatible with DWR water-repellent finish for outdoor applications.", spec: "100% cotton canvas or cotton-polyester. GSM 260–350. DWR available. Reinforced pocket and stress points optional." },
-  { id: "poplin-light", name: "Poplin (Lightweight)", badge: "", gsm: "140–200 GSM", icon: "🌬️", color: "bg-sky-50 border-sky-100", accent: "text-sky-600", hand: "Smooth, fine, lightweight drape — ideal for warm climates", best: ["Summer / Tropical", "Formal Lightweight", "ME / SE Asia"], markets: ["Middle East", "SE Asia", "South America", "Australia"], detail: "Lightweight poplin trousers for warm-climate markets. Used in formal and smart-casual programmes across Middle East, South Asia and tropical markets.", spec: "100% cotton or 65/35 cotton-polyester. GSM 140–200. Wrinkle-resistant finish standard." },
+  { id: "poplin-light", name: "Poplin (Lightweight)", badge: "", gsm: "140–200 GSM", icon: "🌬️", color: "bg-sky-50 border-sky-100", accent: "text-sky-700", hand: "Smooth, fine, lightweight drape — ideal for warm climates", best: ["Summer / Tropical", "Formal Lightweight", "ME / SE Asia"], markets: ["Middle East", "SE Asia", "South America", "Australia"], detail: "Lightweight poplin trousers for warm-climate markets. Used in formal and smart-casual programmes across Middle East, South Asia and tropical markets.", spec: "100% cotton or 65/35 cotton-polyester. GSM 140–200. Wrinkle-resistant finish standard." },
   { id: "linen-blend", name: "Linen / Linen Blend", badge: "", gsm: "160–220 GSM", icon: "🌿", color: "bg-emerald-50 border-emerald-100", accent: "text-emerald-700", hand: "Natural texture, breathable, relaxed drape", best: ["Resort Wear", "Summer Retail", "Lifestyle Brands"], markets: ["EU", "USA", "Australia", "South America"], detail: "Linen trouser programmes for summer retail, resort wear and lifestyle brands. Pure linen for authentic breathability; linen-cotton blend for improved wrinkle stability.", spec: "100% linen or 55/45 linen-cotton. GSM 160–220. Pre-washed garment finish available." },
   { id: "wool-blend", name: "Wool Blend", badge: "Premium", gsm: "220–320 GSM", icon: "🏆", color: "bg-purple-50 border-purple-100", accent: "text-purple-700", hand: "Soft drape, natural insulation, premium formal feel", best: ["Premium Formal", "Autumn / Winter", "Luxury Retail"], markets: ["UK", "EU", "USA premium", "Japan"], detail: "Wool blend (typically 55% wool / 45% polyester) for premium formal trouser programmes. Delivers structured drape associated with tailored menswear.", spec: "55% wool / 45% polyester or 70% wool / 30% polyester. GSM 220–320. Lining available." },
   { id: "sateen-stretch", name: "Sateen Stretch", badge: "", gsm: "200–250 GSM", icon: "✨", color: "bg-teal-50 border-teal-100", accent: "text-teal-700", hand: "Smooth satin-like face, 4-way stretch, excellent recovery", best: ["Contemporary Menswear", "Premium Casual", "Fashion Retail"], markets: ["EU", "UK", "USA contemporary", "South Korea"], detail: "Sateen stretch at the intersection of formal appearance and performance comfort. The satin-weave face provides refinement; spandex delivers stretch comfort.", spec: "92% cotton / 8% spandex. GSM 200–250. 4-way stretch. Formal appearance." },
-  { id: "ponte", name: "Ponte (Knit-Look)", badge: "", gsm: "220–280 GSM", icon: "🔄", color: "bg-rose-50 border-rose-100", accent: "text-rose-600", hand: "Structured knit drape — looks woven, feels like knit", best: ["Women's Fashion", "Contemporary", "E-commerce DTC"], markets: ["USA", "UK", "EU women's", "Australia"], detail: "Ponte fabric bridges woven trouser and knit comfort — visual appearance of a structured trouser with the wearing comfort of a knit. Popular in DTC fashion brands.", spec: "Typically 60/35/5 poly-rayon-spandex. GSM 220–280. Stable structure. Elasticated waist available." },
+  { id: "ponte", name: "Ponte (Knit-Look)", badge: "", gsm: "220–280 GSM", icon: "🔄", color: "bg-rose-50 border-rose-100", accent: "text-rose-700", hand: "Structured knit drape — looks woven, feels like knit", best: ["Women's Fashion", "Contemporary", "E-commerce DTC"], markets: ["USA", "UK", "EU women's", "Australia"], detail: "Ponte fabric bridges woven trouser and knit comfort — visual appearance of a structured trouser with the wearing comfort of a knit. Popular in DTC fashion brands.", spec: "Typically 60/35/5 poly-rayon-spandex. GSM 220–280. Stable structure. Elasticated waist available." },
 ];
 
 const FIT_PROFILES = [
@@ -84,8 +84,8 @@ const FIT_PROFILES = [
 
 const GSM_TIERS = [
   { gsm: "140–180", name: "Lightweight", season: "Summer / Tropical", market: "Middle East · SE Asia · South America · Summer retail", pct: 30, featured: false, desc: "Poplin and linen constructions deliver breathability and casual drape for warm-climate and summer markets.", color: "bg-amber-300" },
-  { gsm: "200–260", name: "Standard / Commercial", season: "Year-Round", market: "USA · UK · EU retail baseline · Australia", pct: 78, featured: true, desc: "Twill chino at this weight is the commercial backbone of every woven trouser programme — structured, versatile and compatible with all decoration and finish techniques.", color: "bg-gold" },
-  { gsm: "260–350", name: "Heavyweight / Premium", season: "Autumn / Winter / Work", market: "USA workwear · UK / EU formal · Canada", pct: 40, featured: false, desc: "Canvas, wool blend and heavy twill for A/W collections, premium formal and utility/workwear programmes requiring superior durability.", color: "bg-orange-600" },
+  { gsm: "200–260", name: "Standard / Commercial", season: "Year-Round", market: "USA · UK · EU retail baseline · Australia", pct: 78, featured: true, desc: "Twill chino at this weight is the commercial backbone of every woven trouser programme — structured, versatile and compatible with all decoration and finish techniques.", color: "bg-[#9A6400]" },
+  { gsm: "260–350", name: "Heavyweight / Premium", season: "Autumn / Winter / Work", market: "USA workwear · UK / EU formal · Canada", pct: 40, featured: false, desc: "Canvas, wool blend and heavy twill for A/W collections, premium formal and utility/workwear programmes requiring superior durability.", color: "bg-orange-700" },
 ];
 
 const DECO_METHODS = [
@@ -149,11 +149,11 @@ const PACK_OPTIONS = [
 ];
 
 const LEAD_STAGES = [
-  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, construction and finish confirmed with pricing", color: "bg-gold" },
-  { stage: "Sample Production", days: "15–20", desc: "Sewn sample with all trim, pocket and finish to specification", color: "bg-amber-500" },
-  { stage: "Bulk Production", days: "40–65", desc: "From confirmed PO and approved pre-production sample", color: "bg-orange-600" },
-  { stage: "QC & Inspection", days: "3–5", desc: "Measurement audit, count check and packaging verification", color: "bg-purple-500" },
-  { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim to destination port", color: "bg-teal-500" },
+  { stage: "RFQ & Quotation", days: "3–5", desc: "Factory shortlist, construction and finish confirmed with pricing", color: "bg-[#9A6400]" },
+  { stage: "Sample Production", days: "15–20", desc: "Sewn sample with all trim, pocket and finish to specification", color: "bg-amber-700" },
+  { stage: "Bulk Production", days: "40–65", desc: "From confirmed PO and approved pre-production sample", color: "bg-orange-700" },
+  { stage: "QC & Inspection", days: "3–5", desc: "Measurement audit, count check and packaging verification", color: "bg-purple-700" },
+  { stage: "Sea Freight", days: "18–28", desc: "FCL/LCL from Karachi or Port Qasim to destination port", color: "bg-teal-700" },
 ];
 
 const SUSTAINABILITY_ITEMS = [
@@ -287,7 +287,7 @@ export default function PantsTrousersContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-[#0D1B2A] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
+            className="bg-navy-900 rounded-2xl p-8 flex flex-col lg:flex-row gap-8 lg:items-center"
           >
             <div className="flex-1">
               <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -919,7 +919,7 @@ export default function PantsTrousersContent() {
               <div key={i} className={`h-10 rounded-xl ${c} opacity-90 border border-white/10`} aria-hidden="true" />
             ))}
           </div>
-          <p className="text-white/40 text-xs mt-3 text-center">Illustrative trouser colour palette — full PMS range available via reactive dyeing</p>
+          <p className="text-white/60 text-xs mt-3 text-center">Illustrative trouser colour palette — full PMS range available via reactive dyeing</p>
           <BackToTop dark />
         </div>
       </section>
@@ -1310,7 +1310,7 @@ export default function PantsTrousersContent() {
       </section>
 
       {/* ══ FINAL CTA ════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-navy-900 py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
