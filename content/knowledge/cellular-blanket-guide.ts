@@ -30,9 +30,9 @@ Cellular blankets are predominantly specified for healthcare (NHS, hospitals, ca
 
 | GSM | Thermal rating | Application |
 |---|---|---|
-| 150–220 GSM | Light — summer / warm climate | Airline travel blanket, coastal care home |
-| 220–300 GSM | Medium — standard institutional | NHS hospital ward, budget hotel, ambulance |
-| 300–380 GSM | Heavy — cold climate / long-term care | Long-term care ward, winter institutional use |
+| 150–180 GSM | Light — neonatal / warm climate | NICU, paediatric ward, airline travel blanket |
+| 180–210 GSM | Standard — general institutional | NHS hospital ward, budget hotel, ambulance |
+| 210–250 GSM | Medium-heavy — high-dependency | High-dependency unit, long-term care, cold climate |
 
 **Critical specification note:** Unlike a solid woven blanket, GSM in a cellular blanket should not be used as the sole performance indicator. A 200 GSM cellular blanket typically outperforms a 300 GSM plain-weave blanket thermally because of the air-trapping structure. Always specify GSM alongside thermal performance requirement (e.g. "suitable for 18–22°C ward environment").
 
@@ -52,13 +52,13 @@ Compare with [fleece thermal blankets](/hometextile/thermalblankets/fleece/) —
 
 ## Standard Sizes
 
-| Application | Size (UK standard) | Notes |
+| Application | Size (standard) | Notes |
 |---|---|---|
-| Hospital single | 120×150 cm | NHS ward standard |
-| Hospital double | 150×200 cm | For wider hospital beds |
-| Cot/infant | 100×120 cm | Paediatric ward |
-| Airline/travel | 130×150 cm | Folded compact |
-| Hotel extra | 150×200 cm | Budget hotel supply |
+| Hospital single | 150×200 cm | Standard adult ward — full single-bed coverage |
+| Hospital double | 180×200 cm | Wider hospital beds, bariatric care |
+| Cot / infant | 75×100 cm | NICU, paediatric ward, infant transport |
+| Airline / travel | 130×150 cm | Folded compact for tray-table service |
+| Hotel supplemental | 150×200 cm | Budget hotel foot-of-bed supply |
 
 For UK NHS supply: specify finished size after all four sides are hemmed, not the greige (pre-wash) size. Allow for 3% shrinkage in the finished dimension specification.
 

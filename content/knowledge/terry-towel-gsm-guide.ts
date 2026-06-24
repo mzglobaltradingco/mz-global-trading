@@ -45,24 +45,25 @@ The most commonly ordered range globally. This weight balances absorbency, durab
 
 **What to specify:** 450 GSM is the sweet spot for USA retail — absorbent enough to feel premium on shelf but light enough for air freight economics at volume.
 
-### 500–600 GSM — Premium Hotel Grade
+### 500–600 GSM — Full-Service & Upscale Hotels
 
-The standard for 5-star hotel programs globally, from Dubai to London to Singapore. At this weight, the towel has noticeable plushness, superior absorbency and sufficient fibre density to maintain loft through 150+ commercial wash cycles.
-
-**Where it works:**
-- 5-star and luxury hotel programs
-- Spa and wellness facilities
-- Department store retail programs in the UK, Germany, France and Australia
-- Subscription linen programs for high-end service apartments
-
-**What to specify:** 550 GSM is the minimum typically written into 5-star hotel tenders. Request OEKO-TEX Standard 100 certification at this tier — see the full [certifications and compliance standards](/qualitycompliance/certifications/) that apply to EU and UK hotel contracts.
-
-### 600–700 GSM — Luxury & Boutique
-
-Noticeably heavier, significantly more absorbent, and built to maintain a hotel-quality feel for years. The higher loop density at this weight creates a spa-like hand feel that is immediately perceptible at the point of sale.
+The standard range for full-service and upper-upscale hotel programmes. At this weight, the towel has noticeable plushness, superior absorbency and sufficient fibre density to maintain loft through 150+ commercial wash cycles.
 
 **Where it works:**
-- Boutique hotels and design hotels positioning on sensory experience
+- Full-service and upscale hotel programmes (4-star to 4.5-star)
+- Spa and wellness facilities requiring a plush but cost-efficient programme
+- Department store retail programmes in the UK, Germany, France and Australia
+- Subscription linen programmes for high-end service apartments
+
+**What to specify:** 550 GSM is widely used at the upper end of this tier. For true 5-star programmes, 600 GSM and above is the standard specification — see the 600–700 GSM tier below. Request OEKO-TEX Standard 100 certification at this tier — see the full [certifications and compliance standards](/qualitycompliance/certifications/) that apply to EU and UK hotel contracts.
+
+### 600–700 GSM — 5-Star Hotel Standard & Luxury
+
+The established specification for 5-star hotel programmes globally, from Dubai to London to Singapore. Noticeably heavier, significantly more absorbent, and built to maintain a hotel-quality feel for years. The higher loop density at this weight creates a spa-like hand feel that is immediately perceptible at the point of sale.
+
+**Where it works:**
+- 5-star hotel programmes (the primary specification tier for luxury hotel chains)
+- Boutique and design hotels positioning on sensory experience
 - Premium retail brands in the USA, UK, Canada and Australia
 - Corporate gifting and luxury hospitality sets
 - Middle East luxury hospitality (UAE, Saudi Arabia, Qatar) — a high-volume market for this tier
@@ -86,7 +87,7 @@ The heaviest terry towels made at scale. These feel more like a textile investme
 | Market | Common requirement | Minimum GSM typically tendered |
 |---|---|---|
 | USA mid-market retail | OEKO-TEX or equivalent | 400–450 GSM |
-| USA hospitality (5-star) | OEKO-TEX + BSCI/WRAP | 550–600 GSM |
+| USA hospitality (5-star) | OEKO-TEX + BSCI/WRAP | 600–700 GSM |
 | UK retail (M&S, John Lewis grade) | GOTS or OEKO-TEX | 500–600 GSM |
 | EU hospitality (Germany, France) | OEKO-TEX mandatory | 500–550 GSM |
 | Middle East luxury (UAE, Saudi) | OEKO-TEX preferred | 600–700 GSM |

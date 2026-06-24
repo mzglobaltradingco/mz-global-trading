@@ -30,10 +30,10 @@ Woven fabrics are produced on a loom by interlacing warp and weft yarns at right
 
 Knitted fabrics are produced by interlocking loops of yarn. They have inherent stretch and recovery in both directions, breathe well, and are comfortable against skin. Standard knitted apparel fabrics include:
 
-- **Single jersey:** The most common T-shirt fabric. 120–220 GSM. Lightweight, one-way stretch.
-- **Interlock (double jersey):** Heavier, more stable, same appearance both sides. 180–280 GSM. Polo shirts, children's wear.
+- **Single jersey:** The most common T-shirt fabric. 120–200 GSM. Lightweight, one-way stretch.
+- **Interlock (double jersey):** Heavier, more stable, same appearance both sides. 160–280 GSM. Polo shirts, children's wear.
 - **Rib:** 1×1 or 2×2 rib knit. Used for neckbands, cuffs and waistbands, and as a standalone fabric for tank tops and fitted garments.
-- **French terry:** Loop on one side, smooth on other. 240–320 GSM. Sweatshirts, hoodies, joggers.
+- **French terry:** Loop on one side, smooth on other. 260–400 GSM. Sweatshirts, hoodies, joggers.
 - **Fleece:** Brushed loop on inside for warmth. 200–400 GSM. Sweatshirts, outerwear, hoodies.
 
 ## Cotton and Cotton-Blend Specifications
@@ -42,9 +42,9 @@ Knitted fabrics are produced by interlocking loops of yarn. They have inherent s
 |---|---|---|---|---|
 | Poplin | 100% cotton or 65/35 poly-cotton | 100–140 | 44 in / 58–60 in | Formal shirts, blouses |
 | Twill (chino) | 100% cotton or 97/3 cotton-elastane | 220–320 | 58–60 in | Trousers, chinos, cargo pants |
-| Denim | 99% cotton / 1% elastane (stretch) | 8–14 oz (280–490 gsm) | 58–60 in | Jeans, jackets, casual |
-| Single jersey | 100% cotton or 92/8 cotton-elastane | 120–220 | 60–72 in (tubular or open) | T-shirts, casual tops |
-| French terry | 80% cotton / 20% polyester or 100% cotton | 240–320 | 60–72 in | Sweatshirts, hoodies, joggers |
+| Denim | 99% cotton / 1% elastane (stretch) | 8–14 oz (271–475 gsm) | 58–60 in | Jeans, jackets, casual |
+| Single jersey | 100% cotton or 92/8 cotton-elastane | 120–200 | 60–72 in (tubular or open) | T-shirts, casual tops |
+| French terry | 80% cotton / 20% polyester or 100% cotton | 260–400 | 60–72 in | Sweatshirts, hoodies, joggers |
 | Fleece | 100% polyester or 80% polyester / 20% cotton | 200–400 | 60–72 in | Outerwear, hoodies |
 
 ## Stretch Fabrics: Elastane Addition

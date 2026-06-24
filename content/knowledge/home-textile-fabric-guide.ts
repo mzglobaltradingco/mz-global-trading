@@ -26,7 +26,7 @@ Two-ply terry (loops on both sides of the base cloth) is standard for [bath towe
 
 ### GSM Range and Width
 
-- **GSM range:** 300–800 GSM for finished towel terry fabric. Common ranges: 300–400 GSM (lightweight guest/gym towels), 400–550 GSM (retail standard), 550–700 GSM (hotel premium), 700–800 GSM (luxury spa).
+- **GSM range:** 300–700 GSM for finished towel terry fabric. Common ranges: 300–400 GSM (lightweight guest/gym towels), 400–550 GSM (retail standard), 550–650 GSM (hotel premium), 650–700 GSM (luxury/spa).
 - **Standard width:** 140–160 cm (single-width terry fabric, yielding one standard bath towel per width). Double-width (280–300 cm) available from some mills for cutting efficiency on smaller towel sizes.
 - **Yarn count:** 16s–30s count for pile yarn (coarser count = higher GSM and absorbency); 20s–40s for ground yarn.
 
@@ -73,7 +73,7 @@ Jacquard fabric is produced on a programmable Jacquard loom where each warp thre
 
 | Fabric Type | Construction | GSM Range | Standard Width | Applications |
 |---|---|---|---|---|
-| Terry | Ground weave + pile loops | 300–800 GSM | 140–160 cm (single), 280–300 cm (double) | Towels, bathrobes, bath mats |
+| Terry | Ground weave + pile loops | 300–700 GSM | 140–160 cm (single), 280–300 cm (double) | Towels, bathrobes, bath mats |
 | Percale | Plain weave, 200–400 TC | 80–130 GSM | 240–260 cm | Flat sheets, fitted sheets, pillowcases |
 | Sateen | 4-1 satin weave, 200–600 TC | 90–150 GSM | 250–270 cm | Premium bed linen, duvet covers |
 | Waffle | Dobby honeycomb weave | 120–400 GSM | 50–70 cm (kitchen), 140–160 cm (bathrobe) | Kitchen towels, bathrobes |

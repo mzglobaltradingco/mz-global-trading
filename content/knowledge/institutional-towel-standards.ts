@@ -36,10 +36,10 @@ Hotel programmes sit in the 400–600 GSM range for standard property grades. Th
 
 - **3-star and below:** 400–450 GSM, replaced frequently, prioritise cost over loft
 - **4-star:** 450–550 GSM, the international hospitality midpoint
-- **5-star:** 550–600 GSM minimum, dobby border construction, OEKO-TEX required
+- **5-star:** 600–700 GSM minimum, dobby border construction, OEKO-TEX required
 - **Luxury and resort:** 600–750 GSM, ring-spun combed cotton, certified mills
 
-For hospitality buyers in the USA, UK, EU and Middle East, the dobby border is a near-universal feature of [institutional hotel towels sourced from Pakistan](/hometextile/bathlinen/institutionaltowels/) — it reinforces the hem and extends laundry life by 30–40% versus a plain hemmed towel. Hotel programmes combining towels with [hotel bathrobes](/hometextile/bathlinen/bathrobes/) and [bath mats](/hometextile/bathlinen/bathmats/) should align dobby border and GSM grades across the full bath linen set.
+For hospitality buyers in the USA, UK, EU and Middle East, the dobby border is a near-universal feature of [institutional hotel towels sourced from Pakistan](/hometextile/bathlinen/institutionaltowels/) — it reinforces the hem and measurably extends laundry life compared to a plain hemmed towel. Hotel programmes combining towels with [hotel bathrobes](/hometextile/bathlinen/bathrobes/) and [bath mats](/hometextile/bathlinen/bathmats/) should align dobby border and GSM grades across the full bath linen set.
 
 ### Fitness & Gym — Clubs, Spas, Corporate Gyms
 

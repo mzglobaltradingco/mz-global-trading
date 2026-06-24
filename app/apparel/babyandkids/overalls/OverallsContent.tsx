@@ -113,9 +113,9 @@ const AGE_SIZE_GUIDE = [
 ];
 
 const GSM_TIERS = [
-  { weight: "7–9 oz / 150–200 gsm", name: "Light–Mid Weight", season: "Year-Round Infant", market: "USA · EU · Australia", pct: 70, desc: "Stretch denim, linen. Primary weight for infant and toddler — comfortable all-day wear.", color: "bg-amber-300", featured: false },
-  { weight: "9–11 oz / 200–280 gsm", name: "Mid Weight", season: "Year-Round Kids", market: "USA · UK · EU — primary range", pct: 90, desc: "Standard denim, canvas and corduroy. Covers toddler through school-age across all major markets.", color: "bg-[#9A6400]", featured: true },
-  { weight: "11–14 oz / 280–340 gsm", name: "Heavy Weight", season: "A/W Premium", market: "UK · EU · Canada · Nordics", pct: 45, desc: "Heavy rigid denim and canvas for structured A/W kids collections and premium heritage brands.", color: "bg-orange-700", featured: false },
+  { weight: "7–9 oz (~240–305 gsm)", name: "Light–Mid Weight", season: "Year-Round Infant", market: "USA · EU · Australia", pct: 70, desc: "Stretch denim, linen. Primary weight for infant and toddler — comfortable all-day wear.", color: "bg-amber-300", featured: false },
+  { weight: "9–11 oz (~305–375 gsm)", name: "Mid Weight", season: "Year-Round Kids", market: "USA · UK · EU — primary range", pct: 90, desc: "Standard denim, canvas and corduroy. Covers toddler through school-age across all major markets.", color: "bg-[#9A6400]", featured: true },
+  { weight: "11–14 oz (~375–475 gsm)", name: "Heavy Weight", season: "A/W Premium", market: "UK · EU · Canada · Nordics", pct: 45, desc: "Heavy rigid denim and canvas for structured A/W kids collections and premium heritage brands.", color: "bg-orange-700", featured: false },
 ];
 
 const DECO_METHODS = [

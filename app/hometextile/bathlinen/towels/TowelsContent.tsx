@@ -124,8 +124,8 @@ const STANDARD_SIZES = [
   { name: "Guest Towel", dims: "30 × 50 cm", code: "GT", note: "Hotel guest turndown service", gsm: "400–500" },
   { name: "Hand Towel", dims: "40 × 70 cm", code: "HT", note: "Bathroom hand drying, retail sets", gsm: "450–550" },
   { name: "Bath Towel", dims: "70 × 140 cm", code: "BT", note: "Standard bath, USA/UK/EU retail", gsm: "500–600" },
-  { name: "Bath Sheet", dims: "90 × 150 cm", code: "BS", note: "Premium hotel, luxury retail wrap", gsm: "550–650" },
-  { name: "Gym Towel", dims: "50 × 100 cm", code: "GYM", note: "Sports clubs, gym, fitness retail", gsm: "350–500" },
+  { name: "Bath Sheet", dims: "90 × 180 cm", code: "BS", note: "Premium hotel, luxury retail wrap", gsm: "550–700" },
+  { name: "Gym Towel", dims: "70 × 130 cm", code: "GYM", note: "Sports clubs, gym, fitness retail", gsm: "350–500" },
 ];
 
 const SET_COMPOSITIONS = [
@@ -141,7 +141,7 @@ const GSM_DATA = [
   { range: "180–300", label: "Waffle / Lightweight", pct: 28, use: "Gym, Spa, Beach", hex: "#38bdf8", note: "Fast dry, packable, light" },
   { range: "350–450", label: "Standard Terry", pct: 55, use: "Retail, Healthcare, Gym", hex: "#D4A017", note: "Balanced weight and absorbency" },
   { range: "450–550", label: "Hotel Grade", pct: 82, use: "Hotel, Hospitality, Retail Premium", hex: "#0D1B2A", note: "Main hotel supply specification", featured: true },
-  { range: "550–650", label: "Luxury / Bath Sheet", pct: 65, use: "Luxury Hotel, Premium Brand", hex: "#6366f1", note: "Maximum softness and weight" },
+  { range: "550–700", label: "Luxury / Bath Sheet", pct: 65, use: "5-Star Hotel, Premium Brand", hex: "#6366f1", note: "Maximum softness and weight" },
   { range: "650+", label: "Ultra Premium", pct: 38, use: "5-Star Hotel, Spa, Gift", hex: "#ec4899", note: "Zero twist cotton, highest GSM" },
 ];
 
@@ -179,7 +179,7 @@ const SECTORS = [
   { name: "Retail & E-Commerce", market: "USA · UK · EU · Australia", desc: "Retail bath towel sets from 2-piece to 8-piece — plain hem, dobby border and jacquard constructions for shelf and online retail.", icon: "🛍️", color: "from-sky-400 to-blue-500" },
   { name: "Healthcare & Institutional", market: "USA · UK · EU · Middle East", desc: "Dobby border terry in white and institutional colours. Dozen-banded and bulk carton packaging for hospital linen supply programmes.", icon: "🏥", color: "from-emerald-400 to-teal-500" },
   { name: "Spa & Wellness", market: "USA · UK · EU · Middle East · Asia", desc: "Waffle weave, velour and zero twist constructions for spa chains and wellness brands. Embroidery branding and premium retail packaging.", icon: "🧖", color: "from-violet-400 to-purple-500" },
-  { name: "Sports & Gym", market: "USA · UK · EU · Australia", desc: "Gym and sports towels in 350–450 GSM terry loop — fast-dry, light, bulk packaging. Custom embroidery for sports club and gym chain programmes.", icon: "💪", color: "from-red-400 to-rose-500" },
+  { name: "Sports & Gym", market: "USA · UK · EU · Australia", desc: "Gym and sports towels in 350–450 GSM terry loop — fast-dry, light, bulk packaging. Microfiber construction (80% polyester / 20% polyamide) also available for quick-dry gym programmes. Custom embroidery for sports club and gym chain programmes.", icon: "💪", color: "from-red-400 to-rose-500" },
   { name: "Gift & Premium Retail", market: "USA · UK · EU · East Asia", desc: "Premium jacquard and velour towel gift sets. Retail box, ribbon-tied and gift bag packaging for premium homeware and department stores.", icon: "🎁", color: "from-pink-400 to-fuchsia-500" },
 ];
 
@@ -226,7 +226,7 @@ const PROCESS_STEPS = [
 ];
 
 const FAQS = [
-  { q: "What GSM is standard for hotel towels supplied from Pakistan?", a: "Hotel towel programmes typically specify 450–550 GSM in terry loop or dobby border terry construction. This weight delivers the combination of absorbency, durability and hand-feel expected by hotel brands in USA, UK, Europe and the Middle East. Ultra-luxury hotel programmes (5-star and above) often specify 550–650 GSM in zero twist cotton. Specify your exact GSM target in the RFQ — we match you with mills producing precisely that specification." },
+  { q: "What GSM is standard for hotel towels supplied from Pakistan?", a: "Hotel towel programmes typically specify 450–550 GSM in terry loop or dobby border terry construction. This weight delivers the combination of absorbency, durability and hand-feel expected by hotel brands in USA, UK, Europe and the Middle East. 5-star and luxury hotel programmes standardise on 600–700 GSM in ring-spun combed or zero twist cotton. Specify your exact GSM target in the RFQ — we match you with mills producing precisely that specification." },
   { q: "What is the difference between terry loop and velour towels?", a: "Terry loop towels retain the uncut loop pile on both faces — producing maximum water absorbency. Velour (sheared terry) has one or both faces sheared to create a smooth, velvet-like surface with a luxury hand-feel. Velour towels have slightly lower absorbency than terry loop but register print designs (sublimation) with exceptional clarity — making velour the preferred construction for beach towels, branded luxury products and spa collections." },
   { q: "Can towels be embroidered with a hotel logo in Pakistan?", a: "Yes — hotel logo embroidery on corner or along the short border is one of the most frequently ordered customisations in our supply network. Embroidery is applied after the towel is constructed and dyed. Standard placement is left or right corner. Multi-colour logos require a digitised embroidery file — we can digitise from your vector artwork. Woven labels and fabric patches are also available as decoration alternatives for hotel programmes." },
   { q: "Is OEKO-TEX certification available for Pakistan-made towels?", a: "Yes. OEKO-TEX Standard 100 certification is widely held by Pakistan's leading towel mills. This certification confirms that no harmful substances are present in the finished product — it is a standard import requirement for UK and EU buyers. GOTS (Global Organic Textile Standard) certification is also available if your programme requires certified organic cotton sourcing. Specify certification requirements as hard filters in your RFQ." },

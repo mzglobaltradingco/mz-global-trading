@@ -285,7 +285,7 @@ const FAQS = [
 
 const PAGE_SIBLINGS = [
   { title: "Bedsheets", desc: "Percale, sateen and jacquard flat sheets — all standard sizes for retail and hospitality.", href: "/hometextile/bedlinen/bedsheets/", img: "/images/hero/hero-bedsheets.webp", cta: "Explore Bedsheets" },
-  { title: "Fitted Sheets", desc: "Elasticated fitted sheets — precise pocket depths from 12\" to 26\" across all major size standards.", href: "/hometextile/bedlinen/fittedsheets/", img: "/images/hero/hero-fitted-sheets.webp", cta: "Explore Fitted Sheets" },
+  { title: "Fitted Sheets", desc: "Elasticated fitted sheets — precise pocket depths from 14\" to 26\" across all major size standards.", href: "/hometextile/bedlinen/fittedsheets/", img: "/images/hero/hero-fitted-sheets.webp", cta: "Explore Fitted Sheets" },
   { title: "Pillow Covers", desc: "Standard, Oxford and Euro pillowcases — percale, sateen and linen in all retail and hotel sizes.", href: "/hometextile/bedlinen/pillowcovers/", img: "/images/hero/hero-pillow-covers.webp", cta: "Explore Pillow Covers" },
   { title: "Cushion Covers", desc: "Decorative cushion covers — woven, printed and embroidered in 40×40 to 60×60cm and custom sizes.", href: "/hometextile/bedlinen/cushioncovers/", img: "/images/hero/hero-cushion-covers.webp", cta: "Explore Cushion Covers" },
   { title: "Curtains", desc: "Blackout, sheer and lined curtains — eyelet, rod pocket, pinch pleat and tab top heading styles.", href: "/hometextile/bedlinen/curtains/", img: "/images/hero/hero-curtains.webp", cta: "Explore Curtains" },

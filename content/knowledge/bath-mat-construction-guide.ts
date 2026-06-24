@@ -14,7 +14,7 @@ const post: KnowledgePost = {
   featured: false,
   content: `## Bath Mat Construction: Why It Matters for Procurement
 
-Bath mats are a high-replacement item in hotel and retail programmes. A bath mat at 600 GSM tufted terry placed in front of a commercial shower typically sees 200–300 wash cycles over its operational life — significantly more than a bath towel. The construction must deliver absorbency, dimensional stability, anti-slip performance and visual consistency across those cycles.
+Bath mats are a high-replacement item in hotel and retail programmes. A bath mat at 1,000 GSM tufted terry placed in front of a commercial shower typically sees 200–300 wash cycles over its operational life — significantly more than a bath towel. The construction must deliver absorbency, dimensional stability, anti-slip performance and visual consistency across those cycles.
 
 For buyers sourcing [bath mats from Pakistan](/hometextile/bathlinen/bathmats/), the choice of construction determines the product's commercial positioning, its laundry resilience, the backing type it can carry, and its compliance with retailer and hospitality requirements in the USA, UK, EU, Middle East and Australia.
 
@@ -32,7 +32,7 @@ The standard construction for commercial hotel and institutional bath mats. Tuft
 
 **Durability:** Very good. Well-specified tufted terry at 1,000+ GSM with latex backing maintains its pile density and shape for 150+ commercial wash cycles.
 
-**Commercial standard:** 1,200–1,400 GSM with SBR latex backing is the standard 5-star hotel specification globally. 800–1,000 GSM for mid-market hospitality. For full specification and MOQ details, see [bath mats sourced from Pakistan](/hometextile/bathlinen/bathmats/).
+**Commercial standard:** 1,000–1,200 GSM is the standard hotel contract specification; 1,200–1,400 GSM for 5-star and luxury programmes. 800–1,000 GSM for mid-market hospitality. For full specification and MOQ details, see [bath mats sourced from Pakistan](/hometextile/bathlinen/bathmats/).
 
 **Best for:**
 - 4-star and 5-star hotel bath mat programmes — pair with [hotel bath towels](/hometextile/bathlinen/towels/) and [bathrobes](/hometextile/bathlinen/bathrobes/) for a complete bath linen set

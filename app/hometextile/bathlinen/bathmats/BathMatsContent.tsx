@@ -164,7 +164,7 @@ const BACKING_OPTIONS = [
 const SIZES = [
   { size: "40×60 cm", name: "Small / Compact", use: "Pedestal mats, toilet area, compact en-suites", market: "EU residential retail" },
   { size: "50×80 cm", name: "Standard Bath Mat", use: "Single basin, standard en-suite bath area", market: "USA, EU, UK — primary hotel specification" },
-  { size: "60×100 cm", name: "Large / Double Basin", use: "Twin basin bathrooms, large en-suites, walk-in shower", market: "5-star hotel contracts, luxury residential" },
+  { size: "60×90 cm", name: "Large / Double Basin", use: "Twin basin bathrooms, large en-suites, walk-in shower", market: "5-star hotel contracts, luxury residential" },
   { size: "Custom", name: "Custom to Specification", use: "Bespoke sizes for hotel fit-out, healthcare dimensions", market: "Contract projects worldwide" },
 ];
 

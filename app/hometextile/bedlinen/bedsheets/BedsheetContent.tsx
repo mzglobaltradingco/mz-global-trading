@@ -183,10 +183,10 @@ const TC_TIERS = [
 ];
 
 const BED_SIZES_US = [
-  { name: "Twin / Single", dim: "96 × 183 cm", note: "39″ × 72″ — studio / single" },
+  { name: "Twin / Single", dim: "96 × 190 cm", note: "38″ × 75″ — studio / single" },
   { name: "Full / Double", dim: "137 × 190 cm", note: "54″ × 75″ — small double" },
   { name: "Queen", dim: "152 × 203 cm", note: "60″ × 80″ — most ordered US size" },
-  { name: "King", dim: "183 × 203 cm", note: "76″ × 80″ — premium US bedding" },
+  { name: "King", dim: "193 × 203 cm", note: "76″ × 80″ — premium US bedding" },
   { name: "Cal King", dim: "183 × 213 cm", note: "72″ × 84″ — California King" },
 ];
 

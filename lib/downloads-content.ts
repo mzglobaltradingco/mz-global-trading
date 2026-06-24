@@ -741,7 +741,7 @@ export const DOWNLOAD_DOCS: DownloadDoc[] = [
       { type: "h2", text: "7. Standard Terry Towel Sizes — Reference" },
       { type: "table", headers: ["Product", "Standard size (cm)", "Common US size (inches)"], rows: [
         ["Face towel / flannel", "30 × 30 cm", "12\" × 12\""],
-        ["Hand towel", "50 × 100 cm", "16\" × 28\" or 20\" × 30\""],
+        ["Hand towel", "40 × 70 cm", "16\" × 28\""],
         ["Bath towel (standard)", "70 × 140 cm", "27\" × 54\""],
         ["Bath towel (large)", "76 × 152 cm", "30\" × 60\""],
         ["Bath sheet", "90 × 180 cm", "35\" × 70\""],
@@ -753,7 +753,7 @@ export const DOWNLOAD_DOCS: DownloadDoc[] = [
       { type: "table", headers: ["GSM range", "Typical application", "Durability under institutional laundering"], rows: [
         ["300–400 GSM", "Budget institutional, healthcare, promotional", "Good — 100+ wash cycles"],
         ["400–500 GSM", "Mid-market hospitality, gym, 4-star hotel", "Very good — 150+ wash cycles"],
-        ["500–600 GSM", "5-star hotel, UK/EU premium retail", "Excellent — 200+ wash cycles"],
+        ["500–600 GSM", "Full-service / upscale hotel, UK/EU premium retail", "Excellent — 200+ wash cycles"],
         ["600–750 GSM", "Luxury hotel, spa, department store retail", "Excellent — plush feel retained 150+ cycles"],
         ["750–900 GSM", "Ultra-luxury, spa, high-end gift retail", "Good — optimised for feel over durability"],
       ]},
@@ -827,10 +827,10 @@ export const DOWNLOAD_DOCS: DownloadDoc[] = [
       { type: "h2", text: "6. Standard Institutional Sizes Reference" },
       { type: "table", headers: ["Product", "Standard size (cm)", "Common institutional GSM"], rows: [
         ["Face cloth / flannel", "30 × 30 cm", "300–380 GSM"],
-        ["Hand towel", "50 × 100 cm", "380–450 GSM"],
+        ["Hand towel", "40 × 70 cm", "380–450 GSM"],
         ["Bath towel (hospital)", "70 × 140 cm", "400–450 GSM"],
         ["Bath towel (4-star hotel)", "70 × 140 cm", "450–500 GSM"],
-        ["Bath towel (5-star hotel)", "70 × 140 cm", "550–600 GSM"],
+        ["Bath towel (5-star hotel)", "70 × 140 cm", "600–700 GSM"],
         ["Bath sheet", "90 × 180 cm", "550–650 GSM"],
         ["Gym / fitness towel", "50 × 100 cm", "350–430 GSM"],
         ["Bath mat", "50 × 80 cm", "800–1,200 GSM (separate spec)"],

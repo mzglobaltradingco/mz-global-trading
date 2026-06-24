@@ -926,6 +926,139 @@ Note: Arbitrary-size classes like `text-[10px]` are NOT matched by this CSS — 
 
 ---
 
+## Content Accuracy Review — Progress Tracker
+
+Full site content audit: 46 leaf pages + 138 KH/guide/download pieces. Validated against authenticated B2B sources. Each cluster logged below with corrections made.
+
+### Cluster 1 — Bath Linen
+
+#### Towels ✅
+- Gym Towel size: 50×100 → 70×130 cm (CLAUDE.md documented error now applied to TowelsContent.tsx)
+- Bath Sheet size: 90×150 → 90×180 cm (industry standard 35"×70" = 89×178 cm)
+- Luxury GSM range: 550–650 → 550–700 (5-star hotel standard is 600–700 per multiple B2B sources)
+- FAQ: 5-star GSM "550–650 in zero twist" → "600–700 GSM in ring-spun combed or zero twist"
+- Sports/Gym sector: added microfiber note (80% polyester/20% polyamide, standard for gym programmes)
+- KH article: 500–600 GSM tier relabelled from "5-star standard" to "Full-service & Upscale Hotels"; 600–700 tier updated to "5-star Hotel Standard & Luxury"; certification table corrected (USA 5-star: 550–600 → 600–700 GSM)
+- Guide: GSM table corrected — "5-star hotel & premium retail" tier shifted from 500–600 to 600–750 bracket
+- Download: Hand towel size corrected from 50×100 cm (gym towel size) to 40×70 cm; download GSM table "5-star hotel" label corrected to "full-service / upscale hotel"
+
+#### Institutional Towels ✅
+- KH article: 5-star GSM "550–600 minimum" → "600–700 minimum" (aligns with Towels correction)
+- KH article: dobby border "30–40% longer life" → "measurably extends laundry life" (unverifiable specific figure removed)
+- Guide: hospital hand towel size 50×100 cm → 40×70 cm (50×100 is a gym towel size, not a hospital hand towel)
+- Download: hand towel 50×100 → 40×70 cm; 5-star hotel bath towel GSM 550–600 → 600–700
+
+#### Bathrobes ✅
+- KH article comparison table: velour typical GSM range 280–380 → 280–480 (product page specifies luxury velour at 400–480 GSM; table widened to cover full range)
+
+#### Bath Mats ✅
+- Product page: large bath mat 60×100 cm → 60×90 cm (60×100 not a real standard per CLAUDE.md RFQ corrections)
+- KH article intro: "600 GSM tufted terry" → "1,000 GSM tufted terry" (600 GSM is below the stated range start of 800 GSM for tufted terry)
+- KH article: "1,200–1,400 GSM is standard 5-star hotel specification" → "1,000–1,200 GSM is the standard hotel contract specification; 1,200–1,400 GSM for 5-star and luxury" (aligns with product page GSM_TIERS)
+
+#### Beach & Pool Towels ✅
+- Product page: Standard size 75×150 cm → 70×140 cm (corrected per CLAUDE.md RFQ corrections — 75×150 non-standard; 70×140 is global retail standard)
+
+### Cluster 2 — Bed Linen
+#### Bedsheets ✅
+- Product page BED_SIZES_US: Twin 96×183 cm → 96×190 cm; King 183×203 cm → 193×203 cm (corrected in previous session per CLAUDE.md)
+
+#### Fitted Sheets ✅
+- Product page POCKET_DEPTHS: first entry 12"/30 cm "Standard" → 14"/35 cm "Residential Standard" (30 cm too shallow for residential mattresses); second entry 15" → 16" (aligns with CLAUDE.md sequence: 14→16→18→21→25+)
+- Product page OEM_MODULES: "12, 15, 18, 21 or 26+" → "14, 16, 18, 21 or 26+" inch pocket depth
+- Sibling references across DuvetCoversContent, PillowCoversContent, InstitutionalBeddingContent: "12 to 26" → "14 to 26" inch
+- KH article: clean — no corrections needed (uses range descriptions, not minimums)
+- Guide: clean — no corrections needed
+
+#### Duvet Covers ✅
+- No corrections needed — content accurate
+
+#### Pillow Covers ✅
+- Product page SIZES USA: Standard 50×75 cm → 51×66 cm; Queen 50×90 cm → 51×76 cm; King 50×102 cm → 51×91 cm (page was using UK sizes for USA market; corrected to match download reference and guide data)
+- Bathrobe KH article (bathrobe-fabric-types.ts): body text velour GSM "typically 280–380" → "typically 280–480 GSM (luxury velour at 400–480 GSM)" to match comparison table already corrected in previous session
+
+#### Cushion Covers ✅
+- No corrections needed
+
+#### Curtains ✅
+- No corrections needed
+
+### Cluster 3 — Hospital Linen
+#### Doctor Surgical Gowns ✅
+- No corrections needed — constructions, GSM, AAMI/EN 13795 standards, autoclave temperatures all accurate
+
+#### Medical Scrubs ✅
+- No corrections needed — GSM tiers, construction options, colour programme accurate
+
+#### Patient Gowns ✅
+- No corrections needed — minor GSM range variation (KH 100–160 vs page 120–180) is contextual: KH covers woven only; page includes jersey knit gowns
+
+#### Surgical Huck Towels ✅
+- No corrections needed — product page (180–280 GSM, standard 220 GSM) and KH (130–180 GSM standard) represent premium vs. general clinical tiers respectively
+
+### Cluster 4 — Kitchen Linen ✅
+#### Kitchen Towels ✅ — No corrections needed
+#### Bar Mops ✅ — No corrections needed
+#### Aprons ✅ — No corrections needed
+#### Pot Holders ✅ — No corrections needed
+
+### Cluster 5 — Table Linen ✅
+#### Table Covers ✅ — No corrections needed
+
+### Cluster 6 — Thermal Blankets ✅
+#### Cellular Thermal Blanket ✅ — No corrections needed
+#### Fleece Thermal Blankets ✅ — No corrections needed
+
+### Cluster 7 — Industrial Linen ✅
+#### Shop Towels ✅ — No corrections needed
+#### Fender Covers ✅ — No corrections needed
+
+### Cluster 8 — Ihram ✅
+#### Ihram ✅ — No corrections needed (warp-knit construction confirmed as accurate per user correction in prior session)
+
+### Cluster 9 — Knitted Garments ✅
+#### T-Shirts ✅ — No corrections needed (product page and KH/guide/download all consistent)
+#### Polo Shirts ✅ — No corrections needed
+#### Henley Shirts ✅ — No corrections needed
+#### Sweatshirts & Hoodies ✅ — Guide corrected: `lib/guides-content.ts` hoodie-sweatshirt-sourcing-pakistan — French terry 260–380 → 300–400 GSM; brushed fleece 280–380 → 340–420 GSM (both paragraph text and table rows); aligns with HoodiesContent.tsx GSM_TIERS
+#### Sweatpants & Joggers ✅ — No corrections needed
+#### Tank Tops ✅ — No corrections needed
+
+### Cluster 10 — Woven Garments ✅
+#### Denim Jeans ✅ — No corrections needed (denim-weight-guide.ts uses correct 1 oz = 33.9 GSM constant)
+#### Formal & Casual Shirts ✅ — No corrections needed
+#### Pants & Trousers ✅ — No corrections needed
+#### Cargo Pants ✅ — No corrections needed
+#### Shorts ✅ — KH article corrected: `content/knowledge/shorts-fabric-guide.ts` — chino GSM 220–280 → 200–260; linen GSM 180–240 → 160–200 (both inline text and summary table); inline commentary bounds also updated from "Below 220/above 280" → "Below 200/above 260"; aligns with ShortsContent.tsx GSM_TIERS
+
+### Cluster 11 — Baby & Kids ✅
+#### T-Shirts for Kids ✅ — No corrections needed
+#### Swaddle Muslin Fabric ✅ — Two files corrected:
+  - `content/knowledge/muslin-swaddle-fabric-guide.ts`: double gauze GSM table 140–160 → 110–130 (lightweight), 160–200 → 130–160 (standard); swaddle sizing 70×70 cm → 100×100 cm (70×70 is a muslin square, not a swaddle blanket)
+  - `lib/guides-content.ts` sourcing-swaddle-muslin-pakistan: double gauze 140–200 → 110–160 GSM; bamboo ratio 50/50 → 70/30 (per SwaddleMuslinContent.tsx); sizing 70×70/120×120 → 100×100/120×120/47"×47"
+#### Overalls ✅ — Product page corrected: `app/apparel/babyandkids/overalls/OverallsContent.tsx` GSM_TIERS oz/GSM conversions — 7–9 oz ~150–200 → ~240–305 gsm; 9–11 oz ~200–280 → ~305–375 gsm; 11–14 oz ~280–340 → ~375–475 gsm (conversion: 1 oz = 33.9 GSM; previous values were ~40% too low)
+#### Baby Rompers ✅ — No corrections needed
+#### Baby Bibs ✅ — No corrections needed
+#### Baby Hooded Towels ✅ — No corrections needed
+
+### Cluster 12 — Workwear Apparel ✅
+#### Workwear Apparel ✅ — No corrections needed (canvas 280–400, GSM tiers, FR standards all accurate)
+
+### Cluster 13 — Socks ✅
+#### Socks ✅ — No corrections needed (gauge, compression class definitions 15–21/23–32/34–46 mmHg all accurate)
+
+### Cluster 14 — Fabric ✅
+#### Apparel Fabric ✅ — KH article corrected: `content/knowledge/apparel-fabric-types-guide.ts`:
+  - Single jersey 120–220 → 120–200 GSM (bullet and table row); aligns with ApparelFabricContent.tsx
+  - Interlock 180–280 → 160–280 GSM (bullet); aligns with ApparelFabricContent.tsx lower bound of 160
+  - French terry 240–320 → 260–400 GSM (bullet and table row); 240 GSM too light for sweatshirt terry; aligns with corrected hoodie guide range
+  - Denim oz/GSM 280–490 → 271–475 gsm (table row); correct conversion: 8oz × 33.9 = 271 GSM; 14oz × 33.9 = 475 GSM
+#### Home Textile Fabric ✅ — Two files corrected:
+  - `content/knowledge/home-textile-fabric-guide.ts`: terry upper bound 800 → 700 GSM (text tiers and table row); HomeTextileFabricContent.tsx and TowelsContent.tsx both cap at 700 GSM; 700–800 "luxury spa" tier removed
+  - `lib/guides-content.ts` sourcing-home-textile-fabric-pakistan: terry table row 300–800 → 300–700 GSM
+
+---
+
 ## Known Bugs Fixed — Do Not Repeat
 
 These bugs were each reported multiple times. Understand the root cause so they are never introduced again.
@@ -1735,3 +1868,52 @@ Pages without specific content yet: KH box links to `/knowledge/`, Guide to `/gu
 | Workwear Apparel ✅ | 1 | 1/1 | 1/1 | 1/1 | 1/1 |
 | Socks ✅ | 1 | 1/1 | 1/1 | 1/1 | 1/1 |
 | **TOTAL** | **46** | **46/46** | **46/46** | **46/46** | **46/46** |
+
+---
+
+## A-Z Content Accuracy Review — In Progress (2026-06-24)
+
+**Scope:** All 46 product leaf pages + their KH articles, guides, and downloads.
+**Approved changes:** (1) Unverifiable claims → softened/removed. (2) Factual errors corrected using authenticated sources only. (3) Microfiber/poly-cotton added where source-confirmed. (4) Woven/knit construction sections added where applicable. (5) Leaf pages + KH/guide/downloads only (no cluster/pillar pages). (6) Single commit after all 14 clusters complete.
+
+**Status key:** ✅ Complete · 🔄 In progress
+
+### Cluster 1 — Bath Linen ✅
+- Towels, Institutional Towels, Bathrobes, Bath Mats, Beach & Pool Towels
+- **Bathrobe KH article** (`bathrobe-fabric-types.ts`): body text velour GSM range corrected to 280–480 GSM (was 280–380 — stale value after table was fixed in prior session)
+- All other pages, KH articles, guides, downloads: clean
+
+### Cluster 2 — Bed Linen ✅
+- Bedsheets, Fitted Sheets, Duvet Covers, Pillow Covers, Cushion Covers, Curtains
+- **Fitted Sheets** (`FittedSheetsContent.tsx`): POCKET_DEPTHS first entry corrected 12"/30 cm → 14"/35 cm per CLAUDE.md RFQ data accuracy section; OEM_MODULES text updated "12, 15, 18, 21 or 26+" → "14, 16, 18, 21 or 26+"
+- **Duvet Covers** (`DuvetCoversContent.tsx`): sibling reference "12\" to 26\"" → "14\" to 26\""
+- **Pillow Covers** (`PillowCoversContent.tsx`): USA sizes corrected (were using UK dimensions): Standard 50×75 → 51×66 cm, Queen 50×90 → 51×76 cm, King 50×102 → 51×91 cm per download reference
+- **Institutional Bedding** (`InstitutionalBeddingContent.tsx`): sibling reference "12 to 26+" → "14 to 26+" inches
+- All other pages, KH articles, guides, downloads: clean
+
+### Cluster 3 — Hospital Linen ✅
+- Doctor Surgical Gowns, Medical Scrubs, Patient Gowns, Surgical Huck Towels
+- No corrections required — all data verified accurate (AAMI PB70, EN 13795, ISO 13485, autoclave temps at 121°C/134°C all correct)
+
+### Cluster 4 — Kitchen Linen ✅
+- Kitchen Towels, Bar Mops, Aprons, Pot Holders
+- No corrections required — all GSM ranges, sizes, heat ratings, and standards verified accurate
+
+### Cluster 5 — Table Linen ✅
+- Table Covers
+- No corrections required — all construction GSM ranges, tablecloth sizes, and FR standards verified accurate
+
+### Cluster 6 — Thermal Blankets ✅
+- Cellular Thermal Blanket, Fleece Thermal Blankets
+- **Cellular Blanket KH article** (`cellular-blanket-guide.ts`): GSM table corrected — 150–220/220–300/300–380 → 150–180/180–210/210–250 GSM (aligned with product page: NHS ward standard = 180–210 GSM, not 220–300); sizes table corrected — Hospital single 120×150 → 150×200 cm, Hospital double 150×200 → 180×200 cm, Cot/infant 100×120 → 75×100 cm
+- **Cellular Blanket Guide** (`sourcing-cellular-blankets-pakistan` in guides-content.ts): same GSM table and sizes table corrected to match product page
+- Fleece Blanket product page, KH article, guide, download: all clean
+
+### Cluster 7 — Industrial Linen 🔄
+### Cluster 8 — Ihram 🔄
+### Cluster 9 — Knitted Garments 🔄
+### Cluster 10 — Woven Garments 🔄
+### Cluster 11 — Baby & Kids 🔄
+### Cluster 12 — Workwear Apparel 🔄
+### Cluster 13 — Socks 🔄
+### Cluster 14 — Fabric 🔄

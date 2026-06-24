@@ -32,8 +32,8 @@ Double gauze consists of two single-layer muslin cloths bonded together at weavi
 |---|---|---|---|---|
 | 80–100 GSM | Single muslin | Moderate — improves after 3–5 washes | Mass retail multi-pack, promotional | USA, Australia, Middle East |
 | 100–120 GSM | Single muslin (heavier) | Good — good initial handfeel | Retail single-pack, specialty baby store | USA, UK, Canada |
-| 140–160 GSM | Double gauze (lighter) | Excellent — notably soft from first use | Premium retail, branded baby gift sets | UK, EU, Japan |
-| 160–200 GSM | Double gauze (standard/heavy) | Superior — lasting softness over many washes | Luxury gift packaging, brand flagship items | Germany, Scandinavia, Japan, premium UK |
+| 110–130 GSM | Double gauze (lightweight) | Excellent — notably soft from first use | Premium retail, branded baby gift sets | UK, EU, Japan |
+| 130–160 GSM | Double gauze (standard) | Superior — lasting softness over many washes | Luxury gift packaging, brand flagship items | Germany, Scandinavia, Japan, premium UK |
 
 ## Fibre Content Options
 
@@ -63,7 +63,7 @@ For [swaddle muslin and other baby products from the Pakistan range](/apparel/ba
 
 ## Sizing and Packaging
 
-Standard swaddle sizes: **70×70 cm** (infant swaddle — suitable for newborn to approximately 3 months), **120×120 cm** (large swaddle blanket — suitable through 12 months and beyond as a play mat or nursing cover). Some programmes include a **100×100 cm** transitional size.
+Standard swaddle sizes: **100×100 cm** (compact infant swaddle — suitable for newborn through 6 months), **120×120 cm** (standard swaddle blanket — suitable through 12 months and beyond as a play mat or nursing cover). US programmes commonly use **47"×47"** (119×119 cm) as the standard size.
 
 Gift presentation formats: single swaddle in a kraft band and a paper bag, a set of 3 or 5 in a gift box, or a gift set combining swaddle, bib and washcloth in an organza bag or a branded gift box. All packaging materials must also be OEKO-TEX compliant if in direct contact with the swaddle.
 

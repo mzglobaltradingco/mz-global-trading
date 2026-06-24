@@ -133,8 +133,8 @@ const CONSTRUCTIONS = [
 ];
 
 const POCKET_DEPTHS = [
-  { depth: '12"', cm: "30 cm", name: "Standard", mattress: "Standard mattress 18–23 cm thick", elastic: "1.5 cm standard elastic", market: "Budget retail · Basic hotel · Standard mattresses", featured: false },
-  { depth: '15"', cm: "38 cm", name: "Mid-Depth", mattress: "Mid-depth mattress + thin memory topper", elastic: "2 cm reinforced elastic", market: "Mainstream retail · Mid-range hotel", featured: false },
+  { depth: '14"', cm: "35 cm", name: "Residential Standard", mattress: "Standard mattress 20–25 cm — USA/UK/EU residential minimum", elastic: "1.5–2 cm standard elastic", market: "USA · UK · EU / AU residential standard · Hotel entry-level", featured: false },
+  { depth: '16"', cm: "41 cm", name: "Mid-Depth", mattress: "Mid-depth mattress + thin memory topper", elastic: "2 cm reinforced elastic", market: "Mainstream retail · Mid-range hotel", featured: false },
   { depth: '18"', cm: "46 cm", name: "Deep Pocket", mattress: "Deep mattress 25–30 cm + memory foam", elastic: "2 cm all-around elastic", market: "Premium hotel · Memory foam retail · USA mainstream", featured: true },
   { depth: '21"', cm: "53 cm", name: "Extra Deep", mattress: "Extra-deep mattress + pillow-top topper", elastic: "2.5 cm reinforced all-around", market: "Luxury hotel · Platform beds · Premium lifestyle retail", featured: false },
   { depth: '26"+', cm: "66 cm+", name: "Ultra Deep", mattress: "Dual mattress / thick pillow-top / RV beds", elastic: "2.5 cm heavy-duty elastic", market: "Specialist deep-pocket retail · Luxury hospitality", featured: false },
@@ -163,7 +163,7 @@ const DYE_OPTIONS = [
 
 const OEM_MODULES = [
   { num: "01", title: "Elastic Specification", desc: "Width, tension and type — standard (1.5 cm), reinforced (2 cm), heavy-duty (2.5 cm). All-around or corner-only elastic." },
-  { num: "02", title: "Pocket Depth Customisation", desc: "12, 15, 18, 21 or 26+ inch pocket depth to match your mattress range. Custom depth on request with confirmed mattress dimension." },
+  { num: "02", title: "Pocket Depth Customisation", desc: "14, 16, 18, 21 or 26+ inch pocket depth to match your mattress range. Custom depth on request with confirmed mattress dimension." },
   { num: "03", title: "TC & Construction", desc: "Thread count, weave type, fibre blend and yarn quality all specified to your brief. Ring-spun combed cotton options available." },
   { num: "04", title: "Corner Pocket Configuration", desc: "Mitered corners vs. box corners; elastic at corners vs. all-around. Configuration selected to match your mattress type and market." },
   { num: "05", title: "Label Programme", desc: "Woven care labels in market language (EN / DE / FR / AR etc.), neck label, hang tag and bed-pocket ID to your brand spec." },

@@ -14,11 +14,11 @@ const post: KnowledgePost = {
   featured: false,
   content: `## Chino Shorts
 
-Chino shorts are the highest-volume shorts construction in retail globally — a cotton twill short in the 220–280 GSM range sold as casual wear across USA, UK, EU, Australia and the Middle East.
+Chino shorts are the highest-volume shorts construction in retail globally — a cotton twill short in the 200–260 GSM range sold as casual wear across USA, UK, EU, Australia and the Middle East.
 
 **Fabric:** 100% cotton twill, or cotton/elastane (97/3) for slim-fit versions. Dyed to solid colour, occasionally with woven stripe or check.
 
-**GSM:** 220–280 GSM. Below 220 GSM, the short lacks structure; above 280 GSM, it becomes a utility weight more appropriate for workwear.
+**GSM:** 200–260 GSM. Below 200 GSM, the short lacks structure; above 260 GSM, it becomes a utility weight more appropriate for workwear.
 
 **Finish:** Enzyme washed for soft hand feel. Garment-dyed options are available for vintage and overdyed retail programmes.
 
@@ -39,7 +39,7 @@ Linen shorts command a retail price premium in UK, European, Australian and Sout
 - 70% linen / 30% cotton: More linen character; higher premium positioning
 - 100% linen: Maximum texture and luxury positioning; maximum care requirements
 
-**GSM:** 180–240 GSM.
+**GSM:** 160–200 GSM.
 
 **Care:** Linen creases readily. For retail markets where easy-care performance is expected, specify a linen-cotton blend over 100% linen and include care label guidance on the Tech Pack.
 
@@ -80,8 +80,8 @@ Athletic shorts for gym, running and sports programmes use performance knit and 
 
 | Type | Fabric | GSM | Inseam range | Lining | Markets |
 |---|---|---|---|---|---|
-| Chino shorts | Cotton twill / cotton-elastane | 220–280 | 5–9 in | None | USA, UK, EU, Australia |
-| Linen shorts | Linen / linen-cotton blend | 180–240 | 5–7 in | None | UK, EU, Australia, South America |
+| Chino shorts | Cotton twill / cotton-elastane | 200–260 | 5–9 in | None | USA, UK, EU, Australia |
+| Linen shorts | Linen / linen-cotton blend | 160–200 | 5–7 in | None | UK, EU, Australia, South America |
 | Swim shorts | 100% polyester or nylon | 120–200 | 6–10 in | Mesh brief | USA, UK, Australia, Middle East |
 | Athletic shorts | Polyester / poly-spandex | 130–180 | 3–7 in | Optional mesh | USA, UK, EU, Australia |
 | Workwear shorts | Cotton canvas / cotton-poly | 260–340 | 7–10 in | None | USA, UK workwear distributors |

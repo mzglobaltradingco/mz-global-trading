@@ -1630,8 +1630,8 @@ export const GUIDES: GuideArticle[] = [
       { type: "table", headers: ["Application", "GSM range", "Common markets"], rows: [
         ["Budget institutional / healthcare", "300–400 GSM", "USA healthcare procurement, SE Asia hospitality"],
         ["Mid-market hospitality (4-star)", "400–500 GSM", "USA mid-market retail, UK hospitality, EU chains"],
-        ["5-star hotel & premium retail", "500–600 GSM", "UAE, Saudi, USA/UK 5-star, EU department stores"],
-        ["Luxury boutique & spa programs", "600–750 GSM", "UAE luxury, Australian premium retail, UK boutiques"],
+        ["Full-service & upscale hotels, premium retail", "500–600 GSM", "USA/UK upscale hotel programmes, EU department stores"],
+        ["5-star hotel & luxury boutique programmes", "600–750 GSM", "UAE, Saudi 5-star, Australian premium retail, UK boutiques"],
         ["Ultra-luxury & specialty gift", "750–900 GSM", "Japan, South Korea, high-end EU gift retail"],
       ]},
       { type: "h2", text: "Step 3 — Mill Selection and Certification Verification" },
@@ -1726,7 +1726,7 @@ export const GUIDES: GuideArticle[] = [
       { type: "h3", text: "Hospital & Healthcare" },
       { type: "ul", items: [
         "GSM: 320–450 GSM — designed for high-frequency laundering at 71°C–95°C",
-        "Size: Face cloths (30×30 cm), hand towels (50×100 cm), bath towels (70×140 cm)",
+        "Size: Face cloths (30×30 cm), hand towels (40×70 cm), bath towels (70×140 cm)",
         "Construction: Loop pile terry — velour not suitable for clinical environments",
         "Colour: White (universally preferred for infection control), or colour-coded by ward",
         "Packing: 24 or 48 pieces per case, no retail packaging",
@@ -2757,9 +2757,9 @@ export const GUIDES: GuideArticle[] = [
       { type: "h2", text: "Step 2 — GSM Selection by Application" },
       { type: "p", text: "GSM in <a href=\"/hometextile/thermalblankets/cellular/\">cellular blankets</a> determines weight and thermal performance — but unlike solid-weave blankets, a lower GSM cellular blanket can outperform a higher GSM plain blanket thermally because of the air-trapping open-weave structure. The <a href=\"/knowledge/cellular-blanket-guide/\">cellular blanket guide</a> explains this relationship in detail." },
       { type: "table", headers: ["GSM", "Thermal rating", "Application"], rows: [
-        ["150–220 GSM", "Light", "Airline, warm climate institutional, coastal care home"],
-        ["220–300 GSM", "Medium", "NHS hospital ward standard, budget hotel, ambulance"],
-        ["300–380 GSM", "Heavy", "Long-term care ward, cold climate institutional"],
+        ["150–180 GSM", "Light", "NICU / paediatric ward, airline travel, warm climate institutional"],
+        ["180–210 GSM", "Standard", "NHS hospital ward standard, budget hotel, ambulance"],
+        ["210–250 GSM", "Medium-heavy", "High-dependency unit, long-term care ward, cold climate institutional"],
       ]},
       { type: "h2", text: "Step 3 — Cotton Specification for Healthcare" },
       { type: "ul", items: [
@@ -2771,9 +2771,9 @@ export const GUIDES: GuideArticle[] = [
       ]},
       { type: "h2", text: "Step 4 — Standard Sizes" },
       { type: "table", headers: ["Application", "Size", "Notes"], rows: [
-        ["NHS hospital single", "120×150 cm", "UK standard — verify with end customer before ordering"],
-        ["NHS hospital double", "150×200 cm", "For wider hospital beds"],
-        ["Cot / paediatric", "100×120 cm", "Paediatric ward standard"],
+        ["NHS hospital single", "150×200 cm", "Standard adult ward — full single-bed coverage"],
+        ["NHS hospital double", "180×200 cm", "Wider hospital beds, bariatric care"],
+        ["Cot / paediatric", "75×100 cm", "NICU, paediatric ward, infant transport"],
         ["Airline / travel", "130×150 cm", "Folded compact for tray-table service"],
         ["Hotel supplemental", "150×200 cm", "Budget hotel foot-of-bed or turn-down"],
       ]},
@@ -3374,10 +3374,10 @@ export const GUIDES: GuideArticle[] = [
     blocks: [
       { type: "p", text: "<a href=\"/apparel/knittedgarments/sweatshirtshoodies/\">Sweatshirts and hoodies from Pakistan</a> are exported across all market tiers — from mass retail basics to premium fashion and athletic programmes. Pakistan's knitwear clusters produce all primary fleece constructions: French terry, brushed fleece, polar fleece and sherpa. This guide covers how to specify a sweatshirt or hoodie programme for the international market." },
       { type: "h2", text: "Step 1 — Fleece Construction and GSM" },
-      { type: "p", text: "French terry (loop-back): smooth face, looped back, 260–380 GSM — the premium construction for retail and fashion programmes. Brushed fleece (standard sweatshirt fleece): the brushed interior creates a napped pile, 280–380 GSM — the most common construction for retail basics. Polar fleece (100% polyester): excellent warmth-to-weight, 200–400 GSM, particularly suited for promotional and outdoor programmes. Sherpa fleece: curly pile interior, 300–500 GSM, premium winter and gift-market positioning." },
+      { type: "p", text: "French terry (loop-back): smooth face, looped back, 300–400 GSM — the premium construction for retail and fashion programmes. Brushed fleece (standard sweatshirt fleece): the brushed interior creates a napped pile, 340–420 GSM — the most common construction for retail basics. Polar fleece (100% polyester): excellent warmth-to-weight, 200–400 GSM, particularly suited for promotional and outdoor programmes. Sherpa fleece: curly pile interior, 300–500 GSM, premium winter and gift-market positioning." },
       { type: "table", headers: ["Construction", "GSM range", "Interior", "Best application", "Markets"], rows: [
-        ["French terry", "260–380", "Smooth loops", "Fashion retail, sportswear", "USA, UK, EU, Japan"],
-        ["Brushed fleece", "280–380", "Napped soft pile", "Mass retail basics", "USA, EU, Australia, Middle East"],
+        ["French terry", "300–400", "Smooth loops", "Fashion retail, sportswear", "USA, UK, EU, Japan"],
+        ["Brushed fleece", "340–420", "Napped soft pile", "Mass retail basics", "USA, EU, Australia, Middle East"],
         ["Polar fleece", "200–400", "Brushed microfibre", "Outdoor, promotional", "USA, Canada, EU, Russia"],
         ["Sherpa fleece", "300–500", "Curly pile", "Premium winter, gift market", "USA, UK, EU, Canada"],
       ]},
@@ -3749,12 +3749,12 @@ export const GUIDES: GuideArticle[] = [
     blocks: [
       { type: "p", text: "<a href=\"/apparel/babyandkids/swaddlemuslinfabric/\">Swaddle muslin from Pakistan</a> is supplied to baby product retailers, gift shops and baby box subscription companies in the USA, UK, EU, Canada and Australia. Pakistan's cotton textile mills produce single-layer muslin and double gauze in 100% cotton, GOTS organic cotton and bamboo-cotton blends. This guide covers specification decisions from construction through to packaging." },
       { type: "h2", text: "Step 1 — Construction Selection: Single Layer vs Double Gauze" },
-      { type: "p", text: "Single-layer muslin: plain weave, 80–120 GSM, very lightweight and breathable — suited for warm climates and summer retail. Double gauze: two layers of single muslin thermally bonded together, 140–200 GSM — significantly softer, more durable and dramatically improves in feel with each wash cycle. Double gauze is the standard for premium gift-market swaddle programmes in the UK, USA and EU." },
+      { type: "p", text: "Single-layer muslin: plain weave, 80–120 GSM, very lightweight and breathable — suited for warm climates and summer retail. Double gauze: two layers of single muslin thermally bonded together, 110–160 GSM — significantly softer, more durable and dramatically improves in feel with each wash cycle. Double gauze is the standard for premium gift-market swaddle programmes in the UK, USA and EU." },
       { type: "h2", text: "Step 2 — Fibre Content Options" },
       { type: "table", headers: ["Fibre", "Construction", "OEKO-TEX", "GOTS eligible", "Positioning"], rows: [
         ["100% cotton", "Single layer or double gauze", "Class 1", "Yes (if certified)", "Standard retail"],
         ["GOTS organic cotton", "Single layer or double gauze", "Class 1", "Yes", "Premium, eco-retail"],
-        ["50% bamboo / 50% cotton", "Double gauze", "Class 1", "No (bamboo not GOTS)", "Ultra-soft, premium"],
+        ["70% bamboo viscose / 30% cotton", "Double gauze", "Class 1", "No (bamboo not GOTS)", "Ultra-soft, premium"],
         ["100% bamboo", "Single layer", "Class 1", "No", "Eco-premium, specialty"],
       ]},
       { type: "h2", text: "Step 3 — Certification Requirements" },
@@ -3762,7 +3762,7 @@ export const GUIDES: GuideArticle[] = [
       { type: "h2", text: "Step 4 — Print Specification" },
       { type: "p", text: "Reactive print only on OEKO-TEX Class 1 swaddle muslin — pigment print uses binders that increase formaldehyde residue and may not meet Class 1 limits. Specify print coverage (% of fabric area), design repeat size and colour count. Digital reactive print: for photographic or detailed designs with minimum repeat constraints. Rotary screen print: for geometric, simple and stripe designs at volume — lower cost per unit for large runs." },
       { type: "h2", text: "Step 5 — Sizing and Packaging" },
-      { type: "p", text: "Standard swaddle: 70×70 cm (EU gift market), 120×120 cm (USA large swaddle standard). Multi-pack sets: 3-pack or 5-pack in a gift box — specify box dimensions, insert card printing requirements and window or solid-top box. Muslin pouch: organic cotton drawstring bag for premium single-piece presentation. Care label: machine wash 40°C, do not tumble dry on first wash — specify in all relevant languages." },
+      { type: "p", text: "Standard swaddle: 100×100 cm (compact infant swaddle), 120×120 cm (standard swaddle blanket), 47\"×47\" (119×119 cm — USA standard). Multi-pack sets: 3-pack or 5-pack in a gift box — specify box dimensions, insert card printing requirements and window or solid-top box. Muslin pouch: organic cotton drawstring bag for premium single-piece presentation. Care label: machine wash 40°C, do not tumble dry on first wash — specify in all relevant languages." },
       { type: "seealso", title: "Related Products & Guides", links: [
         { text: "Swaddle Muslin Fabric from Pakistan", href: "/apparel/babyandkids/swaddlemuslinfabric/", description: "GOTS certified swaddle muslin from Pakistan in organic cotton and double gauze" },
         { text: "Muslin Swaddle Fabric Guide", href: "/knowledge/muslin-swaddle-fabric-guide/", description: "GSM, single vs double gauze and OEKO-TEX Class 1 certification explained" },
@@ -4065,7 +4065,7 @@ export const GUIDES: GuideArticle[] = [
       { type: "p", text: "<a href=\"/fabric/hometextilefabric/\">Home textile fabric from Pakistan</a> is sourced by towel converters, bed linen manufacturers and kitchen linen producers globally. Pakistan's vertically integrated textile mills — particularly in Karachi and Faisalabad — produce world-class terry, percale, sateen and woven home textile fabrics. This guide covers specification decisions for buying home textile fabric by the roll from Pakistan." },
       { type: "h2", text: "Step 1 — Fabric Category and Construction" },
       { type: "table", headers: ["Fabric", "Construction", "GSM", "Width", "Application"], rows: [
-        ["Terry (for towels)", "Loop pile on ground weave", "300–800 GSM", "140–160 cm", "Bath, hand, beach towels"],
+        ["Terry (for towels)", "Loop pile on ground weave", "300–700 GSM", "140–160 cm", "Bath, hand, beach towels"],
         ["Percale (for bed linen)", "Plain weave, 60s–100s yarn", "80–130 GSM", "240–280 cm", "Flat sheets, pillowcases"],
         ["Sateen (for bed linen)", "4/1 satin weave on cotton", "90–150 GSM", "240–280 cm", "Premium sheets, duvet covers"],
         ["Waffle weave (kitchen/bath)", "Dobby loom grid", "120–200 GSM", "140–160 cm", "Kitchen towels, bathrobes"],

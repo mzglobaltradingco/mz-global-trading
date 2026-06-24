@@ -139,7 +139,7 @@ const CONSTRUCTIONS = [
 ];
 
 const SIZE_OPTIONS = [
-  { size: "Standard", dims: "75 × 150 cm", equiv: '30 × 59"', bestFor: "Pool lounger, casual beach", note: "Most ordered" },
+  { size: "Standard", dims: "70 × 140 cm", equiv: '27 × 55"', bestFor: "Pool lounger, casual beach", note: "Most ordered" },
   { size: "Large", dims: "90 × 170 cm", equiv: '35 × 67"', bestFor: "Resort sun deck, lounger", note: "Resort standard" },
   { size: "Oversized", dims: "100 × 180 cm", equiv: '39 × 71"', bestFor: "Luxury hotel, premium retail", note: "Volume capable" },
   { size: "Kids", dims: "60 × 120 cm", equiv: '24 × 47"', bestFor: "Family resort, swim clubs", note: "Reduced programme" },

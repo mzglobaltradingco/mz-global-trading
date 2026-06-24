@@ -140,9 +140,9 @@ const CLOSURE_TYPES = [
 
 const SIZES = [
   { market: "USA", flag: "🇺🇸", sizes: [
-    { name: "Standard", dims: "50 × 75 cm", note: "Most common — fits standard US pillow" },
-    { name: "Queen", dims: "50 × 90 cm", note: "Extra length — queen bed programmes" },
-    { name: "King", dims: "50 × 102 cm", note: "Widest US size — king bed programmes" },
+    { name: "Standard", dims: "51 × 66 cm", note: "Fits 20×26″ standard US pillow" },
+    { name: "Queen", dims: "51 × 76 cm", note: "Fits 20×30″ US queen pillow" },
+    { name: "King", dims: "51 × 91 cm", note: "Fits 20×36″ US king pillow" },
   ]},
   { market: "UK / EU", flag: "🇬🇧", sizes: [
     { name: "Standard / Housewife", dims: "50 × 75 cm", note: "Plain closure — most common UK style" },
@@ -265,7 +265,7 @@ const FAQS = [
 
 const PAGE_SIBLINGS = [
   { title: "Bedsheets", desc: "Percale, sateen and jacquard flat sheets in all standard sizes for retail and hospitality.", href: "/hometextile/bedlinen/bedsheets/", img: "/images/hero/hero-bedsheets.webp", cta: "Explore Bedsheets" },
-  { title: "Fitted Sheets", desc: "Elasticated fitted sheets — precise pocket depths from 12\" to 26\" across all major size standards.", href: "/hometextile/bedlinen/fittedsheets/", img: "/images/hero/hero-fitted-sheets.webp", cta: "Explore Fitted Sheets" },
+  { title: "Fitted Sheets", desc: "Elasticated fitted sheets — precise pocket depths from 14\" to 26\" across all major size standards.", href: "/hometextile/bedlinen/fittedsheets/", img: "/images/hero/hero-fitted-sheets.webp", cta: "Explore Fitted Sheets" },
   { title: "Duvet Covers", desc: "Custom comforter covers — button, zip and envelope closure in UK, US and EU sizing.", href: "/hometextile/bedlinen/duvetcovers/", img: "/images/hero/hero-duvet-covers.webp", cta: "Explore Duvet Covers" },
   { title: "Cushion Covers", desc: "Decorative cushion covers — woven, printed and embroidered from 40×40 to 60×60cm.", href: "/hometextile/bedlinen/cushioncovers/", img: "/images/hero/hero-cushion-covers.webp", cta: "Explore Cushion Covers" },
   { title: "Curtains", desc: "Blackout, sheer and lined curtains — eyelet, rod pocket and pinch pleat heading styles.", href: "/hometextile/bedlinen/curtains/", img: "/images/hero/hero-curtains.webp", cta: "Explore Curtains" },

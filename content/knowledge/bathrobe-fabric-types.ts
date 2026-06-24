@@ -66,7 +66,7 @@ Pakistan produces all four primary bathrobe constructions: terry loop, waffle we
 
 **Appearance:** Premium. The velour face has a luxurious, almost plush appearance that photographs exceptionally well for retail packaging and hotel marketing. The visual appeal drives significant retail and gifting premium.
 
-**Weight:** Similar to terry at equivalent GSM (typically 280–380 GSM for bathrobes).
+**Weight:** Similar to terry at equivalent GSM (typically 280–480 GSM for bathrobes, with luxury velour robes at 400–480 GSM).
 
 **Durability under laundering:** Fair-to-good. Cut pile is more prone to matting and pilling than loop pile under repeated commercial washing. Velour robes typically have a shorter commercial laundry life than terry — a consideration for high-frequency hotel use.
 
@@ -106,7 +106,7 @@ Pakistan produces all four primary bathrobe constructions: terry loop, waffle we
 | Commercial laundry suitability | Excellent | Good | Good | Limited (temp restriction) |
 | Durability (wash cycles) | 150+ | 100–150 | 80–120 | 80–100 at correct temp |
 | Visual appearance | Classic | Distinctive | Premium/luxury | Sporty/modern |
-| Typical GSM range | 280–450 | 220–320 | 280–380 | 180–260 |
+| Typical GSM range | 280–450 | 220–320 | 280–480 | 180–260 |
 | Relative cost (same GSM) | Baseline | +5–10% | +10–15% | +10–20% |
 
 ## Certification Requirements by Market
