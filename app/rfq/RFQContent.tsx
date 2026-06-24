@@ -61,9 +61,16 @@ const SIZE_RANGE_EXPANSION: Record<string, string[]> = {
   "XS–XL":                                    ["XS", "S", "M", "L", "XL"],
   "XS–2XL":                                   ["XS", "S", "M", "L", "XL", "2XL"],
   "XS–3XL":                                   ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+  "XS–5XL":                                   ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"],
+  "XXS–3XL":                                  ["XXS", "XS", "S", "M", "L", "XL", "2XL", "3XL"],
   "S–XXL":                                    ["S", "M", "L", "XL", "XXL"],
   "S / M / L / XL / XXL":                    ["S", "M", "L", "XL", "XXL"],
   "S / M / L / XL / XXL / 3XL":              ["S", "M", "L", "XL", "XXL", "3XL"],
+  "Women's XS–XL":                            ["XS", "S", "M", "L", "XL"],
+  "Youth S/M/L":                              ["Youth S", "Youth M", "Youth L"],
+  "Plus sizes":                               ["1X", "2X", "3X", "4X", "5X"],
+  "Petite XS–2XL":                            ["Petite XS", "Petite S", "Petite M", "Petite L", "Petite XL", "Petite 2XL"],
+  "Tall XS–2XL":                              ["Tall XS", "Tall S", "Tall M", "Tall L", "Tall XL", "Tall 2XL"],
   "EU 38–46":                                 ["38", "40", "42", "44", "46"],
   "Collar 14\"–18\" (US sizing)":            ["14\"", "14.5\"", "15\"", "15.5\"", "16\"", "16.5\"", "17\"", "17.5\"", "18\""],
   "Waist 28–36\" / Inseam 28–34\"":          ["W28", "W29", "W30", "W31", "W32", "W33", "W34", "W36"],
@@ -553,14 +560,19 @@ function buildEmailBody(f: RFQFormState): string {
         if (yarnRows.length) lines.push(subHead("YARN SPECIFICATION"), ...yarnRows);
       }
 
-      const ratioSizes = Object.keys(p.sizeRatios ?? {}).filter(s => p.sizeRatios[s]);
-      const ratioEntries = ratioSizes.length > 0
-        ? ratioSizes.map(s => `${s}:${p.sizeRatios[s]}`).join(", ") : "";
-      const totalRatioSum = ratioSizes.reduce((sum, s) => sum + (parseFloat(p.sizeRatios?.[s] ?? "0") || 0), 0);
-      const qtyPerSizeEntries = ratioEntries && p.quantity && totalRatioSum > 0
-        ? ratioSizes.map(s => {
-            const r = parseFloat(p.sizeRatios[s]);
-            const qty = r > 0 ? Math.round((r / totalRatioSum) * parseFloat(p.quantity)) : 0;
+      // All individual sizes for this product (with default ratio 1 when buyer left blank)
+      const _isDropdown = opts?.sizeSelectionType === "dropdown";
+      const _range0 = p.sizeRange[0] ?? "";
+      const allRatioSizes: string[] = _isDropdown
+        ? (_range0 && _range0 !== "Custom" ? SIZE_RANGE_EXPANSION[_range0] ?? [] : [])
+        : p.sizeRange.filter(s => s !== "Custom");
+      const getRatio = (s: string) => parseFloat(p.sizeRatios?.[s] ?? "") || 1;
+      const totalRatioSum = allRatioSizes.reduce((sum, s) => sum + getRatio(s), 0);
+      const ratioEntries = allRatioSizes.length > 0
+        ? allRatioSizes.map(s => `${s}:${getRatio(s)}`).join(", ") : "";
+      const qtyPerSizeEntries = allRatioSizes.length > 0 && p.quantity && totalRatioSum > 0
+        ? allRatioSizes.map(s => {
+            const qty = Math.round((getRatio(s) / totalRatioSum) * parseFloat(p.quantity));
             return qty > 0 ? `${s}:${qty.toLocaleString()}` : null;
           }).filter(Boolean).join(", ") : "";
 
