@@ -21,7 +21,37 @@ import { isValidPhoneNumber, parsePhoneNumber } from "libphonenumber-js/mobile";
 
 // ─── Sorted country list (computed once at module level) ──────────────────────
 
-const EXCLUDED_ISO2 = new Set(["in", "il"]);
+const ALL_COUNTRIES_SORTED: CountryData[] = [...defaultCountries]
+  .sort((a, b) => parseCountry(a).name.localeCompare(parseCountry(b).name));
+
+const EXCLUDED_ISO2 = new Set([
+  "af", // Afghanistan
+  "ao", // Angola
+  "am", // Armenia
+  "cm", // Cameroon
+  "cf", // Central African Republic
+  "td", // Chad
+  "cd", // Democratic Republic of the Congo
+  "et", // Ethiopia
+  "ht", // Haiti
+  "in", // India
+  "iq", // Iraq
+  "il", // Israel
+  "lb", // Lebanon
+  "ly", // Libya
+  "ml", // Mali
+  "mm", // Myanmar
+  "ne", // Niger
+  "ng", // Nigeria
+  "kp", // North Korea
+  "pk", // Pakistan
+  "so", // Somalia
+  "ss", // South Sudan
+  "sd", // Sudan
+  "sy", // Syria
+  "ye", // Yemen
+  "mz", // Mozambique
+]);
 
 const SORTED_COUNTRIES: CountryData[] = [...defaultCountries]
   .filter(c => !EXCLUDED_ISO2.has(parseCountry(c).iso2))
@@ -61,23 +91,25 @@ const CountryListItems = memo(function CountryListItems({
   search,
   selectedIso2,
   onSelect,
+  countryList,
 }: {
   search: string;
   selectedIso2: string;
   onSelect: (iso2: string) => void;
+  countryList: CountryData[];
 }) {
   const filtered = useMemo(() => {
-    if (!search) return SORTED_COUNTRIES;
+    if (!search) return countryList;
     const q = search.toLowerCase();
     const numericQ = q.replace(/\D/g, "");
-    return SORTED_COUNTRIES.filter((c) => {
+    return countryList.filter((c) => {
       const { name, dialCode } = parseCountry(c);
       return (
         name.toLowerCase().includes(q) ||
         (numericQ && dialCode.includes(numericQ))
       );
     });
-  }, [search]);
+  }, [search, countryList]);
 
   if (filtered.length === 0) {
     return (
@@ -131,6 +163,7 @@ interface PhoneInputFieldProps {
   error?: string;
   onClearError?: () => void;
   disabledStyle?: boolean;
+  restrictCountries?: boolean;
 }
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -145,7 +178,9 @@ export function PhoneInputField({
   error,
   onClearError,
   disabledStyle = false,
+  restrictCountries = true,
 }: PhoneInputFieldProps) {
+  const activeCountryList = restrictCountries ? SORTED_COUNTRIES : ALL_COUNTRIES_SORTED;
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
@@ -164,8 +199,9 @@ export function PhoneInputField({
     usePhoneInput({
       defaultCountry: countryIso2 || "us",
       value,
-      countries: defaultCountries,
+      countries: activeCountryList,
       onChange: (data) => {
+        if (restrictCountries && EXCLUDED_ISO2.has(data.country.iso2)) return;
         onChange(data.phone, data.country.iso2);
         // Live validation
         const digits = data.phone.replace(/\D/g, "");
@@ -330,6 +366,7 @@ export function PhoneInputField({
                 search={debouncedSearch}
                 selectedIso2={country.iso2}
                 onSelect={handleSelectCountry}
+                countryList={activeCountryList}
               />
             </ul>
           </div>

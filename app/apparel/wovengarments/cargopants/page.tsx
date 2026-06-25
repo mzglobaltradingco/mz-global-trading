@@ -29,6 +29,61 @@ export default function CargoPantsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Cargo Pants — Pakistan OEM Sourcing & Export",
+            description:
+              "Custom cargo pants sourced from Pakistan's certified woven factories. Ripstop, canvas, TC poly-cotton, stretch ripstop and FR cotton constructions. 200–300 GSM. OEKO-TEX and BSCI available.",
+            image:
+              "https://mzglobaltrading.com/images/og/cargo-pants-og.webp",
+            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            offers: {
+              "@type": "Offer",
+              priceCurrency: "USD",
+              availability: "https://schema.org/InStock",
+              seller: { "@type": "Organization", name: "MZ Global Trading" },
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://mzglobaltrading.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Apparel",
+                  item: "https://mzglobaltrading.com/apparel/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Woven Garments",
+                  item: "https://mzglobaltrading.com/apparel/wovengarments/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 4,
+                  name: "Cargo Pants",
+                  item: "https://mzglobaltrading.com/apparel/wovengarments/cargopants/",
+                },
+              ],
+            },
+            primaryImageOfPage: {
+              "@type": "ImageObject",
+              contentUrl: "https://mzglobaltrading.com/images/og/cargo-pants-og.webp",
+              name: "Pakistan cargo pants manufacturer — ripstop and canvas cargo for outdoor and workwear brands",
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "FAQPage",
             mainEntity: [
               {
@@ -80,61 +135,6 @@ export default function CargoPantsPage() {
                 },
               }
             ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: "Cargo Pants — Pakistan OEM Sourcing & Export",
-            description:
-              "Custom cargo pants sourced from Pakistan's certified woven factories. Ripstop, canvas, TC poly-cotton, stretch ripstop and FR cotton constructions. 200–300 GSM. OEKO-TEX and BSCI available.",
-            image:
-              "https://mzglobaltrading.com/images/og/cargo-pants-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
-            offers: {
-              "@type": "Offer",
-              priceCurrency: "USD",
-              availability: "https://schema.org/InStock",
-              seller: { "@type": "Organization", name: "MZ Global Trading" },
-            },
-            breadcrumb: {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://mzglobaltrading.com/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Apparel",
-                  item: "https://mzglobaltrading.com/apparel/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Woven Garments",
-                  item: "https://mzglobaltrading.com/apparel/wovengarments/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 4,
-                  name: "Cargo Pants",
-                  item: "https://mzglobaltrading.com/apparel/wovengarments/cargopants/",
-                },
-              ],
-            },
-            primaryImageOfPage: {
-              "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/cargo-pants-og.webp",
-              name: "Pakistan cargo pants manufacturer — ripstop and canvas cargo for outdoor and workwear brands",
-            },
           }),
         }}
       />

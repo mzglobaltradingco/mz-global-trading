@@ -31,6 +31,11 @@ export default function ContactUsPage() {
             "name": "Contact MZ Global Trading",
             "description":
               "Contact page for MZ Global Trading — B2B textile sourcing enquiries for international buyers in USA, UK, Canada, Europe and South America.",
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              contentUrl: "https://mzglobaltrading.com/images/og/contact-us-og.webp",
+              name: "Contact MZ Global Trading — Pakistan B2B textile sourcing partner",
+            },
             "breadcrumb": {
               "@type": "BreadcrumbList",
               "itemListElement": [

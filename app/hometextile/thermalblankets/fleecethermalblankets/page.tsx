@@ -30,6 +30,40 @@ export default function FleeceThermalBlanketsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Fleece Thermal Blankets — Pakistan Manufacturing & Export",
+            description:
+              "Anti-pill polar fleece, sherpa double-sided and jacquard woven thermal blankets from Pakistan. 150–300 GSM. GRS-certified recycled polyester available. OEKO-TEX, BSCI, ISO 9001, WRAP. Sublimation print and embroidery for promotional and retail programmes. Export to USA, UK, EU, Australia and worldwide.",
+            image: "https://mzglobaltrading.com/images/og/fleece-thermal-blankets-og.webp",
+            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            offers: {
+              "@type": "Offer",
+              priceCurrency: "USD",
+              availability: "https://schema.org/InStock",
+              seller: { "@type": "Organization", name: "MZ Global Trading" },
+            },
+            primaryImageOfPage: {
+              "@type": "ImageObject",
+              contentUrl: "https://mzglobaltrading.com/images/og/fleece-thermal-blankets-og.webp",
+              name: "Pakistan fleece thermal blanket manufacturer — anti-pill polar fleece and sherpa blankets worldwide",
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
+                { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://mzglobaltrading.com/hometextile/" },
+                { "@type": "ListItem", position: 3, name: "Thermal Blankets", item: "https://mzglobaltrading.com/hometextile/thermalblankets/" },
+                { "@type": "ListItem", position: 4, name: "Fleece Thermal Blankets", item: "https://mzglobaltrading.com/hometextile/thermalblankets/fleecethermalblankets/" },
+              ],
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "FAQPage",
             mainEntity: [
               {
@@ -97,40 +131,6 @@ export default function FleeceThermalBlanketsPage() {
                 },
               },
             ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: "Fleece Thermal Blankets — Pakistan Manufacturing & Export",
-            description:
-              "Anti-pill polar fleece, sherpa double-sided and jacquard woven thermal blankets from Pakistan. 150–300 GSM. GRS-certified recycled polyester available. OEKO-TEX, BSCI, ISO 9001, WRAP. Sublimation print and embroidery for promotional and retail programmes. Export to USA, UK, EU, Australia and worldwide.",
-            image: "https://mzglobaltrading.com/images/og/fleece-thermal-blankets-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
-            offers: {
-              "@type": "Offer",
-              priceCurrency: "USD",
-              availability: "https://schema.org/InStock",
-              seller: { "@type": "Organization", name: "MZ Global Trading" },
-            },
-            primaryImageOfPage: {
-              "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/fleece-thermal-blankets-og.webp",
-              name: "Pakistan fleece thermal blanket manufacturer — anti-pill polar fleece and sherpa blankets worldwide",
-            },
-            breadcrumb: {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-                { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://mzglobaltrading.com/hometextile/" },
-                { "@type": "ListItem", position: 3, name: "Thermal Blankets", item: "https://mzglobaltrading.com/hometextile/thermalblankets/" },
-                { "@type": "ListItem", position: 4, name: "Fleece Thermal Blankets", item: "https://mzglobaltrading.com/hometextile/thermalblankets/fleecethermalblankets/" },
-              ],
-            },
           }),
         }}
       />

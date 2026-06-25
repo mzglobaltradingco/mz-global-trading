@@ -29,6 +29,11 @@ export default function FabricPage() {
             "url": "https://mzglobaltrading.com/fabric/",
             "name": "Fabric Supplier Pakistan | MZ Global Trading",
             "description": "Pakistan fabric supplier — apparel fabric and home textile fabric sourced from certified mills. Woven, knitted, sustainable and specialty constructions.",
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "contentUrl": "https://mzglobaltrading.com/images/og/fabric-category-og.webp",
+              "name": "Pakistan fabric supplier — apparel and home textile fabric for international buyers",
+            },
             "breadcrumb": {
               "@type": "BreadcrumbList",
               "itemListElement": [

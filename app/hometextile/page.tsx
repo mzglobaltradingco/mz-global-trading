@@ -29,6 +29,11 @@ export default function HometextilePage() {
             "url": "https://mzglobaltrading.com/hometextile/",
             "name": "Home Textiles Manufacturer Pakistan | MZ Global Trading",
             "description": "Pakistan home textiles manufacturer — bath linen, bed linen, kitchen, table, thermal, hospital and industrial linen. OEKO-TEX, GOTS, BSCI certified.",
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "contentUrl": "https://mzglobaltrading.com/images/og/home-textile-category-og.webp",
+              "name": "Pakistan home textiles manufacturer — towels, bed linen and home textile OEM for international buyers",
+            },
             "breadcrumb": {
               "@type": "BreadcrumbList",
               "itemListElement": [

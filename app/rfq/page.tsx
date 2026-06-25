@@ -36,6 +36,11 @@ export default function RFQPage() {
             "name": "Request a Quote | MZ Global Trading",
             "description":
               "Submit a textile sourcing request to MZ Global Trading — apparel, home textiles, and fabric from Pakistan's certified manufacturers.",
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              contentUrl: "https://mzglobaltrading.com/images/og/rfq-og.webp",
+              name: "Request a Quote — MZ Global Trading Pakistan textile sourcing",
+            },
             "breadcrumb": {
               "@type": "BreadcrumbList",
               "itemListElement": [

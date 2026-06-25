@@ -31,6 +31,65 @@ export default function TableCoversPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Table Covers — Pakistan Hospitality Linen Export",
+            description:
+              "Custom table covers manufactured in Pakistan's certified linen facilities. Cotton damask, jacquard, satin weave, plain weave and poly-cotton easy-care. Standard and custom dimensions. OEKO-TEX Standard 100, BSCI certified. FOB / CIF export.",
+            image:
+              "https://mzglobaltrading.com/images/og/table-covers-og.webp",
+            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            offers: {
+              "@type": "Offer",
+              priceCurrency: "USD",
+              availability: "https://schema.org/InStock",
+              seller: {
+                "@type": "Organization",
+                name: "MZ Global Trading",
+              },
+            },
+            primaryImageOfPage: {
+              "@type": "ImageObject",
+              contentUrl:
+                "https://mzglobaltrading.com/images/og/table-covers-og.webp",
+              name: "Pakistan table cover manufacturer — custom damask and jacquard tablecloths for hotels worldwide",
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://mzglobaltrading.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Home Textiles",
+                  item: "https://mzglobaltrading.com/hometextile/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Table Linen",
+                  item: "https://mzglobaltrading.com/hometextile/tablelinen/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 4,
+                  name: "Table Covers",
+                  item: "https://mzglobaltrading.com/hometextile/tablelinen/tablecovers/",
+                },
+              ],
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "FAQPage",
             mainEntity: [
               {
@@ -98,65 +157,6 @@ export default function TableCoversPage() {
                 },
               },
             ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: "Table Covers — Pakistan Hospitality Linen Export",
-            description:
-              "Custom table covers manufactured in Pakistan's certified linen facilities. Cotton damask, jacquard, satin weave, plain weave and poly-cotton easy-care. Standard and custom dimensions. OEKO-TEX Standard 100, BSCI certified. FOB / CIF export.",
-            image:
-              "https://mzglobaltrading.com/images/og/table-covers-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
-            offers: {
-              "@type": "Offer",
-              priceCurrency: "USD",
-              availability: "https://schema.org/InStock",
-              seller: {
-                "@type": "Organization",
-                name: "MZ Global Trading",
-              },
-            },
-            primaryImageOfPage: {
-              "@type": "ImageObject",
-              contentUrl:
-                "https://mzglobaltrading.com/images/og/table-covers-og.webp",
-              name: "Pakistan table cover manufacturer — custom damask and jacquard tablecloths for hotels worldwide",
-            },
-            breadcrumb: {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://mzglobaltrading.com/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Table Linen",
-                  item: "https://mzglobaltrading.com/hometextile/tablelinen/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 4,
-                  name: "Table Covers",
-                  item: "https://mzglobaltrading.com/hometextile/tablelinen/tablecovers/",
-                },
-              ],
-            },
           }),
         }}
       />

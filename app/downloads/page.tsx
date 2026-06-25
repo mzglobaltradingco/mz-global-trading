@@ -29,6 +29,11 @@ const pageSchema = {
     "Downloadable resources for textile buyers — company profile, inspection checklists, Tech Pack templates and trade documentation.",
   inLanguage: "en",
   isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    contentUrl: "https://mzglobaltrading.com/images/og/hero-our-process.webp",
+    name: "MZ Global Trading resource downloads — textile buyer documentation and sourcing templates",
+  },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [

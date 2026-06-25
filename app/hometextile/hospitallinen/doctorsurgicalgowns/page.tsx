@@ -31,6 +31,65 @@ export default function DoctorSurgicalGownsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Doctor Surgical Gowns — Pakistan Medical Textile Export",
+            description:
+              "Reusable surgical gowns manufactured in Pakistan's ISO-certified medical textile facilities. TC 65/35 poly-cotton and 100% cotton plain weave. Anti-bacterial, fluid repellent, autoclave safe. ISO 13485, BSCI, EN 13795 compliant. FOB / CIF export.",
+            image:
+              "https://mzglobaltrading.com/images/og/doctor-surgical-gowns-og.webp",
+            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            offers: {
+              "@type": "Offer",
+              priceCurrency: "USD",
+              availability: "https://schema.org/InStock",
+              seller: {
+                "@type": "Organization",
+                name: "MZ Global Trading",
+              },
+            },
+            primaryImageOfPage: {
+              "@type": "ImageObject",
+              contentUrl:
+                "https://mzglobaltrading.com/images/og/doctor-surgical-gowns-og.webp",
+              name: "Pakistan surgical gown manufacturer — reusable TC poly-cotton surgical gowns for hospitals worldwide",
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://mzglobaltrading.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Home Textiles",
+                  item: "https://mzglobaltrading.com/hometextile/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Hospital Linen",
+                  item: "https://mzglobaltrading.com/hometextile/hospitallinen/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 4,
+                  name: "Doctor Surgical Gowns",
+                  item: "https://mzglobaltrading.com/hometextile/hospitallinen/doctorsurgicalgowns/",
+                },
+              ],
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "FAQPage",
             mainEntity: [
               {
@@ -98,65 +157,6 @@ export default function DoctorSurgicalGownsPage() {
                 },
               },
             ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: "Doctor Surgical Gowns — Pakistan Medical Textile Export",
-            description:
-              "Reusable surgical gowns manufactured in Pakistan's ISO-certified medical textile facilities. TC 65/35 poly-cotton and 100% cotton plain weave. Anti-bacterial, fluid repellent, autoclave safe. ISO 13485, BSCI, EN 13795 compliant. FOB / CIF export.",
-            image:
-              "https://mzglobaltrading.com/images/og/doctor-surgical-gowns-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
-            offers: {
-              "@type": "Offer",
-              priceCurrency: "USD",
-              availability: "https://schema.org/InStock",
-              seller: {
-                "@type": "Organization",
-                name: "MZ Global Trading",
-              },
-            },
-            primaryImageOfPage: {
-              "@type": "ImageObject",
-              contentUrl:
-                "https://mzglobaltrading.com/images/og/doctor-surgical-gowns-og.webp",
-              name: "Pakistan surgical gown manufacturer — reusable TC poly-cotton surgical gowns for hospitals worldwide",
-            },
-            breadcrumb: {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://mzglobaltrading.com/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Hospital Linen",
-                  item: "https://mzglobaltrading.com/hometextile/hospitallinen/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 4,
-                  name: "Doctor Surgical Gowns",
-                  item: "https://mzglobaltrading.com/hometextile/hospitallinen/doctorsurgicalgowns/",
-                },
-              ],
-            },
           }),
         }}
       />

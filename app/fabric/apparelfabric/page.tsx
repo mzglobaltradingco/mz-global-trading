@@ -32,6 +32,56 @@ export default function ApparelFabricPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Apparel Fabric — Pakistan Knitted & Woven Fabric Export",
+            description:
+              "Knitted and woven apparel fabric sourced from Pakistan's certified textile mills. Single jersey, interlock, pique, French terry, fleece, twill, denim, canvas and more. 80–450 GSM. GOTS, OEKO-TEX, BSCI certified. FOB / CIF export.",
+            image:
+              "https://mzglobaltrading.com/images/og/apparel-fabric-og.webp",
+            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            offers: {
+              "@type": "Offer",
+              priceCurrency: "USD",
+              availability: "https://schema.org/InStock",
+              seller: { "@type": "Organization", name: "MZ Global Trading" },
+            },
+            primaryImageOfPage: {
+              "@type": "ImageObject",
+              contentUrl:
+                "https://mzglobaltrading.com/images/og/apparel-fabric-og.webp",
+              name: "Pakistan apparel fabric manufacturer — knitted and woven fabric rolls for garment manufacturers worldwide",
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://mzglobaltrading.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Fabric",
+                  item: "https://mzglobaltrading.com/fabric/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Apparel Fabric",
+                  item: "https://mzglobaltrading.com/fabric/apparelfabric/",
+                },
+              ],
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "FAQPage",
             mainEntity: [
               {
@@ -108,56 +158,6 @@ export default function ApparelFabricPage() {
               }
             ],
           }),  
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: "Apparel Fabric — Pakistan Knitted & Woven Fabric Export",
-            description:
-              "Knitted and woven apparel fabric sourced from Pakistan's certified textile mills. Single jersey, interlock, pique, French terry, fleece, twill, denim, canvas and more. 80–450 GSM. GOTS, OEKO-TEX, BSCI certified. FOB / CIF export.",
-            image:
-              "https://mzglobaltrading.com/images/og/apparel-fabric-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
-            offers: {
-              "@type": "Offer",
-              priceCurrency: "USD",
-              availability: "https://schema.org/InStock",
-              seller: { "@type": "Organization", name: "MZ Global Trading" },
-            },
-            primaryImageOfPage: {
-              "@type": "ImageObject",
-              contentUrl:
-                "https://mzglobaltrading.com/images/og/apparel-fabric-og.webp",
-              name: "Pakistan apparel fabric manufacturer — knitted and woven fabric rolls for garment manufacturers worldwide",
-            },
-            breadcrumb: {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://mzglobaltrading.com/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Fabric",
-                  item: "https://mzglobaltrading.com/fabric/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Apparel Fabric",
-                  item: "https://mzglobaltrading.com/fabric/apparelfabric/",
-                },
-              ],
-            },
-          }),
         }}
       />
       <MegaMenu />

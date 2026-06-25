@@ -30,6 +30,11 @@ const pageSchema = {
     "Comprehensive sourcing guides for international textile buyers — covering quality inspection, certifications, incoterms and supply chain management.",
   inLanguage: "en",
   isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    contentUrl: "https://mzglobaltrading.com/images/og/hero-knowledge.webp",
+    name: "MZ Global Trading sourcing guides — in-depth textile buyer resources and trade guides",
+  },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [

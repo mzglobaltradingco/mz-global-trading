@@ -34,6 +34,11 @@ const pageSchema = {
     "55+ free textile calculators for buyers, merchandisers and factory teams — order costing, GSM, yarn count, AQL inspection, CBM, container loading and landed cost.",
   inLanguage: "en",
   isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    contentUrl: "https://mzglobaltrading.com/images/og/textile-tools-calculator-og.webp",
+    name: "MZ Global Trading textile tools calculator — free online tools for B2B textile buyers",
+  },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [

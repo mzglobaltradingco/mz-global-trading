@@ -473,6 +473,29 @@ Combined slide labels: `bg-navy-950/60 backdrop-blur-sm border border-white/10 r
 
 Pagefind indexes 272 files. All dynamic slugs generate correctly.
 
+### Static page.tsx breakdown (82 total)
+
+**Product leaf pages (46)** — audit Track B
+All apparel, home textile, fabric leaf pages listed in Content Audit section.
+
+**Cluster / pillar pages (13)** — audit Track A
+Bath Linen · Bed Linen · Kitchen Linen · Table Linen · Thermal Blankets · Hospital Linen · Industrial Linen · Knitted Garments · Woven Garments · Baby & Kids · Apparel pillar · Home Textile pillar · Fabric pillar
+
+**Non-product static pages (21) — NOT in audit scope**
+
+| Category | Pages |
+|---|---|
+| Corporate | `/` (Homepage) · `/our-company/` · `/whychooseus/` · `/ourprocess/` · `/careers/` |
+| Transactional | `/rfq/` · `/contact-us/` |
+| Quality & Compliance | `/quality-policy/` · `/qualitycompliance/certifications/` · `/qualitycompliance/inspectionprocess/` · `/qualitycompliance/qualitycontrol/` · `/qualitycompliance/supplierevaluation/` |
+| Utility | `/faqs/` · `/textile-tools-calculator/` · `/search/` |
+| Legal | `/privacypolicy/` · `/termsofuse/` |
+| Content hub indexes | `/knowledge/` · `/guides/` · `/downloads/` |
+| Orphan | `/hometextile/bedlinen/institutionalbedding/` (not in nav) |
+
+**Dynamic slug routes (2 page.tsx files, 189 URLs)**
+`app/knowledge/[slug]/page.tsx` (53) · `app/guides/[slug]/page.tsx` (77) · `app/downloads/[slug]/page.tsx` (59)
+
 ---
 
 ## URL Structure & Navigation

@@ -32,6 +32,11 @@ const pageSchema = {
   inLanguage: "en",
   isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
   about: { "@id": "https://mzglobaltrading.com/#organization" },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    contentUrl: "https://mzglobaltrading.com/images/og/hero-careers.webp",
+    name: "Careers at MZ Global Trading — textile sourcing jobs in Karachi, Pakistan",
+  },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [

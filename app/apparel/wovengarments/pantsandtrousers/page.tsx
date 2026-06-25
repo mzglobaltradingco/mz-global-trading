@@ -30,6 +30,61 @@ export default function PantsTrousersPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Pants & Trousers — Pakistan OEM Sourcing & Export",
+            description:
+              "Custom pants and trousers sourced from Pakistan's certified woven garment factories. Twill chino, canvas, linen, sateen stretch and ponte constructions. 140–350 GSM. OEKO-TEX, BSCI and Sedex certified.",
+            image:
+              "https://mzglobaltrading.com/images/og/pants-trousers-og.webp",
+            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            offers: {
+              "@type": "Offer",
+              priceCurrency: "USD",
+              availability: "https://schema.org/InStock",
+              seller: { "@type": "Organization", name: "MZ Global Trading" },
+            },
+            primaryImageOfPage: {
+              "@type": "ImageObject",
+              contentUrl: "https://mzglobaltrading.com/images/og/pants-trousers-og.webp",
+              name: "Pakistan pants and trousers manufacturer — OEM woven trousers for fashion and corporate brands in USA, UK and Europe",
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://mzglobaltrading.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Apparel",
+                  item: "https://mzglobaltrading.com/apparel/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Woven Garments",
+                  item: "https://mzglobaltrading.com/apparel/wovengarments/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 4,
+                  name: "Pants & Trousers",
+                  item: "https://mzglobaltrading.com/apparel/wovengarments/pantsandtrousers/",
+                },
+              ],
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "FAQPage",
             mainEntity: [
               {
@@ -81,56 +136,6 @@ export default function PantsTrousersPage() {
                 },
               }
             ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: "Pants & Trousers — Pakistan OEM Sourcing & Export",
-            description:
-              "Custom pants and trousers sourced from Pakistan's certified woven garment factories. Twill chino, canvas, linen, sateen stretch and ponte constructions. 140–350 GSM. OEKO-TEX, BSCI and Sedex certified.",
-            image:
-              "https://mzglobaltrading.com/images/og/pants-trousers-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
-            offers: {
-              "@type": "Offer",
-              priceCurrency: "USD",
-              availability: "https://schema.org/InStock",
-              seller: { "@type": "Organization", name: "MZ Global Trading" },
-            },
-            breadcrumb: {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://mzglobaltrading.com/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Apparel",
-                  item: "https://mzglobaltrading.com/apparel/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Woven Garments",
-                  item: "https://mzglobaltrading.com/apparel/wovengarments/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 4,
-                  name: "Pants & Trousers",
-                  item: "https://mzglobaltrading.com/apparel/wovengarments/pantsandtrousers/",
-                },
-              ],
-            },
           }),
         }}
       />

@@ -31,6 +31,11 @@ const pageSchema = {
   inLanguage: "en",
   isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
   about: { "@id": "https://mzglobaltrading.com/#organization" },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    contentUrl: "https://mzglobaltrading.com/images/og/hero-why-choose-us.webp",
+    name: "Why choose MZ Global Trading — certified Pakistan B2B textile sourcing partner",
+  },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [

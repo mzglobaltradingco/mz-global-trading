@@ -32,6 +32,11 @@ const pageSchema = {
   inLanguage: "en",
   isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
   about: { "@id": "https://mzglobaltrading.com/#organization" },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    contentUrl: "https://mzglobaltrading.com/images/og/certifications-og.webp",
+    name: "Textile certifications — GOTS, OEKO-TEX, BSCI and ISO 9001 certified factories Pakistan",
+  },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [

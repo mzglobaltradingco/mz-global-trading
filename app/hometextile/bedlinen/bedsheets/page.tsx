@@ -33,6 +33,65 @@ export default function BedsheetPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Bedsheets — Pakistan Home Textile Export",
+            description:
+              "Wholesale bedsheets manufactured in Pakistan. Percale, sateen, jacquard, oxford, flannel, linen, microfiber and jersey knit. 200–600 TC. GOTS, OEKO-TEX, BSCI certified. FOB/CIF export.",
+            image:
+              "https://mzglobaltrading.com/images/hero/hero-bedsheets.webp",
+            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            offers: {
+              "@type": "Offer",
+              priceCurrency: "USD",
+              availability: "https://schema.org/InStock",
+              seller: {
+                "@type": "Organization",
+                name: "MZ Global Trading",
+              },
+            },
+            primaryImageOfPage: {
+              "@type": "ImageObject",
+              contentUrl:
+                "https://mzglobaltrading.com/images/hero/hero-bedsheets.webp",
+              name: "Pakistan bedsheet manufacturer — cotton percale and sateen sheets wholesale export",
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://mzglobaltrading.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Home Textiles",
+                  item: "https://mzglobaltrading.com/hometextile/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Bed Linen",
+                  item: "https://mzglobaltrading.com/hometextile/bedlinen/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 4,
+                  name: "Bedsheets",
+                  item: "https://mzglobaltrading.com/hometextile/bedlinen/bedsheets/",
+                },
+              ],
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "FAQPage",
             mainEntity: [
               {
@@ -100,65 +159,6 @@ export default function BedsheetPage() {
                 },
               },
             ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: "Bedsheets — Pakistan Home Textile Export",
-            description:
-              "Wholesale bedsheets manufactured in Pakistan. Percale, sateen, jacquard, oxford, flannel, linen, microfiber and jersey knit. 200–600 TC. GOTS, OEKO-TEX, BSCI certified. FOB/CIF export.",
-            image:
-              "https://mzglobaltrading.com/images/hero/hero-bedsheets.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
-            offers: {
-              "@type": "Offer",
-              priceCurrency: "USD",
-              availability: "https://schema.org/InStock",
-              seller: {
-                "@type": "Organization",
-                name: "MZ Global Trading",
-              },
-            },
-            primaryImageOfPage: {
-              "@type": "ImageObject",
-              contentUrl:
-                "https://mzglobaltrading.com/images/hero/hero-bedsheets.webp",
-              name: "Pakistan bedsheet manufacturer — cotton percale and sateen sheets wholesale export",
-            },
-            breadcrumb: {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://mzglobaltrading.com/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Bed Linen",
-                  item: "https://mzglobaltrading.com/hometextile/bedlinen/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 4,
-                  name: "Bedsheets",
-                  item: "https://mzglobaltrading.com/hometextile/bedlinen/bedsheets/",
-                },
-              ],
-            },
           }),
         }}
       />

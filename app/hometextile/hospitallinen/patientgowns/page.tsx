@@ -31,6 +31,65 @@ export default function PatientGownsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Patient Gowns — Pakistan Healthcare Textile Export",
+            description:
+              "Patient gowns manufactured in Pakistan's ISO-certified healthcare textile facilities. 100% cotton and TC poly-cotton plain weave, jersey knit wrap-style. Anti-bacterial, autoclave safe. Adult and pediatric sizes. ISO 9001, BSCI, Sedex certified. FOB / CIF export.",
+            image:
+              "https://mzglobaltrading.com/images/og/patient-gowns-og.webp",
+            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            offers: {
+              "@type": "Offer",
+              priceCurrency: "USD",
+              availability: "https://schema.org/InStock",
+              seller: {
+                "@type": "Organization",
+                name: "MZ Global Trading",
+              },
+            },
+            primaryImageOfPage: {
+              "@type": "ImageObject",
+              contentUrl:
+                "https://mzglobaltrading.com/images/og/patient-gowns-og.webp",
+              name: "Pakistan patient gown manufacturer — cotton hospital patient gowns for healthcare buyers worldwide",
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://mzglobaltrading.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Home Textiles",
+                  item: "https://mzglobaltrading.com/hometextile/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Hospital Linen",
+                  item: "https://mzglobaltrading.com/hometextile/hospitallinen/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 4,
+                  name: "Patient Gowns",
+                  item: "https://mzglobaltrading.com/hometextile/hospitallinen/patientgowns/",
+                },
+              ],
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "FAQPage",
             mainEntity: [
               {
@@ -98,65 +157,6 @@ export default function PatientGownsPage() {
                 },
               },
             ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: "Patient Gowns — Pakistan Healthcare Textile Export",
-            description:
-              "Patient gowns manufactured in Pakistan's ISO-certified healthcare textile facilities. 100% cotton and TC poly-cotton plain weave, jersey knit wrap-style. Anti-bacterial, autoclave safe. Adult and pediatric sizes. ISO 9001, BSCI, Sedex certified. FOB / CIF export.",
-            image:
-              "https://mzglobaltrading.com/images/og/patient-gowns-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
-            offers: {
-              "@type": "Offer",
-              priceCurrency: "USD",
-              availability: "https://schema.org/InStock",
-              seller: {
-                "@type": "Organization",
-                name: "MZ Global Trading",
-              },
-            },
-            primaryImageOfPage: {
-              "@type": "ImageObject",
-              contentUrl:
-                "https://mzglobaltrading.com/images/og/patient-gowns-og.webp",
-              name: "Pakistan patient gown manufacturer — cotton hospital patient gowns for healthcare buyers worldwide",
-            },
-            breadcrumb: {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://mzglobaltrading.com/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Hospital Linen",
-                  item: "https://mzglobaltrading.com/hometextile/hospitallinen/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 4,
-                  name: "Patient Gowns",
-                  item: "https://mzglobaltrading.com/hometextile/hospitallinen/patientgowns/",
-                },
-              ],
-            },
           }),
         }}
       />

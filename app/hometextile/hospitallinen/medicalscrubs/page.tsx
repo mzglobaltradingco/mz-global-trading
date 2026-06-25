@@ -31,6 +31,65 @@ export default function MedicalScrubsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Medical Scrubs — Pakistan Healthcare Textile Export",
+            description:
+              "Custom medical scrubs manufactured in Pakistan's certified healthcare textile facilities. Twill TC 65/35 poly-cotton, 100% cotton twill, 4-way stretch. Anti-bacterial, fluid repellent, moisture wicking. ISO 13485, BSCI, Sedex certified. FOB / CIF export.",
+            image:
+              "https://mzglobaltrading.com/images/og/medical-scrubs-og.webp",
+            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            offers: {
+              "@type": "Offer",
+              priceCurrency: "USD",
+              availability: "https://schema.org/InStock",
+              seller: {
+                "@type": "Organization",
+                name: "MZ Global Trading",
+              },
+            },
+            primaryImageOfPage: {
+              "@type": "ImageObject",
+              contentUrl:
+                "https://mzglobaltrading.com/images/og/medical-scrubs-og.webp",
+              name: "Pakistan medical scrubs manufacturer — custom hospital scrubs for healthcare buyers worldwide",
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://mzglobaltrading.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Home Textiles",
+                  item: "https://mzglobaltrading.com/hometextile/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Hospital Linen",
+                  item: "https://mzglobaltrading.com/hometextile/hospitallinen/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 4,
+                  name: "Medical Scrubs",
+                  item: "https://mzglobaltrading.com/hometextile/hospitallinen/medicalscrubs/",
+                },
+              ],
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "FAQPage",
             mainEntity: [
               {
@@ -98,65 +157,6 @@ export default function MedicalScrubsPage() {
                 },
               },
             ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: "Medical Scrubs — Pakistan Healthcare Textile Export",
-            description:
-              "Custom medical scrubs manufactured in Pakistan's certified healthcare textile facilities. Twill TC 65/35 poly-cotton, 100% cotton twill, 4-way stretch. Anti-bacterial, fluid repellent, moisture wicking. ISO 13485, BSCI, Sedex certified. FOB / CIF export.",
-            image:
-              "https://mzglobaltrading.com/images/og/medical-scrubs-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
-            offers: {
-              "@type": "Offer",
-              priceCurrency: "USD",
-              availability: "https://schema.org/InStock",
-              seller: {
-                "@type": "Organization",
-                name: "MZ Global Trading",
-              },
-            },
-            primaryImageOfPage: {
-              "@type": "ImageObject",
-              contentUrl:
-                "https://mzglobaltrading.com/images/og/medical-scrubs-og.webp",
-              name: "Pakistan medical scrubs manufacturer — custom hospital scrubs for healthcare buyers worldwide",
-            },
-            breadcrumb: {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://mzglobaltrading.com/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Hospital Linen",
-                  item: "https://mzglobaltrading.com/hometextile/hospitallinen/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 4,
-                  name: "Medical Scrubs",
-                  item: "https://mzglobaltrading.com/hometextile/hospitallinen/medicalscrubs/",
-                },
-              ],
-            },
           }),
         }}
       />

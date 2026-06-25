@@ -31,6 +31,11 @@ const pageSchema = {
   inLanguage: "en",
   isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
   about: { "@id": "https://mzglobaltrading.com/#organization" },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    contentUrl: "https://mzglobaltrading.com/images/og/supplier-evaluation-og.webp",
+    name: "Supplier evaluation process — factory vetting and compliance audit at MZ Global Trading",
+  },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [

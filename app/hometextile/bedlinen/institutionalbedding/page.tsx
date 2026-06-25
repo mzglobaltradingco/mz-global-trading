@@ -36,65 +36,6 @@ export default function InstitutionalBeddingPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "What thread count specification is standard for hotel bedding?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "The commercial hotel standard sits at 200–260 TC in 65/35 cotton-poly percale or oxford weave. This range balances wash durability (100–200 commercial cycles at 70°C), acceptable hand feel and competitive pricing. Premium hotel groups may specify 280–300 TC for superior-category rooms. Budget hotels and student accommodation typically specify 200–220 TC.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Can institutional bedding be produced in custom colourways?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. White is the default institutional specification for hospitals and airlines, but hotels and student accommodation programmes frequently specify light pastels, branded colours or colour-coded systems. PMS-matched reactive dyeing is standard across all constructions. Lab dip approval is included before bulk production.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What wash cycle rating should I specify for hospital bedding?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Hospital linen in the UK NHS standard requires bedding to withstand 100–200 cycles at 60–90°C without significant dimensional change or loss of colour fastness. Cotton-poly blends (65/35) outperform 100% cotton at sustained high-temperature wash cycles. For intensive healthcare use, we recommend specifying minimum 150 cycles at 70°C as part of the tender requirement.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Can you supply matching complete bed sets (sheets + pillow covers + duvet covers)?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes — this is our primary offering for hotel programmes. Coordinate sets sourced from the same factory ensure consistent thread count, colour match and construction across the complete set. Request all components in a single RFQ — single-source supply simplifies procurement and ensures set consistency from delivery to delivery.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What documentation is provided for tender compliance?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Each shipment comes with: commercial invoice, packing list, certificate of origin (Form E or GSP as required), test reports (wash fastness, dimensional stability, pilling resistance), factory certification copies (ISO 9001, OEKO-TEX etc.) and pre-shipment inspection report. Specific documentation formats for government tender compliance can be confirmed before order.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Is there a difference between institutional and retail bedding from Pakistan?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "The core difference is engineering priority: institutional bedding is optimised for wash-cycle durability, dimensional stability and procurement compliance. Retail bedding prioritises hand feel, visual presentation and packaging. Institutional grades use heavier needle-gauge stitching, wider hems, reinforced seams and poly-cotton blends rated for commercial laundry. Retail products use finer finishing and premium packaging inappropriate for laundry-scale operations.",
-                },
-              }
-            ],
-          }),  
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
             "@type": "Product",
             name: "Institutional Bedding",
             description:
@@ -150,6 +91,65 @@ export default function InstitutionalBeddingPage() {
               ],
             },
           }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What thread count specification is standard for hotel bedding?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The commercial hotel standard sits at 200–260 TC in 65/35 cotton-poly percale or oxford weave. This range balances wash durability (100–200 commercial cycles at 70°C), acceptable hand feel and competitive pricing. Premium hotel groups may specify 280–300 TC for superior-category rooms. Budget hotels and student accommodation typically specify 200–220 TC.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can institutional bedding be produced in custom colourways?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. White is the default institutional specification for hospitals and airlines, but hotels and student accommodation programmes frequently specify light pastels, branded colours or colour-coded systems. PMS-matched reactive dyeing is standard across all constructions. Lab dip approval is included before bulk production.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What wash cycle rating should I specify for hospital bedding?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Hospital linen in the UK NHS standard requires bedding to withstand 100–200 cycles at 60–90°C without significant dimensional change or loss of colour fastness. Cotton-poly blends (65/35) outperform 100% cotton at sustained high-temperature wash cycles. For intensive healthcare use, we recommend specifying minimum 150 cycles at 70°C as part of the tender requirement.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you supply matching complete bed sets (sheets + pillow covers + duvet covers)?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes — this is our primary offering for hotel programmes. Coordinate sets sourced from the same factory ensure consistent thread count, colour match and construction across the complete set. Request all components in a single RFQ — single-source supply simplifies procurement and ensures set consistency from delivery to delivery.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What documentation is provided for tender compliance?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Each shipment comes with: commercial invoice, packing list, certificate of origin (Form E or GSP as required), test reports (wash fastness, dimensional stability, pilling resistance), factory certification copies (ISO 9001, OEKO-TEX etc.) and pre-shipment inspection report. Specific documentation formats for government tender compliance can be confirmed before order.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is there a difference between institutional and retail bedding from Pakistan?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The core difference is engineering priority: institutional bedding is optimised for wash-cycle durability, dimensional stability and procurement compliance. Retail bedding prioritises hand feel, visual presentation and packaging. Institutional grades use heavier needle-gauge stitching, wider hems, reinforced seams and poly-cotton blends rated for commercial laundry. Retail products use finer finishing and premium packaging inappropriate for laundry-scale operations.",
+                },
+              }
+            ],
+          }),  
         }}
       />
     </>

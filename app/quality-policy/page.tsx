@@ -31,6 +31,11 @@ const pageSchema = {
   inLanguage: "en",
   isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
   about: { "@id": "https://mzglobaltrading.com/#organization" },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    contentUrl: "https://mzglobaltrading.com/images/og/hero-why-choose-us.webp",
+    name: "MZ Global Trading quality policy — AQL-based inspection and certified textile sourcing from Pakistan",
+  },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [

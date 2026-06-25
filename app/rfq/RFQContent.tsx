@@ -31,7 +31,7 @@ const COUNTRIES = [
   "Bolivia", "Bosnia and Herzegovina", "Botswana", "Bulgaria", "Burkina Faso",
   "Cambodia", "Cameroon", "China", "Congo", "Costa Rica", "Croatia", "Cuba",
   "Cyprus", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Estonia",
-  "Ethiopia", "Georgia", "Ghana", "Guatemala", "Honduras", "India", "Indonesia",
+  "Ethiopia", "Georgia", "Ghana", "Guatemala", "Honduras", "Indonesia",
   "Iran", "Iraq", "Israel", "Ivory Coast", "Jamaica", "Japan", "Jordan",
   "Kazakhstan", "Kenya", "Kuwait", "Kyrgyzstan", "Latvia", "Lebanon", "Libya",
   "Lithuania", "Luxembourg", "Madagascar", "Malaysia", "Mali", "Malta",
@@ -48,8 +48,8 @@ const COUNTRIES_SORTED = [...COUNTRIES].sort((a, b) => a.localeCompare(b));
 
 const BLOCKED_COUNTRIES = new Set([
   "Afghanistan", "Armenia", "Angola", "Cameroon", "Central African Republic",
-  "Chad", "Democratic Republic of the Congo", "Ethiopia", "Haiti", "India",
-  "Iraq", "Israel", "Lebanon", "Libya", "Mali", "Myanmar", "Niger", "Nigeria",
+  "Chad", "Democratic Republic of the Congo", "Ethiopia", "Haiti",
+  "India", "Iraq", "Israel", "Lebanon", "Libya", "Mali", "Myanmar", "Niger", "Nigeria",
   "North Korea", "Pakistan", "Somalia", "South Sudan", "Sudan", "Syria",
   "Yemen", "Mozambique",
 ]);
@@ -764,7 +764,10 @@ function SearchableSelect({
 
   useEffect(() => {
     if (!open) return;
-    function onScroll() { closeMenu(); }
+    function onScroll(e: Event) {
+      if (listRef.current?.contains(e.target as Node)) return;
+      closeMenu();
+    }
     window.addEventListener("scroll", onScroll, { capture: true, passive: true });
     return () => window.removeEventListener("scroll", onScroll, { capture: true });
   }, [open]);
@@ -854,10 +857,17 @@ function SearchableSelect({
           aria-autocomplete="list"
           placeholder={open ? (value || placeholder) : placeholder}
           value={open ? query : value}
-          readOnly={!open}
           className="flex-1 bg-transparent outline-none text-sm min-w-0 text-gray-900 placeholder-gray-400"
           onFocus={() => { if (!open) openMenu(); }}
-          onChange={e => { if (open) { setQuery(e.target.value); setActiveIdx(-1); } }}
+          onChange={e => {
+            const q = e.target.value;
+            if (!open) {
+              reposition();
+              setOpen(true);
+            }
+            setQuery(q);
+            setActiveIdx(-1);
+          }}
           onKeyDown={onKeyDown}
         />
         <button

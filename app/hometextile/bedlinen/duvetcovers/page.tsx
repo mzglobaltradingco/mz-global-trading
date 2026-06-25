@@ -33,65 +33,6 @@ export default function DuvetCoversPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Which closure is most popular for UK retail duvet covers?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Button closure is the standard for mainstream UK and European retail — typically 3–5 pearl or fabric-covered buttons along the foot of the duvet opening. Concealed zip is preferred by hotel buyers for operational efficiency and clean appearance. Envelope closure suits value and casual markets where cost and simplicity take priority.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Do you supply UK, US and EU sized duvet covers?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. UK: Single 135×200cm, Double 200×200cm, King 225×220cm, Super King 260×220cm. US: Twin 172×218cm, Full/Queen 203×228cm, King 259×228cm. EU: 135×200cm, 200×200cm, 200×220cm. Custom dimensions are accommodated — include your required dimensions in the RFQ.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Can I order duvet covers with matching flat sheets and pillow covers?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes — coordinated bedding sets are among our most frequently ordered programmes. Specify the complete set in your RFQ: duvet cover, flat sheet, fitted sheet and pillow covers. We source across all components from the same mill to ensure consistent thread count, construction and colour throughout the set.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What construction should I specify for a hotel duvet cover programme?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Percale 200–300 TC in a cotton-poly blend delivers the operational durability and wash-cycle resistance hotel housekeeping demands. For luxury hotel tier or room upgrade sets, specify sateen 400–500 TC in 100% combed cotton with concealed zip closure. OEKO-TEX certification should be included as a standard requirement.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Are GOTS-certified duvet covers available from Pakistan?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. GOTS certification is available for 100% organic cotton percale and sateen constructions. This is required for organic cotton claims in the EU and UK and increasingly demanded by GOTS-certified brands in the USA and Australia. Specify GOTS as a hard requirement in your RFQ.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How are duvet covers packaged for retail export?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Standard retail: individual polybag with header card or folded in retail box. Premium: zippered display pouch or branded gift box. Coordinated sets can be packaged together in a single retail box. Hotel and institutional supply: bulk folded, 12–24 per carton with carton labelling. Specify your fulfilment requirement in the RFQ.",
-                },
-              }
-            ],
-          }),  
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
             "@type": "Product",
             name: "Duvet Covers — Pakistan Manufacturer",
             description:
@@ -144,6 +85,65 @@ export default function DuvetCoversPage() {
               ],
             },
           }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Which closure is most popular for UK retail duvet covers?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Button closure is the standard for mainstream UK and European retail — typically 3–5 pearl or fabric-covered buttons along the foot of the duvet opening. Concealed zip is preferred by hotel buyers for operational efficiency and clean appearance. Envelope closure suits value and casual markets where cost and simplicity take priority.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you supply UK, US and EU sized duvet covers?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. UK: Single 135×200cm, Double 200×200cm, King 225×220cm, Super King 260×220cm. US: Twin 172×218cm, Full/Queen 203×228cm, King 259×228cm. EU: 135×200cm, 200×200cm, 200×220cm. Custom dimensions are accommodated — include your required dimensions in the RFQ.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I order duvet covers with matching flat sheets and pillow covers?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes — coordinated bedding sets are among our most frequently ordered programmes. Specify the complete set in your RFQ: duvet cover, flat sheet, fitted sheet and pillow covers. We source across all components from the same mill to ensure consistent thread count, construction and colour throughout the set.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What construction should I specify for a hotel duvet cover programme?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Percale 200–300 TC in a cotton-poly blend delivers the operational durability and wash-cycle resistance hotel housekeeping demands. For luxury hotel tier or room upgrade sets, specify sateen 400–500 TC in 100% combed cotton with concealed zip closure. OEKO-TEX certification should be included as a standard requirement.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are GOTS-certified duvet covers available from Pakistan?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. GOTS certification is available for 100% organic cotton percale and sateen constructions. This is required for organic cotton claims in the EU and UK and increasingly demanded by GOTS-certified brands in the USA and Australia. Specify GOTS as a hard requirement in your RFQ.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How are duvet covers packaged for retail export?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Standard retail: individual polybag with header card or folded in retail box. Premium: zippered display pouch or branded gift box. Coordinated sets can be packaged together in a single retail box. Hotel and institutional supply: bulk folded, 12–24 per carton with carton labelling. Specify your fulfilment requirement in the RFQ.",
+                },
+              }
+            ],
+          }),  
         }}
       />
     </>

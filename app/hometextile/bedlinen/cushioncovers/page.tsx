@@ -34,65 +34,6 @@ export default function CushionCoversPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "What fabric works best for indoor decorative cushion covers?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Cotton plain weave for printable retail designs — it accepts reactive print with excellent colour fidelity. Linen or linen-blend for luxury natural lifestyle. Jacquard damask for premium interior or hotel lobbies where woven pattern carries the design. Velvet for seasonal statement pieces and Middle Eastern hospitality.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What size is most commonly ordered for cushion covers?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "45×45 cm and 50×50 cm are the most universally ordered sizes for standard throw cushion inserts. 40×40 cm suits smaller accent cushions; 60×60 cm suits floor cushions and large sofa pieces. The 30×50 cm oblong is the standard lumbar size. Include all sizes in your RFQ for a consolidated quote.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Can I order cushion covers with printed designs?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. All-over reactive print and screen placement print are both available on cotton constructions. For photographic print quality, sublimation on polyester constructions delivers the most accurate reproduction. Supply your artwork file — we manage colour separation, strike-off approval and print matching before bulk production.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What closure should I specify for retail cushion covers?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Concealed zip is the most commercial closure for mainstream retail — clean finish, washable, professional appearance. Button closure adds a design detail and suits artisan or country-style ranges. Envelope overlap suits basic value retail and hospitality bulk supply.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Are cushion covers available in OEKO-TEX certified materials?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. OEKO-TEX Standard 100 certification is available across cotton and linen constructions and is mandatory for EU and UK retail compliance. GOTS-certified organic cotton is available for natural lifestyle programmes. Specify your certification requirement in your RFQ.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What order quantities work for seasonal cushion cover programmes?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Seasonal cushion cover programmes typically involve a structured size and colourway run. Include your target quantity per SKU in your RFQ — we match you with factories experienced in home furnishing seasonal programmes and advise on the most cost-efficient quantity and colourway structure.",
-                },
-              }
-            ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
             "@type": "Product",
             name: "Cushion Covers",
             description:
@@ -144,6 +85,65 @@ export default function CushionCoversPage() {
                 },
               ],
             },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What fabric works best for indoor decorative cushion covers?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Cotton plain weave for printable retail designs — it accepts reactive print with excellent colour fidelity. Linen or linen-blend for luxury natural lifestyle. Jacquard damask for premium interior or hotel lobbies where woven pattern carries the design. Velvet for seasonal statement pieces and Middle Eastern hospitality.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What size is most commonly ordered for cushion covers?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "45×45 cm and 50×50 cm are the most universally ordered sizes for standard throw cushion inserts. 40×40 cm suits smaller accent cushions; 60×60 cm suits floor cushions and large sofa pieces. The 30×50 cm oblong is the standard lumbar size. Include all sizes in your RFQ for a consolidated quote.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I order cushion covers with printed designs?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. All-over reactive print and screen placement print are both available on cotton constructions. For photographic print quality, sublimation on polyester constructions delivers the most accurate reproduction. Supply your artwork file — we manage colour separation, strike-off approval and print matching before bulk production.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What closure should I specify for retail cushion covers?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Concealed zip is the most commercial closure for mainstream retail — clean finish, washable, professional appearance. Button closure adds a design detail and suits artisan or country-style ranges. Envelope overlap suits basic value retail and hospitality bulk supply.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are cushion covers available in OEKO-TEX certified materials?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. OEKO-TEX Standard 100 certification is available across cotton and linen constructions and is mandatory for EU and UK retail compliance. GOTS-certified organic cotton is available for natural lifestyle programmes. Specify your certification requirement in your RFQ.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What order quantities work for seasonal cushion cover programmes?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Seasonal cushion cover programmes typically involve a structured size and colourway run. Include your target quantity per SKU in your RFQ — we match you with factories experienced in home furnishing seasonal programmes and advise on the most cost-efficient quantity and colourway structure.",
+                },
+              }
+            ],
           }),
         }}
       />

@@ -173,6 +173,11 @@ export default async function GuidePage({ params }: GuidePageProps) {
     author: { "@id": "https://mzglobaltrading.com/#organization" },
     publisher: { "@id": "https://mzglobaltrading.com/#organization" },
     mainEntityOfPage: { "@id": url },
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      contentUrl: "https://mzglobaltrading.com/images/og/hero-knowledge.webp",
+      name: `${guide.title} — textile sourcing guide by MZ Global Trading`,
+    },
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [

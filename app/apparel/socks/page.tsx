@@ -31,6 +31,56 @@ export default function SocksPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Socks — Pakistan OEM Manufacturing & Export",
+            description:
+              "Knitted performance, athletic, compression and fashion socks manufactured in Pakistan. 7 knit structures covering liner to heavy cushion. GOTS and OEKO-TEX available.",
+            image:
+              "https://mzglobaltrading.com/images/og/socks-og.webp",
+            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            offers: {
+              "@type": "Offer",
+              priceCurrency: "USD",
+              availability: "https://schema.org/InStock",
+              seller: { "@type": "Organization", name: "MZ Global Trading" },
+            },
+            primaryImageOfPage: {
+              "@type": "ImageObject",
+              contentUrl:
+                "https://mzglobaltrading.com/images/og/socks-og.webp",
+              name: "Pakistan socks manufacturer — knitted performance and fashion socks",
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://mzglobaltrading.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Apparel",
+                  item: "https://mzglobaltrading.com/apparel/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Socks",
+                  item: "https://mzglobaltrading.com/apparel/socks/",
+                },
+              ],
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "FAQPage",
             mainEntity: [
               {
@@ -82,56 +132,6 @@ export default function SocksPage() {
                 },
               }
             ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: "Socks — Pakistan OEM Manufacturing & Export",
-            description:
-              "Knitted performance, athletic, compression and fashion socks manufactured in Pakistan. 7 knit structures covering liner to heavy cushion. GOTS and OEKO-TEX available.",
-            image:
-              "https://mzglobaltrading.com/images/og/socks-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
-            offers: {
-              "@type": "Offer",
-              priceCurrency: "USD",
-              availability: "https://schema.org/InStock",
-              seller: { "@type": "Organization", name: "MZ Global Trading" },
-            },
-            primaryImageOfPage: {
-              "@type": "ImageObject",
-              contentUrl:
-                "https://mzglobaltrading.com/images/og/socks-og.webp",
-              name: "Pakistan socks manufacturer — knitted performance and fashion socks",
-            },
-            breadcrumb: {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://mzglobaltrading.com/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Apparel",
-                  item: "https://mzglobaltrading.com/apparel/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Socks",
-                  item: "https://mzglobaltrading.com/apparel/socks/",
-                },
-              ],
-            },
           }),
         }}
       />

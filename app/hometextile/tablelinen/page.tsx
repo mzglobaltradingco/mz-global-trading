@@ -35,6 +35,11 @@ export default function TableLinenPage() {
             name: "Table Linen Manufacturer Pakistan | MZ Global Trading",
             description:
               "Pakistan-manufactured table linen for hotels, restaurants and event companies. Cotton damask, jacquard and satin weave constructions. Custom dimensions. OEKO-TEX and BSCI certified.",
+            primaryImageOfPage: {
+              "@type": "ImageObject",
+              contentUrl: "https://mzglobaltrading.com/images/og/table-linen-og.webp",
+              name: "Pakistan table linen manufacturer — hotel and banquet table covers for hospitality buyers worldwide",
+            },
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [

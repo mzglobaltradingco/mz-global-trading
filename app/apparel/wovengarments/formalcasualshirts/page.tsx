@@ -30,6 +30,62 @@ export default function FormalCasualShirtsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Formal & Casual Shirts — Pakistan OEM Sourcing & Export",
+            description:
+              "Custom formal and casual shirts sourced from Pakistan's certified woven garment factories. Poplin, Oxford weave, twill, linen, chambray, end-on-end, dobby and seersucker. 80–200 GSM. GOTS and OEKO-TEX available.",
+            image:
+              "https://mzglobaltrading.com/images/og/formal-casual-shirts-og.webp",
+            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            offers: {
+              "@type": "Offer",
+              priceCurrency: "USD",
+              availability: "https://schema.org/InStock",
+              seller: { "@type": "Organization", name: "MZ Global Trading" },
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://mzglobaltrading.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Apparel",
+                  item: "https://mzglobaltrading.com/apparel/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Woven Garments",
+                  item: "https://mzglobaltrading.com/apparel/wovengarments/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 4,
+                  name: "Formal & Casual Shirts",
+                  item: "https://mzglobaltrading.com/apparel/wovengarments/formalcasualshirts/",
+                },
+              ],
+            },
+            primaryImageOfPage: {
+              "@type": "ImageObject",
+              contentUrl:
+                "https://mzglobaltrading.com/images/og/formal-casual-shirts-og.webp",
+              name: "Pakistan formal and casual shirts manufacturer — OEM woven shirts for brands in USA, UK and Europe",
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "FAQPage",
             mainEntity: [
               {
@@ -81,62 +137,6 @@ export default function FormalCasualShirtsPage() {
                 },
               }
             ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: "Formal & Casual Shirts — Pakistan OEM Sourcing & Export",
-            description:
-              "Custom formal and casual shirts sourced from Pakistan's certified woven garment factories. Poplin, Oxford weave, twill, linen, chambray, end-on-end, dobby and seersucker. 80–200 GSM. GOTS and OEKO-TEX available.",
-            image:
-              "https://mzglobaltrading.com/images/og/formal-casual-shirts-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
-            offers: {
-              "@type": "Offer",
-              priceCurrency: "USD",
-              availability: "https://schema.org/InStock",
-              seller: { "@type": "Organization", name: "MZ Global Trading" },
-            },
-            breadcrumb: {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://mzglobaltrading.com/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Apparel",
-                  item: "https://mzglobaltrading.com/apparel/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Woven Garments",
-                  item: "https://mzglobaltrading.com/apparel/wovengarments/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 4,
-                  name: "Formal & Casual Shirts",
-                  item: "https://mzglobaltrading.com/apparel/wovengarments/formalcasualshirts/",
-                },
-              ],
-            },
-            primaryImageOfPage: {
-              "@type": "ImageObject",
-              contentUrl:
-                "https://mzglobaltrading.com/images/og/formal-casual-shirts-og.webp",
-              name: "Pakistan formal and casual shirts manufacturer — OEM woven shirts for brands in USA, UK and Europe",
-            },
           }),
         }}
       />

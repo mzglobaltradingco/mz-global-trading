@@ -33,65 +33,6 @@ export default function FittedSheetsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "What pocket depth should I specify for hotel fitted sheets?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Hotels typically specify 15–18 inch pocket depth to accommodate a variety of mattress depths and thin toppers. Deep-pocket at 21 inches covers luxury pillow-top mattresses and premium memory foam. If your hotel client has a specific mattress specification, always confirm the exact mattress height before locking pocket depth — a 1-inch shortfall means sheets will not stay tucked.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What's the difference between all-around elastic and corner pockets?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "All-around elastic runs along the full perimeter of the fitted sheet — the international standard for retail and premium hotel. The elastic grips all four sides and corners, preventing sheet displacement during sleep or when making the bed. Corner pocket elastic (elastic only at the four corners) is simpler to manufacture but shifts under active use — it is not recommended for hotel programmes or consumers who move frequently in sleep.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Can I order matching flat sheets and pillow covers with my fitted sheets?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. Coordinated bed sets — fitted sheet, flat sheet, and pillow covers — are our primary offering for retail and hotel programmes. Specify all components in a single RFQ. We source from the same certified factory to ensure consistent thread count, construction, colour match and finishing across the complete set. Coordinated sets also typically benefit from better factory scheduling.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Are GOTS-certified fitted sheets available from Pakistan?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. GOTS-certified organic cotton fitted sheets are available in percale and sateen constructions. For EU and UK buyers making organic product claims on packaging, GOTS certification on the factory and the fibre supply chain is mandatory — non-GOTS cotton cannot legally carry an organic claim in these markets. Specify GOTS as a hard requirement in your RFQ.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How do I specify size standards for US and UK programmes simultaneously?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Include both size charts in your RFQ. US Queen (152×203 cm with 18-inch pocket) and UK King (150×200 cm) are dimensionally similar but require separate cutting patterns and elastic lengths. We recommend confirming actual mattress dimensions from your end customer before locking specs — nominal US and UK sizes can vary slightly between mattress manufacturers.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What thread count is standard for hospital fitted sheets?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Hospital and healthcare fitted sheets are typically specified at 200–280 TC in a durable cotton-poly blend — prioritising wash durability over luxury hand feel. The key performance metric is wash-cycle tolerance (100+ cycles at 60–90°C minimum), not thread count. Oxford weave at 220–260 TC in 65/35 cotton-poly is the most common healthcare specification in the UK and EU.",
-                },
-              },
-            ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
             "@type": "Product",
             name: "Fitted Sheets — Pakistan Bed Linen Export",
             description:
@@ -143,6 +84,65 @@ export default function FittedSheetsPage() {
                 },
               ],
             },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What pocket depth should I specify for hotel fitted sheets?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Hotels typically specify 15–18 inch pocket depth to accommodate a variety of mattress depths and thin toppers. Deep-pocket at 21 inches covers luxury pillow-top mattresses and premium memory foam. If your hotel client has a specific mattress specification, always confirm the exact mattress height before locking pocket depth — a 1-inch shortfall means sheets will not stay tucked.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What's the difference between all-around elastic and corner pockets?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "All-around elastic runs along the full perimeter of the fitted sheet — the international standard for retail and premium hotel. The elastic grips all four sides and corners, preventing sheet displacement during sleep or when making the bed. Corner pocket elastic (elastic only at the four corners) is simpler to manufacture but shifts under active use — it is not recommended for hotel programmes or consumers who move frequently in sleep.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I order matching flat sheets and pillow covers with my fitted sheets?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. Coordinated bed sets — fitted sheet, flat sheet, and pillow covers — are our primary offering for retail and hotel programmes. Specify all components in a single RFQ. We source from the same certified factory to ensure consistent thread count, construction, colour match and finishing across the complete set. Coordinated sets also typically benefit from better factory scheduling.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are GOTS-certified fitted sheets available from Pakistan?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. GOTS-certified organic cotton fitted sheets are available in percale and sateen constructions. For EU and UK buyers making organic product claims on packaging, GOTS certification on the factory and the fibre supply chain is mandatory — non-GOTS cotton cannot legally carry an organic claim in these markets. Specify GOTS as a hard requirement in your RFQ.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How do I specify size standards for US and UK programmes simultaneously?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Include both size charts in your RFQ. US Queen (152×203 cm with 18-inch pocket) and UK King (150×200 cm) are dimensionally similar but require separate cutting patterns and elastic lengths. We recommend confirming actual mattress dimensions from your end customer before locking specs — nominal US and UK sizes can vary slightly between mattress manufacturers.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What thread count is standard for hospital fitted sheets?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Hospital and healthcare fitted sheets are typically specified at 200–280 TC in a durable cotton-poly blend — prioritising wash durability over luxury hand feel. The key performance metric is wash-cycle tolerance (100+ cycles at 60–90°C minimum), not thread count. Oxford weave at 220–260 TC in 65/35 cotton-poly is the most common healthcare specification in the UK and EU.",
+                },
+              },
+            ],
           }),
         }}
       />

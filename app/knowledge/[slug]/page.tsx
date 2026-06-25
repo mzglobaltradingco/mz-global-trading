@@ -84,6 +84,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
     author: { "@id": "https://mzglobaltrading.com/#organization" },
     publisher: { "@id": "https://mzglobaltrading.com/#organization" },
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      contentUrl: imageUrl,
+      name: `${post.title} — MZ Global Trading Knowledge Hub`,
+    },
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [

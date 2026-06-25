@@ -32,6 +32,11 @@ const knowledgeSchema = {
   inLanguage: "en",
   isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
   about: { "@id": "https://mzglobaltrading.com/#organization" },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    contentUrl: "https://mzglobaltrading.com/images/og/hero-about.webp",
+    name: "MZ Global Trading Knowledge Hub — textile sourcing guides and trade insights",
+  },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [

@@ -33,65 +33,6 @@ export default function PillowCoversPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "What size should I order for USA and UK retail pillow cover programmes?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "USA: Standard 50×75cm is the baseline for most retail and hotel programmes. Queen 50×90cm is ordered for queen-specific bedding collections. UK: Standard (Housewife) 50×75cm and Oxford 50×75cm+5cm flange are both common. Euro square 65×65cm is the dominant size across continental Europe.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What is an Oxford pillowcase?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "An Oxford pillowcase has a flat sewn border — called a flange — of 5–8cm that extends around all four sides beyond the pillow-sized opening. Popular in premium UK and EU retail. The flange creates a decorative frame around the pillow when the bed is made. Oxford-style pillowcases are produced in Oxford weave, percale or sateen constructions.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What TC is standard for hotel pillowcases?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Hotels typically specify 250–350 TC percale for standard room supply and 300–400 TC sateen for premium room tier. Luxury hotel programmes move to 500–600 TC sateen with embroidered monogram or border. TC selection should be confirmed against the hotel's target wash-cycle count — higher TC requires more careful laundering.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Can I order pillowcases with matching duvet covers and flat sheets?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. Coordinated bedding sets — duvet cover, flat sheet, fitted sheet and pillow covers — are among our most common hotel and retail orders. Specify the complete set in your RFQ to ensure consistent thread count, construction and colour matching across all components.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Are OEKO-TEX certified pillowcases available from Pakistan?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. OEKO-TEX Standard 100 certification is available across all standard constructions. This is mandatory for EU and UK buyers with chemical compliance requirements and increasingly expected by US retailers. Specify OEKO-TEX as a hard requirement in your RFQ — it should be non-negotiable for any retail programme.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How are pairs and sets packaged for retail?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Standard: polybag with header card or label (1-pack or 2-pack). Retail: folded in branded retail box. Premium: zippered fabric display pouch. Gift programmes: fabric pouch or gift box, often with ribbon or card insert. Coordinated sets can be packaged as a complete unit. Specify your fulfilment requirement in the RFQ.",
-                },
-              }
-            ],
-          }),  
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
             "@type": "Product",
             name: "Pillow Covers — Pakistan Manufacturer",
             description:
@@ -144,6 +85,65 @@ export default function PillowCoversPage() {
               ],
             },
           }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What size should I order for USA and UK retail pillow cover programmes?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "USA: Standard 50×75cm is the baseline for most retail and hotel programmes. Queen 50×90cm is ordered for queen-specific bedding collections. UK: Standard (Housewife) 50×75cm and Oxford 50×75cm+5cm flange are both common. Euro square 65×65cm is the dominant size across continental Europe.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What is an Oxford pillowcase?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "An Oxford pillowcase has a flat sewn border — called a flange — of 5–8cm that extends around all four sides beyond the pillow-sized opening. Popular in premium UK and EU retail. The flange creates a decorative frame around the pillow when the bed is made. Oxford-style pillowcases are produced in Oxford weave, percale or sateen constructions.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What TC is standard for hotel pillowcases?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Hotels typically specify 250–350 TC percale for standard room supply and 300–400 TC sateen for premium room tier. Luxury hotel programmes move to 500–600 TC sateen with embroidered monogram or border. TC selection should be confirmed against the hotel's target wash-cycle count — higher TC requires more careful laundering.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I order pillowcases with matching duvet covers and flat sheets?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. Coordinated bedding sets — duvet cover, flat sheet, fitted sheet and pillow covers — are among our most common hotel and retail orders. Specify the complete set in your RFQ to ensure consistent thread count, construction and colour matching across all components.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are OEKO-TEX certified pillowcases available from Pakistan?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. OEKO-TEX Standard 100 certification is available across all standard constructions. This is mandatory for EU and UK buyers with chemical compliance requirements and increasingly expected by US retailers. Specify OEKO-TEX as a hard requirement in your RFQ — it should be non-negotiable for any retail programme.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How are pairs and sets packaged for retail?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Standard: polybag with header card or label (1-pack or 2-pack). Retail: folded in branded retail box. Premium: zippered fabric display pouch. Gift programmes: fabric pouch or gift box, often with ribbon or card insert. Coordinated sets can be packaged as a complete unit. Specify your fulfilment requirement in the RFQ.",
+                },
+              }
+            ],
+          }),  
         }}
       />
     </>

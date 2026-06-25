@@ -30,6 +30,11 @@ const pageSchema = {
   inLanguage: "en",
   isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
   about: { "@id": "https://mzglobaltrading.com/#organization" },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    contentUrl: "https://mzglobaltrading.com/images/og/homepage-og-image.webp",
+    name: "MZ Global Trading sourcing process — Pakistan textile supply to USA, UK and Europe",
+  },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [

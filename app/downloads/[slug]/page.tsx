@@ -171,6 +171,11 @@ export default async function DownloadDocPage({ params }: DocPageProps) {
     description: doc.description,
     inLanguage: "en",
     isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      contentUrl: "https://mzglobaltrading.com/images/og/hero-our-process.webp",
+      name: `${doc.title} — free textile trade document by MZ Global Trading`,
+    },
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [

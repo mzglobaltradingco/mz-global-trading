@@ -27,6 +27,11 @@ const pageSchema = {
   url: "https://mzglobaltrading.com/faqs/",
   name: "Frequently Asked Questions | MZ Global Trading",
   inLanguage: "en",
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    contentUrl: "https://mzglobaltrading.com/images/og/faqs-og.webp",
+    name: "MZ Global Trading FAQ — textile sourcing questions answered for international buyers",
+  },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [

@@ -1344,7 +1344,7 @@ export default function SweatpantsContent() {
               { region: "Japan / S. Korea", emoji: "🗾", detail: "Premium quality focus — design-led programmes" },
               { region: "Russia / CIS", emoji: "🧊", detail: "Heavy fleece — cold-climate heavy-weight demand" },
               { region: "South Africa", emoji: "🌍", detail: "Activewear and sportswear retail" },
-              { region: "India", emoji: "🇮🇳", detail: "Sportswear and athleisure wholesale" },
+              { region: "Canada", emoji: "🇨🇦", detail: "Activewear and athleisure retail" },
               { region: "Global DTC", emoji: "📦", detail: "E-commerce brands shipping worldwide" },
             ].map((r) => (
               <div key={r.region} className="bg-white/10 border border-white/15 rounded-xl p-4 flex flex-col gap-2 hover:bg-white/15 transition-colors">

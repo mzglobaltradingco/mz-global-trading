@@ -29,6 +29,11 @@ export default function ApparelPage() {
             "url": "https://mzglobaltrading.com/apparel/",
             "name": "Apparel Manufacturer Pakistan | MZ Global Trading",
             "description": "Pakistan OEM apparel manufacturer — knitted garments, woven garments, baby & kids, workwear and socks. GOTS, OEKO-TEX, BSCI certified.",
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "contentUrl": "https://mzglobaltrading.com/images/og/apparel-category-og.webp",
+              "name": "Pakistan apparel manufacturer — OEM garment sourcing for brands in USA, UK and Europe",
+            },
             "breadcrumb": {
               "@type": "BreadcrumbList",
               "itemListElement": [

@@ -349,6 +349,7 @@ export default function ContactUsContent() {
                       id="phone"
                       label="Mobile Number"
                       required
+                      restrictCountries={false}
                       value={formData.phone}
                       countryIso2={phoneCountry}
                       onChange={(e164, iso2) => {
