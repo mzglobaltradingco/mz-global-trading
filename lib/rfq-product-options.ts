@@ -2183,10 +2183,7 @@ export const PRODUCT_OPTIONS: Record<string, ProductOptions> = {
     showWarpWeft: true,
     isIhram: true,
     styleLabel: "Ihram Weight",
-    styleOptions: [
-      "Standard weight (250–300 gsm)", "Lightweight travel set (180–240 gsm)",
-      "Premium weight (320+ gsm)", "Other",
-    ],
+    styleOptions: [],
     designLabel: "Design",
     printTypeOptions: ["Plain — no decoration (religious requirement)"],
     printPlacementLabel: "Design Placement",

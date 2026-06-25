@@ -1380,7 +1380,7 @@ export default function RFQContent() {
     if (p.productType && p.productType !== "Other / Multiple" && opts?.sizeOptions?.length && !opts?.isFabricRoll && p.sizeRange.length === 0)
       e.sizeRange = "Please select at least one size option";
     // Section 5 — dyeing method (Apparel / Home Textiles)
-    if (p.productType && p.productType !== "Other / Multiple" && !opts?.isFabricRoll && (p.category === "Apparel" || p.category === "Home Textiles") && !p.dyeingMethod)
+    if (p.productType && p.productType !== "Other / Multiple" && !opts?.isFabricRoll && !opts?.isIhram && (p.category === "Apparel" || p.category === "Home Textiles") && !p.dyeingMethod)
       e.dyeingMethod = "Dyeing method is required";
     // Section 5 — fabric state (Fabric rolls)
     if (opts?.isFabricRoll && !p.printType)
@@ -1388,8 +1388,8 @@ export default function RFQContent() {
     // Section 6 — at least one finishing option
     if (p.productType && p.productType !== "Other / Multiple" && opts?.finishingOptions?.length && p.finishing.length === 0)
       e.finishing = "Please select at least one finishing option";
-    // Design detail + artwork size — mandatory when print/embroidery selected
-    const hasPrintOrEmb = p.printType && !/plain|no decoration/i.test(p.printType);
+    // Design detail + artwork size — mandatory when print/embroidery selected (skip for fabric rolls — they use fabricState, not printDetail)
+    const hasPrintOrEmb = !opts?.isFabricRoll && p.printType && !/plain|no decoration/i.test(p.printType);
     if (hasPrintOrEmb && !p.printDetail.trim()) e.printDetail = "Design detail is required when a decoration type is selected";
     // Section 7 — brand label (Apparel only)
     if (p.productType && p.productType !== "Other / Multiple" && p.category === "Apparel" && !p.brandLabel)
@@ -2219,7 +2219,7 @@ export default function RFQContent() {
                   </SpecSection>
 
                   <SpecSection title="Color & Design" number={5} color="purple">
-                    {(product.category === "Apparel" || product.category === "Home Textiles") && (
+                    {(product.category === "Apparel" || product.category === "Home Textiles") && !opts?.isIhram && (
                       <div className="grid sm:grid-cols-2 gap-3">
                         <Field id="dyeingMethod" label="Dyeing Method" required error={errors.dyeingMethod}>
                           <select id="dyeingMethod" value={product.dyeingMethod} aria-invalid={!!errors.dyeingMethod}
