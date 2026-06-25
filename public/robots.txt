@@ -1,5 +1,5 @@
 User-agent: *
-Allow: /
-Disallow: /api/
+Disallow: /search/
+Disallow: /pagefind/
 
 Sitemap: https://mzglobaltrading.com/sitemap.xml

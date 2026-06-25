@@ -820,3 +820,120 @@ Before writing any content piece:
 | Workwear Apparel | 1 | 1/1 | 1/1 | 1/1 | 1/1 |
 | Socks | 1 | 1/1 | 1/1 | 1/1 | 1/1 |
 | **TOTAL** | **46** | **46/46** | **46/46** | **46/46** | **46/46** |
+
+---
+
+## Content Audit — Session 1 (COMPLETE)
+
+All 46 leaf product pages audited. Files saved to `C:\Users\Asus\Desktop\Content Audit\` (01 through 46). Session 1 is closed.
+
+---
+
+## Content Audit Redo — Active Task (Session 2)
+
+### What changed from Session 1
+1. **95% On-Time Delivery** — owner-approved stat. Do NOT flag as unvalidated in any file.
+2. **Cotton/Polyester composition rules** — Pakistan cannot produce polyester-dominant C/P blends. Specifically NOT achievable from Pakistan: 55P/45C, 58P/42C, 60P/40C (approx). Do not recommend these compositions. Achievable from Pakistan: 100% cotton, 65C/35P, 60C/40P (CVC), 70C/30P, 80C/20P, 50/50, and standard T/C shirting 65P/35C. When auditing, flag any content that lists or recommends polyester-dominant non-standard blends as achievable.
+3. **Microfiber** — 80% polyester / 20% polyamide microfiber is NOT manufactured in Pakistan (primarily China/India). Flag any claim that Pakistan sources or manufactures microfiber as inaccurate. Microfiber can be referenced as "available on request via sourcing partners" but not as a Pakistan-manufactured product.
+
+### Scope
+**Two tracks, both saved to `C:\Users\Asus\Desktop\Content Audit\redo\`:**
+- **Track A — Cluster/Pillar page audits (13 new files):** Full session 1 format audit of all cluster and pillar pages. These were excluded from Session 1.
+- **Track B — Leaf page redos (46 files):** Re-audit all 46 leaf pages with corrected C/P + microfiber rules and 95% delivery approved.
+
+**Execution order:** By cluster — audit the cluster page first (Track A), then all its leaf pages (Track B), then CLOSE that cluster. Repeat for each cluster.
+
+### Cluster Execution Order & Status
+| # | Cluster/Pillar | Cluster file | Leaf pages | Status |
+|---|---|---|---|---|
+| A | Bath Linen | `cluster-01-bathlinen.md` | 01–05 (Towels, Inst.Towels, Bathrobes, Bath Mats, Beach/Pool) | ✅ CLOSED |
+| B | Bed Linen | `cluster-02-bedlinen.md` | 06–11 (Bedsheets, Fitted, Duvet, Pillow, Cushion, Curtains) | ⬜ PENDING |
+| C | Kitchen Linen | `cluster-03-kitchenlinen.md` | 12–15 (Kitchen Towels, Bar Mops, Aprons, Pot Holders) | ⬜ PENDING |
+| D | Table Linen | `cluster-04-tablelinen.md` | 16 (Table Covers) | ⬜ PENDING |
+| E | Thermal Blankets | `cluster-05-thermalblankets.md` | 17–18 (Cellular, Fleece) | ⬜ PENDING |
+| F | Hospital Linen | `cluster-06-hospitallinen.md` | 19–22 (Gowns, Scrubs, Patient Gowns, Huck Towels) | ⬜ PENDING |
+| G | Industrial Linen | `cluster-07-industriallinen.md` | 23–24 (Shop Towels, Fender Covers) | ⬜ PENDING |
+| H | Ihram (standalone) | — | 25 (Ihram) | ⬜ PENDING |
+| I | Home Textile Pillar | `cluster-08-hometextile.md` | — | ⬜ PENDING |
+| J | Knitted Garments | `cluster-09-knittedgarments.md` | 26–31 (T-Shirts, Polo, Henley, Sweatshirts, Sweatpants, Tank Tops) | ⬜ PENDING |
+| K | Woven Garments | `cluster-10-wovengarments.md` | 32–36 (Denim, Formal, Pants, Cargo, Shorts) | ⬜ PENDING |
+| L | Baby & Kids | `cluster-11-babykids.md` | 37–42 (Kids Tees, Swaddle, Overalls, Rompers, Bibs, Hooded Towels) | ⬜ PENDING |
+| M | Workwear (standalone) | — | 43 (Workwear Apparel) | ⬜ PENDING |
+| N | Socks (standalone) | — | 44 (Socks) | ⬜ PENDING |
+| O | Apparel Pillar | `cluster-12-apparel.md` | — | ⬜ PENDING |
+| P | Fabric Pillar | `cluster-13-fabric.md` | 45–46 (Apparel Fabric, Home Textile Fabric) | ⬜ PENDING |
+
+### Current Progress
+**Cluster A — Bath Linen:** ✅ CLOSED (cluster-01-bathlinen.md + leaf pages 01–05 complete)
+**Cluster B — Bed Linen:** 🟡 IN PROGRESS — cluster-02-bedlinen.md complete
+**Last completed file:** `06-bedsheets-audit.md`
+**Currently working on:** `07-fittedsheets-audit.md`
+**Remaining Cluster B leaf pages:** 08-duvetcovers, 09-pillowcovers, 10-cushioncovers, 11-curtains
+
+### Output Rules
+- Save to: `C:\Users\Asus\Desktop\Content Audit\redo\`
+- Cluster files named: `cluster-[##]-[slug].md`
+- Leaf files named: `[##]-[slug]-audit.md` (same numbering as Session 1)
+- Severity tags: Critical / Major / Minor on every finding
+- Do NOT flag 95% On-Time Delivery as an issue — owner-approved
+- Do NOT recommend polyester-dominant C/P blends (55P/45C, 58P/42C, 60P/40C) as achievable from Pakistan
+- Do NOT treat microfiber as a Pakistan-manufactured product
+- Do NOT present audit findings in chat — chat is for progress updates only
+- Update this CLAUDE.md section (Current Progress) before starting each new file
+
+### Methodology (same as Session 1)
+1. Read page.tsx + Content.tsx (local code)
+2. Cross-reference KH article, Guide, Download for the product
+3. Compare against related/sibling pages
+4. Identify: missing content, inaccuracies, SEO gaps, internal linking gaps, composition errors, consistency issues
+5. Apply Session 2 corrections above throughout
+
+### Page List (46 pages)
+| # | Product | URL |
+|---|---|---|
+| 1 | T-Shirts | /apparel/knittedgarments/tshirts/ |
+| 2 | Polo Shirts | /apparel/knittedgarments/poloshirts/ |
+| 3 | Henley Shirts | /apparel/knittedgarments/henleyshirts/ |
+| 4 | Sweatshirts & Hoodies | /apparel/knittedgarments/sweatshirtshoodies/ |
+| 5 | Sweatpants & Joggers | /apparel/knittedgarments/sweatpantsjoggers/ |
+| 6 | Tank Tops | /apparel/knittedgarments/tanktops/ |
+| 7 | Denim Jeans | /apparel/wovengarments/denimjeans/ |
+| 8 | Formal & Casual Shirts | /apparel/wovengarments/formalcasualshirts/ |
+| 9 | Pants & Trousers | /apparel/wovengarments/pantsandtrousers/ |
+| 10 | Cargo Pants | /apparel/wovengarments/cargopants/ |
+| 11 | Shorts | /apparel/wovengarments/shorts/ |
+| 12 | T-Shirts for Kids | /apparel/babyandkids/tshirtsforkids/ |
+| 13 | Swaddle Muslin Fabric | /apparel/babyandkids/swaddlemuslinfabric/ |
+| 14 | Overalls | /apparel/babyandkids/overalls/ |
+| 15 | Baby Rompers | /apparel/babyandkids/babyrompers/ |
+| 16 | Baby Bibs | /apparel/babyandkids/babybibs/ |
+| 17 | Baby Hooded Towels | /apparel/babyandkids/babyhoodedtowels/ |
+| 18 | Workwear Apparel | /apparel/workwearapparel/ |
+| 19 | Socks | /apparel/socks/ |
+| 20 | Towels | /hometextile/bathlinen/towels/ |
+| 21 | Institutional Towels | /hometextile/bathlinen/institutionaltowels/ |
+| 22 | Bathrobes | /hometextile/bathlinen/bathrobes/ |
+| 23 | Bath Mats | /hometextile/bathlinen/bathmats/ |
+| 24 | Beach & Pool Towels | /hometextile/bathlinen/beachpooltowel/ |
+| 25 | Bedsheets | /hometextile/bedlinen/bedsheets/ |
+| 26 | Fitted Sheets | /hometextile/bedlinen/fittedsheets/ |
+| 27 | Duvet Covers | /hometextile/bedlinen/duvetcovers/ |
+| 28 | Pillow Covers | /hometextile/bedlinen/pillowcovers/ |
+| 29 | Cushion Covers | /hometextile/bedlinen/cushioncovers/ |
+| 30 | Curtains | /hometextile/bedlinen/curtains/ |
+| 31 | Kitchen Towels | /hometextile/kitchenlinen/kitchentowels/ |
+| 32 | Bar Mops | /hometextile/kitchenlinen/barmops/ |
+| 33 | Aprons | /hometextile/kitchenlinen/aprons/ |
+| 34 | Pot Holders | /hometextile/kitchenlinen/potholders/ |
+| 35 | Table Covers | /hometextile/tablelinen/tablecovers/ |
+| 36 | Cellular Thermal Blanket | /hometextile/thermalblankets/cellularblanket/ |
+| 37 | Fleece Thermal Blankets | /hometextile/thermalblankets/fleeceblankets/ |
+| 38 | Doctor Surgical Gowns | /hometextile/hospitallinen/doctorsurgicalgowns/ |
+| 39 | Medical Scrubs | /hometextile/hospitallinen/medicalscrubs/ |
+| 40 | Patient Gowns | /hometextile/hospitallinen/patientgowns/ |
+| 41 | Surgical Huck Towels | /hometextile/hospitallinen/surgicalhucktowels/ |
+| 42 | Shop Towels | /hometextile/industriallinen/shoptowels/ |
+| 43 | Fender Covers | /hometextile/industriallinen/fendercovers/ |
+| 44 | Ihram | /hometextile/ihram/ |
+| 45 | Apparel Fabric | /fabric/apparelfabric/ |
+| 46 | Home Textile Fabric | /fabric/hometextilefabric/ |

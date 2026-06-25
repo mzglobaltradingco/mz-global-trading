@@ -1,100 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Home -->
   <url>
     <loc>https://mzglobaltrading.com/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://mzglobaltrading.com/images/hero/hero-apparel.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://mzglobaltrading.com/images/hero/hero-home-textiles.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://mzglobaltrading.com/images/hero/hero-fabric.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://mzglobaltrading.com/images/cards/cat-banner-apparel.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://mzglobaltrading.com/images/cards/cat-banner-home-textiles.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://mzglobaltrading.com/images/cards/cat-banner-fabric.webp</image:loc>
-    </image:image>
   </url>
 
   <!-- Corporate -->
   <url>
     <loc>https://mzglobaltrading.com/our-company/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://mzglobaltrading.com/images/hero/hero-about.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://mzglobaltrading.com/images/cards/cat-banner-apparel.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://mzglobaltrading.com/images/cards/cat-banner-home-textiles.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://mzglobaltrading.com/images/cards/cat-banner-fabric.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://mzglobaltrading.com/images/team/Muhammad-Muzammil.webp</image:loc>
-    </image:image>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/whychooseus/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/ourprocess/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/careers/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/faqs/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/textile-tools-calculator/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://mzglobaltrading.com/search/</loc>
-    <lastmod>2026-06-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://mzglobaltrading.com/privacypolicy/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/termsofuse/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -102,13 +53,11 @@
   <!-- Contact & RFQ -->
   <url>
     <loc>https://mzglobaltrading.com/contact-us/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/rfq/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -116,31 +65,26 @@
   <!-- Quality & Compliance -->
   <url>
     <loc>https://mzglobaltrading.com/quality-policy/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/qualitycompliance/supplierevaluation/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/qualitycompliance/qualitycontrol/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/qualitycompliance/inspectionprocess/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/qualitycompliance/certifications/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -148,139 +92,116 @@
   <!-- Apparel -->
   <url>
     <loc>https://mzglobaltrading.com/apparel/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/knittedgarments/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/knittedgarments/tshirts/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/knittedgarments/poloshirts/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/knittedgarments/henleyshirts/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/knittedgarments/sweatshirtshoodies/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/knittedgarments/sweatpantsjoggers/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/knittedgarments/tanktops/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/wovengarments/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/wovengarments/denimjeans/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/wovengarments/formalcasualshirts/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/wovengarments/pantsandtrousers/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/wovengarments/cargopants/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/wovengarments/shorts/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/babyandkids/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/babyandkids/tshirtsforkids/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/babyandkids/swaddlemuslinfabric/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/babyandkids/overalls/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/babyandkids/babyrompers/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/babyandkids/babybibs/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/babyandkids/babyhoodedtowels/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/workwearapparel/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/apparel/socks/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -288,208 +209,171 @@
   <!-- Home Textiles -->
   <url>
     <loc>https://mzglobaltrading.com/hometextile/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/bathlinen/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/bathlinen/towels/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mzglobaltrading.com/images/thumbnails/thumb-towels.webp</image:loc>
-    </image:image>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/bathlinen/institutionaltowels/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/bathlinen/bathrobes/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/bathlinen/bathmats/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/bathlinen/beachpooltowel/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/bedlinen/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/bedlinen/bedsheets/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/bedlinen/fittedsheets/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/bedlinen/duvetcovers/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/bedlinen/pillowcovers/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/bedlinen/cushioncovers/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/bedlinen/curtains/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/bedlinen/institutionalbedding/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/kitchenlinen/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/kitchenlinen/kitchentowels/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/kitchenlinen/barmops/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/kitchenlinen/aprons/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/kitchenlinen/potholders/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/tablelinen/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/tablelinen/tablecovers/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/thermalblankets/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/thermalblankets/cellularthermalblanket/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/thermalblankets/fleecethermalblankets/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/hospitallinen/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/hospitallinen/doctorsurgicalgowns/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/hospitallinen/medicalscrubs/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/hospitallinen/patientgowns/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/hospitallinen/surgicalhucktowels/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/industriallinen/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/industriallinen/shoptowels/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/industriallinen/fendercovers/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/hometextile/ihram/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -497,1196 +381,998 @@
   <!-- Fabric -->
   <url>
     <loc>https://mzglobaltrading.com/fabric/</loc>
-    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/fabric/apparelfabric/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/fabric/hometextilefabric/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Knowledge Hub — listing -->
+  <!-- Knowledge Hub - listing -->
   <url>
     <loc>https://mzglobaltrading.com/knowledge/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mzglobaltrading.com/images/hero/hero-knowledge.webp</image:loc>
-    </image:image>
   </url>
 
-  <!-- Knowledge Hub — original 6 articles -->
+  <!-- Knowledge Hub - original 6 articles -->
   <url>
     <loc>https://mzglobaltrading.com/knowledge/understanding-gsm-fabric-weight-sourcing/</loc>
-    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/incoterms-fob-cif-pakistan-textile-exports/</loc>
-    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/mz-global-expands-sialkot-technical-textiles/</loc>
-    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/iso-9001-certification-quality-management/</loc>
-    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/pre-shipment-inspection-checklist-textile-buyers/</loc>
-    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/how-to-read-textile-tech-pack-international-buyers/</loc>
-    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Knowledge Hub — new product articles (47) -->
+  <!-- Knowledge Hub - new product articles (47) -->
   <url>
     <loc>https://mzglobaltrading.com/knowledge/terry-towel-gsm-guide/</loc>
-    <lastmod>2025-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/institutional-towel-standards/</loc>
-    <lastmod>2026-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/bathrobe-fabric-types/</loc>
-    <lastmod>2026-02-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/bath-mat-construction-guide/</loc>
-    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/beach-towel-print-techniques/</loc>
-    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/bedsheet-thread-count-guide/</loc>
-    <lastmod>2025-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/fitted-sheet-pocket-depth-guide/</loc>
-    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/duvet-cover-closure-types/</loc>
-    <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/pillow-cover-fabric-guide/</loc>
-    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/cushion-cover-filling-guide/</loc>
-    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/curtain-fabric-guide/</loc>
-    <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/tshirt-fabric-weight-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/polo-shirt-pique-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/henley-shirt-construction-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/fleece-fabric-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/jogger-waistband-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/tank-top-fabric-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/denim-weight-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/dress-shirt-fabric-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/trouser-fabric-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/cargo-pants-construction-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/shorts-fabric-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/kids-apparel-safety-standards/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/muslin-swaddle-fabric-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/baby-overalls-construction-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/baby-romper-fabric-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/baby-bib-construction-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/baby-hooded-towel-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/kitchen-towel-fabric-guide/</loc>
-    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/bar-mop-towel-guide/</loc>
-    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/apron-fabric-guide/</loc>
-    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/pot-holder-heat-rating-guide/</loc>
-    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/table-linen-fabric-guide/</loc>
-    <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/cellular-blanket-guide/</loc>
-    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/fleece-blanket-gsm-guide/</loc>
-    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/surgical-gown-standards/</loc>
-    <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/medical-scrubs-fabric-guide/</loc>
-    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/patient-gown-construction-guide/</loc>
-    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/huck-towel-guide/</loc>
-    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/shop-towel-industrial-guide/</loc>
-    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/fender-cover-fabric-guide/</loc>
-    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/ihram-fabric-requirements/</loc>
-    <lastmod>2026-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/apparel-fabric-types-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/home-textile-fabric-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/workwear-fabric-standards/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/socks-fabric-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/knowledge/institutional-bedding-spec-guide/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Guides — listing -->
+  <!-- Guides - listing -->
   <url>
     <loc>https://mzglobaltrading.com/guides/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Guides — original general guides -->
+  <!-- Guides - original general guides -->
   <url>
     <loc>https://mzglobaltrading.com/guides/aql-pre-shipment-inspection/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/first-shipment-checklist/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/gsm-fabric-weight-guide/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/how-to-write-a-tech-pack/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/incoterms-for-textile-buyers/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/pakistan-textile-sourcing-guide/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/pakistan-vs-bangladesh-vs-china/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/textile-certifications-explained/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Guides — sourcing best practices series -->
+  <!-- Guides - sourcing best practices series -->
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-best-practices-supplier-evaluation-factory-selection/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-best-practices-design-technical-specification/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-best-practices-fabric-raw-material-sourcing/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-best-practices-pre-production-sampling/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-best-practices-inline-quality-control/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-best-practices-pre-shipment-inspection/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-best-practices-export-logistics-compliance/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-best-practices-payment-terms-trade-finance/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-best-practices-communication-documentation/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-best-practices-sustainable-ethical-sourcing/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Guides — textile product lifecycle series -->
+  <!-- Guides - textile product lifecycle series -->
   <url>
     <loc>https://mzglobaltrading.com/guides/textile-product-lifecycle-concept-trend-research/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/textile-product-lifecycle-design-technical-development/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/textile-product-lifecycle-raw-material-sourcing/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/textile-product-lifecycle-supplier-factory-selection/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/textile-product-lifecycle-costing-moq-negotiation/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/textile-product-lifecycle-pre-production-sampling/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/textile-product-lifecycle-manufacturing-production/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/textile-product-lifecycle-quality-control-compliance/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/textile-product-lifecycle-packaging-labelling/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/textile-product-lifecycle-export-logistics/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/textile-product-lifecycle-retail-distribution/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/textile-product-lifecycle-end-of-life-circular-economy/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Guides — product sourcing guides (new) -->
+  <!-- Guides - product sourcing guides -->
   <url>
     <loc>https://mzglobaltrading.com/guides/how-to-source-towels-pakistan/</loc>
-    <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/bulk-institutional-towel-sourcing/</loc>
-    <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/hotel-bathrobe-sourcing-guide/</loc>
-    <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-bath-mats-pakistan/</loc>
-    <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/beach-pool-towel-sourcing-guide/</loc>
-    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-bedsheets-pakistan/</loc>
-    <lastmod>2025-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/hotel-fitted-sheet-sourcing/</loc>
-    <lastmod>2025-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-duvet-covers-pakistan/</loc>
-    <lastmod>2025-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/custom-pillow-cover-sourcing/</loc>
-    <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/decorative-cushion-cover-sourcing/</loc>
-    <lastmod>2026-02-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-curtains-pakistan/</loc>
-    <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/custom-tshirt-sourcing-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/polo-shirt-sourcing-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-henley-shirts-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/hoodie-sweatshirt-sourcing-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-joggers-sweatpants-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/tank-top-sourcing-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-denim-jeans-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/formal-casual-shirt-sourcing-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/pants-trousers-sourcing-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-cargo-pants-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-shorts-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/kids-tshirt-sourcing-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-swaddle-muslin-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-baby-overalls-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-baby-rompers-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-baby-bibs-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-baby-hooded-towels-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-kitchen-towels-pakistan/</loc>
-    <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-bar-mops-pakistan/</loc>
-    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-aprons-pakistan/</loc>
-    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-pot-holders-pakistan/</loc>
-    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-table-covers-pakistan/</loc>
-    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-cellular-blankets-pakistan/</loc>
-    <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-fleece-blankets-pakistan/</loc>
-    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-surgical-gowns-pakistan/</loc>
-    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-medical-scrubs-pakistan/</loc>
-    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-patient-gowns-pakistan/</loc>
-    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-huck-towels-pakistan/</loc>
-    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-shop-towels-pakistan/</loc>
-    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-fender-covers-pakistan/</loc>
-    <lastmod>2026-12-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-ihram-pakistan/</loc>
-    <lastmod>2026-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-apparel-fabric-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-home-textile-fabric-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-workwear-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-socks-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/guides/sourcing-institutional-bedding-pakistan/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Downloads — listing -->
+  <!-- Downloads - listing -->
   <url>
     <loc>https://mzglobaltrading.com/downloads/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
-  <!-- Downloads — original general documents -->
+  <!-- Downloads - original general documents -->
   <url>
     <loc>https://mzglobaltrading.com/downloads/aql-reference-table/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/company-profile/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/export-documentation-checklist/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/factory-network-overview/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/gsm-thread-count-reference/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/incoterms-quick-reference/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/pre-shipment-inspection-checklist/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/restricted-substances-list/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/supplier-evaluation-matrix/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/sustainable-sourcing-policy/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/tech-pack-template-apparel/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/tech-pack-template-home-textiles/</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
-  <!-- Downloads — new product specification templates (47) -->
+  <!-- Downloads - new product specification templates (47) -->
   <url>
     <loc>https://mzglobaltrading.com/downloads/towel-specification-sheet/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/institutional-towel-tech-pack/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/bathrobe-customisation-checklist/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/bath-mat-size-weight-reference/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/beach-towel-artwork-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/bedsheet-size-chart-international/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/fitted-sheet-measurement-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/duvet-cover-spec-order-sheet/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/pillow-cover-size-reference/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/cushion-cover-artwork-brief-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/curtain-measurement-order-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/institutional-bedding-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/tshirt-size-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/polo-shirt-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/henley-shirt-measurement-sheet/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/hoodie-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/jogger-size-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/tank-top-measurement-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/denim-jeans-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/shirt-spec-grading-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/trouser-measurement-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/cargo-pants-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/shorts-size-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/kids-size-chart-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/swaddle-blanket-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/baby-overalls-size-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/baby-romper-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/baby-bib-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/baby-hooded-towel-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/kitchen-towel-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/bar-mop-spec-reference/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/apron-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/pot-holder-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/table-cover-size-reference/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/cellular-blanket-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/fleece-blanket-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/surgical-gown-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/scrubs-size-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/patient-gown-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/huck-towel-spec-reference/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/shop-towel-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/fender-cover-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/ihram-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/apparel-fabric-reference-sheet/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/home-textile-fabric-reference/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/workwear-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mzglobaltrading.com/downloads/socks-spec-template/</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
