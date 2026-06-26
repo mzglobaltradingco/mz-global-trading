@@ -38,8 +38,7 @@ const pageSchema = {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-      { "@type": "ListItem", position: 2, name: "Corporate" },
-      { "@type": "ListItem", position: 3, name: "Downloads", item: "https://mzglobaltrading.com/downloads/" },
+      { "@type": "ListItem", position: 2, name: "Downloads", item: "https://mzglobaltrading.com/downloads/" },
     ],
   },
 };

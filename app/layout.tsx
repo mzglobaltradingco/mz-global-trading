@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
-import PageTransitionWrapper from "./PageTransitionWrapper";
 import ScrollToTop from "./ScrollToTop";
-import CookieConsent from "@/components/CookieConsent";
+import { ClientCookieConsent } from "./ClientOnlyComponents";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -183,10 +182,9 @@ export default function RootLayout({
         />
 
         <ScrollToTop />
-        <PageTransitionWrapper>{children}</PageTransitionWrapper>
+        {children}
 
-        {/* Cookie consent banner — renders after hydration, z-40 */}
-        <CookieConsent />
+        <ClientCookieConsent />
       </body>
     </html>
   );

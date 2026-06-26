@@ -38,7 +38,7 @@
 ## Priority Order
 
 1. **SEO** — every page fully optimised before marking complete
-2. **Performance** — LCP < 2.5s, CLS < 0.1, INP < 200ms. Lighthouse: Desktop 98+, Mobile 95+
+2. **Performance** — LCP < 2.5s, CLS < 0.1, INP < 200ms. Lighthouse: Desktop 98+, Mobile 95+ (current baseline ~75 as of 2026-06-26; optimisations in progress)
 3. **Accessibility** — WCAG 2.1 AA
 4. **Mobile** — functional at 320px minimum; test at 320/375/768/1024/1280px
 5. **Security** — no secrets in client code, CSP headers, noopener on external links
@@ -367,7 +367,7 @@ npx wrangler pages deploy out --project-name=mz-global-trading        # 3. deplo
 
 - **Wrangler:** 4.98.0 · **Cloudflare project:** `mz-global-trading`
 - **Preview URL:** `https://<hash>.mz-global-trading.pages.dev`
-- Domain `mzglobaltrading.com` not yet migrated — test PSI against `https://mz-global-trading.pages.dev/`
+- Domain `mzglobaltrading.com` is live on Cloudflare Pages — test PSI against `https://mzglobaltrading.com/`
 
 ### Active Redirects (`public/_redirects`)
 ```

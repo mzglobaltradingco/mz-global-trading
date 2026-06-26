@@ -43,11 +43,6 @@ export default function TermsOfUsePage() {
                 {
                   "@type": "ListItem",
                   "position": 2,
-                  "name": "Legal",
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 3,
                   "name": "Terms of Use",
                   "item": "https://mzglobaltrading.com/termsofuse/",
                 },

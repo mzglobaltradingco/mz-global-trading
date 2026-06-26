@@ -93,9 +93,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-        { "@type": "ListItem", position: 2, name: "Resources" },
-        { "@type": "ListItem", position: 3, name: "Knowledge Hub", item: "https://mzglobaltrading.com/knowledge/" },
-        { "@type": "ListItem", position: 4, name: post.title, item: `https://mzglobaltrading.com/knowledge/${post.slug}/` },
+        { "@type": "ListItem", position: 2, name: "Knowledge Hub", item: "https://mzglobaltrading.com/knowledge/" },
+        { "@type": "ListItem", position: 3, name: post.title, item: `https://mzglobaltrading.com/knowledge/${post.slug}/` },
       ],
     },
   };

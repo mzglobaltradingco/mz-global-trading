@@ -43,11 +43,6 @@ export default function PrivacyPolicyPage() {
                 {
                   "@type": "ListItem",
                   "position": 2,
-                  "name": "Legal",
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 3,
                   "name": "Privacy Policy",
                   "item": "https://mzglobaltrading.com/privacypolicy/",
                 },

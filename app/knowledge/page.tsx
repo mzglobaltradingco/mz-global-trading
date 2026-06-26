@@ -41,8 +41,7 @@ const knowledgeSchema = {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-      { "@type": "ListItem", position: 2, name: "Resources" },
-      { "@type": "ListItem", position: 3, name: "Knowledge Hub", item: "https://mzglobaltrading.com/knowledge/" },
+      { "@type": "ListItem", position: 2, name: "Knowledge Hub", item: "https://mzglobaltrading.com/knowledge/" },
     ],
   },
 };

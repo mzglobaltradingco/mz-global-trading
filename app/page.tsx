@@ -1,7 +1,7 @@
 import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Hero from "@/components/Hero";
-import RebrandPopup from "@/components/RebrandPopup";
+import { ClientRebrandPopup } from "./ClientOnlyComponents";
 import StatsBar from "@/components/StatsBar";
 import SourcingCapabilities from "@/components/SourcingCapabilities";
 import WhyUs from "@/components/WhyUs";
@@ -61,7 +61,7 @@ export default function HomePage() {
         <CTABanner />
       </main>
       <Footer />
-      <RebrandPopup />
+      <ClientRebrandPopup />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}

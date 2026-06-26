@@ -40,8 +40,7 @@ const pageSchema = {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-      { "@type": "ListItem", position: 2, name: "Quality & Compliance" },
-      { "@type": "ListItem", position: 3, name: "Quality Policy", item: "https://mzglobaltrading.com/quality-policy/" },
+      { "@type": "ListItem", position: 2, name: "Quality Policy", item: "https://mzglobaltrading.com/quality-policy/" },
     ],
   },
 };

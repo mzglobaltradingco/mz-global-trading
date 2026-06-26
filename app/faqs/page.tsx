@@ -36,8 +36,7 @@ const pageSchema = {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-      { "@type": "ListItem", position: 2, name: "Corporate" },
-      { "@type": "ListItem", position: 3, name: "FAQs", item: "https://mzglobaltrading.com/faqs/" },
+      { "@type": "ListItem", position: 2, name: "FAQs", item: "https://mzglobaltrading.com/faqs/" },
     ],
   },
   mainEntity: [
