@@ -9,7 +9,7 @@ const QUALITY = 75;
 // These directories have no content images — skip them
 const SKIP_DIRS = new Set(["og", "logo", "certs", "icons", "social"]);
 
-async function collectFiles(dir) {
+async function collectFiles(dir, isRoot = false) {
   const entries = await readdir(dir, { withFileTypes: true });
   const files = [];
   for (const entry of entries) {
@@ -18,7 +18,8 @@ async function collectFiles(dir) {
       if (!SKIP_DIRS.has(entry.name)) {
         files.push(...(await collectFiles(fullPath)));
       }
-    } else if (extname(entry.name).toLowerCase() === ".webp") {
+    } else if (!isRoot && extname(entry.name).toLowerCase() === ".webp") {
+      // Skip root-level files — they have no RESPONSIVE_PATHS match in the loader
       files.push(fullPath);
     }
   }
@@ -27,7 +28,7 @@ async function collectFiles(dir) {
 
 async function main() {
   const start = Date.now();
-  const allFiles = await collectFiles(IMAGE_DIR);
+  const allFiles = await collectFiles(IMAGE_DIR, true);
 
   // Split into originals and previously-generated sized files
   const originals = allFiles.filter((f) => !basename(f).includes("@"));

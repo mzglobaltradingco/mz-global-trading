@@ -904,22 +904,21 @@ export default function WorkwearContent() {
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(13,27,42,0.93) 0%, rgba(13,27,42,0.78) 35%, rgba(13,27,42,0.30) 62%, transparent 85%)" }} aria-hidden="true" />
 
-        {/* Breadcrumb */}
-        <nav
-          aria-label="Breadcrumb"
-          className="absolute top-6 left-0 right-0 px-6 md:px-12"
-        >
-          <ol className="flex flex-wrap items-center gap-1.5 text-xs text-white/60">
-            <li><Link prefetch={false} href="/" className="hover:text-white transition-colors">Home</Link></li>
-            <li aria-hidden="true">/</li>
-            <li><Link prefetch={false} href="/apparel/" className="hover:text-white transition-colors">Apparel</Link></li>
-            <li aria-hidden="true">/</li>
-            <li className="text-white/90">Workwear Apparel</li>
-          </ol>
-        </nav>
-
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="max-w-3xl">
+            <motion.nav
+              aria-label="Breadcrumb"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="flex items-center gap-2 text-gray-500 text-xs mb-8 flex-wrap"
+            >
+              <Link prefetch={false} href="/" className="hover:text-gold transition-colors">Home</Link>
+              <span aria-hidden="true">&#x203A;</span>
+              <Link prefetch={false} href="/apparel/" className="hover:text-gold transition-colors">Apparel</Link>
+              <span aria-hidden="true">&#x203A;</span>
+              <span className="text-gold">Workwear Apparel</span>
+            </motion.nav>
             <motion.p
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}

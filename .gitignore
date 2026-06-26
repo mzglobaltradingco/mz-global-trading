@@ -16,6 +16,9 @@
 # generated search index — rebuilt by postbuild, served from public/ in dev mode
 /public/_pagefind/
 
+# generated responsive image variants — rebuilt by predev/prebuild
+public/images/**/*@*w.webp
+
 # production
 /build
 
