@@ -7,6 +7,7 @@ import Link from "next/link";
 
 const STORAGE_KEY = "mz_rebrand_v1";
 const DISMISS_MS = 30 * 24 * 60 * 60 * 1000;
+const EXPIRY_DATE = new Date("2026-07-26").getTime();
 
 function isDismissed(): boolean {
   try {
@@ -50,7 +51,7 @@ const FEATURES = [
   "Technical Downloads",
   "Buying Guides",
   "Product Knowledge Centre",
-  "150+ knowledge articles, sourcing guides and technical downloads",
+  "190+ knowledge articles, sourcing guides and technical downloads",
 ];
 
 const CATEGORIES = [
@@ -75,7 +76,7 @@ const CATEGORIES = [
 ];
 
 const STATS: { value: number; suffix: string; label: string }[] = [
-  { value: 150, suffix: "+", label: "Knowledge Docs" },
+  { value: 190, suffix: "+", label: "Knowledge Docs" },
   { value: 3,   suffix: "",   label: "Business Divisions" },
   { value: 24,  suffix: "/7", label: "Website Access" },
   { value: 100, suffix: "%",  label: "Same Ownership" },
@@ -103,7 +104,7 @@ export default function RebrandPopup() {
 
   useEffect(() => { dontShowRef.current = dontShow; }, [dontShow]);
 
-  useEffect(() => { setVisible(!isDismissed()); }, []);
+  useEffect(() => { setVisible(!isDismissed() && Date.now() < EXPIRY_DATE); }, []);
 
   useEffect(() => {
     if (!visible) { setStatsActive(false); return; }
@@ -223,7 +224,7 @@ export default function RebrandPopup() {
                   <div className="flex flex-col items-center gap-1.5">
                     <div className="flex h-16 w-24 items-center justify-center rounded-xl border border-white/10 bg-white/10 p-2.5 sm:h-[72px] sm:w-[124px]">
                       <Image
-                        src="/images/logo/logo-old.png"
+                        src="/images/logo/logo-old.webp"
                         alt="Previous MZ Global Trading logo — prior identity"
                         width={100}
                         height={64}
