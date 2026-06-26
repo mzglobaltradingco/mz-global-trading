@@ -6,8 +6,8 @@ import {
   staggerContainerVariants,
   staggerItemVariants,
   viewportOnce,
-  useCountUp,
 } from "@/lib/animations";
+import { useCountUp } from "@/lib/use-count-up";
 
 const stats = [
   {
