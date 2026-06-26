@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "47",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Baby Rompers", "Baby & Kids", "Fabric Guide", "Specifications"],
   readTime: 6,
-  date: "2026-10-13",
+  date: "2026-02-03",
   author: "M. Muzammil",
   featured: false,
   content: `## Why Fabric Construction Matters for Infant Rompers

@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "13",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Fitted Sheets", "Bed Linen", "Hotel Supply", "Specifications"],
   readTime: 5,
-  date: "2025-11-03",
+  date: "2024-05-21",
   author: "M. Muzammil",
   featured: false,
   content: `## Why Pocket Depth Is the Most Important Fitted Sheet Specification

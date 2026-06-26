@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "28",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Patient Gowns", "Hospital Linen", "Healthcare Textiles", "Specifications"],
   readTime: 5,
-  date: "2026-10-14",
+  date: "2025-02-04",
   author: "M. Muzammil",
   featured: false,
   content: `## Patient Gowns: Dignity, Access and Laundry Durability in One Specification

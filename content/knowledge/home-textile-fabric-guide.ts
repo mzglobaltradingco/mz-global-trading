@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "53",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Home Textile Fabric", "Fabric Guide", "Terry", "Woven"],
   readTime: 6,
-  date: "2026-11-24",
+  date: "2026-06-17",
   author: "M. Muzammil",
   featured: false,
   content: `## Home Textile Fabric Categories

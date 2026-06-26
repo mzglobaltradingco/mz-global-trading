@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "15",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Pillow Covers", "Bed Linen", "Fabric Guide", "Specifications"],
   readTime: 5,
-  date: "2026-01-07",
+  date: "2024-06-11",
   author: "M. Muzammil",
   featured: false,
   content: `## The Pillow Cover Specification: Often Underspecified, Always Noticed

@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "43",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Shorts", "Woven Garments", "Fabric Guide", "Specifications"],
   readTime: 5,
-  date: "2026-09-15",
+  date: "2025-11-04",
   author: "M. Muzammil",
   featured: false,
   content: `## Chino Shorts

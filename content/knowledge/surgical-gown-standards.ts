@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "26",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Surgical Gowns", "Hospital Linen", "AAMI Standards", "Medical Textiles"],
   readTime: 6,
-  date: "2026-09-16",
+  date: "2025-01-07",
   author: "M. Muzammil",
   featured: false,
   content: `## Surgical Gowns: Protection Level Is a Clinical Specification, Not a Purchasing Decision

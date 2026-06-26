@@ -465,13 +465,13 @@ Combined slide labels: `bg-navy-950/60 backdrop-blur-sm border border-white/10 r
 
 | Type | Count |
 |---|---|
-| Static page.tsx files | 82 |
+| Static page.tsx files | 80 |
 | Knowledge Hub `/knowledge/[slug]` | 53 |
 | Guide pages `/guides/[slug]` | 77 |
 | Downloads `/downloads/[slug]` | 59 |
-| **Total unique URLs** | **271** (272 HTML incl. 404) |
+| **Total unique URLs** | **269** (268 in sitemap — `/search/` correctly excluded) |
 
-Pagefind indexes 272 files. All dynamic slugs generate correctly.
+Pagefind indexes 269 files. All dynamic slugs generate correctly.
 
 ### Static page.tsx breakdown (82 total)
 

@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "25",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Fleece Blankets", "Thermal Blankets", "GSM Guide", "Retail"],
   readTime: 5,
-  date: "2026-09-02",
+  date: "2024-11-19",
   author: "M. Muzammil",
   featured: false,
   content: `## Fleece Blankets: GSM Is Not the Only Performance Indicator

@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "14",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Duvet Covers", "Bed Linen", "Hotel Supply", "Specifications"],
   readTime: 5,
-  date: "2025-12-02",
+  date: "2024-08-06",
   author: "M. Muzammil",
   featured: false,
   content: `## Closure Type Is a Specification Decision, Not an Aesthetic One

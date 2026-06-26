@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "39",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Denim Jeans", "Woven Garments", "Fabric Guide", "Specifications"],
   readTime: 6,
-  date: "2026-08-18",
+  date: "2025-09-02",
   author: "M. Muzammil",
   featured: false,
   content: `## How Denim Weight Is Measured

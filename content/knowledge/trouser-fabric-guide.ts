@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "41",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Pants & Trousers", "Woven Garments", "Fabric Guide", "Specifications"],
   readTime: 6,
-  date: "2026-09-01",
+  date: "2025-10-07",
   author: "M. Muzammil",
   featured: false,
   content: `## Chino Fabric (Cotton Twill for Chinos)

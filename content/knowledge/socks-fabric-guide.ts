@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "51",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Socks", "Knitted", "Fabric Guide", "Specifications"],
   readTime: 6,
-  date: "2026-11-10",
+  date: "2025-12-02",
   author: "M. Muzammil",
   featured: false,
   content: `## Yarn Composition Options

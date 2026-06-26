@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "2",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Incoterms", "FOB", "CIF", "Logistics", "Export"],
   readTime: 4,
-  date: "2025-10-28",
+  date: "2023-11-21",
   author: "M. Muzammil",
   featured: false,
   image: "/knowledge/incoterms-fob-cif-pakistan-textile-exports.webp",

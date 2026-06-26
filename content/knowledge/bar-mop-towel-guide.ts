@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "20",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Bar Mops", "Kitchen Linen", "Institutional", "Foodservice"],
   readTime: 4,
-  date: "2026-06-17",
+  date: "2024-09-17",
   author: "M. Muzammil",
   featured: false,
   content: `## Bar Mops: The Institutional Standard for Commercial Kitchen Cleaning

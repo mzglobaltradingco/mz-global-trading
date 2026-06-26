@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "34",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Polo Shirts", "Knitted Garments", "Fabric Guide", "Piqué"],
   readTime: 5,
-  date: "2026-07-15",
+  date: "2025-04-15",
   author: "M. Muzammil",
   featured: false,
   content: `## What Is Piqué? The Structural Definition

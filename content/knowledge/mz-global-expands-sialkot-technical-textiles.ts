@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "3",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Company Updates",
   tags: ["Sialkot", "Workwear", "Network", "Technical Textiles"],
   readTime: 3,
-  date: "2025-12-01",
+  date: "2024-04-16",
   author: "M. Muzammil",
   featured: false,
   image: "/knowledge/mz-global-expands-sialkot-technical-textiles.webp",

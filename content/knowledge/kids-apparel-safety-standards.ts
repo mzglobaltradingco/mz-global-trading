@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "44",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Baby & Kids", "Safety Standards", "Certifications", "OEKO-TEX"],
   readTime: 7,
-  date: "2026-09-22",
+  date: "2025-08-05",
   author: "M. Muzammil",
   featured: false,
   content: `## The Three Tiers of Children's Apparel Regulation

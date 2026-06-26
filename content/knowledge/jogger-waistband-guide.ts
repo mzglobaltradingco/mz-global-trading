@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "37",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Sweatpants", "Joggers", "Waistband", "Specifications"],
   readTime: 5,
-  date: "2026-08-04",
+  date: "2025-11-18",
   author: "M. Muzammil",
   featured: false,
   content: `## Why the Waistband Specification Drives Sweatpant Quality

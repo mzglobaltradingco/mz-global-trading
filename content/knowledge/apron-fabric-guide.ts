@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "21",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Aprons", "Kitchen Linen", "Fabric Guide", "Hospitality"],
   readTime: 5,
-  date: "2026-07-08",
+  date: "2024-10-01",
   author: "M. Muzammil",
   featured: false,
   content: `## Apron Fabric: The Brand Surface in a Commercial Kitchen

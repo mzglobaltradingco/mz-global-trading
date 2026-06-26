@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "22",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Pot Holders", "Kitchen Linen", "Safety Standards", "Specifications"],
   readTime: 4,
-  date: "2026-07-22",
+  date: "2024-10-15",
   author: "M. Muzammil",
   featured: false,
   content: `## Pot Holder Construction: Heat Protection Is Specified, Not Assumed

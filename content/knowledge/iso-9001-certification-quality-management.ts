@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "4",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Company Updates",
   tags: ["ISO 9001", "Certifications", "Quality", "Compliance"],
   readTime: 4,
-  date: "2025-09-10",
+  date: "2023-12-19",
   author: "M. Muzammil",
   featured: false,
   image: "/knowledge/iso-9001-certification-quality-management.webp",

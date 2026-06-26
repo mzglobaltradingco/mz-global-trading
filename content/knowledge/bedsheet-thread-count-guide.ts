@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "12",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Bedsheets", "Thread Count", "Bed Linen", "Specifications", "Hotel Supply"],
   readTime: 7,
-  date: "2025-10-08",
+  date: "2024-05-07",
   author: "M. Muzammil",
   featured: false,
   content: `## Thread Count: A Useful Guide — Not a Quality Guarantee

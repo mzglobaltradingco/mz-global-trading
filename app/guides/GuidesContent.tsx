@@ -1202,7 +1202,7 @@ export default function GuidesContent() {
             {[
               { val: "77", label: "Guides", delay: 0 },
               { val: "250+", label: "Minutes of Content", delay: 0.08 },
-              { val: "7", label: "Topic Areas", delay: 0.16 },
+              { val: "22", label: "Topic Areas", delay: 0.16 },
               { val: "Free", label: "Read Online", delay: 0.24 },
             ].map((s) => (
               <motion.div

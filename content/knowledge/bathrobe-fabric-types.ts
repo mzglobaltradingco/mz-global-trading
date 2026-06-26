@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "9",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Bathrobes", "Bath Linen", "Hotel Supply", "Fabric Guide", "Hospitality"],
   readTime: 6,
-  date: "2026-02-18",
+  date: "2024-03-05",
   author: "M. Muzammil",
   featured: false,
   content: `## Why Fabric Choice Defines a Bathrobe Programme

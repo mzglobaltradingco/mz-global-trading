@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "30",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Shop Towels", "Industrial Linen", "Automotive Textiles", "Specifications"],
   readTime: 4,
-  date: "2026-11-11",
+  date: "2025-02-18",
   author: "M. Muzammil",
   featured: false,
   content: `## Shop Towels: Volume, Durability and Performance in Industrial Environments

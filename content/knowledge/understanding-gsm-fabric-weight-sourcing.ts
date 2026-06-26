@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "1",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["GSM", "Fabric", "Specifications", "Quality Control"],
   readTime: 5,
-  date: "2025-11-15",
+  date: "2023-11-07",
   author: "M. Muzammil",
   featured: true,
   image: "/knowledge/understanding-gsm-fabric-weight-sourcing.webp",

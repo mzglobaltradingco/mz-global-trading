@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "46",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Overalls", "Baby & Kids", "Construction Guide", "Specifications"],
   readTime: 6,
-  date: "2026-10-06",
+  date: "2026-01-06",
   author: "M. Muzammil",
   featured: false,
   content: `## Snap Fastener Specification for Baby Garments

@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "19",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Kitchen Towels", "Kitchen Linen", "Fabric Guide", "Specifications"],
   readTime: 5,
-  date: "2026-06-03",
+  date: "2024-09-03",
   author: "M. Muzammil",
   featured: false,
   content: `## Kitchen Towel Construction: Why It Drives Programme Performance

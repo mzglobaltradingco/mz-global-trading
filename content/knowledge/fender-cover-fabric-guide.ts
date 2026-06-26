@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "31",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Fender Covers", "Industrial Linen", "Automotive Textiles", "Specifications"],
   readTime: 4,
-  date: "2026-11-25",
+  date: "2025-03-04",
   author: "M. Muzammil",
   featured: false,
   content: `## Fender Covers: Paint Protection, Brand Identity and Volume Sourcing

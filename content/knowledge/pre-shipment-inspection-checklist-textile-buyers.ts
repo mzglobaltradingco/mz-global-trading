@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "5",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Resources",
   tags: ["PSI", "Quality Control", "Inspection", "Checklist"],
   readTime: 6,
-  date: "2025-11-05",
+  date: "2024-01-09",
   author: "M. Muzammil",
   featured: false,
   image: "/knowledge/pre-shipment-inspection-checklist-textile-buyers.webp",

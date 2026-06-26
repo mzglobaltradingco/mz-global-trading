@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "36",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Sweatshirts", "Hoodies", "Fleece", "Fabric Guide"],
   readTime: 6,
-  date: "2026-07-28",
+  date: "2025-06-10",
   author: "M. Muzammil",
   featured: false,
   content: `## Why Fleece Fabric Selection Matters at Specification Stage

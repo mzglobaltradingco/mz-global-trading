@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "24",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Cellular Blankets", "Thermal Blankets", "Healthcare", "Institutional"],
   readTime: 4,
-  date: "2026-08-19",
+  date: "2024-11-05",
   author: "M. Muzammil",
   featured: false,
   content: `## Cellular Blankets: Thermal Regulation Through Open Weave

@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "32",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Ihram", "Hajj Textiles", "Religious Compliance", "Home Textiles"],
   readTime: 4,
-  date: "2026-12-09",
+  date: "2025-04-01",
   author: "M. Muzammil",
   featured: false,
   content: `## Ihram: When Religious Law Is the Product Specification

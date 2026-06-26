@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "35",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Henley Shirts", "Knitted Garments", "Construction Guide", "Specifications"],
   readTime: 5,
-  date: "2026-07-21",
+  date: "2025-05-06",
   author: "M. Muzammil",
   featured: false,
   content: `## The Defining Feature: Henley Placket Construction

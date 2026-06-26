@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "11",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Beach Towels", "Print Techniques", "Retail", "Pool Towels", "Hospitality"],
   readTime: 6,
-  date: "2026-05-06",
+  date: "2024-03-19",
   author: "M. Muzammil",
   featured: false,
   content: `## Beach Towel Print: More Than Decoration

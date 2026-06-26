@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "48",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Baby Bibs", "Baby & Kids", "Construction Guide", "Absorbency"],
   readTime: 5,
-  date: "2026-10-20",
+  date: "2026-03-03",
   author: "M. Muzammil",
   featured: false,
   content: `## The Three Bib Categories

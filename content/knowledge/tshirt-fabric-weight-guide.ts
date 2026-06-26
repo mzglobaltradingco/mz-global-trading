@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "33",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["T-Shirts", "Knitted Garments", "Fabric Guide", "GSM"],
   readTime: 6,
-  date: "2026-07-10",
+  date: "2025-03-18",
   author: "M. Muzammil",
   featured: false,
   content: `## Why GSM Determines T-Shirt Programme Performance

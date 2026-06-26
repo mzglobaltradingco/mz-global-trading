@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "16",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Cushion Covers", "Home Textiles", "Retail", "Fabric Guide"],
   readTime: 5,
-  date: "2026-02-03",
+  date: "2024-07-02",
   author: "M. Muzammil",
   featured: false,
   content: `## Why Cushion Cover Specification Is More Complex Than It Looks

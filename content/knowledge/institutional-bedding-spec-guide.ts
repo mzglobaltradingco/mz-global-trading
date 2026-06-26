@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "18",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Institutional Bedding", "Bed Linen", "Hotel Supply", "Specifications"],
   readTime: 6,
-  date: "2026-04-08",
+  date: "2024-08-20",
   author: "M. Muzammil",
   featured: false,
   content: `## Why Institutional Bedding Needs Different Specifications

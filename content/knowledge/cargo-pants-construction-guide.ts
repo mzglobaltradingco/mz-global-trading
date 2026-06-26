@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "42",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Cargo Pants", "Woven Garments", "Construction Guide", "Workwear"],
   readTime: 6,
-  date: "2026-09-08",
+  date: "2025-10-21",
   author: "M. Muzammil",
   featured: false,
   content: `## The Defining Feature: Cargo Pocket Specification

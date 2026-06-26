@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "17",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Curtains", "Home Textiles", "Fabric Guide", "Hotel Supply"],
   readTime: 6,
-  date: "2026-03-04",
+  date: "2024-07-16",
   author: "M. Muzammil",
   featured: false,
   content: `## Curtain Specification: Fabric and Heading Together

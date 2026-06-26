@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "38",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Tank Tops", "Knitted Garments", "Fabric Guide", "Specifications"],
   readTime: 5,
-  date: "2026-08-11",
+  date: "2025-05-20",
   author: "M. Muzammil",
   featured: false,
   content: `## Tank Tops: A Wide Application Range, One Construction Decision

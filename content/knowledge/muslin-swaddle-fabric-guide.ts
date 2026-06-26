@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "45",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Swaddle", "Muslin", "Baby & Kids", "Fabric Guide"],
   readTime: 6,
-  date: "2026-09-29",
+  date: "2026-05-05",
   author: "M. Muzammil",
   featured: false,
   content: `## Muslin Weave: The Plain Weave Foundation

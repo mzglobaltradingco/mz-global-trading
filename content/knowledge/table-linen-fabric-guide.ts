@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "23",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Table Covers", "Table Linen", "Fabric Guide", "Hospitality"],
   readTime: 5,
-  date: "2026-08-05",
+  date: "2024-12-03",
   author: "M. Muzammil",
   featured: false,
   content: `## Table Linen Fabric: Visual Quality at the Table

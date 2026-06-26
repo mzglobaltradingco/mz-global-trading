@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "27",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Medical Scrubs", "Hospital Linen", "Healthcare Textiles", "Fabric Guide"],
   readTime: 5,
-  date: "2026-09-30",
+  date: "2025-01-21",
   author: "M. Muzammil",
   featured: false,
   content: `## Medical Scrubs: Fabric Specification Drives Compliance, Comfort and Cost-Per-Wear

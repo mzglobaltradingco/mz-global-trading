@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "40",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Formal Shirts", "Woven Garments", "Fabric Guide", "Specifications"],
   readTime: 5,
-  date: "2026-08-25",
+  date: "2025-09-16",
   author: "M. Muzammil",
   featured: false,
   content: `## Poplin (Broadcloth)

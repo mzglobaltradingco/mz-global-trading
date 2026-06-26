@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "52",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Apparel Fabric", "Fabric Guide", "GSM", "Specifications"],
   readTime: 6,
-  date: "2026-11-17",
+  date: "2026-06-03",
   author: "M. Muzammil",
   featured: false,
   content: `## Fabric Categories by Construction

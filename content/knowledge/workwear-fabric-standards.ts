@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "50",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Workwear", "Fabric Standards", "Hi-Vis", "Industrial"],
   readTime: 7,
-  date: "2026-11-03",
+  date: "2025-07-08",
   author: "M. Muzammil",
   featured: false,
   content: `## Workwear Fabric Categories

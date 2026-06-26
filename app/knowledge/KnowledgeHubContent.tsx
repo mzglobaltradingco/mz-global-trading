@@ -1,11 +1,21 @@
 ﻿"use client";
 
 import { useState, useMemo, useEffect, useRef, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import {
   staggerContainerVariants,
   viewportOnce,
 } from "@/lib/animations";
+
+const numReveal: Variants = {
+  hidden: { opacity: 0, y: 24, scale: 0.8 },
+  visible: (delay: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1], delay },
+  }),
+};
 import PageHero from "@/components/PageHero";
 import { getAllPosts, getFeaturedPost } from "@/lib/knowledge";
 import PostCard from "@/components/knowledge/PostCard";
@@ -119,6 +129,36 @@ export default function KnowledgeHubContent() {
         description="Practical knowledge for procurement managers and brand buyers sourcing textiles from Pakistan — fabric specifications, compliance, logistics and industry news."
         pills={["Trade Insights", "Company Updates", "Resources"]}
       />
+
+      {/* ── Stats bar ─────────────────────────────────────────────────────── */}
+      <section className="py-10 bg-white border-b border-gray-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            variants={staggerContainerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-gray-100 rounded-2xl overflow-hidden"
+          >
+            {[
+              { val: "53", label: "Articles", delay: 0 },
+              { val: "250+", label: "Minutes of Content", delay: 0.08 },
+              { val: "3", label: "Categories", delay: 0.16 },
+              { val: "Free", label: "Read Online", delay: 0.24 },
+            ].map((s) => (
+              <motion.div
+                key={s.label}
+                custom={s.delay}
+                variants={numReveal}
+                className="bg-white px-6 py-6 text-center"
+              >
+                <p className="text-3xl font-bold text-navy-900 leading-none mb-1">{s.val}</p>
+                <p className="text-xs text-gray-500 font-medium">{s.label}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
       {/* ── Sticky search + filter bar ────────────────────────────────────── */}
       <div className="sticky top-32 z-10 bg-white/95 backdrop-blur-xs border-b border-gray-100 shadow-xs">

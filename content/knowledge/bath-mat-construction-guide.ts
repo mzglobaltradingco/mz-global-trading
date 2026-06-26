@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "10",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Bath Mats", "Bath Linen", "Construction Guide", "Hotel Supply", "Specifications"],
   readTime: 5,
-  date: "2026-03-25",
+  date: "2024-02-20",
   author: "M. Muzammil",
   featured: false,
   content: `## Bath Mat Construction: Why It Matters for Procurement

@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "29",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Huck Towels", "Hospital Linen", "Surgical Textiles", "Healthcare"],
   readTime: 4,
-  date: "2026-10-28",
+  date: "2024-04-02",
   author: "M. Muzammil",
   featured: false,
   content: `## Huck Towels: Why Lint-Free Matters in a Clinical Environment

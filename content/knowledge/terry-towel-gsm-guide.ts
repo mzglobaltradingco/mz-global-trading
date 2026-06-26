@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "7",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Towels", "GSM", "Bath Linen", "Hotel Supply", "Specifications"],
   readTime: 7,
-  date: "2025-11-20",
+  date: "2024-01-23",
   author: "M. Muzammil",
   featured: true,
   image: "/knowledge/terry-towel-gsm-guide.webp",

@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "6",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Resources",
   tags: ["Tech Pack", "Specifications", "Sourcing", "Guide"],
   readTime: 5,
-  date: "2025-10-15",
+  date: "2023-12-05",
   author: "M. Muzammil",
   featured: false,
   image: "/knowledge/how-to-read-textile-tech-pack-international-buyers.webp",

@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "8",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Institutional Towels", "Healthcare Linen", "Hospitality Supply", "Specifications", "GSM"],
   readTime: 6,
-  date: "2026-01-14",
+  date: "2024-02-06",
   author: "M. Muzammil",
   featured: false,
   content: `## What Makes a Towel "Institutional Grade"?

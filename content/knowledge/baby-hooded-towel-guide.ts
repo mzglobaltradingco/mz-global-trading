@@ -1,4 +1,4 @@
-import type { KnowledgePost } from "@/types/knowledge";
+﻿import type { KnowledgePost } from "@/types/knowledge";
 
 const post: KnowledgePost = {
   id: "49",
@@ -9,7 +9,7 @@ const post: KnowledgePost = {
   category: "Trade Insights",
   tags: ["Baby Hooded Towels", "Baby & Kids", "Towels", "Safety"],
   readTime: 6,
-  date: "2026-10-27",
+  date: "2026-04-07",
   author: "M. Muzammil",
   featured: false,
   content: `## Why OEKO-TEX Class 1 Is Non-Negotiable for Baby Towels
