@@ -31,15 +31,6 @@ export default function TowelsPage() {
       "Pakistan OEM bath towel manufacturer producing terry loop, velour, zero twist, waffle, jacquard and dobby border towels in certified cotton for hotels, retailers and hospitality brands in USA, UK and Europe.",
     image: "https://mzglobaltrading.com/images/og/towels-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      priceValidUntil: "2027-12-31",
-      url: "https://mzglobaltrading.com/rfq/",
-      seller: { "@type": "Organization", name: "MZ Global Trading" },
-    },
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://mzglobaltrading.com/images/og/towels-og.webp",

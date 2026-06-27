@@ -35,15 +35,6 @@ export default function ShortsPage() {
               "Custom shorts sourced from Pakistan's certified factories. Seven construction types: chino twill, ripstop, canvas, linen blend, single jersey, French terry and nylon swim. 160–280 GSM. OEKO-TEX and BSCI available.",
             image: "https://mzglobaltrading.com/images/og/shorts-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "USD",
-              availability: "https://schema.org/InStock",
-              priceValidUntil: "2027-12-31",
-              url: "https://mzglobaltrading.com/rfq/",
-              seller: { "@type": "Organization", name: "MZ Global Trading" },
-            },
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [

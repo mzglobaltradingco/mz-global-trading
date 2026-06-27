@@ -31,15 +31,6 @@ export default function BabyRompersPage() {
       "Pakistan OEM baby romper and bodysuit manufacturer. GOTS and OEKO-TEX Class 1 certified organic cotton and combed jersey. Snap crotch and envelope necklines. Newborn to 24 months. Bulk programmes for USA, UK, Europe and worldwide.",
     image: "https://mzglobaltrading.com/images/og/baby-rompers-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      priceValidUntil: "2027-12-31",
-      url: "https://mzglobaltrading.com/rfq/",
-      seller: { "@type": "Organization", name: "MZ Global Trading" },
-    },
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://mzglobaltrading.com/images/og/baby-rompers-og.webp",

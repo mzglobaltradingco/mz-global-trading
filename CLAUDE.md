@@ -176,7 +176,9 @@ export default function PageNamePage() {
         description: "...",
         image: "https://mzglobaltrading.com/images/og/page-name-og.webp",
         brand: { "@type": "Brand", name: "MZ Global Trading" },
-        offers: { "@type": "Offer", price: "0", priceCurrency: "USD", availability: "https://schema.org/InStock", priceValidUntil: "2027-12-31", url: "https://mzglobaltrading.com/rfq/", seller: { "@type": "Organization", name: "MZ Global Trading" } },
+        // NO offers block — MZ Global Trading is a B2B sourcing company, not an e-commerce retailer.
+        // Adding offers triggers Google Merchant Listings validation (price, returns, shipping) which
+        // does not apply. Omitting offers prevents all GSC Shopping/Merchant errors permanently.
         primaryImageOfPage: { "@type": "ImageObject", contentUrl: "https://mzglobaltrading.com/images/og/page-name-og.webp", name: "Descriptive name" },
         breadcrumb: { "@type": "BreadcrumbList", itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
@@ -300,7 +302,9 @@ style={{ transform: isActive ? "scale(1.06)" : "scale(1)", transition: "transfor
 
 **Product page:**
 ```tsx
-{ "@context": "https://schema.org", "@type": "Product", "name": "...", "image": "...", "brand": { "@type": "Brand", "name": "MZ Global Trading" }, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "priceValidUntil": "2027-12-31", "url": "https://mzglobaltrading.com/rfq/", "seller": { "@type": "Organization", "name": "MZ Global Trading" } }, "breadcrumb": {...} }
+{ "@context": "https://schema.org", "@type": "Product", "name": "...", "image": "...", "brand": { "@type": "Brand", "name": "MZ Global Trading" }, "breadcrumb": {...} }
+// NEVER add an "offers" block to Product schema. MZ Global Trading is B2B sourcing only.
+// offers triggers Google Merchant Listings validation (price/returns/shipping) — permanently banned.
 ```
 
 **Corporate/about page:**

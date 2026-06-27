@@ -31,15 +31,6 @@ export default function SwaddleMuslinPage() {
       "Pakistan OEM swaddle muslin wrap manufacturer producing GOTS certified organic cotton muslin and double gauze baby wraps. 90–130 GSM, 120×120 cm standard. OEKO-TEX Class 1 certified mills. Baby-safe azo-free dyes. Bulk programmes for USA, UK, Europe and worldwide baby brands.",
     image: "https://mzglobaltrading.com/images/og/swaddle-muslin-fabric-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      priceValidUntil: "2027-12-31",
-      url: "https://mzglobaltrading.com/rfq/",
-      seller: { "@type": "Organization", name: "MZ Global Trading" },
-    },
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://mzglobaltrading.com/images/og/swaddle-muslin-fabric-og.webp",

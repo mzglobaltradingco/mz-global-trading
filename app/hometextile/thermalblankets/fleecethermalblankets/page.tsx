@@ -36,15 +36,6 @@ export default function FleeceThermalBlanketsPage() {
               "Anti-pill polar fleece, sherpa double-sided and jacquard woven thermal blankets from Pakistan. 150–300 GSM. GRS-certified recycled polyester available. OEKO-TEX, BSCI, ISO 9001, WRAP. Sublimation print and embroidery for promotional and retail programmes. Export to USA, UK, EU, Australia and worldwide.",
             image: "https://mzglobaltrading.com/images/og/fleece-thermal-blankets-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "USD",
-              availability: "https://schema.org/InStock",
-              priceValidUntil: "2027-12-31",
-              url: "https://mzglobaltrading.com/rfq/",
-              seller: { "@type": "Organization", name: "MZ Global Trading" },
-            },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl: "https://mzglobaltrading.com/images/og/fleece-thermal-blankets-og.webp",

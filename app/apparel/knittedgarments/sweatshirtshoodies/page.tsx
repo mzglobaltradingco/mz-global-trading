@@ -31,15 +31,6 @@ export default function SweatshirtsHoodiesPage() {
       "Pakistan OEM sweatshirt and hoodie manufacturer producing French terry, loop-back fleece, brushed fleece, polar fleece and bonded fleece mid-layer garments for sportswear, streetwear and corporate programmes in USA, UK and Europe.",
     image: "https://mzglobaltrading.com/images/og/sweatshirts-hoodies-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      priceValidUntil: "2027-12-31",
-      url: "https://mzglobaltrading.com/rfq/",
-      seller: { "@type": "Organization", name: "MZ Global Trading" },
-    },
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://mzglobaltrading.com/images/og/sweatshirts-hoodies-og.webp",

@@ -31,15 +31,6 @@ export default function TankTopsPage() {
       "Pakistan OEM tank top manufacturer producing single jersey, rib, mesh, slub and bamboo jersey athletic vests and athleisure tank tops. 130–180 GSM. Women's athleisure, men's training and lifestyle programmes for USA, UK, Europe and worldwide.",
     image: "https://mzglobaltrading.com/images/og/tank-tops-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      priceValidUntil: "2027-12-31",
-      url: "https://mzglobaltrading.com/rfq/",
-      seller: { "@type": "Organization", name: "MZ Global Trading" },
-    },
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://mzglobaltrading.com/images/og/tank-tops-og.webp",

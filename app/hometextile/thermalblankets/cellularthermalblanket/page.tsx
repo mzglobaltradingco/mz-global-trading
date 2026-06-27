@@ -37,15 +37,6 @@ export default function CellularThermalBlanketPage() {
               "100% cotton cellular thermal blankets with open-cell honeycomb weave. Clinical-grade breathability. 150–250 GSM. Anti-shrink finish for hospital laundry. OEKO-TEX Standard 100, GOTS, ISO 9001. Supplied to NHS, hospitals, neonatal units and aged-care globally.",
             image: "https://mzglobaltrading.com/images/og/cellular-thermal-blanket-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "USD",
-              availability: "https://schema.org/InStock",
-              priceValidUntil: "2027-12-31",
-              url: "https://mzglobaltrading.com/rfq/",
-              seller: { "@type": "Organization", name: "MZ Global Trading" },
-            },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl: "https://mzglobaltrading.com/images/og/cellular-thermal-blanket-og.webp",

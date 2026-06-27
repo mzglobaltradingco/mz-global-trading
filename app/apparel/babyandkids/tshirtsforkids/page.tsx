@@ -31,15 +31,6 @@ export default function TShirtsForKidsPage() {
       "Pakistan OEM kids T-shirt manufacturer producing organic cotton and combed jersey children's tees in sizes from premature to 12 years. GOTS and OEKO-TEX Class 1 certified mills. Baby-safe water-based inks and hypoallergenic finishes. Bulk programmes for USA, UK, Europe and worldwide.",
     image: "https://mzglobaltrading.com/images/og/t-shirts-for-kids-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      priceValidUntil: "2027-12-31",
-      url: "https://mzglobaltrading.com/rfq/",
-      seller: { "@type": "Organization", name: "MZ Global Trading" },
-    },
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://mzglobaltrading.com/images/og/t-shirts-for-kids-og.webp",

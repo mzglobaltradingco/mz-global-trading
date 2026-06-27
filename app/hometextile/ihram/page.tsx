@@ -37,15 +37,6 @@ export default function IhramPage() {
               "Plain white cotton Ihram sets manufactured in Pakistan's certified weaving mills. Supplied as two unstitched panels per pair (Rida + Izar). Plain weave, terry weave and dobby stripe cotton. 200–350 GSM. OEKO-TEX Standard 100. Export to Saudi Arabia, UAE, Malaysia, Indonesia, UK and worldwide.",
             image: "https://mzglobaltrading.com/images/og/ihram-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "USD",
-              availability: "https://schema.org/InStock",
-              priceValidUntil: "2027-12-31",
-              url: "https://mzglobaltrading.com/rfq/",
-              seller: { "@type": "Organization", name: "MZ Global Trading" },
-            },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl: "https://mzglobaltrading.com/images/og/ihram-og.webp",

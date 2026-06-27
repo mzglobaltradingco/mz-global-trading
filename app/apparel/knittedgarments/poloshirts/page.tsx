@@ -31,15 +31,6 @@ export default function PoloShirtsPage() {
       "Pakistan OEM polo shirt manufacturer producing classic piqué, mini piqué, jersey and performance polo shirts for corporate buyers, hospitality groups and sports brands in USA, UK and Europe.",
     image: "https://mzglobaltrading.com/images/og/polo-shirts-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      priceValidUntil: "2027-12-31",
-      url: "https://mzglobaltrading.com/rfq/",
-      seller: { "@type": "Organization", name: "MZ Global Trading" },
-    },
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://mzglobaltrading.com/images/og/polo-shirts-og.webp",

@@ -31,15 +31,6 @@ export default function BabyHoodedTowelsPage() {
       "Pakistan OEM baby hooded towel manufacturer. GOTS certified organic cotton terry and velour. Newborn to kids 4Y. Animal hood designs, custom embroidery. OEKO-TEX Class 1 certified mills. Bulk programmes for USA, UK, Europe and global baby brands.",
     image: "https://mzglobaltrading.com/images/og/baby-hooded-towels-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      priceValidUntil: "2027-12-31",
-      url: "https://mzglobaltrading.com/rfq/",
-      seller: { "@type": "Organization", name: "MZ Global Trading" },
-    },
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://mzglobaltrading.com/images/og/baby-hooded-towels-og.webp",

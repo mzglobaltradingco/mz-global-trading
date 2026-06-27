@@ -32,15 +32,6 @@ export default function BathrobesPage() {
       "Pakistan OEM bathrobe manufacturer producing shawl collar, kimono and hooded styles in terry loop, velour, waffle and microfleece. 350–500 GSM. OEKO-TEX and GOTS certified for hotel, spa and resort programmes in USA, UK and Europe.",
     image: "https://mzglobaltrading.com/images/og/bathrobes-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      priceValidUntil: "2027-12-31",
-      url: "https://mzglobaltrading.com/rfq/",
-      seller: { "@type": "Organization", name: "MZ Global Trading" },
-    },
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://mzglobaltrading.com/images/og/bathrobes-og.webp",

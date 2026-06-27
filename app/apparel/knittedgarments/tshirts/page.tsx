@@ -31,15 +31,6 @@ export default function TShirtsPage() {
       "Pakistan OEM t-shirt manufacturer producing single jersey, pique, interlock, rib, waffle knit and mesh t-shirts in certified cotton for brands and retailers in USA, UK and Europe.",
     image: "https://mzglobaltrading.com/images/og/t-shirts-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      priceValidUntil: "2027-12-31",
-      url: "https://mzglobaltrading.com/rfq/",
-      seller: { "@type": "Organization", name: "MZ Global Trading" },
-    },
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://mzglobaltrading.com/images/og/t-shirts-og.webp",
