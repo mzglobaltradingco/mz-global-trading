@@ -263,8 +263,26 @@ export default function PrivacyPolicyContent() {
                 ]} />
                 <p>
                   This data is processed by Cloudflare under their own privacy policy and is used
-                  for network security, DDoS mitigation, and service delivery. MZ Global Trading
-                  does not operate independent website analytics.
+                  for network security, DDoS mitigation, and service delivery.
+                </p>
+
+                <SubHeading>Google Analytics 4</SubHeading>
+                <p>
+                  With your consent, we use Google Analytics 4 (provided by Google LLC) to understand
+                  how visitors use this website. It collects:
+                </p>
+                <BulletList items={[
+                  "Pages visited and navigation path through the site",
+                  "Session duration and engagement metrics",
+                  "Device type, browser, and operating system",
+                  "Approximate geographic location (country/city level, derived from IP address — not precise location)",
+                  "Traffic source and referral information",
+                ]} />
+                <p>
+                  No personally identifiable information is shared with Google. Analytics data is
+                  transferred to and processed by Google LLC in the United States under Google&apos;s
+                  Data Processing Amendment. This data is only collected after you give consent via
+                  our cookie banner.
                 </p>
 
                 <SubHeading>Data from communications</SubHeading>
@@ -352,6 +370,7 @@ export default function PrivacyPolicyContent() {
                 </p>
                 <BulletList items={[
                   "Cloudflare, Inc. — website hosting, content delivery, and security (USA)",
+                  "Google LLC (Google Analytics 4) — website analytics; data processed in the USA under Google's Data Processing Amendment",
                   "Google Workspace — business email and document management (USA)",
                   "WhatsApp / standard email — client communications where applicable",
                 ]} />
@@ -427,6 +446,7 @@ export default function PrivacyPolicyContent() {
                         { type: "Order and contract records", period: "7 years from contract end (statutory accounting requirement)" },
                         { type: "Email correspondence", period: "3 years from last interaction, unless part of a contract record" },
                         { type: "Cloudflare server logs", period: "Managed by Cloudflare; typically up to 30 days" },
+                        { type: "Google Analytics event data", period: "14 months (as configured in our Google Analytics account)" },
                         { type: "Marketing opt-in records", period: "Until you withdraw consent, plus 1 year for compliance evidence" },
                       ].map((row, i) => (
                         <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}>
@@ -507,16 +527,24 @@ export default function PrivacyPolicyContent() {
               {/* ── Section 8 ─────────────────────────────────────────────── */}
               <PolicySection id="cookies" title="8. Cookies &amp; Tracking">
                 <p>
-                  Our website is a statically generated site served via Cloudflare Pages.
-                  We do not use advertising cookies, behavioural tracking cookies, or third-party
-                  marketing scripts.
+                  Our website uses a small number of cookies for secure delivery and to understand
+                  how the site is used. We do not use advertising cookies, behavioural targeting
+                  cookies, or third-party marketing scripts.
                 </p>
 
-                <SubHeading>Cloudflare cookies</SubHeading>
+                <SubHeading>Your cookie choices</SubHeading>
                 <p>
-                  Cloudflare sets a limited number of technical cookies to deliver the website
-                  securely and efficiently. These are strictly necessary and do not require consent
-                  under applicable ePrivacy rules. They include:
+                  When you first visit our website, a cookie banner appears asking for your consent
+                  to analytics cookies. You may accept all cookies or customise your preferences by
+                  clicking <strong className="text-navy-900">&ldquo;Manage Preferences&rdquo;</strong>.
+                  You can withdraw or change your consent at any time using the same banner, which
+                  remains accessible at the bottom of every page.
+                </p>
+
+                <SubHeading>Essential cookies</SubHeading>
+                <p>
+                  The following cookies are strictly necessary for the website to function securely.
+                  They do not require your consent and cannot be disabled.
                 </p>
                 <div className="overflow-x-auto rounded-xl border border-gray-100 mt-2">
                   <table className="w-full text-sm">
@@ -529,8 +557,9 @@ export default function PrivacyPolicyContent() {
                     </thead>
                     <tbody>
                       {[
-                        { name: "__cf_bm", purpose: "Bot management and DDoS mitigation", duration: "30 minutes" },
-                        { name: "cf_clearance", purpose: "Browser challenge verification (security)", duration: "Session" },
+                        { name: "__cf_bm", purpose: "Cloudflare — bot management and DDoS mitigation", duration: "30 minutes" },
+                        { name: "cf_clearance", purpose: "Cloudflare — browser challenge verification (security)", duration: "Session" },
+                        { name: "mz_cookie_consent", purpose: "Stores your cookie consent preference so the banner does not reappear on every visit", duration: "1 year" },
                       ].map((row, i) => (
                         <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}>
                           <td className="px-4 py-3 font-mono text-navy-900 text-xs align-top">{row.name}</td>
@@ -542,11 +571,46 @@ export default function PrivacyPolicyContent() {
                   </table>
                 </div>
 
-                <SubHeading>No analytics or marketing tracking</SubHeading>
+                <SubHeading>Analytics cookies (Google Analytics 4)</SubHeading>
                 <p>
-                  We do not use Google Analytics, Meta Pixel, LinkedIn Insight Tag, or any other
-                  third-party analytics or advertising technology on this website. No cross-site
-                  tracking takes place.
+                  With your consent, we use Google Analytics 4 (provided by Google LLC) to collect
+                  anonymised data on how visitors use this website. This helps us improve content
+                  and navigation. Analytics data is processed by Google LLC in the United States
+                  under Google&apos;s Data Processing Amendment.
+                </p>
+                <div className="overflow-x-auto rounded-xl border border-gray-100 mt-2">
+                  <table className="w-full text-sm">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th className="text-left px-4 py-3 text-navy-900 font-semibold">Cookie</th>
+                        <th className="text-left px-4 py-3 text-navy-900 font-semibold">Purpose</th>
+                        <th className="text-left px-4 py-3 text-navy-900 font-semibold">Duration</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[
+                        { name: "_ga", purpose: "Distinguishes unique users for traffic analysis", duration: "2 years" },
+                        { name: "_ga_*", purpose: "Maintains session state for Google Analytics 4", duration: "2 years" },
+                      ].map((row, i) => (
+                        <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}>
+                          <td className="px-4 py-3 font-mono text-navy-900 text-xs align-top">{row.name}</td>
+                          <td className="px-4 py-3 text-gray-600 align-top">{row.purpose}</td>
+                          <td className="px-4 py-3 text-gray-600 align-top whitespace-nowrap">{row.duration}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className="text-sm text-gray-500 mt-3">
+                  These cookies are only set after you click <strong className="text-gray-500">&ldquo;Accept All&rdquo;</strong> or
+                  enable analytics in <strong className="text-gray-500">&ldquo;Manage Preferences&rdquo;</strong>. If you decline,
+                  no analytics cookies are set and no data is sent to Google.
+                </p>
+
+                <SubHeading>No advertising or marketing cookies</SubHeading>
+                <p>
+                  We do not use Meta Pixel, LinkedIn Insight Tag, or any other advertising,
+                  remarketing, or behavioural targeting technology. No cross-site tracking takes place.
                 </p>
 
                 <SubHeading>Social media links</SubHeading>
@@ -611,7 +675,7 @@ export default function PrivacyPolicyContent() {
 
                 <div className="mt-8 pt-6 border-t border-gray-100">
                   <p className="text-sm text-gray-500">
-                    This policy was last reviewed and updated on <strong className="text-gray-500">1 June 2026</strong>.
+                    This policy was last reviewed and updated on <strong className="text-gray-500">27 June 2026</strong>.
                     Previous versions are available on request.
                     This policy does not create or modify any contractual relationship between you
                     and MZ Global Trading.
