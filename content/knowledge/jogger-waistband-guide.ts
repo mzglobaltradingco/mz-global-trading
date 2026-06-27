@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-11-18",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Why the Waistband Specification Drives Sweatpant Quality
 
 The waistband is a sweatpant's most mechanically stressed component — it is stretched and relaxed hundreds of times per garment lifecycle, subjected to the highest temperature zone in a tumble dryer, and the element most likely to fail first if under-specified. For procurement managers sourcing [sweatpants and joggers from Pakistan](/apparel/knittedgarments/sweatpantsjoggers/), a complete waistband specification is as important as the body fabric GSM.

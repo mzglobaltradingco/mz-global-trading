@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-11-05",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Cellular Blankets: Thermal Regulation Through Open Weave
 
 A cellular blanket is not a heavy blanket — it is a thermally efficient blanket. The open-weave structure creates a visible grid of cells that trap air, providing insulation without the weight of a closed-weave fabric. For procurement managers sourcing [cellular thermal blankets from Pakistan](/hometextile/thermalblankets/cellularthermalblanket/), the key variables are GSM, cell size, cotton specification and wash-cycle performance.

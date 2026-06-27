@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-10-07",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Chino Fabric (Cotton Twill for Chinos)
 
 Chino fabric is a 100% cotton or cotton-stretch twill — typically a 2×1 or 3×1 right-hand twill — in the 200–280 GSM range. The name "chino" originated from the khaki-coloured twill used in US military uniforms; the fabric construction is the same across all colourways.

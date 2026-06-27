@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-02-06",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## What Makes a Towel "Institutional Grade"?
 
 Institutional towels differ from retail terry in one fundamental way: they are designed to survive industrial laundering. Retail towels are typically washed 20–30 times over their useful life. An institutional towel used in a hospital laundry or hotel housekeeping programme will undergo 150–300 commercial wash cycles — at 60°C–95°C, with industrial detergents and high-speed tumble drying.

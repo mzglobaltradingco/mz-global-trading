@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-03-18",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Why GSM Determines T-Shirt Programme Performance
 
 GSM (grams per square metre) is the weight measurement of knit fabric and the most consequential specification decision when sourcing [T-shirts from Pakistan's knitwear mills](/apparel/knittedgarments/tshirts/). It affects hand-feel, drape, opacity, print compatibility, shrinkage after laundering and the retail price point your product can command.

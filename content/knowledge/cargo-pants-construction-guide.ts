@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-10-21",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## The Defining Feature: Cargo Pocket Specification
 
 The cargo pocket — a large patch pocket with a flap, typically on the outer thigh — is the defining construction element of cargo pants. Its design determines the garment's end use, market positioning and production cost. Three primary cargo pocket constructions exist.

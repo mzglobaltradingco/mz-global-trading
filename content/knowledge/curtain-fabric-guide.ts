@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-07-16",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Curtain Specification: Fabric and Heading Together
 
 Curtains are one of the highest-value items in the home textiles category — and among the most technically complex to specify correctly. For procurement managers sourcing [curtains from Pakistan](/hometextile/bedlinen/curtains/), two decisions determine the product's market fit and retail performance: fabric type and heading type. A blackout lining specification in the wrong heading configuration, or a sheer voile in a heading type the destination market does not recognise, creates returns and markdowns.

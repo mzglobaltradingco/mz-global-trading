@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-09-03",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Kitchen Towel Construction: Why It Drives Programme Performance
 
 Kitchen towels are among the highest-turnover items in the home textiles category — USA retail programmes typically sell multi-packs of 8–12 pieces, EU retail favours sets of 3–5, and hospitality buyers order in the thousands per property. For procurement managers sourcing [kitchen towels from Pakistan](/hometextile/kitchenlinen/kitchentowels/), the fabric construction directly determines absorbency, drying speed, print compatibility and retail shelf life.

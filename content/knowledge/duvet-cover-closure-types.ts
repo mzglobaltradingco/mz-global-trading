@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-08-06",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Closure Type Is a Specification Decision, Not an Aesthetic One
 
 For procurement managers sourcing [duvet covers from Pakistan](/hometextile/bedlinen/duvetcovers/), the closure type has direct implications for laundry durability, housekeeping operational speed, consumer experience at retail and certification compliance. Specifying the wrong closure for the application — a zip on a hotel programme that uses high-temperature commercial laundry, for example — creates costly operational problems downstream.

@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-05-07",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Thread Count: A Useful Guide — Not a Quality Guarantee
 
 Thread count (TC) measures the number of warp and weft yarns in one square inch of woven fabric. For procurement managers sourcing [bedsheets from Pakistan](/hometextile/bedlinen/bedsheets/), it is a useful starting specification — but it must be combined with yarn type, weave structure and fibre quality to produce an accurate product brief. A 600TC sheet in single-ply combed cotton and a 600TC sheet in multi-ply twisted yarns are fundamentally different products.

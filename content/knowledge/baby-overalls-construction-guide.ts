@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2026-01-06",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Snap Fastener Specification for Baby Garments
 
 Snap fasteners are the most safety-critical hardware element in [baby overalls from Pakistan](/apparel/babyandkids/overalls/). They must be specified precisely to meet market safety requirements — a snap that passes a visual check but fails a pull test creates both a safety risk and a potential recall scenario.

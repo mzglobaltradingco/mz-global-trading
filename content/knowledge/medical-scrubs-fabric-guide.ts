@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-01-21",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Medical Scrubs: Fabric Specification Drives Compliance, Comfort and Cost-Per-Wear
 
 [Medical scrubs sourced from Pakistan](/hometextile/hospitallinen/medicalscrubs/) appear deceptively simple — a top and a trouser in a solid colour. The specification complexity lies underneath: the fabric must survive industrial laundering at 60–71°C, maintain colour stability through 150–200+ wash cycles, comply with the buyer's infection control colour-coding policy, and provide enough comfort that clinical staff wear them through 12-hour shifts. Buying on price per unit without specifying fabric weight, blend ratio and wash durability delivers a product that fails in the first quarter.

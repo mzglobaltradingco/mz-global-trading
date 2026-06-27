@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-11-04",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Chino Shorts
 
 Chino shorts are the highest-volume shorts construction in retail globally — a cotton twill short in the 200–260 GSM range sold as casual wear across USA, UK, EU, Australia and the Middle East.

@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-06-10",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Why Fleece Fabric Selection Matters at Specification Stage
 
 The word "fleece" in a product brief is not a specification — it is a category. There are at least four structurally distinct knit constructions that a buyer or designer might call "fleece", and each produces a different hand-feel, weight, thermal performance and aesthetic. For procurement managers sourcing [sweatshirts and hoodies from Pakistan](/apparel/knittedgarments/sweatshirtshoodies/), specifying the correct construction at RFQ stage prevents the most common sweatshirt sampling failure: the factory selecting a different fleece construction from what the buyer imagined.

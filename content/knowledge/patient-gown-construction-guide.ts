@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-02-04",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Patient Gowns: Dignity, Access and Laundry Durability in One Specification
 
 A [patient gown](/hometextile/hospitallinen/patientgowns/) serves three simultaneous requirements: it must provide the patient with a degree of dignity and modesty, it must allow clinical staff rapid access to the body for examination and procedures, and it must survive industrial laundering at 60–71°C across hundreds of cycles without losing structural integrity. Procurement managers who specify patient gowns based only on fabric weight or price fail on at least one of these three requirements. Understanding the design and construction trade-offs is necessary before specifying.

@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-07-08",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Workwear Fabric Categories
 
 [Workwear apparel from Pakistan](/apparel/workwearapparel/) covers a wide spectrum — from basic cotton canvas site jackets to EN-certified high-visibility vests and flame-resistant (FR) arc flash clothing. The fabric category determines the standard that applies, the testing protocol, and the allowable claims on the garment label. Procurement teams that conflate these categories end up with non-compliant products that cannot be used at the intended worksite.

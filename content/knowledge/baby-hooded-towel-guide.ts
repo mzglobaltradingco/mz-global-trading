@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2026-04-07",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Why OEKO-TEX Class 1 Is Non-Negotiable for Baby Towels
 
 A baby hooded towel wraps directly around a newborn or infant immediately after bathing — full-body skin contact, often for extended periods as the parent dries the child. This places baby hooded towels in the same OEKO-TEX certification category as infant clothing: Class 1, the most stringent class under OEKO-TEX Standard 100. Class 1 tests the complete article against 100+ substances — dyes, finishing agents, softeners, heavy metals, pesticide residues and formaldehyde — at limits set specifically for products in contact with infant skin.

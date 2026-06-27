@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-07-02",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Why Cushion Cover Specification Is More Complex Than It Looks
 
 A cushion cover appears to be a simple product — two panels, a closure, a print or texture. In practice, procurement managers sourcing [cushion covers from Pakistan](/hometextile/bedlinen/cushioncovers/) for retail programmes encounter specification decisions across five dimensions: fabric type, weave or knit construction, print or decoration technique, closure type, and filling compatibility. Getting any one of these wrong produces a product that looks right at the photo stage but fails on the shelf — wrong hand feel, filling that bunches inside, or a zipper that breaks after three uses.

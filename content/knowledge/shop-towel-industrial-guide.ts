@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-02-18",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Shop Towels: Volume, Durability and Performance in Industrial Environments
 
 [Shop towels from Pakistan](/hometextile/industriallinen/shoptowels/) are a high-volume, high-turnover industrial consumable. An automotive workshop with 10 technicians may consume 2,000–4,000 shop towels per month. A manufacturing plant with 200 floor workers can go through 20,000+ pieces per month. At this scale, the cost difference between a correctly specified shop towel and one that tears after a single use, or fails to absorb solvent, is significant — both in material cost and in worker productivity loss.

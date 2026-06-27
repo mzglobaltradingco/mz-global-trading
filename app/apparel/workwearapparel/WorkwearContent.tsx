@@ -350,7 +350,7 @@ const SECTORS = [
 ];
 
 const CERTIFICATIONS = [
-  { name: "ISO 9001", desc: "Quality Management", file: "iso9001" },
+  { name: "ISO 9001", desc: "Quality Management", file: "iso-9001" },
   { name: "BSCI", desc: "Social Compliance", file: "bsci" },
   { name: "WRAP", desc: "Responsible Production", file: "wrap" },
   { name: "SA8000", desc: "Labour Standards", file: "sa8000" },

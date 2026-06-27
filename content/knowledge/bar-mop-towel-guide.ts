@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-09-17",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Bar Mops: The Institutional Standard for Commercial Kitchen Cleaning
 
 Bar mops are not kitchen towels. They are heavy-duty cleaning cloths designed for continuous use in commercial food service — restaurants, hotels, catering operations and institutional kitchens. For procurement managers sourcing [bar mops from Pakistan](/hometextile/kitchenlinen/barmops/), the key specifications differ fundamentally from retail kitchen towel programmes: GSM is higher, construction is 100% cotton terry, and stripe colour coding is a functional rather than decorative specification.

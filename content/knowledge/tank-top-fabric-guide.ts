@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-05-20",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Tank Tops: A Wide Application Range, One Construction Decision
 
 The tank top (also called singlet, vest or muscle shirt depending on market) is produced in Pakistan across a wider range of fabric constructions than any other basic knitwear category. The same silhouette — sleeveless, cut below the shoulder — is used for promotional fashion retail, premium athleisure, performance athletic wear and workwear underlayers. Each application demands a different fabric.

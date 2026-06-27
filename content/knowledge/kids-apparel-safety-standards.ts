@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-08-05",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## The Three Tiers of Children's Apparel Regulation
 
 Children's apparel is not a single regulatory category. Requirements differ significantly by age group — a garment for a newborn faces stricter rules than one for a ten-year-old. For procurement managers placing [kids T-shirts and children's apparel orders from Pakistan](/apparel/babyandkids/tshirtsforkids/), understanding these tiers before finalising your specification prevents rejections at retail intake or customs.

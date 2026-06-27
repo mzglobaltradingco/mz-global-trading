@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2026-03-03",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## The Three Bib Categories
 
 Baby bibs are a high-volume, repeat-purchase product category for retail buyers in the USA, UK, EU and Australia. Retail programmes typically sell bibs in multi-pack sets of 3, 5 or 10. Understanding the three functional categories determines fabric, construction and closure specification — and prevents costly mismatches between product and end-use.

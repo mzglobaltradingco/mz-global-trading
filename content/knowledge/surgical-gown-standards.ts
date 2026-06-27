@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-01-07",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Surgical Gowns: Protection Level Is a Clinical Specification, Not a Purchasing Decision
 
 The most common procurement error in [surgical gown sourcing](/hometextile/hospitallinen/doctorsurgicalgowns/) is selecting a gown based on price per unit without specifying the AAMI protection level. A Level 1 gown — appropriate for a routine examination — cannot be used in a high-fluid-risk surgery. A procurement manager who buys Level 1 gowns at the price of Level 4 has over-specified; one who buys Level 1 gowns for Level 3 procedures has created a patient safety failure. The protection level is a clinical specification that must come from the medical team, not the purchasing department.

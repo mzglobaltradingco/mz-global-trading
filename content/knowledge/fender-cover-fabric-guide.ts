@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-03-04",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Fender Covers: Paint Protection, Brand Identity and Volume Sourcing
 
 [Fender covers from Pakistan](/hometextile/industriallinen/fendercovers/) are a volume purchase for automotive service networks — an automotive dealership group with 20 workshops may use 300–500 fender covers simultaneously, replacing them annually as covers accumulate oil contamination and mechanical wear. Tool distribution companies supply fender covers bundled with toolsets. Fleet maintenance operators buy them as part of a standardised [industrial linen programme](/hometextile/industriallinen/) alongside [shop towels](/hometextile/industriallinen/shoptowels/) and workshop textiles.

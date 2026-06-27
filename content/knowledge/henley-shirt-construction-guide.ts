@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-05-06",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## The Defining Feature: Henley Placket Construction
 
 The henley shirt takes its name from the style popularised around Henley-on-Thames — a collarless pullover with a short button placket at the neckline. It is structurally distinct from both the T-shirt (no placket) and the polo shirt (collared). For procurement managers sourcing [henley shirts from Pakistan](/apparel/knittedgarments/henleyshirts/), the placket is the defining construction decision.

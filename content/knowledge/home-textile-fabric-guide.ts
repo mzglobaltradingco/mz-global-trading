@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2026-06-17",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Home Textile Fabric Categories
 
 [Home textile fabric from Pakistan](/fabric/hometextilefabric/) covers a distinct set of constructions from apparel fabric — each designed around the functional performance requirements of bath, bed, kitchen or table linen end uses. Pakistan is one of the world's leading producers of home textile fabric, particularly terry (towel) fabric and woven cotton fabric for bed linen, with fully integrated mills from cotton ginning through to finished fabric.
@@ -99,7 +100,7 @@ For [home textile fabric from Pakistan](/fabric/hometextilefabric/), always incl
 
 ## Sourcing Home Textile Fabric from Pakistan
 
-[MZ Global Trading sources home textile fabric from Pakistan](/fabric/hometextilefabric/) — terry fabric, percale and sateen bed linen fabric, waffle and jacquard woven fabric — by the roll with full certification documentation. Related category: [apparel fabric from Pakistan](/fabric/apparelfabric/) for knitwear and woven garment programmes.
+[home textile fabric from Pakistan](/fabric/hometextilefabric/) — terry fabric, percale and sateen bed linen fabric, waffle and jacquard woven fabric — by the roll with full certification documentation. Related category: [apparel fabric from Pakistan](/fabric/apparelfabric/) for knitwear and woven garment programmes.
 
 [Request a home textile fabric quote](/rfq/) with fabric type, construction, GSM, width, quantity in metres and certification requirement — mill match and FOB pricing within 3–5 business days.`,
 };

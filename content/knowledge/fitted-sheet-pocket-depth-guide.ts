@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-05-21",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Why Pocket Depth Is the Most Important Fitted Sheet Specification
 
 Procurement managers sourcing [fitted sheets from Pakistan](/hometextile/bedlinen/fittedsheets/) consistently report pocket depth as the leading cause of rejection on arrival — the sheet physically does not stay on the mattress. This is almost always a specification error, not a manufacturing defect. The buyer specified the finished size but not the pocket depth, or specified the UK-standard depth when the end destination is the USA (where mattresses are deeper due to pillow tops and plush layers).

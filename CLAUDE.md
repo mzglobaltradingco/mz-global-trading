@@ -949,8 +949,8 @@ All 46 leaf product pages audited. Files saved to `C:\Users\Asus\Desktop\Content
 | 33 | Aprons | /hometextile/kitchenlinen/aprons/ |
 | 34 | Pot Holders | /hometextile/kitchenlinen/potholders/ |
 | 35 | Table Covers | /hometextile/tablelinen/tablecovers/ |
-| 36 | Cellular Thermal Blanket | /hometextile/thermalblankets/cellularblanket/ |
-| 37 | Fleece Thermal Blankets | /hometextile/thermalblankets/fleeceblankets/ |
+| 36 | Cellular Thermal Blanket | /hometextile/thermalblankets/cellularthermalblanket/ |
+| 37 | Fleece Thermal Blankets | /hometextile/thermalblankets/fleecethermalblankets/ |
 | 38 | Doctor Surgical Gowns | /hometextile/hospitallinen/doctorsurgicalgowns/ |
 | 39 | Medical Scrubs | /hometextile/hospitallinen/medicalscrubs/ |
 | 40 | Patient Gowns | /hometextile/hospitallinen/patientgowns/ |

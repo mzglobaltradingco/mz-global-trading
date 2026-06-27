@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2026-05-05",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Muslin Weave: The Plain Weave Foundation
 
 Muslin is a plain weave cotton fabric — warp threads pass alternately over and under weft threads in a simple 1×1 grid. This open-weave structure creates the breathability that makes muslin the dominant swaddle fabric globally: air circulates freely through the cloth, preventing overheating during the newborn and infant sleep periods when temperature regulation is a key safety consideration. For [swaddle muslin fabric sourced from Pakistan](/apparel/babyandkids/swaddlemuslinfabric/), the plain weave is the structural starting point; the critical differentiation comes from single-layer versus double gauze construction, the GSM, the fibre content, and the certification.
@@ -59,7 +60,7 @@ GOTS (Global Organic Textile Standard) is required for any "organic cotton" clai
 
 Custom prints are a major commercial driver in the swaddle category — seasonal patterns, licensed character prints and branded designs differentiate retail programmes. The critical specification rule: **reactive dye printing only** for OEKO-TEX Class 1 certified articles. Reactive dyes form a covalent bond with the cotton fibre and are wash-fast without the use of the fixatives or high-temperature steam processes that make pigment dyes impractical for Class 1 compliance. Pigment printing is possible on muslin but the print chemical set must be OEKO-TEX tested at Class 1 limits — confirm with the mill before printing.
 
-For [swaddle muslin and other baby products from the Pakistan range](/apparel/babyandkids/), custom reactive print programmes with OEKO-TEX Class 1 certification are available at standard MOQs.
+For [Baby & Kids range from Pakistan](/apparel/babyandkids/), custom reactive print programmes with OEKO-TEX Class 1 certification are available at standard MOQs.
 
 ## Sizing and Packaging
 

@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-04-15",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## What Is Piqué? The Structural Definition
 
 Piqué is a knit fabric construction defined by a raised, textured surface pattern created by double-knitting techniques. Unlike plain jersey (the construction used for standard T-shirts), piqué has a three-dimensional cell or bird's eye structure that gives it a distinctive visual texture and improves breathability by increasing the fabric's surface area.

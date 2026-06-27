@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-09-16",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Poplin (Broadcloth)
 
 Poplin — also called broadcloth in the USA — is the dominant construction for formal dress shirts globally. It is a plain weave (one warp over one weft, alternating) made from fine combed cotton yarns in the 40s–100s count range.

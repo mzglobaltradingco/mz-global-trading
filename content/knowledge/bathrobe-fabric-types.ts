@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-03-05",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Why Fabric Choice Defines a Bathrobe Programme
 
 A bathrobe sits at the intersection of comfort, durability and brand identity. For hotel procurement managers and retail buyers sourcing [bathrobes from Pakistan](/hometextile/bathlinen/bathrobes/), the fabric choice is not aesthetic — it determines how the robe performs under commercial laundering, how long it retains its appearance, and how it fits the price bracket of the end application.

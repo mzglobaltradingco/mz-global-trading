@@ -12,7 +12,7 @@ const post: KnowledgePost = {
   date: "2024-01-23",
   author: "M. Muzammil",
   featured: true,
-  image: "/knowledge/terry-towel-gsm-guide.webp",
+  image: "/knowledge/placeholder.webp",
   content: `## What is GSM and Why Does It Matter for Towels?
 
 GSM — grams per square metre — measures how much terry loop yarn is packed into each square metre of fabric. For procurement managers sourcing [bath towels from Pakistan](/hometextile/bathlinen/towels/), GSM is the single number that determines hand feel, absorbency, drying speed, durability and price. Getting it wrong in either direction costs money: too light and buyers return sub-standard goods; too heavy and you overspend on air freight or miss institutional contract requirements.

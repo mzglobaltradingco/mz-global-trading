@@ -19,6 +19,7 @@ export default function RelatedPosts({ posts }: RelatedPostsProps) {
           <Link
             key={post.slug}
             href={`/knowledge/${post.slug}/`}
+            aria-label={post.title}
             className="group block bg-white rounded-xl border border-gray-100 p-5 hover:border-gold/30 hover:shadow-md transition-all duration-200"
           >
             <span className="inline-block px-2 py-0.5 bg-gold/8 text-gold text-[10px] font-bold tracking-[0.12em] uppercase rounded border border-gold/15 mb-3">

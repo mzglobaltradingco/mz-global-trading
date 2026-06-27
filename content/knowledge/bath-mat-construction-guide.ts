@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-02-20",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Bath Mat Construction: Why It Matters for Procurement
 
 Bath mats are a high-replacement item in hotel and retail programmes. A bath mat at 1,000 GSM tufted terry placed in front of a commercial shower typically sees 200–300 wash cycles over its operational life — significantly more than a bath towel. The construction must deliver absorbency, dimensional stability, anti-slip performance and visual consistency across those cycles.

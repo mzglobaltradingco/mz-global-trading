@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-08-20",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Why Institutional Bedding Needs Different Specifications
 
 [Institutional bedding](/hometextile/bedlinen/institutionalbedding/) for hotels, hospitals and airlines must survive laundry conditions that destroy retail-grade linen in weeks. A 200TC percale sheet rated for domestic 40°C washing will fail within 30 commercial laundry cycles at 71°C. For procurement managers specifying contract bedding at volume, the specification must start with end-use laundry parameters — not the thread count on a shelf label.

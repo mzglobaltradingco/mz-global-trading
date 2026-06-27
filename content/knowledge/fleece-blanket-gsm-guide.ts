@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-11-19",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Fleece Blankets: GSM Is Not the Only Performance Indicator
 
 GSM is the most commonly cited specification for fleece blankets — but GSM alone does not determine performance. A 200 GSM anti-pill fleece blanket can outperform a 300 GSM standard fleece blanket in long-term softness retention and pilling resistance. For procurement managers sourcing [fleece thermal blankets from Pakistan](/hometextile/thermalblankets/fleecethermalblankets/), the specification must address construction type, anti-pill treatment, and intended laundering conditions alongside GSM.

@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-06-11",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## The Pillow Cover Specification: Often Underspecified, Always Noticed
 
 The pillow cover is the item in a bed linen set that the consumer handles first. It is the piece most closely scrutinised on the retail shelf and the item that communicates the quality of the whole programme. For procurement managers sourcing [pillow covers from Pakistan](/hometextile/bedlinen/pillowcovers/), specifying fabric type and weave structure is as important as specifying thread count — two pillow covers at 400TC in percale and sateen are different products aimed at different markets.

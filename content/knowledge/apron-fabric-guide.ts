@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-10-01",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Apron Fabric: The Brand Surface in a Commercial Kitchen
 
 Aprons are the front-of-house uniform item that buyers, reviewers and diners see. In hospitality and food retail, the apron fabric communicates brand positioning before a word is spoken. For procurement managers sourcing [aprons from Pakistan](/hometextile/kitchenlinen/aprons/), fabric choice is simultaneously a functional decision (durability, stain resistance, comfort) and a brand decision (texture, weight, visual character).

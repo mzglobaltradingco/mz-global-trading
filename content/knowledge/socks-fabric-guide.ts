@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-12-02",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Yarn Composition Options
 
 [Socks from Pakistan](/apparel/socks/) are produced in a range of yarn compositions that determine performance, hand-feel, positioning and price tier. Unlike woven apparel where construction is as important as fibre content, in socks the yarn blend is the primary driver of both performance and cost.

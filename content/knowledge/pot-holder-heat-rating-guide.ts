@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-10-15",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Pot Holder Construction: Heat Protection Is Specified, Not Assumed
 
 A pot holder that fails to protect against heat creates a product liability risk. For procurement managers sourcing [pot holders from Pakistan](/hometextile/kitchenlinen/potholders/), the specification must go beyond dimensions and fabric colour to explicitly address the thermal barrier construction — the number of layers, the batting material and the minimum heat protection performance.

@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-03-19",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Beach Towel Print: More Than Decoration
 
 The print technique on a beach or pool towel is not merely aesthetic — it determines how the colour holds after 50+ wash cycles, how much design detail can be reproduced, how the towel performs during beach or poolside use, and what it costs to produce at scale. For procurement managers and retail buyers sourcing [beach and pool towels from Pakistan](/hometextile/bathlinen/beachpooltowel/), understanding the three primary techniques — reactive print, jacquard weave, and velour cut-pile — is essential for writing an accurate specification.

@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2025-09-02",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## How Denim Weight Is Measured
 
 Denim weight is expressed in ounces per square yard (oz/yd²) — the standard in the USA — or converted to grams per square metre (GSM) for European markets. The conversion is: 1 oz/yd² ≈ 33.9 GSM. As a working reference: 6 oz ≈ 200 GSM, 10 oz ≈ 340 GSM, 14 oz ≈ 475 GSM.

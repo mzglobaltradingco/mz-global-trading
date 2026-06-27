@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-12-03",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Table Linen Fabric: Visual Quality at the Table
 
 The tablecloth is the largest textile surface visible at a dining table — it sets the visual quality benchmark for the entire dining experience before food arrives. For procurement managers sourcing [table covers from Pakistan](/hometextile/tablelinen/tablecovers/), fabric selection must balance three factors: visual quality, laundry performance (table linen undergoes commercial laundering after every service in hospitality) and cost per cover.

@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2026-02-03",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Why Fabric Construction Matters for Infant Rompers
 
 A baby romper goes on and off multiple times a day — after nappy changes, feeding, sleep, and bath. The fabric must stretch enough for the garment to be pulled over the infant's head or legs without discomfort, recover its shape fully after washing, and maintain its OEKO-TEX Class 1 chemical safety through the life of the garment. For procurement managers sourcing [baby rompers from Pakistan](/apparel/babyandkids/babyrompers/), the choice between rib knit, interlock, single jersey and muslin determines retail positioning, care performance and market suitability.

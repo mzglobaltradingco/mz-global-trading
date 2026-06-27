@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2026-06-03",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Fabric Categories by Construction
 
 [Apparel fabric from Pakistan](/fabric/apparelfabric/) falls into two primary construction categories — woven and knitted — each with fundamentally different properties, production machinery, and end applications. Understanding the distinction is the starting point for any fabric sourcing brief.
@@ -108,7 +109,7 @@ Home textile fabric buyers (terry, percale, sateen) should refer to our dedicate
 
 ## Sourcing Apparel Fabric from Pakistan
 
-MZ Global Trading sources [apparel fabric from Pakistan's integrated mills](/fabric/apparelfabric/) — woven poplin, twill, denim, canvas, and knitted jersey, terry, fleece and interlock fabrics, by the roll with full OEKO-TEX and GOTS chain-of-custody documentation.
+MZ Global Trading sources [apparel fabric from Pakistan](/fabric/apparelfabric/)(/fabric/apparelfabric/) — woven poplin, twill, denim, canvas, and knitted jersey, terry, fleece and interlock fabrics, by the roll with full OEKO-TEX and GOTS chain-of-custody documentation.
 
 [Request a fabric quote](/rfq/) with your fabric type, fibre content, GSM, width, quantity in metres, colour or print requirement, and certification requirement — mill match and FOB pricing returned within 3–5 business days.`,
 };

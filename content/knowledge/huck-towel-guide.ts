@@ -12,6 +12,7 @@ const post: KnowledgePost = {
   date: "2024-04-02",
   author: "M. Muzammil",
   featured: false,
+  image: "/knowledge/placeholder.webp",
   content: `## Huck Towels: Why Lint-Free Matters in a Clinical Environment
 
 A standard terry towel sheds hundreds of fibres per wash cycle and with every use. In a domestic bathroom this is irrelevant. In a surgical suite, operating field or laboratory, loose textile fibres cause post-operative wound contamination, compromise instrument sterility, and in some procedures create direct patient safety risks. [Surgical huck towels from Pakistan](/hometextile/hospitallinen/surgicalhucktowels/) are specified specifically because their construction sheds a fraction of the lint produced by standard terry towels or cotton gauze.
