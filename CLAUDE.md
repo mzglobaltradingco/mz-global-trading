@@ -960,3 +960,218 @@ All 46 leaf product pages audited. Files saved to `C:\Users\Asus\Desktop\Content
 | 44 | Ihram | /hometextile/ihram/ |
 | 45 | Apparel Fabric | /fabric/apparelfabric/ |
 | 46 | Home Textile Fabric | /fabric/hometextilefabric/ |
+
+---
+
+## SEO Technical Audit — Pending Fixes (Session 3)
+
+**Status: HOLD — do not implement until explicitly instructed.**
+**Rule: Discuss strategy and get approval before any code changes in this section.**
+
+Audit conducted 2026-06-27. Source: SEObility link/heading reports + manual code audit of all 268 pages.
+
+---
+
+### Fix 1 (HIGH): Problematic page titles
+
+#### 1a. Static pages — titles too long or too short
+
+| File | Current title | Problem | Proposed fix |
+|---|---|---|---|
+| `app/page.tsx` | `MZ Global Trading \| Pakistan Textile Sourcing — Apparel, Home Textiles & Fabric` | 79 chars — too long | `Pakistan Textile Sourcing — Apparel, Home Textiles \| MZ Global Trading` (71)… discuss |
+| `app/downloads/page.tsx` | `Downloads \| MZ Global Trading` | 29 chars — too vague | `Textile Sourcing Downloads \| MZ Global Trading` (48) |
+| `app/faqs/page.tsx` | `FAQs \| MZ Global Trading` | 24 chars — too vague | `Textile Sourcing FAQs \| MZ Global Trading` (42) |
+| `app/our-company/page.tsx` | `About Us \| MZ Global Trading` | 28 chars — no keywords | `About MZ Global Trading — Pakistan Textile Sourcing` (51) |
+| `app/search/page.tsx` | `Search \| MZ Global Trading` | 26 chars — too vague | `Search Products \| MZ Global Trading` (36) |
+
+#### 1b. Guide seoTitle values — too long (>60 chars)
+
+File: `lib/guides-content.ts`. These guides have a separate `seoTitle` field so fixing it does NOT affect display titles or H1s — safe to fix.
+
+| Slug | Current seoTitle (chars) | Proposed |
+|---|---|---|
+| `textile-product-lifecycle-design-technical-development` | 65 | `Textile Lifecycle Phase 2: Design & Development` (49) |
+| `textile-product-lifecycle-supplier-factory-selection` | 63 | `Textile Lifecycle Phase 4: Supplier Selection` (47) |
+| `textile-product-lifecycle-costing-moq-negotiation` | 61 | `Textile Lifecycle Phase 5: Costing & Negotiation` (50) |
+| `textile-product-lifecycle-manufacturing-production` | 61 | `Textile Lifecycle Phase 7: Manufacturing` (41) |
+| `textile-product-lifecycle-quality-control-compliance` | 63 | `Textile Lifecycle Phase 8: QC & Compliance` (44) |
+| `textile-product-lifecycle-end-of-life-circular-economy` | 66 | `Textile Lifecycle Phase 12: Circular Economy` (46) |
+| `sourcing-best-practices-supplier-evaluation-factory-selection` | 64 | `Sourcing Best Practices: Supplier Evaluation` (46) |
+| `sourcing-bath-mats-pakistan` | 70 | `Sourcing Bath Mats from Pakistan` (33) |
+| `sourcing-bedsheets-pakistan` | 69 | `Sourcing Bedsheets from Pakistan` (33) |
+| `hotel-fitted-sheet-sourcing` | 79 | `Hotel Fitted Sheet Sourcing Guide` (34) |
+| `sourcing-duvet-covers-pakistan` | 74 | `Sourcing Duvet Covers from Pakistan` (36) |
+| `custom-pillow-cover-sourcing` | 72 | `Custom Pillow Cover Sourcing from Pakistan` (43) |
+| `decorative-cushion-cover-sourcing` | 70 | `Decorative Cushion Cover Sourcing` (34) |
+| `sourcing-curtains-pakistan` | 70 | `Sourcing Curtains from Pakistan` (32) |
+| `sourcing-institutional-bedding-pakistan` | 74 | `Institutional Bedding Sourcing from Pakistan` (45) |
+| `sourcing-kitchen-towels-pakistan` | 71 | `Sourcing Kitchen Towels from Pakistan` (38) |
+| `sourcing-bar-mops-pakistan` | 74 | `Sourcing Bar Mops from Pakistan` (32) |
+| `sourcing-aprons-pakistan` | 76 | `Sourcing Aprons from Pakistan` (30) |
+| `sourcing-pot-holders-pakistan` | 73 | `Sourcing Pot Holders from Pakistan` (35) |
+| `sourcing-table-covers-pakistan` | 76 | `Sourcing Table Covers from Pakistan` (36) |
+| `sourcing-cellular-blankets-pakistan` | 80 | `Sourcing Cellular Blankets from Pakistan` (41) |
+| `sourcing-fleece-blankets-pakistan` | 80 | `Sourcing Fleece Blankets from Pakistan` (39) |
+| `sourcing-surgical-gowns-pakistan` | 76 | `Sourcing Surgical Gowns from Pakistan` (38) |
+| `sourcing-medical-scrubs-pakistan` | 74 | `Sourcing Medical Scrubs from Pakistan` (38) |
+| `sourcing-patient-gowns-pakistan` | 80 | `Sourcing Patient Gowns from Pakistan` (37) |
+| `sourcing-huck-towels-pakistan` | 78 | `Sourcing Surgical Huck Towels from Pakistan` (44) |
+| `sourcing-shop-towels-pakistan` | 73 | `Sourcing Industrial Shop Towels Pakistan` (41) |
+| `sourcing-fender-covers-pakistan` | 72 | `Sourcing Fender Covers from Pakistan` (37) |
+| `sourcing-ihram-pakistan` | 74 | `Sourcing Ihram from Pakistan` (29) |
+
+**Guides with seoTitle too short (<30 chars):**
+
+| Slug | Current (chars) | Proposed |
+|---|---|---|
+| `incoterms-for-textile-buyers` | 28 | `Incoterms Guide for Textile Buyers` (35) |
+| `how-to-write-a-tech-pack` | 24 | `How to Write a Textile Tech Pack` (33) |
+| `gsm-fabric-weight-guide` | 23 | `GSM & Fabric Weight Guide for Buyers` (37) |
+| `sourcing-shorts-pakistan` | 29 | `Sourcing Shorts from Pakistan` (30) |
+| `sourcing-socks-pakistan` | 28 | `Sourcing Socks from Pakistan` (29) |
+
+**Guides with seoDescription missing:**
+
+| Slug | Fix |
+|---|---|
+| `sourcing-apparel-fabric-pakistan` | Add seoDescription from guide description field |
+| `sourcing-home-textile-fabric-pakistan` | Add seoDescription from guide description field |
+
+#### 1c. Knowledge Hub article titles
+
+**Decision: DO NOT change.** All 53 KH article titles exceed 60 chars when combined with `| MZ Global Trading`, but they are keyword-rich descriptive titles. Google truncates SERP display but indexes the full title. Shortening them would reduce keyword coverage. Leave unchanged.
+
+---
+
+### Fix 2 (HIGH): H1 headings too short
+
+Pages using `<PageHero>` where the H1 is too generic to carry keyword value. Fix is in the `title` prop of `<PageHero>` inside each `*Content.tsx` file.
+
+| File | Current H1 | Proposed H1 |
+|---|---|---|
+| `app/contact-us/ContactUsContent.tsx` | `Contact Us` | `Contact MZ Global Trading — Textile Sourcing` |
+| `app/qualitycompliance/qualitycontrol/QualityControlContent.tsx` | `Quality Control` | `Quality Control — Pakistan Textile Factories` |
+| `app/downloads/DownloadsContent.tsx` | `Document Library` | `Textile Sourcing Templates & Documents` |
+| `app/quality-policy/QualityPolicyContent.tsx` | `Our Quality Policy` | `Quality Policy — MZ Global Trading` |
+| `app/qualitycompliance/inspectionprocess/InspectionProcessContent.tsx` | `Inspection Process` | `Textile Inspection Process — Pakistan Factories` |
+| `app/qualitycompliance/supplierevaluation/SupplierEvaluationContent.tsx` | `Supplier Evaluation` | `Supplier Evaluation — Pakistan Textile Factories` |
+| `app/our-company/OurCompanyContent.tsx` | `About MZ Global Trading` | `About MZ Global Trading — Pakistan Textile Sourcing` |
+| `app/textile-tools-calculator/TextileToolsContent.tsx` | `Textile Tools Calculator` | `Textile Tools Calculator — GSM, Weights & Sizes` |
+
+**Leave as-is (no H1 change needed):** Privacy Policy, Terms of Use, RFQ (`Start Your Sourcing Request`), FAQs (`Frequently Asked Questions`), Careers — these are legal/utility pages.
+
+---
+
+### Fix 3 (MEDIUM): Multiple H1 on textile tools calculator
+
+**File:** `app/textile-tools-calculator/TextileToolsContent.tsx`
+
+**Problem:** Page has two H1s:
+1. From `<PageHero>`: `Textile Tools Calculator` (correct — keep)
+2. Inline inside active tool panel: `<h1 className="text-2xl font-bold text-navy-900">{toolName}</h1>` at approx. line 11340
+
+**Fix:** Change inline `<h1>` to `<h2>` — one character change, no visual impact (same Tailwind classes apply).
+
+---
+
+### Fix 4 (MEDIUM): Meta descriptions too long
+
+**Target range: 130–155 chars.**
+
+#### 4a. Static page.tsx files — desc too long (>160 chars)
+
+| File | Current length | Action |
+|---|---|---|
+| `app/apparel/page.tsx` | 161 | Trim by 1–5 words |
+| `app/apparel/babyandkids/page.tsx` | 176 | Rewrite to 140–155 |
+| `app/apparel/knittedgarments/page.tsx` | 179 | Rewrite to 140–155 |
+| `app/apparel/wovengarments/page.tsx` | 175 | Rewrite to 140–155 |
+| `app/fabric/page.tsx` | 174 | Rewrite to 140–155 |
+| `app/hometextile/bathlinen/page.tsx` | 189 | Rewrite to 140–155 |
+| `app/hometextile/bedlinen/page.tsx` | 189 | Rewrite to 140–155 |
+| `app/hometextile/hospitallinen/page.tsx` | 164 | Trim |
+| `app/hometextile/hospitallinen/medicalscrubs/page.tsx` | 170 | Trim |
+| `app/hometextile/hospitallinen/patientgowns/page.tsx` | 166 | Trim |
+| `app/hometextile/hospitallinen/surgicalhucktowels/page.tsx` | 164 | Trim |
+| `app/hometextile/industriallinen/page.tsx` | 183 | Rewrite |
+| `app/hometextile/industriallinen/fendercovers/page.tsx` | 197 | Rewrite |
+| `app/hometextile/industriallinen/shoptowels/page.tsx` | 207 | Rewrite |
+| `app/hometextile/kitchenlinen/page.tsx` | 162 | Trim |
+| `app/hometextile/kitchenlinen/aprons/page.tsx` | 162 | Trim |
+| `app/hometextile/kitchenlinen/barmops/page.tsx` | 161 | Trim |
+| `app/hometextile/kitchenlinen/kitchentowels/page.tsx` | 166 | Trim |
+| `app/hometextile/kitchenlinen/potholders/page.tsx` | 165 | Trim |
+| `app/hometextile/tablelinen/page.tsx` | 165 | Trim |
+| `app/hometextile/tablelinen/tablecovers/page.tsx` | 166 | Trim |
+| `app/hometextile/thermalblankets/page.tsx` | 170 | Trim |
+| `app/hometextile/thermalblankets/cellularthermalblanket/page.tsx` | 181 | Rewrite |
+| `app/hometextile/thermalblankets/fleecethermalblankets/page.tsx` | 188 | Rewrite |
+
+**Static pages — desc too short (<130 chars):**
+
+| File | Current length | Action |
+|---|---|---|
+| `app/apparel/knittedgarments/henleyshirts/page.tsx` | 41 | Expand significantly |
+| `app/apparel/knittedgarments/tanktops/page.tsx` | 105 | Expand |
+| `app/apparel/workwearapparel/page.tsx` | 44 | Expand significantly |
+| `app/apparel/wovengarments/cargopants/page.tsx` | 39 | Expand significantly |
+| `app/apparel/wovengarments/denimjeans/page.tsx` | 39 | Expand significantly |
+| `app/apparel/wovengarments/formalcasualshirts/page.tsx` | 52 | Expand |
+| `app/apparel/wovengarments/pantsandtrousers/page.tsx` | 46 | Expand |
+| `app/apparel/wovengarments/shorts/page.tsx` | 34 | Expand significantly |
+| `app/contact-us/page.tsx` | 36 | Expand |
+| `app/quality-policy/page.tsx` | 17 | Expand significantly |
+| `app/qualitycompliance/certifications/page.tsx` | 17 | Expand significantly |
+| `app/qualitycompliance/qualitycontrol/page.tsx` | 17 | Expand significantly |
+| `app/rfq/page.tsx` | 97 | Expand |
+| `app/search/page.tsx` | 24 | Expand |
+
+#### 4b. Guide seoDescription — too long (47 of 77 guides)
+
+File: `lib/guides-content.ts`. Fix directly in data file. Guides most severely over-length:
+- `sourcing-pot-holders-pakistan`: 268 chars
+- `sourcing-bar-mops-pakistan`: 225 chars
+- `sourcing-kitchen-towels-pakistan`: 230 chars
+- `sourcing-cellular-blankets-pakistan`: 268 chars
+- `sourcing-fleece-blankets-pakistan`: 286 chars
+- `sourcing-surgical-gowns-pakistan`: 290 chars
+- Full list: all 47 guides where `seoDescription` > 160 chars (identified in audit)
+
+#### 4c. Download descriptions — too long (45 of 59 downloads)
+
+File: `lib/downloads-content.ts`. Fix directly in data file. Same pattern — descriptions run 173–290 chars.
+
+#### 4d. Knowledge Hub article excerpts — too long (all 53)
+
+**Approach (to confirm):** Modify `generateMetadata` in `app/knowledge/[slug]/page.tsx` to truncate the excerpt at the last sentence boundary before 155 chars. This is a 5-line change in one file — no article content files touched. The full excerpt is still used for listing cards.
+
+---
+
+### Fix 5 (LOW): Heading hierarchy problems
+
+**Audit status:** Not yet fully audited. Product leaf pages confirmed to use correct `motion.h1 → h2 → h3` hierarchy. Cluster and corporate pages need per-file verification.
+
+**Files to audit:**
+- All 13 cluster/pillar `*Content.tsx` files
+- Corporate pages: `OurCompanyContent.tsx`, `WhyChooseUsContent.tsx`, `OurProcessContent.tsx`, `CareersContent.tsx`
+- Quality pages: all 4 under `qualitycompliance/`
+- Legal pages: `PrivacyPolicyContent.tsx`, `TermsOfUseContent.tsx`
+- Hub index pages: `KnowledgeHubContent.tsx`, `GuidesContent.tsx`, `DownloadsContent.tsx`
+
+**Known issue:** `app/knowledge/[slug]/ArticleContent.tsx` — H1 is `{post.title}` which renders the full article title correctly. Hierarchy inside article body (markdown rendered via `renderMarkdown()`) should be verified to start at `##` (H2) not `#` (would create second H1).
+
+---
+
+### Standard Procedure — Future Pages (all 5 cases)
+
+When creating any new page, enforce before marking complete:
+
+| Element | Rule |
+|---|---|
+| `<title>` tag | ≤60 chars. Format: `Specific Keyword Page \| MZ Global Trading`. No word repetition. Never just `"Downloads"` or `"FAQs"` alone. |
+| `description` | 130–155 chars. Front-load primary keyword. Must be a complete sentence. |
+| `<h1>` | One per page. Minimum 25 chars. Must contain the primary keyword for the page. Not just a proper noun or generic label. |
+| Heading hierarchy | H1 → H2 → H3 only. Never skip levels. Never use H1 inside a component if PageHero already provides one. |
+| Knowledge Hub excerpts | Keep full excerpt for listing cards. In `generateMetadata`, excerpt will be auto-truncated to last sentence before 155 chars (once Fix 4d is applied). |
+| Guides | `seoTitle` ≤40 chars (total ≤60 with suffix). `seoDescription` 130–155 chars. Both required fields. |
+| Downloads | `title` ≤40 chars (metadata appends `\| MZ Global Trading`). `description` 130–155 chars. |
