@@ -43,8 +43,11 @@ export default function FenderCoversPage() {
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             offers: {
               "@type": "Offer",
+              price: "0",
               priceCurrency: "USD",
               availability: "https://schema.org/InStock",
+              priceValidUntil: "2027-12-31",
+              url: "https://mzglobaltrading.com/rfq/",
               seller: { "@type": "Organization", name: "MZ Global Trading" },
             },
             primaryImageOfPage: {

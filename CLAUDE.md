@@ -176,7 +176,7 @@ export default function PageNamePage() {
         description: "...",
         image: "https://mzglobaltrading.com/images/og/page-name-og.webp",
         brand: { "@type": "Brand", name: "MZ Global Trading" },
-        offers: { "@type": "Offer", priceCurrency: "USD", availability: "https://schema.org/InStock", seller: { "@type": "Organization", name: "MZ Global Trading" } },
+        offers: { "@type": "Offer", price: "0", priceCurrency: "USD", availability: "https://schema.org/InStock", priceValidUntil: "2027-12-31", url: "https://mzglobaltrading.com/rfq/", seller: { "@type": "Organization", name: "MZ Global Trading" } },
         primaryImageOfPage: { "@type": "ImageObject", contentUrl: "https://mzglobaltrading.com/images/og/page-name-og.webp", name: "Descriptive name" },
         breadcrumb: { "@type": "BreadcrumbList", itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
@@ -300,7 +300,7 @@ style={{ transform: isActive ? "scale(1.06)" : "scale(1)", transition: "transfor
 
 **Product page:**
 ```tsx
-{ "@context": "https://schema.org", "@type": "Product", "name": "...", "image": "...", "brand": { "@type": "Brand", "name": "MZ Global Trading" }, "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "seller": { "@type": "Organization", "name": "MZ Global Trading" } }, "breadcrumb": {...} }
+{ "@context": "https://schema.org", "@type": "Product", "name": "...", "image": "...", "brand": { "@type": "Brand", "name": "MZ Global Trading" }, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "priceValidUntil": "2027-12-31", "url": "https://mzglobaltrading.com/rfq/", "seller": { "@type": "Organization", "name": "MZ Global Trading" } }, "breadcrumb": {...} }
 ```
 
 **Corporate/about page:**
