@@ -25,12 +25,14 @@ export const metadata = buildMetadata({
 export default function SwaddleMuslinPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "Swaddle Muslin Wraps — OEM Baby Textile Manufacturing Pakistan",
     description:
       "Pakistan OEM swaddle muslin wrap manufacturer producing GOTS certified organic cotton muslin and double gauze baby wraps. 90–130 GSM, 120×120 cm standard. OEKO-TEX Class 1 certified mills. Baby-safe azo-free dyes. Bulk programmes for USA, UK, Europe and worldwide baby brands.",
     image: "https://www.mzglobaltrading.com/images/og/swaddle-muslin-fabric-og.webp",
-    brand: { "@type": "Brand", name: "MZ Global Trading" },
+    provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+    serviceType: "Textile Sourcing",
+    areaServed: "Worldwide",
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://www.mzglobaltrading.com/images/og/swaddle-muslin-fabric-og.webp",

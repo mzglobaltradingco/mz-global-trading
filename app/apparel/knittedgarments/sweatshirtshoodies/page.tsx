@@ -25,12 +25,14 @@ export const metadata = buildMetadata({
 export default function SweatshirtsHoodiesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "Sweatshirts & Hoodies — OEM Manufacturing Pakistan",
     description:
       "Pakistan OEM sweatshirt and hoodie manufacturer producing French terry, loop-back fleece, brushed fleece, polar fleece and bonded fleece mid-layer garments for sportswear, streetwear and corporate programmes in USA, UK and Europe.",
     image: "https://www.mzglobaltrading.com/images/og/sweatshirts-hoodies-og.webp",
-    brand: { "@type": "Brand", name: "MZ Global Trading" },
+    provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+    serviceType: "Textile Sourcing",
+    areaServed: "Worldwide",
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://www.mzglobaltrading.com/images/og/sweatshirts-hoodies-og.webp",

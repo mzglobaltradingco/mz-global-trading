@@ -31,13 +31,15 @@ export default function PotHoldersPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Pot Holders & Oven Mitts — OEM Pakistan Manufacturer",
             description:
               "OEM pot holders and oven mitts sourced from Pakistan's certified textile factories. Quilted cotton, silicone-lined and terry constructions. Heat protection ratings to EN407. Square pot holder, gauntlet mitt and silicone mitt styles. OEKO-TEX, BSCI, ISO 9001. Bulk export to USA, UK, EU, Australia and worldwide.",
             image:
               "https://www.mzglobaltrading.com/images/og/pot-holders-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

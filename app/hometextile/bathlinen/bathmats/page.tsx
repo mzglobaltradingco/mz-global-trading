@@ -25,12 +25,14 @@ export const metadata = buildMetadata({
 export default function BathMatsPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "Bath Mats — OEM Anti-Slip Manufacturing Pakistan",
     description:
       "Pakistan OEM bath mat manufacturer producing tufted terry, chenille, memory foam and microfiber bath mats with latex and rubber spray anti-slip backing. 800–1500 GSM. Hotel, healthcare and retail programmes for USA, UK, Europe and worldwide.",
     image: "https://www.mzglobaltrading.com/images/og/bath-mats-og.webp",
-    brand: { "@type": "Brand", name: "MZ Global Trading" },
+    provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+    serviceType: "Textile Sourcing",
+    areaServed: "Worldwide",
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://www.mzglobaltrading.com/images/og/bath-mats-og.webp",

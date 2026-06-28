@@ -25,12 +25,14 @@ export const metadata = buildMetadata({
 export default function TankTopsPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "Tank Tops — OEM Athleisure and Performance Manufacturing Pakistan",
     description:
       "Pakistan OEM tank top manufacturer producing single jersey, rib, mesh, slub and bamboo jersey athletic vests and athleisure tank tops. 130–180 GSM. Women's athleisure, men's training and lifestyle programmes for USA, UK, Europe and worldwide.",
     image: "https://www.mzglobaltrading.com/images/og/tank-tops-og.webp",
-    brand: { "@type": "Brand", name: "MZ Global Trading" },
+    provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+    serviceType: "Textile Sourcing",
+    areaServed: "Worldwide",
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://www.mzglobaltrading.com/images/og/tank-tops-og.webp",

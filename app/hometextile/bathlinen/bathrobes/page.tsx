@@ -26,12 +26,14 @@ export const metadata = buildMetadata({
 export default function BathrobesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "Bathrobes — OEM Hotel & Spa Manufacturing Pakistan",
     description:
       "Pakistan OEM bathrobe manufacturer producing shawl collar, kimono and hooded styles in terry loop, velour, waffle and microfleece. 350–500 GSM. OEKO-TEX and GOTS certified for hotel, spa and resort programmes in USA, UK and Europe.",
     image: "https://www.mzglobaltrading.com/images/og/bathrobes-og.webp",
-    brand: { "@type": "Brand", name: "MZ Global Trading" },
+    provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+    serviceType: "Textile Sourcing",
+    areaServed: "Worldwide",
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://www.mzglobaltrading.com/images/og/bathrobes-og.webp",

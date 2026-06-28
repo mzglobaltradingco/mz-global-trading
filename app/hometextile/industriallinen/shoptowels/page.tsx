@@ -31,12 +31,14 @@ export default function ShopTowelsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Shop Towels — Pakistan Industrial Cotton Textile Manufacturing",
             description:
               "Heavy cotton terry loop and huck weave shop towels manufactured in Pakistan. 300–450 GSM. Oil and grease absorbent. Supplied in dozen, 50-pack and bulk carton to USA automotive workshops, dealerships, industrial facilities and janitorial distributors. ISO 9001, BSCI, WRAP certified.",
             image: "https://www.mzglobaltrading.com/images/og/shop-towels-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl: "https://www.mzglobaltrading.com/images/og/shop-towels-og.webp",

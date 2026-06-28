@@ -31,13 +31,15 @@ export default function HenleyShritsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Henley Shirts — Pakistan OEM Sourcing & Export",
             description:
               "Custom henley shirts sourced from Pakistan's certified knitwear factories. Single jersey, waffle knit, rib and French terry constructions. 160–240 GSM. GOTS and OEKO-TEX available.",
             image:
               "https://www.mzglobaltrading.com/images/og/henley-shirts-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl: "https://www.mzglobaltrading.com/images/og/henley-shirts-og.webp",

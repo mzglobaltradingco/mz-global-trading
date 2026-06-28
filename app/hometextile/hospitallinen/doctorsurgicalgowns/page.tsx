@@ -31,13 +31,15 @@ export default function DoctorSurgicalGownsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Doctor Surgical Gowns — Pakistan Medical Textile Export",
             description:
               "Reusable surgical gowns manufactured in Pakistan's ISO-certified medical textile facilities. TC 65/35 poly-cotton and 100% cotton plain weave. Anti-bacterial, fluid repellent, autoclave safe. ISO 13485, BSCI, EN 13795 compliant. FOB / CIF export.",
             image:
               "https://www.mzglobaltrading.com/images/og/doctor-surgical-gowns-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

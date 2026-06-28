@@ -25,12 +25,14 @@ export const metadata = buildMetadata({
 export default function BabyBibsPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "Baby Bibs — OEM Drool and Feeding Bib Manufacturing Pakistan",
     description:
       "Pakistan OEM baby bibs manufacturer producing terry, muslin, interlock and bandana drool bibs. GOTS and OEKO-TEX Class 1 certified. Velcro and snap closures. TPU waterproof backing available. Bulk programmes for USA, UK, Europe and global baby brands.",
     image: "https://www.mzglobaltrading.com/images/og/baby-bibs-og.webp",
-    brand: { "@type": "Brand", name: "MZ Global Trading" },
+    provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+    serviceType: "Textile Sourcing",
+    areaServed: "Worldwide",
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://www.mzglobaltrading.com/images/og/baby-bibs-og.webp",

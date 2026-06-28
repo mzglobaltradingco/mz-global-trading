@@ -32,13 +32,15 @@ export default function ApparelFabricPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Apparel Fabric — Pakistan Knitted & Woven Fabric Export",
             description:
               "Knitted and woven apparel fabric sourced from Pakistan's certified textile mills. Single jersey, interlock, pique, French terry, fleece, twill, denim, canvas and more. 80–450 GSM. GOTS, OEKO-TEX, BSCI certified. FOB / CIF export.",
             image:
               "https://www.mzglobaltrading.com/images/og/apparel-fabric-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

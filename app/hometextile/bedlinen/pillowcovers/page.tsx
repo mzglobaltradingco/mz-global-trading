@@ -33,13 +33,15 @@ export default function PillowCoversPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Pillow Covers — Pakistan Manufacturer",
             description:
               "Custom pillowcases and pillow covers sourced from Pakistan's certified weaving mills. Percale, sateen and Oxford constructions. Standard, Queen and Euro sizing. GOTS and OEKO-TEX certified.",
             image:
               "https://www.mzglobaltrading.com/images/hero/hero-pillow-covers.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

@@ -25,13 +25,15 @@ export const metadata = buildMetadata({
 export default function BeachPoolTowelPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "Beach & Pool Towels — OEM Manufacturing Pakistan",
     description:
       "Pakistan OEM beach and pool towel manufacturer. Velour one-sided and both-sided, terry loop, microfiber and fouta/pestemal. 350–500 GSM. Sublimation all-over print, reactive print and yarn-dyed stripe. GOTS and OEKO-TEX certified.",
     image:
       "https://www.mzglobaltrading.com/images/og/beach-pool-towels-og.webp",
-    brand: { "@type": "Brand", name: "MZ Global Trading" },
+    provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+    serviceType: "Textile Sourcing",
+    areaServed: "Worldwide",
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl:

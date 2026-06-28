@@ -30,13 +30,15 @@ export default function DenimJeansPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Denim Jeans — Pakistan OEM Sourcing & Export",
             description:
               "Custom denim jeans sourced from Pakistan's certified woven garment factories. Rigid 3×1 twill, stretch 98/2 cotton-elastane, raw and recycled cotton denim. 8–14 oz. Stone wash, acid wash, enzyme wash available.",
             image:
               "https://www.mzglobaltrading.com/images/og/denim-jeans-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [

@@ -30,13 +30,15 @@ export default function FormalCasualShirtsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Formal & Casual Shirts — Pakistan OEM Sourcing & Export",
             description:
               "Custom formal and casual shirts sourced from Pakistan's certified woven garment factories. Poplin, Oxford weave, twill, linen, chambray, end-on-end, dobby and seersucker. 80–200 GSM. GOTS and OEKO-TEX available.",
             image:
               "https://www.mzglobaltrading.com/images/og/formal-casual-shirts-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [

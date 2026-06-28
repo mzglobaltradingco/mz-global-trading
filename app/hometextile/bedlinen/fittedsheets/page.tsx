@@ -33,13 +33,15 @@ export default function FittedSheetsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Fitted Sheets — Pakistan Bed Linen Export",
             description:
               "Wholesale fitted sheets manufactured in Pakistan. Percale, sateen and jersey knit constructions. Pocket depths 12–26 inches. All-around elastic. GOTS, OEKO-TEX, BSCI certified. FOB/CIF export.",
             image:
               "https://www.mzglobaltrading.com/images/hero/hero-fitted-sheets.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

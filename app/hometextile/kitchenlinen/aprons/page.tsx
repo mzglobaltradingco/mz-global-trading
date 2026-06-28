@@ -31,13 +31,15 @@ export default function ApronsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Aprons — OEM Manufacturing Pakistan",
             description:
               "OEM aprons sourced from Pakistan's certified textile mills. Canvas heavy (280–400 GSM), denim, terry and plain weave/poplin constructions. Bib and waist apron styles. Screen print, digital print, embroidery and heat transfer decoration. OEKO-TEX, BSCI, ISO 9001. FOB/CIF export to USA, UK, EU, Middle East and worldwide.",
             image:
               "https://www.mzglobaltrading.com/images/og/aprons-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

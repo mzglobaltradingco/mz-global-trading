@@ -31,13 +31,15 @@ export default function KitchenTowelsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Kitchen Towels — Pakistan Manufacturer & Exporter",
             description:
               "Kitchen towels sourced from Pakistan's certified textile mills. Waffle/honeycomb, huck weave, plain weave and terry loop constructions. 150–250 GSM. Yarn-dyed stripe and check decoration. OEKO-TEX, BSCI, ISO 9001. FOB/CIF export to USA, UK, EU, Middle East and worldwide.",
             image:
               "https://www.mzglobaltrading.com/images/og/kitchen-towels-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

@@ -31,13 +31,15 @@ export default function SurgicalHuckTowelsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Surgical Huck Towels — Pakistan Hospital Supply Export",
             description:
               "Surgical huck towels manufactured in Pakistan's certified weaving mills. 100% cotton honeycomb huck weave. Pre-washed, lint-free, high absorbency. 180–280 GSM. Plain white and blue stripe. ISO 9001, BSCI certified. FOB / CIF export to USA, UK, Australia.",
             image:
               "https://www.mzglobaltrading.com/images/og/surgical-huck-towels-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

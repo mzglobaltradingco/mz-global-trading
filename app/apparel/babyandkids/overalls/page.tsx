@@ -25,12 +25,14 @@ export const metadata = buildMetadata({
 export default function OverallsPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "Baby & Kids Overalls — OEM Dungarees Manufacturing Pakistan",
     description:
       "Pakistan OEM baby and kids overalls manufacturer producing denim, canvas and corduroy dungarees from newborn to 12 years. Adjustable straps, snap crotch for diaper access, GOTS and OEKO-TEX Class 1 certified mills. Bulk programmes for USA, UK, Europe and worldwide.",
     image: "https://www.mzglobaltrading.com/images/og/overalls-og.webp",
-    brand: { "@type": "Brand", name: "MZ Global Trading" },
+    provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+    serviceType: "Textile Sourcing",
+    areaServed: "Worldwide",
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://www.mzglobaltrading.com/images/og/overalls-og.webp",

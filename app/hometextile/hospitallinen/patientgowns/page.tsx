@@ -31,13 +31,15 @@ export default function PatientGownsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Patient Gowns — Pakistan Healthcare Textile Export",
             description:
               "Patient gowns manufactured in Pakistan's ISO-certified healthcare textile facilities. 100% cotton and TC poly-cotton plain weave, jersey knit wrap-style. Anti-bacterial, autoclave safe. Adult and pediatric sizes. ISO 9001, BSCI, Sedex certified. FOB / CIF export.",
             image:
               "https://www.mzglobaltrading.com/images/og/patient-gowns-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

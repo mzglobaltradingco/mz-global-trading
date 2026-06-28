@@ -34,13 +34,15 @@ export default function CushionCoversPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Cushion Covers",
             description:
               "Custom decorative cushion covers manufactured in Pakistan. Cotton, linen, jacquard and velour constructions. Square and rectangular sizes. Zip, button and envelope closure. OEKO-TEX and GOTS certified.",
             image:
               "https://www.mzglobaltrading.com/images/hero/hero-cushion-covers.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

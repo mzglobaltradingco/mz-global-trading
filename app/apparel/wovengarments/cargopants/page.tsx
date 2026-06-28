@@ -29,13 +29,15 @@ export default function CargoPantsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Cargo Pants — Pakistan OEM Sourcing & Export",
             description:
               "Custom cargo pants sourced from Pakistan's certified woven factories. Ripstop, canvas, TC poly-cotton, stretch ripstop and FR cotton constructions. 200–300 GSM. OEKO-TEX and BSCI available.",
             image:
               "https://www.mzglobaltrading.com/images/og/cargo-pants-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [

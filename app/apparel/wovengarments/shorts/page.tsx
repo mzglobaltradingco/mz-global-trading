@@ -29,12 +29,14 @@ export default function ShortsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Shorts — Pakistan OEM Sourcing & Export",
             description:
               "Custom shorts sourced from Pakistan's certified factories. Seven construction types: chino twill, ripstop, canvas, linen blend, single jersey, French terry and nylon swim. 160–280 GSM. OEKO-TEX and BSCI available.",
             image: "https://www.mzglobaltrading.com/images/og/shorts-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [

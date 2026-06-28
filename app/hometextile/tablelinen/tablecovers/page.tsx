@@ -31,13 +31,15 @@ export default function TableCoversPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Table Covers — Pakistan Hospitality Linen Export",
             description:
               "Custom table covers manufactured in Pakistan's certified linen facilities. Cotton damask, jacquard, satin weave, plain weave and poly-cotton easy-care. Standard and custom dimensions. OEKO-TEX Standard 100, BSCI certified. FOB / CIF export.",
             image:
               "https://www.mzglobaltrading.com/images/og/table-covers-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

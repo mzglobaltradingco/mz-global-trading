@@ -34,13 +34,15 @@ export default function CurtainsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Curtains",
             description:
               "Custom curtains manufactured in Pakistan. Plain weave, voile, jacquard, blackout and linen constructions. Rod pocket, eyelet, pinch pleat, tab-top and ring-top heading styles. Unlined, lined and blackout-lined. OEKO-TEX certified.",
             image:
               "https://www.mzglobaltrading.com/images/hero/hero-curtains.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

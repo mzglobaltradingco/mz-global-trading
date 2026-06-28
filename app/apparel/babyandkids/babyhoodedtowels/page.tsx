@@ -25,12 +25,14 @@ export const metadata = buildMetadata({
 export default function BabyHoodedTowelsPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "Baby Hooded Towels — OEM Infant Bath Towel Manufacturing Pakistan",
     description:
       "Pakistan OEM baby hooded towel manufacturer. GOTS certified organic cotton terry and velour. Newborn to kids 4Y. Animal hood designs, custom embroidery. OEKO-TEX Class 1 certified mills. Bulk programmes for USA, UK, Europe and global baby brands.",
     image: "https://www.mzglobaltrading.com/images/og/baby-hooded-towels-og.webp",
-    brand: { "@type": "Brand", name: "MZ Global Trading" },
+    provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+    serviceType: "Textile Sourcing",
+    areaServed: "Worldwide",
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://www.mzglobaltrading.com/images/og/baby-hooded-towels-og.webp",

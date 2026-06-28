@@ -25,12 +25,14 @@ export const metadata = buildMetadata({
 export default function TShirtsPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "T-Shirts — OEM Manufacturing Pakistan",
     description:
       "Pakistan OEM t-shirt manufacturer producing single jersey, pique, interlock, rib, waffle knit and mesh t-shirts in certified cotton for brands and retailers in USA, UK and Europe.",
     image: "https://www.mzglobaltrading.com/images/og/t-shirts-og.webp",
-    brand: { "@type": "Brand", name: "MZ Global Trading" },
+    provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+    serviceType: "Textile Sourcing",
+    areaServed: "Worldwide",
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://www.mzglobaltrading.com/images/og/t-shirts-og.webp",

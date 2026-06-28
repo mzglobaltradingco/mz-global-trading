@@ -25,12 +25,14 @@ export const metadata = buildMetadata({
 export default function PoloShirtsPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "Polo Shirts — OEM Manufacturing Pakistan",
     description:
       "Pakistan OEM polo shirt manufacturer producing classic piqué, mini piqué, jersey and performance polo shirts for corporate buyers, hospitality groups and sports brands in USA, UK and Europe.",
     image: "https://www.mzglobaltrading.com/images/og/polo-shirts-og.webp",
-    brand: { "@type": "Brand", name: "MZ Global Trading" },
+    provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+    serviceType: "Textile Sourcing",
+    areaServed: "Worldwide",
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: "https://www.mzglobaltrading.com/images/og/polo-shirts-og.webp",

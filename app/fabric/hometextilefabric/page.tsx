@@ -32,13 +32,15 @@ export default function HomeTextileFabricPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Home Textile Fabric — Pakistan Terry & Woven Fabric Export",
             description:
               "Terry loop, velour, zero twist and woven home textile fabric from Pakistan's certified mills. Percale, sateen, jacquard, flannel and plain weave for bedding manufacturers. GSM 300–800 (terry), TC 200–800 (woven). GOTS, OEKO-TEX, BSCI certified. FOB / CIF export.",
             image:
               "https://www.mzglobaltrading.com/images/og/home-textile-fabric-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

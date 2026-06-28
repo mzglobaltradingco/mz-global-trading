@@ -87,6 +87,16 @@ export const metadata: Metadata = {
   },
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.mzglobaltrading.com/#website",
+  url: "https://www.mzglobaltrading.com",
+  name: "MZ Global Trading",
+  description: "Pakistan-based B2B textile sourcing — apparel, home textiles and fabric for international buyers.",
+  publisher: { "@id": "https://www.mzglobaltrading.com/#organization" },
+};
+
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -179,6 +189,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
 
         <ScrollToTop />

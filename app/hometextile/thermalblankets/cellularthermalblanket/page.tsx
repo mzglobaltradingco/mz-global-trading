@@ -31,12 +31,14 @@ export default function CellularThermalBlanketPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Cellular Thermal Blanket — Pakistan Cotton Manufacturing",
             description:
               "100% cotton cellular thermal blankets with open-cell honeycomb weave. Clinical-grade breathability. 150–250 GSM. Anti-shrink finish for hospital laundry. OEKO-TEX Standard 100, GOTS, ISO 9001. Supplied to NHS, hospitals, neonatal units and aged-care globally.",
             image: "https://www.mzglobaltrading.com/images/og/cellular-thermal-blanket-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl: "https://www.mzglobaltrading.com/images/og/cellular-thermal-blanket-og.webp",

@@ -37,16 +37,15 @@ export default function InstitutionalTowelsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Institutional Towels",
             description:
               "Pakistan-manufactured institutional terry towels — 400–550 GSM plain white and dobby border constructions for hotel, healthcare and commercial laundry procurement. Available in face, hand and bath sizes. Case packs of 120 pieces. OEKO-TEX Standard 100 and GOTS certified.",
             image:
               "https://www.mzglobaltrading.com/images/og/institutional-towels-og.webp",
-            brand: {
-              "@type": "Brand",
-              name: "MZ Global Trading",
-            },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl: "https://www.mzglobaltrading.com/images/og/institutional-towels-og.webp",

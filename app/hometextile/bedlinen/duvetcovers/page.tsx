@@ -33,13 +33,15 @@ export default function DuvetCoversPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Duvet Covers — Pakistan Manufacturer",
             description:
               "Custom duvet covers sourced from Pakistan's certified weaving mills. Cotton percale, sateen and jacquard constructions. UK, US and EU sizing. GOTS and OEKO-TEX certified.",
             image:
               "https://www.mzglobaltrading.com/images/hero/hero-duvet-covers.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

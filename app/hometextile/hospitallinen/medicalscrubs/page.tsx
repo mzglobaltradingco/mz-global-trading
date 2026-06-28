@@ -31,13 +31,15 @@ export default function MedicalScrubsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Medical Scrubs — Pakistan Healthcare Textile Export",
             description:
               "Custom medical scrubs manufactured in Pakistan's certified healthcare textile facilities. Twill TC 65/35 poly-cotton, 100% cotton twill, 4-way stretch. Anti-bacterial, fluid repellent, moisture wicking. ISO 13485, BSCI, Sedex certified. FOB / CIF export.",
             image:
               "https://www.mzglobaltrading.com/images/og/medical-scrubs-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

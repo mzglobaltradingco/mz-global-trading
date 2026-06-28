@@ -30,13 +30,15 @@ export default function SweatpantsJoggersPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Sweatpants & Joggers — Pakistan OEM Sourcing & Export",
             description:
               "Pakistan OEM sweatpants and jogger manufacturer producing French terry, loop back fleece, brushed fleece, cotton-spandex and polar fleece bottoms. Co-ord set capability. GOTS and OEKO-TEX certified mills for USA, UK, Europe and worldwide.",
             image:
               "https://www.mzglobaltrading.com/images/og/sweatpants-joggers-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

@@ -33,13 +33,15 @@ export default function BedsheetPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Bedsheets — Pakistan Home Textile Export",
             description:
               "Wholesale bedsheets manufactured in Pakistan. Percale, sateen, jacquard, oxford, flannel, linen, microfiber and jersey knit. 200–600 TC. GOTS, OEKO-TEX, BSCI certified. FOB/CIF export.",
             image:
               "https://www.mzglobaltrading.com/images/hero/hero-bedsheets.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

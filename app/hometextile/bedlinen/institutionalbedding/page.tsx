@@ -36,16 +36,15 @@ export default function InstitutionalBeddingPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Institutional Bedding",
             description:
               "Commercial-grade institutional bedding manufactured in Pakistan's certified mills. Engineered for 100–200 industrial wash cycles at 60–90°C. Suitable for hotels, hospitals, airlines and student accommodation worldwide.",
             image:
               "https://www.mzglobaltrading.com/images/og/institutional-bedding-og.webp",
-            brand: {
-              "@type": "Brand",
-              name: "MZ Global Trading",
-            },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

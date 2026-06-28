@@ -35,12 +35,14 @@ export default function FenderCoversPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Fender Covers — Pakistan Automotive Textile Manufacturing",
             description:
               "Knitted terry stretch, woven terry, chenille and microfiber non-scratch automotive fender covers manufactured in Pakistan. 300–400 GSM. Non-scratch surface. ISO 9001, BSCI certified. Supplied to auto dealerships, body shops and professional detailers worldwide. Logo embroidery available.",
             image: "https://www.mzglobaltrading.com/images/og/fender-covers-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl: "https://www.mzglobaltrading.com/images/og/fender-covers-og.webp",

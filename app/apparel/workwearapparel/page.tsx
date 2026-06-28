@@ -30,13 +30,15 @@ export default function WorkwearApparelPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Workwear Apparel — Pakistan OEM Sourcing & Export",
             description:
               "Custom workwear apparel sourced from Pakistan's certified factories. Canvas, ripstop TC poly-cotton, FR cotton, hi-vis and denim constructions. 240–400 GSM. ISO 9001, BSCI, Sedex certified.",
             image:
               "https://www.mzglobaltrading.com/images/og/workwear-apparel-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [

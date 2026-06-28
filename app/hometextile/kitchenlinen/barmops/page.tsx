@@ -31,13 +31,15 @@ export default function BarMopsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Bar Mops — Commercial Grade Pakistan Manufacturer",
             description:
               "Commercial-grade bar mops sourced from Pakistan's certified textile mills. Heavy terry loop and huck weave constructions. 400–600 GSM. Anti-bacterial treatment standard. OEKO-TEX, BSCI, ISO 9001. Bulk export to USA, UK, Canada, Middle East and worldwide.",
             image:
               "https://www.mzglobaltrading.com/images/og/bar-mops-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:

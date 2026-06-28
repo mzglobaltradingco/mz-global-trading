@@ -171,14 +171,13 @@ export default function PageNamePage() {
       <Footer />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "Product",
-        name: "Product Name — Pakistan Export",
+        "@type": "Service",
+        name: "Product Name — Pakistan Sourcing",
         description: "...",
         image: "https://www.mzglobaltrading.com/images/og/page-name-og.webp",
-        brand: { "@type": "Brand", name: "MZ Global Trading" },
-        // NO offers block — MZ Global Trading is a B2B sourcing company, not an e-commerce retailer.
-        // Adding offers triggers Google Merchant Listings validation (price, returns, shipping) which
-        // does not apply. Omitting offers prevents all GSC Shopping/Merchant errors permanently.
+        provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+        serviceType: "Textile Sourcing",
+        areaServed: "Worldwide",
         primaryImageOfPage: { "@type": "ImageObject", contentUrl: "https://www.mzglobaltrading.com/images/og/page-name-og.webp", name: "Descriptive name" },
         breadcrumb: { "@type": "BreadcrumbList", itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
@@ -194,12 +193,12 @@ export default function PageNamePage() {
 ### JSON-LD Type by Page
 | Page type | `@type` |
 |---|---|
-| Product leaf page | `Product` |
+| Product leaf page | `Service` — MZ Global Trading is a B2B sourcing company, not e-commerce |
 | Category / cluster page | `CollectionPage` |
 | About / corporate page | `AboutPage` |
-| Global (layout.tsx only) | `Organization` — do NOT repeat on pages |
+| Global (layout.tsx only) | `Organization` + `WebSite` — do NOT repeat on pages |
 
-Always include `primaryImageOfPage` on any page with a hero image. Add `FAQPage` schema below `Product` schema when page has an FAQ section.
+Always include `primaryImageOfPage` on any page with a hero image. Add `FAQPage` schema below `Service` schema when page has an FAQ section.
 
 ---
 
@@ -300,11 +299,12 @@ style={{ transform: isActive ? "scale(1.06)" : "scale(1)", transition: "transfor
 { "@context": "https://schema.org", "@type": "CollectionPage", "url": "https://www.mzglobaltrading.com/section/", "name": "...", "breadcrumb": { "@type": "BreadcrumbList", "itemListElement": [...] } }
 ```
 
-**Product page:**
+**Product leaf page (use Service, not Product):**
 ```tsx
-{ "@context": "https://schema.org", "@type": "Product", "name": "...", "image": "...", "brand": { "@type": "Brand", "name": "MZ Global Trading" }, "breadcrumb": {...} }
-// NEVER add an "offers" block to Product schema. MZ Global Trading is B2B sourcing only.
-// offers triggers Google Merchant Listings validation (price/returns/shipping) — permanently banned.
+{ "@context": "https://schema.org", "@type": "Service", "name": "...", "image": "...", "provider": { "@id": "https://www.mzglobaltrading.com/#organization" }, "serviceType": "Textile Sourcing", "areaServed": "Worldwide", "breadcrumb": {...} }
+// Use Service — not Product — on all leaf pages. MZ Global Trading is a B2B sourcing company.
+// Product schema requires offers/aggregateRating/review for Google rich results; Service schema has none
+// of these requirements. This permanently removes pages from Google Merchant Center validation.
 ```
 
 **Corporate/about page:**

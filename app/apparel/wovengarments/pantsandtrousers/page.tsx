@@ -30,13 +30,15 @@ export default function PantsTrousersPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Pants & Trousers — Pakistan OEM Sourcing & Export",
             description:
               "Custom pants and trousers sourced from Pakistan's certified woven garment factories. Twill chino, canvas, linen, sateen stretch and ponte constructions. 140–350 GSM. OEKO-TEX, BSCI and Sedex certified.",
             image:
               "https://www.mzglobaltrading.com/images/og/pants-trousers-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl: "https://www.mzglobaltrading.com/images/og/pants-trousers-og.webp",

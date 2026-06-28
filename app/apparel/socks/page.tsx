@@ -31,13 +31,15 @@ export default function SocksPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "Service",
             name: "Socks — Pakistan OEM Manufacturing & Export",
             description:
               "Knitted performance, athletic, compression and fashion socks manufactured in Pakistan. 7 knit structures covering liner to heavy cushion. GOTS and OEKO-TEX available.",
             image:
               "https://www.mzglobaltrading.com/images/og/socks-og.webp",
-            brand: { "@type": "Brand", name: "MZ Global Trading" },
+            provider: { "@id": "https://www.mzglobaltrading.com/#organization" },
+            serviceType: "Textile Sourcing",
+            areaServed: "Worldwide",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
