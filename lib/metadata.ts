@@ -53,7 +53,7 @@ export function buildMetadata({
     description,
     keywords,
     alternates: {
-      canonical,
+      canonical: englishUrl,
       languages,
     },
     openGraph: {

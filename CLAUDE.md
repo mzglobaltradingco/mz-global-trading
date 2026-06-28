@@ -375,9 +375,12 @@ npx wrangler pages deploy out --project-name=mz-global-trading        # 3. deplo
 
 ### Active Redirects (`public/_redirects`)
 ```
-https://www.mzglobaltrading.com/* https://www.mzglobaltrading.com/:splat 301
+https://mzglobaltrading.com/* https://www.mzglobaltrading.com/:splat 301
+http://mzglobaltrading.com/* https://www.mzglobaltrading.com/:splat 301
+http://www.mzglobaltrading.com/* https://www.mzglobaltrading.com/:splat 301
+/ihram/ /hometextile/ihram/ 301
 ```
-Only one redirect — www → non-www canonical. No others.
+Three canonical redirects (non-www and http → https www) plus one legacy path redirect.
 
 ### Security Headers (`public/_headers`)
 ```
