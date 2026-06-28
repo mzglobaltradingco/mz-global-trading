@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
   const { slug } = await params;
   const guide = getGuide(slug);
   if (!guide) return {};
-  const url = `https://mzglobaltrading.com/guides/${guide.slug}/`;
+  const url = `https://www.mzglobaltrading.com/guides/${guide.slug}/`;
   return {
     title: guide.seoTitle,
     description: guide.seoDescription ?? guide.description,
@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
     alternates: {
       canonical: `/guides/${guide.slug}/`,
       languages: {
-        en: `https://mzglobaltrading.com/guides/${guide.slug}/`,
-        "x-default": `https://mzglobaltrading.com/guides/${guide.slug}/`,
+        en: `https://www.mzglobaltrading.com/guides/${guide.slug}/`,
+        "x-default": `https://www.mzglobaltrading.com/guides/${guide.slug}/`,
       },
     },
     openGraph: {
@@ -157,7 +157,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const { slug } = await params;
   const guide = getGuide(slug);
   if (!guide) notFound();
-  const url = `https://mzglobaltrading.com/guides/${guide.slug}/`;
+  const url = `https://www.mzglobaltrading.com/guides/${guide.slug}/`;
   const related = guide.related.map((s) => getGuide(s)).filter(Boolean);
 
   const articleSchema = {
@@ -170,19 +170,19 @@ export default async function GuidePage({ params }: GuidePageProps) {
     inLanguage: "en",
     datePublished: guide.datePublished,
     dateModified: guide.datePublished,
-    author: { "@id": "https://mzglobaltrading.com/#organization" },
-    publisher: { "@id": "https://mzglobaltrading.com/#organization" },
+    author: { "@id": "https://www.mzglobaltrading.com/#organization" },
+    publisher: { "@id": "https://www.mzglobaltrading.com/#organization" },
     mainEntityOfPage: { "@id": url },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/og/hero-knowledge.webp",
+      contentUrl: "https://www.mzglobaltrading.com/images/og/hero-knowledge.webp",
       name: `${guide.title} — textile sourcing guide by MZ Global Trading`,
     },
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-        { "@type": "ListItem", position: 2, name: "Guides", item: "https://mzglobaltrading.com/guides/" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+        { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.mzglobaltrading.com/guides/" },
         { "@type": "ListItem", position: 3, name: guide.title, item: url },
       ],
     },

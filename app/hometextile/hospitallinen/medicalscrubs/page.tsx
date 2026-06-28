@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import MedicalScrubsContent from "./MedicalScrubsContent";
@@ -36,12 +36,12 @@ export default function MedicalScrubsPage() {
             description:
               "Custom medical scrubs manufactured in Pakistan's certified healthcare textile facilities. Twill TC 65/35 poly-cotton, 100% cotton twill, 4-way stretch. Anti-bacterial, fluid repellent, moisture wicking. ISO 13485, BSCI, Sedex certified. FOB / CIF export.",
             image:
-              "https://mzglobaltrading.com/images/og/medical-scrubs-og.webp",
+              "https://www.mzglobaltrading.com/images/og/medical-scrubs-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/medical-scrubs-og.webp",
+                "https://www.mzglobaltrading.com/images/og/medical-scrubs-og.webp",
               name: "Pakistan medical scrubs manufacturer — custom hospital scrubs for healthcare buyers worldwide",
             },
             breadcrumb: {
@@ -51,25 +51,25 @@ export default function MedicalScrubsPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
+                  item: "https://www.mzglobaltrading.com/hometextile/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Hospital Linen",
-                  item: "https://mzglobaltrading.com/hometextile/hospitallinen/",
+                  item: "https://www.mzglobaltrading.com/hometextile/hospitallinen/",
                 },
                 {
                   "@type": "ListItem",
                   position: 4,
                   name: "Medical Scrubs",
-                  item: "https://mzglobaltrading.com/hometextile/hospitallinen/medicalscrubs/",
+                  item: "https://www.mzglobaltrading.com/hometextile/hospitallinen/medicalscrubs/",
                 },
               ],
             },

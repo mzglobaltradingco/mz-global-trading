@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import ShopTowelsContent from "./ShopTowelsContent";
@@ -35,20 +35,20 @@ export default function ShopTowelsPage() {
             name: "Shop Towels — Pakistan Industrial Cotton Textile Manufacturing",
             description:
               "Heavy cotton terry loop and huck weave shop towels manufactured in Pakistan. 300–450 GSM. Oil and grease absorbent. Supplied in dozen, 50-pack and bulk carton to USA automotive workshops, dealerships, industrial facilities and janitorial distributors. ISO 9001, BSCI, WRAP certified.",
-            image: "https://mzglobaltrading.com/images/og/shop-towels-og.webp",
+            image: "https://www.mzglobaltrading.com/images/og/shop-towels-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/shop-towels-og.webp",
+              contentUrl: "https://www.mzglobaltrading.com/images/og/shop-towels-og.webp",
               name: "Pakistan shop towel manufacturer — heavy cotton terry shop rags for automotive and industrial buyers",
             },
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-                { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://mzglobaltrading.com/hometextile/" },
-                { "@type": "ListItem", position: 3, name: "Industrial Linen", item: "https://mzglobaltrading.com/hometextile/industriallinen/" },
-                { "@type": "ListItem", position: 4, name: "Shop Towels", item: "https://mzglobaltrading.com/hometextile/industriallinen/shoptowels/" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+                { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://www.mzglobaltrading.com/hometextile/" },
+                { "@type": "ListItem", position: 3, name: "Industrial Linen", item: "https://www.mzglobaltrading.com/hometextile/industriallinen/" },
+                { "@type": "ListItem", position: 4, name: "Shop Towels", item: "https://www.mzglobaltrading.com/hometextile/industriallinen/shoptowels/" },
               ],
             },
           }),

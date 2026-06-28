@@ -44,7 +44,7 @@ export const DOWNLOAD_DOCS: DownloadDoc[] = [
         ["Head office", "Office G20, Ground Floor, Columbus Tower, Main Clifton Road, Karachi 75600, Pakistan"],
         ["Business email", "info@mzglobaltrading.com"],
         ["Phone / WhatsApp", "+92 300 8256203"],
-        ["Website", "https://mzglobaltrading.com"],
+        ["Website", "https://www.mzglobaltrading.com"],
         ["Markets served", "USA, Canada, UK, Europe, South America"],
         ["Export ports", "Karachi Port / Port Qasim (FOB standard)"],
       ]},

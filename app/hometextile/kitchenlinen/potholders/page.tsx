@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import PotHoldersContent from "./PotHoldersContent";
@@ -36,12 +36,12 @@ export default function PotHoldersPage() {
             description:
               "OEM pot holders and oven mitts sourced from Pakistan's certified textile factories. Quilted cotton, silicone-lined and terry constructions. Heat protection ratings to EN407. Square pot holder, gauntlet mitt and silicone mitt styles. OEKO-TEX, BSCI, ISO 9001. Bulk export to USA, UK, EU, Australia and worldwide.",
             image:
-              "https://mzglobaltrading.com/images/og/pot-holders-og.webp",
+              "https://www.mzglobaltrading.com/images/og/pot-holders-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/pot-holders-og.webp",
+                "https://www.mzglobaltrading.com/images/og/pot-holders-og.webp",
               name: "Pakistan pot holders manufacturer — quilted and silicone oven mitts for kitchenware retail and foodservice worldwide",
             },
             breadcrumb: {
@@ -51,25 +51,25 @@ export default function PotHoldersPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
+                  item: "https://www.mzglobaltrading.com/hometextile/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Kitchen Linen",
-                  item: "https://mzglobaltrading.com/hometextile/kitchenlinen/",
+                  item: "https://www.mzglobaltrading.com/hometextile/kitchenlinen/",
                 },
                 {
                   "@type": "ListItem",
                   position: 4,
                   name: "Pot Holders",
-                  item: "https://mzglobaltrading.com/hometextile/kitchenlinen/potholders/",
+                  item: "https://www.mzglobaltrading.com/hometextile/kitchenlinen/potholders/",
                 },
               ],
             },

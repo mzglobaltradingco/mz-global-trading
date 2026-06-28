@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import QualityControlContent from "./QualityControlContent";
@@ -23,24 +23,24 @@ export const metadata = buildMetadata({
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://mzglobaltrading.com/qualitycompliance/qualitycontrol/",
-  url: "https://mzglobaltrading.com/qualitycompliance/qualitycontrol/",
+  "@id": "https://www.mzglobaltrading.com/qualitycompliance/qualitycontrol/",
+  url: "https://www.mzglobaltrading.com/qualitycompliance/qualitycontrol/",
   name: "Quality Control | Quality & Compliance | MZ Global Trading",
   description:
     "Comprehensive quality control framework covering pre-production, in-line and pre-shipment AQL inspections conducted by MZ Global Trading's independent QC team.",
   inLanguage: "en",
-  isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
-  about: { "@id": "https://mzglobaltrading.com/#organization" },
+  isPartOf: { "@id": "https://www.mzglobaltrading.com/#website" },
+  about: { "@id": "https://www.mzglobaltrading.com/#organization" },
   primaryImageOfPage: {
     "@type": "ImageObject",
-    contentUrl: "https://mzglobaltrading.com/images/og/quality-control-og.webp",
+    contentUrl: "https://www.mzglobaltrading.com/images/og/quality-control-og.webp",
     name: "Quality control inspection process — AQL pre-shipment textile inspection at MZ Global Trading",
   },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-      { "@type": "ListItem", position: 2, name: "Quality Control", item: "https://mzglobaltrading.com/qualitycompliance/qualitycontrol/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+      { "@type": "ListItem", position: 2, name: "Quality Control", item: "https://www.mzglobaltrading.com/qualitycompliance/qualitycontrol/" },
     ],
   },
 };

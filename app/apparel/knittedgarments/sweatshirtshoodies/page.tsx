@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import HoodiesContent from "./HoodiesContent";
@@ -29,20 +29,20 @@ export default function SweatshirtsHoodiesPage() {
     name: "Sweatshirts & Hoodies — OEM Manufacturing Pakistan",
     description:
       "Pakistan OEM sweatshirt and hoodie manufacturer producing French terry, loop-back fleece, brushed fleece, polar fleece and bonded fleece mid-layer garments for sportswear, streetwear and corporate programmes in USA, UK and Europe.",
-    image: "https://mzglobaltrading.com/images/og/sweatshirts-hoodies-og.webp",
+    image: "https://www.mzglobaltrading.com/images/og/sweatshirts-hoodies-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/og/sweatshirts-hoodies-og.webp",
+      contentUrl: "https://www.mzglobaltrading.com/images/og/sweatshirts-hoodies-og.webp",
       name: "Pakistan sweatshirt and hoodie manufacturer — OEM French terry and fleece hoodies for sportswear and retail brands worldwide",
     },
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-        { "@type": "ListItem", position: 2, name: "Apparel", item: "https://mzglobaltrading.com/apparel/" },
-        { "@type": "ListItem", position: 3, name: "Knitted Garments", item: "https://mzglobaltrading.com/apparel/knittedgarments/" },
-        { "@type": "ListItem", position: 4, name: "Sweatshirts & Hoodies", item: "https://mzglobaltrading.com/apparel/knittedgarments/sweatshirtshoodies/" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+        { "@type": "ListItem", position: 2, name: "Apparel", item: "https://www.mzglobaltrading.com/apparel/" },
+        { "@type": "ListItem", position: 3, name: "Knitted Garments", item: "https://www.mzglobaltrading.com/apparel/knittedgarments/" },
+        { "@type": "ListItem", position: 4, name: "Sweatshirts & Hoodies", item: "https://www.mzglobaltrading.com/apparel/knittedgarments/sweatshirtshoodies/" },
       ],
     },
   };

@@ -1,8 +1,8 @@
-import { getAllPosts } from "@/lib/knowledge";
+﻿import { getAllPosts } from "@/lib/knowledge";
 
 export const dynamic = "force-static";
 
-const BASE_URL = "https://mzglobaltrading.com";
+const BASE_URL = "https://www.mzglobaltrading.com";
 
 export function GET() {
   const posts = getAllPosts();

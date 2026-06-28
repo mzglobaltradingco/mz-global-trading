@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TShirtsContent from "./TShirtsContent";
@@ -29,20 +29,20 @@ export default function TShirtsPage() {
     name: "T-Shirts — OEM Manufacturing Pakistan",
     description:
       "Pakistan OEM t-shirt manufacturer producing single jersey, pique, interlock, rib, waffle knit and mesh t-shirts in certified cotton for brands and retailers in USA, UK and Europe.",
-    image: "https://mzglobaltrading.com/images/og/t-shirts-og.webp",
+    image: "https://www.mzglobaltrading.com/images/og/t-shirts-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/og/t-shirts-og.webp",
+      contentUrl: "https://www.mzglobaltrading.com/images/og/t-shirts-og.webp",
       name: "Pakistan t-shirt manufacturer — OEM cotton t-shirts for brands in USA, UK and Europe",
     },
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-        { "@type": "ListItem", position: 2, name: "Apparel", item: "https://mzglobaltrading.com/apparel/" },
-        { "@type": "ListItem", position: 3, name: "Knitted Garments", item: "https://mzglobaltrading.com/apparel/knittedgarments/" },
-        { "@type": "ListItem", position: 4, name: "T-Shirts", item: "https://mzglobaltrading.com/apparel/knittedgarments/tshirts/" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+        { "@type": "ListItem", position: 2, name: "Apparel", item: "https://www.mzglobaltrading.com/apparel/" },
+        { "@type": "ListItem", position: 3, name: "Knitted Garments", item: "https://www.mzglobaltrading.com/apparel/knittedgarments/" },
+        { "@type": "ListItem", position: 4, name: "T-Shirts", item: "https://www.mzglobaltrading.com/apparel/knittedgarments/tshirts/" },
       ],
     },
   };

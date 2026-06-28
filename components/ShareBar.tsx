@@ -10,7 +10,7 @@ interface ShareBarProps {
   className?: string;
 }
 
-const BASE_URL = "https://mzglobaltrading.com";
+const BASE_URL = "https://www.mzglobaltrading.com";
 
 export default function ShareBar({ path, title, label = "Share", className = "" }: ShareBarProps) {
   const [copied, setCopied] = useState(false);

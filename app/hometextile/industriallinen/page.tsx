@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import IndustrialLinenContent from "./IndustrialLinenContent";
@@ -30,22 +30,22 @@ export default function IndustrialLinenPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            url: "https://mzglobaltrading.com/hometextile/industriallinen/",
+            url: "https://www.mzglobaltrading.com/hometextile/industriallinen/",
             name: "Industrial Linen | MZ Global Trading",
             description:
               "Heavy-duty industrial textile products for automotive and commercial use — shop towels and automotive fender covers manufactured in Pakistan's certified mills.",
-            image: "https://mzglobaltrading.com/images/og/industrial-linen-og.webp",
+            image: "https://www.mzglobaltrading.com/images/og/industrial-linen-og.webp",
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/industrial-linen-og.webp",
+              contentUrl: "https://www.mzglobaltrading.com/images/og/industrial-linen-og.webp",
               name: "Pakistan industrial linen manufacturer — shop towels and fender covers worldwide",
             },
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-                { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://mzglobaltrading.com/hometextile/" },
-                { "@type": "ListItem", position: 3, name: "Industrial Linen", item: "https://mzglobaltrading.com/hometextile/industriallinen/" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+                { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://www.mzglobaltrading.com/hometextile/" },
+                { "@type": "ListItem", position: 3, name: "Industrial Linen", item: "https://www.mzglobaltrading.com/hometextile/industriallinen/" },
               ],
             },
           }),

@@ -32,13 +32,13 @@ export default function RFQPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "url": "https://mzglobaltrading.com/rfq/",
+            "url": "https://www.mzglobaltrading.com/rfq/",
             "name": "Request a Quote | MZ Global Trading",
             "description":
               "Submit a textile sourcing request to MZ Global Trading — apparel, home textiles, and fabric from Pakistan's certified manufacturers.",
             "primaryImageOfPage": {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/rfq-og.webp",
+              contentUrl: "https://www.mzglobaltrading.com/images/og/rfq-og.webp",
               name: "Request a Quote — MZ Global Trading Pakistan textile sourcing",
             },
             "breadcrumb": {
@@ -48,19 +48,19 @@ export default function RFQPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://mzglobaltrading.com/",
+                  "item": "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Request a Quote",
-                  "item": "https://mzglobaltrading.com/rfq/",
+                  "item": "https://www.mzglobaltrading.com/rfq/",
                 },
               ],
             },
             "potentialAction": {
               "@type": "CommunicateAction",
-              "target": "https://mzglobaltrading.com/rfq/",
+              "target": "https://www.mzglobaltrading.com/rfq/",
               "name": "Submit sourcing request",
             },
           }),

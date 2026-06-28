@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import SupplierEvaluationContent from "./SupplierEvaluationContent";
@@ -23,24 +23,24 @@ export const metadata = buildMetadata({
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://mzglobaltrading.com/qualitycompliance/supplierevaluation/",
-  url: "https://mzglobaltrading.com/qualitycompliance/supplierevaluation/",
+  "@id": "https://www.mzglobaltrading.com/qualitycompliance/supplierevaluation/",
+  url: "https://www.mzglobaltrading.com/qualitycompliance/supplierevaluation/",
   name: "Supplier Evaluation | Quality & Compliance | MZ Global Trading",
   description:
     "Detailed overview of MZ Global Trading's 4-stage factory vetting and supplier evaluation process before onboarding into the sourcing network.",
   inLanguage: "en",
-  isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
-  about: { "@id": "https://mzglobaltrading.com/#organization" },
+  isPartOf: { "@id": "https://www.mzglobaltrading.com/#website" },
+  about: { "@id": "https://www.mzglobaltrading.com/#organization" },
   primaryImageOfPage: {
     "@type": "ImageObject",
-    contentUrl: "https://mzglobaltrading.com/images/og/supplier-evaluation-og.webp",
+    contentUrl: "https://www.mzglobaltrading.com/images/og/supplier-evaluation-og.webp",
     name: "Supplier evaluation process — factory vetting and compliance audit at MZ Global Trading",
   },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-      { "@type": "ListItem", position: 2, name: "Supplier Evaluation", item: "https://mzglobaltrading.com/qualitycompliance/supplierevaluation/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+      { "@type": "ListItem", position: 2, name: "Supplier Evaluation", item: "https://www.mzglobaltrading.com/qualitycompliance/supplierevaluation/" },
     ],
   },
 };

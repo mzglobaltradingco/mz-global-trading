@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import CertificationsContent from "./CertificationsContent";
@@ -24,24 +24,24 @@ export const metadata = buildMetadata({
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://mzglobaltrading.com/qualitycompliance/certifications/",
-  url: "https://mzglobaltrading.com/qualitycompliance/certifications/",
+  "@id": "https://www.mzglobaltrading.com/qualitycompliance/certifications/",
+  url: "https://www.mzglobaltrading.com/qualitycompliance/certifications/",
   name: "Certifications | Quality & Compliance | MZ Global Trading",
   description:
     "Overview of all international quality and social compliance certifications held across MZ Global Trading's Pakistan factory network.",
   inLanguage: "en",
-  isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
-  about: { "@id": "https://mzglobaltrading.com/#organization" },
+  isPartOf: { "@id": "https://www.mzglobaltrading.com/#website" },
+  about: { "@id": "https://www.mzglobaltrading.com/#organization" },
   primaryImageOfPage: {
     "@type": "ImageObject",
-    contentUrl: "https://mzglobaltrading.com/images/og/certifications-og.webp",
+    contentUrl: "https://www.mzglobaltrading.com/images/og/certifications-og.webp",
     name: "Textile certifications — GOTS, OEKO-TEX, BSCI and ISO 9001 certified factories Pakistan",
   },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-      { "@type": "ListItem", position: 2, name: "Certifications", item: "https://mzglobaltrading.com/qualitycompliance/certifications/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+      { "@type": "ListItem", position: 2, name: "Certifications", item: "https://www.mzglobaltrading.com/qualitycompliance/certifications/" },
     ],
   },
 };

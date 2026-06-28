@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import ContactUsContent from "./ContactUsContent";
@@ -27,13 +27,13 @@ export default function ContactUsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            "url": "https://mzglobaltrading.com/contact-us/",
+            "url": "https://www.mzglobaltrading.com/contact-us/",
             "name": "Contact MZ Global Trading",
             "description":
               "Contact page for MZ Global Trading — B2B textile sourcing enquiries for international buyers in USA, UK, Canada, Europe and South America.",
             "primaryImageOfPage": {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/contact-us-og.webp",
+              contentUrl: "https://www.mzglobaltrading.com/images/og/contact-us-og.webp",
               name: "Contact MZ Global Trading — Pakistan B2B textile sourcing partner",
             },
             "breadcrumb": {
@@ -43,19 +43,19 @@ export default function ContactUsPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://mzglobaltrading.com/",
+                  "item": "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Contact Us",
-                  "item": "https://mzglobaltrading.com/contact-us/",
+                  "item": "https://www.mzglobaltrading.com/contact-us/",
                 },
               ],
             },
             "mainEntity": {
               "@type": "Organization",
-              "@id": "https://mzglobaltrading.com/#organization",
+              "@id": "https://www.mzglobaltrading.com/#organization",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+92-300-8256203",

@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BathLinenContent from "./BathLinenContent";
@@ -32,21 +32,21 @@ export default function BathLinenPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            url: "https://mzglobaltrading.com/hometextile/bathlinen/",
+            url: "https://www.mzglobaltrading.com/hometextile/bathlinen/",
             name: "Bath Linen Manufacturer Pakistan | MZ Global Trading",
             description:
               "Pakistan bath linen manufacturer supplying towels, institutional towels, bathrobes, bath mats and beach & pool towels. OEKO-TEX, GOTS, BSCI, ISO 9001 certified. FOB/CIF export.",
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/bath-linen-og.webp",
+              contentUrl: "https://www.mzglobaltrading.com/images/og/bath-linen-og.webp",
               name: "Pakistan bath linen manufacturer — towels, bathrobes and bath mats supplier for hotels and retailers worldwide",
             },
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-                { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://mzglobaltrading.com/hometextile/" },
-                { "@type": "ListItem", position: 3, name: "Bath Linen", item: "https://mzglobaltrading.com/hometextile/bathlinen/" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+                { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://www.mzglobaltrading.com/hometextile/" },
+                { "@type": "ListItem", position: 3, name: "Bath Linen", item: "https://www.mzglobaltrading.com/hometextile/bathlinen/" },
               ],
             },
           }),

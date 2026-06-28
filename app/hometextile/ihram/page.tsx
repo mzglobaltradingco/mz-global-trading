@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import IhramContent from "./IhramContent";
@@ -35,19 +35,19 @@ export default function IhramPage() {
             name: "Ihram Sets — Plain White Cotton for Hajj & Umrah",
             description:
               "Plain white cotton Ihram sets manufactured in Pakistan's certified weaving mills. Supplied as two unstitched panels per pair (Rida + Izar). Plain weave, terry weave and dobby stripe cotton. 200–350 GSM. OEKO-TEX Standard 100. Export to Saudi Arabia, UAE, Malaysia, Indonesia, UK and worldwide.",
-            image: "https://mzglobaltrading.com/images/og/ihram-og.webp",
+            image: "https://www.mzglobaltrading.com/images/og/ihram-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/ihram-og.webp",
+              contentUrl: "https://www.mzglobaltrading.com/images/og/ihram-og.webp",
               name: "Pakistan ihram manufacturer — plain white cotton ihram sets for Hajj and Umrah pilgrims worldwide",
             },
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-                { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://mzglobaltrading.com/hometextile/" },
-                { "@type": "ListItem", position: 3, name: "Ihram", item: "https://mzglobaltrading.com/hometextile/ihram/" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+                { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://www.mzglobaltrading.com/hometextile/" },
+                { "@type": "ListItem", position: 3, name: "Ihram", item: "https://www.mzglobaltrading.com/hometextile/ihram/" },
               ],
             },
           }),

@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import FittedSheetsContent from "./FittedSheetsContent";
@@ -38,12 +38,12 @@ export default function FittedSheetsPage() {
             description:
               "Wholesale fitted sheets manufactured in Pakistan. Percale, sateen and jersey knit constructions. Pocket depths 12–26 inches. All-around elastic. GOTS, OEKO-TEX, BSCI certified. FOB/CIF export.",
             image:
-              "https://mzglobaltrading.com/images/hero/hero-fitted-sheets.webp",
+              "https://www.mzglobaltrading.com/images/hero/hero-fitted-sheets.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/hero/hero-fitted-sheets.webp",
+                "https://www.mzglobaltrading.com/images/hero/hero-fitted-sheets.webp",
               name: "Pakistan fitted sheet manufacturer — elasticated percale and sateen sheets wholesale export",
             },
             breadcrumb: {
@@ -53,25 +53,25 @@ export default function FittedSheetsPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
+                  item: "https://www.mzglobaltrading.com/hometextile/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Bed Linen",
-                  item: "https://mzglobaltrading.com/hometextile/bedlinen/",
+                  item: "https://www.mzglobaltrading.com/hometextile/bedlinen/",
                 },
                 {
                   "@type": "ListItem",
                   position: 4,
                   name: "Fitted Sheets",
-                  item: "https://mzglobaltrading.com/hometextile/bedlinen/fittedsheets/",
+                  item: "https://www.mzglobaltrading.com/hometextile/bedlinen/fittedsheets/",
                 },
               ],
             },

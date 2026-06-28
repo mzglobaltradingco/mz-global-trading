@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TableLinenContent from "./TableLinenContent";
@@ -31,13 +31,13 @@ export default function TableLinenPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            url: "https://mzglobaltrading.com/hometextile/tablelinen/",
+            url: "https://www.mzglobaltrading.com/hometextile/tablelinen/",
             name: "Table Linen Manufacturer Pakistan | MZ Global Trading",
             description:
               "Pakistan-manufactured table linen for hotels, restaurants and event companies. Cotton damask, jacquard and satin weave constructions. Custom dimensions. OEKO-TEX and BSCI certified.",
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/table-linen-og.webp",
+              contentUrl: "https://www.mzglobaltrading.com/images/og/table-linen-og.webp",
               name: "Pakistan table linen manufacturer — hotel and banquet table covers for hospitality buyers worldwide",
             },
             breadcrumb: {
@@ -47,19 +47,19 @@ export default function TableLinenPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
+                  item: "https://www.mzglobaltrading.com/hometextile/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Table Linen",
-                  item: "https://mzglobaltrading.com/hometextile/tablelinen/",
+                  item: "https://www.mzglobaltrading.com/hometextile/tablelinen/",
                 },
               ],
             },

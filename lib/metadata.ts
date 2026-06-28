@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 
-const BASE_URL = "https://mzglobaltrading.com";
+const BASE_URL = "https://www.mzglobaltrading.com";
 const DEFAULT_OG_IMAGE = "/images/og/homepage-og-image.webp";
 const DEFAULT_OG_ALT = "MZ Global Trading — Pakistan Textile Sourcing Partner for Apparel, Home Textiles and Fabric";
 

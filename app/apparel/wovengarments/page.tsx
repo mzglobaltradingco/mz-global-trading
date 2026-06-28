@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import WovenGarmentsContent from "./WovenGarmentsContent";
@@ -31,21 +31,21 @@ export default function WovenGarmentsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            url: "https://mzglobaltrading.com/apparel/wovengarments/",
+            url: "https://www.mzglobaltrading.com/apparel/wovengarments/",
             name: "Woven Garments Manufacturer Pakistan | MZ Global Trading",
             description:
               "Pakistan woven garment manufacturer supplying denim jeans, formal & casual shirts, pants & trousers, cargo pants and shorts to international brands. GOTS, OEKO-TEX, BSCI certified. FOB/CIF export.",
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/woven-garments-og.webp",
+              contentUrl: "https://www.mzglobaltrading.com/images/og/woven-garments-og.webp",
               name: "Pakistan woven garments manufacturer — denim jeans, shirts and trousers OEM supplier for international brands",
             },
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-                { "@type": "ListItem", position: 2, name: "Apparel", item: "https://mzglobaltrading.com/apparel/" },
-                { "@type": "ListItem", position: 3, name: "Woven Garments", item: "https://mzglobaltrading.com/apparel/wovengarments/" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+                { "@type": "ListItem", position: 2, name: "Apparel", item: "https://www.mzglobaltrading.com/apparel/" },
+                { "@type": "ListItem", position: 3, name: "Woven Garments", item: "https://www.mzglobaltrading.com/apparel/wovengarments/" },
               ],
             },
           }),

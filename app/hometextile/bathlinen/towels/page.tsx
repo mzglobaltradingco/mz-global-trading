@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TowelsContent from "./TowelsContent";
@@ -29,20 +29,20 @@ export default function TowelsPage() {
     name: "Bath Towels — OEM Manufacturing Pakistan",
     description:
       "Pakistan OEM bath towel manufacturer producing terry loop, velour, zero twist, waffle, jacquard and dobby border towels in certified cotton for hotels, retailers and hospitality brands in USA, UK and Europe.",
-    image: "https://mzglobaltrading.com/images/og/towels-og.webp",
+    image: "https://www.mzglobaltrading.com/images/og/towels-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/og/towels-og.webp",
+      contentUrl: "https://www.mzglobaltrading.com/images/og/towels-og.webp",
       name: "Pakistan bath towel manufacturer — OEM terry cotton towels for hotels and retailers in USA, UK and Europe",
     },
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-        { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://mzglobaltrading.com/hometextile/" },
-        { "@type": "ListItem", position: 3, name: "Bath Linen", item: "https://mzglobaltrading.com/hometextile/bathlinen/" },
-        { "@type": "ListItem", position: 4, name: "Towels", item: "https://mzglobaltrading.com/hometextile/bathlinen/towels/" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+        { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://www.mzglobaltrading.com/hometextile/" },
+        { "@type": "ListItem", position: 3, name: "Bath Linen", item: "https://www.mzglobaltrading.com/hometextile/bathlinen/" },
+        { "@type": "ListItem", position: 4, name: "Towels", item: "https://www.mzglobaltrading.com/hometextile/bathlinen/towels/" },
       ],
     },
   };

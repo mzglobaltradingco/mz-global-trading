@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BabyAndKidsContent from "./BabyAndKidsContent";
@@ -31,21 +31,21 @@ export default function BabyAndKidsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            url: "https://mzglobaltrading.com/apparel/babyandkids/",
+            url: "https://www.mzglobaltrading.com/apparel/babyandkids/",
             name: "Baby & Kids Manufacturer Pakistan | MZ Global Trading",
             description:
               "Pakistan baby and kids manufacturer supplying t-shirts, rompers, overalls, bibs, swaddle muslin and hooded towels. GOTS certified, OEKO-TEX Standard 100 Class 1. Safe for newborn skin. FOB/CIF export worldwide.",
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/baby-and-kids-og.webp",
+              contentUrl: "https://www.mzglobaltrading.com/images/og/baby-and-kids-og.webp",
               name: "Pakistan baby and kids clothing manufacturer — GOTS certified rompers, bibs and swaddle muslin for international brands",
             },
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-                { "@type": "ListItem", position: 2, name: "Apparel", item: "https://mzglobaltrading.com/apparel/" },
-                { "@type": "ListItem", position: 3, name: "Baby & Kids", item: "https://mzglobaltrading.com/apparel/babyandkids/" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+                { "@type": "ListItem", position: 2, name: "Apparel", item: "https://www.mzglobaltrading.com/apparel/" },
+                { "@type": "ListItem", position: 3, name: "Baby & Kids", item: "https://www.mzglobaltrading.com/apparel/babyandkids/" },
               ],
             },
           }),

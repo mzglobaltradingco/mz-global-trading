@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import CellularThermalBlanketContent from "./CellularThermalBlanketContent";
@@ -35,20 +35,20 @@ export default function CellularThermalBlanketPage() {
             name: "Cellular Thermal Blanket — Pakistan Cotton Manufacturing",
             description:
               "100% cotton cellular thermal blankets with open-cell honeycomb weave. Clinical-grade breathability. 150–250 GSM. Anti-shrink finish for hospital laundry. OEKO-TEX Standard 100, GOTS, ISO 9001. Supplied to NHS, hospitals, neonatal units and aged-care globally.",
-            image: "https://mzglobaltrading.com/images/og/cellular-thermal-blanket-og.webp",
+            image: "https://www.mzglobaltrading.com/images/og/cellular-thermal-blanket-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/cellular-thermal-blanket-og.webp",
+              contentUrl: "https://www.mzglobaltrading.com/images/og/cellular-thermal-blanket-og.webp",
               name: "Pakistan cellular thermal blanket manufacturer — cotton open-cell weave hospital blankets",
             },
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-                { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://mzglobaltrading.com/hometextile/" },
-                { "@type": "ListItem", position: 3, name: "Thermal Blankets", item: "https://mzglobaltrading.com/hometextile/thermalblankets/" },
-                { "@type": "ListItem", position: 4, name: "Cellular Thermal Blanket", item: "https://mzglobaltrading.com/hometextile/thermalblankets/cellularthermalblanket/" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+                { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://www.mzglobaltrading.com/hometextile/" },
+                { "@type": "ListItem", position: 3, name: "Thermal Blankets", item: "https://www.mzglobaltrading.com/hometextile/thermalblankets/" },
+                { "@type": "ListItem", position: 4, name: "Cellular Thermal Blanket", item: "https://www.mzglobaltrading.com/hometextile/thermalblankets/cellularthermalblanket/" },
               ],
             },
           }),

@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TermsOfUseContent from "./TermsOfUseContent";
@@ -27,7 +27,7 @@ export default function TermsOfUsePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "url": "https://mzglobaltrading.com/termsofuse/",
+            "url": "https://www.mzglobaltrading.com/termsofuse/",
             "name": "Terms of Use | MZ Global Trading",
             "description":
               "Terms governing use of the MZ Global Trading website and B2B textile sourcing enquiry services.",
@@ -38,13 +38,13 @@ export default function TermsOfUsePage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://mzglobaltrading.com/",
+                  "item": "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Terms of Use",
-                  "item": "https://mzglobaltrading.com/termsofuse/",
+                  "item": "https://www.mzglobaltrading.com/termsofuse/",
                 },
               ],
             },

@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import SurgicalHuckTowelsContent from "./SurgicalHuckTowelsContent";
@@ -36,12 +36,12 @@ export default function SurgicalHuckTowelsPage() {
             description:
               "Surgical huck towels manufactured in Pakistan's certified weaving mills. 100% cotton honeycomb huck weave. Pre-washed, lint-free, high absorbency. 180–280 GSM. Plain white and blue stripe. ISO 9001, BSCI certified. FOB / CIF export to USA, UK, Australia.",
             image:
-              "https://mzglobaltrading.com/images/og/surgical-huck-towels-og.webp",
+              "https://www.mzglobaltrading.com/images/og/surgical-huck-towels-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/surgical-huck-towels-og.webp",
+                "https://www.mzglobaltrading.com/images/og/surgical-huck-towels-og.webp",
               name: "Pakistan surgical huck towel manufacturer — lint-free cotton honeycomb weave surgical towels for hospitals worldwide",
             },
             breadcrumb: {
@@ -51,25 +51,25 @@ export default function SurgicalHuckTowelsPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
+                  item: "https://www.mzglobaltrading.com/hometextile/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Hospital Linen",
-                  item: "https://mzglobaltrading.com/hometextile/hospitallinen/",
+                  item: "https://www.mzglobaltrading.com/hometextile/hospitallinen/",
                 },
                 {
                   "@type": "ListItem",
                   position: 4,
                   name: "Surgical Huck Towels",
-                  item: "https://mzglobaltrading.com/hometextile/hospitallinen/surgicalhucktowels/",
+                  item: "https://www.mzglobaltrading.com/hometextile/hospitallinen/surgicalhucktowels/",
                 },
               ],
             },

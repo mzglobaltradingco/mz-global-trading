@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BabyBibsContent from "./BabyBibsContent";
@@ -29,20 +29,20 @@ export default function BabyBibsPage() {
     name: "Baby Bibs — OEM Drool and Feeding Bib Manufacturing Pakistan",
     description:
       "Pakistan OEM baby bibs manufacturer producing terry, muslin, interlock and bandana drool bibs. GOTS and OEKO-TEX Class 1 certified. Velcro and snap closures. TPU waterproof backing available. Bulk programmes for USA, UK, Europe and global baby brands.",
-    image: "https://mzglobaltrading.com/images/og/baby-bibs-og.webp",
+    image: "https://www.mzglobaltrading.com/images/og/baby-bibs-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/og/baby-bibs-og.webp",
+      contentUrl: "https://www.mzglobaltrading.com/images/og/baby-bibs-og.webp",
       name: "Pakistan baby bibs manufacturer — OEM terry and muslin drool bibs for USA, UK and Europe",
     },
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-        { "@type": "ListItem", position: 2, name: "Apparel", item: "https://mzglobaltrading.com/apparel/" },
-        { "@type": "ListItem", position: 3, name: "Baby & Kids", item: "https://mzglobaltrading.com/apparel/babyandkids/" },
-        { "@type": "ListItem", position: 4, name: "Baby Bibs", item: "https://mzglobaltrading.com/apparel/babyandkids/babybibs/" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+        { "@type": "ListItem", position: 2, name: "Apparel", item: "https://www.mzglobaltrading.com/apparel/" },
+        { "@type": "ListItem", position: 3, name: "Baby & Kids", item: "https://www.mzglobaltrading.com/apparel/babyandkids/" },
+        { "@type": "ListItem", position: 4, name: "Baby Bibs", item: "https://www.mzglobaltrading.com/apparel/babyandkids/babybibs/" },
       ],
     },
   };

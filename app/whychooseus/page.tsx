@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import WhyChooseUsContent from "./WhyChooseUsContent";
@@ -23,24 +23,24 @@ export const metadata = buildMetadata({
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://mzglobaltrading.com/whychooseus/",
-  url: "https://mzglobaltrading.com/whychooseus/",
+  "@id": "https://www.mzglobaltrading.com/whychooseus/",
+  url: "https://www.mzglobaltrading.com/whychooseus/",
   name: "Why Choose MZ Global Trading | Pakistan Textile Sourcing Partner",
   description:
     "Discover why international buyers choose MZ Global Trading — 50+ vetted factories, ethical sourcing, competitive pricing and 95% on-time delivery.",
   inLanguage: "en",
-  isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
-  about: { "@id": "https://mzglobaltrading.com/#organization" },
+  isPartOf: { "@id": "https://www.mzglobaltrading.com/#website" },
+  about: { "@id": "https://www.mzglobaltrading.com/#organization" },
   primaryImageOfPage: {
     "@type": "ImageObject",
-    contentUrl: "https://mzglobaltrading.com/images/og/hero-why-choose-us.webp",
+    contentUrl: "https://www.mzglobaltrading.com/images/og/hero-why-choose-us.webp",
     name: "Why choose MZ Global Trading — certified Pakistan B2B textile sourcing partner",
   },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-      { "@type": "ListItem", position: 2, name: "Why Choose Us", item: "https://mzglobaltrading.com/whychooseus/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+      { "@type": "ListItem", position: 2, name: "Why Choose Us", item: "https://www.mzglobaltrading.com/whychooseus/" },
     ],
   },
 };

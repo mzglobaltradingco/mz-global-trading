@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import WorkwearContent from "./WorkwearContent";
@@ -35,7 +35,7 @@ export default function WorkwearApparelPage() {
             description:
               "Custom workwear apparel sourced from Pakistan's certified factories. Canvas, ripstop TC poly-cotton, FR cotton, hi-vis and denim constructions. 240–400 GSM. ISO 9001, BSCI, Sedex certified.",
             image:
-              "https://mzglobaltrading.com/images/og/workwear-apparel-og.webp",
+              "https://www.mzglobaltrading.com/images/og/workwear-apparel-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             breadcrumb: {
               "@type": "BreadcrumbList",
@@ -44,26 +44,26 @@ export default function WorkwearApparelPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Apparel",
-                  item: "https://mzglobaltrading.com/apparel/",
+                  item: "https://www.mzglobaltrading.com/apparel/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Workwear Apparel",
-                  item: "https://mzglobaltrading.com/apparel/workwearapparel/",
+                  item: "https://www.mzglobaltrading.com/apparel/workwearapparel/",
                 },
               ],
             },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/workwear-apparel-og.webp",
+                "https://www.mzglobaltrading.com/images/og/workwear-apparel-og.webp",
               name: "Pakistan workwear apparel manufacturer — OEM safety workwear for industrial and trade sectors",
             },
           }),

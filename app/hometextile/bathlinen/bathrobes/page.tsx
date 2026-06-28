@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BathrobesContent from "./BathrobesContent";
@@ -30,20 +30,20 @@ export default function BathrobesPage() {
     name: "Bathrobes — OEM Hotel & Spa Manufacturing Pakistan",
     description:
       "Pakistan OEM bathrobe manufacturer producing shawl collar, kimono and hooded styles in terry loop, velour, waffle and microfleece. 350–500 GSM. OEKO-TEX and GOTS certified for hotel, spa and resort programmes in USA, UK and Europe.",
-    image: "https://mzglobaltrading.com/images/og/bathrobes-og.webp",
+    image: "https://www.mzglobaltrading.com/images/og/bathrobes-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/og/bathrobes-og.webp",
+      contentUrl: "https://www.mzglobaltrading.com/images/og/bathrobes-og.webp",
       name: "Pakistan bathrobe manufacturer — OEM terry and velour bathrobes for hotels and spas in USA, UK and Europe",
     },
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-        { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://mzglobaltrading.com/hometextile/" },
-        { "@type": "ListItem", position: 3, name: "Bath Linen", item: "https://mzglobaltrading.com/hometextile/bathlinen/" },
-        { "@type": "ListItem", position: 4, name: "Bathrobes", item: "https://mzglobaltrading.com/hometextile/bathlinen/bathrobes/" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+        { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://www.mzglobaltrading.com/hometextile/" },
+        { "@type": "ListItem", position: 3, name: "Bath Linen", item: "https://www.mzglobaltrading.com/hometextile/bathlinen/" },
+        { "@type": "ListItem", position: 4, name: "Bathrobes", item: "https://www.mzglobaltrading.com/hometextile/bathlinen/bathrobes/" },
       ],
     },
   };

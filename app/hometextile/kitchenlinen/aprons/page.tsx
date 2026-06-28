@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import ApronsContent from "./ApronsContent";
@@ -36,12 +36,12 @@ export default function ApronsPage() {
             description:
               "OEM aprons sourced from Pakistan's certified textile mills. Canvas heavy (280–400 GSM), denim, terry and plain weave/poplin constructions. Bib and waist apron styles. Screen print, digital print, embroidery and heat transfer decoration. OEKO-TEX, BSCI, ISO 9001. FOB/CIF export to USA, UK, EU, Middle East and worldwide.",
             image:
-              "https://mzglobaltrading.com/images/og/aprons-og.webp",
+              "https://www.mzglobaltrading.com/images/og/aprons-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/aprons-og.webp",
+                "https://www.mzglobaltrading.com/images/og/aprons-og.webp",
               name: "Pakistan aprons manufacturer — canvas, denim and terry aprons for restaurant and hospitality buyers worldwide",
             },
             breadcrumb: {
@@ -51,25 +51,25 @@ export default function ApronsPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
+                  item: "https://www.mzglobaltrading.com/hometextile/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Kitchen Linen",
-                  item: "https://mzglobaltrading.com/hometextile/kitchenlinen/",
+                  item: "https://www.mzglobaltrading.com/hometextile/kitchenlinen/",
                 },
                 {
                   "@type": "ListItem",
                   position: 4,
                   name: "Aprons",
-                  item: "https://mzglobaltrading.com/hometextile/kitchenlinen/aprons/",
+                  item: "https://www.mzglobaltrading.com/hometextile/kitchenlinen/aprons/",
                 },
               ],
             },

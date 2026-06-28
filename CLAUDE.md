@@ -8,7 +8,7 @@
 - **Personal email:** mzglobaltradingco@gmail.com
 - **Phone:** +92 300 8256203
 - **Address:** Office G20, Ground Floor, Columbus Tower, Main Clifton Road, Karachi 75600, Pakistan
-- **Domain:** https://mzglobaltrading.com
+- **Domain:** https://www.mzglobaltrading.com
 - **Business:** Pakistan-based B2B textile sourcing — apparel, home textiles, fabric
 - **Customers:** Procurement managers, import directors, brand owners, retail buyers in USA, UK, Canada, Europe, South America, Middle East, Southeast Asia, Australia, East Asia (Japan, South Korea), Russia and CIS
 - **NOT targeting:** Pakistan domestic only
@@ -108,7 +108,7 @@ style={{ background: "linear-gradient(to right, rgba(13,27,42,0.93) 0%, rgba(13,
 
 - All internal URLs use trailing slash: `/apparel/`, `/rfq/`, `/hometextile/bathlinen/towels/`
 - Never omit the trailing slash on `<Link href>`, `canonical`, `sitemap.xml`, or JSON-LD URLs
-- Base URL: `https://mzglobaltrading.com`
+- Base URL: `https://www.mzglobaltrading.com`
 
 ---
 
@@ -150,14 +150,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/section/page-name/",
     languages: {
-      "en": "https://mzglobaltrading.com/section/page-name/",
-      "x-default": "https://mzglobaltrading.com/section/page-name/",
+      "en": "https://www.mzglobaltrading.com/section/page-name/",
+      "x-default": "https://www.mzglobaltrading.com/section/page-name/",
     },
   },
   openGraph: {
     title: "Page Name | MZ Global Trading",
     description: "OG description up to 200 chars.",
-    url: "https://mzglobaltrading.com/section/page-name/",
+    url: "https://www.mzglobaltrading.com/section/page-name/",
     images: [{ url: "/images/og/page-name-og.webp", width: 1200, height: 630, alt: "Alt text 80–140 chars" }],
   },
   twitter: { card: "summary_large_image", title: "...", description: "..." },
@@ -174,16 +174,16 @@ export default function PageNamePage() {
         "@type": "Product",
         name: "Product Name — Pakistan Export",
         description: "...",
-        image: "https://mzglobaltrading.com/images/og/page-name-og.webp",
+        image: "https://www.mzglobaltrading.com/images/og/page-name-og.webp",
         brand: { "@type": "Brand", name: "MZ Global Trading" },
         // NO offers block — MZ Global Trading is a B2B sourcing company, not an e-commerce retailer.
         // Adding offers triggers Google Merchant Listings validation (price, returns, shipping) which
         // does not apply. Omitting offers prevents all GSC Shopping/Merchant errors permanently.
-        primaryImageOfPage: { "@type": "ImageObject", contentUrl: "https://mzglobaltrading.com/images/og/page-name-og.webp", name: "Descriptive name" },
+        primaryImageOfPage: { "@type": "ImageObject", contentUrl: "https://www.mzglobaltrading.com/images/og/page-name-og.webp", name: "Descriptive name" },
         breadcrumb: { "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-          { "@type": "ListItem", position: 2, name: "Section", item: "https://mzglobaltrading.com/section/" },
-          { "@type": "ListItem", position: 3, name: "Page Name", item: "https://mzglobaltrading.com/section/page-name/" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+          { "@type": "ListItem", position: 2, name: "Section", item: "https://www.mzglobaltrading.com/section/" },
+          { "@type": "ListItem", position: 3, name: "Page Name", item: "https://www.mzglobaltrading.com/section/page-name/" },
         ]},
       }) }} />
     </>
@@ -297,7 +297,7 @@ style={{ transform: isActive ? "scale(1.06)" : "scale(1)", transition: "transfor
 
 **Category page:**
 ```tsx
-{ "@context": "https://schema.org", "@type": "CollectionPage", "url": "https://mzglobaltrading.com/section/", "name": "...", "breadcrumb": { "@type": "BreadcrumbList", "itemListElement": [...] } }
+{ "@context": "https://schema.org", "@type": "CollectionPage", "url": "https://www.mzglobaltrading.com/section/", "name": "...", "breadcrumb": { "@type": "BreadcrumbList", "itemListElement": [...] } }
 ```
 
 **Product page:**
@@ -309,7 +309,7 @@ style={{ transform: isActive ? "scale(1.06)" : "scale(1)", transition: "transfor
 
 **Corporate/about page:**
 ```tsx
-{ "@context": "https://schema.org", "@type": "AboutPage", "url": "https://mzglobaltrading.com/our-company/", "name": "About MZ Global Trading", "mainEntity": { "@id": "https://mzglobaltrading.com/#organization" } }
+{ "@context": "https://schema.org", "@type": "AboutPage", "url": "https://www.mzglobaltrading.com/our-company/", "name": "About MZ Global Trading", "mainEntity": { "@id": "https://www.mzglobaltrading.com/#organization" } }
 ```
 
 ---
@@ -371,11 +371,11 @@ npx wrangler pages deploy out --project-name=mz-global-trading        # 3. deplo
 
 - **Wrangler:** 4.98.0 · **Cloudflare project:** `mz-global-trading`
 - **Preview URL:** `https://<hash>.mz-global-trading.pages.dev`
-- Domain `mzglobaltrading.com` is live on Cloudflare Pages — test PSI against `https://mzglobaltrading.com/`
+- Domain `mzglobaltrading.com` is live on Cloudflare Pages — test PSI against `https://www.mzglobaltrading.com/`
 
 ### Active Redirects (`public/_redirects`)
 ```
-https://www.mzglobaltrading.com/* https://mzglobaltrading.com/:splat 301
+https://www.mzglobaltrading.com/* https://www.mzglobaltrading.com/:splat 301
 ```
 Only one redirect — www → non-www canonical. No others.
 

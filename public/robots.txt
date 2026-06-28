@@ -1,4 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Disallow: /search/
 Disallow: /pagefind/
 
@@ -30,4 +30,4 @@ Disallow: /
 User-agent: meta-externalagent
 Disallow: /
 
-Sitemap: https://mzglobaltrading.com/sitemap.xml
+Sitemap: https://www.mzglobaltrading.com/sitemap.xml

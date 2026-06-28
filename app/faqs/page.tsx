@@ -23,20 +23,20 @@ export const metadata = buildMetadata({
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://mzglobaltrading.com/faqs/",
-  url: "https://mzglobaltrading.com/faqs/",
+  "@id": "https://www.mzglobaltrading.com/faqs/",
+  url: "https://www.mzglobaltrading.com/faqs/",
   name: "Frequently Asked Questions | MZ Global Trading",
   inLanguage: "en",
   primaryImageOfPage: {
     "@type": "ImageObject",
-    contentUrl: "https://mzglobaltrading.com/images/og/faqs-og.webp",
+    contentUrl: "https://www.mzglobaltrading.com/images/og/faqs-og.webp",
     name: "MZ Global Trading FAQ — textile sourcing questions answered for international buyers",
   },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-      { "@type": "ListItem", position: 2, name: "FAQs", item: "https://mzglobaltrading.com/faqs/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+      { "@type": "ListItem", position: 2, name: "FAQs", item: "https://www.mzglobaltrading.com/faqs/" },
     ],
   },
   mainEntity: [

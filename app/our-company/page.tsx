@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import OurCompanyContent from "./OurCompanyContent";
@@ -35,15 +35,15 @@ export default function OurCompanyPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "AboutPage",
-            "url": "https://mzglobaltrading.com/our-company/",
+            "url": "https://www.mzglobaltrading.com/our-company/",
             "name": "About MZ Global Trading",
             "description":
               "MZ Global Trading is a Karachi-based B2B textile sourcing company connecting international brands, importers and retailers with certified Pakistani manufacturers across apparel, home textiles and fabric.",
             "inLanguage": "en",
-            "mainEntity": { "@id": "https://mzglobaltrading.com/#organization" },
+            "mainEntity": { "@id": "https://www.mzglobaltrading.com/#organization" },
             "primaryImageOfPage": {
               "@type": "ImageObject",
-              "contentUrl": "https://mzglobaltrading.com/images/hero/hero-about.webp",
+              "contentUrl": "https://www.mzglobaltrading.com/images/hero/hero-about.webp",
               "name": "Textile factory floor in Pakistan — MZ Global Trading vetted sourcing network",
             },
             "breadcrumb": {
@@ -53,13 +53,13 @@ export default function OurCompanyPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://mzglobaltrading.com/",
+                  "item": "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "About Us",
-                  "item": "https://mzglobaltrading.com/our-company/",
+                  "item": "https://www.mzglobaltrading.com/our-company/",
                 },
               ],
             },

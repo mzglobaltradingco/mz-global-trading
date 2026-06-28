@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
@@ -13,7 +13,7 @@ const geistSans = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mzglobaltrading.com"),
+  metadataBase: new URL("https://www.mzglobaltrading.com"),
   title: {
     default: "MZ Global Trading | Apparel, Home Textile & Fabric Sourcing",
     template: "%s",
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
     languages: {
-      "en": "https://mzglobaltrading.com/",
-      "x-default": "https://mzglobaltrading.com/",
+      "en": "https://www.mzglobaltrading.com/",
+      "x-default": "https://www.mzglobaltrading.com/",
     },
     types: {
       "application/rss+xml": [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "MZ Global Trading | Apparel, Home Textile & Fabric Sourcing",
     description:
       "B2B textile sourcing partner for brands and retailers in the USA, UK, Canada, and Europe. Certified manufacturers, competitive pricing, global shipping.",
-    url: "https://mzglobaltrading.com/",
+    url: "https://www.mzglobaltrading.com/",
     siteName: "MZ Global Trading",
     locale: "en_US",
     type: "website",
@@ -90,12 +90,12 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://mzglobaltrading.com/#organization",
+  "@id": "https://www.mzglobaltrading.com/#organization",
   name: "MZ Global Trading",
-  url: "https://mzglobaltrading.com",
+  url: "https://www.mzglobaltrading.com",
   logo: {
     "@type": "ImageObject",
-    url: "https://mzglobaltrading.com/images/logo/Master_Logo.webp",
+    url: "https://www.mzglobaltrading.com/images/logo/Master_Logo.webp",
     width: 220,
     height: 60,
   },

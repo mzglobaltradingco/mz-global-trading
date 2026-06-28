@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import SocksContent from "./SocksContent";
@@ -36,12 +36,12 @@ export default function SocksPage() {
             description:
               "Knitted performance, athletic, compression and fashion socks manufactured in Pakistan. 7 knit structures covering liner to heavy cushion. GOTS and OEKO-TEX available.",
             image:
-              "https://mzglobaltrading.com/images/og/socks-og.webp",
+              "https://www.mzglobaltrading.com/images/og/socks-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/socks-og.webp",
+                "https://www.mzglobaltrading.com/images/og/socks-og.webp",
               name: "Pakistan socks manufacturer — knitted performance and fashion socks",
             },
             breadcrumb: {
@@ -51,19 +51,19 @@ export default function SocksPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Apparel",
-                  item: "https://mzglobaltrading.com/apparel/",
+                  item: "https://www.mzglobaltrading.com/apparel/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Socks",
-                  item: "https://mzglobaltrading.com/apparel/socks/",
+                  item: "https://www.mzglobaltrading.com/apparel/socks/",
                 },
               ],
             },

@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import OverallsContent from "./OverallsContent";
@@ -29,20 +29,20 @@ export default function OverallsPage() {
     name: "Baby & Kids Overalls — OEM Dungarees Manufacturing Pakistan",
     description:
       "Pakistan OEM baby and kids overalls manufacturer producing denim, canvas and corduroy dungarees from newborn to 12 years. Adjustable straps, snap crotch for diaper access, GOTS and OEKO-TEX Class 1 certified mills. Bulk programmes for USA, UK, Europe and worldwide.",
-    image: "https://mzglobaltrading.com/images/og/overalls-og.webp",
+    image: "https://www.mzglobaltrading.com/images/og/overalls-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/og/overalls-og.webp",
+      contentUrl: "https://www.mzglobaltrading.com/images/og/overalls-og.webp",
       name: "Pakistan baby and kids overalls manufacturer — OEM denim and canvas dungarees for USA, UK and Europe",
     },
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-        { "@type": "ListItem", position: 2, name: "Apparel", item: "https://mzglobaltrading.com/apparel/" },
-        { "@type": "ListItem", position: 3, name: "Baby & Kids", item: "https://mzglobaltrading.com/apparel/babyandkids/" },
-        { "@type": "ListItem", position: 4, name: "Overalls", item: "https://mzglobaltrading.com/apparel/babyandkids/overalls/" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+        { "@type": "ListItem", position: 2, name: "Apparel", item: "https://www.mzglobaltrading.com/apparel/" },
+        { "@type": "ListItem", position: 3, name: "Baby & Kids", item: "https://www.mzglobaltrading.com/apparel/babyandkids/" },
+        { "@type": "ListItem", position: 4, name: "Overalls", item: "https://www.mzglobaltrading.com/apparel/babyandkids/overalls/" },
       ],
     },
   };

@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BeachTowelsContent from "./BeachTowelsContent";
@@ -30,12 +30,12 @@ export default function BeachPoolTowelPage() {
     description:
       "Pakistan OEM beach and pool towel manufacturer. Velour one-sided and both-sided, terry loop, microfiber and fouta/pestemal. 350–500 GSM. Sublimation all-over print, reactive print and yarn-dyed stripe. GOTS and OEKO-TEX certified.",
     image:
-      "https://mzglobaltrading.com/images/og/beach-pool-towels-og.webp",
+      "https://www.mzglobaltrading.com/images/og/beach-pool-towels-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl:
-        "https://mzglobaltrading.com/images/og/beach-pool-towels-og.webp",
+        "https://www.mzglobaltrading.com/images/og/beach-pool-towels-og.webp",
       name: "Pakistan beach towel manufacturer — OEM velour and sublimation print pool towels for resorts and retailers worldwide",
     },
     breadcrumb: {
@@ -45,25 +45,25 @@ export default function BeachPoolTowelPage() {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://mzglobaltrading.com/",
+          item: "https://www.mzglobaltrading.com/",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Home Textiles",
-          item: "https://mzglobaltrading.com/hometextile/",
+          item: "https://www.mzglobaltrading.com/hometextile/",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Bath Linen",
-          item: "https://mzglobaltrading.com/hometextile/bathlinen/",
+          item: "https://www.mzglobaltrading.com/hometextile/bathlinen/",
         },
         {
           "@type": "ListItem",
           position: 4,
           name: "Beach & Pool Towels",
-          item: "https://mzglobaltrading.com/hometextile/bathlinen/beachpooltowel/",
+          item: "https://www.mzglobaltrading.com/hometextile/bathlinen/beachpooltowel/",
         },
       ],
     },

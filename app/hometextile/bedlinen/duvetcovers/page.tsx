@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import DuvetCoversContent from "./DuvetCoversContent";
@@ -38,12 +38,12 @@ export default function DuvetCoversPage() {
             description:
               "Custom duvet covers sourced from Pakistan's certified weaving mills. Cotton percale, sateen and jacquard constructions. UK, US and EU sizing. GOTS and OEKO-TEX certified.",
             image:
-              "https://mzglobaltrading.com/images/hero/hero-duvet-covers.webp",
+              "https://www.mzglobaltrading.com/images/hero/hero-duvet-covers.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/hero/hero-duvet-covers.webp",
+                "https://www.mzglobaltrading.com/images/hero/hero-duvet-covers.webp",
               name: "Pakistan duvet cover manufacturer — wholesale comforter covers for international buyers",
             },
             breadcrumb: {
@@ -53,25 +53,25 @@ export default function DuvetCoversPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
+                  item: "https://www.mzglobaltrading.com/hometextile/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Bed Linen",
-                  item: "https://mzglobaltrading.com/hometextile/bedlinen/",
+                  item: "https://www.mzglobaltrading.com/hometextile/bedlinen/",
                 },
                 {
                   "@type": "ListItem",
                   position: 4,
                   name: "Duvet Covers",
-                  item: "https://mzglobaltrading.com/hometextile/bedlinen/duvetcovers/",
+                  item: "https://www.mzglobaltrading.com/hometextile/bedlinen/duvetcovers/",
                 },
               ],
             },

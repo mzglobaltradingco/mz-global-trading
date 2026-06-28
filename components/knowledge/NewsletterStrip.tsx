@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeUpVariants, viewportOnce } from "@/lib/animations";
 
-const FEED_URL = "https://mzglobaltrading.com/rss.xml";
+const FEED_URL = "https://www.mzglobaltrading.com/rss.xml";
 
 export default function NewsletterStrip() {
   const [copied, setCopied] = useState(false);

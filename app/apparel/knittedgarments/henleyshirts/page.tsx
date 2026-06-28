@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import HenleyContent from "./HenleyContent";
@@ -36,11 +36,11 @@ export default function HenleyShritsPage() {
             description:
               "Custom henley shirts sourced from Pakistan's certified knitwear factories. Single jersey, waffle knit, rib and French terry constructions. 160–240 GSM. GOTS and OEKO-TEX available.",
             image:
-              "https://mzglobaltrading.com/images/og/henley-shirts-og.webp",
+              "https://www.mzglobaltrading.com/images/og/henley-shirts-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/henley-shirts-og.webp",
+              contentUrl: "https://www.mzglobaltrading.com/images/og/henley-shirts-og.webp",
               name: "Pakistan henley shirt manufacturer — OEM henley shirts wholesale for brands in USA, UK and Europe",
             },
             breadcrumb: {
@@ -50,25 +50,25 @@ export default function HenleyShritsPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Apparel",
-                  item: "https://mzglobaltrading.com/apparel/",
+                  item: "https://www.mzglobaltrading.com/apparel/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Knitted Garments",
-                  item: "https://mzglobaltrading.com/apparel/knittedgarments/",
+                  item: "https://www.mzglobaltrading.com/apparel/knittedgarments/",
                 },
                 {
                   "@type": "ListItem",
                   position: 4,
                   name: "Henley Shirts",
-                  item: "https://mzglobaltrading.com/apparel/knittedgarments/henleyshirts/",
+                  item: "https://www.mzglobaltrading.com/apparel/knittedgarments/henleyshirts/",
                 },
               ],
             },

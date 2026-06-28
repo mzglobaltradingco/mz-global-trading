@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TankTopsContent from "./TankTopsContent";
@@ -29,20 +29,20 @@ export default function TankTopsPage() {
     name: "Tank Tops — OEM Athleisure and Performance Manufacturing Pakistan",
     description:
       "Pakistan OEM tank top manufacturer producing single jersey, rib, mesh, slub and bamboo jersey athletic vests and athleisure tank tops. 130–180 GSM. Women's athleisure, men's training and lifestyle programmes for USA, UK, Europe and worldwide.",
-    image: "https://mzglobaltrading.com/images/og/tank-tops-og.webp",
+    image: "https://www.mzglobaltrading.com/images/og/tank-tops-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/og/tank-tops-og.webp",
+      contentUrl: "https://www.mzglobaltrading.com/images/og/tank-tops-og.webp",
       name: "Pakistan tank top manufacturer — OEM single jersey, rib and bamboo jersey athletic vests for USA, UK and Europe",
     },
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-        { "@type": "ListItem", position: 2, name: "Apparel", item: "https://mzglobaltrading.com/apparel/" },
-        { "@type": "ListItem", position: 3, name: "Knitted Garments", item: "https://mzglobaltrading.com/apparel/knittedgarments/" },
-        { "@type": "ListItem", position: 4, name: "Tank Tops", item: "https://mzglobaltrading.com/apparel/knittedgarments/tanktops/" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+        { "@type": "ListItem", position: 2, name: "Apparel", item: "https://www.mzglobaltrading.com/apparel/" },
+        { "@type": "ListItem", position: 3, name: "Knitted Garments", item: "https://www.mzglobaltrading.com/apparel/knittedgarments/" },
+        { "@type": "ListItem", position: 4, name: "Tank Tops", item: "https://www.mzglobaltrading.com/apparel/knittedgarments/tanktops/" },
       ],
     },
   };

@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BarMopsContent from "./BarMopsContent";
@@ -36,12 +36,12 @@ export default function BarMopsPage() {
             description:
               "Commercial-grade bar mops sourced from Pakistan's certified textile mills. Heavy terry loop and huck weave constructions. 400–600 GSM. Anti-bacterial treatment standard. OEKO-TEX, BSCI, ISO 9001. Bulk export to USA, UK, Canada, Middle East and worldwide.",
             image:
-              "https://mzglobaltrading.com/images/og/bar-mops-og.webp",
+              "https://www.mzglobaltrading.com/images/og/bar-mops-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/bar-mops-og.webp",
+                "https://www.mzglobaltrading.com/images/og/bar-mops-og.webp",
               name: "Pakistan bar mops manufacturer — commercial-grade heavy terry bar mops for restaurant and foodservice buyers",
             },
             breadcrumb: {
@@ -51,25 +51,25 @@ export default function BarMopsPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
+                  item: "https://www.mzglobaltrading.com/hometextile/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Kitchen Linen",
-                  item: "https://mzglobaltrading.com/hometextile/kitchenlinen/",
+                  item: "https://www.mzglobaltrading.com/hometextile/kitchenlinen/",
                 },
                 {
                   "@type": "ListItem",
                   position: 4,
                   name: "Bar Mops",
-                  item: "https://mzglobaltrading.com/hometextile/kitchenlinen/barmops/",
+                  item: "https://www.mzglobaltrading.com/hometextile/kitchenlinen/barmops/",
                 },
               ],
             },

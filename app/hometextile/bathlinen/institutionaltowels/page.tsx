@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import InstitutionalTowelsContent from "./InstitutionalTowelsContent";
@@ -42,14 +42,14 @@ export default function InstitutionalTowelsPage() {
             description:
               "Pakistan-manufactured institutional terry towels — 400–550 GSM plain white and dobby border constructions for hotel, healthcare and commercial laundry procurement. Available in face, hand and bath sizes. Case packs of 120 pieces. OEKO-TEX Standard 100 and GOTS certified.",
             image:
-              "https://mzglobaltrading.com/images/og/institutional-towels-og.webp",
+              "https://www.mzglobaltrading.com/images/og/institutional-towels-og.webp",
             brand: {
               "@type": "Brand",
               name: "MZ Global Trading",
             },
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/institutional-towels-og.webp",
+              contentUrl: "https://www.mzglobaltrading.com/images/og/institutional-towels-og.webp",
               name: "Pakistan institutional towel manufacturer — bulk hotel and healthcare terry supply",
             },
             breadcrumb: {
@@ -59,25 +59,25 @@ export default function InstitutionalTowelsPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
+                  item: "https://www.mzglobaltrading.com/hometextile/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Bath Linen",
-                  item: "https://mzglobaltrading.com/hometextile/bathlinen/",
+                  item: "https://www.mzglobaltrading.com/hometextile/bathlinen/",
                 },
                 {
                   "@type": "ListItem",
                   position: 4,
                   name: "Institutional Towels",
-                  item: "https://mzglobaltrading.com/hometextile/bathlinen/institutionaltowels/",
+                  item: "https://www.mzglobaltrading.com/hometextile/bathlinen/institutionaltowels/",
                 },
               ],
             },

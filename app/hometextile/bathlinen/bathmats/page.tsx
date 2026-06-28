@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BathMatsContent from "./BathMatsContent";
@@ -29,20 +29,20 @@ export default function BathMatsPage() {
     name: "Bath Mats — OEM Anti-Slip Manufacturing Pakistan",
     description:
       "Pakistan OEM bath mat manufacturer producing tufted terry, chenille, memory foam and microfiber bath mats with latex and rubber spray anti-slip backing. 800–1500 GSM. Hotel, healthcare and retail programmes for USA, UK, Europe and worldwide.",
-    image: "https://mzglobaltrading.com/images/og/bath-mats-og.webp",
+    image: "https://www.mzglobaltrading.com/images/og/bath-mats-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/og/bath-mats-og.webp",
+      contentUrl: "https://www.mzglobaltrading.com/images/og/bath-mats-og.webp",
       name: "Pakistan bath mat manufacturer — OEM anti-slip tufted and chenille bath mats for hotels and retailers worldwide",
     },
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-        { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://mzglobaltrading.com/hometextile/" },
-        { "@type": "ListItem", position: 3, name: "Bath Linen", item: "https://mzglobaltrading.com/hometextile/bathlinen/" },
-        { "@type": "ListItem", position: 4, name: "Bath Mats", item: "https://mzglobaltrading.com/hometextile/bathlinen/bathmats/" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+        { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://www.mzglobaltrading.com/hometextile/" },
+        { "@type": "ListItem", position: 3, name: "Bath Linen", item: "https://www.mzglobaltrading.com/hometextile/bathlinen/" },
+        { "@type": "ListItem", position: 4, name: "Bath Mats", item: "https://www.mzglobaltrading.com/hometextile/bathlinen/bathmats/" },
       ],
     },
   };

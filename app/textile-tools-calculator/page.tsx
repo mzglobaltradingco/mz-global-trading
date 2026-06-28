@@ -27,23 +27,23 @@ export const metadata = buildMetadata({
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://mzglobaltrading.com/textile-tools-calculator/",
-  url: "https://mzglobaltrading.com/textile-tools-calculator/",
+  "@id": "https://www.mzglobaltrading.com/textile-tools-calculator/",
+  url: "https://www.mzglobaltrading.com/textile-tools-calculator/",
   name: "Textile Tools Calculator | MZ Global Trading",
   description:
     "55+ free textile calculators for buyers, merchandisers and factory teams — order costing, GSM, yarn count, AQL inspection, CBM, container loading and landed cost.",
   inLanguage: "en",
-  isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
+  isPartOf: { "@id": "https://www.mzglobaltrading.com/#website" },
   primaryImageOfPage: {
     "@type": "ImageObject",
-    contentUrl: "https://mzglobaltrading.com/images/og/textile-tools-calculator-og.webp",
+    contentUrl: "https://www.mzglobaltrading.com/images/og/textile-tools-calculator-og.webp",
     name: "MZ Global Trading textile tools calculator — free online tools for B2B textile buyers",
   },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-      { "@type": "ListItem", position: 2, name: "Textile Tools Calculator", item: "https://mzglobaltrading.com/textile-tools-calculator/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+      { "@type": "ListItem", position: 2, name: "Textile Tools Calculator", item: "https://www.mzglobaltrading.com/textile-tools-calculator/" },
     ],
   },
 };

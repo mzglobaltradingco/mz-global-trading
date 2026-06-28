@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import KnowledgeHubContent from "./KnowledgeHubContent";
@@ -24,24 +24,24 @@ export const metadata = buildMetadata({
 const knowledgeSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "@id": "https://mzglobaltrading.com/knowledge/",
-  url: "https://mzglobaltrading.com/knowledge/",
+  "@id": "https://www.mzglobaltrading.com/knowledge/",
+  url: "https://www.mzglobaltrading.com/knowledge/",
   name: "Knowledge Hub | MZ Global Trading",
   description:
     "Trade guides, sourcing insights and company updates from MZ Global Trading — practical knowledge for procurement managers and textile buyers in USA, UK, Europe and Canada.",
   inLanguage: "en",
-  isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
-  about: { "@id": "https://mzglobaltrading.com/#organization" },
+  isPartOf: { "@id": "https://www.mzglobaltrading.com/#website" },
+  about: { "@id": "https://www.mzglobaltrading.com/#organization" },
   primaryImageOfPage: {
     "@type": "ImageObject",
-    contentUrl: "https://mzglobaltrading.com/images/og/hero-about.webp",
+    contentUrl: "https://www.mzglobaltrading.com/images/og/hero-about.webp",
     name: "MZ Global Trading Knowledge Hub — textile sourcing guides and trade insights",
   },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-      { "@type": "ListItem", position: 2, name: "Knowledge Hub", item: "https://mzglobaltrading.com/knowledge/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+      { "@type": "ListItem", position: 2, name: "Knowledge Hub", item: "https://www.mzglobaltrading.com/knowledge/" },
     ],
   },
 };

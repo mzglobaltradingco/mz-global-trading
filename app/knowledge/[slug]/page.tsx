@@ -23,8 +23,8 @@ export async function generateMetadata({
   if (!post) return { title: "Article Not Found | MZ Global Trading" };
 
   const imageUrl = post.image
-    ? `https://mzglobaltrading.com${post.image}`
-    : "https://mzglobaltrading.com/images/og/hero-about.webp";
+    ? `https://www.mzglobaltrading.com${post.image}`
+    : "https://www.mzglobaltrading.com/images/og/hero-about.webp";
 
   return {
     title: `${post.title} | MZ Global Trading`,
@@ -33,14 +33,14 @@ export async function generateMetadata({
     alternates: {
       canonical: `/knowledge/${post.slug}/`,
       languages: {
-        en: `https://mzglobaltrading.com/knowledge/${post.slug}/`,
-        "x-default": `https://mzglobaltrading.com/knowledge/${post.slug}/`,
+        en: `https://www.mzglobaltrading.com/knowledge/${post.slug}/`,
+        "x-default": `https://www.mzglobaltrading.com/knowledge/${post.slug}/`,
       },
     },
     openGraph: {
       title: `${post.title} | MZ Global Trading`,
       description: post.excerpt,
-      url: `https://mzglobaltrading.com/knowledge/${post.slug}/`,
+      url: `https://www.mzglobaltrading.com/knowledge/${post.slug}/`,
       type: "article",
       images: [
         {
@@ -67,23 +67,23 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   if (!post) notFound();
 
   const imageUrl = post.image
-    ? `https://mzglobaltrading.com${post.image}`
-    : "https://mzglobaltrading.com/images/og/hero-about.webp";
+    ? `https://www.mzglobaltrading.com${post.image}`
+    : "https://www.mzglobaltrading.com/images/og/hero-about.webp";
 
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "@id": `https://mzglobaltrading.com/knowledge/${post.slug}/`,
-    url: `https://mzglobaltrading.com/knowledge/${post.slug}/`,
+    "@id": `https://www.mzglobaltrading.com/knowledge/${post.slug}/`,
+    url: `https://www.mzglobaltrading.com/knowledge/${post.slug}/`,
     headline: post.title,
     description: post.excerpt,
     inLanguage: "en",
     image: imageUrl,
     datePublished: post.date,
     dateModified: post.date,
-    isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
-    author: { "@id": "https://mzglobaltrading.com/#organization" },
-    publisher: { "@id": "https://mzglobaltrading.com/#organization" },
+    isPartOf: { "@id": "https://www.mzglobaltrading.com/#website" },
+    author: { "@id": "https://www.mzglobaltrading.com/#organization" },
+    publisher: { "@id": "https://www.mzglobaltrading.com/#organization" },
     primaryImageOfPage: {
       "@type": "ImageObject",
       contentUrl: imageUrl,
@@ -92,9 +92,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-        { "@type": "ListItem", position: 2, name: "Knowledge Hub", item: "https://mzglobaltrading.com/knowledge/" },
-        { "@type": "ListItem", position: 3, name: post.title, item: `https://mzglobaltrading.com/knowledge/${post.slug}/` },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+        { "@type": "ListItem", position: 2, name: "Knowledge Hub", item: "https://www.mzglobaltrading.com/knowledge/" },
+        { "@type": "ListItem", position: 3, name: post.title, item: `https://www.mzglobaltrading.com/knowledge/${post.slug}/` },
       ],
     },
   };

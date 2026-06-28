@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import ThermalBlanketsContent from "./ThermalBlanketsContent";
@@ -31,22 +31,22 @@ export default function ThermalBlanketsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            url: "https://mzglobaltrading.com/hometextile/thermalblankets/",
+            url: "https://www.mzglobaltrading.com/hometextile/thermalblankets/",
             name: "Thermal Blankets | MZ Global Trading",
             description:
               "Cotton cellular blankets for clinical and institutional environments. Polar fleece thermal blankets for retail and promotional programmes. Pakistan-manufactured, OEKO-TEX certified.",
-            image: "https://mzglobaltrading.com/images/og/thermal-blankets-og.webp",
+            image: "https://www.mzglobaltrading.com/images/og/thermal-blankets-og.webp",
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/thermal-blankets-og.webp",
+              contentUrl: "https://www.mzglobaltrading.com/images/og/thermal-blankets-og.webp",
               name: "Pakistan thermal blanket manufacturer — cellular and fleece blankets worldwide",
             },
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-                { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://mzglobaltrading.com/hometextile/" },
-                { "@type": "ListItem", position: 3, name: "Thermal Blankets", item: "https://mzglobaltrading.com/hometextile/thermalblankets/" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+                { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://www.mzglobaltrading.com/hometextile/" },
+                { "@type": "ListItem", position: 3, name: "Thermal Blankets", item: "https://www.mzglobaltrading.com/hometextile/thermalblankets/" },
               ],
             },
           }),

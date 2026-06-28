@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import ShortsContent from "./ShortsContent";
@@ -33,7 +33,7 @@ export default function ShortsPage() {
             name: "Shorts — Pakistan OEM Sourcing & Export",
             description:
               "Custom shorts sourced from Pakistan's certified factories. Seven construction types: chino twill, ripstop, canvas, linen blend, single jersey, French terry and nylon swim. 160–280 GSM. OEKO-TEX and BSCI available.",
-            image: "https://mzglobaltrading.com/images/og/shorts-og.webp",
+            image: "https://www.mzglobaltrading.com/images/og/shorts-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             breadcrumb: {
               "@type": "BreadcrumbList",
@@ -42,32 +42,32 @@ export default function ShortsPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Apparel",
-                  item: "https://mzglobaltrading.com/apparel/",
+                  item: "https://www.mzglobaltrading.com/apparel/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Woven Garments",
-                  item: "https://mzglobaltrading.com/apparel/wovengarments/",
+                  item: "https://www.mzglobaltrading.com/apparel/wovengarments/",
                 },
                 {
                   "@type": "ListItem",
                   position: 4,
                   name: "Shorts",
-                  item: "https://mzglobaltrading.com/apparel/wovengarments/shorts/",
+                  item: "https://www.mzglobaltrading.com/apparel/wovengarments/shorts/",
                 },
               ],
             },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/shorts-og.webp",
+                "https://www.mzglobaltrading.com/images/og/shorts-og.webp",
               name: "Pakistan shorts manufacturer — chino, ripstop and athletic shorts for wholesale buyers",
             },
           }),

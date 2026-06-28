@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import InstitutionalBeddingContent from "./InstitutionalBeddingContent";
@@ -41,7 +41,7 @@ export default function InstitutionalBeddingPage() {
             description:
               "Commercial-grade institutional bedding manufactured in Pakistan's certified mills. Engineered for 100–200 industrial wash cycles at 60–90°C. Suitable for hotels, hospitals, airlines and student accommodation worldwide.",
             image:
-              "https://mzglobaltrading.com/images/og/institutional-bedding-og.webp",
+              "https://www.mzglobaltrading.com/images/og/institutional-bedding-og.webp",
             brand: {
               "@type": "Brand",
               name: "MZ Global Trading",
@@ -49,7 +49,7 @@ export default function InstitutionalBeddingPage() {
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/institutional-bedding-og.webp",
+                "https://www.mzglobaltrading.com/images/og/institutional-bedding-og.webp",
               name: "Pakistan institutional bedding manufacturer — commercial-grade bed linen for hotels, hospitals and airlines",
             },
             breadcrumb: {
@@ -59,25 +59,25 @@ export default function InstitutionalBeddingPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
+                  item: "https://www.mzglobaltrading.com/hometextile/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Bed Linen",
-                  item: "https://mzglobaltrading.com/hometextile/bedlinen/",
+                  item: "https://www.mzglobaltrading.com/hometextile/bedlinen/",
                 },
                 {
                   "@type": "ListItem",
                   position: 4,
                   name: "Institutional Bedding",
-                  item: "https://mzglobaltrading.com/hometextile/bedlinen/institutionalbedding/",
+                  item: "https://www.mzglobaltrading.com/hometextile/bedlinen/institutionalbedding/",
                 },
               ],
             },

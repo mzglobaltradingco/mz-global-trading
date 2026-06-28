@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import KitchenLinenContent from "./KitchenLinenContent";
@@ -32,14 +32,14 @@ export default function KitchenLinenPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            url: "https://mzglobaltrading.com/hometextile/kitchenlinen/",
+            url: "https://www.mzglobaltrading.com/hometextile/kitchenlinen/",
             name: "Kitchen Linen Supplier Pakistan | MZ Global Trading",
             description:
               "Kitchen towels, bar mops, aprons and pot holders sourced from Pakistan's certified textile mills. OEKO-TEX, BSCI, ISO 9001 certified. FOB export to USA, UK, EU and worldwide.",
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/kitchen-linen-og.webp",
+                "https://www.mzglobaltrading.com/images/og/kitchen-linen-og.webp",
               name: "Pakistan kitchen linen manufacturer — F&B and hospitality textile supply",
             },
             breadcrumb: {
@@ -49,19 +49,19 @@ export default function KitchenLinenPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
+                  item: "https://www.mzglobaltrading.com/hometextile/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Kitchen Linen",
-                  item: "https://mzglobaltrading.com/hometextile/kitchenlinen/",
+                  item: "https://www.mzglobaltrading.com/hometextile/kitchenlinen/",
                 },
               ],
             },

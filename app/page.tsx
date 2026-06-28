@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Hero from "@/components/Hero";
 import { ClientRebrandPopup } from "./ClientOnlyComponents";
@@ -21,26 +21,26 @@ export const metadata = buildMetadata({
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://mzglobaltrading.com/#website",
-  url: "https://mzglobaltrading.com/",
+  "@id": "https://www.mzglobaltrading.com/#website",
+  url: "https://www.mzglobaltrading.com/",
   name: "MZ Global Trading",
-  publisher: { "@id": "https://mzglobaltrading.com/#organization" },
+  publisher: { "@id": "https://www.mzglobaltrading.com/#organization" },
 };
 
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://mzglobaltrading.com/#webpage",
-  url: "https://mzglobaltrading.com/",
+  "@id": "https://www.mzglobaltrading.com/#webpage",
+  url: "https://www.mzglobaltrading.com/",
   name: "MZ Global Trading | Pakistan Textile Sourcing — Apparel, Home Textiles & Fabric",
   description:
     "B2B textile sourcing partner for brands and importers in USA, UK and Europe. 50+ certified factories across apparel, home textiles and fabric.",
-  isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
-  about: { "@id": "https://mzglobaltrading.com/#organization" },
+  isPartOf: { "@id": "https://www.mzglobaltrading.com/#website" },
+  about: { "@id": "https://www.mzglobaltrading.com/#organization" },
   inLanguage: "en",
   primaryImageOfPage: {
     "@type": "ImageObject",
-    contentUrl: "https://mzglobaltrading.com/images/og/homepage-og-image.webp",
+    contentUrl: "https://www.mzglobaltrading.com/images/og/homepage-og-image.webp",
     width: 1200,
     height: 630,
     name: "MZ Global Trading — Pakistan Textile Sourcing Partner",

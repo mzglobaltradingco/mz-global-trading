@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import TableCoversContent from "./TableCoversContent";
@@ -36,12 +36,12 @@ export default function TableCoversPage() {
             description:
               "Custom table covers manufactured in Pakistan's certified linen facilities. Cotton damask, jacquard, satin weave, plain weave and poly-cotton easy-care. Standard and custom dimensions. OEKO-TEX Standard 100, BSCI certified. FOB / CIF export.",
             image:
-              "https://mzglobaltrading.com/images/og/table-covers-og.webp",
+              "https://www.mzglobaltrading.com/images/og/table-covers-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/table-covers-og.webp",
+                "https://www.mzglobaltrading.com/images/og/table-covers-og.webp",
               name: "Pakistan table cover manufacturer — custom damask and jacquard tablecloths for hotels worldwide",
             },
             breadcrumb: {
@@ -51,25 +51,25 @@ export default function TableCoversPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
+                  item: "https://www.mzglobaltrading.com/hometextile/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Table Linen",
-                  item: "https://mzglobaltrading.com/hometextile/tablelinen/",
+                  item: "https://www.mzglobaltrading.com/hometextile/tablelinen/",
                 },
                 {
                   "@type": "ListItem",
                   position: 4,
                   name: "Table Covers",
-                  item: "https://mzglobaltrading.com/hometextile/tablelinen/tablecovers/",
+                  item: "https://www.mzglobaltrading.com/hometextile/tablelinen/tablecovers/",
                 },
               ],
             },

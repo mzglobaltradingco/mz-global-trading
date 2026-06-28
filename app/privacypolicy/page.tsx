@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import PrivacyPolicyContent from "./PrivacyPolicyContent";
@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "url": "https://mzglobaltrading.com/privacypolicy/",
+            "url": "https://www.mzglobaltrading.com/privacypolicy/",
             "name": "Privacy Policy | MZ Global Trading",
             "description":
               "Privacy policy for MZ Global Trading — how we collect, use, and protect personal data submitted by international buyers through our textile sourcing enquiry forms.",
@@ -38,13 +38,13 @@ export default function PrivacyPolicyPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://mzglobaltrading.com/",
+                  "item": "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Privacy Policy",
-                  "item": "https://mzglobaltrading.com/privacypolicy/",
+                  "item": "https://www.mzglobaltrading.com/privacypolicy/",
                 },
               ],
             },

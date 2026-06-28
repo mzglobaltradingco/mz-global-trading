@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import PoloContent from "./PoloContent";
@@ -29,20 +29,20 @@ export default function PoloShirtsPage() {
     name: "Polo Shirts — OEM Manufacturing Pakistan",
     description:
       "Pakistan OEM polo shirt manufacturer producing classic piqué, mini piqué, jersey and performance polo shirts for corporate buyers, hospitality groups and sports brands in USA, UK and Europe.",
-    image: "https://mzglobaltrading.com/images/og/polo-shirts-og.webp",
+    image: "https://www.mzglobaltrading.com/images/og/polo-shirts-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/og/polo-shirts-og.webp",
+      contentUrl: "https://www.mzglobaltrading.com/images/og/polo-shirts-og.webp",
       name: "Pakistan polo shirt manufacturer — OEM piqué polo shirts for corporate and sports brands",
     },
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-        { "@type": "ListItem", position: 2, name: "Apparel", item: "https://mzglobaltrading.com/apparel/" },
-        { "@type": "ListItem", position: 3, name: "Knitted Garments", item: "https://mzglobaltrading.com/apparel/knittedgarments/" },
-        { "@type": "ListItem", position: 4, name: "Polo Shirts", item: "https://mzglobaltrading.com/apparel/knittedgarments/poloshirts/" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+        { "@type": "ListItem", position: 2, name: "Apparel", item: "https://www.mzglobaltrading.com/apparel/" },
+        { "@type": "ListItem", position: 3, name: "Knitted Garments", item: "https://www.mzglobaltrading.com/apparel/knittedgarments/" },
+        { "@type": "ListItem", position: 4, name: "Polo Shirts", item: "https://www.mzglobaltrading.com/apparel/knittedgarments/poloshirts/" },
       ],
     },
   };

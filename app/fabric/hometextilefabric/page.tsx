@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import HomeTextileFabricContent from "./HomeTextileFabricContent";
@@ -37,12 +37,12 @@ export default function HomeTextileFabricPage() {
             description:
               "Terry loop, velour, zero twist and woven home textile fabric from Pakistan's certified mills. Percale, sateen, jacquard, flannel and plain weave for bedding manufacturers. GSM 300–800 (terry), TC 200–800 (woven). GOTS, OEKO-TEX, BSCI certified. FOB / CIF export.",
             image:
-              "https://mzglobaltrading.com/images/og/home-textile-fabric-og.webp",
+              "https://www.mzglobaltrading.com/images/og/home-textile-fabric-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/home-textile-fabric-og.webp",
+                "https://www.mzglobaltrading.com/images/og/home-textile-fabric-og.webp",
               name: "Pakistan home textile fabric manufacturer — terry and woven fabric for towel and bedding manufacturers worldwide",
             },
             breadcrumb: {
@@ -52,19 +52,19 @@ export default function HomeTextileFabricPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Fabric",
-                  item: "https://mzglobaltrading.com/fabric/",
+                  item: "https://www.mzglobaltrading.com/fabric/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Home Textile Fabric",
-                  item: "https://mzglobaltrading.com/fabric/hometextilefabric/",
+                  item: "https://www.mzglobaltrading.com/fabric/hometextilefabric/",
                 },
               ],
             },

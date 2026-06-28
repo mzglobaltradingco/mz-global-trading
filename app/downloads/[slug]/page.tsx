@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: DocPageProps): Promise<Metada
   const { slug } = await params;
   const doc = getDownloadDoc(slug);
   if (!doc) return {};
-  const url = `https://mzglobaltrading.com/downloads/${doc.slug}/`;
+  const url = `https://www.mzglobaltrading.com/downloads/${doc.slug}/`;
   return {
     title: doc.title,
     description: doc.description,
@@ -28,8 +28,8 @@ export async function generateMetadata({ params }: DocPageProps): Promise<Metada
     alternates: {
       canonical: `/downloads/${doc.slug}/`,
       languages: {
-        en: `https://mzglobaltrading.com/downloads/${doc.slug}/`,
-        "x-default": `https://mzglobaltrading.com/downloads/${doc.slug}/`,
+        en: `https://www.mzglobaltrading.com/downloads/${doc.slug}/`,
+        "x-default": `https://www.mzglobaltrading.com/downloads/${doc.slug}/`,
       },
     },
     openGraph: {
@@ -159,7 +159,7 @@ export default async function DownloadDocPage({ params }: DocPageProps) {
   const { slug } = await params;
   const doc = getDownloadDoc(slug);
   if (!doc) notFound();
-  const url = `https://mzglobaltrading.com/downloads/${doc.slug}/`;
+  const url = `https://www.mzglobaltrading.com/downloads/${doc.slug}/`;
   const siblings = DOWNLOAD_DOCS.filter((d) => d.slug !== doc.slug && d.category === doc.category).slice(0, 3);
 
   const pageSchema = {
@@ -170,17 +170,17 @@ export default async function DownloadDocPage({ params }: DocPageProps) {
     name: `${doc.title} | MZ Global Trading`,
     description: doc.description,
     inLanguage: "en",
-    isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
+    isPartOf: { "@id": "https://www.mzglobaltrading.com/#website" },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/og/hero-our-process.webp",
+      contentUrl: "https://www.mzglobaltrading.com/images/og/hero-our-process.webp",
       name: `${doc.title} — free textile trade document by MZ Global Trading`,
     },
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-        { "@type": "ListItem", position: 2, name: "Downloads", item: "https://mzglobaltrading.com/downloads/" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+        { "@type": "ListItem", position: 2, name: "Downloads", item: "https://www.mzglobaltrading.com/downloads/" },
         { "@type": "ListItem", position: 3, name: doc.title, item: url },
       ],
     },

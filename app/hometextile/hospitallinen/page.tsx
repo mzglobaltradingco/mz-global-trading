@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import HospitalLinenContent from "./HospitalLinenContent";
@@ -31,13 +31,13 @@ export default function HospitalLinenPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            url: "https://mzglobaltrading.com/hometextile/hospitallinen/",
+            url: "https://www.mzglobaltrading.com/hometextile/hospitallinen/",
             name: "Hospital Linen Manufacturer Pakistan | MZ Global Trading",
             description:
               "Healthcare-grade linen manufactured in Pakistan's ISO-certified facilities. Surgical gowns, medical scrubs, patient gowns and surgical huck towels. Anti-bacterial, fluid-repellent, sterilizable finishes. ISO 9001, ISO 13485, BSCI certified.",
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/hospital-linen-og.webp",
+              contentUrl: "https://www.mzglobaltrading.com/images/og/hospital-linen-og.webp",
               name: "Pakistan hospital linen manufacturer — healthcare-grade surgical gowns, scrubs and medical textiles for global buyers",
             },
             breadcrumb: {
@@ -47,19 +47,19 @@ export default function HospitalLinenPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
+                  item: "https://www.mzglobaltrading.com/hometextile/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Hospital Linen",
-                  item: "https://mzglobaltrading.com/hometextile/hospitallinen/",
+                  item: "https://www.mzglobaltrading.com/hometextile/hospitallinen/",
                 },
               ],
             },

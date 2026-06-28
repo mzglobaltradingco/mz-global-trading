@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import ApparelFabricContent from "./ApparelFabricContent";
@@ -37,12 +37,12 @@ export default function ApparelFabricPage() {
             description:
               "Knitted and woven apparel fabric sourced from Pakistan's certified textile mills. Single jersey, interlock, pique, French terry, fleece, twill, denim, canvas and more. 80–450 GSM. GOTS, OEKO-TEX, BSCI certified. FOB / CIF export.",
             image:
-              "https://mzglobaltrading.com/images/og/apparel-fabric-og.webp",
+              "https://www.mzglobaltrading.com/images/og/apparel-fabric-og.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/og/apparel-fabric-og.webp",
+                "https://www.mzglobaltrading.com/images/og/apparel-fabric-og.webp",
               name: "Pakistan apparel fabric manufacturer — knitted and woven fabric rolls for garment manufacturers worldwide",
             },
             breadcrumb: {
@@ -52,19 +52,19 @@ export default function ApparelFabricPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Fabric",
-                  item: "https://mzglobaltrading.com/fabric/",
+                  item: "https://www.mzglobaltrading.com/fabric/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Apparel Fabric",
-                  item: "https://mzglobaltrading.com/fabric/apparelfabric/",
+                  item: "https://www.mzglobaltrading.com/fabric/apparelfabric/",
                 },
               ],
             },

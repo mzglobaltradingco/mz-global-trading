@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import QualityPolicyContent from "./QualityPolicyContent";
@@ -23,24 +23,24 @@ export const metadata = buildMetadata({
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://mzglobaltrading.com/quality-policy/",
-  url: "https://mzglobaltrading.com/quality-policy/",
+  "@id": "https://www.mzglobaltrading.com/quality-policy/",
+  url: "https://www.mzglobaltrading.com/quality-policy/",
   name: "Quality Policy | MZ Global Trading",
   description:
     "MZ Global Trading's formal quality policy covering factory certification requirements, in-house QC inspection standards and pre-shipment verification procedures.",
   inLanguage: "en",
-  isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
-  about: { "@id": "https://mzglobaltrading.com/#organization" },
+  isPartOf: { "@id": "https://www.mzglobaltrading.com/#website" },
+  about: { "@id": "https://www.mzglobaltrading.com/#organization" },
   primaryImageOfPage: {
     "@type": "ImageObject",
-    contentUrl: "https://mzglobaltrading.com/images/og/hero-why-choose-us.webp",
+    contentUrl: "https://www.mzglobaltrading.com/images/og/hero-why-choose-us.webp",
     name: "MZ Global Trading quality policy — AQL-based inspection and certified textile sourcing from Pakistan",
   },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-      { "@type": "ListItem", position: 2, name: "Quality Policy", item: "https://mzglobaltrading.com/quality-policy/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+      { "@type": "ListItem", position: 2, name: "Quality Policy", item: "https://www.mzglobaltrading.com/quality-policy/" },
     ],
   },
 };

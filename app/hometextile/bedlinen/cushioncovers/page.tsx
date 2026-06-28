@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import CushionCoversContent from "./CushionCoversContent";
@@ -39,12 +39,12 @@ export default function CushionCoversPage() {
             description:
               "Custom decorative cushion covers manufactured in Pakistan. Cotton, linen, jacquard and velour constructions. Square and rectangular sizes. Zip, button and envelope closure. OEKO-TEX and GOTS certified.",
             image:
-              "https://mzglobaltrading.com/images/hero/hero-cushion-covers.webp",
+              "https://www.mzglobaltrading.com/images/hero/hero-cushion-covers.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/hero/hero-cushion-covers.webp",
+                "https://www.mzglobaltrading.com/images/hero/hero-cushion-covers.webp",
               name: "Pakistan cushion cover manufacturer — decorative pillow covers for wholesale buyers",
             },
             breadcrumb: {
@@ -54,25 +54,25 @@ export default function CushionCoversPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
+                  item: "https://www.mzglobaltrading.com/hometextile/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Bed Linen",
-                  item: "https://mzglobaltrading.com/hometextile/bedlinen/",
+                  item: "https://www.mzglobaltrading.com/hometextile/bedlinen/",
                 },
                 {
                   "@type": "ListItem",
                   position: 4,
                   name: "Cushion Covers",
-                  item: "https://mzglobaltrading.com/hometextile/bedlinen/cushioncovers/",
+                  item: "https://www.mzglobaltrading.com/hometextile/bedlinen/cushioncovers/",
                 },
               ],
             },

@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BedLinenContent from "./BedLinenContent";
@@ -32,21 +32,21 @@ export default function BedLinenPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            url: "https://mzglobaltrading.com/hometextile/bedlinen/",
+            url: "https://www.mzglobaltrading.com/hometextile/bedlinen/",
             name: "Bed Linen Manufacturer Pakistan | MZ Global Trading",
             description:
               "Pakistan bed linen manufacturer supplying bedsheets, fitted sheets, duvet covers, pillow covers, cushion covers, curtains and institutional bedding. Percale, sateen, microfiber constructions. OEKO-TEX, GOTS, BSCI certified. FOB/CIF export.",
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/bed-linen-og.webp",
+              contentUrl: "https://www.mzglobaltrading.com/images/og/bed-linen-og.webp",
               name: "Pakistan bed linen manufacturer — bedsheets, duvet covers and fitted sheets for hotels and retailers worldwide",
             },
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-                { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://mzglobaltrading.com/hometextile/" },
-                { "@type": "ListItem", position: 3, name: "Bed Linen", item: "https://mzglobaltrading.com/hometextile/bedlinen/" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+                { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://www.mzglobaltrading.com/hometextile/" },
+                { "@type": "ListItem", position: 3, name: "Bed Linen", item: "https://www.mzglobaltrading.com/hometextile/bedlinen/" },
               ],
             },
           }),

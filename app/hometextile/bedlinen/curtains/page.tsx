@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import CurtainsContent from "./CurtainsContent";
@@ -39,12 +39,12 @@ export default function CurtainsPage() {
             description:
               "Custom curtains manufactured in Pakistan. Plain weave, voile, jacquard, blackout and linen constructions. Rod pocket, eyelet, pinch pleat, tab-top and ring-top heading styles. Unlined, lined and blackout-lined. OEKO-TEX certified.",
             image:
-              "https://mzglobaltrading.com/images/hero/hero-curtains.webp",
+              "https://www.mzglobaltrading.com/images/hero/hero-curtains.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/hero/hero-curtains.webp",
+                "https://www.mzglobaltrading.com/images/hero/hero-curtains.webp",
               name: "Pakistan curtain manufacturer — blackout and jacquard curtains for wholesale buyers",
             },
             breadcrumb: {
@@ -54,25 +54,25 @@ export default function CurtainsPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
+                  item: "https://www.mzglobaltrading.com/hometextile/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Bed Linen",
-                  item: "https://mzglobaltrading.com/hometextile/bedlinen/",
+                  item: "https://www.mzglobaltrading.com/hometextile/bedlinen/",
                 },
                 {
                   "@type": "ListItem",
                   position: 4,
                   name: "Curtains",
-                  item: "https://mzglobaltrading.com/hometextile/bedlinen/curtains/",
+                  item: "https://www.mzglobaltrading.com/hometextile/bedlinen/curtains/",
                 },
               ],
             },

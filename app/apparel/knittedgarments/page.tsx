@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import KnittedGarmentsContent from "./KnittedGarmentsContent";
@@ -32,21 +32,21 @@ export default function KnittedGarmentsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            url: "https://mzglobaltrading.com/apparel/knittedgarments/",
+            url: "https://www.mzglobaltrading.com/apparel/knittedgarments/",
             name: "Knitted Garments Manufacturer Pakistan | MZ Global Trading",
             description:
               "Pakistan knitwear manufacturer supplying T-shirts, polo shirts, henley shirts, sweatshirts, hoodies, joggers and tank tops to international brands and retailers. GOTS, OEKO-TEX, BSCI certified. FOB/CIF export.",
             primaryImageOfPage: {
               "@type": "ImageObject",
-              contentUrl: "https://mzglobaltrading.com/images/og/knitted-garments-og.webp",
+              contentUrl: "https://www.mzglobaltrading.com/images/og/knitted-garments-og.webp",
               name: "Pakistan knitted garments manufacturer — knitwear OEM supplier for brands in USA, UK and Europe",
             },
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-                { "@type": "ListItem", position: 2, name: "Apparel", item: "https://mzglobaltrading.com/apparel/" },
-                { "@type": "ListItem", position: 3, name: "Knitted Garments", item: "https://mzglobaltrading.com/apparel/knittedgarments/" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+                { "@type": "ListItem", position: 2, name: "Apparel", item: "https://www.mzglobaltrading.com/apparel/" },
+                { "@type": "ListItem", position: 3, name: "Knitted Garments", item: "https://www.mzglobaltrading.com/apparel/knittedgarments/" },
               ],
             },
           }),

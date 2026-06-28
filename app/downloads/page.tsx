@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import DownloadsContent from "./DownloadsContent";
@@ -22,23 +22,23 @@ export const metadata = buildMetadata({
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://mzglobaltrading.com/downloads/",
-  url: "https://mzglobaltrading.com/downloads/",
+  "@id": "https://www.mzglobaltrading.com/downloads/",
+  url: "https://www.mzglobaltrading.com/downloads/",
   name: "Downloads | MZ Global Trading",
   description:
     "Downloadable resources for textile buyers — company profile, inspection checklists, Tech Pack templates and trade documentation.",
   inLanguage: "en",
-  isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
+  isPartOf: { "@id": "https://www.mzglobaltrading.com/#website" },
   primaryImageOfPage: {
     "@type": "ImageObject",
-    contentUrl: "https://mzglobaltrading.com/images/og/hero-our-process.webp",
+    contentUrl: "https://www.mzglobaltrading.com/images/og/hero-our-process.webp",
     name: "MZ Global Trading resource downloads — textile buyer documentation and sourcing templates",
   },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-      { "@type": "ListItem", position: 2, name: "Downloads", item: "https://mzglobaltrading.com/downloads/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+      { "@type": "ListItem", position: 2, name: "Downloads", item: "https://www.mzglobaltrading.com/downloads/" },
     ],
   },
 };

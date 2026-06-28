@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import PillowCoversContent from "./PillowCoversContent";
@@ -38,12 +38,12 @@ export default function PillowCoversPage() {
             description:
               "Custom pillowcases and pillow covers sourced from Pakistan's certified weaving mills. Percale, sateen and Oxford constructions. Standard, Queen and Euro sizing. GOTS and OEKO-TEX certified.",
             image:
-              "https://mzglobaltrading.com/images/hero/hero-pillow-covers.webp",
+              "https://www.mzglobaltrading.com/images/hero/hero-pillow-covers.webp",
             brand: { "@type": "Brand", name: "MZ Global Trading" },
             primaryImageOfPage: {
               "@type": "ImageObject",
               contentUrl:
-                "https://mzglobaltrading.com/images/hero/hero-pillow-covers.webp",
+                "https://www.mzglobaltrading.com/images/hero/hero-pillow-covers.webp",
               name: "Pakistan pillow cover manufacturer — wholesale pillowcases for international retail and hospitality buyers",
             },
             breadcrumb: {
@@ -53,25 +53,25 @@ export default function PillowCoversPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://mzglobaltrading.com/",
+                  item: "https://www.mzglobaltrading.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Home Textiles",
-                  item: "https://mzglobaltrading.com/hometextile/",
+                  item: "https://www.mzglobaltrading.com/hometextile/",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Bed Linen",
-                  item: "https://mzglobaltrading.com/hometextile/bedlinen/",
+                  item: "https://www.mzglobaltrading.com/hometextile/bedlinen/",
                 },
                 {
                   "@type": "ListItem",
                   position: 4,
                   name: "Pillow Covers",
-                  item: "https://mzglobaltrading.com/hometextile/bedlinen/pillowcovers/",
+                  item: "https://www.mzglobaltrading.com/hometextile/bedlinen/pillowcovers/",
                 },
               ],
             },

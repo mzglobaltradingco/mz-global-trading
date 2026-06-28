@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import FabricContent from "./FabricContent";
@@ -26,19 +26,19 @@ export default function FabricPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            "url": "https://mzglobaltrading.com/fabric/",
+            "url": "https://www.mzglobaltrading.com/fabric/",
             "name": "Fabric Supplier Pakistan | MZ Global Trading",
             "description": "Pakistan fabric supplier — apparel fabric and home textile fabric sourced from certified mills. Woven, knitted, sustainable and specialty constructions.",
             "primaryImageOfPage": {
               "@type": "ImageObject",
-              "contentUrl": "https://mzglobaltrading.com/images/og/fabric-category-og.webp",
+              "contentUrl": "https://www.mzglobaltrading.com/images/og/fabric-category-og.webp",
               "name": "Pakistan fabric supplier — apparel and home textile fabric for international buyers",
             },
             "breadcrumb": {
               "@type": "BreadcrumbList",
               "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mzglobaltrading.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Fabric", "item": "https://mzglobaltrading.com/fabric/" },
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mzglobaltrading.com/" },
+                { "@type": "ListItem", "position": 2, "name": "Fabric", "item": "https://www.mzglobaltrading.com/fabric/" },
               ],
             },
           }),

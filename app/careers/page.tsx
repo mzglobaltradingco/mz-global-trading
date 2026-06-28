@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import CareersContent from "./CareersContent";
@@ -24,24 +24,24 @@ export const metadata = buildMetadata({
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://mzglobaltrading.com/careers/",
-  url: "https://mzglobaltrading.com/careers/",
+  "@id": "https://www.mzglobaltrading.com/careers/",
+  url: "https://www.mzglobaltrading.com/careers/",
   name: "Careers at MZ Global Trading | Textile Sourcing Jobs",
   description:
     "Explore career opportunities at MZ Global Trading — Pakistan's B2B textile sourcing company connecting international buyers with certified manufacturers.",
   inLanguage: "en",
-  isPartOf: { "@id": "https://mzglobaltrading.com/#website" },
-  about: { "@id": "https://mzglobaltrading.com/#organization" },
+  isPartOf: { "@id": "https://www.mzglobaltrading.com/#website" },
+  about: { "@id": "https://www.mzglobaltrading.com/#organization" },
   primaryImageOfPage: {
     "@type": "ImageObject",
-    contentUrl: "https://mzglobaltrading.com/images/og/hero-careers.webp",
+    contentUrl: "https://www.mzglobaltrading.com/images/og/hero-careers.webp",
     name: "Careers at MZ Global Trading — textile sourcing jobs in Karachi, Pakistan",
   },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-      { "@type": "ListItem", position: 2, name: "Careers", item: "https://mzglobaltrading.com/careers/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+      { "@type": "ListItem", position: 2, name: "Careers", item: "https://www.mzglobaltrading.com/careers/" },
     ],
   },
 };

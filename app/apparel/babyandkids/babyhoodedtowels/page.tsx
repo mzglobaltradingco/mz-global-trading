@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BabyHoodedTowelsContent from "./BabyHoodedTowelsContent";
@@ -29,20 +29,20 @@ export default function BabyHoodedTowelsPage() {
     name: "Baby Hooded Towels — OEM Infant Bath Towel Manufacturing Pakistan",
     description:
       "Pakistan OEM baby hooded towel manufacturer. GOTS certified organic cotton terry and velour. Newborn to kids 4Y. Animal hood designs, custom embroidery. OEKO-TEX Class 1 certified mills. Bulk programmes for USA, UK, Europe and global baby brands.",
-    image: "https://mzglobaltrading.com/images/og/baby-hooded-towels-og.webp",
+    image: "https://www.mzglobaltrading.com/images/og/baby-hooded-towels-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/og/baby-hooded-towels-og.webp",
+      contentUrl: "https://www.mzglobaltrading.com/images/og/baby-hooded-towels-og.webp",
       name: "Pakistan baby hooded towels manufacturer — OEM organic cotton terry hooded bath towels for USA, UK and Europe",
     },
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-        { "@type": "ListItem", position: 2, name: "Apparel", item: "https://mzglobaltrading.com/apparel/" },
-        { "@type": "ListItem", position: 3, name: "Baby & Kids", item: "https://mzglobaltrading.com/apparel/babyandkids/" },
-        { "@type": "ListItem", position: 4, name: "Baby Hooded Towels", item: "https://mzglobaltrading.com/apparel/babyandkids/babyhoodedtowels/" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+        { "@type": "ListItem", position: 2, name: "Apparel", item: "https://www.mzglobaltrading.com/apparel/" },
+        { "@type": "ListItem", position: 3, name: "Baby & Kids", item: "https://www.mzglobaltrading.com/apparel/babyandkids/" },
+        { "@type": "ListItem", position: 4, name: "Baby Hooded Towels", item: "https://www.mzglobaltrading.com/apparel/babyandkids/babyhoodedtowels/" },
       ],
     },
   };

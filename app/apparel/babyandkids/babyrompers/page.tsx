@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/metadata";
+﻿import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import BabyRompersContent from "./BabyRompersContent";
@@ -29,20 +29,20 @@ export default function BabyRompersPage() {
     name: "Baby Rompers — OEM Infant Bodysuit Manufacturing Pakistan",
     description:
       "Pakistan OEM baby romper and bodysuit manufacturer. GOTS and OEKO-TEX Class 1 certified organic cotton and combed jersey. Snap crotch and envelope necklines. Newborn to 24 months. Bulk programmes for USA, UK, Europe and worldwide.",
-    image: "https://mzglobaltrading.com/images/og/baby-rompers-og.webp",
+    image: "https://www.mzglobaltrading.com/images/og/baby-rompers-og.webp",
     brand: { "@type": "Brand", name: "MZ Global Trading" },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      contentUrl: "https://mzglobaltrading.com/images/og/baby-rompers-og.webp",
+      contentUrl: "https://www.mzglobaltrading.com/images/og/baby-rompers-og.webp",
       name: "Pakistan baby rompers manufacturer — OEM organic cotton infant bodysuits for USA, UK and Europe",
     },
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mzglobaltrading.com/" },
-        { "@type": "ListItem", position: 2, name: "Apparel", item: "https://mzglobaltrading.com/apparel/" },
-        { "@type": "ListItem", position: 3, name: "Baby & Kids", item: "https://mzglobaltrading.com/apparel/babyandkids/" },
-        { "@type": "ListItem", position: 4, name: "Baby Rompers", item: "https://mzglobaltrading.com/apparel/babyandkids/babyrompers/" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
+        { "@type": "ListItem", position: 2, name: "Apparel", item: "https://www.mzglobaltrading.com/apparel/" },
+        { "@type": "ListItem", position: 3, name: "Baby & Kids", item: "https://www.mzglobaltrading.com/apparel/babyandkids/" },
+        { "@type": "ListItem", position: 4, name: "Baby Rompers", item: "https://www.mzglobaltrading.com/apparel/babyandkids/babyrompers/" },
       ],
     },
   };
