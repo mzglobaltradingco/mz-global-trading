@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "home-textile-fabric-guide",
   title: "Home Textile Fabric Guide: Terry, Percale, Sateen & Woven Constructions",
   excerpt:
-    "Home textile fabric sourcing encompasses towel constructions (terry), bed linen fabrics (percale, sateen, jacquard) and kitchen linen fabrics (waffle, huck weave). For procurement managers sourcing home textile fabric from Pakistan by the roll, each construction has distinct width standards, GSM ranges and quality parameters that determine the finished product's performance.",
+    "Terry, percale, sateen and woven home textile fabrics sourced from Pakistan — GSM ranges, width standards and quality parameters for procurement managers.",
   category: "Trade Insights",
   tags: ["Home Textile Fabric", "Fabric Guide", "Terry", "Woven"],
   readTime: 6,

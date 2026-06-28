@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "mz-global-expands-sialkot-technical-textiles",
   title: "MZ Global Trading Expands Sourcing Network to Sialkot's Technical Textile Sector",
   excerpt:
-    "We have formalised partnerships with three technical textile manufacturers in Sialkot — adding workwear, protective apparel and performance fabric capability to our sourcing network.",
+    "MZ Global Trading expands its sourcing network to Sialkot, adding technical and industrial textile capabilities to its Pakistan factory panel.",
   category: "Company Updates",
   tags: ["Sialkot", "Workwear", "Network", "Technical Textiles"],
   readTime: 3,

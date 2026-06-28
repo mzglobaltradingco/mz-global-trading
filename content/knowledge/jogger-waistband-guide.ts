@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "jogger-waistband-guide",
   title: "Jogger & Sweatpant Waistband Guide: Drawstring, Elastic & Rib Trim Options",
   excerpt:
-    "The waistband is the most technically demanding construction element in sweatpants and joggers. For procurement managers sourcing joggers from Pakistan, specifying the correct waistband type, elastic specification, drawstring attachment and hem cuff determines comfort, durability through commercial laundry and retail positioning.",
+    "Jogger and sweatpant waistband options — drawstring, elastic and rib trim constructions compared for buyers sourcing casualwear from Pakistan.",
   category: "Trade Insights",
   tags: ["Sweatpants", "Joggers", "Waistband", "Specifications"],
   readTime: 5,

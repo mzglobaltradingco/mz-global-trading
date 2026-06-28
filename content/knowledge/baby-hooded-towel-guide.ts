@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "baby-hooded-towel-guide",
   title: "Baby Hooded Towel Guide: GSM, Hood Styles & OEKO-TEX Safety for Infant Use",
   excerpt:
-    "Baby hooded towels combine the absorbency requirements of a bath towel with the OEKO-TEX Class 1 chemical safety demands of infant clothing. For procurement managers sourcing baby hooded towels from Pakistan, the GSM, hood construction method and certifications are the specification decisions that determine product safety, market compliance and gift positioning.",
+    "Baby hooded towel GSM, hood styles and OEKO-TEX Class 1 requirements — fabric options and construction standards for buyers sourcing infant bath textiles.",
   category: "Trade Insights",
   tags: ["Baby Hooded Towels", "Baby & Kids", "Towels", "Safety"],
   readTime: 6,

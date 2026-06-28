@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "iso-9001-certification-quality-management",
   title: "Our ISO 9001 Certification: What It Means for Your Orders",
   excerpt:
-    "ISO 9001 certifies that a factory operates disciplined, audited quality processes. Here is what that means in practice — and why it is a baseline filter, not a complete quality guarantee.",
+    "ISO 9001 certification at MZ Global Trading — what the quality management standard covers and how it protects buyers across factory audits and production.",
   category: "Company Updates",
   tags: ["ISO 9001", "Certifications", "Quality", "Compliance"],
   readTime: 4,

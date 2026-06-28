@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "bathrobe-fabric-types",
   title: "Bathrobe Fabric Types: Terry, Waffle, Velour & Microfibre Compared",
   excerpt:
-    "Choosing the wrong bathrobe fabric loses hotel contracts and retail shelf space. This guide compares terry, waffle, velour and microfibre constructions across absorbency, drying speed, weight and price — with certification requirements for buyers in the USA, UK, EU and Middle East.",
+    "Terry, waffle, velour and microfibre bathrobe fabrics compared — GSM, absorbency, pile height and certification standards for hotel, spa and retail buyers.",
   category: "Trade Insights",
   tags: ["Bathrobes", "Bath Linen", "Hotel Supply", "Fabric Guide", "Hospitality"],
   readTime: 6,

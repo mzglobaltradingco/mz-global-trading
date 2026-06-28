@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "cushion-cover-filling-guide",
   title: "Cushion Cover Filling & Construction: What Retail Buyers Need to Know",
   excerpt:
-    "Cushion cover fabric, closure, print technique and filling compatibility all affect shelf performance and customer satisfaction. This guide explains the key construction decisions for retail buyers sourcing decorative cushion covers from Pakistan for USA, UK, EU and Australian markets.",
+    "Cushion cover construction, closure types and shell fabric — specifications and filling compatibility for retail and hospitality buyers sourcing in volume.",
   category: "Trade Insights",
   tags: ["Cushion Covers", "Home Textiles", "Retail", "Fabric Guide"],
   readTime: 5,

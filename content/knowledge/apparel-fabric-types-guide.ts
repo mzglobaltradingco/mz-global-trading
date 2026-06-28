@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "apparel-fabric-types-guide",
   title: "Apparel Fabric Types Guide: Cotton, Poly-Cotton, Stretch & Performance for Buyers",
   excerpt:
-    "Apparel fabric sourcing by the roll requires different specification logic than finished garment sourcing. For procurement managers sourcing apparel fabric from Pakistan — whether for in-house production or fabric trading — the key variables are fibre content, construction (woven or knit), GSM, width and finishing.",
+    "Cotton, CVC and poly-cotton apparel fabrics compared — GSM, width, construction and certification options for buyers sourcing fabric from Pakistan.",
   category: "Trade Insights",
   tags: ["Apparel Fabric", "Fabric Guide", "GSM", "Specifications"],
   readTime: 6,

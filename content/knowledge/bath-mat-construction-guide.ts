@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "bath-mat-construction-guide",
   title: "Bath Mat Construction: Tufted, Woven & Memory Foam Options for Buyers",
   excerpt:
-    "Bath mats span five distinct construction types — from 800 GSM tufted terry to latex-backed memory foam. This guide explains each construction's performance, durability and certification profile for procurement managers in the USA, UK, EU, Middle East and Australia.",
+    "Tufted, woven and anti-slip bath mat constructions compared — GSM, pile height, backing options and certifications for hotel and retail buyers.",
   category: "Trade Insights",
   tags: ["Bath Mats", "Bath Linen", "Construction Guide", "Hotel Supply", "Specifications"],
   readTime: 5,

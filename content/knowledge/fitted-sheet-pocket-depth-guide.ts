@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "fitted-sheet-pocket-depth-guide",
   title: "Fitted Sheet Pocket Depth Guide: Standard, Deep & Extra-Deep for Mattress Sizes",
   excerpt:
-    "Incorrect pocket depth is the most common cause of fitted sheet rejection at retail and hospitality. This guide covers standard, deep and extra-deep pocket specifications, mattress depth by market, elastic construction and corner types for buyers in the USA, UK, EU and Middle East.",
+    "Fitted sheet pocket depth — standard, deep and extra-deep options matched to mattress sizes for retail, hotel and institutional linen buyers.",
   category: "Trade Insights",
   tags: ["Fitted Sheets", "Bed Linen", "Hotel Supply", "Specifications"],
   readTime: 5,

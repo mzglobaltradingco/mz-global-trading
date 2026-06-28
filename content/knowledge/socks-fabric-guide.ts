@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "socks-fabric-guide",
   title: "Socks Fabric Guide: Cotton, Nylon, Wool Blend & Compression for B2B Buyers",
   excerpt:
-    "Socks are among the most technically specific textile products in terms of knit structure, yarn blend and performance requirement. For procurement managers sourcing socks from Pakistan — for retail, sports, medical or promotional programmes — the yarn composition, knit gauge, toe closure and compression level are the core specification decisions.",
+    "Socks fabric — cotton, nylon, wool blend and compression constructions compared for B2B buyers sourcing athletic, dress and work socks from Pakistan.",
   category: "Trade Insights",
   tags: ["Socks", "Knitted", "Fabric Guide", "Specifications"],
   readTime: 6,

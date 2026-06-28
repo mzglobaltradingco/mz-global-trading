@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "shop-towel-industrial-guide",
   title: "Shop Towel Guide: Absorbency, Durability & Industrial Grade Standards for Buyers",
   excerpt:
-    "Shop towels are the highest-volume textile consumable in automotive, manufacturing and industrial environments. This guide covers cotton vs synthetic construction, GSM grades, absorbency standards, colour and print options, and certification requirements for procurement managers supplying automotive workshops, manufacturing plants and industrial distribution programmes.",
+    "Industrial shop towel standards — absorbency, durability and cotton constructions for automotive, workshop and industrial maintenance buyers.",
   category: "Trade Insights",
   tags: ["Shop Towels", "Industrial Linen", "Automotive Textiles", "Specifications"],
   readTime: 4,

@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "pot-holder-heat-rating-guide",
   title: "Pot Holder Heat Rating Guide: Layers, Batting & Safety Standards for Buyers",
   excerpt:
-    "Pot holders protect hands from heat — the construction must be verified, not assumed. This guide covers quilted layer counts, batting materials, EN 407 heat protection levels and fabric specifications for procurement managers supplying retail and hospitality programmes in the USA, UK and EU.",
+    "Pot holder heat ratings, batting materials and EN 407 standards — quilted construction for buyers sourcing commercial kitchen pot holders in volume.",
   category: "Trade Insights",
   tags: ["Pot Holders", "Kitchen Linen", "Safety Standards", "Specifications"],
   readTime: 4,

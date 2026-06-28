@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "understanding-gsm-fabric-weight-sourcing",
   title: "Understanding GSM: How Fabric Weight Affects Your Sourcing Decisions",
   excerpt:
-    "GSM — grams per square metre — is the single most important fabric specification you will encounter. Getting it wrong costs money. This guide explains what it means and how to use it.",
+    "GSM for textile buyers — how fabric weight affects feel, durability and cost, with guidance for cotton, poly-cotton and blended constructions.",
   category: "Trade Insights",
   tags: ["GSM", "Fabric", "Specifications", "Quality Control"],
   readTime: 5,

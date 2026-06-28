@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "baby-overalls-construction-guide",
   title: "Baby Overalls Construction Guide: Snaps, Adjustable Straps & Fabric Safety",
   excerpt:
-    "Baby overalls are a construction-intensive garment category with specific physical safety requirements for fastenings, strap adjustment and hardware. For procurement managers sourcing baby overalls from Pakistan, understanding the snap specification, strap construction and fabric safety certification is essential to avoid market rejections.",
+    "Baby overalls snap placement, strap options and fabric safety requirements — GOTS and OEKO-TEX Class 1 standards for infant and toddler apparel buyers.",
   category: "Trade Insights",
   tags: ["Overalls", "Baby & Kids", "Construction Guide", "Specifications"],
   readTime: 6,

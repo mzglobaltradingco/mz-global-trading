@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "bar-mop-towel-guide",
   title: "Bar Mop Towel Guide: GSM, Stripe Patterns & Institutional Standards for Buyers",
   excerpt:
-    "Bar mops are the workhorse of commercial food service — heavier, more durable and more standardised than retail kitchen towels. This guide covers GSM, stripe colour coding, loop vs cut end construction, institutional grading and certification requirements for procurement managers supplying the USA, UK and EU foodservice sectors.",
+    "Bar mop GSM grades, stripe colour-coding and construction — huck weave vs terry compared for restaurant, hotel and foodservice buyers sourcing in volume.",
   category: "Trade Insights",
   tags: ["Bar Mops", "Kitchen Linen", "Institutional", "Foodservice"],
   readTime: 4,

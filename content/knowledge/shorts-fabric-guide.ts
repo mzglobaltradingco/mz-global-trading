@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "shorts-fabric-guide",
   title: "Shorts Fabric Guide: Chino, Linen, Swim & Active for B2B Buyers",
   excerpt:
-    "Shorts serve multiple end markets — casual retail, swimwear, athletic and workwear — each with distinct fabric requirements. For procurement managers sourcing shorts from Pakistan, the primary specification decisions are fabric construction, inseam length, waistband type and lining requirement.",
+    "Shorts fabric types — chino, linen, swim and active performance constructions for B2B buyers sourcing casual, sportswear and fashion shorts from Pakistan.",
   category: "Trade Insights",
   tags: ["Shorts", "Woven Garments", "Fabric Guide", "Specifications"],
   readTime: 5,

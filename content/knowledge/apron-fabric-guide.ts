@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "apron-fabric-guide",
   title: "Apron Fabric Guide: Cotton Canvas, Denim & Poly-Cotton for Commercial Use",
   excerpt:
-    "Apron fabric determines durability, branding compatibility and end-use positioning. This guide compares cotton canvas, denim, poly-cotton and waxed constructions for procurement managers supplying chefs, hospitality brands and food retail programmes in the USA, UK, EU and Australia.",
+    "Cotton canvas, denim and poly-cotton apron fabrics compared — weight, durability, print compatibility and certification requirements for commercial buyers.",
   category: "Trade Insights",
   tags: ["Aprons", "Kitchen Linen", "Fabric Guide", "Hospitality"],
   readTime: 5,

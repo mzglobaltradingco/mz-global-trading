@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "tshirt-fabric-weight-guide",
   title: "T-Shirt Fabric Weight Guide: 130gsm to 280gsm for Fashion, Workwear & Promo",
   excerpt:
-    "For procurement managers sourcing custom T-shirts from Pakistan, fabric weight (GSM) is the single most influential specification decision. This guide maps GSM ranges to end-use applications — fashion retail, promotional, workwear and performance — with certification and market guidance for buyers in the USA, UK, EU, Canada and Australia.",
+    "T-shirt fabric weight — 130gsm to 280gsm explained for fashion, workwear and promotional buyers with application guidance for sourcing from Pakistan.",
   category: "Trade Insights",
   tags: ["T-Shirts", "Knitted Garments", "Fabric Guide", "GSM"],
   readTime: 6,

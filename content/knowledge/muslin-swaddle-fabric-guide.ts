@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "muslin-swaddle-fabric-guide",
   title: "Muslin Swaddle Fabric Guide: GSM, Weave & Safety Certifications for Baby Products",
   excerpt:
-    "Muslin swaddle blankets are among the highest-scrutiny textile products in the baby category — they make direct contact with newborn skin and are subject to OEKO-TEX Class 1 and GOTS requirements in most international markets. For procurement managers sourcing swaddle muslin fabric from Pakistan, the weave structure, GSM, fibre content and certification are the four non-negotiable specification decisions.",
+    "Muslin swaddle fabric GSM, weave and certifications — OEKO-TEX Class 1 and GOTS requirements for buyers sourcing baby swaddle blankets from Pakistan.",
   category: "Trade Insights",
   tags: ["Swaddle", "Muslin", "Baby & Kids", "Fabric Guide"],
   readTime: 6,

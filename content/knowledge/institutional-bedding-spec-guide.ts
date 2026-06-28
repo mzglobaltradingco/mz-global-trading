@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "institutional-bedding-spec-guide",
   title: "Institutional Bedding Specification Guide: Thread Count, Wash Cycles & Tender Standards",
   excerpt:
-    "Institutional bedding for hotels, hospitals and airlines demands specifications fundamentally different from retail. This guide covers thread count selection, wash-cycle durability standards, fibre blends and certification requirements for procurement managers buying at volume.",
+    "Institutional bedding specifications — thread count, wash durability and tender standards for hotels, hospitals and airlines sourcing bed linen in volume.",
   category: "Trade Insights",
   tags: ["Institutional Bedding", "Bed Linen", "Hotel Supply", "Specifications"],
   readTime: 6,

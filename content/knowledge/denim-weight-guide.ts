@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "denim-weight-guide",
   title: "Denim Weight Guide: 6oz to 14oz — What Buyers Need to Know",
   excerpt:
-    "Denim weight — measured in ounces per square yard — is the specification decision that determines wash options, structural integrity, comfort range and market positioning. For procurement managers sourcing denim jeans from Pakistan, the oz weight interacts directly with the wash type, finish and certifications required by the target market.",
+    "Denim weight guide — 6oz to 14oz fabric weights, stretch constructions and durability explained for buyers sourcing jeans and denim trousers from Pakistan.",
   category: "Trade Insights",
   tags: ["Denim Jeans", "Woven Garments", "Fabric Guide", "Specifications"],
   readTime: 6,

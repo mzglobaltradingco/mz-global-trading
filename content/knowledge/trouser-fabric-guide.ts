@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "trouser-fabric-guide",
   title: "Trouser Fabric Guide: Chino, Twill, Stretch & Linen for International Buyers",
   excerpt:
-    "Trousers and pants span casual, business and formal segments with distinct fabric requirements for each. For procurement managers sourcing pants from Pakistan, the key specification decisions are fabric construction, fibre content, GSM and stretch level — each of which determines the garment's season, formality and durability profile.",
+    "Trouser fabric types — chino, twill, stretch and linen constructions compared for international buyers sourcing formal and casual trousers from Pakistan.",
   category: "Trade Insights",
   tags: ["Pants & Trousers", "Woven Garments", "Fabric Guide", "Specifications"],
   readTime: 6,

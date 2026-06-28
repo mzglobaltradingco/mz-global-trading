@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "curtain-fabric-guide",
   title: "Curtain Fabric Guide: Blackout, Sheer, Linen Blend & Eyelet Headings Explained",
   excerpt:
-    "Curtain fabric and heading type are the two decisions that define a curtain programme's performance and retail appeal. This guide covers blackout, sheer, linen blend and velvet fabrics alongside eyelet, pencil pleat and other heading types for procurement managers buying from Pakistan.",
+    "Curtain fabrics — blackout, sheer, linen blend and structured weaves with heading styles and lining options for retail and hospitality buyers.",
   category: "Trade Insights",
   tags: ["Curtains", "Home Textiles", "Fabric Guide", "Hotel Supply"],
   readTime: 6,

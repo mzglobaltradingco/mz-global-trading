@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "baby-bib-construction-guide",
   title: "Baby Bib Construction Guide: Drool, Feeding & Bandana Styles for Buyers",
   excerpt:
-    "Baby bibs appear simple but span a wide specification range — from lightweight drool bibs for teething infants to waterproof feeding bibs for weaning. For procurement managers sourcing baby bibs from Pakistan in volume, understanding the bib type, absorbency layer construction, closure system and safety certification prevents costly specification errors.",
+    "Baby bib construction — drool, feeding and bandana types with absorbency layers, closure systems and OEKO-TEX Class 1 requirements for volume buyers.",
   category: "Trade Insights",
   tags: ["Baby Bibs", "Baby & Kids", "Construction Guide", "Absorbency"],
   readTime: 5,

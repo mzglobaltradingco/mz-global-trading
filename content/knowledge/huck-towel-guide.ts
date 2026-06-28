@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "huck-towel-guide",
   title: "Huck Towel Guide: Lint-Free Construction & Healthcare Standards for Buyers",
   excerpt:
-    "Huck towels are specified for healthcare and surgical environments because they shed almost no lint — a critical requirement where fibre contamination causes post-operative complications. This guide covers huck weave construction, lint performance standards, GSM options, healthcare compliance and sourcing considerations for procurement managers buying for hospitals, surgical facilities and laboratory supply programmes.",
+    "Huck towel lint-free honeycomb weave construction — GSM options, pre-wash requirements, healthcare and surgical standards for buyers sourcing in volume.",
   category: "Trade Insights",
   tags: ["Huck Towels", "Hospital Linen", "Surgical Textiles", "Healthcare"],
   readTime: 4,

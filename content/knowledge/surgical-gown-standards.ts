@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "surgical-gown-standards",
   title: "Surgical Gown Standards: AAMI Level 1–4, SMS & Woven Fabric for Buyers",
   excerpt:
-    "Surgical gown protection levels are defined by AAMI PB70 — but most procurement managers do not know which level applies to which clinical procedure. This guide covers AAMI Level 1 through 4, fabric constructions (SMS, SMMS, woven cotton, polyester), sterilisation compatibility and certification requirements for hospital, clinic and NGO buyers globally.",
+    "Surgical gown AAMI protection levels 1 to 4 — SMS and woven constructions, sterilisation compatibility and ISO 13485 certification for healthcare buyers.",
   category: "Trade Insights",
   tags: ["Surgical Gowns", "Hospital Linen", "AAMI Standards", "Medical Textiles"],
   readTime: 6,

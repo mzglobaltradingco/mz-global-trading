@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "cargo-pants-construction-guide",
   title: "Cargo Pants Construction Guide: Pocket Placement, Fabric & Durability Standards",
   excerpt:
-    "Cargo pants are specification-intensive garments where pocket placement, pocket construction and fabric durability determine functional performance. For procurement managers sourcing cargo pants from Pakistan — for workwear, retail or military-style programmes — the construction detail decisions are more consequential than in standard trouser sourcing.",
+    "Cargo pants pocket construction, fabric weight and durability — twill, ripstop and canvas options for buyers sourcing workwear and fashion cargo trousers.",
   category: "Trade Insights",
   tags: ["Cargo Pants", "Woven Garments", "Construction Guide", "Workwear"],
   readTime: 6,

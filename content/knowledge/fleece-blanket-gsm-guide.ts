@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "fleece-blanket-gsm-guide",
   title: "Fleece Blanket GSM Guide: 150 to 400gsm Options for Retail & Institutional Buyers",
   excerpt:
-    "Fleece blanket GSM determines warmth, weight, pilling resistance and cost — but the relationship is not linear. This guide covers anti-pill, sherpa, polar and coral fleece constructions with GSM performance tables, pilling resistance testing and certification guidance for procurement managers buying for retail and institutional programmes in the USA, UK, EU and Australia.",
+    "Fleece blanket GSM from 150 to 400gsm — polar fleece, anti-pill and sherpa options with weight-to-application guidance for retail and institutional buyers.",
   category: "Trade Insights",
   tags: ["Fleece Blankets", "Thermal Blankets", "GSM Guide", "Retail"],
   readTime: 5,

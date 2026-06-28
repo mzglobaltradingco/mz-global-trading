@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "institutional-towel-standards",
   title: "Institutional Towel Standards: Healthcare, Hospitality & Gym Requirements",
   excerpt:
-    "Institutional towels must meet specific standards that differ significantly from retail terry. This guide covers GSM thresholds, laundry durability, OEKO-TEX and BSCI requirements for healthcare, hospitality and fitness buyers in the USA, UK, EU and Middle East.",
+    "Institutional towel standards — GSM grades, autoclave compliance and colour-coding for healthcare, hospitality and gym buyers sourcing in volume.",
   category: "Trade Insights",
   tags: ["Institutional Towels", "Healthcare Linen", "Hospitality Supply", "Specifications", "GSM"],
   readTime: 6,

@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "baby-romper-fabric-guide",
   title: "Baby Romper Fabric Guide: Rib Knit, Interlock & Muslin for Infant Wear",
   excerpt:
-    "Baby rompers — one-piece garments combining top and bottom — require fabric choices that balance softness, stretch-recovery for easy dressing, and OEKO-TEX Class 1 chemical safety. For procurement managers sourcing baby rompers from Pakistan, the fabric construction determines comfort, wash durability and the ease with which caregivers can dress and undress the infant.",
+    "Rib knit, interlock and muslin fabrics for baby rompers — GSM, stretch, OEKO-TEX Class 1 requirements and construction options for infant wear buyers.",
   category: "Trade Insights",
   tags: ["Baby Rompers", "Baby & Kids", "Fabric Guide", "Specifications"],
   readTime: 6,

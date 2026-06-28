@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "bedsheet-thread-count-guide",
   title: "Thread Count Guide for Bedsheets: What 200 to 1000TC Means for Buyers",
   excerpt:
-    "Thread count is the most cited — and most misunderstood — bedsheet specification. This guide explains what TC numbers mean for fabric quality, durability and cost, and how percale and sateen weaves change the feel at identical counts.",
+    "Thread count for bedsheets — what 200 to 1000TC means in practice, how weave affects feel, and how to specify correctly for retail and hotel buyers.",
   category: "Trade Insights",
   tags: ["Bedsheets", "Thread Count", "Bed Linen", "Specifications", "Hotel Supply"],
   readTime: 7,

@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "polo-shirt-pique-guide",
   title: "Polo Shirt Piqué Fabric Guide: Single, Double & Waffle Weaves for B2B Buyers",
   excerpt:
-    "Piqué is the defining fabric of the polo shirt. For procurement managers sourcing polo shirts from Pakistan, understanding the structural differences between single piqué, double piqué and waffle piqué directly determines the price point, market positioning and wash durability of the programme.",
+    "Single, double and waffle piqué weave polo shirt constructions compared — GSM ranges and performance specifications for B2B buyers sourcing from Pakistan.",
   category: "Trade Insights",
   tags: ["Polo Shirts", "Knitted Garments", "Fabric Guide", "Piqué"],
   readTime: 5,

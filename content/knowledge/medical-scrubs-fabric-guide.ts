@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "medical-scrubs-fabric-guide",
   title: "Medical Scrubs Fabric Guide: Poly-Cotton, 4-Way Stretch & Anti-Microbial for Buyers",
   excerpt:
-    "Medical scrubs fabric determines comfort through a 12-hour shift, durability through 200+ industrial wash cycles, and compliance with infection control policies. This guide covers poly-cotton blends, 4-way stretch fabrics, anti-microbial treatments, colour-coding systems and certification requirements for procurement managers buying for hospitals, clinics and care facilities globally.",
+    "Medical scrubs fabrics — poly-cotton twill, 4-way stretch and anti-microbial constructions for healthcare buyers sourcing scrubs from Pakistan.",
   category: "Trade Insights",
   tags: ["Medical Scrubs", "Hospital Linen", "Healthcare Textiles", "Fabric Guide"],
   readTime: 5,

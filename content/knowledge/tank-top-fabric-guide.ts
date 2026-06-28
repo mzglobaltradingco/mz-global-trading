@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "tank-top-fabric-guide",
   title: "Tank Top Fabric Guide: Cotton Jersey, Rib & Performance Fabrics for B2B",
   excerpt:
-    "Tank tops span a wide application range — from basic fashion retail and promotional items to performance athletic wear and workwear underlayers. For procurement managers sourcing tank tops from Pakistan, the fabric construction and GSM selection directly determines the end-use positioning, stretch recovery and decoration compatibility.",
+    "Tank top fabrics — cotton jersey, rib knit and performance constructions for B2B buyers sourcing casual, athletic and basics tank tops from Pakistan.",
   category: "Trade Insights",
   tags: ["Tank Tops", "Knitted Garments", "Fabric Guide", "Specifications"],
   readTime: 5,

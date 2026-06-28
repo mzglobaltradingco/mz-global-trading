@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "fender-cover-fabric-guide",
   title: "Fender Cover Fabric Guide: Terry, Fleece & Cotton Canvas for Automotive Use",
   excerpt:
-    "Fender covers protect vehicle paintwork during mechanical work and are sourced in volume by automotive dealerships, tool distributors and fleet maintenance operators globally. This guide covers terry, fleece and cotton canvas constructions, size standards, print and branding options, and sourcing considerations for procurement managers buying fender covers at scale from Pakistan.",
+    "Fender cover fabrics — terry, fleece and cotton canvas with backing options for automotive dealership and fleet maintenance buyers sourcing from Pakistan.",
   category: "Trade Insights",
   tags: ["Fender Covers", "Industrial Linen", "Automotive Textiles", "Specifications"],
   readTime: 4,

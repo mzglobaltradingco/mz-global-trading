@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "incoterms-fob-cif-pakistan-textile-exports",
   title: "Incoterms Explained: FOB vs CIF for Pakistan Textile Exports",
   excerpt:
-    "FOB or CIF? The choice affects who controls your freight, who bears the risk, and ultimately what your goods actually cost. Here is what every textile buyer needs to know.",
+    "FOB vs CIF for Pakistan textile exports — risk transfer, freight responsibility and landed cost implications for buyers choosing their Incoterm.",
   category: "Trade Insights",
   tags: ["Incoterms", "FOB", "CIF", "Logistics", "Export"],
   readTime: 4,

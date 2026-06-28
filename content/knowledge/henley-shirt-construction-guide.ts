@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "henley-shirt-construction-guide",
   title: "Henley Shirt Construction Guide: Placket Styles, Fabric & Button Options",
   excerpt:
-    "The henley shirt occupies a distinct position between the crew-neck tee and the polo — a knitwear item defined by its placket and button fastening. For procurement managers sourcing henley shirts from Pakistan, the placket construction, button count, fabric weight and stitch structure are the specification decisions that determine end-use positioning.",
+    "Henley shirt placket styles, fabric weights and button options — construction specifications for buyers sourcing knitted Henley shirts from Pakistan.",
   category: "Trade Insights",
   tags: ["Henley Shirts", "Knitted Garments", "Construction Guide", "Specifications"],
   readTime: 5,

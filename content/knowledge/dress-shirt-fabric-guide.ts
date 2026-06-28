@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "dress-shirt-fabric-guide",
   title: "Dress Shirt Fabric Guide: Poplin, Oxford, Twill & End-on-End for B2B",
   excerpt:
-    "Formal and casual shirts for corporate and retail programmes are built on a small number of woven fabric constructions — poplin, Oxford, twill and end-on-end. For procurement managers sourcing shirts from Pakistan, each construction has a distinct weave structure, thread count range, formality level and care requirement that determines its suitability for the programme.",
+    "Dress shirt fabrics — poplin, Oxford, twill and end-on-end constructions compared for B2B buyers sourcing formal and casual shirts from Pakistan.",
   category: "Trade Insights",
   tags: ["Formal Shirts", "Woven Garments", "Fabric Guide", "Specifications"],
   readTime: 5,

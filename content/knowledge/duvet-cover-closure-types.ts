@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "duvet-cover-closure-types",
   title: "Duvet Cover Closure Types: Buttons, Zips & Poppers Compared for B2B Buyers",
   excerpt:
-    "The closure on a duvet cover determines laundry durability, insertion speed and perceived quality at retail. This guide compares button, zip, popper and envelope closures for procurement managers specifying duvet covers for hotel, retail and institutional programmes.",
+    "Duvet cover closure types compared — buttons, zips and poppers for retail and hotel buyers, with durability and wash performance considerations.",
   category: "Trade Insights",
   tags: ["Duvet Covers", "Bed Linen", "Hotel Supply", "Specifications"],
   readTime: 5,

@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "cellular-blanket-guide",
   title: "Cellular Blanket Guide: Open-Weave Construction & Hospital/Institutional Use",
   excerpt:
-    "Cellular blankets use an open-weave construction to trap air in visible cells — providing thermal regulation without excessive weight. This guide covers GSM, cell size, cotton specification, wash-cycle durability and healthcare compliance for procurement managers buying for NHS, hospital, hotel and institutional programmes globally.",
+    "Cellular blankets — open-weave GSM options, cotton specification, wash durability and healthcare compliance for hospital and institutional buyers.",
   category: "Trade Insights",
   tags: ["Cellular Blankets", "Thermal Blankets", "Healthcare", "Institutional"],
   readTime: 4,

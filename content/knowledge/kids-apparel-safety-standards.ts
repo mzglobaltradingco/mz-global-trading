@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "kids-apparel-safety-standards",
   title: "Kids Apparel Safety Standards: GOTS, OEKO-TEX & Age-Appropriate Requirements",
   excerpt:
-    "Children's apparel — especially infant and toddler sizes — is subject to significantly stricter chemical safety, physical safety and labelling requirements than adult garments. For procurement managers sourcing kids T-shirts and children's apparel from Pakistan for USA, EU or UK markets, understanding the certification tiers and physical safety requirements is essential before placing any order.",
+    "Kids apparel safety standards — GOTS, OEKO-TEX Class 1 and CPSC requirements for children's clothing buyers in USA, EU and UK markets from Pakistan.",
   category: "Trade Insights",
   tags: ["Baby & Kids", "Safety Standards", "Certifications", "OEKO-TEX"],
   readTime: 7,

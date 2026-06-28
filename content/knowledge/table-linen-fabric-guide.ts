@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "table-linen-fabric-guide",
   title: "Table Linen Fabric Guide: Damask, Poly-Cotton, Linen & Jacquard for Buyers",
   excerpt:
-    "Table linen fabric determines the visual quality of a table setting — and the ease of laundering. This guide covers damask, poly-cotton, pure linen and jacquard constructions with GSM, fire retardancy and certification guidance for procurement managers supplying hospitality, restaurant and retail programmes globally.",
+    "Table linen fabrics — damask, jacquard and poly-cotton constructions for hotel, restaurant and event buyers sourcing table covers from Pakistan.",
   category: "Trade Insights",
   tags: ["Table Covers", "Table Linen", "Fabric Guide", "Hospitality"],
   readTime: 5,

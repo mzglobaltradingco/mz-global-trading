@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "workwear-fabric-standards",
   title: "Workwear Fabric Standards: Hi-Vis, Flame Resistant & Industrial Grade for Buyers",
   excerpt:
-    "Workwear apparel must meet functional fabric performance standards that ordinary apparel does not. For procurement managers sourcing workwear from Pakistan — for industrial, construction, oil & gas, logistics or healthcare sectors — understanding the EN ISO standards, fabric performance requirements and testing certifications is essential to avoid regulatory non-compliance in target markets.",
+    "Workwear fabric standards — hi-vis, flame resistant and industrial grade options with EN ISO certification requirements for buyers sourcing from Pakistan.",
   category: "Trade Insights",
   tags: ["Workwear", "Fabric Standards", "Hi-Vis", "Industrial"],
   readTime: 7,

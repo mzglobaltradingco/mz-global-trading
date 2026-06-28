@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "ihram-fabric-requirements",
   title: "Ihram Fabric Requirements: White Terry, GSM & Religious Compliance for Buyers",
   excerpt:
-    "Ihram is a ritually prescribed garment worn during Hajj and Umrah — the two Islamic pilgrimages to Mecca. Its religious requirements are non-negotiable and define the fabric specification precisely. This guide covers permitted fabric types, GSM standards, size requirements, dyeing restrictions and sourcing considerations for procurement managers, distributor buyers and pilgrimage tour operators buying Ihram in volume.",
+    "Ihram fabric requirements — permitted constructions, white-only dyeing, GSM standards and size specifications for Hajj and Umrah wholesale buyers.",
   category: "Trade Insights",
   tags: ["Ihram", "Hajj Textiles", "Religious Compliance", "Home Textiles"],
   readTime: 4,

@@ -1054,6 +1054,9 @@ export const GUIDES: GuideArticle[] = [
         "Size curve adjustment: first-season sell-through data reveals whether the initial size curve was correct. Adjusting the curve on re-orders immediately improves sell-through and reduces end-of-season markdown.",
       ]},
       { type: "note", text: "MZ Global Trading offers contingency re-order management — holding a confirmed production slot and fabric reservation for buyers who want the ability to trigger a re-order within a shorter window than the standard lead time." },
+      { type: "seealso", title: "Related Knowledge & Guides", links: [
+        { text: "First Order from Pakistan: The Operational Sourcing Guide", href: "/knowledge/textile-sourcing-operations-guide/", description: "End-to-end walkthrough of how a first Pakistan textile order works — from fabric specification through retail integration." },
+      ]},
     ],
   },
 
@@ -1197,6 +1200,9 @@ export const GUIDES: GuideArticle[] = [
       { type: "h2", text: "Best Practice 5: Maintain a Fabric Reference Library" },
       { type: "p", text: "For repeat or seasonal programs, maintain a sealed fabric reference library — a 10×10cm sealed swatch of every approved fabric per style, with the mill name, fabric reference, lot number, GSM test result and approval date attached. This provides a physical reference for every future re-order and makes substitution instantly visible at incoming inspection." },
       { type: "note", text: "MZ Global Trading conducts incoming fabric inspection on all orders, verifying GSM, colour, defect rate and certification documentation before authorising cutting — giving buyers certainty that the approved fabric is what actually enters production." },
+      { type: "seealso", title: "Related Knowledge & Guides", links: [
+        { text: "First Order from Pakistan: The Operational Sourcing Guide", href: "/knowledge/textile-sourcing-operations-guide/", description: "End-to-end walkthrough of how a first Pakistan textile order works — from fabric specification through retail integration." },
+      ]},
     ],
   },
 
@@ -1439,6 +1445,9 @@ export const GUIDES: GuideArticle[] = [
       { type: "h2", text: "Freight Booking Timing" },
       { type: "p", text: "Space on main-lane shipping services books quickly in peak periods — Q4 (pre-Christmas), pre-Chinese New Year and post-Chinese New Year. Best practice: book freight 3 weeks before the intended loading date as standard; extend to 4–5 weeks during peak periods or when routing through congested transshipment hubs (Singapore, Colombo, Port Said)." },
       { type: "note", text: "MZ Global Trading's logistics coordination service verifies the complete document set against the commercial invoice and LC (if applicable) before submission to the shipping line — ensuring that no document error reaches the consignee's customs broker." },
+      { type: "seealso", title: "Related Knowledge & Guides", links: [
+        { text: "First Order from Pakistan: The Operational Sourcing Guide", href: "/knowledge/textile-sourcing-operations-guide/", description: "End-to-end walkthrough of how a first Pakistan textile order works — from fabric specification through retail integration." },
+      ]},
     ],
   },
 
@@ -1540,6 +1549,9 @@ export const GUIDES: GuideArticle[] = [
         "Trade credit insurance: insures the buyer's accounts receivable against supplier non-performance — not a payment mechanism, but reduces the risk of open-account terms.",
       ]},
       { type: "note", text: "MZ Global Trading works with buyers on TT, LC and open-account terms depending on the relationship stage and order value. For new programs, we recommend 30/70 TT with balance payable on presentation of documents including third-party inspection pass — balancing speed with risk management." },
+      { type: "seealso", title: "Related Knowledge & Guides", links: [
+        { text: "First Order from Pakistan: The Operational Sourcing Guide", href: "/knowledge/textile-sourcing-operations-guide/", description: "End-to-end walkthrough of how a first Pakistan textile order works — from fabric specification through retail integration." },
+      ]},
     ],
   },
 

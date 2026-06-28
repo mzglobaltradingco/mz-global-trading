@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "fleece-fabric-guide",
   title: "Fleece Fabric Guide: Polar, French Terry & Brushed Fleece for Buyers",
   excerpt:
-    "Sweatshirts and hoodies are built on fleece fabrics — but 'fleece' covers several structurally different knit constructions with different performance profiles. For procurement managers sourcing sweatshirts and hoodies from Pakistan, understanding the differences between French terry, polar fleece, brushed fleece and sherpa is essential to specifying the right product for the target market.",
+    "Polar, French terry and brushed fleece compared — GSM, pill resistance and warmth ratings for buyers sourcing sweatshirts and outerwear from Pakistan.",
   category: "Trade Insights",
   tags: ["Sweatshirts", "Hoodies", "Fleece", "Fabric Guide"],
   readTime: 6,

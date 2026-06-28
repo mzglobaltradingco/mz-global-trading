@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "pre-shipment-inspection-checklist-textile-buyers",
   title: "The Complete Pre-Shipment Inspection Checklist for Textile Buyers",
   excerpt:
-    "A pre-shipment inspection is your last line of defence before goods leave the factory. Use this checklist to know exactly what should be checked — and what to do if it fails.",
+    "Pre-shipment inspection for textile buyers — AQL levels, quantity verification, fabric and labelling checks to run before goods leave the factory.",
   category: "Resources",
   tags: ["PSI", "Quality Control", "Inspection", "Checklist"],
   readTime: 6,

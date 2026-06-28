@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "how-to-read-textile-tech-pack-international-buyers",
   title: "How to Read a Textile Tech Pack: A Guide for International Buyers",
   excerpt:
-    "A tech pack is the single source of truth between buyer and manufacturer. Understanding its sections — BOM, measurement spec, construction details — prevents the most common and costly sourcing errors.",
+    "How to read a textile tech pack — construction diagrams, measurement tables and fabric specs for international buyers reviewing factory submissions.",
   category: "Resources",
   tags: ["Tech Pack", "Specifications", "Sourcing", "Guide"],
   readTime: 5,

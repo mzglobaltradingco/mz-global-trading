@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "terry-towel-gsm-guide",
   title: "GSM Guide for Terry Towels: What 300 to 900 GSM Means for Buyers",
   excerpt:
-    "GSM is the single most important specification when sourcing terry towels. This guide explains every weight tier — from 300 GSM budget institutional to 900 GSM luxury hotel — so buyers in the USA, UK, EU and Middle East can specify with confidence.",
+    "Terry towel GSM — what 300 to 900gsm means for absorbency, drying speed and durability for hotel, retail and institutional buyers sourcing from Pakistan.",
   category: "Trade Insights",
   tags: ["Towels", "GSM", "Bath Linen", "Hotel Supply", "Specifications"],
   readTime: 7,

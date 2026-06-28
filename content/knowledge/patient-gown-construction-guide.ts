@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "patient-gown-construction-guide",
   title: "Patient Gown Construction Guide: Tie Closures, Fabric & Hospital Standards",
   excerpt:
-    "Patient gowns must balance dignity, clinical access and laundry durability. This guide covers tie closure systems, fabric specifications, open-back vs wrap designs, NHS and international hospital laundry standards, and sourcing considerations for procurement managers supplying hospital, clinic and care facility programmes globally.",
+    "Patient gown construction — closure types, cotton and poly-cotton fabrics, autoclave compatibility and hospital specifications for healthcare buyers.",
   category: "Trade Insights",
   tags: ["Patient Gowns", "Hospital Linen", "Healthcare Textiles", "Specifications"],
   readTime: 5,

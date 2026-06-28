@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "kitchen-towel-fabric-guide",
   title: "Kitchen Towel Fabric Guide: Cotton Waffle, Terry & Linen for B2B Buyers",
   excerpt:
-    "Kitchen towels are bought in multi-packs, used daily and laundered frequently — construction determines whether a programme delivers value or generates returns. This guide covers waffle weave, terry, flat weave and linen constructions with GSM, size and certification guidance for procurement managers in the USA, UK, EU and hospitality sectors.",
+    "Kitchen towel fabrics — waffle weave, terry and plain weave options with GSM ranges, absorbency ratings and OEM programme specifications for B2B buyers.",
   category: "Trade Insights",
   tags: ["Kitchen Towels", "Kitchen Linen", "Fabric Guide", "Specifications"],
   readTime: 5,

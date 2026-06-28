@@ -5,7 +5,7 @@ const post: KnowledgePost = {
   slug: "pillow-cover-fabric-guide",
   title: "Pillow Cover Fabric Guide: Percale, Sateen, Cotton & Microfibre for Buyers",
   excerpt:
-    "Pillow covers are the most frequently replaced item in a bed linen set — and the most closely inspected by the end consumer. This guide compares percale, sateen, jersey, flannel and microfibre constructions for procurement managers buying at scale for retail and hotel programmes.",
+    "Pillow cover fabrics — percale, sateen, cotton and brushed options compared for retail, hotel and institutional buyers sourcing from Pakistan.",
   category: "Trade Insights",
   tags: ["Pillow Covers", "Bed Linen", "Fabric Guide", "Specifications"],
   readTime: 5,
