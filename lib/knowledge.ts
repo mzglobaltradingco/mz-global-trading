@@ -56,6 +56,7 @@ import postWorkwearFabric from "../content/knowledge/workwear-fabric-standards";
 import postSocksFabric from "../content/knowledge/socks-fabric-guide";
 import postApparelFabricTypes from "../content/knowledge/apparel-fabric-types-guide";
 import postHomeTextileFabric from "../content/knowledge/home-textile-fabric-guide";
+import postSourcingOperations from "../content/knowledge/textile-sourcing-operations-guide";
 
 export const posts: KnowledgePost[] = [
   postGsm, postIncoterms, postSialkot, postIso, postInspection, postTechPack,
@@ -72,6 +73,7 @@ export const posts: KnowledgePost[] = [
   postKidsApparelSafety, postMuslinSwaddle, postBabyOveralls, postBabyRomper,
   postBabyBib, postBabyHoodedTowel,
   postWorkwearFabric, postSocksFabric, postApparelFabricTypes, postHomeTextileFabric,
+  postSourcingOperations,
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 // ─── Helper Functions ─────────────────────────────────────────────────────────
