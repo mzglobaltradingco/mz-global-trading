@@ -2,7 +2,7 @@
 Disallow: /search/
 Disallow: /pagefind/
 
-# AI training crawlers — blocked
+# AI training crawlers - blocked
 User-agent: Amazonbot
 Disallow: /
 
