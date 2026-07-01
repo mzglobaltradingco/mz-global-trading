@@ -100,6 +100,10 @@ The hem cuff determines whether the garment reads as a jogger (fitted cuff) or a
 
 MZ Global Trading sources [sweatpants and joggers](/apparel/knittedgarments/sweatpantsjoggers/) across all waistband constructions and fabric weights from Pakistan's knitwear mills. Coordinated programmes with matching [sweatshirts and hoodies](/apparel/knittedgarments/sweatshirtshoodies/) in the same fabric and colour family are available through a single consolidated RFQ.
 
+## Related Resources
+
+For fabric weight reference across the sweatpants category — French terry vs brushed fleece at the same GSM — see our [GSM and fabric weight guide for textile buyers](/knowledge/understanding-gsm-fabric-weight-sourcing/). Specify your waistband construction in a structured [Tech Pack](/knowledge/how-to-read-textile-tech-pack-international-buyers/) — elastic grade, drawstring diameter, cord tip material and cuff attachment must all be documented to avoid substitution at the mill level. The full list of certifications held across our knitwear factories — OEKO-TEX, GOTS, BSCI — is published on our [certifications page](/qualitycompliance/certifications/).
+
 [Submit an RFQ](/rfq/) with your waistband type, cuff specification, fabric GSM, size range, annual volume and market — factory match and indicative FOB pricing within 3–5 business days.`,
 };
 

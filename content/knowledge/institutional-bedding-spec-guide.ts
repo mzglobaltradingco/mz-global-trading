@@ -80,6 +80,8 @@ See the full [certifications and compliance page](/qualitycompliance/certificati
 
 MZ Global Trading sources [institutional bedding](/hometextile/bedlinen/institutionalbedding/) — bedsheets, fitted sheets, duvet covers and pillow covers — from Pakistan's certified woven bed linen mills. Programmes are specified to the buyer's exact wash-cycle durability standard and tender documentation requirements.
 
+For buyers new to Pakistan sourcing, our [Incoterms guide covering FOB vs CIF](/knowledge/incoterms-fob-cif-pakistan-textile-exports/) explains the shipping terms used on all our quotations. Our [ISO 9001 certification article](/knowledge/iso-9001-certification-quality-management/) explains what the certification covers and why it matters for hospital and GPO procurement.
+
 [Request a sourcing quote](/rfq/) with your wash temperature, minimum cycle requirement, TC target, size range and annual volume — we return mill options with post-wash performance data within 3–5 business days.`,
 };
 

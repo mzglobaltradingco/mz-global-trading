@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import PageHero from "@/components/PageHero";
@@ -1159,6 +1159,8 @@ const guides: Guide[] = [
 export default function GuidesContent() {
   const [activeCategory, setActiveCategory] = useState<GuideCategory>("all");
   const [searchTerm, setSearchTerm] = useState("");
+  const [page, setPage] = useState(1);
+  const filterRef = useRef<HTMLElement>(null);
 
   const filtered = guides.filter((g) => {
     const matchesCat = activeCategory === "all" || g.catId === activeCategory;
@@ -1170,6 +1172,11 @@ export default function GuidesContent() {
       g.topics.some((t) => t.toLowerCase().includes(term));
     return matchesCat && matchesTerm;
   });
+
+  const PER_PAGE = 12;
+  useEffect(() => { setPage(1); }, [activeCategory, searchTerm]);
+  const totalPages = Math.ceil(filtered.length / PER_PAGE);
+  const paginated = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
   return (
     <>
@@ -1220,7 +1227,7 @@ export default function GuidesContent() {
       </section>
 
       {/* ── Bento grid ────────────────────────────────────────────────────────── */}
-      <section className="py-12 sm:py-14 bg-white">
+      <section ref={filterRef} className="py-12 sm:py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <motion.div
@@ -1285,7 +1292,7 @@ export default function GuidesContent() {
           {/* Bento grid — 3 cols desktop, filterable */}
           <motion.div layout className="grid lg:grid-cols-3 gap-4">
             <AnimatePresence mode="popLayout">
-            {filtered.map((guide, i) => (
+            {paginated.map((guide, i) => (
               <motion.article
                 key={guide.num}
                 layout
@@ -1384,6 +1391,42 @@ export default function GuidesContent() {
           {filtered.length === 0 && (
             <div className="border border-dashed border-gray-200 rounded-2xl px-6 py-12 text-center">
               <p className="text-gray-500 text-sm">No guide matches that search — try a different term or category.</p>
+            </div>
+          )}
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-gray-100">
+              <button
+                onClick={() => filterRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}
+                className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-navy-900 transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                </svg>
+                Back to search
+              </button>
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={() => { setPage((p) => p - 1); filterRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
+                  disabled={page === 1}
+                  aria-label="Previous page"
+                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${page === 1 ? "text-gray-300 cursor-not-allowed" : "text-navy-900 border border-gray-200 hover:bg-gray-50"}`}
+                >
+                  ← Previous
+                </button>
+                <span className="text-sm text-gray-600 min-w-[90px] text-center">
+                  Page <strong className="text-navy-900">{page}</strong> of <strong className="text-navy-900">{totalPages}</strong>
+                </span>
+                <button
+                  onClick={() => { setPage((p) => p + 1); filterRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
+                  disabled={page === totalPages}
+                  aria-label="Next page"
+                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${page === totalPages ? "text-gray-300 cursor-not-allowed" : "bg-navy-900 text-white hover:bg-navy-800"}`}
+                >
+                  Next →
+                </button>
+              </div>
             </div>
           )}
         </div>

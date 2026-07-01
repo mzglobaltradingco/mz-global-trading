@@ -76,17 +76,23 @@ Seam construction on a henley affects both appearance and comfort:
 **200–260 GSM:** Mid-weight year-round retail. Woven placket, ring-spun cotton or poly-cotton. The most commercially versatile range.
 **280–340 GSM:** Heavyweight thermal henley. French terry or waffle knit body. Autumn/winter retail and workwear underlayer programmes.
 
+For a full explanation of how GSM is measured and what each range means across knitwear categories, see our [GSM and fabric weight guide for textile buyers](/knowledge/understanding-gsm-fabric-weight-sourcing/).
+
 ## Certification Requirements
 
 **OEKO-TEX Standard 100** is the baseline for retail henley shirts in the USA, UK and EU. Class I for children's programmes.
 
 **GOTS** applies if the programme uses organic cotton claim — the henley body fabric, placket woven tape and any rib cuffs must all be in-scope.
 
-**BSCI / WRAP** social audit certificates are required for most European retailer and USA brand sourcing programmes. Confirm current audit status before order confirmation.
+**BSCI / WRAP** social audit certificates are required for most European retailer and USA brand sourcing programmes. Confirm current audit status before order confirmation. The full list of certifications held across our factory network is published on our [certifications page](/qualitycompliance/certifications/).
 
 ## Sourcing Henley Shirts from Pakistan
 
 MZ Global Trading sources [henley shirts](/apparel/knittedgarments/henleyshirts/) across all fabric constructions and GSM ranges from Pakistan's knitwear mills. Coordinated programmes covering henley shirts alongside [sweatshirts and hoodies](/apparel/knittedgarments/sweatshirtshoodies/) in matching fabric families are available through a single sourcing contact.
+
+## Related Resources
+
+Specify your henley programme using a structured [Tech Pack](/knowledge/how-to-read-textile-tech-pack-international-buyers/) — include placket construction, button spec, stitch type and GSM to ensure accurate factory briefing. For coordinated knitwear programmes, see our [T-Shirt Fabric Weight Guide](/knowledge/tshirt-fabric-weight-guide/) and [Polo Shirt Piqué Guide](/knowledge/polo-shirt-pique-guide/) for fabric options available from the same mill.
 
 [Submit an RFQ](/rfq/) with your placket style, fabric construction, GSM, button specification, size range and certifications — factory match and indicative FOB pricing within 3–5 business days.`,
 };

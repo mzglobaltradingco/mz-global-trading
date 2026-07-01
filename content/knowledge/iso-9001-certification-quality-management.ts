@@ -33,15 +33,19 @@ ISO 9001 certification requires an organisation to demonstrate:
 
 ISO 9001 is a process standard, not a product quality guarantee. It tells you a factory operates systematically — it does not confirm that every unit meets your specification.
 
-> This is why independent pre-shipment inspection remains essential regardless of the certification held by the factory.
+> This is why [independent pre-shipment inspection](/qualitycompliance/inspectionprocess/) remains essential regardless of the certification held by the factory. See our [pre-shipment inspection checklist for textile buyers](/knowledge/pre-shipment-inspection-checklist-textile-buyers/) for the full checklist used on every MZ Global Trading order.
 
 ## How MZ Global Trading Uses Certification Data
 
-ISO 9001 status is one of six criteria we assess during factory vetting. We treat it as a baseline filter, not a full qualification. A factory can hold ISO 9001 and still underperform on colour consistency or measurement tolerance.
+ISO 9001 status is one of six criteria we assess during [factory vetting and supplier evaluation](/qualitycompliance/supplierevaluation/). We treat it as a baseline filter, not a full qualification. A factory can hold ISO 9001 and still underperform on colour consistency or measurement tolerance.
 
 Our in-house QC process operates independently of the factory's own quality system to provide buyers with an unbiased assessment at pre-production, in-line and pre-shipment stages.
 
-All certification documentation is available to buyers on request during the order placement process.`,
+All certification documentation is available to buyers on request during the order placement process. A complete list of certifications held across our factory network — including OEKO-TEX, GOTS, BSCI, Sedex and SA8000 — is published on our [Certifications page](/qualitycompliance/certifications/).
+
+## Related Quality Resources
+
+For buyers who want to understand how our quality framework operates beyond certification, our [Quality Control process](/qualitycompliance/qualitycontrol/) and [Inspection Process](/qualitycompliance/inspectionprocess/) pages explain what happens at pre-production, inline and pre-shipment stages on every order. To discuss quality requirements for your specific product category, [submit an RFQ](/rfq/) and we will confirm factory certification status and inspection scope with your quotation.`,
 };
 
 export default post;

@@ -15,7 +15,7 @@ const post: KnowledgePost = {
   image: "/knowledge/placeholder.webp",
   content: `## Why GSM Determines T-Shirt Programme Performance
 
-GSM (grams per square metre) is the weight measurement of knit fabric and the most consequential specification decision when sourcing [T-shirts from Pakistan's knitwear mills](/apparel/knittedgarments/tshirts/). It affects hand-feel, drape, opacity, print compatibility, shrinkage after laundering and the retail price point your product can command.
+GSM (grams per square metre) is the weight measurement of knit fabric and the most consequential specification decision when sourcing [T-shirts from Pakistan's knitwear mills](/apparel/knittedgarments/tshirts/). For a full explanation of how GSM is measured, tolerance standards and what the numbers mean across all textile categories, see our [GSM and fabric weight guide for textile buyers](/knowledge/understanding-gsm-fabric-weight-sourcing/). It affects hand-feel, drape, opacity, print compatibility, shrinkage after laundering and the retail price point your product can command.
 
 A 150 GSM tee and a 240 GSM tee are categorically different products serving different markets — not two versions of the same thing. Getting the GSM wrong at specification stage costs you at the sampling phase or, worse, on the shop floor when the product fails customer expectations.
 
@@ -77,7 +77,7 @@ At 220+ GSM, a T-shirt is a workwear or premium lifestyle product. The fabric is
 
 Two T-shirts at the same GSM can feel very different depending on yarn type. Ring-spun cotton is spun with a slower, tighter process that produces a finer, stronger yarn with a smoother surface. Carded cotton is faster and cheaper — the yarn is slightly irregular and the fabric has a coarser hand-feel.
 
-**Practical effect:** A 180 GSM ring-spun tee feels noticeably more substantial than a 180 GSM carded tee at the same weight. If your brief is premium positioning, ring-spun is the specification — not a higher GSM. Specify "ring-spun cotton" explicitly on the Tech Pack; "cotton jersey" without further specification will default to carded at cost-competitive mills.
+**Practical effect:** A 180 GSM ring-spun tee feels noticeably more substantial than a 180 GSM carded tee at the same weight. If your brief is premium positioning, ring-spun is the specification — not a higher GSM. Specify "ring-spun cotton" explicitly on the [Tech Pack](/knowledge/how-to-read-textile-tech-pack-international-buyers/); "cotton jersey" without further specification will default to carded at cost-competitive mills.
 
 Combed ring-spun (combed before ring spinning) is the premium tier — softer again, with further pilling resistance. Budget for a 5–12% material cost premium over standard ring-spun.
 
@@ -89,13 +89,17 @@ Combed ring-spun (combed before ring spinning) is the premium tier — softer ag
 
 **Australia:** OEKO-TEX Standard 100 is the standard retail expectation. GOTS for organic positioning. The Australian Competition and Consumer Commission (ACCC) has enforced against unsubstantiated "organic" and "sustainable" claims — certify before you claim.
 
-**Corporate / workwear:** ISO 9001 from the producing factory is increasingly required for institutional and corporate uniform tenders alongside OEKO-TEX.
+**Corporate / workwear:** ISO 9001 from the producing factory is increasingly required for institutional and corporate uniform tenders alongside OEKO-TEX. See our article on [ISO 9001 certification and what it means for your orders](/knowledge/iso-9001-certification-quality-management/).
 
 ## Sourcing T-Shirts from Pakistan
 
 MZ Global Trading sources [T-shirts](/apparel/knittedgarments/tshirts/) across the full GSM range from Pakistan's knitwear mills in Karachi, Lahore and Faisalabad. [Polo shirts](/apparel/knittedgarments/poloshirts/) from the same mills are available for coordinated corporate and uniform programmes.
 
 A complete programme specification covering GSM, yarn type (ring-spun/combed), stitch density, certifications, print method and retail packaging can be quoted within 3–5 business days of receiving a structured RFQ.
+
+## Related Resources
+
+Before finalising your specification, review the full [certifications held across our factory network](/qualitycompliance/certifications/) — OEKO-TEX, GOTS, BSCI, WRAP and ISO 9001 documentation is available on request. For pre-shipment quality assurance, our [pre-shipment inspection checklist for textile buyers](/knowledge/pre-shipment-inspection-checklist-textile-buyers/) covers fabric, labelling and measurement verification at the factory level.
 
 [Submit an RFQ](/rfq/) with your target GSM, annual volume, destination market and certification requirements — we return a factory match, material spec confirmation and indicative FOB pricing.`,
 };

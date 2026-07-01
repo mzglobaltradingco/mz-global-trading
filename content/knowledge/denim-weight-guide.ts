@@ -17,7 +17,7 @@ const post: KnowledgePost = {
 
 Denim weight is expressed in ounces per square yard (oz/yd²) — the standard in the USA — or converted to grams per square metre (GSM) for European markets. The conversion is: 1 oz/yd² ≈ 33.9 GSM. As a working reference: 6 oz ≈ 200 GSM, 10 oz ≈ 340 GSM, 14 oz ≈ 475 GSM.
 
-Weight is measured on the greige (undyed, unwashed) fabric before any washing or finishing process. Post-wash shrinkage reduces the finished weight slightly — specify pre-wash weight in your Tech Pack and confirm the expected finished weight with the factory.
+Weight is measured on the greige (undyed, unwashed) fabric before any washing or finishing process. Post-wash shrinkage reduces the finished weight slightly — specify pre-wash weight in your [Tech Pack](/knowledge/how-to-read-textile-tech-pack-international-buyers/) and confirm the expected finished weight with the factory.
 
 Pakistan's denim weaving mills in Karachi and Lahore operate ring-spun and open-end spinning with full wash-house capability, producing denim from 6 oz to 14 oz at certified mill level for [denim jeans sourced by international buyers](/apparel/wovengarments/denimjeans/).
 
@@ -107,11 +107,15 @@ Heavy distressing (deep whiskers, severe abrasion) on 6–8 oz denim produces in
 | WRAP | Social compliance | USA brands |
 | ZDHC MRSL | Dye-house chemical compliance | Premium EU and USA brands |
 
-ZDHC (Zero Discharge of Hazardous Chemicals) compliance at the wash house is increasingly requested by EU and USA premium brands. Verify ZDHC signatory status of the wash facility, not just the garment factory, when sourcing washed denim.
+ZDHC (Zero Discharge of Hazardous Chemicals) compliance at the wash house is increasingly requested by EU and USA premium brands. Verify ZDHC signatory status of the wash facility, not just the garment factory, when sourcing washed denim. The full list of social and environmental certifications held across our network is on our [certifications page](/qualitycompliance/certifications/).
 
 ## Sourcing Denim Jeans from Pakistan
 
 MZ Global Trading sources [denim jeans from Pakistan](/apparel/wovengarments/denimjeans/) in 6 oz to 14 oz, ring-spun and open-end, with wash-house capability covering all standard treatments. Coordinated bottoms programmes covering [cargo pants](/apparel/wovengarments/cargopants/) alongside denim are available through a single consolidated sourcing brief.
+
+## Related Resources
+
+For buyers sourcing coordinated woven garment programmes, see our [Trouser Fabric Guide](/knowledge/trouser-fabric-guide/) covering chino, stretch and poly-viscose constructions, and the [GSM and fabric weight reference for textile buyers](/knowledge/understanding-gsm-fabric-weight-sourcing/) for conversion tables and measurement standards across categories. Our [pre-shipment inspection checklist](/knowledge/pre-shipment-inspection-checklist-textile-buyers/) covers the GSM, measurement and wash-test verification points relevant to denim bulk production sign-off.
 
 [Request a denim sourcing quote](/rfq/) with your target weight, wash, fit, size range, certifications required and annual volume — we return mill options and FOB pricing within 3–5 business days.`,
 };

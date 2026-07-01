@@ -116,6 +116,10 @@ Fleece blankets are polyester — OEKO-TEX Standard 100 certification should cov
 
 MZ Global Trading sources [fleece thermal blankets](/hometextile/thermalblankets/fleecethermalblankets/) in all constructions and GSM grades from Pakistan's certified knitted textile manufacturers. Custom sublimation print, sherpa reverses and coordinated programmes with [cellular blankets](/hometextile/thermalblankets/cellularthermalblanket/) for hotel and institutional buyers are available.
 
+## Related Resources
+
+For a full explanation of how GSM is measured and what the numbers mean across fabric categories, see our [GSM and fabric weight guide for textile buyers](/knowledge/understanding-gsm-fabric-weight-sourcing/). Our [Guide to Sourcing Fleece Blankets from Pakistan](/guides/sourcing-fleece-blankets-pakistan/) covers factory selection, order quantities and compliance requirements. The full list of certifications available across our factory network — OEKO-TEX, ISO 9001, GRS — is on our [certifications page](/qualitycompliance/certifications/).
+
 [Request a sourcing quote](/rfq/) with your fleece type, GSM target, size range, print requirement and annual volume — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };
 

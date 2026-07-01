@@ -100,7 +100,7 @@ This guide covers construction types, GSM grades, colour options and sourcing co
 
 ## Sourcing Shop Towels from Pakistan
 
-MZ Global Trading sources [industrial shop towels](/hometextile/industriallinen/shoptowels/) in flat cotton, poly-cotton and terry constructions from Pakistan's certified industrial textile manufacturers. Custom colour print, logo programmes and coordinated [industrial linen supply](/hometextile/industriallinen/) covering [shop towels](/hometextile/industriallinen/shoptowels/) and [fender covers](/hometextile/industriallinen/fendercovers/) are available through a single consolidated RFQ.
+MZ Global Trading sources [industrial shop towels](/hometextile/industriallinen/shoptowels/) in flat cotton, poly-cotton and terry constructions from Pakistan's certified industrial textile manufacturers. Our [2024 expansion into Sialkot's technical textile sector](/knowledge/mz-global-expands-sialkot-technical-textiles/) strengthened our industrial linen capability alongside existing Karachi and Faisalabad facilities. Custom colour print, logo programmes and coordinated [industrial linen supply](/hometextile/industriallinen/) covering [shop towels](/hometextile/industriallinen/shoptowels/) and [fender covers](/hometextile/industriallinen/fendercovers/) are available through a single consolidated RFQ.
 
 [Request a sourcing quote](/rfq/) with your construction, GSM, size, print specification, pack format and annual volume — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };

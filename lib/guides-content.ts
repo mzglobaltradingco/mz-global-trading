@@ -71,13 +71,13 @@ export const GUIDES: GuideArticle[] = [
       ]},
       { type: "h2", text: "The Ordering Process: Four Stages" },
       { type: "h3", text: "Stage 1 — Enquiry and quotation (week 0–2)" },
-      { type: "p", text: "A complete enquiry includes target product specification (or a Tech Pack), quantity, target price, certifications required and destination market. Expect a formal quotation in 3–5 business days, with FOB Karachi or Port Qasim as the standard term. A quotation built on a proper specification holds; one built on a vague enquiry will be re-negotiated later — usually upward." },
+      { type: "p", text: "A complete enquiry includes target product specification (or a <a href=\"/knowledge/how-to-read-textile-tech-pack-international-buyers/\">Tech Pack</a>), quantity, target price, certifications required and destination market. Expect a formal quotation in 3–5 business days, with FOB Karachi or Port Qasim as the standard term. A quotation built on a proper specification holds; one built on a vague enquiry will be re-negotiated later — usually upward." },
       { type: "h3", text: "Stage 2 — Sampling and approval (week 2–6)" },
       { type: "p", text: "Development samples confirm construction and handfeel; lab dips confirm colour; the pre-production (PP) sample is the legal reference for bulk. Do not allow bulk production to start before written PP approval — every later quality dispute is resolved against the approved PP sample." },
       { type: "h3", text: "Stage 3 — Production and in-line control (week 6–14)" },
       { type: "p", text: "Bulk fabric is knitted/woven, dyed and finished, then cut and sewn. A competent partner inspects in-line — fabric inspection on the 4-point system, first-output checks on each line, and mid-production DHU tracking — so problems surface when 10% of the order is made, not 100%." },
       { type: "h3", text: "Stage 4 — Final inspection and shipment (week 14–16)" },
-      { type: "p", text: "Final random inspection follows ISO 2859-1 AQL Level II (typically AQL 2.5 major / 4.0 minor for retail products). After a documented PASS, cartons are sealed, the container is loaded and export documents are couriered or released through the bank, depending on payment terms." },
+      { type: "p", text: "Final random inspection follows <a href=\"/guides/aql-pre-shipment-inspection/\">ISO 2859-1 AQL Level II</a> (typically AQL 2.5 major / 4.0 minor for retail products). After a documented PASS, cartons are sealed, the container is loaded and export documents are couriered or released through the bank, depending on payment terms." },
       { type: "h2", text: "Logistics from Pakistan" },
       { type: "table", headers: ["Destination", "Port-to-port transit (sea)", "Notes"], rows: [
         ["US East Coast (NY/Savannah)", "28–35 days", "Direct or via transshipment"],
@@ -86,7 +86,7 @@ export const GUIDES: GuideArticle[] = [
         ["North Europe (Rotterdam/Hamburg)", "22–28 days", "GSP+ duty-free for most categories"],
         ["South America (Santos)", "35–45 days", "Transshipment routings vary"],
       ]},
-      { type: "p", text: "Shipments leave from Karachi Port or Port Qasim. FOB is the recommended term for most buyers: you control the freight contract and insurance while the supplier handles export clearance. Air freight from Karachi (JIAP) is available for samples and emergency replenishment at roughly 8–12× the sea cost per kg." },
+      { type: "p", text: "Shipments leave from Karachi Port or Port Qasim. <a href=\"/knowledge/incoterms-fob-cif-pakistan-textile-exports/\">FOB is the recommended term for most buyers</a>: you control the freight contract and insurance while the supplier handles export clearance. Air freight from Karachi (JIAP) is available for samples and emergency replenishment at roughly 8–12× the sea cost per kg." },
       { type: "h2", text: "Payment Terms" },
       { type: "ul", items: [
         "Telegraphic transfer (TT) — typically 30% deposit with order, 70% against copy of shipping documents. Simple and cheap; standard for small-to-mid orders.",
@@ -102,6 +102,13 @@ export const GUIDES: GuideArticle[] = [
         "Put tolerances in writing — GSM ±5%, measurements per your size chart tolerance column, shade within an agreed grey-scale rating.",
       ]},
       { type: "note", text: "A sourcing partner on the ground compresses every stage of this guide: factory shortlisting from a vetted network, sampling supervision, in-line and final QC, document handling and one accountable contact. That is precisely the role MZ Global Trading performs for buyers in the USA, UK, Europe and South America." },
+      { type: "seealso", links: [
+        { href: "/rfq/", text: "Submit an RFQ — Get Factory Options & FOB Pricing" },
+        { href: "/qualitycompliance/certifications/", text: "Certifications — OEKO-TEX, GOTS, BSCI, ISO 9001 & More" },
+        { href: "/guides/aql-pre-shipment-inspection/", text: "AQL Inspection Guide for Importers" },
+        { href: "/guides/incoterms-for-textile-buyers/", text: "Incoterms 2020 Guide — FOB, CIF, CFR & EXW Explained" },
+        { href: "/knowledge/incoterms-fob-cif-pakistan-textile-exports/", text: "FOB vs CIF for Pakistan Textile Exports" },
+      ]},
     ],
   },
   // ───────────────────────────────────────── 02
@@ -120,7 +127,7 @@ export const GUIDES: GuideArticle[] = [
     datePublished: "2025-04-03",
     related: ["first-shipment-checklist", "pakistan-textile-sourcing-guide", "gsm-fabric-weight-guide"],
     blocks: [
-      { type: "p", text: "AQL — Acceptable Quality Limit — is the statistical method behind almost every pre-shipment inspection in the textile trade. It answers a simple question: out of a shipment of thousands of pieces, how many do we inspect, and how many defects are acceptable before the shipment fails? The framework is defined in ISO 2859-1 (identical to ANSI/ASQ Z1.4), and General Inspection Level II is the industry default." },
+      { type: "p", text: "AQL — Acceptable Quality Limit — is the statistical method behind almost every pre-shipment inspection in the textile trade. It answers a simple question: out of a shipment of thousands of pieces, how many do we inspect, and how many defects are acceptable before the shipment fails? The framework is defined in ISO 2859-1 (identical to ANSI/ASQ Z1.4), and General Inspection Level II is the industry default. For a step-by-step operational checklist to use at the factory alongside AQL, see our <a href=\"/knowledge/pre-shipment-inspection-checklist-textile-buyers/\">pre-shipment inspection checklist for textile buyers</a>." },
       { type: "h2", text: "The Three Defect Classes" },
       { type: "table", headers: ["Class", "Definition", "Standard AQL", "Examples"], rows: [
         ["Critical", "Unsafe, illegal or unusable; blocks sale", "0 — zero tolerance", "Broken needle in garment, mould, failed flammability label"],
@@ -156,6 +163,13 @@ export const GUIDES: GuideArticle[] = [
         "You reject — rare, but the AQL report is what makes the rejection commercially enforceable.",
       ]},
       { type: "note", text: "Common pitfall: inspecting too early. Final random inspection requires at least 80% of the order packed in final cartons. An inspection on 50% packed goods is a 'during production' check, not a basis for shipment release." },
+      { type: "seealso", links: [
+        { href: "/downloads/aql-reference-table/", text: "AQL Level II Reference Table — ISO 2859-1 Sample Sizes (Download)" },
+        { href: "/downloads/pre-shipment-inspection-checklist/", text: "Pre-Shipment Inspection Checklist (Download)" },
+        { href: "/qualitycompliance/inspectionprocess/", text: "MZ Global Trading Inspection Process — Pre-Production, Inline & PSI" },
+        { href: "/qualitycompliance/qualitycontrol/", text: "Quality Control Framework" },
+        { href: "/rfq/", text: "Submit an RFQ — Built-in QC on Every Order" },
+      ]},
     ],
   },
   // ───────────────────────────────────────── 03
@@ -188,7 +202,7 @@ export const GUIDES: GuideArticle[] = [
         ["SA8000", "Full social accountability management system", "Brands with strict CSR policies"],
       ]},
       { type: "h2", text: "Management Systems" },
-      { type: "p", text: "ISO 9001 certifies a documented quality management system — traceable processes, corrective action loops and management review. It does not guarantee good product, but its absence in a mid-size factory is a red flag. For medical textiles, ISO 13485 and EN 13795 become relevant; for chemicals management, look for ZDHC alignment and bluesign partnership at the dye-house level." },
+      { type: "p", text: "<a href=\"/knowledge/iso-9001-certification-quality-management/\">ISO 9001 certifies a documented quality management system</a> — traceable processes, corrective action loops and management review. It does not guarantee good product, but its absence in a mid-size factory is a red flag. For medical textiles, ISO 13485 and EN 13795 become relevant; for chemicals management, look for ZDHC alignment and bluesign partnership at the dye-house level." },
       { type: "h2", text: "How to Verify a Certificate — Never Trust the PDF" },
       { type: "ol", items: [
         "GOTS: check the supplier on the public GOTS certified-suppliers database; match the licence number, scope (processing categories) and validity date.",
@@ -210,6 +224,12 @@ export const GUIDES: GuideArticle[] = [
         ["Hospital & medical linen", "ISO 9001 + ISO 13485 / EN 13795 as applicable"],
       ]},
       { type: "note", text: "Certification costs money and the factory recovers it in price. Demand the certificates your market genuinely requires — not the longest possible list — and verify every one of them independently. MZ Global Trading supplies verified certificate copies for the specific factory allocated to your order before bulk begins." },
+      { type: "seealso", links: [
+        { href: "/qualitycompliance/certifications/", text: "MZ Global Trading Certifications — OEKO-TEX, GOTS, BSCI, ISO 9001 & More" },
+        { href: "/knowledge/iso-9001-certification-quality-management/", text: "ISO 9001 Certification: What It Means for Your Orders" },
+        { href: "/qualitycompliance/supplierevaluation/", text: "Supplier Evaluation — How We Vet Our Factory Network" },
+        { href: "/rfq/", text: "Submit an RFQ — Receive Certificate Copies with Your Quotation" },
+      ]},
     ],
   },
   // ───────────────────────────────────────── 04
@@ -226,7 +246,7 @@ export const GUIDES: GuideArticle[] = [
     datePublished: "2025-05-08",
     related: ["pakistan-textile-sourcing-guide", "first-shipment-checklist", "aql-pre-shipment-inspection"],
     blocks: [
-      { type: "p", text: "Incoterms define exactly where the seller's costs and risks end and yours begin. In textile trade four terms cover the overwhelming majority of contracts: EXW, FOB, CFR and CIF. Choosing the wrong one doesn't just shift cost — it shifts who controls the freight, who claims against insurance, and who is exposed when something goes wrong at a port." },
+      { type: "p", text: "Incoterms define exactly where the seller's costs and risks end and yours begin. In textile trade four terms cover the overwhelming majority of contracts: EXW, FOB, CFR and CIF. Choosing the wrong one doesn't just shift cost — it shifts who controls the freight, who claims against insurance, and who is exposed when something goes wrong at a port. For a practical comparison of FOB vs CIF with Pakistan-specific context, see our article on <a href=\"/knowledge/incoterms-fob-cif-pakistan-textile-exports/\">Incoterms for Pakistan textile exports</a>." },
       { type: "h2", text: "The Four Terms Side by Side" },
       { type: "table", headers: ["Term", "Seller pays up to", "Risk transfers to buyer", "Who books freight", "Who insures"], rows: [
         ["EXW (Ex Works)", "Goods ready at factory gate", "At the factory gate", "Buyer", "Buyer"],
@@ -257,6 +277,12 @@ export const GUIDES: GuideArticle[] = [
         "Using FOB for air freight — for air shipments the correct equivalent is FCA (named airport).",
       ]},
       { type: "note", text: "MZ Global Trading quotes FOB Karachi / Port Qasim as standard and can quote CFR or CIF to any named port on request — with the cost difference shown transparently so you can compare against your own freight rates." },
+      { type: "seealso", links: [
+        { href: "/downloads/incoterms-quick-reference/", text: "Incoterms 2020 Quick Reference Card (Download)" },
+        { href: "/knowledge/incoterms-fob-cif-pakistan-textile-exports/", text: "FOB vs CIF for Pakistan Textile Exports — Risk & Cost Explained" },
+        { href: "/guides/sourcing-best-practices-export-logistics-compliance/", text: "Export Logistics & Compliance Best Practices" },
+        { href: "/rfq/", text: "Submit an RFQ — Get an FOB Quotation Within 3–5 Business Days" },
+      ]},
     ],
   },
   // ───────────────────────────────────────── 05
@@ -329,7 +355,15 @@ export const GUIDES: GuideArticle[] = [
         "Pantone references from a screen instead of TCX swatches — lab dips bounce twice and cost you 2–3 weeks.",
         "No version control — the factory sews revision 2 while you inspect against revision 3.",
       ]},
+      { type: "p", text: "For buyers receiving a Tech Pack from a supplier rather than writing one, see our guide on <a href=\"/knowledge/how-to-read-textile-tech-pack-international-buyers/\">how to read a textile Tech Pack</a> — covering the key sections to validate before approving a factory submission." },
       { type: "note", text: "Don't have a Tech Pack yet? The structured RFQ on this site captures the same core specification interactively, and our merchandising team converts approved orders into full factory Tech Packs as part of the service." },
+      { type: "seealso", links: [
+        { href: "/downloads/tech-pack-template-apparel/", text: "Tech Pack Template — Apparel (Download)" },
+        { href: "/downloads/tech-pack-template-home-textiles/", text: "Tech Pack Template — Home Textiles (Download)" },
+        { href: "/knowledge/how-to-read-textile-tech-pack-international-buyers/", text: "How to Read a Textile Tech Pack as a Buyer" },
+        { href: "/guides/aql-pre-shipment-inspection/", text: "AQL Inspection Guide — Using the Tech Pack at Final Inspection" },
+        { href: "/rfq/", text: "Submit an RFQ — Our Team Handles Tech Pack Creation" },
+      ]},
     ],
   },
   // ───────────────────────────────────────── 06
@@ -346,7 +380,7 @@ export const GUIDES: GuideArticle[] = [
     datePublished: "2025-06-12",
     related: ["how-to-write-a-tech-pack", "aql-pre-shipment-inspection", "pakistan-textile-sourcing-guide"],
     blocks: [
-      { type: "p", text: "GSM — grams per square metre — is the single most-quoted number in any textile specification. It drives handfeel, drape, durability, warmth and, directly, your price: fabric is bought by weight, so a 200 GSM tee uses 25% more cotton than a 160 GSM tee of the same dimensions. This guide maps the ranges that actually matter per product." },
+      { type: "p", text: "GSM — grams per square metre — is the single most-quoted number in any textile specification. It drives handfeel, drape, durability, warmth and, directly, your price: fabric is bought by weight, so a 200 GSM tee uses 25% more cotton than a 160 GSM tee of the same dimensions. This guide maps the ranges that actually matter per product. For a detailed explanation of how GSM is measured at the factory — including the circular cutter method, tolerance verification at inspection, and GSM conversion tables — see our <a href=\"/knowledge/understanding-gsm-fabric-weight-sourcing/\">GSM and fabric weight guide for textile buyers</a>." },
       { type: "h2", text: "Apparel GSM Ranges" },
       { type: "table", headers: ["Product", "Light", "Standard", "Heavy / premium"], rows: [
         ["T-shirts (single jersey)", "120–150 (fashion, drapey)", "160–180 (retail standard)", "190–240 (heavyweight, streetwear)"],
@@ -381,6 +415,13 @@ export const GUIDES: GuideArticle[] = [
         "Verify at inspection with a GSM cutter (100 cm² punch, weighed ×100) — it takes two minutes and prevents the most common silent substitution in the trade.",
       ]},
       { type: "note", text: "Unsure which weight fits your market and price point? Send us the product and target retail price through the RFQ — recommending the right construction and GSM band is part of every MZ Global Trading quotation." },
+      { type: "seealso", links: [
+        { href: "/knowledge/understanding-gsm-fabric-weight-sourcing/", text: "GSM & Fabric Weight Guide — Measurement, Tolerances & Sourcing Application" },
+        { href: "/knowledge/terry-towel-gsm-guide/", text: "Terry Towel GSM Guide — 300 GSM to 900 GSM Explained" },
+        { href: "/knowledge/tshirt-fabric-weight-guide/", text: "T-Shirt Fabric Weight Guide — 130 GSM to 280 GSM for Fashion & Workwear" },
+        { href: "/guides/how-to-write-a-tech-pack/", text: "How to Write a Tech Pack — Specifying GSM with Tolerance" },
+        { href: "/rfq/", text: "Submit an RFQ — GSM Recommendation Included with Every Quotation" },
+      ]},
     ],
   },
   // ───────────────────────────────────────── 07
@@ -436,6 +477,13 @@ export const GUIDES: GuideArticle[] = [
         ["Towels, denim, bed linen specifically", "Pakistan — category specialist"],
       ]},
       { type: "note", text: "Most mature buyers run a two-country strategy: a primary origin per category plus a qualified backup. If cotton-based apparel or home textiles are in your range, Pakistan has earned a place on that shortlist — and MZ Global Trading exists to make testing it low-risk: vetted factories, supervised sampling and inspected shipments from the first order." },
+      { type: "seealso", links: [
+        { text: "Apparel — T-Shirts, Polo Shirts, Denim, Workwear from Pakistan", href: "/apparel/" },
+        { text: "Home Textiles — Towels, Bed Linen, Blankets from Pakistan", href: "/hometextile/" },
+        { text: "Certifications — GOTS, OEKO-TEX, BSCI, ISO 9001", href: "/qualitycompliance/certifications/" },
+        { text: "Submit an RFQ — Start Sourcing from Pakistan", href: "/rfq/" },
+        { text: "Complete Pakistan Textile Sourcing Guide", href: "/guides/pakistan-textile-sourcing-guide/" },
+      ]},
     ],
   },
   // ───────────────────────────────────────── 08
@@ -495,6 +543,13 @@ export const GUIDES: GuideArticle[] = [
         ["Inspection report", "Standard, AQL, lot/sample size, result PASS, signed and dated"],
       ]},
       { type: "note", text: "Buyers working with MZ Global Trading get this checklist executed as part of the agreed service scope — sampling supervision, in-line and final inspection, loading supervision and a verified document set — with one accountable contact from enquiry to arrival." },
+      { type: "seealso", links: [
+        { text: "Previous: Phase 6 or SP6 — AQL Pre-Shipment Inspection Guide", href: "/guides/aql-pre-shipment-inspection/", description: "ISO 2859-1 AQL Level II — sample sizes, defect classes and acceptance numbers" },
+        { text: "Incoterms 2020 — FOB, CIF, CFR & EXW Explained", href: "/guides/incoterms-for-textile-buyers/", description: "How trade terms affect documents and risk at each stage of shipment" },
+        { text: "Pre-Shipment Inspection Checklist for Textile Buyers", href: "/knowledge/pre-shipment-inspection-checklist-textile-buyers/", description: "What inspectors verify and how to respond when inspection fails" },
+        { text: "Pre-Shipment Inspection Checklist (Download)", href: "/downloads/pre-shipment-inspection-checklist/", description: "Downloadable checklist template for buyer QC use" },
+        { text: "Submit an RFQ — Supervised Inspection on Every Order", href: "/rfq/", description: "Full first-shipment service from sampling to container seal" },
+      ]},
     ],
   },
 
@@ -554,6 +609,13 @@ export const GUIDES: GuideArticle[] = [
       { type: "h2", text: "How Sourcing Partners Add Value at Phase 1" },
       { type: "p", text: "An experienced sourcing partner can provide market intelligence that complements trend research: factory production calendars (which factories are booked and when), fibre price forecasts, and pre-vetted factory options matched to the product category. Engaging a sourcing partner at concept stage — rather than after the design is finalised — allows the commercial brief to be grounded in manufacturing reality from the start." },
       { type: "note", text: "MZ Global Trading works with buyers at the concept phase to validate product briefs against Pakistan factory capability, current fibre costs and certification requirements — ensuring that development time is spent on specifications that are commercially viable and manufacturable." },
+      { type: "seealso", links: [
+        { text: "Next: Phase 2 — Design & Technical Development", href: "/guides/textile-product-lifecycle-design-technical-development/", description: "Tech Pack creation, material specification and design-for-manufacture review" },
+        { text: "Complete Pakistan Textile Sourcing Guide", href: "/guides/pakistan-textile-sourcing-guide/", description: "End-to-end sourcing process from factory selection through shipment" },
+        { text: "Apparel — T-Shirts, Polo Shirts, Denim & Workwear from Pakistan", href: "/apparel/", description: "Full range of knitted and woven garments sourced from Pakistan" },
+        { text: "Home Textiles — Towels, Bed Linen & Blankets from Pakistan", href: "/hometextile/", description: "Bath linen, bed linen, kitchen and institutional textile programmes" },
+        { text: "Submit an RFQ — Start Your Textile Sourcing Programme", href: "/rfq/", description: "Request mill options and FOB pricing within 3–5 business days" },
+      ]},
     ],
   },
 
@@ -609,6 +671,13 @@ export const GUIDES: GuideArticle[] = [
       { type: "h2", text: "When to Involve Your Sourcing Partner" },
       { type: "p", text: "Sourcing partners see hundreds of Tech Packs and know which specification gaps create the most sampling revisions. Sharing a draft Tech Pack before locking it allows a partner to flag ambiguities, suggest tested material alternatives and confirm that the specification is achievable at the target cost — avoiding a cycle of counter-specs at the sampling stage." },
       { type: "note", text: "MZ Global Trading reviews Tech Packs before submitting to factories, flagging underspecified sections, out-of-tolerance ranges and material requirements that are unavailable at Pakistan factory level — turning a development brief into a manufacturable specification." },
+      { type: "seealso", links: [
+        { text: "Previous: Phase 1 — Concept & Trend Research", href: "/guides/textile-product-lifecycle-concept-trend-research/", description: "Market trend research, product briefs and Pakistan manufacturing alignment" },
+        { text: "Next: Phase 3 — Raw Material Sourcing", href: "/guides/textile-product-lifecycle-raw-material-sourcing/", description: "Fibre, yarn and fabric sourcing within Pakistan's vertically integrated mills" },
+        { text: "How to Write a Textile Tech Pack", href: "/guides/how-to-write-a-tech-pack/", description: "Step-by-step guide to creating a complete textile technical specification" },
+        { text: "How to Read a Textile Tech Pack", href: "/knowledge/how-to-read-textile-tech-pack-international-buyers/", description: "Understanding Tech Pack sections as a buyer receiving supplier documentation" },
+        { text: "Submit an RFQ — Technical Specification Review Included", href: "/rfq/", description: "MZ Global Trading reviews your Tech Pack before factory submission" },
+      ]},
     ],
   },
 
@@ -661,6 +730,13 @@ export const GUIDES: GuideArticle[] = [
         "Lot consistency: in long production runs, request fabric from both the start and end of the production lot — colour and GSM can drift between dye batches.",
       ]},
       { type: "note", text: "Pakistan's vertically integrated textile mills — common in Faisalabad, Lahore and Karachi — provide a natural advantage for raw material traceability. MZ Global Trading works exclusively with mills that hold current certification scope certificates, verified annually." },
+      { type: "seealso", links: [
+        { text: "Previous: Phase 2 — Design & Technical Development", href: "/guides/textile-product-lifecycle-design-technical-development/", description: "Tech Pack creation and design-for-manufacture review" },
+        { text: "Next: Phase 4 — Supplier & Factory Selection", href: "/guides/textile-product-lifecycle-supplier-factory-selection/", description: "Factory evaluation criteria, audit standards and panel selection" },
+        { text: "GSM & Fabric Weight Guide for Textile Buyers", href: "/guides/gsm-fabric-weight-guide/", description: "Understanding GSM across cotton, polyester, terry and woven fabrics" },
+        { text: "Certifications — GOTS, OEKO-TEX, BSCI, ISO 9001", href: "/qualitycompliance/certifications/", description: "Full certification matrix for Pakistan textile sourcing programmes" },
+        { text: "Submit an RFQ — Certified Mill Options Returned Within 3–5 Days", href: "/rfq/", description: "Receive mill options with certification scope certificates included" },
+      ]},
     ],
   },
 
@@ -716,6 +792,13 @@ export const GUIDES: GuideArticle[] = [
       { type: "h2", text: "The Role of a Sourcing Partner in Factory Selection" },
       { type: "p", text: "A sourcing partner maintains a pre-evaluated, actively managed factory panel — factories that have been visited, audited, capacity-assessed and reference-checked before any client order is placed. For buyers who cannot visit factories in person, this is the practical equivalent of an in-country quality assurance team." },
       { type: "note", text: "MZ Global Trading's factory panel is evaluated on all five dimensions before onboarding and is reviewed annually. Factories with expired social audits or quality non-conformances are suspended from the panel regardless of price competitiveness." },
+      { type: "seealso", links: [
+        { text: "Previous: Phase 3 — Raw Material Sourcing", href: "/guides/textile-product-lifecycle-raw-material-sourcing/", description: "Fibre, yarn and fabric sourcing within Pakistan's vertically integrated mills" },
+        { text: "Next: Phase 5 — Costing, MOQ & Negotiation", href: "/guides/textile-product-lifecycle-costing-moq-negotiation/", description: "How FOB prices are built, MOQ dynamics and negotiation levers" },
+        { text: "Supplier Evaluation Best Practices", href: "/guides/sourcing-best-practices-supplier-evaluation-factory-selection/", description: "Detailed factory evaluation framework and scoring methodology" },
+        { text: "Supplier Evaluation — Pakistan Textile Factories", href: "/qualitycompliance/supplierevaluation/", description: "MZ Global Trading's factory panel evaluation criteria and process" },
+        { text: "Submit an RFQ — Pre-Vetted Factory Panel Access", href: "/rfq/", description: "All factories are pre-evaluated — no blind commitments" },
+      ]},
     ],
   },
 
@@ -764,6 +847,13 @@ export const GUIDES: GuideArticle[] = [
       { type: "h2", text: "What Not to Negotiate" },
       { type: "p", text: "Some elements of cost should not be negotiated away. Social audit compliance costs, lab testing, quality inspection and certification fees are not discretionary overhead — they are the infrastructure that protects product quality and ethical compliance. A supplier that offers to 'remove' these costs is telling you something important about how they will cut costs in other areas when under price pressure." },
       { type: "note", text: "When MZ Global Trading negotiates on behalf of buyers, the focus is on fabric specification, colour architecture and volume consolidation — not on eroding quality, inspection or compliance budgets. A price built on compromised infrastructure is not a saving." },
+      { type: "seealso", links: [
+        { text: "Previous: Phase 4 — Supplier & Factory Selection", href: "/guides/textile-product-lifecycle-supplier-factory-selection/", description: "Factory evaluation criteria, audit standards and panel selection" },
+        { text: "Next: Phase 6 — Pre-Production Sampling", href: "/guides/textile-product-lifecycle-pre-production-sampling/", description: "Development samples, lab dip approval and pre-production sign-off" },
+        { text: "Incoterms 2020 — FOB, CIF, CFR & EXW Explained", href: "/guides/incoterms-for-textile-buyers/", description: "How trade terms affect your landed cost and risk position" },
+        { text: "First Shipment from Pakistan — Buyer's Checklist", href: "/guides/first-shipment-checklist/", description: "Step-by-step checklist for buyers placing their first Pakistan order" },
+        { text: "Submit an RFQ — Transparent FOB Pricing with No Hidden Charges", href: "/rfq/", description: "Receive itemised pricing with certification and inspection costs included" },
+      ]},
     ],
   },
 
@@ -807,6 +897,13 @@ export const GUIDES: GuideArticle[] = [
       { type: "h2", text: "Managing Sampling Revisions" },
       { type: "p", text: "Each sampling round typically involves comments, revision and re-submission. The number of rounds required is directly related to the completeness of the Tech Pack. A well-specified Tech Pack with precise material, construction and measurement data typically achieves PP approval in two rounds. An underspecified brief can run five or six rounds before a factory can satisfy the evolving requirements — adding 4–8 weeks to the critical path and significant development cost." },
       { type: "note", text: "MZ Global Trading's sampling coordination service includes reviewing development samples in-country before shipping to buyers, filtering avoidable rejection comments and ensuring that factory revisions address the actual source of the non-conformance — not a symptomatic fix that masks the underlying problem." },
+      { type: "seealso", links: [
+        { text: "Previous: Phase 5 — Costing, MOQ & Negotiation", href: "/guides/textile-product-lifecycle-costing-moq-negotiation/", description: "How FOB prices are built, MOQ dynamics and negotiation levers" },
+        { text: "Next: Phase 7 — Manufacturing & Production", href: "/guides/textile-product-lifecycle-manufacturing-production/", description: "Bulk production stages, inline inspection and production monitoring" },
+        { text: "How to Write a Textile Tech Pack", href: "/guides/how-to-write-a-tech-pack/", description: "Creating the specification document that drives sampling accuracy" },
+        { text: "AQL Pre-Shipment Inspection Guide", href: "/guides/aql-pre-shipment-inspection/", description: "AQL Level II sample sizes, defect classes and acceptance criteria" },
+        { text: "Submit an RFQ — In-Country Sample Review Included", href: "/rfq/", description: "MZ Global Trading reviews samples in Pakistan before they ship to you" },
+      ]},
     ],
   },
 
@@ -862,6 +959,13 @@ export const GUIDES: GuideArticle[] = [
         ["Packing errors", "Wrong barcode, wrong size-colour split", "100% barcode scan; pack-check sign-off before carton sealing"],
       ]},
       { type: "note", text: "MZ Global Trading's production monitoring service provides buyers with structured mid-production reports, in-country first-output checks and photo documentation — providing real visibility without requiring the buyer to travel to Pakistan." },
+      { type: "seealso", links: [
+        { text: "Previous: Phase 6 — Pre-Production Sampling", href: "/guides/textile-product-lifecycle-pre-production-sampling/", description: "Development samples, lab dip approval and pre-production sign-off" },
+        { text: "Next: Phase 8 — Quality Control & Compliance", href: "/guides/textile-product-lifecycle-quality-control-compliance/", description: "Final AQL inspection, compliance verification and shipment sign-off" },
+        { text: "Inline Quality Control Best Practices", href: "/guides/sourcing-best-practices-inline-quality-control/", description: "Four-stage inline inspection framework for Pakistan textile production" },
+        { text: "Inspection Process — Pakistan Textile Factories", href: "/qualitycompliance/inspectionprocess/", description: "How MZ Global Trading conducts in-line and pre-shipment inspections" },
+        { text: "Submit an RFQ — Production Monitoring on Every Order", href: "/rfq/", description: "Structured production reports and first-output checks included" },
+      ]},
     ],
   },
 
@@ -911,6 +1015,14 @@ export const GUIDES: GuideArticle[] = [
         "Sedex SMETA: buyers registered on Sedex can access audit results directly on the Sedex platform.",
       ]},
       { type: "note", text: "MZ Global Trading conducts third-party AQL inspections through accredited inspection bodies (SGS, Bureau Veritas, Intertek) on all commercial shipments. Inspection reports are shared with buyers within 24 hours of inspection completion." },
+      { type: "seealso", links: [
+        { text: "Previous: Phase 7 — Manufacturing & Production", href: "/guides/textile-product-lifecycle-manufacturing-production/", description: "Bulk production stages, inline inspection and production monitoring" },
+        { text: "Next: Phase 9 — Packaging & Labelling", href: "/guides/textile-product-lifecycle-packaging-labelling/", description: "Carton pack standards, barcode labels and compliance marking" },
+        { text: "AQL Pre-Shipment Inspection Guide", href: "/guides/aql-pre-shipment-inspection/", description: "ISO 2859-1 AQL Level II — sample sizes, defect classes and acceptance numbers" },
+        { text: "Pre-Shipment Inspection Checklist for Textile Buyers", href: "/knowledge/pre-shipment-inspection-checklist-textile-buyers/", description: "What inspectors check and how to respond to FAIL results" },
+        { text: "Quality Control — Pakistan Textile Factories", href: "/qualitycompliance/qualitycontrol/", description: "MZ Global Trading's quality control system and inspection methodology" },
+        { text: "Submit an RFQ — Third-Party AQL Inspection on Every Shipment", href: "/rfq/", description: "SGS/Bureau Veritas/Intertek inspection reports within 24 hours" },
+      ]},
     ],
   },
 
@@ -958,6 +1070,13 @@ export const GUIDES: GuideArticle[] = [
         "GS1-128 carton labels: most major retailers require a GS1-128 label (including PO number, UPC, case count and carton sequence) on outer cartons.",
       ]},
       { type: "note", text: "MZ Global Trading's QC service includes a pre-packing label audit — verifying fibre content accuracy, care symbol correctness, country of origin wording and barcode scan quality before goods are packed into final cartons." },
+      { type: "seealso", links: [
+        { text: "Previous: Phase 8 — Quality Control & Compliance", href: "/guides/textile-product-lifecycle-quality-control-compliance/", description: "Final AQL inspection, compliance verification and shipment sign-off" },
+        { text: "Next: Phase 10 — Export Logistics", href: "/guides/textile-product-lifecycle-export-logistics/", description: "Shipping terms, export documentation and freight coordination" },
+        { text: "Incoterms 2020 — FOB, CIF, CFR & EXW Explained", href: "/guides/incoterms-for-textile-buyers/", description: "How Incoterms determine your risk and cost position at shipment" },
+        { text: "Textile Sourcing Downloads — Templates & Checklists", href: "/downloads/", description: "Label specification templates, carton mark guides and compliance checklists" },
+        { text: "Submit an RFQ — Pre-Packing Label Audit Included", href: "/rfq/", description: "Barcode, care symbol and fibre content verified before carton sealing" },
+      ]},
     ],
   },
 
@@ -1008,6 +1127,13 @@ export const GUIDES: GuideArticle[] = [
       { type: "h2", text: "Pakistan Customs and Export Procedures" },
       { type: "p", text: "Pakistan export customs are managed through the WEBOC (Web Based One Customs) system. Export under Pakistan's duty drawback or DLTL scheme requires registration with the Federal Board of Revenue (FBR). An experienced freight forwarder or customs agent in Karachi handles WEBOC filing and coordinates the Goods Declaration (GD) process." },
       { type: "note", text: "MZ Global Trading coordinates the full export documentation process — from commercial invoice and packing list preparation through certificate of origin endorsement and shipping line coordination — providing buyers with a complete, verified document set at the time of loading." },
+      { type: "seealso", links: [
+        { text: "Previous: Phase 9 — Packaging & Labelling", href: "/guides/textile-product-lifecycle-packaging-labelling/", description: "Carton pack standards, barcode labels and compliance marking" },
+        { text: "Next: Phase 11 — Retail & Distribution", href: "/guides/textile-product-lifecycle-retail-distribution/", description: "Delivery window management, retail compliance and reorder planning" },
+        { text: "Incoterms 2020 — FOB, CIF, CFR & EXW Explained", href: "/guides/incoterms-for-textile-buyers/", description: "How shipping terms affect document requirements and landed cost" },
+        { text: "Incoterms for Pakistan Textile Exports", href: "/knowledge/incoterms-fob-cif-pakistan-textile-exports/", description: "FOB vs CIF vs CFR as used in Pakistan textile export contracts" },
+        { text: "Submit an RFQ — Complete Export Documentation Managed for You", href: "/rfq/", description: "Commercial invoice, packing list, C/O and BL coordinated at loading" },
+      ]},
     ],
   },
 
@@ -1054,8 +1180,12 @@ export const GUIDES: GuideArticle[] = [
         "Size curve adjustment: first-season sell-through data reveals whether the initial size curve was correct. Adjusting the curve on re-orders immediately improves sell-through and reduces end-of-season markdown.",
       ]},
       { type: "note", text: "MZ Global Trading offers contingency re-order management — holding a confirmed production slot and fabric reservation for buyers who want the ability to trigger a re-order within a shorter window than the standard lead time." },
-      { type: "seealso", title: "Related Knowledge & Guides", links: [
-        { text: "First Order from Pakistan: The Operational Sourcing Guide", href: "/knowledge/textile-sourcing-operations-guide/", description: "End-to-end walkthrough of how a first Pakistan textile order works — from fabric specification through retail integration." },
+      { type: "seealso", links: [
+        { text: "Previous: Phase 10 — Export Logistics", href: "/guides/textile-product-lifecycle-export-logistics/", description: "Shipping terms, export documentation and freight coordination" },
+        { text: "Next: Phase 12 — End-of-Life & Circular Economy", href: "/guides/textile-product-lifecycle-end-of-life-circular-economy/", description: "GRS certification, recycled content and take-back programme design" },
+        { text: "First Order from Pakistan — Operational Sourcing Guide", href: "/knowledge/textile-sourcing-operations-guide/", description: "End-to-end walkthrough of how a first Pakistan textile order works" },
+        { text: "Apparel — Knitted & Woven Garments from Pakistan", href: "/apparel/", description: "Full range of apparel for retail, corporate and promotional programmes" },
+        { text: "Submit an RFQ — Reorder Slots Available for Ongoing Programmes", href: "/rfq/", description: "Reserve production capacity and fabric for your next season" },
       ]},
     ],
   },
@@ -1110,6 +1240,13 @@ export const GUIDES: GuideArticle[] = [
         "Ask your sourcing partner about take-back programs for institutional linen at end of service — for high-volume buyers this can be built into the supply agreement.",
       ]},
       { type: "note", text: "MZ Global Trading can source GRS-certified products from certified Pakistan mills and provide Transaction Certificates for each shipment. Contact our team with your recycled content target and we will match you with the appropriate supplier." },
+      { type: "seealso", links: [
+        { text: "Previous: Phase 11 — Retail & Distribution", href: "/guides/textile-product-lifecycle-retail-distribution/", description: "DC compliance, sell-through management and reorder planning" },
+        { text: "Complete Pakistan Textile Sourcing Guide", href: "/guides/pakistan-textile-sourcing-guide/", description: "Full lifecycle sourcing guide from factory selection to shipment" },
+        { text: "Certifications — GOTS, GRS, OEKO-TEX, BSCI, ISO 9001", href: "/qualitycompliance/certifications/", description: "Full certification matrix including GRS recycled content certificates" },
+        { text: "Textile Certifications Explained", href: "/guides/textile-certifications-explained/", description: "What each certification means, who requires it and how to verify it" },
+        { text: "Submit an RFQ — GRS-Certified Recycled Textile Options Available", href: "/rfq/", description: "Specify your recycled content target and receive certified mill options" },
+      ]},
     ],
   },
 
@@ -1156,6 +1293,13 @@ export const GUIDES: GuideArticle[] = [
       { type: "h2", text: "Principle 5: Use Images for Placement and Construction Details" },
       { type: "p", text: "Written descriptions of placement (e.g. 'chest pocket positioned 3cm from armhole seam') are ambiguous without a diagram. Use dimensioned diagrams for every placement specification: print position, label location, button placement, embroidery centre point. A photograph of the approved sample does not substitute for a dimensioned diagram — photographs distort perspective and are not reproducible at factory level." },
       { type: "note", text: "MZ Global Trading's technical team reviews buyer Tech Packs before submission to factories, identifying underspecified sections and flagging industry-standard alternatives where the specification describes an outcome that is not achievable at the target price point." },
+      { type: "seealso", links: [
+        { text: "Next: Best Practice 2 — Fabric & Raw Material Sourcing", href: "/guides/sourcing-best-practices-fabric-raw-material-sourcing/", description: "Evaluating fabric specs, GSM tolerances and certification documentation" },
+        { text: "How to Write a Textile Tech Pack", href: "/guides/how-to-write-a-tech-pack/", description: "Step-by-step guide to creating a complete textile technical specification" },
+        { text: "How to Read a Textile Tech Pack", href: "/knowledge/how-to-read-textile-tech-pack-international-buyers/", description: "Understanding Tech Pack sections as a buyer receiving supplier documents" },
+        { text: "Textile Sourcing Downloads — Spec Templates", href: "/downloads/", description: "Downloadable Tech Pack templates, size specifications and order forms" },
+        { text: "Submit an RFQ — Technical Specification Review Included", href: "/rfq/", description: "MZ Global Trading reviews your spec before factory submission" },
+      ]},
     ],
   },
 
@@ -1200,8 +1344,12 @@ export const GUIDES: GuideArticle[] = [
       { type: "h2", text: "Best Practice 5: Maintain a Fabric Reference Library" },
       { type: "p", text: "For repeat or seasonal programs, maintain a sealed fabric reference library — a 10×10cm sealed swatch of every approved fabric per style, with the mill name, fabric reference, lot number, GSM test result and approval date attached. This provides a physical reference for every future re-order and makes substitution instantly visible at incoming inspection." },
       { type: "note", text: "MZ Global Trading conducts incoming fabric inspection on all orders, verifying GSM, colour, defect rate and certification documentation before authorising cutting — giving buyers certainty that the approved fabric is what actually enters production." },
-      { type: "seealso", title: "Related Knowledge & Guides", links: [
-        { text: "First Order from Pakistan: The Operational Sourcing Guide", href: "/knowledge/textile-sourcing-operations-guide/", description: "End-to-end walkthrough of how a first Pakistan textile order works — from fabric specification through retail integration." },
+      { type: "seealso", links: [
+        { text: "Previous: Best Practice 1 — Design & Technical Specification", href: "/guides/sourcing-best-practices-design-technical-specification/", description: "Tech Pack structure, tolerances and specification review methodology" },
+        { text: "Next: Best Practice 3 — Supplier & Factory Selection", href: "/guides/sourcing-best-practices-supplier-evaluation-factory-selection/", description: "Factory evaluation criteria, audit standards and panel selection" },
+        { text: "GSM & Fabric Weight Guide for Textile Buyers", href: "/guides/gsm-fabric-weight-guide/", description: "GSM ranges for cotton, polyester, terry and woven fabrics" },
+        { text: "First Order from Pakistan — Operational Sourcing Guide", href: "/knowledge/textile-sourcing-operations-guide/", description: "End-to-end walkthrough of how a first Pakistan textile order works" },
+        { text: "Submit an RFQ — Incoming Fabric Inspection on Every Order", href: "/rfq/", description: "GSM, colour and defect verification before cutting is authorised" },
       ]},
     ],
   },
@@ -1259,6 +1407,13 @@ export const GUIDES: GuideArticle[] = [
         ["Tier 3 — Conditional vendors", "Score <3.0; new relationship; gaps under correction", "Pre-production visit + full in-line + third-party final inspection on every order"],
       ]},
       { type: "note", text: "MZ Global Trading's factory panel is pre-tiered and publicly backed by annual audit results. Buyers are given access to the evaluation summary for any factory proposed for their program — no blind commitments." },
+      { type: "seealso", links: [
+        { text: "Previous: Best Practice 2 — Fabric & Raw Material Sourcing", href: "/guides/sourcing-best-practices-fabric-raw-material-sourcing/", description: "Evaluating fabric specs, GSM tolerances and certification documentation" },
+        { text: "Next: Best Practice 4 — Pre-Production Sampling", href: "/guides/sourcing-best-practices-pre-production-sampling/", description: "Sample types, approval process and comment letter methodology" },
+        { text: "Supplier Evaluation — Pakistan Textile Factories", href: "/qualitycompliance/supplierevaluation/", description: "MZ Global Trading's factory panel evaluation criteria and scoring" },
+        { text: "Certifications — GOTS, OEKO-TEX, BSCI, ISO 9001", href: "/qualitycompliance/certifications/", description: "Audit standards required by market and product category" },
+        { text: "Submit an RFQ — Factory Audit Summaries Available on Request", href: "/rfq/", description: "Pre-vetted factory panel — no blind commitments" },
+      ]},
     ],
   },
 
@@ -1300,6 +1455,13 @@ export const GUIDES: GuideArticle[] = [
       { type: "h2", text: "Best Practice 5: Track Cumulative Development Time" },
       { type: "p", text: "Development time is the most consistently underestimated phase of the sourcing calendar. Build a development tracker that records the date of each sample submission, the date comments are returned, and the running total of development time elapsed. When development time approaches the calendar limit, it must trigger a commercial decision — simplify the specification, extend the in-store date, or accept a higher-risk factory decision — not a hope that the remaining rounds will be faster." },
       { type: "note", text: "MZ Global Trading's in-country sampling team reviews samples against the Tech Pack specification before shipping to buyers, filtering avoidable rejection comments and providing a structured comment letter that reduces buyer review time and the number of revision rounds." },
+      { type: "seealso", links: [
+        { text: "Previous: Best Practice 3 — Supplier & Factory Selection", href: "/guides/sourcing-best-practices-supplier-evaluation-factory-selection/", description: "Factory evaluation criteria, audit standards and panel selection" },
+        { text: "Next: Best Practice 5 — Inline Quality Control", href: "/guides/sourcing-best-practices-inline-quality-control/", description: "Four-stage inline inspection framework for textile production" },
+        { text: "How to Write a Textile Tech Pack", href: "/guides/how-to-write-a-tech-pack/", description: "Creating the specification document that determines sampling accuracy" },
+        { text: "AQL Pre-Shipment Inspection Guide", href: "/guides/aql-pre-shipment-inspection/", description: "AQL Level II framework used to evaluate pre-production samples" },
+        { text: "Submit an RFQ — In-Country Sample Review Before Shipping", href: "/rfq/", description: "MZ Global Trading reviews samples in Pakistan before they reach you" },
+      ]},
     ],
   },
 
@@ -1345,6 +1507,13 @@ export const GUIDES: GuideArticle[] = [
         "Packing commencement check: confirmation that the first cartons are packed correctly before the full packing run continues.",
       ]},
       { type: "note", text: "MZ Global Trading's production monitoring service provides buyers with all four inline QC reports as standard — giving remote buyers the same visibility as having a QC technician on the factory floor." },
+      { type: "seealso", links: [
+        { text: "Previous: Best Practice 4 — Pre-Production Sampling", href: "/guides/sourcing-best-practices-pre-production-sampling/", description: "Sample types, approval process and comment letter methodology" },
+        { text: "Next: Best Practice 6 — Pre-Shipment Inspection", href: "/guides/sourcing-best-practices-pre-shipment-inspection/", description: "AQL inspection scheduling, defect classification and FAIL response" },
+        { text: "Quality Control — Pakistan Textile Factories", href: "/qualitycompliance/qualitycontrol/", description: "MZ Global Trading's quality control system and inspection methodology" },
+        { text: "Inspection Process — Pakistan Textile Factories", href: "/qualitycompliance/inspectionprocess/", description: "How in-line and pre-shipment inspections are conducted" },
+        { text: "Submit an RFQ — Four-Stage Inline QC Reports on Every Order", href: "/rfq/", description: "Remote visibility into production without travelling to Pakistan" },
+      ]},
     ],
   },
 
@@ -1395,6 +1564,14 @@ export const GUIDES: GuideArticle[] = [
         "Reject and re-make: only practical if the shipment window allows re-production. Reserve for critical defects that are not reworkable.",
       ]},
       { type: "note", text: "MZ Global Trading manages third-party inspection bookings, briefs inspectors against the buyer's approved PP sample, and provides buyers with inspection reports within 24 hours — including a recommendation on how to respond to any FAIL result." },
+      { type: "seealso", links: [
+        { text: "Previous: Best Practice 5 — Inline Quality Control", href: "/guides/sourcing-best-practices-inline-quality-control/", description: "Four-stage inline inspection framework for textile production" },
+        { text: "Next: Best Practice 7 — Export Logistics & Compliance", href: "/guides/sourcing-best-practices-export-logistics-compliance/", description: "Shipping terms, export documentation and freight coordination" },
+        { text: "AQL Pre-Shipment Inspection Guide", href: "/guides/aql-pre-shipment-inspection/", description: "ISO 2859-1 AQL Level II — sample sizes, defect classes and FAIL criteria" },
+        { text: "Pre-Shipment Inspection Checklist for Textile Buyers", href: "/knowledge/pre-shipment-inspection-checklist-textile-buyers/", description: "What inspectors verify and how to respond when inspection fails" },
+        { text: "Inspection Process — Pakistan Textile Factories", href: "/qualitycompliance/inspectionprocess/", description: "How MZ Global Trading structures and manages inspections" },
+        { text: "Submit an RFQ — SGS/Bureau Veritas/Intertek Reports Within 24 Hours", href: "/rfq/", description: "Third-party inspection booked and managed on your behalf" },
+      ]},
     ],
   },
 
@@ -1445,8 +1622,13 @@ export const GUIDES: GuideArticle[] = [
       { type: "h2", text: "Freight Booking Timing" },
       { type: "p", text: "Space on main-lane shipping services books quickly in peak periods — Q4 (pre-Christmas), pre-Chinese New Year and post-Chinese New Year. Best practice: book freight 3 weeks before the intended loading date as standard; extend to 4–5 weeks during peak periods or when routing through congested transshipment hubs (Singapore, Colombo, Port Said)." },
       { type: "note", text: "MZ Global Trading's logistics coordination service verifies the complete document set against the commercial invoice and LC (if applicable) before submission to the shipping line — ensuring that no document error reaches the consignee's customs broker." },
-      { type: "seealso", title: "Related Knowledge & Guides", links: [
-        { text: "First Order from Pakistan: The Operational Sourcing Guide", href: "/knowledge/textile-sourcing-operations-guide/", description: "End-to-end walkthrough of how a first Pakistan textile order works — from fabric specification through retail integration." },
+      { type: "seealso", links: [
+        { text: "Previous: Best Practice 6 — Pre-Shipment Inspection", href: "/guides/sourcing-best-practices-pre-shipment-inspection/", description: "AQL inspection scheduling, defect classification and FAIL response" },
+        { text: "Next: Best Practice 8 — Communication & Documentation", href: "/guides/sourcing-best-practices-communication-documentation/", description: "Buyer-supplier communication structure and change control" },
+        { text: "Incoterms 2020 — FOB, CIF, CFR & EXW Explained", href: "/guides/incoterms-for-textile-buyers/", description: "How shipping terms determine your document requirements and cost" },
+        { text: "Incoterms for Pakistan Textile Exports", href: "/knowledge/incoterms-fob-cif-pakistan-textile-exports/", description: "FOB vs CIF vs CFR as used in Pakistan export contracts" },
+        { text: "First Order from Pakistan — Operational Sourcing Guide", href: "/knowledge/textile-sourcing-operations-guide/", description: "End-to-end walkthrough of a first Pakistan textile order" },
+        { text: "Submit an RFQ — Full Export Document Set Managed for You", href: "/rfq/", description: "Commercial invoice, packing list, C/O and BL coordinated at loading" },
       ]},
     ],
   },
@@ -1496,6 +1678,13 @@ export const GUIDES: GuideArticle[] = [
       { type: "h2", text: "Maintaining a Supplier Communication Archive" },
       { type: "p", text: "At the close of each season, the full communication archive for each order should be archived by PO number: all emails, sample reports, lab test results, inspection reports, document sets and PO amendments in a single folder. This archive is the reference for any post-season dispute, audit or re-order enquiry, and the corporate memory that survives staff turnover." },
       { type: "note", text: "MZ Global Trading maintains a complete order file for every program — from initial quotation through delivery confirmation — and provides buyers with access to this file at any point during or after the season." },
+      { type: "seealso", links: [
+        { text: "Previous: Best Practice 7 — Export Logistics & Compliance", href: "/guides/sourcing-best-practices-export-logistics-compliance/", description: "Shipping terms, export documentation and freight coordination" },
+        { text: "Next: Best Practice 9 — Payment Terms & Trade Finance", href: "/guides/sourcing-best-practices-payment-terms-trade-finance/", description: "TT, LC and open-account structures for textile import programmes" },
+        { text: "First Shipment from Pakistan — Buyer's Checklist", href: "/guides/first-shipment-checklist/", description: "Documents, approvals and actions required before first shipment" },
+        { text: "First Order from Pakistan — Operational Sourcing Guide", href: "/knowledge/textile-sourcing-operations-guide/", description: "End-to-end walkthrough of how a first Pakistan textile order works" },
+        { text: "Submit an RFQ — Full Order File Maintained for Every Programme", href: "/rfq/", description: "Access your complete order history from quotation to delivery" },
+      ]},
     ],
   },
 
@@ -1549,8 +1738,13 @@ export const GUIDES: GuideArticle[] = [
         "Trade credit insurance: insures the buyer's accounts receivable against supplier non-performance — not a payment mechanism, but reduces the risk of open-account terms.",
       ]},
       { type: "note", text: "MZ Global Trading works with buyers on TT, LC and open-account terms depending on the relationship stage and order value. For new programs, we recommend 30/70 TT with balance payable on presentation of documents including third-party inspection pass — balancing speed with risk management." },
-      { type: "seealso", title: "Related Knowledge & Guides", links: [
-        { text: "First Order from Pakistan: The Operational Sourcing Guide", href: "/knowledge/textile-sourcing-operations-guide/", description: "End-to-end walkthrough of how a first Pakistan textile order works — from fabric specification through retail integration." },
+      { type: "seealso", links: [
+        { text: "Previous: Best Practice 8 — Communication & Documentation", href: "/guides/sourcing-best-practices-communication-documentation/", description: "Buyer-supplier communication structure and change control" },
+        { text: "Next: Best Practice 10 — Sustainable & Ethical Sourcing", href: "/guides/sourcing-best-practices-sustainable-ethical-sourcing/", description: "Certification requirements, supplier auditing and ESG transparency" },
+        { text: "Incoterms 2020 — FOB, CIF, CFR & EXW Explained", href: "/guides/incoterms-for-textile-buyers/", description: "How Incoterms interact with payment terms and document release" },
+        { text: "Incoterms for Pakistan Textile Exports", href: "/knowledge/incoterms-fob-cif-pakistan-textile-exports/", description: "FOB vs CIF vs CFR as used in Pakistan export contracts" },
+        { text: "First Order from Pakistan — Operational Sourcing Guide", href: "/knowledge/textile-sourcing-operations-guide/", description: "End-to-end walkthrough including payment structure for first orders" },
+        { text: "Submit an RFQ — Flexible Payment Terms for New Buyers", href: "/rfq/", description: "30/70 TT with inspection pass as standard for new programmes" },
       ]},
     ],
   },
@@ -1604,6 +1798,13 @@ export const GUIDES: GuideArticle[] = [
         "Continuous improvement: year-on-year trend in key metrics; engagement with buyer sustainability programs.",
       ]},
       { type: "note", text: "MZ Global Trading's factory panel is evaluated against environmental and social criteria annually. We provide buyers with a sustainability summary for each proposed factory — certification status, latest audit result and disclosed environmental performance metrics — as part of the factory selection process." },
+      { type: "seealso", links: [
+        { text: "Previous: Best Practice 9 — Payment Terms & Trade Finance", href: "/guides/sourcing-best-practices-payment-terms-trade-finance/", description: "TT, LC and open-account structures for textile import programmes" },
+        { text: "Certifications — GOTS, GRS, OEKO-TEX, BSCI, ISO 9001", href: "/qualitycompliance/certifications/", description: "Full certification matrix for Pakistan textile sourcing programmes" },
+        { text: "Textile Certifications Explained", href: "/guides/textile-certifications-explained/", description: "What each certification means, who requires it and how to verify it" },
+        { text: "Supplier Evaluation — Pakistan Textile Factories", href: "/qualitycompliance/supplierevaluation/", description: "MZ Global Trading's factory evaluation criteria including ESG scoring" },
+        { text: "Submit an RFQ — Sustainability Summary Available for Every Factory", href: "/rfq/", description: "Certification status and audit results shared before factory commitment" },
+      ]},
     ],
   },
 
@@ -4108,3 +4309,4 @@ export const GUIDE_SLUGS = GUIDES.map((g) => g.slug);
 export function getGuide(slug: string): GuideArticle | undefined {
   return GUIDES.find((g) => g.slug === slug);
 }
+

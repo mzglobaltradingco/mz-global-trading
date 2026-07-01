@@ -106,7 +106,7 @@ Shirt fabric specifications use yarn count (Ne — English cotton count) rather 
 - **Higher Ne number = finer yarn** — 100s cotton is very fine; used in luxury poplin
 - **Thread count (threads per inch)** is less commonly specified for shirts; yarn count is the standard
 
-For B2B shirt programmes, specifying yarn count (e.g., "40s × 40s, 133 × 72 poplin") communicates fabric quality precisely to a factory. A fabric brief stating only "poplin" leaves weight, count and density undefined.
+For B2B shirt programmes, specifying yarn count (e.g., "40s × 40s, 133 × 72 poplin") communicates fabric quality precisely to a factory. A fabric brief stating only "poplin" leaves weight, count and density undefined. Include these specifications in a structured [Tech Pack](/knowledge/how-to-read-textile-tech-pack-international-buyers/) — or use our [Tech Pack Template for Apparel](/downloads/tech-pack-template-apparel/) to brief our team.
 
 ## Certification Requirements
 
@@ -118,9 +118,15 @@ For B2B shirt programmes, specifying yarn count (e.g., "40s × 40s, 133 × 72 po
 | GOTS | Required for organic cotton label claims | EU, UK, USA natural retail |
 | ISO 9001 | Quality management | Volume corporate uniform tenders |
 
+For the full list of certifications held across our factory network — including OEKO-TEX, GOTS, BSCI and ISO 9001 — see our [certifications page](/qualitycompliance/certifications/).
+
 ## Sourcing Formal & Casual Shirts from Pakistan
 
 Pakistan's woven shirt factories in Lahore and Faisalabad operate with vertically integrated fabric-to-garment capability — ring-spun poplin, Oxford, twill and end-on-end all available at certified mill level. [Formal and casual shirts from Pakistan](/apparel/wovengarments/formalcasualshirts/) are available in all constructions from small corporate runs to large retail programmes.
+
+## Related Resources
+
+For buyers sourcing coordinated programmes, see our [Trouser Fabric Guide](/knowledge/trouser-fabric-guide/) covering chino, poly-viscose and stretch constructions that pair with formal shirt programmes. Our [pre-shipment inspection checklist for textile buyers](/knowledge/pre-shipment-inspection-checklist-textile-buyers/) covers woven garment quality checkpoints for fabric, construction and labelling at the factory level.
 
 [Request a shirt sourcing quote](/rfq/) with construction, yarn count target, collar style, certifications and annual volume — we return factory options and indicative FOB pricing within 3–5 business days.`,
 };

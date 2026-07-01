@@ -82,6 +82,10 @@ Specify which size range your programme requires in the RFQ. If targeting USA ma
 
 Pakistan's knitwear and garment factories produce [baby rompers](/apparel/babyandkids/babyrompers/) in rib knit, interlock, single jersey and double gauze constructions with OEKO-TEX Standard 100 Class 1 and GOTS-certified organic options. Coordinated programmes covering the full [Baby & Kids range from Pakistan](/apparel/babyandkids/) — including overalls, bibs, swaddle muslin and hooded towels — are available through a single sourcing relationship.
 
+## Related Resources
+
+For snap fastener specifications, pull-force testing and diaper-allowance construction for infants, see our [Baby Overalls Construction Guide](/knowledge/baby-overalls-construction-guide/). Before ordering, review the [Kids Apparel Safety Standards guide](/knowledge/kids-apparel-safety-standards/) covering CPSIA, EN 71 and OEKO-TEX Class 1 requirements by market. The full list of certifications held across our Pakistan factory network is on our [certifications page](/qualitycompliance/certifications/).
+
 [Submit a sourcing quote request](/rfq/) with fabric type, size range, print requirement, certifications needed and annual volume — mill matching and FOB pricing within 3–5 business days.`,
 };
 

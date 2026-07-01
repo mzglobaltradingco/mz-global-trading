@@ -94,11 +94,15 @@ The collar and placket are the second construction decision for [polo shirts](/a
 
 **GOTS** is required for any organic cotton claim — piqué fabric in the body, collar and any rib trims must all be GOTS-certified if an organic label is applied.
 
-**BSCI / Sedex SMETA** are the social compliance standards required by European and UK retailers and most major corporate procurement programmes. Confirm the producing factory holds a current audit before order placement.
+**BSCI / Sedex SMETA** are the social compliance standards required by European and UK retailers and most major corporate procurement programmes. Confirm the producing factory holds a current audit before order placement. The full list of certifications held across our factory network is on our [certifications page](/qualitycompliance/certifications/).
 
 ## Sourcing Polo Shirts from Pakistan
 
 MZ Global Trading sources [polo shirts](/apparel/knittedgarments/poloshirts/) in all three piqué constructions from Pakistan's knitwear mills. Coordinated programmes combining polo shirts with [T-shirts](/apparel/knittedgarments/tshirts/) for corporate uniform supply are available through a single consolidated RFQ.
+
+## Related Resources
+
+For fabric weight reference across the knitwear range, see our [GSM and fabric weight guide for textile buyers](/knowledge/understanding-gsm-fabric-weight-sourcing/). The [Henley Shirt Construction Guide](/knowledge/henley-shirt-construction-guide/) covers the collar-free knitwear alternative frequently paired with polo programmes for coordinated uniform development. Specify your polo programme using a structured [Tech Pack](/knowledge/how-to-read-textile-tech-pack-international-buyers/) — piqué construction, collar type, placket width and button specification should all be documented to avoid substitution at the mill level.
 
 [Submit an RFQ](/rfq/) with your piqué specification, GSM target, collar style, annual volume, target market and certifications — mill options and indicative FOB pricing returned within 3–5 business days.`,
 };

@@ -23,7 +23,7 @@ Sialkot is internationally recognised as Pakistan's centre for technical manufac
 
 Its factories are equipped for:
 
-- Protective workwear and high-visibility garments
+- [Protective workwear and high-visibility garments](/apparel/workwearapparel/) for industrial and facilities buyers
 - Technical performance fabrics for outdoor and industrial applications
 - Institutional uniforms for healthcare, hospitality and facilities management
 - Inspection-grade quality control aligned with international standards
@@ -32,9 +32,9 @@ Its factories are equipped for:
 
 Our expanded network means MZ Global Trading can now source from a single sourcing relationship:
 
-- **Apparel:** T-shirts, polo shirts, hoodies and casual garments (Karachi/Lahore)
-- **Home Textiles:** Towels, bed linen, institutional linen (Karachi/Faisalabad)
-- **Technical Workwear:** Protective garments, uniforms, industrial textiles (Sialkot)
+- **Apparel:** [T-shirts](/apparel/knittedgarments/tshirts/), [polo shirts](/apparel/knittedgarments/poloshirts/), [hoodies & sweatshirts](/apparel/knittedgarments/sweatshirtshoodies/) and casual garments (Karachi/Lahore)
+- **Home Textiles:** [Bath towels](/hometextile/bathlinen/towels/), [bed linen](/hometextile/bedlinen/bedsheets/), institutional linen (Karachi/Faisalabad)
+- **Technical Workwear:** [Workwear apparel — Pakistan manufacturer](/apparel/workwearapparel/), uniforms, industrial textiles (Sialkot)
 
 > Buyers sourcing across multiple categories can now consolidate into a single freight shipment — reducing logistics cost and documentation complexity.
 
@@ -42,7 +42,11 @@ Our expanded network means MZ Global Trading can now source from a single sourci
 
 Each new factory partner passes our full vetting criteria before any order is placed: compliance certification review, production capacity audit, quality control assessment and a reference check against prior export history.
 
-The Sialkot factories added to our network hold BSCI and ISO 9001 certification. OEKO-TEX and SA8000 documentation is available on request for specific orders.`,
+The Sialkot factories added to our network hold BSCI and ISO 9001 certification. OEKO-TEX and SA8000 documentation is available on request for specific orders. A full list of certifications held across our factory network is published on our [Certifications page](/qualitycompliance/certifications/).
+
+## Sourcing Across Categories
+
+Buyers consolidating multiple product categories into a single programme can now cover apparel, home textiles and technical workwear through one sourcing relationship. For buyers new to Pakistan sourcing, our [Supplier Evaluation process](/qualitycompliance/supplierevaluation/) explains how each factory is assessed before being admitted to our network. To discuss a multi-category sourcing programme, [submit an RFQ](/rfq/) and we will match your requirements to the appropriate factory clusters across Karachi, Faisalabad and Sialkot.`,
 };
 
 export default post;

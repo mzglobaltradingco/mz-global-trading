@@ -82,6 +82,8 @@ Pakistan's woven textile mills produce all major table linen constructions for h
 
 ## GSM and Fabric Comparison
 
+For buyers unfamiliar with GSM measurement methodology, our [GSM and fabric weight guide for textile buyers](/knowledge/understanding-gsm-fabric-weight-sourcing/) explains how weight is measured, tolerance standards, and what the numbers mean in practical sourcing terms.
+
 | Fabric | GSM range | Drape | Laundry ease | Premium positioning | Fire retardant available |
 |---|---|---|---|---|---|
 | Cotton damask | 180–280 | Excellent | Medium (ironing needed) | High | Yes — FR finish |
@@ -96,7 +98,7 @@ In the UK, EU and many Middle East markets, tablecloths used in public dining ar
 - **EU:** EN 1021-1 and EN 13773 (for fabrics in hospitality)
 - **UAE/GCC:** Local civil defence fire codes (typically FR fabric mandatory for all hotel table linen)
 
-Polyester damask and polyester-blend fabrics can be specified with inherent FR performance. 100% cotton and linen fabrics require an FR chemical finish which may affect hand feel and OEKO-TEX certification scope.
+Polyester damask and polyester-blend fabrics can be specified with inherent FR performance. 100% cotton and linen fabrics require an FR chemical finish which may affect hand feel and OEKO-TEX certification scope. Our full [certifications and compliance overview](/qualitycompliance/certifications/) lists the OEKO-TEX, GOTS and fire-retardancy certifications held across our mill network.
 
 ## Sizes Reference
 
@@ -110,6 +112,10 @@ Polyester damask and polyester-blend fabrics can be specified with inherent FR p
 ## Sourcing Table Covers from Pakistan
 
 MZ Global Trading sources [table covers](/hometextile/tablelinen/tablecovers/) in damask, poly-cotton, linen and jacquard from Pakistan's certified woven textile mills. Custom size, colour, pattern and embroidery programmes are available for hotel, restaurant and event buyers.
+
+## Related Resources
+
+For a step-by-step sourcing walkthrough covering factory selection, compliance requirements and order flow, see our [Guide to Sourcing Table Covers from Pakistan](/guides/sourcing-table-covers-pakistan/). The downloadable [Table Linen Specification Template](/downloads/table-linen-specification-template/) provides a pre-formatted brief to send to our team with your programme requirements.
 
 [Request a sourcing quote](/rfq/) with your fabric type, GSM range, size programme, FR requirement and annual volume — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };

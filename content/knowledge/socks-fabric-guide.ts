@@ -105,6 +105,10 @@ Related knitted apparel categories with similar yarn and construction expertise:
 
 [MZ Global Trading sources socks from Pakistan](/apparel/socks/) for retail, promotional, institutional and athletic programmes. Yarn blends, knit gauge, toe closure method and compression level are all specifiable to your programme requirements.
 
+## Related Resources
+
+For yarn weight and fabric weight reference across knitwear categories, see our [GSM and fabric weight guide for textile buyers](/knowledge/understanding-gsm-fabric-weight-sourcing/). The full list of certifications held across our knitwear factory network — OEKO-TEX Class 1, GOTS, BSCI — is on our [certifications page](/qualitycompliance/certifications/). For quality sign-off before shipment, our [pre-shipment inspection checklist for textile buyers](/knowledge/pre-shipment-inspection-checklist-textile-buyers/) covers the fabric, labelling and measurement verification steps relevant to socks production.
+
 [Request a socks sourcing quote](/rfq/) with your yarn requirement, knit gauge, quantity, colour or jacquard design brief, and destination market — mill match and FOB pricing returned within 3–5 business days.`,
 };
 

@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useState, useMemo, useEffect, useRef, useCallback } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import {
   staggerContainerVariants,
@@ -17,9 +17,8 @@ const numReveal: Variants = {
   }),
 };
 import PageHero from "@/components/PageHero";
-import { getAllPosts, getFeaturedPost } from "@/lib/knowledge";
+import { getAllPosts } from "@/lib/knowledge";
 import PostCard from "@/components/knowledge/PostCard";
-import FeaturedBanner from "@/components/knowledge/FeaturedBanner";
 import EmptyState from "@/components/knowledge/EmptyState";
 import NewsletterStrip from "@/components/knowledge/NewsletterStrip";
 import type { KnowledgeCategory } from "@/types/knowledge";
@@ -34,20 +33,16 @@ const CATEGORIES: ("All" | KnowledgeCategory)[] = [
 ];
 const PAGE_SIZE = 12;
 
-type SortMode = "newest" | "featured";
-
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function KnowledgeHubContent() {
   const allPosts = getAllPosts();
-  const featuredPost = getFeaturedPost();
 
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<"All" | KnowledgeCategory>("All");
-  const [sort, setSort] = useState<SortMode>("newest");
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [page, setPage] = useState(1);
 
-  const sentinelRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLElement>(null);
 
   // ── Filtered + sorted result set ──────────────────────────────────────────
   const filtered = useMemo(() => {
@@ -67,49 +62,22 @@ export default function KnowledgeHubContent() {
       );
     }
 
-    if (sort === "featured") {
-      result = result.filter((p) => p.featured);
-    } else {
-      result = [...result].sort(
-        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-      );
-    }
-
-    return result;
-  }, [allPosts, query, category, sort]);
-
-  // Reset visible count when filters change — but keep scroll position stable
-  useEffect(() => {
-    setVisibleCount(PAGE_SIZE);
-  }, [query, category, sort]);
-
-  const visible = filtered.slice(0, visibleCount);
-  const hasMore = visibleCount < filtered.length;
-
-  // ── Infinite scroll — load next page when sentinel enters viewport ─────────
-  const loadMore = useCallback(() => {
-    setVisibleCount((n) => Math.min(n + PAGE_SIZE, filtered.length));
-  }, [filtered.length]);
-
-  useEffect(() => {
-    const el = sentinelRef.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && hasMore) loadMore();
-      },
-      { rootMargin: "200px" }
+    return [...result].sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
     );
+  }, [allPosts, query, category]);
 
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [hasMore, loadMore]);
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setPage(1);
+  }, [query, category]);
+
+  const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+  const paginated = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
   function resetFilters() {
     setQuery("");
     setCategory("All");
-    setSort("newest");
   }
 
   return (
@@ -199,31 +167,12 @@ export default function KnowledgeHubContent() {
             ))}
           </div>
 
-          {/* Sort toggle */}
-          <div className="flex items-center gap-1 ml-auto shrink-0" role="group" aria-label="Sort articles">
-            {(["newest", "featured"] as SortMode[]).map((mode) => (
-              <button
-                key={mode}
-                onClick={() => setSort(mode)}
-                className={`px-3 py-1.5 rounded text-xs font-semibold transition-colors capitalize ${
-                  sort === mode ? "bg-gold text-navy-900" : "text-gray-500 hover:text-navy-900"
-                }`}
-              >
-                {mode}
-              </button>
-            ))}
-          </div>
         </div>
       </div>
 
       {/* ── Main content ──────────────────────────────────────────────────── */}
-      <section className="py-16 bg-gray-50">
+      <section ref={contentRef} className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          {/* Featured banner — only when no active filter/search */}
-          {featuredPost && !query.trim() && category === "All" && (
-            <FeaturedBanner post={featuredPost} />
-          )}
 
           {/* Results count when filtering */}
           {(query.trim() || category !== "All") && (
@@ -247,27 +196,53 @@ export default function KnowledgeHubContent() {
               </motion.div>
             ) : (
               <motion.div
-                key={`grid-${query}-${category}-${sort}`}
+                key={`grid-${query}-${category}`}
                 variants={staggerContainerVariants}
                 initial="hidden"
                 animate="visible"
                 viewport={viewportOnce}
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
               >
-                {visible.map((post) => (
+                {paginated.map((post) => (
                   <PostCard key={post.slug} post={post} />
                 ))}
               </motion.div>
             )}
           </AnimatePresence>
 
-          {/* Infinite scroll sentinel */}
-          <div ref={sentinelRef} className="h-1 mt-8" aria-hidden="true" />
-
-          {/* Loading indicator */}
-          {hasMore && (
-            <div className="flex justify-center pt-4">
-              <span className="text-gray-500 text-sm">Loading more…</span>
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-gray-200">
+              <button
+                onClick={() => contentRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}
+                className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-navy-900 transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                </svg>
+                Back to search
+              </button>
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={() => { setPage((p) => p - 1); contentRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
+                  disabled={page === 1}
+                  aria-label="Previous page"
+                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${page === 1 ? "text-gray-300 cursor-not-allowed" : "text-navy-900 border border-gray-200 hover:bg-gray-100 bg-white"}`}
+                >
+                  ← Previous
+                </button>
+                <span className="text-sm text-gray-600 min-w-[90px] text-center">
+                  Page <strong className="text-navy-900">{page}</strong> of <strong className="text-navy-900">{totalPages}</strong>
+                </span>
+                <button
+                  onClick={() => { setPage((p) => p + 1); contentRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
+                  disabled={page === totalPages}
+                  aria-label="Next page"
+                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${page === totalPages ? "text-gray-300 cursor-not-allowed" : "bg-navy-900 text-white hover:bg-navy-800"}`}
+                >
+                  Next →
+                </button>
+              </div>
             </div>
           )}
         </div>

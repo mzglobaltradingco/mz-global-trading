@@ -28,7 +28,7 @@ Chino fabric is a 100% cotton or cotton-stretch twill — typically a 2×1 or 3�
 
 **Best markets:** USA casual and smart-casual retail, UK high street, EU mass market, Australia, Middle East casual wear.
 
-For volume [pants and trousers sourced from Pakistan](/apparel/wovengarments/pantsandtrousers/), chino construction represents the largest programme type by unit volume.
+For volume [pants and trousers sourced from Pakistan](/apparel/wovengarments/pantsandtrousers/), chino construction represents the largest programme type by unit volume. Buyers looking for coordinated shirting to complete a programme should see our [Dress Shirt Fabric Guide](/knowledge/dress-shirt-fabric-guide/) covering poplin, Oxford and twill constructions.
 
 ## Dress Trouser Fabrics
 
@@ -107,9 +107,15 @@ The cut and silhouette of a trouser constrains your fabric options:
 | WRAP | Social compliance | USA corporate |
 | GOTS | Required for organic cotton label claims | UK/EU organic retail |
 
+The full list of certifications held across our factory and mill network is available on our [certifications page](/qualitycompliance/certifications/).
+
 ## Sourcing Pants & Trousers from Pakistan
 
 Pakistan's woven garment factories in Lahore, Karachi and Faisalabad produce full-cut trouser programmes in chino, poly-viscose, linen blend and stretch constructions. [Pants and trousers from Pakistan](/apparel/wovengarments/pantsandtrousers/) are available in all standard and custom fabric constructions from small retail runs to large corporate uniform programmes.
+
+## Related Resources
+
+For fabric weight reference across woven garment categories, see our [GSM and fabric weight guide for textile buyers](/knowledge/understanding-gsm-fabric-weight-sourcing/). Buyers sourcing bottoms-only programmes should also review our [Shorts Fabric Guide](/knowledge/shorts-fabric-guide/) covering chino, linen, swim and active constructions for coordinated seasonal collections.
 
 [Request a trouser sourcing quote](/rfq/) with fabric construction, GSM target, fit, size range, certifications and volume — we return factory options and indicative FOB pricing within 3–5 business days.`,
 };

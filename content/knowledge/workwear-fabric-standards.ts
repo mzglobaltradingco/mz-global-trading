@@ -87,13 +87,17 @@ All [workwear from Pakistan](/apparel/workwearapparel/) destined for regulated m
 - **OEKO-TEX Standard 100** — minimum baseline for all garments regardless of performance category
 - **EN ISO certification** — performance garments (hi-vis, FR, anti-static) require third-party type examination and CE marking for EU supply; UKCA marking for UK post-Brexit
 - **BSCI or Sedex** — social compliance audit, required by most European buyers
-- **ISO 9001** — quality management system, required for hospital and government tenders
+- **[ISO 9001](/knowledge/iso-9001-certification-quality-management/)** — quality management system, required for hospital and government tenders
 
 Performance certification must come from a notified body (EU) or accredited lab — factory test reports alone are not acceptable for CE or UKCA marked products.
 
 ## Sourcing Workwear from Pakistan
 
-[MZ Global Trading sources workwear](/apparel/workwearapparel/) across all categories — general industrial cotton canvas programmes, hi-vis collections and FR garments — from Pakistan's certified woven garment facilities. Related categories include [cargo pants and multi-pocket work trousers](/apparel/wovengarments/cargopants/) in the same production facilities.
+[MZ Global Trading sources workwear](/apparel/workwearapparel/) across all categories — general industrial cotton canvas programmes, hi-vis collections and FR garments — from Pakistan's certified woven garment facilities. Our [2024 network expansion into Sialkot's technical textile sector](/knowledge/mz-global-expands-sialkot-technical-textiles/) added specialist workwear and protective apparel capability alongside our existing Karachi and Faisalabad factory base. Related categories include [cargo pants and multi-pocket work trousers](/apparel/wovengarments/cargopants/) in the same production facilities.
+
+## Related Resources
+
+For workwear export shipping — choosing between FOB and CIF — see our [Incoterms guide for Pakistan textile buyers](/knowledge/incoterms-fob-cif-pakistan-textile-exports/). The full list of certifications held across our network — OEKO-TEX, ISO 9001, BSCI, WRAP — is published on our [certifications page](/qualitycompliance/certifications/).
 
 [Request a workwear quote](/rfq/) with your standard requirement (EN ISO 20471 class, EN ISO 11612 codes, or general industrial), fabric weight, colour, quantity and certification requirement — factory match and FOB pricing returned within 3–5 business days.`,
 };

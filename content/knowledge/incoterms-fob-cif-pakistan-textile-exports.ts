@@ -25,7 +25,7 @@ Under FOB, the seller is responsible for goods until they are loaded onto the ve
 - **Who pays freight:** Buyer
 - **Risk transfers:** When goods are loaded at origin port
 
-FOB is the preferred Incoterm for experienced buyers. It gives you full control over your freight forwarder, your insurance policy, and your shipping timeline.
+FOB is the preferred Incoterm for experienced buyers. It gives you full control over your freight forwarder, your insurance policy, and your shipping timeline. For a side-by-side breakdown of all four Incoterms used in Pakistan textile trade, see our [Incoterms 2020 guide for textile importers](/guides/incoterms-for-textile-buyers/).
 
 ## CIF (Cost, Insurance and Freight)
 
@@ -47,7 +47,11 @@ For most B2B buyers sourcing from Pakistan:
 
 As your sourcing programme matures, transitioning to FOB almost always reduces total landed cost and gives you better visibility over your supply chain.
 
-MZ Global Trading can quote on either basis and will provide transparent freight estimates on request.`,
+MZ Global Trading can quote on either basis and will provide transparent freight estimates on request.
+
+## Further Reading
+
+For a complete cost-risk matrix covering EXW, FOB, CFR and CIF — including which terms are standard for first orders from Pakistan — see our [Incoterms 2020 Quick Reference download](/downloads/incoterms-quick-reference/). Export documentation requirements, HS code classification and preference scheme selection for EU, UK and USA buyers are covered in our [Export Logistics & Compliance guide](/guides/sourcing-best-practices-export-logistics-compliance/). For the operational flow of a complete Pakistan textile order from specification to delivery, see [First Order from Pakistan: The Operational Sourcing Guide](/knowledge/textile-sourcing-operations-guide/). Ready to place your first order? [Submit an RFQ](/rfq/) and we will confirm incoterm options with your quotation.`,
 };
 
 export default post;

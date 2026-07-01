@@ -27,7 +27,7 @@ The first page identifies the product: style name, style number, season, target 
 
 ### Bill of Materials (BOM)
 
-The BOM lists every component: main fabric (with GSM, composition and construction), lining, interlining, thread, labels, trims, buttons, zips, packaging materials. Each item has a specified supplier or an "as sourced" note.
+The BOM lists every component: main fabric (with [GSM, composition](/knowledge/understanding-gsm-fabric-weight-sourcing/) and construction), lining, interlining, thread, labels, trims, buttons, zips, packaging materials. Each item has a specified supplier or an "as sourced" note.
 
 ### Measurement Specification
 
@@ -47,11 +47,15 @@ Pantone references for all colourways, placement coordinates for prints or embro
 
 ### Care and Label Specifications
 
-Wash instructions, fibre content declaration, country of origin, size label content and placement — all must comply with the regulations of your destination market.
+Wash instructions, fibre content declaration, country of origin, size label content and placement — all must comply with the regulations of your destination market. Our [Textile Product Lifecycle guide on Packaging & Labelling](/guides/textile-product-lifecycle-packaging-labelling/) covers mandatory requirements for USA, UK, EU, Canada and Australia.
 
 ## What to Do If You Don't Have a Tech Pack
 
-If you are developing a new product, share a physical sample, a reference garment or detailed photographs with measurements marked. MZ Global Trading can help scope the specification at enquiry stage — a complete tech pack is ideal, but is not required to begin a sourcing conversation.`,
+If you are developing a new product, share a physical sample, a reference garment or detailed photographs with measurements marked. MZ Global Trading can help scope the specification at enquiry stage — a complete tech pack is ideal, but is not required to begin a sourcing conversation.
+
+## Useful Resources
+
+To write your own tech pack rather than interpret someone else's, see our step-by-step [guide on how to write a Tech Pack for garment and home textile manufacturing](/guides/how-to-write-a-tech-pack/). Pre-formatted fill-in templates are available for immediate download: [Tech Pack Template for Apparel](/downloads/tech-pack-template-apparel/) and [Tech Pack Template for Home Textiles](/downloads/tech-pack-template-home-textiles/). Once your tech pack is ready, [submit an RFQ](/rfq/) and our team will match your specification to the right factory within 24 hours.`,
 };
 
 export default post;

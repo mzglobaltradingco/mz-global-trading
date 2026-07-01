@@ -23,7 +23,7 @@ For procurement managers sourcing [tank tops from Pakistan](/apparel/knittedgarm
 
 Single jersey is the most widely produced fabric for tank tops in Pakistan's knitwear sector. A plain interlocked knit structure — one loop system — produces a lightweight, smooth fabric with moderate stretch.
 
-**GSM:** 140–180 GSM. The commercial centre of mass for promotional and basic retail tank tops is 150–170 GSM.
+**GSM:** 140–180 GSM. The commercial centre of mass for promotional and basic retail tank tops is 150–170 GSM. For a full explanation of how GSM is measured and what ranges are appropriate across knitwear categories, see our [GSM and fabric weight guide for textile buyers](/knowledge/understanding-gsm-fabric-weight-sourcing/).
 
 **Stretch:** 2-way stretch (horizontal). Not a 4-way stretch fabric — does not stretch significantly lengthwise.
 
@@ -113,11 +113,15 @@ Specify binding width (typically 1–2 cm) and whether the binding is self-colou
 
 **GOTS:** Required for organic cotton claim — applies to body fabric, rib binding and any trim components.
 
-**BSCI/Sedex:** Social compliance audit — required by most EU and UK retailer supply programmes.
+**BSCI/Sedex:** Social compliance audit — required by most EU and UK retailer supply programmes. The full list of certifications held across our Pakistan factory network is published on our [certifications and compliance page](/qualitycompliance/certifications/).
 
 ## Sourcing Tank Tops from Pakistan
 
 MZ Global Trading sources [tank tops](/apparel/knittedgarments/tanktops/) in all fabric constructions from Pakistan's knitwear mills. Coordinated programmes combining tank tops with [T-shirts](/apparel/knittedgarments/tshirts/) and other knitwear in the same fabric family are available through a single sourcing contact.
+
+## Related Resources
+
+Specify your tank top construction using a structured [tech pack](/knowledge/how-to-read-textile-tech-pack-international-buyers/) — or download our pre-formatted [Tech Pack Template for Apparel](/downloads/tech-pack-template-apparel/) to brief our team in a format the factory can act on immediately. For knitwear quality sign-off, see the [pre-shipment inspection checklist for textile buyers](/knowledge/pre-shipment-inspection-checklist-textile-buyers/) covering GSM, construction and labelling verification.
 
 [Submit an RFQ](/rfq/) with your fabric construction, GSM, neckline finish, decoration method, size range, annual volume and certifications — factory match and indicative FOB pricing within 3–5 business days.`,
 };

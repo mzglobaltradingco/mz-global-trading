@@ -23,12 +23,12 @@ A higher GSM indicates a heavier, denser fabric. A lower GSM means lighter, more
 
 Understanding where your product should sit on the GSM scale prevents costly specification errors:
 
-- **T-shirts (standard):** 160–180 GSM — lightweight, breathable, cost-effective
-- **T-shirts (premium):** 200–220 GSM — substantial hand feel, retail-ready
-- **Sweatshirts & hoodies:** 280–320 GSM — standard weight for most markets
+- **[T-shirts from Pakistan](/apparel/knittedgarments/tshirts/) (standard):** 160–180 GSM — lightweight, breathable, cost-effective
+- **[T-shirts from Pakistan](/apparel/knittedgarments/tshirts/) (premium):** 200–220 GSM — substantial hand feel, retail-ready
+- **[Sweatshirts & hoodies](/apparel/knittedgarments/sweatshirtshoodies/):** 280–320 GSM — standard weight for most markets
 - **Heavyweight hoodies:** 340–400 GSM — premium feel, popular in colder climates
-- **Bath towels:** 400–600 GSM — lower end for budget institutional; 550+ for hotel quality
-- **Bed sheets:** 100–200 GSM — thread count matters equally here
+- **[Bath towels — Pakistan manufacturer](/hometextile/bathlinen/towels/):** 400–600 GSM — lower end for budget institutional; 550+ for hotel quality
+- **[Bedsheets & bed linen](/hometextile/bedlinen/bedsheets/):** 100–200 GSM — thread count matters equally here
 
 ## How GSM Affects Your Unit Price
 
@@ -48,7 +48,11 @@ Before placing an order, confirm:
 - Whether the factory has the machinery to achieve it consistently
 - Whether pre-production samples will be GSM-tested before bulk begins
 
-MZ Global Trading confirms GSM compliance at both the pre-production and pre-shipment stage on every order.`,
+MZ Global Trading confirms GSM compliance at both the pre-production and pre-shipment stage on every order.
+
+## Where to Go Next
+
+For a complete GSM and thread-count reference table across every product category, see our [GSM & Fabric Weight Guide for Buyers](/guides/gsm-fabric-weight-guide/). The [pre-shipment inspection checklist for textile buyers](/knowledge/pre-shipment-inspection-checklist-textile-buyers/) covers GSM testing protocol in detail — including tolerance thresholds and what a failing result means commercially. When your fabric specification is confirmed, [submit an RFQ](/rfq/) to receive factory options and pricing within 3–5 business days.`,
 };
 
 export default post;

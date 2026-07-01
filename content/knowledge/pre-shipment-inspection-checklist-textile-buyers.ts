@@ -36,7 +36,7 @@ Use this as a starting point. Tailor it to your specific product and market requ
 
 ### Fabric and Construction
 
-- GSM within agreed tolerance (±5%)
+- [GSM](/knowledge/understanding-gsm-fabric-weight-sourcing/) within agreed tolerance (±5%) — verify with circular cutter and precision scale
 - Fabric composition matches specification
 - Colour matches approved sample under standard light sources (D65 and TL84)
 - Seam strength and stitch density within specification
@@ -54,11 +54,15 @@ Use this as a starting point. Tailor it to your specific product and market requ
 - Buttons, zips and closures functional and secure
 - Embellishments registered correctly and durably applied
 
-> The AQL standard most widely used in textile export is AQL 2.5 for major defects. Agree your AQL level with your sourcing partner before production begins — not after.
+> The AQL standard most widely used in textile export is AQL 2.5 for major defects. Agree your AQL level with your sourcing partner before production begins — not after. For a full explanation of AQL sampling methodology, sample sizes and acceptance numbers, see our [AQL Pre-Shipment Inspection guide](/guides/aql-pre-shipment-inspection/).
 
 ## Working With Your Sourcing Partner
 
-MZ Global Trading conducts basic production reviews as standard on all orders. Dedicated third-party inspection scope and associated costs are agreed on a per-order basis before production begins.`,
+MZ Global Trading conducts basic production reviews as standard on all orders. Dedicated third-party inspection scope and associated costs are agreed on a per-order basis before production begins. Our full [Inspection Process](/qualitycompliance/inspectionprocess/) covers what is checked at pre-production, inline and pre-shipment stages.
+
+## Related Resources
+
+For the ISO 2859-1 sampling table — sample sizes and acceptance numbers by lot size — download our [AQL Level II Reference Table](/downloads/aql-reference-table/). The complete [Pre-Shipment Inspection Checklist PDF](/downloads/pre-shipment-inspection-checklist/) is available to download and use with your QC team. For ISO 9001 and social compliance certifications held across our factory network, see [Our ISO 9001 Certification: What It Means for Your Orders](/knowledge/iso-9001-certification-quality-management/). When you are ready to place an order with independent inspection built in, [submit an RFQ](/rfq/).`,
 };
 
 export default post;

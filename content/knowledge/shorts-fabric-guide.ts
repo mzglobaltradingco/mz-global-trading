@@ -42,7 +42,7 @@ Linen shorts command a retail price premium in UK, European, Australian and Sout
 
 **GSM:** 160–200 GSM.
 
-**Care:** Linen creases readily. For retail markets where easy-care performance is expected, specify a linen-cotton blend over 100% linen and include care label guidance on the Tech Pack.
+**Care:** Linen creases readily. For retail markets where easy-care performance is expected, specify a linen-cotton blend over 100% linen and include care label guidance on the [Tech Pack](/knowledge/how-to-read-textile-tech-pack-international-buyers/).
 
 **Season:** Spring/summer exclusive in UK and EU. Year-round in Australia and the Middle East.
 
@@ -123,9 +123,15 @@ USA retail typically sells multiple inseam lengths in the same style. EU and UK 
 | WRAP | Social compliance | USA distributors |
 | GOTS | Required for organic cotton label claims | EU/UK organic retail |
 
+For the full list of certifications available across our Pakistan factory network — including OEKO-TEX, GRS, BSCI and GOTS — see our [certifications and compliance page](/qualitycompliance/certifications/).
+
 ## Sourcing Shorts from Pakistan
 
 MZ Global Trading sources [shorts from Pakistan](/apparel/wovengarments/shorts/) in chino, linen-blend, woven swim and athletic constructions. Coordinated seasonal programmes covering shorts alongside [cargo pants](/apparel/wovengarments/cargopants/) for the same retail customer are available through a single consolidated RFQ.
+
+## Related Resources
+
+For buyers sourcing coordinated bottomswear programmes, our [Trouser Fabric Guide](/knowledge/trouser-fabric-guide/) covers chino, poly-viscose, linen and stretch constructions. For GSM reference across woven garments, see our [GSM and fabric weight guide for textile buyers](/knowledge/understanding-gsm-fabric-weight-sourcing/).
 
 [Request a shorts sourcing quote](/rfq/) with fabric type, inseam length, waistband type, certifications required and annual volume — we return factory options and indicative FOB pricing within 3–5 business days.`,
 };

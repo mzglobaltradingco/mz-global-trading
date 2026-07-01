@@ -68,7 +68,7 @@ const PRODUCTS = [
   {
     name: "Institutional Bedding",
     slug: "institutionalbedding",
-    img: "/images/hero/hero-institutional-towels.webp",
+    img: "/images/hero/hero-institutional-bedding.webp",
     desc: "ISO-grade flat sheets, fitted sheets and pillow covers for hospitals, hotels and government facilities. White, plain.",
     spec: "Plain White · Durable Press · ISO Grade",
     badge: "Institutional",

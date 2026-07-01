@@ -21,7 +21,7 @@ Snap fasteners are the most safety-critical hardware element in [baby overalls f
 
 The choking hazard threshold for small parts in children's garments is a cylinder with a diameter of 31.8 mm and a depth of 57.1 mm (USA CPSC "small parts cylinder"). A snap component that separates from the garment and passes entirely into this cylinder is classified as a choking hazard. In practice, metal snap components at the standard sizes used in infant garments (line 20–24) do not typically fail this test on the component itself, but individual separated parts — particularly the cap and the socket — must be tested at third-party labs for CPSIA-required children's products sold in the USA. EU requirements are tested to EN 71-1 physical and mechanical properties.
 
-Pull-force testing: each snap must withstand a minimum 90 N (approximately 9 kg) pull-force without detachment. Specify this requirement in the Tech Pack and request the snap manufacturer's test certificate. The factory must conduct in-line pull testing on production samples.
+Pull-force testing: each snap must withstand a minimum 90 N (approximately 9 kg) pull-force without detachment. Specify this requirement in the [Tech Pack](/knowledge/how-to-read-textile-tech-pack-international-buyers/) and request the snap manufacturer's test certificate. The factory must conduct in-line pull testing on production samples.
 
 ### Snap Placement
 
@@ -72,7 +72,7 @@ Standard infant overalls size run: Newborn (up to 4 kg), 0–3M, 3–6M, 6–9M,
 
 ## Certification Requirements
 
-**OEKO-TEX Standard 100 Class 1:** Mandatory for all infant garments in EU, UK and USA retail. Covers fabric and all accessories including snaps, buttons, thread, labels and any print or embroidery.
+**OEKO-TEX Standard 100 Class 1:** Mandatory for all infant garments in EU, UK and USA retail. Covers fabric and all accessories including snaps, buttons, thread, labels and any print or embroidery. For a full overview of infant and children's apparel safety standards by market, see our [Kids Apparel Safety Standards guide](/knowledge/kids-apparel-safety-standards/).
 
 **GOTS:** Required if organic cotton is claimed on the product or its packaging. Coordinate certification at fibre, spinning, fabric and garment level.
 
@@ -81,6 +81,10 @@ Standard infant overalls size run: Newborn (up to 4 kg), 0–3M, 3–6M, 6–9M,
 ## Sourcing Baby Overalls from Pakistan
 
 Pakistan's garment factories produce [baby overalls](/apparel/babyandkids/overalls/) across denim, jersey and corduroy constructions with OEKO-TEX Class 1 certification and GOTS-certified organic fabric options. The full [Baby & Kids apparel range from Pakistan](/apparel/babyandkids/) — including rompers, bibs, swaddle muslin and hooded towels — is available through coordinated RFQ programmes.
+
+## Related Resources
+
+Our [Baby Romper Fabric Guide](/knowledge/baby-romper-fabric-guide/) covers soft fabric constructions and snap placement for the 0–24M category, and pairs naturally with overalls for coordinated seasonal collections. The full list of certifications — OEKO-TEX Class 1, GOTS, BSCI — held across our factory network is published on our [certifications page](/qualitycompliance/certifications/).
 
 [Request a sourcing quote](/rfq/) with your fabric preference, size run, snap specification, certifications required and annual volume — factory matching and FOB pricing within 3–5 business days.`,
 };

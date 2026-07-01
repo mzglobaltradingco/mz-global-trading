@@ -12,7 +12,7 @@ const post: KnowledgePost = {
   date: "2026-06-28",
   author: "M. Muzammil",
   featured: false,
-  image: "/knowledge/textile-sourcing-operations-guide.webp",
+  image: "/knowledge/placeholder.webp",
   content: `## Why Operational Knowledge Is Your Competitive Edge
 
 Most international buyers discover Pakistan textile sourcing through trade shows, directories, or supplier introductions. They arrive with product knowledge — GSM requirements, certifications, quantity targets — but underestimate the operational layer: how a Pakistan sourcing programme actually functions between the point of enquiry and the point of delivery.

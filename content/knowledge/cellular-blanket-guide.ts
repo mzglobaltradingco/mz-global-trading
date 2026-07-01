@@ -84,6 +84,10 @@ Do not iron cellular blankets — the heat flattens the open-cell structure and 
 
 MZ Global Trading sources [cellular thermal blankets](/hometextile/thermalblankets/cellularthermalblanket/) in healthcare-grade and institutional specifications from Pakistan's certified textile manufacturers. Programmes combining cellular blankets with [fleece thermal blankets](/hometextile/thermalblankets/fleecethermalblankets/) for different ward or programme types are available through a single consolidated RFQ.
 
+## Related Resources
+
+For GSM measurement methodology and the conversion between oz/yd² and GSM used in British healthcare specifications, see our [GSM and fabric weight guide for textile buyers](/knowledge/understanding-gsm-fabric-weight-sourcing/). Our [Guide to Sourcing Cellular Blankets from Pakistan](/guides/sourcing-cellular-blankets-pakistan/) covers NHS procurement requirements, audit standards and order flow. The full list of certifications held across our factory network — OEKO-TEX, ISO 9001, Sedex — is on our [certifications page](/qualitycompliance/certifications/). For pre-shipment quality sign-off on healthcare textile orders, see our [pre-shipment inspection checklist for textile buyers](/knowledge/pre-shipment-inspection-checklist-textile-buyers/).
+
 [Request a sourcing quote](/rfq/) with your GSM requirement, size range, healthcare standard (NHS/GPO/EU hospital), annual volume and destination market — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };
 
