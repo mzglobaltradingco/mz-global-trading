@@ -99,7 +99,7 @@ A complete programme specification covering GSM, yarn type (ring-spun/combed), s
 
 ## Related Resources
 
-Before finalising your specification, review the full [certifications held across our factory network](/qualitycompliance/certifications/) — OEKO-TEX, GOTS, BSCI, WRAP and ISO 9001 documentation is available on request. For pre-shipment quality assurance, our [pre-shipment inspection checklist for textile buyers](/knowledge/pre-shipment-inspection-checklist-textile-buyers/) covers fabric, labelling and measurement verification at the factory level.
+Before finalising your specification, review the full [certifications held across our factory network](/qualitycompliance/certifications/) — OEKO-TEX, GOTS, BSCI, WRAP and ISO 9001 documentation is available on request. Use our [Textile Tools Calculator](/textile-tools-calculator/) to cross-check GSM against oz/yd² or to reference standard weight tables for your product category. For pre-shipment quality assurance, our [pre-shipment inspection checklist for textile buyers](/knowledge/pre-shipment-inspection-checklist-textile-buyers/) covers fabric, labelling and measurement verification at the factory level.
 
 [Submit an RFQ](/rfq/) with your target GSM, annual volume, destination market and certification requirements — we return a factory match, material spec confirmation and indicative FOB pricing.`,
 };

@@ -55,7 +55,7 @@ If you are developing a new product, share a physical sample, a reference garmen
 
 ## Useful Resources
 
-To write your own tech pack rather than interpret someone else's, see our step-by-step [guide on how to write a Tech Pack for garment and home textile manufacturing](/guides/how-to-write-a-tech-pack/). Pre-formatted fill-in templates are available for immediate download: [Tech Pack Template for Apparel](/downloads/tech-pack-template-apparel/) and [Tech Pack Template for Home Textiles](/downloads/tech-pack-template-home-textiles/). Once your tech pack is ready, [submit an RFQ](/rfq/) and our team will match your specification to the right factory within 24 hours.`,
+To write your own tech pack rather than interpret someone else's, see our step-by-step [guide on how to write a Tech Pack for garment and home textile manufacturing](/guides/how-to-write-a-tech-pack/). Pre-formatted fill-in templates are available for immediate download: [Tech Pack Template for Apparel](/downloads/tech-pack-template-apparel/) and [Tech Pack Template for Home Textiles](/downloads/tech-pack-template-home-textiles/). For the commercial side of your order — shipping terms, risk transfer and document requirements — see our article on [Incoterms for Pakistan textile exports (FOB vs CIF vs CFR)](/knowledge/incoterms-fob-cif-pakistan-textile-exports/). Once your tech pack is ready, [submit an RFQ](/rfq/) and our team will match your specification to the right factory within 24 hours.`,
 };
 
 export default post;

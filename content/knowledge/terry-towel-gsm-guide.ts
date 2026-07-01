@@ -122,7 +122,7 @@ If you are sourcing bath linen across multiple categories, our sourcing network 
 - [Beach & pool towels](/hometextile/bathlinen/beachpooltowel/) — lightweight reactive-print terry, 300–400 GSM
 - [Bath mats](/hometextile/bathlinen/bathmats/) — tufted and woven, 800–2000 GSM (measured differently)
 
-[Request a quote](/rfq/) with your target GSM, size range and annual volume — we will return mill options and indicative FOB pricing within 3–5 business days.`,
+For quick GSM conversions — including oz/yd² to GSM and standard towel weight reference tables — use our [Textile Tools Calculator](/textile-tools-calculator/). When your GSM specification is confirmed, [request a sourcing quote](/rfq/) with your target GSM, size range and annual volume — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };
 
 export default post;

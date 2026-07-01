@@ -419,6 +419,7 @@ export const GUIDES: GuideArticle[] = [
         { href: "/knowledge/understanding-gsm-fabric-weight-sourcing/", text: "GSM & Fabric Weight Guide — Measurement, Tolerances & Sourcing Application" },
         { href: "/knowledge/terry-towel-gsm-guide/", text: "Terry Towel GSM Guide — 300 GSM to 900 GSM Explained" },
         { href: "/knowledge/tshirt-fabric-weight-guide/", text: "T-Shirt Fabric Weight Guide — 130 GSM to 280 GSM for Fashion & Workwear" },
+        { href: "/textile-tools-calculator/", text: "Textile Tools Calculator — Instant GSM / oz/yd² Conversions & Fabric Weight Tables" },
         { href: "/guides/how-to-write-a-tech-pack/", text: "How to Write a Tech Pack — Specifying GSM with Tolerance" },
         { href: "/rfq/", text: "Submit an RFQ — GSM Recommendation Included with Every Quotation" },
       ]},

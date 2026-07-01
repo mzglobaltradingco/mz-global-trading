@@ -52,7 +52,7 @@ MZ Global Trading confirms GSM compliance at both the pre-production and pre-shi
 
 ## Where to Go Next
 
-For a complete GSM and thread-count reference table across every product category, see our [GSM & Fabric Weight Guide for Buyers](/guides/gsm-fabric-weight-guide/). The [pre-shipment inspection checklist for textile buyers](/knowledge/pre-shipment-inspection-checklist-textile-buyers/) covers GSM testing protocol in detail — including tolerance thresholds and what a failing result means commercially. When your fabric specification is confirmed, [submit an RFQ](/rfq/) to receive factory options and pricing within 3–5 business days.`,
+For a complete GSM and thread-count reference table across every product category, see our [GSM & Fabric Weight Guide for Buyers](/guides/gsm-fabric-weight-guide/). To convert between oz/yd² and GSM, or to look up standard fabric weights by product type, use our [Textile Tools Calculator](/textile-tools-calculator/) — instant conversions with no registration. The [pre-shipment inspection checklist for textile buyers](/knowledge/pre-shipment-inspection-checklist-textile-buyers/) covers GSM testing protocol in detail — including tolerance thresholds and what a failing result means commercially. When your fabric specification is confirmed, [submit an RFQ](/rfq/) to receive factory options and pricing within 3–5 business days.`,
 };
 
 export default post;
