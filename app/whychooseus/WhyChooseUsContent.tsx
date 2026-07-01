@@ -948,6 +948,45 @@ export default function WhyChooseUsContent() {
         </div>
       </section>
 
+      {/* ── Sourcing Guides ──────────────────────────────────────────────────── */}
+      <section className="py-10 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-5">Sourcing Guides</p>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Link
+              prefetch={false}
+              href="/guides/pakistan-vs-bangladesh-vs-china/"
+              className="group flex items-start gap-4 bg-gray-50 hover:bg-navy-900/5 rounded-xl p-5 border border-gray-100 hover:border-gold/30 transition-all"
+            >
+              <div className="shrink-0 w-9 h-9 bg-gold/10 rounded-lg flex items-center justify-center">
+                <svg className="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.7} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-navy-900 font-semibold text-sm group-hover:text-gold transition-colors leading-snug">Pakistan vs Bangladesh vs China: Sourcing Comparison</p>
+                <p className="text-gray-500 text-xs mt-1 leading-relaxed">Side-by-side cost, MOQ, lead time and compliance comparison to help buyers choose the right manufacturing origin.</p>
+              </div>
+            </Link>
+            <Link
+              prefetch={false}
+              href="/guides/textile-product-lifecycle-retail-distribution/"
+              className="group flex items-start gap-4 bg-gray-50 hover:bg-navy-900/5 rounded-xl p-5 border border-gray-100 hover:border-gold/30 transition-all"
+            >
+              <div className="shrink-0 w-9 h-9 bg-gold/10 rounded-lg flex items-center justify-center">
+                <svg className="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.7} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-navy-900 font-semibold text-sm group-hover:text-gold transition-colors leading-snug">Textile Lifecycle Phase 11: Retail &amp; Distribution</p>
+                <p className="text-gray-500 text-xs mt-1 leading-relaxed">How finished textiles move from Pakistan factories to retail floors — logistics, labelling, and compliance at the distribution stage.</p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── 8. Certifications ────────────────────────────────────────────────── */}
       <CertificationsStrip />
 

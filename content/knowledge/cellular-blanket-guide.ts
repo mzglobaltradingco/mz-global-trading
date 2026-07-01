@@ -82,7 +82,7 @@ Do not iron cellular blankets — the heat flattens the open-cell structure and 
 
 ## Sourcing Cellular Blankets from Pakistan
 
-MZ Global Trading sources [cellular thermal blankets](/hometextile/thermalblankets/cellularthermalblanket/) in healthcare-grade and institutional specifications from Pakistan's certified textile manufacturers. Programmes combining cellular blankets with [fleece thermal blankets](/hometextile/thermalblankets/fleecethermalblankets/) for different ward or programme types are available through a single consolidated RFQ.
+MZ Global Trading sources cellular thermal blankets in healthcare-grade and institutional specifications from Pakistan's certified textile manufacturers. Programmes combining cellular blankets with fleece thermal blankets for different ward or programme types are available through a single consolidated RFQ.
 
 ## Related Resources
 

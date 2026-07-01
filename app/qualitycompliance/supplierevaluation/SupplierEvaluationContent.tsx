@@ -315,7 +315,8 @@ export default function SupplierEvaluationContent() {
             </h2>
             <p className="text-gray-500 mt-3 max-w-xl mx-auto text-sm leading-relaxed">
               Every criterion is scored independently. Failure on any single criterion at the audit stage results
-              in rejection — partial compliance is not accepted.
+              in rejection — partial compliance is not accepted.{" "}
+              <Link href="/downloads/supplier-evaluation-matrix/" className="text-gold font-medium hover:underline">Download our supplier evaluation matrix →</Link>
             </p>
           </motion.div>
 
@@ -452,6 +453,45 @@ export default function SupplierEvaluationContent() {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* ── Sourcing Guides ──────────────────────────────────────────────────── */}
+      <section className="py-10 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-5">Sourcing Guides</p>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Link
+              prefetch={false}
+              href="/guides/textile-product-lifecycle-supplier-factory-selection/"
+              className="group flex items-start gap-3 bg-gray-50 hover:bg-navy-900/5 rounded-xl p-4 border border-gray-100 hover:border-gold/30 transition-all"
+            >
+              <div className="shrink-0 w-8 h-8 bg-gold/10 rounded-lg flex items-center justify-center mt-0.5">
+                <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.7} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-navy-900 font-semibold text-sm group-hover:text-gold transition-colors leading-snug">Textile Lifecycle Phase 4: Supplier &amp; Factory Selection</p>
+                <p className="text-gray-500 text-xs mt-1 leading-relaxed">How to select and shortlist textile factories — criteria, red flags, and verification steps.</p>
+              </div>
+            </Link>
+            <Link
+              prefetch={false}
+              href="/guides/sourcing-best-practices-supplier-evaluation-factory-selection/"
+              className="group flex items-start gap-3 bg-gray-50 hover:bg-navy-900/5 rounded-xl p-4 border border-gray-100 hover:border-gold/30 transition-all"
+            >
+              <div className="shrink-0 w-8 h-8 bg-gold/10 rounded-lg flex items-center justify-center mt-0.5">
+                <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.7} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-navy-900 font-semibold text-sm group-hover:text-gold transition-colors leading-snug">Sourcing Best Practices: Supplier Evaluation &amp; Factory Selection</p>
+                <p className="text-gray-500 text-xs mt-1 leading-relaxed">Best-practice evaluation framework for vetting Pakistan textile factories before placing orders.</p>
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
 

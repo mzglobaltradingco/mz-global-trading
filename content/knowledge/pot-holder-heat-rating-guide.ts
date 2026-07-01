@@ -17,7 +17,7 @@ const post: KnowledgePost = {
 
 A pot holder that fails to protect against heat creates a product liability risk. For procurement managers sourcing [pot holders from Pakistan](/hometextile/kitchenlinen/potholders/), the specification must go beyond dimensions and fabric colour to explicitly address the thermal barrier construction — the number of layers, the batting material and the minimum heat protection performance.
 
-Pakistan manufactures pot holders for retail and hospitality buyers in the USA, UK, EU, Middle East and Australia, with OEKO-TEX certified fabric at export scale.
+Pakistan manufactures pot holders for retail and hospitality buyers in the USA, UK, EU, Middle East and Australia, with [OEKO-TEX certified](/qualitycompliance/certifications/) fabric at export scale.
 
 ## Construction: The Three-Layer Standard
 
@@ -86,11 +86,11 @@ USA retail: CPSC (Consumer Product Safety Commission) does not mandate a specifi
 - **ISO 9001:** For hospitality contract supply
 - **REACH compliance:** Formaldehyde limits and azo dye restrictions apply for EU retail
 
-Coordinated [pot holder](/hometextile/kitchenlinen/potholders/) programmes combining pot holders, [kitchen towels](/hometextile/kitchenlinen/kitchentowels/) and [aprons](/hometextile/kitchenlinen/aprons/) should specify a unified OEKO-TEX scope covering all items in the set.
+Coordinated pot holder programmes combining pot holders, kitchen towels and aprons should specify a unified OEKO-TEX scope covering all items in the set.
 
 ## Sourcing Pot Holders from Pakistan
 
-MZ Global Trading sources [pot holders](/hometextile/kitchenlinen/potholders/) in all construction grades from Pakistan's certified kitchen linen manufacturers. Custom print, embroidery and coordinated kitchen linen programmes are available through a single consolidated RFQ.
+MZ Global Trading sources pot holders in all construction grades from Pakistan's certified kitchen linen manufacturers. Custom print, embroidery and coordinated [kitchen linen](/hometextile/kitchenlinen/) programmes are available through a single consolidated RFQ.
 
 [Request a sourcing quote](/rfq/) with your layer count, batting specification, size, outer fabric preference and annual volume — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };

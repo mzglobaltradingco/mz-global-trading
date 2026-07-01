@@ -111,7 +111,7 @@ ZDHC (Zero Discharge of Hazardous Chemicals) compliance at the wash house is inc
 
 ## Sourcing Denim Jeans from Pakistan
 
-MZ Global Trading sources [denim jeans from Pakistan](/apparel/wovengarments/denimjeans/) in 6 oz to 14 oz, ring-spun and open-end, with wash-house capability covering all standard treatments. Coordinated bottoms programmes covering [cargo pants](/apparel/wovengarments/cargopants/) alongside denim are available through a single consolidated sourcing brief.
+MZ Global Trading sources denim jeans from Pakistan in 6 oz to 14 oz, ring-spun and open-end, with wash-house capability covering all standard treatments. Coordinated bottoms programmes covering [cargo pants](/apparel/wovengarments/cargopants/) alongside denim are available through a single consolidated sourcing brief.
 
 ## Related Resources
 

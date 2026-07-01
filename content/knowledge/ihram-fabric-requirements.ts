@@ -31,12 +31,12 @@ Ihram for male pilgrims consists of two pieces of white, unsewn textile:
 ### Colour: White Only
 The Ihram must be white — undyed, unbleached-white or optically brightened white is acceptable; off-white, cream or ivory creates disagreement among scholars and buyer complaints in practice. Specify optical white with a whiteness index of 80+ (CIE whiteness) for consistent results across production runs.
 
-**This is an absolute restriction:** [Ihram](/hometextile/ihram/) cannot be produced in any colour other than white, regardless of buyer preference. Any colour stripe, border, decorative element, pattern or logo in a non-white colour invalidates the specification.
+**This is an absolute restriction:** Ihram cannot be produced in any colour other than white, regardless of buyer preference. Any colour stripe, border, decorative element, pattern or logo in a non-white colour invalidates the specification.
 
 ### Unsewn Construction
 Both pieces must be unsewn — no stitching, no seams joining the Ridaa or Izaar into a shaped garment. The textile is a rectangular piece of fabric, hemmed on all four edges only. Hemming is permitted; constructing a shaped garment (waistband, belt loops, pleats, drawstring) is not.
 
-**Implication for specification:** Each [Ihram set](/hometextile/ihram/) is a pair of rectangular hemmed pieces. No tailoring. The hem is the only stitching. Specify hem width (typically 1–2 cm) and hem stitch type.
+**Implication for specification:** Each Ihram set is a pair of rectangular hemmed pieces. No tailoring. The hem is the only stitching. Specify hem width (typically 1–2 cm) and hem stitch type.
 
 ### Fabric Type
 No specific fabric type is mandated by Islamic law — but the practical consensus among scholars and pilgrims is that **white terry cotton** is the dominant and most widely accepted fabric for Ihram globally. The reasons are practical: the loop pile provides warmth during night prayer in Mina and Muzdalifah (where temperatures can drop below 15°C), and the cotton absorbs perspiration during the physically demanding Hajj rituals.
@@ -47,7 +47,7 @@ No specific fabric type is mandated by Islamic law — but the practical consens
 
 ### White Terry (Standard)
 
-**GSM range:** 300–500 GSM. The most commonly sourced weight for [Ihram terry](/hometextile/ihram/).
+**GSM range:** 300–500 GSM. The most commonly sourced weight for Ihram terry.
 
 | GSM | Weight category | Best for |
 |---|---|---|
@@ -55,7 +55,7 @@ No specific fabric type is mandated by Islamic law — but the practical consens
 | 380–420 GSM | Medium terry | Standard specification — year-round Hajj |
 | 450–500 GSM | Heavy terry | Winter Hajj (December–January), older pilgrims |
 
-The standard commercial specification for most [Ihram](/hometextile/ihram/) suppliers is 400–420 GSM white terry — heavy enough for warmth in cooler conditions, light enough for comfort during physically active daytime rituals.
+The standard commercial specification for most Ihram suppliers is 400–420 GSM white terry — heavy enough for warmth in cooler conditions, light enough for comfort during physically active daytime rituals.
 
 **Yarn:** 100% cotton ring-spun yarn. Carded cotton is the budget specification; combed cotton at the same GSM produces a softer surface and better whiteness retention through washing.
 
@@ -65,13 +65,13 @@ The standard commercial specification for most [Ihram](/hometextile/ihram/) supp
 
 **GSM range:** 100–160 GSM. Lighter than terry — appropriate for warm-season use.
 
-**Construction:** Plain weave 100% cotton, similar weight to a heavy [muslin fabric](/apparel/babyandkids/swaddlemuslinfabric/). Softer drape than terry; less warmth; lower cost.
+**Construction:** Plain weave 100% cotton, similar weight to a heavy muslin fabric. Softer drape than terry; less warmth; lower cost.
 
 **Best for:** Umrah pilgrims, summer Hajj, Southeast Asian and South Asian pilgrim markets where heat is the primary comfort concern.
 
 ## Standard Sizes
 
-[Ihram sets](/hometextile/ihram/) are sized to provide adequate coverage for a wide range of adult male body sizes, since the unsewn wrap construction relies on fabric width and length to cover the body.
+Ihram sets are sized to provide adequate coverage for a wide range of adult male body sizes, since the unsewn wrap construction relies on fabric width and length to cover the body.
 
 | Piece | Standard size | Notes |
 |---|---|---|
@@ -84,15 +84,15 @@ Both pieces are typically the same size in most commercial Ihram sets — simpli
 
 ## Packing
 
-[Ihram sets](/hometextile/ihram/) are typically sold and packed as a pair (Ridaa + Izaar) in a single polybag, with or without a belt or wrap cord. Common retail packing: polybag with header card; common bulk packing: 10 or 20 sets per carton.
+Ihram sets are typically sold and packed as a pair (Ridaa + Izaar) in a single polybag, with or without a belt or wrap cord. Common retail packing: polybag with header card; common bulk packing: 10 or 20 sets per carton.
 
 For pilgrimage tour operators: specify branded polybag printing with the tour company's name, pilgrim name field (blank for handwriting) and care instruction label.
 
 ## Sourcing Ihram from Pakistan
 
-MZ Global Trading sources [Ihram sets](/hometextile/ihram/) in standard and heavy terry cotton constructions from Pakistan's textile manufacturers. Custom whiteness specifications, extended sizing and pilgrimage tour operator branding programmes are available.
+MZ Global Trading sources Ihram sets in standard and heavy terry cotton constructions from Pakistan's textile manufacturers. Custom whiteness specifications, extended sizing and pilgrimage tour operator branding programmes are available.
 
-Pakistan's terry weaving industry is the same manufacturing base used for [hotel and institutional towel supply](/hometextile/bathlinen/towels/) — the same mills that produce OEKO-TEX certified white terry bath towels for European hotel groups also produce Ihram terry to the same quality standard.
+Pakistan's terry weaving industry is the same manufacturing base used for [hotel and institutional towel supply](/hometextile/bathlinen/towels/) — the same mills that produce [OEKO-TEX certified](/qualitycompliance/certifications/) white terry bath towels for European hotel groups also produce Ihram terry to the same [quality standard](/qualitycompliance/qualitycontrol/).
 
 [Request a sourcing quote](/rfq/) with your GSM specification, size requirements, pack format, annual volume and shipment timing relative to Hajj season — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };

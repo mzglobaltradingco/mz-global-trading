@@ -23,7 +23,7 @@ The print technique on a beach or pool towel is not merely aesthetic — it dete
 
 **Design capability:** Near-unlimited. Reactive printing on terry can reproduce photographic imagery, gradients, typography, complex multi-colour patterns and brand artwork with high fidelity. The limiting factor is the texture of the terry pile surface, which introduces a slight pixel-blur effect at very fine detail (below 1 mm line width).
 
-**Colour fastness:** Excellent when correctly processed. Reactive-dyed terry towels achieve ISO 105-C06 Grade 4–5 (washing) and Grade 4 colour fastness to light (ISO 105-B02). Colour fastness to chlorinated pool water is a specific test (ISO 105-E03) — specify this when sourcing [beach and pool towels from Pakistan](/hometextile/bathlinen/beachpooltowel/) for pool-deck programmes. See [certifications and compliance standards](/qualitycompliance/certifications/) for the full RSL requirements by market.
+**Colour fastness:** Excellent when correctly processed. Reactive-dyed terry towels achieve ISO 105-C06 Grade 4–5 (washing) and Grade 4 colour fastness to light (ISO 105-B02). Colour fastness to chlorinated pool water is a specific test (ISO 105-E03) — specify this for pool-deck programmes. See [certifications and compliance standards](/qualitycompliance/certifications/) for the full RSL requirements by market.
 
 **GSM range for beach towels:** 300–500 GSM. Beach towels are intentionally lighter than bath towels to reduce weight in beach bags and dry faster in the sun.
 
@@ -54,7 +54,7 @@ The print technique on a beach or pool towel is not merely aesthetic — it dete
 **Cost:** Higher than reactive-print terry at small volumes (jacquard loom setup), but competitive at scale (no screen or ink cost per repeat).
 
 **Best for:**
-- Hotel pool towel programmes (colour fastness to chlorine is critical) — pair with [institutional bath towels](/hometextile/bathlinen/institutionaltowels/) for the full pool-area linen programme
+- Hotel pool towel programmes (colour fastness to chlorine is critical) — pair with institutional bath towels for the full pool-area linen programme
 - Retail programmes where design integrity after 100+ washes is a selling point
 - Branded corporate gifts and premium promotional applications
 - Middle East, EU and Japanese markets where a classic woven look is preferred over bold print aesthetics — [request a quote](/rfq/) with your programme volume for jacquard FOB pricing
@@ -69,7 +69,7 @@ The print technique on a beach or pool towel is not merely aesthetic — it dete
 
 **Hand feel:** The smoothest hand of all three constructions — velour is soft, tactile and photographs beautifully for retail product images.
 
-**Print compatibility:** Velour face is the ideal base for reactive printing (see Section 1 above). Many of the most commercially successful [beach and pool towels from Pakistan](/hometextile/bathlinen/beachpooltowel/) combine a velour face (for print quality and hand feel) with a terry-loop reverse (for absorbency).
+**Print compatibility:** Velour face is the ideal base for reactive printing (see Section 1 above). Many of the most commercially successful beach and pool towels combine a velour face (for print quality and hand feel) with a terry-loop reverse (for absorbency).
 
 **GSM range:** 300–500 GSM for beach and pool applications.
 
@@ -101,13 +101,13 @@ The print technique on a beach or pool towel is not merely aesthetic — it dete
 | Australia retail | OEKO-TEX Standard 100 | APCO compliance for packaging |
 | Japan / South Korea | OEKO-TEX Standard 100 | Japanese specific standards (JIS) also sometimes required |
 
-**Print-specific REACH note:** Reactive print dyes must comply with the EU Restricted Substances List (RSL) — specifically the prohibited azo dye list under EC 2002/61. OEKO-TEX Standard 100 testing covers this, but only if the certificate applies to the complete finished article including printed fabric. Verify the exact scope on our [certifications and compliance page](/qualitycompliance/certifications/).
+**Print-specific REACH note:** Reactive print dyes must comply with the EU Restricted Substances List (RSL) — specifically the prohibited azo dye list under EC 2002/61. OEKO-TEX Standard 100 testing covers this, but only if the certificate applies to the complete finished article including printed fabric. Verify the exact scope on our certifications and compliance page.
 
 ## Sourcing Beach & Pool Towels from Pakistan
 
-Pakistan produces reactive-print, jacquard and velour beach towels for retail and resort buyers globally. MZ Global Trading sources [beach and pool towels](/hometextile/bathlinen/beachpooltowel/) across all three techniques, matched to your artwork, certification and seasonal programme requirements.
+Pakistan produces reactive-print, jacquard and velour beach towels for retail and resort buyers globally. MZ Global Trading sources beach and pool towels across all three techniques, matched to your artwork, certification and seasonal programme requirements.
 
-[Request a sourcing quote](/rfq/) · [View institutional towels](/hometextile/bathlinen/institutionaltowels/) · [View bath towels from Pakistan](/hometextile/bathlinen/towels/)`,
+[Request a sourcing quote](/rfq/) · [View bath towels from Pakistan](/hometextile/bathlinen/towels/)`,
 };
 
 export default post;

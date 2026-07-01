@@ -122,7 +122,7 @@ For the full list of certifications held across our factory network — includin
 
 ## Sourcing Formal & Casual Shirts from Pakistan
 
-Pakistan's woven shirt factories in Lahore and Faisalabad operate with vertically integrated fabric-to-garment capability — ring-spun poplin, Oxford, twill and end-on-end all available at certified mill level. [Formal and casual shirts from Pakistan](/apparel/wovengarments/formalcasualshirts/) are available in all constructions from small corporate runs to large retail programmes.
+Pakistan's woven shirt factories in Lahore and Faisalabad operate with vertically integrated fabric-to-garment capability — ring-spun poplin, Oxford, twill and end-on-end all available at certified mill level. Formal and casual shirts from Pakistan are available in all constructions from small corporate runs to large retail programmes.
 
 ## Related Resources
 

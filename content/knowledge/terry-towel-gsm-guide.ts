@@ -94,7 +94,7 @@ The heaviest terry towels made at scale. These feel more like a textile investme
 | Australia retail | OEKO-TEX or GOTS | 450–550 GSM |
 | Southeast Asia hospitality | BSCI/Sedex | 400–500 GSM |
 
-MZ Global Trading's factory network is certified under OEKO-TEX Standard 100, GOTS, BSCI, Sedex, ISO 9001 and WRAP across the GSM range — see the full [certifications and compliance page](/qualitycompliance/certifications/) for which standards apply to your target market.
+MZ Global Trading's factory network is certified under OEKO-TEX Standard 100, GOTS, BSCI, Sedex, ISO 9001 and WRAP across the GSM range — see the certifications and compliance page for which standards apply to your target market.
 
 ## How to Write a Towel GSM Specification
 
@@ -112,13 +112,13 @@ Factories that quote without a confirmed GSM are quoting a different product. Al
 
 A certified GSM test using an ISO circular cutter (standard diameter: 100 cm²) and calibrated balance should be included in every [pre-shipment inspection](/guides/aql-pre-shipment-inspection/). A result outside the ±5% tolerance is grounds for holding shipment release.
 
-MZ Global Trading conducts GSM verification at both the pre-production sample stage and final pre-shipment inspection on every [bath towel order](/hometextile/bathlinen/towels/).
+MZ Global Trading conducts GSM verification at both the pre-production sample stage and final pre-shipment inspection on every bath towel order.
 
 ## Related Products
 
 If you are sourcing bath linen across multiple categories, our sourcing network covers:
-- [Institutional towels](/hometextile/bathlinen/institutionaltowels/) — healthcare and hospitality grade, 320–500 GSM
-- [Bathrobes](/hometextile/bathlinen/bathrobes/) — terry and waffle construction, 300–500 GSM
+- Institutional towels — healthcare and hospitality grade, 320–500 GSM
+- Bathrobes — terry and waffle construction, 300–500 GSM
 - [Beach & pool towels](/hometextile/bathlinen/beachpooltowel/) — lightweight reactive-print terry, 300–400 GSM
 - [Bath mats](/hometextile/bathlinen/bathmats/) — tufted and woven, 800–2000 GSM (measured differently)
 

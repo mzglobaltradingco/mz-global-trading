@@ -866,9 +866,13 @@ export default function TextileToolsContent() {
           >
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">From Numbers to Orders</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Put These Calculations Into a Real Quote</h2>
-            <p className="text-gray-500 text-base max-w-lg mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-lg mx-auto mb-3">
               Send us your GSM, consumption and target costs — our team matches them to the right certified Pakistani factory and
               responds within 3–5 business days.
+            </p>
+            <p className="text-gray-400 text-sm max-w-lg mx-auto mb-8">
+              Need a quick reference?{" "}
+              <Link href="/downloads/gsm-thread-count-reference/" className="text-gold hover:underline font-medium">Download the GSM & thread count reference card →</Link>
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link

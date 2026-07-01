@@ -28,7 +28,7 @@ The huck (huckaback) weave is a variation of plain weave where floats — thread
 - The absence of cut pile (which is the primary lint source in terry towels) eliminates the loose fibre ends that shed during use and laundering
 - The tight base weave between float sections prevents individual yarns from loosening and releasing fibres over wash cycles
 
-**Result:** A [huck towel](/hometextile/hospitallinen/surgicalhucktowels/) in 100% cotton produces minimal loose fibre during use and laundering — making it appropriate for surgical instrument drying, wound area preparation, and operating field coverage.
+**Result:** A huck towel in 100% cotton produces minimal loose fibre during use and laundering — making it appropriate for surgical instrument drying, wound area preparation, and operating field coverage.
 
 Compare with [standard terry bath towels](/hometextile/bathlinen/towels/) (loop pile construction — high lint) and [bar mops](/hometextile/kitchenlinen/barmops/) (similar construction to huck but specified for commercial kitchen use, not clinical lint control).
 
@@ -42,7 +42,7 @@ Compare with [standard terry bath towels](/hometextile/bathlinen/towels/) (loop 
 
 ## Standard Sizes
 
-[Surgical huck towels](/hometextile/hospitallinen/surgicalhucktowels/) are produced in two primary size formats:
+Surgical huck towels are produced in two primary size formats:
 
 | Format | Size | Application |
 |---|---|---|
@@ -55,21 +55,21 @@ For buyers supplying USA hospital groups: specify in inches (17×27 in is the do
 
 ## Fibre Content
 
-**100% Cotton:** The standard specification for [surgical huck towels](/hometextile/hospitallinen/surgicalhucktowels/) in healthcare environments. Cotton fibre is compatible with steam autoclave sterilisation (134°C), gamma irradiation and ethylene oxide (EtO) — the three sterilisation methods used for reusable textiles in surgical environments. See the [surgical gown standards guide](/knowledge/surgical-gown-standards/) for a full sterilisation compatibility comparison.
+**100% Cotton:** The standard specification for surgical huck towels in healthcare environments. Cotton fibre is compatible with steam autoclave sterilisation (134°C), gamma irradiation and ethylene oxide (EtO) — the three sterilisation methods used for reusable textiles in surgical environments. See the [surgical gown standards guide](/knowledge/surgical-gown-standards/) for a full sterilisation compatibility comparison.
 
 **Cotton-Polyester blend:** Not appropriate for autoclave sterilisation (polyester degrades at autoclave temperatures). Avoid for surgical and clinical use. Acceptable for laboratory and non-sterile clinical use where autoclave compatibility is not required.
 
 ## Colour: White vs Bleached vs Coloured
 
-**White (bleached):** The standard specification for [surgical huck towels](/hometextile/hospitallinen/surgicalhucktowels/) in operating environments. White allows visual inspection for blood, body fluid or residue contamination before re-use. A contaminated white huck towel is immediately visible.
+**White (bleached):** The standard specification for surgical huck towels in operating environments. White allows visual inspection for blood, body fluid or residue contamination before re-use. A contaminated white huck towel is immediately visible.
 
-**Colour (blue, green stripes):** Used in non-surgical clinical environments and laboratory settings for zone differentiation — similar to the HACCP colour-coding principle in [commercial kitchen bar mops](/hometextile/kitchenlinen/barmops/). Some hospital infection control teams specify coloured huck towels for non-sterile areas to prevent them being introduced into the surgical field.
+**Colour (blue, green stripes):** Used in non-surgical clinical environments and laboratory settings for zone differentiation — similar to the HACCP colour-coding principle in commercial kitchen bar mops. Some hospital infection control teams specify coloured huck towels for non-sterile areas to prevent them being introduced into the surgical field.
 
 **Blue border (white body):** Common USA hospital specification — a white huck towel with a coloured woven border provides easy visual identification in laundry sorting without introducing dye across the full textile surface area.
 
 ## Laundering and Sterilisation
 
-[Surgical huck towels](/hometextile/hospitallinen/surgicalhucktowels/) used in the sterile field must be processed through a validated sterile services department (SSD / CSSD) workflow:
+Surgical huck towels used in the sterile field must be processed through a validated sterile services department (SSD / CSSD) workflow:
 
 1. Collection and sorting post-use
 2. Washing at minimum 60°C (or 71°C under NHS HTM 01-04 thermal disinfection)
@@ -91,7 +91,7 @@ The towel fabric must withstand this full cycle repeatedly — typically 100–2
 
 ## Sourcing Surgical Huck Towels from Pakistan
 
-MZ Global Trading sources [surgical huck towels](/hometextile/hospitallinen/surgicalhucktowels/) in standard and heavy huck construction from Pakistan's certified medical textile manufacturers. Programmes combining huck towels with [patient gowns](/hometextile/hospitallinen/patientgowns/), [medical scrubs](/hometextile/hospitallinen/medicalscrubs/) and [surgical gowns](/hometextile/hospitallinen/doctorsurgicalgowns/) for complete [hospital linen supply](/hometextile/hospitallinen/) are available through a single RFQ.
+MZ Global Trading sources surgical huck towels in standard and heavy huck construction from Pakistan's certified medical textile manufacturers. Programmes combining huck towels with [patient gowns](/hometextile/hospitallinen/patientgowns/), [medical scrubs](/hometextile/hospitallinen/medicalscrubs/) and [surgical gowns](/hometextile/hospitallinen/doctorsurgicalgowns/) for complete hospital linen supply are available through a single RFQ.
 
 [Request a sourcing quote](/rfq/) with your GSM, size format, required sterilisation compatibility, colour specification and annual volume — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };

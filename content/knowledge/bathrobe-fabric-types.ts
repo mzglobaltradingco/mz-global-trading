@@ -32,7 +32,7 @@ Pakistan produces all four primary bathrobe constructions: terry loop, waffle we
 **Durability under laundering:** Very good. Terry construction is engineered for repeated commercial washing. A correctly specified terry robe at 350 GSM with ring-spun combed cotton yarn will maintain its appearance for 150+ commercial wash cycles.
 
 **Best for:**
-- 3-star to 5-star [hotel bathrobe programmes](/hometextile/bathlinen/bathrobes/) — the industry standard
+- 3-star to 5-star hotel bathrobe programmes — the industry standard
 - Spa and wellness facilities where absorbency is the primary requirement
 - USA, UK and EU mid-market retail where terry is the consumer default expectation
 - [Institutional supply at scale](/hometextile/bathlinen/institutionaltowels/) (highest volume, most cost-effective)
@@ -72,7 +72,7 @@ Pakistan produces all four primary bathrobe constructions: terry loop, waffle we
 **Durability under laundering:** Fair-to-good. Cut pile is more prone to matting and pilling than loop pile under repeated commercial washing. Velour robes typically have a shorter commercial laundry life than terry — a consideration for high-frequency hotel use.
 
 **Best for:**
-- Luxury and 5-star [hotel bathrobes and spa robes](/hometextile/bathlinen/bathrobes/) where visual presentation matters
+- Luxury and 5-star hotel bathrobes and spa robes where visual presentation matters
 - Retail gift sets and department store programmes (UK, USA, Japan, South Korea)
 - Middle East luxury hospitality (UAE, Saudi Arabia) where premium appearance is essential
 - Branded robes with embroidery or monogramming (the smooth face takes embroidery cleanly — [submit an RFQ with your logo artwork](/rfq/) for a digitisation assessment)
@@ -95,7 +95,7 @@ Pakistan produces all four primary bathrobe constructions: terry loop, waffle we
 - Consumer retail in Southeast Asia and the Middle East
 - Gym and fitness where fast-drying is valued over traditional hand feel
 
-**Limitation:** Not suitable for most hotel housekeeping programmes using commercial laundries — the low wash temperature requirement and high-heat tumble drying restriction create operational incompatibility. For hotel programmes, terry [hotel bathrobes from Pakistan](/hometextile/bathlinen/bathrobes/) remain the operationally correct choice.
+**Limitation:** Not suitable for most hotel housekeeping programmes using commercial laundries — the low wash temperature requirement and high-heat tumble drying restriction create operational incompatibility. For hotel programmes, terry bathrobes remain the operationally correct choice.
 
 ## Side-by-Side Comparison
 
@@ -123,11 +123,11 @@ Pakistan produces all four primary bathrobe constructions: terry loop, waffle we
 
 ## Sourcing Bathrobes from Pakistan
 
-Pakistan's terry mills produce all four constructions within vertically integrated facilities. MZ Global Trading sources [hotel bathrobes and spa robes](/hometextile/bathlinen/bathrobes/) across the full construction range, matched to the certification requirements of your target market.
+Pakistan's terry mills produce all four constructions within vertically integrated facilities. MZ Global Trading sources bathrobes across the full construction range, matched to the certification requirements of your target market.
 
 [Request a quote](/rfq/) with your target construction, GSM, size range and annual volume. We return mill options and indicative FOB pricing within 3–5 business days.
 
-Related products: [Bath towels from Pakistan](/hometextile/bathlinen/towels/) · [Bath mats](/hometextile/bathlinen/bathmats/) · [Institutional towels for hospitality](/hometextile/bathlinen/institutionaltowels/)`,
+`,
 };
 
 export default post;

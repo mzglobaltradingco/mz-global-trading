@@ -67,7 +67,7 @@ In some contemporary and industrial-aesthetic designs, the zipper pull is intent
 
 ### Envelope Closure (No Hardware)
 
-A fabric overlap at the back — the same construction used for [pillow covers](/hometextile/bedlinen/pillowcovers/) in the envelope style. No zip, no buttons, no closure hardware to fail.
+A fabric overlap at the back — the same construction used for pillow covers in the envelope style. No zip, no buttons, no closure hardware to fail.
 
 **Best for:** Children's ranges, casual lifestyle positioning, and programmes where cost is a driver. Less secure than a zipper — the filling can shift or the overlap can gap if the opening is too narrow (minimum 15 cm overlap recommended for 45 cm cushion formats).
 
@@ -108,7 +108,7 @@ The cushion cover specification must account for the filling the end customer or
 
 ## Sourcing Cushion Covers from Pakistan
 
-MZ Global Trading sources [decorative cushion covers](/hometextile/bedlinen/cushioncovers/) in all fabric types, print techniques and closure configurations from Pakistan's certified home textile manufacturers. Coordinated programmes covering cushion covers, [pillow covers](/hometextile/bedlinen/pillowcovers/), [curtains](/hometextile/bedlinen/curtains/) and bed linen are available through a single consolidated RFQ.
+MZ Global Trading sources decorative cushion covers in all fabric types, print techniques and closure configurations from Pakistan's certified home textile manufacturers. Coordinated programmes covering cushion covers, pillow covers, curtains and [bed linen](/hometextile/bedlinen/) are available through a single consolidated RFQ.
 
 [Request a sourcing quote](/rfq/) with your fabric type, print technique, closure specification, size range and seasonal programme volume.`,
 };

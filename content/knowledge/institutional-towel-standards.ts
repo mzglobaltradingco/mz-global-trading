@@ -49,7 +49,7 @@ Gym towels face a specific challenge: they must absorb sweat rapidly, dry quickl
 - **GSM:** 350–450 GSM — heavy enough to feel substantial, light enough to dry fast
 - **Size:** 50×100 cm (hand towel format) is standard for gym and fitness use; 70×140 cm for larger spa applications
 - **Construction:** Loop pile terry is standard. Velour-faced towels (cut pile on one face) are sometimes specified for premium gym environments
-- **Colour:** Navy, charcoal, white or branded colour — gym programme towels are often branded with club logo embroidery (the same embroidery service used for [hotel bathrobes](/hometextile/bathlinen/bathrobes/) applies to gym towels)
+- **Colour:** Navy, charcoal, white or branded colour — gym programme towels are often branded with club logo embroidery (the same embroidery service used for hotel bathrobes applies to gym towels)
 
 ## Laundry Durability Standards
 
@@ -65,7 +65,7 @@ A well-specified institutional towel should maintain these properties after 150 
 | Tensile strength (warp) | ≥350 N/5 cm (ISO 13934-1) |
 | Water absorbency | Sink in <5 seconds (EN ISO 9073-6) |
 
-When sourcing [institutional towels for healthcare or hospitality programmes](/hometextile/bathlinen/institutionaltowels/), request test reports confirming performance after 50 and 150 wash cycles — not just from the greige fabric, but from the finished, hemmed towel. Our [bulk institutional towel sourcing guide](/guides/bulk-institutional-towel-sourcing/) explains how to structure a wash-durability requirement in your specification.
+When sourcing institutional towels for healthcare or hospitality programmes, request test reports confirming performance after 50 and 150 wash cycles — not just from the greige fabric, but from the finished, hemmed towel. Our [bulk institutional towel sourcing guide](/guides/bulk-institutional-towel-sourcing/) explains how to structure a wash-durability requirement in your specification.
 
 ## Certification Requirements by Market
 
@@ -79,7 +79,7 @@ When sourcing [institutional towels for healthcare or hospitality programmes](/h
 
 ## Packing for Institutional Supply
 
-Retail packing (individual poly bags, header cards, shelf-ready presentation) is unnecessary for [institutional towel programmes](/hometextile/bathlinen/institutionaltowels/) and adds cost. Standard institutional packing:
+Retail packing (individual poly bags, header cards, shelf-ready presentation) is unnecessary for institutional towel programmes and adds cost. Standard institutional packing:
 
 - **Inner:** 12 or 24 pieces per case, loose-folded or flat-packed
 - **Master carton:** Standard bulk carton, no retail presentation
@@ -92,7 +92,7 @@ Pakistan's terry towel mills have supplied major hospital groups, hotel chains a
 
 MZ Global Trading sources institutional towels across the full GSM range, matches orders to mills certified for your target market, and manages pre-shipment inspection on every shipment.
 
-[Explore institutional towels](/hometextile/bathlinen/institutionaltowels/) · [Request a sourcing quote](/rfq/) · [View all bath linen](/hometextile/bathlinen/)`,
+[Request a sourcing quote](/rfq/) · [View all bath linen](/hometextile/bathlinen/)`,
 };
 
 export default post;

@@ -780,9 +780,31 @@ Google Search · LinkedIn · Trade Show / Exhibition · Referral from a Contact 
 | Guide | `lib/guides-content.ts` — add to `GUIDES` array | `<a href="/url/">anchor</a>` in `{ type: "p" }` blocks | ❌ Must add card to `GuidesContent.tsx` |
 | Download | `lib/downloads-content.ts` — add to `DOWNLOAD_DOCS` array | None (fill-in templates) | ❌ Must add card to `DownloadsContent.tsx` |
 
+### Internal Link Policy — Every New Page
+
+**Google rule:** 3–8 unique destination URLs as contextual body links per page. First occurrence of each URL passes PageRank; duplicates to the same URL are wasted. `/rfq/` links are exempt CTAs — never count against the limit.
+
+**Outgoing links from new page (required before marking complete):**
+| Page type | Body links target | Notes |
+|---|---|---|
+| Product leaf page | 5–7 body links | cluster page, 1–2 sibling products, `/qualitycompliance/certifications/`, `/rfq/` |
+| KH article | 4–7 contextual inline links | spread across sections — not just intro/outro |
+| Guide | 3–7 inline body links | plus 4–6 `seealso` links (7–13 total) |
+| Download | none required | fill-in templates, no body text |
+
+**Incoming links to new page (verify before marking done):**
+| Page type | Minimum incoming | Source |
+|---|---|---|
+| Product leaf page | cluster bento box + 1 KH/guide seealso | — |
+| KH article | product bento box + 1 related KH article body link | — |
+| Guide | product bento box + 1 KH seealso OR 1 corporate/quality page body link | — |
+| Download | downloads index + 1 product bento | — |
+
+**Deduplication rule:** If the same destination URL appears more than once in a page body, keep the first occurrence as a hyperlink and convert all subsequent occurrences to plain text. The only exception is `/rfq/` (CTA — may repeat).
+
 ### Content Quality Rules
 - Target: procurement managers with 10+ years experience — B2B, specific numbers, no vague claims
-- Every KH article: 3–5+ inline links spread across sections (not just intro/outro); link to product page + 2+ related pages + `/rfq/`
+- Every KH article: 4–7 contextual inline links spread across sections (not just intro/outro); link to product page + 2+ related pages + `/rfq/`
 - Every Guide: same link density; must end with `{ type: "seealso", ... }` listing 4–6 related pages
 - Certification mentions: OEKO-TEX (EU/UK/USA retail), GOTS (organic), BSCI/Sedex/WRAP (social), ISO 9001 (universal)
 - KH article dates: stagger — no two articles in same batch share the same date

@@ -24,7 +24,7 @@ A higher GSM indicates a heavier, denser fabric. A lower GSM means lighter, more
 Understanding where your product should sit on the GSM scale prevents costly specification errors:
 
 - **[T-shirts from Pakistan](/apparel/knittedgarments/tshirts/) (standard):** 160–180 GSM — lightweight, breathable, cost-effective
-- **[T-shirts from Pakistan](/apparel/knittedgarments/tshirts/) (premium):** 200–220 GSM — substantial hand feel, retail-ready
+- **T-shirts from Pakistan (premium):** 200–220 GSM — substantial hand feel, retail-ready
 - **[Sweatshirts & hoodies](/apparel/knittedgarments/sweatshirtshoodies/):** 280–320 GSM — standard weight for most markets
 - **Heavyweight hoodies:** 340–400 GSM — premium feel, popular in colder climates
 - **[Bath towels — Pakistan manufacturer](/hometextile/bathlinen/towels/):** 400–600 GSM — lower end for budget institutional; 550+ for hotel quality

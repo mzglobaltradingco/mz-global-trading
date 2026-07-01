@@ -27,7 +27,7 @@ Blackout curtains block or significantly reduce light transmission. Three distin
 
 **Construction:** A woven fabric (polyester, cotton-polyester blend, or jacquard) with an acrylic foam coating applied to the back face. The foam layer is what blocks light. A third woven lining is sometimes bonded over the foam for a cleaner reverse appearance.
 
-**Blackout performance:** True blackout (0% light transmission) is achievable with foam backing of sufficient density. Most retail specifications target 95–99% light blocking — certified by a lux measurement test rather than visual inspection.
+**Blackout performance:** True blackout (0% light transmission) is achievable with foam backing of sufficient density. Most retail specifications target 95–99% light blocking — certified by a lux measurement test rather than [visual inspection](/qualitycompliance/inspectionprocess/).
 
 **Weight:** 250–400 GSM for the finished multi-layer construction.
 
@@ -43,7 +43,7 @@ Blackout curtains block or significantly reduce light transmission. Three distin
 
 **Weight:** 200–320 GSM depending on weave density.
 
-**Best for:** Hotel room [curtains sourced from Pakistan](/hometextile/bedlinen/curtains/) in 4-star and above properties; retail programmes targeting eco-conscious consumers; programmes where long care life is a marketing claim. Hotel programmes combining curtains with coordinated [cushion covers](/hometextile/bedlinen/cushioncovers/) and [pillow covers](/hometextile/bedlinen/pillowcovers/) can be sourced in a coordinated programme.
+**Best for:** Hotel room curtains in 4-star and above properties; retail programmes targeting eco-conscious consumers; programmes where long care life is a marketing claim. Hotel programmes combining curtains with coordinated [cushion covers](/hometextile/bedlinen/cushioncovers/) and [pillow covers](/hometextile/bedlinen/pillowcovers/) can be sourced in a coordinated programme.
 
 ### Blackout Lining (Applied Separately)
 
@@ -107,7 +107,7 @@ The heading type determines how the curtain hangs and how it is sold at retail. 
 | Tab top | Fabric loops sewn into the top of the panel — rod passes through loops | Casual retail in USA and Australia | 1.5 × panel width |
 | Rod pocket / cased heading | A channel sewn at the top through which the curtain rod slides | Value retail, cafe curtains, sheer panels | 1.5 × panel width |
 
-**Eyelet specification detail:** Specify eyelet diameter (standard 35–40mm internal diameter for most pole diameters; 50mm for thicker poles), eyelet colour (silver, antique brass, black, brushed nickel), and heading height (standard 7–9 cm from top edge to eyelet centre). See the [certifications and compliance page](/qualitycompliance/certifications/) for REACH requirements on eyelet metal components for EU retail — nickel content in metal fittings is restricted under EU Regulation 1907/2006.
+**Eyelet specification detail:** Specify eyelet diameter (standard 35–40mm internal diameter for most pole diameters; 50mm for thicker poles), eyelet colour (silver, antique brass, black, brushed nickel), and heading height (standard 7–9 cm from top edge to eyelet centre). See the certifications and compliance page for REACH requirements on eyelet metal components for EU retail — nickel content in metal fittings is restricted under EU Regulation 1907/2006.
 
 ## Lining Options
 
@@ -132,7 +132,7 @@ For hotel programmes, unlined curtains are rarely specified above 3-star level �
 
 ## Sourcing Curtains from Pakistan
 
-MZ Global Trading sources [curtains](/hometextile/bedlinen/curtains/) in all fabric types and heading configurations from Pakistan's certified home textile manufacturers. Programmes covering curtains alongside coordinated [cushion covers](/hometextile/bedlinen/cushioncovers/) and [pillow covers](/hometextile/bedlinen/pillowcovers/) are available through a single consolidated RFQ.
+MZ Global Trading sources curtains in all fabric types and heading configurations from Pakistan's certified home textile manufacturers. Programmes covering curtains alongside coordinated cushion covers and pillow covers are available through a single consolidated RFQ.
 
 [Request a sourcing quote](/rfq/) with your fabric type, heading specification, lining requirement, drop and width dimensions, and annual programme volume — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };

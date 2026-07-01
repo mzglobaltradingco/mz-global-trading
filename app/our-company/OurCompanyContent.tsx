@@ -622,7 +622,54 @@ export default function OurCompanyContent() {
         </div>
       </section>
 
-      {/* ── 9. Certifications ─────────────────────────────────────────────── */}
+      {/* ── 9. Textile Lifecycle Sourcing Guides ──────────────────────────── */}
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            className="text-center mb-10"
+          >
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Free Resources</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">Textile Sourcing Guides</h2>
+            <p className="text-gray-500 mt-3 max-w-2xl mx-auto text-base">
+              Step-by-step guides covering every phase of the textile product lifecycle — from initial concept through production, costing and delivery.
+            </p>
+          </motion.div>
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+          >
+            {[
+              { href: "/guides/textile-product-lifecycle-concept-trend-research/", label: "Phase 1: Concept & Trend Research", desc: "How buyers translate trend forecasts into a sourcing brief before approaching mills." },
+              { href: "/guides/textile-product-lifecycle-design-technical-development/", label: "Phase 2: Design & Technical Development", desc: "From mood board to tech pack — the specification documents mills need to quote accurately." },
+              { href: "/guides/textile-product-lifecycle-raw-material-sourcing/", label: "Phase 3: Raw Material Sourcing", desc: "How cotton, yarn and greige fabric are sourced and how fibre origin affects certification." },
+              { href: "/guides/textile-product-lifecycle-costing-moq-negotiation/", label: "Phase 5: Costing & MOQ Negotiation", desc: "How FOB pricing is built and where buyers can negotiate without compromising quality." },
+              { href: "/guides/textile-product-lifecycle-pre-production-sampling/", label: "Phase 6: Pre-Production Sampling", desc: "The PP sample sequence — lab dip, strike-off and bulk approval before production starts." },
+              { href: "/guides/sourcing-best-practices-design-technical-specification/", label: "Best Practice: Technical Specification", desc: "Writing a spec sheet that eliminates ambiguity and reduces costly production errors." },
+            ].map((g) => (
+              <motion.div key={g.href} variants={cardVariants}>
+                <Link
+                  href={g.href}
+                  className="group flex flex-col gap-3 bg-gray-50 hover:bg-white border border-gray-100 hover:border-gold hover:shadow-md rounded-2xl p-6 transition-all"
+                >
+                  <p className="text-xs font-semibold text-gold uppercase tracking-widest">Sourcing Guide</p>
+                  <p className="font-semibold text-navy-900 text-base leading-snug">{g.label}</p>
+                  <p className="text-xs text-gray-500 leading-relaxed flex-1">{g.desc}</p>
+                  <span className="text-xs font-semibold text-navy-900 group-hover:text-gold transition-colors mt-auto">Read Guide →</span>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── 10. Certifications ────────────────────────────────────────────── */}
       <CertificationsStrip />
 
       {/* ── 10. CTA ───────────────────────────────────────────────────────── */}
@@ -637,8 +684,11 @@ export default function OurCompanyContent() {
           >
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Get Started</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Start Sourcing?</h2>
-            <p className="text-gray-500 text-base max-w-xl mx-auto mb-8">
+            <p className="text-gray-500 text-base max-w-xl mx-auto mb-4">
               Tell us what you need. Our team responds within 24 hours.
+            </p>
+            <p className="text-gray-400 text-sm max-w-xl mx-auto mb-8">
+              <Link href="/downloads/company-profile/" className="text-gold hover:underline font-medium">Download our company profile →</Link>
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link

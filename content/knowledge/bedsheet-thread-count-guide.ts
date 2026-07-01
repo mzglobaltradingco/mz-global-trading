@@ -43,7 +43,7 @@ The most widely specified range globally for hotel programmes, mid-market retail
 - Subscription linen services for corporate housing and serviced apartments
 - Online retail bedding brands targeting the quality-aware consumer in USA, UK, Canada and Australia
 
-**What to specify:** 400TC percale in single-ply combed cotton is the standard 4-star hotel specification. 450–500TC in long-staple cotton or combed cotton is the sweet spot for mid-market retail — absorbent enough to feel substantial, light enough to dry fast. At this tier, [pillow covers](/hometextile/bedlinen/pillowcovers/) and [duvet covers](/hometextile/bedlinen/duvetcovers/) should be specified in matching construction to deliver a consistent set.
+**What to specify:** 400TC percale in single-ply combed cotton is the standard 4-star hotel specification. 450–500TC in long-staple cotton or combed cotton is the sweet spot for mid-market retail — absorbent enough to feel substantial, light enough to dry fast. At this tier, [pillow covers](/hometextile/bedlinen/pillowcovers/) and duvet covers should be specified in matching construction to deliver a consistent set.
 
 **Percale vs. sateen at 400TC:** See the section below on weave structure — at the same thread count, percale feels crisper and cooler; sateen feels smoother and warmer. For hotel programmes in the Middle East and Southeast Asia, percale's cooler hand is preferred. For UK and Northern European retail, sateen's lustrous surface drives shelf appeal.
 
@@ -99,11 +99,11 @@ Always specify weave structure alongside thread count — "400TC percale" and "4
 | Australia retail | OEKO-TEX Standard 100 or GOTS | — |
 | Japan / South Korea | OEKO-TEX Standard 100 | Japanese specific standards (JIS) sometimes additional |
 
-See the full [certifications and compliance page](/qualitycompliance/certifications/) for how to verify certificate scope and which certifications apply to bedsheet programmes specifically.
+See the certifications and compliance page for how to verify certificate scope and which certifications apply to bedsheet programmes specifically.
 
 ## Sourcing Bedsheets from Pakistan
 
-Pakistan's woven bed linen sector produces the complete TC range in integrated facilities — from spinning through weaving, dyeing and finishing in a single supply chain. MZ Global Trading sources [bedsheets](/hometextile/bedlinen/bedsheets/) across all TC tiers, matched to your weave structure, certification and market requirements. Our network also covers the full bed linen programme: [fitted sheets](/hometextile/bedlinen/fittedsheets/), [duvet covers](/hometextile/bedlinen/duvetcovers/) and [pillow covers](/hometextile/bedlinen/pillowcovers/) in coordinated specifications.
+Pakistan's woven bed linen sector produces the complete TC range in integrated facilities — from spinning through weaving, dyeing and finishing in a single supply chain. MZ Global Trading sources bedsheets across all TC tiers, matched to your weave structure, certification and market requirements. Our network also covers the full bed linen programme: fitted sheets, duvet covers and pillow covers in coordinated specifications.
 
 [Request a quote](/rfq/) with your target TC, weave structure, size range and annual volume — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };

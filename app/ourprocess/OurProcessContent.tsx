@@ -630,7 +630,8 @@ export default function OurProcessContent() {
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Factory Network</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">How We Qualify a Factory</h2>
             <p className="text-gray-500 mt-3 text-sm max-w-lg mx-auto leading-relaxed">
-              Every factory in our network passes a structured evaluation before we place a single order with them.
+              Every factory in our network passes a structured evaluation before we place a single order with them.{" "}
+              <Link href="/downloads/factory-network-overview/" className="text-gold hover:underline font-medium">Download our factory network overview →</Link>
             </p>
           </motion.div>
 
@@ -684,7 +685,8 @@ export default function OurProcessContent() {
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-3">Supply Chain</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900">From Raw Material to Your Door</h2>
             <p className="text-gray-500 mt-3 text-sm max-w-lg mx-auto">
-              Every order passes through a structured, monitored production pipeline — from raw fibre to packaged goods.
+              Every order passes through a structured, monitored production pipeline — from raw fibre to packaged goods.{" "}
+              <Link href="/downloads/export-documentation-checklist/" className="text-gold hover:underline font-medium">Download our export documentation checklist →</Link>
             </p>
           </motion.div>
 
@@ -879,6 +881,40 @@ export default function OurProcessContent() {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* ── Sourcing Guides ──────────────────────────────────────────────── */}
+      <section className="py-10 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-5">Sourcing Guides</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: "/guides/how-to-write-a-tech-pack/", title: "How to Write a Textile Tech Pack", desc: "Build a spec sheet that factories can actually produce from — field by field." },
+              { href: "/guides/first-shipment-checklist/", title: "First Shipment Checklist", desc: "Verify every step before your first container leaves Pakistan." },
+              { href: "/guides/textile-product-lifecycle-manufacturing-production/", title: "Textile Lifecycle Phase 7: Manufacturing", desc: "What happens on the factory floor during your order's production run." },
+              { href: "/guides/textile-product-lifecycle-packaging-labelling/", title: "Textile Lifecycle Phase 9: Packaging & Labelling", desc: "Packaging and labelling requirements before dispatch from Pakistan." },
+              { href: "/guides/sourcing-best-practices-communication-documentation/", title: "Sourcing Best Practices: Communication & Documentation", desc: "How to keep factory communication clear and all order documentation audit-ready." },
+              { href: "/guides/sourcing-best-practices-pre-production-sampling/", title: "Sourcing Best Practices: Pre-Production Sampling", desc: "How to review and approve pre-production samples before bulk manufacturing starts." },
+            ].map((g) => (
+              <Link
+                key={g.href}
+                prefetch={false}
+                href={g.href}
+                className="group flex items-start gap-3 bg-gray-50 hover:bg-navy-900/5 rounded-xl p-4 border border-gray-100 hover:border-gold/30 transition-all"
+              >
+                <div className="shrink-0 w-8 h-8 bg-gold/10 rounded-lg flex items-center justify-center mt-0.5">
+                  <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.7} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-navy-900 font-semibold text-sm group-hover:text-gold transition-colors leading-snug">{g.title}</p>
+                  <p className="text-gray-500 text-xs mt-1 leading-relaxed">{g.desc}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

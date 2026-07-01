@@ -71,11 +71,11 @@ The fender cover backing determines whether fluid penetrates to the vehicle's pa
 | Rubber backing | Full barrier + anti-slip | High — rubber grips curved surface | High-activity workshops, fluid-intensive work |
 | Foam padding + vinyl | Full barrier + cushion | Medium | Premium programmes, body shop |
 
-For [fender covers](/hometextile/industriallinen/fendercovers/) intended for mechanical shop use where coolant and oil contact is expected: specify vinyl or rubber backing as minimum. A fender cover without a backing on a running engine bay is not performing its function.
+For fender covers intended for mechanical shop use where coolant and oil contact is expected: specify vinyl or rubber backing as minimum. A fender cover without a backing on a running engine bay is not performing its function.
 
 ## Standard Sizes
 
-[Fender covers](/hometextile/industriallinen/fendercovers/) are not standardised to a single global size — fender geometry varies significantly between car classes. Common size ranges:
+Fender covers are not standardised to a single global size — fender geometry varies significantly between car classes. Common size ranges:
 
 | Format | Dimensions | Best for |
 |---|---|---|
@@ -83,11 +83,11 @@ For [fender covers](/hometextile/industriallinen/fendercovers/) intended for mec
 | Extended / truck | 80×100 cm (31×40 in) | Pickup trucks, large SUVs, vans |
 | Full wrap | 100×150 cm (40×60 in) | Entire bonnet/hood coverage |
 
-For [industrial supply programmes](/hometextile/industriallinen/) covering mixed vehicle fleets: specify the extended size as standard — it covers passenger car fenders with overhang and is the minimum appropriate for trucks and vans.
+For industrial supply programmes covering mixed vehicle fleets: specify the extended size as standard — it covers passenger car fenders with overhang and is the minimum appropriate for trucks and vans.
 
 ## Print and Branding
 
-[Fender covers](/hometextile/industriallinen/fendercovers/) are a visible brand opportunity in the service bay. Common customisation:
+Fender covers are a visible brand opportunity in the service bay. Common customisation:
 
 **Screen print:** Logo and brand name screen-printed on the outer face. Specify UV-resistant and oil-resistant ink for workshop environments. Wash-fast ink required for covers going through industrial laundry.
 
@@ -97,9 +97,9 @@ For [industrial supply programmes](/hometextile/industriallinen/) covering mixed
 
 ## Sourcing Fender Covers from Pakistan
 
-MZ Global Trading sources [fender covers](/hometextile/industriallinen/fendercovers/) in terry, fleece and canvas constructions with vinyl and rubber backing from Pakistan's certified industrial textile manufacturers. Custom print and embroidery programmes for automotive dealership networks and tool distribution companies are available.
+MZ Global Trading sources fender covers in terry, fleece and canvas constructions with vinyl and rubber backing from Pakistan's [certified industrial textile manufacturers](/qualitycompliance/certifications/). Custom print and embroidery programmes for automotive dealership networks and tool distribution companies are available.
 
-Coordinated [industrial linen programmes](/hometextile/industriallinen/) combining [fender covers](/hometextile/industriallinen/fendercovers/) with [shop towels](/hometextile/industriallinen/shoptowels/) are sourced through a single consolidated RFQ — simplifying supply chain management for automotive procurement teams.
+Coordinated industrial linen programmes combining fender covers with shop towels are sourced through a single consolidated RFQ — simplifying supply chain management for automotive procurement teams.
 
 [Request a sourcing quote](/rfq/) with your construction, backing type, size, print specification and annual volume — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };

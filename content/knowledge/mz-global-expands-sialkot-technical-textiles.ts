@@ -34,7 +34,7 @@ Our expanded network means MZ Global Trading can now source from a single sourci
 
 - **Apparel:** [T-shirts](/apparel/knittedgarments/tshirts/), [polo shirts](/apparel/knittedgarments/poloshirts/), [hoodies & sweatshirts](/apparel/knittedgarments/sweatshirtshoodies/) and casual garments (Karachi/Lahore)
 - **Home Textiles:** [Bath towels](/hometextile/bathlinen/towels/), [bed linen](/hometextile/bedlinen/bedsheets/), institutional linen (Karachi/Faisalabad)
-- **Technical Workwear:** [Workwear apparel — Pakistan manufacturer](/apparel/workwearapparel/), uniforms, industrial textiles (Sialkot)
+- **Technical Workwear:** Workwear apparel — Pakistan manufacturer, uniforms, industrial textiles (Sialkot)
 
 > Buyers sourcing across multiple categories can now consolidate into a single freight shipment — reducing logistics cost and documentation complexity.
 

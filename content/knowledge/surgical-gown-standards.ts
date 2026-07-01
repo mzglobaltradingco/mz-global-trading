@@ -32,7 +32,7 @@ AAMI PB70 (Association for the Advancement of Medical Instrumentation, Standard 
 
 ### EN 13795 (EU Equivalent)
 
-For [surgical gown procurement](/hometextile/hospitallinen/doctorsurgicalgowns/) serving UK and EU hospitals, EN 13795 specifies performance thresholds for surgical drapes, gowns and cleanair suits. The standard uses different test methods from AAMI PB70 but is roughly equivalent in protection hierarchy. Key requirements: linting (cleanliness), microbial penetration dry (resistance to bacterial filtration), microbial penetration wet (the critical test for surgical gowns), tensile strength and burst strength.
+For surgical gown procurement serving UK and EU hospitals, EN 13795 specifies performance thresholds for surgical drapes, gowns and cleanair suits. The standard uses different test methods from AAMI PB70 but is roughly equivalent in protection hierarchy. Key requirements: linting (cleanliness), microbial penetration dry (resistance to bacterial filtration), microbial penetration wet (the critical test for surgical gowns), tensile strength and burst strength.
 
 For buyers supplying both USA and EU hospital markets, specify AAMI PB70 Level (for USA tenders) and EN 13795 (for EU and UK tenders) in the same RFQ — a well-specified manufacturer can certify to both.
 
@@ -46,7 +46,7 @@ For buyers supplying both USA and EU hospital markets, specify AAMI PB70 Level (
 
 **Sterilisation:** Compatible with gamma irradiation, ethylene oxide (EtO) and electron beam sterilisation — the standard methods for disposable surgical textiles.
 
-**Appropriate for:** Level 2, 3 and 4 [disposable surgical gowns](/hometextile/hospitallinen/doctorsurgicalgowns/). The dominant material for single-use gowns globally.
+**Appropriate for:** Level 2, 3 and 4 disposable surgical gowns. The dominant material for single-use gowns globally.
 
 **Critical note on "disposable":** In many lower-middle income markets and NGO programmes, SMS gowns described as "single-use" are laundered and re-used — a practice that degrades the barrier layer and creates a patient safety risk. If the buyer's end facility launders "disposable" gowns, specify reusable woven construction instead.
 
@@ -54,7 +54,7 @@ For buyers supplying both USA and EU hospital markets, specify AAMI PB70 Level (
 
 **Construction:** Plain or twill weave fabric, typically 150–250 GSM. The fabric is tightly woven to provide some liquid resistance, but woven cotton alone does not achieve AAMI Level 3 or 4 barrier performance without a laminate or membrane treatment.
 
-**Performance:** Woven cotton [surgical gowns](/hometextile/hospitallinen/doctorsurgicalgowns/) meet AAMI Level 1 or 2 at most without treatment. They are appropriate for examination gowns, visitor cover-ups, isolation precaution gowns in low-risk environments, and [patient gowns](/hometextile/hospitallinen/patientgowns/).
+**Performance:** Woven cotton surgical gowns meet AAMI Level 1 or 2 at most without treatment. They are appropriate for examination gowns, visitor cover-ups, isolation precaution gowns in low-risk environments, and [patient gowns](/hometextile/hospitallinen/patientgowns/).
 
 **Sterilisation:** Compatible with steam autoclave sterilisation — this is an advantage over SMS non-wovens (which degrade under autoclave steam). Reusable woven gowns in a validated hospital laundry and sterilisation programme can deliver a significantly lower cost-per-use than disposable SMS for low-fluid-risk procedures.
 
@@ -62,7 +62,7 @@ For buyers supplying both USA and EU hospital markets, specify AAMI PB70 Level (
 
 ### Woven Polyester (Anti-Static and Cleanroom Grade)
 
-**Construction:** Tightly woven 100% polyester or polyester-cotton blend with anti-static treatment. Used in [cleanroom and pharmaceutical manufacturing environments](/hometextile/hospitallinen/doctorsurgicalgowns/), not surgical suites.
+**Construction:** Tightly woven 100% polyester or polyester-cotton blend with anti-static treatment. Used in cleanroom and pharmaceutical manufacturing environments, not surgical suites.
 
 **Best for:** Pharmaceutical manufacturing cleanrooms (ISO Class 5–8), electronics production, food processing — not clinical surgical use.
 
@@ -79,7 +79,7 @@ If the buyer's facility uses steam autoclave sterilisation (the most common meth
 
 ## Sizing Reference
 
-Standard [surgical gown](/hometextile/hospitallinen/doctorsurgicalgowns/) sizing follows a universal back-closing design. Common sizes:
+Standard surgical gown sizing follows a universal back-closing design. Common sizes:
 
 | Size | Height range | Weight range |
 |---|---|---|
@@ -89,7 +89,7 @@ Standard [surgical gown](/hometextile/hospitallinen/doctorsurgicalgowns/) sizing
 | XL | 185+ cm | 110–130 kg |
 | XXL / 3XL | Extended sizes | 130+ kg |
 
-For NGO and emergency relief programmes sourcing [hospital linen](/hometextile/hospitallinen/) for multiple facilities: specify a size distribution (typically 10% S, 30% M, 40% L, 15% XL, 5% XXL for adult surgical teams) rather than ordering by single size.
+For NGO and emergency relief programmes sourcing hospital linen for multiple facilities: specify a size distribution (typically 10% S, 30% M, 40% L, 15% XL, 5% XXL for adult surgical teams) rather than ordering by single size.
 
 ## Certification Requirements
 
@@ -103,7 +103,7 @@ For NGO and emergency relief programmes sourcing [hospital linen](/hometextile/h
 
 ## Sourcing Surgical Gowns from Pakistan
 
-MZ Global Trading sources [doctor surgical gowns](/hometextile/hospitallinen/doctorsurgicalgowns/) in SMS disposable and reusable woven constructions from Pakistan's certified medical textile manufacturers. Programmes covering [medical scrubs](/hometextile/hospitallinen/medicalscrubs/), [patient gowns](/hometextile/hospitallinen/patientgowns/) and [surgical huck towels](/hometextile/hospitallinen/surgicalhucktowels/) for complete hospital linen supply are available through a single consolidated RFQ.
+MZ Global Trading sources doctor surgical gowns in SMS disposable and reusable woven constructions from Pakistan's certified medical textile manufacturers. Programmes covering [medical scrubs](/hometextile/hospitallinen/medicalscrubs/), patient gowns and [surgical huck towels](/hometextile/hospitallinen/surgicalhucktowels/) for complete hospital linen supply are available through a single consolidated RFQ.
 
 [Request a sourcing quote](/rfq/) with your AAMI level, fabric type, size distribution, sterilisation method and annual volume — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };

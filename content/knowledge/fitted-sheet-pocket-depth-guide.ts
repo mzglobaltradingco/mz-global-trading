@@ -106,7 +106,7 @@ The elastic in a fitted sheet is often overlooked in certification scope verific
 
 ## Sourcing Fitted Sheets from Pakistan
 
-MZ Global Trading sources [fitted sheets](/hometextile/bedlinen/fittedsheets/) across all pocket depths and elastic configurations from Pakistan's certified woven bed linen mills. We manage programme-level specifications covering [bedsheets](/hometextile/bedlinen/bedsheets/), [duvet covers](/hometextile/bedlinen/duvetcovers/) and [pillow covers](/hometextile/bedlinen/pillowcovers/) in coordinated thread counts.
+MZ Global Trading sources fitted sheets across all pocket depths and elastic configurations from Pakistan's certified woven bed linen mills. We manage programme-level specifications covering bedsheets, duvet covers and pillow covers in coordinated thread counts.
 
 [Request a sourcing quote](/rfq/) with your mattress depth reference, pocket depth specification, elastic type and programme volume — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };

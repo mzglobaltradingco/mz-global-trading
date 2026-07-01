@@ -23,7 +23,7 @@ This guide covers fabric construction options, wash durability requirements, col
 
 ### Poly-Cotton Blend (65/35 or 50/50)
 
-**Construction:** 65% polyester, 35% cotton (or 50/50). The most widely specified fabric for [medical scrubs](/hometextile/hospitallinen/medicalscrubs/) globally. Polyester provides dimensional stability and colour retention; cotton provides breathability and moisture absorption.
+**Construction:** 65% polyester, 35% cotton (or 50/50). The most widely specified fabric for medical scrubs globally. Polyester provides dimensional stability and colour retention; cotton provides breathability and moisture absorption.
 
 **GSM range:** 160–220 GSM. Below 160 GSM the fabric is too thin for prolonged wear in clinical environments; above 220 GSM the garment is too heavy for comfort during physical clinical activity.
 
@@ -37,7 +37,7 @@ This guide covers fabric construction options, wash durability requirements, col
 
 **GSM range:** 180–240 GSM. The spandex content adds weight at equivalent thread density compared to standard poly-cotton.
 
-**Wash performance:** Spandex degrades faster than polyester or cotton under hot wash conditions. For [medical scrubs in 4-way stretch](/hometextile/hospitallinen/medicalscrubs/), specify maximum wash temperature 60°C and tumble dry medium — not 71°C thermal disinfection. This limits 4-way stretch suitability for NHS and EU hospital procurement where 71°C washing is mandatory.
+**Wash performance:** Spandex degrades faster than polyester or cotton under hot wash conditions. For medical scrubs in 4-way stretch, specify maximum wash temperature 60°C and tumble dry medium — not 71°C thermal disinfection. This limits 4-way stretch suitability for NHS and EU hospital procurement where 71°C washing is mandatory.
 
 **Best markets:** USA hospital and clinic supply, Middle East hospitals (60°C laundry standard), private clinic and dental practice programmes.
 
@@ -72,7 +72,7 @@ Specify which type in the [medical scrubs RFQ](/rfq/) — "anti-microbial scrubs
 
 ## Colour-Coding by Department
 
-Many hospital systems use colour-coded [medical scrubs](/hometextile/hospitallinen/medicalscrubs/) to identify clinical department or role. The colour scheme is set by the hospital or health authority — there is no universal global standard. Common frameworks:
+Many hospital systems use colour-coded medical scrubs to identify clinical department or role. The colour scheme is set by the hospital or health authority — there is no universal global standard. Common frameworks:
 
 | Colour | Common department assignment (UK NHS example) |
 |---|---|
@@ -88,7 +88,7 @@ For buyers supplying multiple hospital departments: specify colour per departmen
 
 ## Standard Sizes
 
-[Medical scrubs](/hometextile/hospitallinen/medicalscrubs/) are available in unisex and gender-specific cuts. Unisex is standard for bulk hospital supply; gender-specific cuts are specified for premium clinical programmes and private hospital supply.
+Medical scrubs are available in unisex and gender-specific cuts. Unisex is standard for bulk hospital supply; gender-specific cuts are specified for premium clinical programmes and private hospital supply.
 
 | Size | Chest (cm) | Waist (cm) | Notes |
 |---|---|---|---|
@@ -104,7 +104,7 @@ For buyers supplying multiple hospital departments: specify colour per departmen
 
 | Market | Minimum | Additional |
 |---|---|---|
-| USA hospital | ISO 9001 at factory | OEKO-TEX Standard 100 for anti-microbial treatment scope |
+| USA hospital | [ISO 9001](/qualitycompliance/certifications/) at factory | OEKO-TEX Standard 100 for anti-microbial treatment scope |
 | UK NHS | OEKO-TEX Standard 100, Sedex SMETA Level 2 | EN ISO 15797 for industrial laundering performance |
 | EU hospital | OEKO-TEX Standard 100, BSCI | REACH for any chemical treatment |
 | Middle East | ISO 9001, OEKO-TEX Standard 100 | MOH registration for government hospital tenders |
@@ -112,7 +112,7 @@ For buyers supplying multiple hospital departments: specify colour per departmen
 
 ## Sourcing Medical Scrubs from Pakistan
 
-MZ Global Trading sources [medical scrubs](/hometextile/hospitallinen/medicalscrubs/) in poly-cotton, 4-way stretch and anti-microbial constructions from Pakistan's certified medical textile manufacturers. Custom embroidery (department name, hospital logo) and colour-coded programmes for multi-department hospital supply are available. Coordinated [hospital linen programmes](/hometextile/hospitallinen/) covering scrubs alongside [surgical gowns](/hometextile/hospitallinen/doctorsurgicalgowns/) and [patient gowns](/hometextile/hospitallinen/patientgowns/) are sourced through a single consolidated RFQ.
+MZ Global Trading sources medical scrubs in poly-cotton, 4-way stretch and anti-microbial constructions from Pakistan's certified medical textile manufacturers. Custom embroidery (department name, hospital logo) and colour-coded programmes for multi-department hospital supply are available. Coordinated hospital linen programmes covering scrubs alongside [surgical gowns](/hometextile/hospitallinen/doctorsurgicalgowns/) and [patient gowns](/hometextile/hospitallinen/patientgowns/) are sourced through a single consolidated RFQ.
 
 [Request a sourcing quote](/rfq/) with your fabric specification, colour programme, size distribution, wash standard and annual volume — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };

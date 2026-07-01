@@ -23,7 +23,7 @@ This guide covers construction types, GSM grades, colour options and sourcing co
 
 ### 100% Cotton Shop Towel
 
-**Construction:** Woven plain cotton or open-weave cotton construction, 100–180 GSM. The dominant construction for [industrial shop towels](/hometextile/industriallinen/shoptowels/) in the USA market.
+**Construction:** Woven plain cotton or open-weave cotton construction, 100–180 GSM. The dominant construction for industrial shop towels in the USA market.
 
 **Performance characteristics:**
 - High absorbency — cotton absorbs water, oil and light solvents effectively
@@ -62,11 +62,11 @@ This guide covers construction types, GSM grades, colour options and sourcing co
 
 ## Colour and Custom Print Options
 
-[Shop towels](/hometextile/industriallinen/shoptowels/) are commonly produced in two colour configurations:
+Shop towels are commonly produced in two colour configurations:
 
 **White with coloured print:** The classic USA shop towel format — white cotton base with a geometric or diagonal colour pattern (red, blue, green) screen-printed on the fabric. The print serves as a visual identification marker, not a decorative element. Screen print with reactive or pigment ink — specify wash-fast ink for towels going through industrial laundry programmes.
 
-**Solid colour:** Single-colour dyed shop towels (red, blue, grey, green) are common in EU and UK industrial supply. Solid colours allow zone differentiation in manufacturing environments — similar to the HACCP colour-coding principle used in [commercial kitchen bar mops](/hometextile/kitchenlinen/barmops/).
+**Solid colour:** Single-colour dyed shop towels (red, blue, grey, green) are common in EU and UK industrial supply. Solid colours allow zone differentiation in manufacturing environments — similar to the HACCP colour-coding principle used in commercial kitchen bar mops.
 
 **Custom brand print:** Automotive dealerships, oil change chains and tool rental programmes often specify shop towels with a logo or brand name printed on them — used as a touchpoint with customers.
 
@@ -76,12 +76,12 @@ This guide covers construction types, GSM grades, colour options and sourcing co
 |---|---|---|
 | USA automotive | 13.5×13.5 in (34×34 cm) | Dominant USA standard |
 | USA heavy duty | 14×14 in (35×35 cm) | Standard for distribution packs |
-| UK / EU | 35×35 cm, 40×40 cm | Metric — similar to [bar mop](/hometextile/kitchenlinen/barmops/) sizing |
+| UK / EU | 35×35 cm, 40×40 cm | Metric — similar to bar mop sizing |
 | Middle East | 40×40 cm | Standard commercial supply |
 
 ## Packing Formats
 
-[Shop towels](/hometextile/industriallinen/shoptowels/) for distribution are packed in three standard formats:
+Shop towels for distribution are packed in three standard formats:
 
 - **Rags/roll pack:** Loose or stacked in bags, typically 50 or 100 pieces per polybag. Most common for direct workshop supply.
 - **Box of 60:** Common USA retail and distribution format — 60 pieces per cardboard box.
@@ -89,7 +89,7 @@ This guide covers construction types, GSM grades, colour options and sourcing co
 
 ## Certification Requirements
 
-[Shop towels](/hometextile/industriallinen/shoptowels/) are non-food-contact industrial items — the certification requirements are lower than for [hospital linen](/hometextile/hospitallinen/) or [kitchen linen](/hometextile/kitchenlinen/) products.
+Shop towels are non-food-contact industrial items — the certification requirements are lower than for [hospital linen](/hometextile/hospitallinen/) or [kitchen linen](/hometextile/kitchenlinen/) products.
 
 | Market | Minimum | Notes |
 |---|---|---|
@@ -100,7 +100,7 @@ This guide covers construction types, GSM grades, colour options and sourcing co
 
 ## Sourcing Shop Towels from Pakistan
 
-MZ Global Trading sources [industrial shop towels](/hometextile/industriallinen/shoptowels/) in flat cotton, poly-cotton and terry constructions from Pakistan's certified industrial textile manufacturers. Our [2024 expansion into Sialkot's technical textile sector](/knowledge/mz-global-expands-sialkot-technical-textiles/) strengthened our industrial linen capability alongside existing Karachi and Faisalabad facilities. Custom colour print, logo programmes and coordinated [industrial linen supply](/hometextile/industriallinen/) covering [shop towels](/hometextile/industriallinen/shoptowels/) and [fender covers](/hometextile/industriallinen/fendercovers/) are available through a single consolidated RFQ.
+MZ Global Trading sources industrial shop towels in flat cotton, poly-cotton and terry constructions from Pakistan's certified industrial textile manufacturers. Our [2024 expansion into Sialkot's technical textile sector](/knowledge/mz-global-expands-sialkot-technical-textiles/) strengthened our industrial linen capability alongside existing Karachi and Faisalabad facilities. Custom colour print, logo programmes and coordinated [industrial linen supply](/hometextile/industriallinen/) covering shop towels and [fender covers](/hometextile/industriallinen/fendercovers/) are available through a single consolidated RFQ.
 
 [Request a sourcing quote](/rfq/) with your construction, GSM, size, print specification, pack format and annual volume — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };

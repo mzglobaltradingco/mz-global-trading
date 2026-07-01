@@ -88,7 +88,7 @@ For a full explanation of how GSM is measured and what each range means across k
 
 ## Sourcing Henley Shirts from Pakistan
 
-MZ Global Trading sources [henley shirts](/apparel/knittedgarments/henleyshirts/) across all fabric constructions and GSM ranges from Pakistan's knitwear mills. Coordinated programmes covering henley shirts alongside [sweatshirts and hoodies](/apparel/knittedgarments/sweatshirtshoodies/) in matching fabric families are available through a single sourcing contact.
+MZ Global Trading sources henley shirts across all fabric constructions and GSM ranges from Pakistan's knitwear mills. Coordinated programmes covering henley shirts alongside sweatshirts and hoodies in matching fabric families are available through a single sourcing contact.
 
 ## Related Resources
 

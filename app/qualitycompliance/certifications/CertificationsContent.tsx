@@ -215,7 +215,8 @@ export default function CertificationsContent() {
                   Every factory in the MZ Global Trading network holds current, independently audited
                   certifications covering quality management, social accountability, environmental
                   standards and product safety. We match your compliance requirements to the right
-                  factory before production begins — never after.
+                  factory before production begins — never after.{" "}
+                  <Link href="/downloads/sustainable-sourcing-policy/" className="text-gold font-medium hover:underline">Download our sustainable sourcing policy →</Link>
                 </p>
               </div>
             </motion.div>
@@ -348,7 +349,8 @@ export default function CertificationsContent() {
               How to Request Certification Documents
             </h2>
             <p className="text-gray-500 mt-3 max-w-xl mx-auto text-sm leading-relaxed">
-              Certification documentation is provided at the pre-production stage as standard — no additional process required.
+              Certification documentation is provided at the pre-production stage as standard — no additional process required.{" "}
+              <Link href="/downloads/restricted-substances-list/" className="text-gold font-medium hover:underline">Download our restricted substances list →</Link>
             </p>
           </motion.div>
 
@@ -483,6 +485,60 @@ export default function CertificationsContent() {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* ── Sourcing Guides ──────────────────────────────────────────────────── */}
+      <section className="py-10 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-5">Sourcing Guides</p>
+          <div className="grid sm:grid-cols-3 gap-4">
+            <Link
+              prefetch={false}
+              href="/guides/textile-certifications-explained/"
+              className="group flex items-start gap-3 bg-gray-50 hover:bg-navy-900/5 rounded-xl p-4 border border-gray-100 hover:border-gold/30 transition-all"
+            >
+              <div className="shrink-0 w-8 h-8 bg-gold/10 rounded-lg flex items-center justify-center mt-0.5">
+                <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.7} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-navy-900 font-semibold text-sm group-hover:text-gold transition-colors leading-snug">Textile Certifications Explained</p>
+                <p className="text-gray-500 text-xs mt-1 leading-relaxed">What GOTS, OEKO-TEX, BSCI and other certifications require — and which buyers need them.</p>
+              </div>
+            </Link>
+            <Link
+              prefetch={false}
+              href="/guides/sourcing-best-practices-sustainable-ethical-sourcing/"
+              className="group flex items-start gap-3 bg-gray-50 hover:bg-navy-900/5 rounded-xl p-4 border border-gray-100 hover:border-gold/30 transition-all"
+            >
+              <div className="shrink-0 w-8 h-8 bg-gold/10 rounded-lg flex items-center justify-center mt-0.5">
+                <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.7} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-navy-900 font-semibold text-sm group-hover:text-gold transition-colors leading-snug">Sourcing Best Practices: Sustainable &amp; Ethical Sourcing</p>
+                <p className="text-gray-500 text-xs mt-1 leading-relaxed">Practical steps for building a sustainable, ethically compliant textile supply chain.</p>
+              </div>
+            </Link>
+            <Link
+              prefetch={false}
+              href="/guides/textile-product-lifecycle-end-of-life-circular-economy/"
+              className="group flex items-start gap-3 bg-gray-50 hover:bg-navy-900/5 rounded-xl p-4 border border-gray-100 hover:border-gold/30 transition-all"
+            >
+              <div className="shrink-0 w-8 h-8 bg-gold/10 rounded-lg flex items-center justify-center mt-0.5">
+                <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.7} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-navy-900 font-semibold text-sm group-hover:text-gold transition-colors leading-snug">Textile Lifecycle Phase 12: Circular Economy</p>
+                <p className="text-gray-500 text-xs mt-1 leading-relaxed">End-of-life strategies, GRS certification, and how circularity is reshaping textile sourcing.</p>
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
 

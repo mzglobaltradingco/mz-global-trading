@@ -36,7 +36,7 @@ For hospital and healthcare supply, always specify single-ply construction — m
 
 ## Wash-Cycle Durability Standards
 
-The performance requirement for institutional [bedsheets](/hometextile/bedlinen/bedsheets/) and [fitted sheets](/hometextile/bedlinen/fittedsheets/) must be stated in the specification as minimum performance after N wash cycles at temperature T — not as a yarn count or fabric description alone.
+The performance requirement for institutional bedsheets and fitted sheets must be stated in the specification as minimum performance after N wash cycles at temperature T — not as a yarn count or fabric description alone.
 
 Standard benchmarks by sector:
 
@@ -74,11 +74,11 @@ A 100% cotton fabric treated with a low-formaldehyde resin finish — reduces ir
 | 5-star hotel global | OEKO-TEX Standard 100 + BSCI/Sedex | GCC hotel chains may additionally require WRAP |
 | Airline contract | OEKO-TEX Standard 100 + ISO 9001 | IATA supply chain audit requirements apply |
 
-See the full [certifications and compliance page](/qualitycompliance/certifications/) for the complete requirements matrix.
+See the certifications and compliance page for the complete requirements matrix.
 
 ## Sourcing Institutional Bedding from Pakistan
 
-MZ Global Trading sources [institutional bedding](/hometextile/bedlinen/institutionalbedding/) — bedsheets, fitted sheets, duvet covers and pillow covers — from Pakistan's certified woven bed linen mills. Programmes are specified to the buyer's exact wash-cycle durability standard and tender documentation requirements.
+MZ Global Trading sources institutional bedding — bedsheets, fitted sheets, duvet covers and pillow covers — from Pakistan's certified woven bed linen mills. Programmes are specified to the buyer's exact wash-cycle durability standard and tender documentation requirements.
 
 For buyers new to Pakistan sourcing, our [Incoterms guide covering FOB vs CIF](/knowledge/incoterms-fob-cif-pakistan-textile-exports/) explains the shipping terms used on all our quotations. Our [ISO 9001 certification article](/knowledge/iso-9001-certification-quality-management/) explains what the certification covers and why it matters for hospital and GPO procurement.
 

@@ -57,7 +57,7 @@ Sateen uses a 4-1 satin weave on cotton — the weft thread passes over four war
 
 ### Construction
 
-Waffle weave is a dobby-loom construction that creates a three-dimensional grid of raised squares and recessed cells — the "honeycomb" or "waffle" pattern. The cell structure increases surface area relative to fabric weight, improving absorbency and drying speed simultaneously. Waffle fabric is used for [kitchen towels](/hometextile/kitchenlinen/kitchentowels/), [bathrobes](/hometextile/bathlinen/bathrobes/) and lightweight beach towels.
+Waffle weave is a dobby-loom construction that creates a three-dimensional grid of raised squares and recessed cells — the "honeycomb" or "waffle" pattern. The cell structure increases surface area relative to fabric weight, improving absorbency and drying speed simultaneously. Waffle fabric is used for [kitchen towels](/hometextile/kitchenlinen/kitchentowels/), bathrobes and lightweight beach towels.
 
 - **GSM range:** 120–250 GSM (kitchen linen), 250–400 GSM (bathrobe fabric)
 - **Width:** 50–70 cm for kitchen towels (pre-cut width); 140–160 cm for bathrobe fabric rolls
@@ -82,7 +82,7 @@ Jacquard fabric is produced on a programmable Jacquard loom where each warp thre
 
 ## Quality Parameters to Specify
 
-For [home textile fabric from Pakistan](/fabric/hometextilefabric/), always include these parameters in the purchase order:
+For home textile fabric from Pakistan, always include these parameters in the purchase order:
 
 - **GSM tolerance:** ±5% (checked with GSM cutter per EN 12127)
 - **Shrinkage:** ≤5% for terry fabric after 5 washes at 60°C; ≤3% for woven bed linen fabric after 3 washes at 40°C
@@ -100,7 +100,7 @@ For [home textile fabric from Pakistan](/fabric/hometextilefabric/), always incl
 
 ## Sourcing Home Textile Fabric from Pakistan
 
-[home textile fabric from Pakistan](/fabric/hometextilefabric/) — terry fabric, percale and sateen bed linen fabric, waffle and jacquard woven fabric — by the roll with full certification documentation. Related category: [apparel fabric from Pakistan](/fabric/apparelfabric/) for knitwear and woven garment programmes.
+home textile fabric from Pakistan — terry fabric, percale and sateen bed linen fabric, waffle and jacquard woven fabric — by the roll with full certification documentation. Related category: [apparel fabric from Pakistan](/fabric/apparelfabric/) for knitwear and woven garment programmes.
 
 [Request a home textile fabric quote](/rfq/) with fabric type, construction, GSM, width, quantity in metres and certification requirement — mill match and FOB pricing within 3–5 business days.`,
 };

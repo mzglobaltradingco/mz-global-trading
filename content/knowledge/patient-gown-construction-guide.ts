@@ -21,7 +21,7 @@ This guide covers closure systems, fabric options, design variants and laundry s
 
 ## Closure Systems — The Critical Design Decision
 
-The closure system determines both patient dignity and clinical access. Four systems are commercially used in [patient gowns from Pakistan](/hometextile/hospitallinen/patientgowns/):
+The closure system determines both patient dignity and clinical access. Four systems are commercially used in patient gowns from Pakistan:
 
 ### Tie Closure (Back-Tie, Standard)
 **Design:** Two or three pairs of fabric ties at the neckline, mid-back and waist. The patient ties the gown closed at the back.
@@ -39,7 +39,7 @@ The closure system determines both patient dignity and clinical access. Four sys
 
 **Disadvantage:** Plastic snap closures degrade faster than fabric ties through repeated industrial laundering. Specify heavy-duty snap closures (minimum 4-prong construction) for hospital use.
 
-**Best for:** [ICU and high-dependency ward gowns](/hometextile/hospitallinen/patientgowns/), post-operative recovery units, cardiac monitoring wards. Increasingly specified as standard in USA and Middle East hospital procurement.
+**Best for:** ICU and high-dependency ward gowns, post-operative recovery units, cardiac monitoring wards. Increasingly specified as standard in USA and Middle East hospital procurement.
 
 ### Magnetic Closure
 **Design:** Small embedded magnets at closure points — allows single-hand closure and opening, important for patients with limited manual dexterity.
@@ -68,11 +68,11 @@ The closure system determines both patient dignity and clinical access. Four sys
 ### Flannel (Brushed Cotton)
 **Construction:** Soft-brushed 100% cotton woven fabric, 150–200 GSM. The brushed surface provides warmth and a softer hand against sensitive skin.
 
-**Best for:** [Geriatric patient gowns](/hometextile/hospitallinen/patientgowns/), paediatric wards, cold-climate hospital supply (Canada, Northern EU, Russia). Not appropriate for warm-climate facilities where patient overheating is a risk.
+**Best for:** Geriatric patient gowns, paediatric wards, cold-climate hospital supply (Canada, Northern EU, Russia). Not appropriate for warm-climate facilities where patient overheating is a risk.
 
 ## Standard Sizes
 
-[Patient gowns](/hometextile/hospitallinen/patientgowns/) use garment length and width rather than XS–XL sizing, because the open-back design accommodates a wide range of body sizes if the gown is wide enough.
+Patient gowns use garment length and width rather than XS–XL sizing, because the open-back design accommodates a wide range of body sizes if the gown is wide enough.
 
 | Size | Gown length (cm) | Gown width at chest (cm) | Notes |
 |---|---|---|---|
@@ -84,7 +84,7 @@ The closure system determines both patient dignity and clinical access. Four sys
 
 ## Laundry and Durability Standards
 
-[Patient gowns](/hometextile/hospitallinen/patientgowns/) undergo the most demanding laundry cycle of any garment — washed and re-processed after every patient use in most hospital systems. Key performance requirements:
+Patient gowns undergo the most demanding laundry cycle of any garment — washed and re-processed after every patient use in most hospital systems. Key performance requirements:
 
 - **NHS HTM 01-04:** 71°C thermal disinfection, ≤3% shrinkage after 5 cycles, chlorine and oxygen bleach resistance for 100% cotton gowns
 - **Commercial hospital laundry (60°C):** Colour fastness to washing minimum Grade 4 (ISO 105-C06), dimensional stability ≤3% after 50 cycles
@@ -102,7 +102,7 @@ The closure system determines both patient dignity and clinical access. Four sys
 
 ## Sourcing Patient Gowns from Pakistan
 
-MZ Global Trading sources [patient gowns](/hometextile/hospitallinen/patientgowns/) in standard tie-back, snap shoulder and wrap/kimono designs from Pakistan's certified medical textile manufacturers. Programmes combining [patient gowns](/hometextile/hospitallinen/patientgowns/) with [medical scrubs](/hometextile/hospitallinen/medicalscrubs/) and [surgical huck towels](/hometextile/hospitallinen/surgicalhucktowels/) for complete [hospital linen supply](/hometextile/hospitallinen/) are available through a single consolidated RFQ.
+MZ Global Trading sources patient gowns in standard tie-back, snap shoulder and wrap/kimono designs from Pakistan's certified medical textile manufacturers. Programmes combining patient gowns with [medical scrubs](/hometextile/hospitallinen/medicalscrubs/) and [surgical huck towels](/hometextile/hospitallinen/surgicalhucktowels/) for complete hospital linen supply are available through a single consolidated RFQ.
 
 [Request a sourcing quote](/rfq/) with your closure type, fabric specification, size range, wash standard and annual volume — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };

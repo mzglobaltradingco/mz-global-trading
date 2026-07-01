@@ -102,9 +102,9 @@ Fabric ties at the opening — typically 4–6 ties per size, tied in bows to cl
 
 ## Sourcing Duvet Covers from Pakistan
 
-MZ Global Trading sources [duvet covers](/hometextile/bedlinen/duvetcovers/) in all closure types from Pakistan's certified woven bed linen manufacturers. We specify button material ratings, zip tape coverage and popper gauge to the laundry performance standard of your end application.
+MZ Global Trading sources duvet covers in all closure types from Pakistan's certified woven bed linen manufacturers. We specify button material ratings, zip tape coverage and popper gauge to the laundry performance standard of your end application.
 
-Programme-level sourcing covering [bedsheets](/hometextile/bedlinen/bedsheets/), [fitted sheets](/hometextile/bedlinen/fittedsheets/), [pillow covers](/hometextile/bedlinen/pillowcovers/) and duvet covers in coordinated thread counts is available through a single consolidated RFQ.
+Programme-level sourcing covering bedsheets, fitted sheets, pillow covers and duvet covers in coordinated thread counts is available through a single consolidated RFQ.
 
 [Request a sourcing quote](/rfq/) with your closure type, fabric specification, size range and annual volume.`,
 };

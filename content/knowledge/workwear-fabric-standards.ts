@@ -72,7 +72,7 @@ A garment labelled EN ISO 11612 A1 B1 C1 meets limited flame spread plus the fir
 
 ## Cotton Canvas and Ripstop for General Workwear
 
-For [general industrial workwear from Pakistan](/apparel/workwearapparel/), the most common fabrics are:
+For general industrial workwear from Pakistan, the most common fabrics are:
 
 - **Cotton canvas (280–340 GSM):** Plain-woven 100% cotton, excellent abrasion resistance, breathable, suitable for dyeing to solid colours. Standard for site jackets, bib overalls and trousers. Pairs well with [cargo pant construction](/apparel/wovengarments/cargopants/) for multi-pocket work trousers.
 - **Cotton ripstop (200–260 GSM):** Grid-reinforced tear-resistant fabric; lighter than canvas, superior tear strength for forestry and outdoor industrial.
@@ -82,7 +82,7 @@ Seam reinforcement is critical: class-4 stitch seams (EN ISO 13935) or 301/401 l
 
 ## Certification Requirements
 
-All [workwear from Pakistan](/apparel/workwearapparel/) destined for regulated markets requires:
+All workwear from Pakistan destined for regulated markets requires:
 
 - **OEKO-TEX Standard 100** — minimum baseline for all garments regardless of performance category
 - **EN ISO certification** — performance garments (hi-vis, FR, anti-static) require third-party type examination and CE marking for EU supply; UKCA marking for UK post-Brexit
@@ -93,7 +93,7 @@ Performance certification must come from a notified body (EU) or accredited lab 
 
 ## Sourcing Workwear from Pakistan
 
-[MZ Global Trading sources workwear](/apparel/workwearapparel/) across all categories — general industrial cotton canvas programmes, hi-vis collections and FR garments — from Pakistan's certified woven garment facilities. Our [2024 network expansion into Sialkot's technical textile sector](/knowledge/mz-global-expands-sialkot-technical-textiles/) added specialist workwear and protective apparel capability alongside our existing Karachi and Faisalabad factory base. Related categories include [cargo pants and multi-pocket work trousers](/apparel/wovengarments/cargopants/) in the same production facilities.
+MZ Global Trading sources workwear across all categories — general industrial cotton canvas programmes, hi-vis collections and FR garments — from Pakistan's certified woven garment facilities. Our [2024 network expansion into Sialkot's technical textile sector](/knowledge/mz-global-expands-sialkot-technical-textiles/) added specialist workwear and protective apparel capability alongside our existing Karachi and Faisalabad factory base. Related categories include cargo pants and multi-pocket work trousers in the same production facilities.
 
 ## Related Resources
 

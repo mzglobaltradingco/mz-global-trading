@@ -93,7 +93,7 @@ Combed ring-spun (combed before ring spinning) is the premium tier — softer ag
 
 ## Sourcing T-Shirts from Pakistan
 
-MZ Global Trading sources [T-shirts](/apparel/knittedgarments/tshirts/) across the full GSM range from Pakistan's knitwear mills in Karachi, Lahore and Faisalabad. [Polo shirts](/apparel/knittedgarments/poloshirts/) from the same mills are available for coordinated corporate and uniform programmes.
+MZ Global Trading sources T-shirts across the full GSM range from Pakistan's knitwear mills in Karachi, Lahore and Faisalabad. [Polo shirts](/apparel/knittedgarments/poloshirts/) from the same mills are available for coordinated corporate and uniform programmes.
 
 A complete programme specification covering GSM, yarn type (ring-spun/combed), stitch density, certifications, print method and retail packaging can be quoted within 3–5 business days of receiving a structured RFQ.
 

@@ -27,7 +27,7 @@ Pakistan's cotton textile mills produce all four primary kitchen towel construct
 
 **Feel:** Slightly textured, firm initially, softens progressively with laundering. Does not have the plush softness of terry — appropriate for kitchen use where durability and hygiene matter more than hand-feel.
 
-**Print compatibility:** Excellent. The flat raised surface accepts screen print, reactive print and embroidery cleanly. [Aprons](/hometextile/kitchenlinen/aprons/) and [kitchen towels](/hometextile/kitchenlinen/kitchentowels/) in coordinated waffle are a growing branded hospitality segment.
+**Print compatibility:** Excellent. The flat raised surface accepts screen print, reactive print and embroidery cleanly. [Aprons](/hometextile/kitchenlinen/aprons/) and kitchen towels in coordinated waffle are a growing branded hospitality segment.
 
 **Best for:**
 - USA retail multi-packs — waffle is the dominant construction in US retail kitchen towel
@@ -96,7 +96,7 @@ Pakistan's cotton textile mills produce all four primary kitchen towel construct
 | Flat weave | 80–150 GSM | 45×65 cm, 50×70 cm | Decorative retail, promotional |
 | Linen blend | 150–250 GSM | 45×65 cm, 50×70 cm | UK/EU premium retail |
 
-For USA market: always specify in inches. For UK/EU: metric (cm). For coordinated programmes covering kitchen towels, [aprons](/hometextile/kitchenlinen/aprons/) and [pot holders](/hometextile/kitchenlinen/potholders/), standardise on one dimension system.
+For USA market: always specify in inches. For UK/EU: metric (cm). For coordinated programmes covering kitchen towels, aprons and [pot holders](/hometextile/kitchenlinen/potholders/), standardise on one dimension system.
 
 ## Certification Requirements
 
@@ -110,7 +110,7 @@ For USA market: always specify in inches. For UK/EU: metric (cm). For coordinate
 
 ## Sourcing Kitchen Towels from Pakistan
 
-MZ Global Trading sources [kitchen towels](/hometextile/kitchenlinen/kitchentowels/) in all four constructions from Pakistan's cotton textile mills. Coordinated kitchen linen programmes covering [bar mops](/hometextile/kitchenlinen/barmops/), [aprons](/hometextile/kitchenlinen/aprons/) and [pot holders](/hometextile/kitchenlinen/potholders/) are available through a single consolidated RFQ.
+MZ Global Trading sources kitchen towels in all four constructions from Pakistan's cotton textile mills. Coordinated kitchen linen programmes covering [bar mops](/hometextile/kitchenlinen/barmops/), aprons and pot holders are available through a single consolidated RFQ.
 
 [Request a sourcing quote](/rfq/) with your construction preference, GSM target, size range, annual volume and certification requirements — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };

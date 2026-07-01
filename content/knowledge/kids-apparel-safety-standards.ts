@@ -81,9 +81,9 @@ EU REACH Regulation restricts hazardous chemicals in textile articles. For child
 
 ## Sourcing Kids T-Shirts from Pakistan
 
-Pakistan's knitwear factories produce [kids T-shirts and children's garments](/apparel/babyandkids/tshirtsforkids/) with full OEKO-TEX Standard 100 Class 1 and GOTS certification coverage for the infant and toddler market. Production programmes for retail in the USA, UK, EU, Australia and South America are active across multiple certified facilities in our network.
+Pakistan's knitwear factories produce kids T-shirts and children's garments with full OEKO-TEX Standard 100 Class 1 and GOTS certification coverage for the infant and toddler market. Production programmes for retail in the USA, UK, EU, Australia and South America are active across multiple certified facilities in our network.
 
-[Submit your specification via RFQ](/rfq/) including the age group, market, certifications required and annual volume — factory matching and FOB pricing are returned within 3–5 business days. For the full [Baby & Kids apparel range from Pakistan](/apparel/babyandkids/), including swaddle muslin, overalls, rompers, bibs and hooded towels, browse the complete product portfolio.
+[Submit your specification via RFQ](/rfq/) including the age group, market, certifications required and annual volume — factory matching and FOB pricing are returned within 3–5 business days. For the full Baby & Kids apparel range from Pakistan, including swaddle muslin, overalls, rompers, bibs and hooded towels, browse the complete product portfolio.
 
 ## Related Resources
 

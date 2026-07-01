@@ -74,7 +74,7 @@ Waffle piqué uses a honeycomb cell structure instead of the bird's eye pattern.
 
 ## Collar and Placket Construction
 
-The collar and placket are the second construction decision for [polo shirts](/apparel/knittedgarments/poloshirts/) and are specified independently of the body fabric.
+The collar and placket are the second construction decision for polo shirts and are specified independently of the body fabric.
 
 **Self-fabric collar vs rib collar:** Self-fabric collars are cut from the same piqué as the body — typically used on mid and premium programmes. Rib collars (a finer rib knit) are the industry standard for standard and promotional programmes and hold their shape better through repeated washing.
 
@@ -98,7 +98,7 @@ The collar and placket are the second construction decision for [polo shirts](/a
 
 ## Sourcing Polo Shirts from Pakistan
 
-MZ Global Trading sources [polo shirts](/apparel/knittedgarments/poloshirts/) in all three piqué constructions from Pakistan's knitwear mills. Coordinated programmes combining polo shirts with [T-shirts](/apparel/knittedgarments/tshirts/) for corporate uniform supply are available through a single consolidated RFQ.
+MZ Global Trading sources polo shirts in all three piqué constructions from Pakistan's knitwear mills. Coordinated programmes combining polo shirts with [T-shirts](/apparel/knittedgarments/tshirts/) for corporate uniform supply are available through a single consolidated RFQ.
 
 ## Related Resources
 

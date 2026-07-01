@@ -33,7 +33,7 @@ The standard construction for commercial hotel and institutional bath mats. Tuft
 
 **Durability:** Very good. Well-specified tufted terry at 1,000+ GSM with latex backing maintains its pile density and shape for 150+ commercial wash cycles.
 
-**Commercial standard:** 1,000–1,200 GSM is the standard hotel contract specification; 1,200–1,400 GSM for 5-star and luxury programmes. 800–1,000 GSM for mid-market hospitality. For full specification and MOQ details, see [bath mats sourced from Pakistan](/hometextile/bathlinen/bathmats/).
+**Commercial standard:** 1,000–1,200 GSM is the standard hotel contract specification; 1,200–1,400 GSM for 5-star and luxury programmes. 800–1,000 GSM for mid-market hospitality.
 
 **Best for:**
 - 4-star and 5-star hotel bath mat programmes — pair with [hotel bath towels](/hometextile/bathlinen/towels/) and [bathrobes](/hometextile/bathlinen/bathrobes/) for a complete bath linen set
@@ -74,7 +74,7 @@ A polyurethane foam core (2–4 cm thickness) encased in a microfibre or cotton 
 **Best for:**
 - Consumer retail (USA, UK, EU) — a strong retail price premium product. [Submit an RFQ](/rfq/) with your target retail price and pack configuration for pricing
 - Gift sets and premium bathroom accessories
-- NOT suitable for hotel or institutional applications using commercial laundries — specify [tufted cotton bath mats](/hometextile/bathlinen/bathmats/) for those programmes
+- NOT suitable for hotel or institutional applications using commercial laundries — specify tufted cotton bath mats for those programmes
 
 ### 4. Microfibre Tufted
 
@@ -122,11 +122,11 @@ A decorative construction using thick chenille or looped pile yarns for a high v
 | Middle East hotel | ISO 9001 + OEKO-TEX preferred |
 | Australia retail | OEKO-TEX Standard 100 |
 
-Note: Anti-slip backing chemistry must be included in OEKO-TEX testing — certificate must cover the finished [bath mat](/hometextile/bathlinen/bathmats/) including backing, not just the pile fabric. See the full [certifications and compliance page](/qualitycompliance/certifications/) for how OEKO-TEX scope is verified.
+Note: Anti-slip backing chemistry must be included in OEKO-TEX testing — certificate must cover the finished bath mat including backing, not just the pile fabric. See the full [certifications and compliance page](/qualitycompliance/certifications/) for how OEKO-TEX scope is verified.
 
 ## Sourcing Bath Mats from Pakistan
 
-MZ Global Trading sources [bath mats across all five construction types](/hometextile/bathlinen/bathmats/) from Pakistan's certified textile mills. Our network covers 400–2,000 GSM, all anti-slip backing types, and the full certification range for USA, UK, EU, Middle East and Australian markets.
+MZ Global Trading sources bath mats across all five construction types from Pakistan's certified textile mills. Our network covers 400–2,000 GSM, all anti-slip backing types, and the full certification range for USA, UK, EU, Middle East and Australian markets.
 
 [Request a sourcing quote](/rfq/) · [Explore full bath linen range](/hometextile/bathlinen/) · [View bath towels](/hometextile/bathlinen/towels/)`,
 };

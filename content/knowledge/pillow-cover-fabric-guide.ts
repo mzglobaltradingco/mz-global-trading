@@ -47,7 +47,7 @@ Pakistan's woven bed linen mills produce all five primary pillow cover construct
 **Best for:**
 - UK, EU and Northern European retail where sateen's lustrous surface drives gift and premium shelf appeal
 - Premium hotel programmes (4-star and above) in the USA and Europe where visual luxury is the differentiator
-- Department store gift set programmes where pillow covers, [duvet covers](/hometextile/bedlinen/duvetcovers/) and [bedsheets](/hometextile/bedlinen/bedsheets/) are displayed together and the surface sheen matters
+- Department store gift set programmes where pillow covers, duvet covers and bedsheets are displayed together and the surface sheen matters
 
 See the full [bedsheet thread count guide](/knowledge/bedsheet-thread-count-guide/) for how percale and sateen compare across the TC scale for the full bed linen set.
 
@@ -89,7 +89,7 @@ See the full [bedsheet thread count guide](/knowledge/bedsheet-thread-count-guid
 
 **Durability:** Good for consumer retail wash cycles. Fast-drying. Easier care than cotton (30°C wash usually sufficient). Does not require ironing.
 
-**Certifications:** For EU retail, verify that REACH restricted substances compliance is confirmed for the polyester dyes and finishes — OEKO-TEX Standard 100 covers this. See the [certifications and compliance page](/qualitycompliance/certifications/) for the scope required.
+**Certifications:** For EU retail, verify that REACH restricted substances compliance is confirmed for the polyester dyes and finishes — OEKO-TEX Standard 100 covers this. See the certifications and compliance page for the scope required.
 
 **Best for:**
 - Value retail programmes in the USA, UK and EU where price point is the primary driver
@@ -119,7 +119,7 @@ Specify finished size after all hems are sewn. For hotel programmes, include a 2
 
 ## Sourcing Pillow Covers from Pakistan
 
-MZ Global Trading sources [pillow covers](/hometextile/bedlinen/pillowcovers/) across all five constructions from Pakistan's certified woven and knitted bed linen manufacturers. Programme-level sourcing covering pillow covers, [bedsheets](/hometextile/bedlinen/bedsheets/), [fitted sheets](/hometextile/bedlinen/fittedsheets/) and [duvet covers](/hometextile/bedlinen/duvetcovers/) in coordinated fabric specifications is available through a single RFQ.
+MZ Global Trading sources pillow covers across all five constructions from Pakistan's certified woven and knitted bed linen manufacturers. Programme-level sourcing covering pillow covers, [bedsheets](/hometextile/bedlinen/bedsheets/), [fitted sheets](/hometextile/bedlinen/fittedsheets/) and duvet covers in coordinated fabric specifications is available through a single RFQ.
 
 [Request a sourcing quote](/rfq/) with your fabric type, TC or GSM target, size range and programme volume — we return mill options and indicative FOB pricing within 3–5 business days.`,
 };

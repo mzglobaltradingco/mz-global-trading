@@ -117,7 +117,7 @@ Specify binding width (typically 1–2 cm) and whether the binding is self-colou
 
 ## Sourcing Tank Tops from Pakistan
 
-MZ Global Trading sources [tank tops](/apparel/knittedgarments/tanktops/) in all fabric constructions from Pakistan's knitwear mills. Coordinated programmes combining tank tops with [T-shirts](/apparel/knittedgarments/tshirts/) and other knitwear in the same fabric family are available through a single sourcing contact.
+MZ Global Trading sources tank tops in all fabric constructions from Pakistan's knitwear mills. Coordinated programmes combining tank tops with [T-shirts](/apparel/knittedgarments/tshirts/) and other knitwear in the same fabric family are available through a single sourcing contact.
 
 ## Related Resources
 
