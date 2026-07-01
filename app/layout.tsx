@@ -36,11 +36,6 @@ export const metadata: Metadata = {
       "en": "https://www.mzglobaltrading.com/",
       "x-default": "https://www.mzglobaltrading.com/",
     },
-    types: {
-      "application/rss+xml": [
-        { url: "/rss.xml", title: "MZ Global Trading — Knowledge Hub" },
-      ],
-    },
   },
   openGraph: {
     title: "MZ Global Trading | Apparel, Home Textile & Fabric Sourcing",
