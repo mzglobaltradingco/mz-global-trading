@@ -85,6 +85,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    yandex: "8518e1a164e74287",
+  },
 };
 
 const websiteSchema = {
