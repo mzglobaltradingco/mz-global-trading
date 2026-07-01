@@ -378,7 +378,7 @@ npx wrangler pages deploy out --project-name=mz-global-trading        # 3. deplo
 https://mzglobaltrading.com/* https://www.mzglobaltrading.com/:splat 301
 http://mzglobaltrading.com/* https://www.mzglobaltrading.com/:splat 301
 http://www.mzglobaltrading.com/* https://www.mzglobaltrading.com/:splat 301
-/ihram/ /hometextile/ihram/ 301
+/hometextile/ihram/ /ihram/ 301
 ```
 Three canonical redirects (non-www and http → https www) plus one legacy path redirect.
 
@@ -508,7 +508,7 @@ Bath Linen · Bed Linen · Kitchen Linen · Table Linen · Thermal Blankets · H
 ## URL Structure & Navigation
 
 ### URL Patterns
-`/` · `/our-company/` · `/rfq/` · `/contact-us/` · `/qualitycompliance/[page]/` · `/quality-policy/` · `/apparel/[cluster]/[product]/` · `/hometextile/[cluster]/[product]/` · `/hometextile/ihram/` · `/fabric/apparelfabric/` · `/fabric/hometextilefabric/` · `/guides/[slug]/` · `/knowledge/[slug]/` · `/downloads/[slug]/`
+`/` · `/our-company/` · `/rfq/` · `/contact-us/` · `/qualitycompliance/[page]/` · `/quality-policy/` · `/apparel/[cluster]/[product]/` · `/hometextile/[cluster]/[product]/` · `/ihram/` · `/fabric/apparelfabric/` · `/fabric/hometextilefabric/` · `/guides/[slug]/` · `/knowledge/[slug]/` · `/downloads/[slug]/`
 
 **Quality Policy** is at `/quality-policy/` (top-level, hyphenated). The other 4 quality pages are under `/qualitycompliance/`.
 
@@ -986,7 +986,7 @@ All 46 leaf product pages audited. Files saved to `C:\Users\Asus\Desktop\Content
 | 41 | Surgical Huck Towels | /hometextile/hospitallinen/surgicalhucktowels/ |
 | 42 | Shop Towels | /hometextile/industriallinen/shoptowels/ |
 | 43 | Fender Covers | /hometextile/industriallinen/fendercovers/ |
-| 44 | Ihram | /hometextile/ihram/ |
+| 44 | Ihram | /ihram/ |
 | 45 | Apparel Fabric | /fabric/apparelfabric/ |
 | 46 | Home Textile Fabric | /fabric/hometextilefabric/ |
 
