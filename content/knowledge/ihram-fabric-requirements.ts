@@ -15,7 +15,7 @@ const post: KnowledgePost = {
   image: "/knowledge/placeholder.webp",
   content: `## Ihram: When Religious Law Is the Product Specification
 
-[Ihram from Pakistan](/hometextile/ihram/) is one of the most precisely specified textile products in the world — not because of a government standard or industry body, but because Islamic religious law (fiqh) defines the garment's characteristics with specificity that most technical standards do not match. A procurement manager sourcing Ihram who does not understand the religious requirements will receive complaints from pilgrims regardless of the textile quality, because a garment that does not meet the Islamic conditions for Ihram is not a valid Ihram.
+[Ihram from Pakistan]((/ihram/)) is one of the most precisely specified textile products in the world — not because of a government standard or industry body, but because Islamic religious law (fiqh) defines the garment's characteristics with specificity that most technical standards do not match. A procurement manager sourcing Ihram who does not understand the religious requirements will receive complaints from pilgrims regardless of the textile quality, because a garment that does not meet the Islamic conditions for Ihram is not a valid Ihram.
 
 This guide covers the religious compliance requirements that drive the fabric specification, GSM standards, construction options and sourcing considerations for distributor buyers, pilgrimage tour operators (Hajj package companies) and retail importers in the UK, Europe, USA, Middle East and Southeast Asia.
 

@@ -85,7 +85,7 @@ const CLUSTERS = [
   {
     name: "Ihram",
     slug: "ihram",
-    href: "/hometextile/ihram/",
+    href: "/ihram/",
     img: "/images/hero/hero-ihram.webp",
     desc: "100% white cotton Ihram for Hajj and Umrah pilgrimage. Unstitched towelling fabric in 300–500 GSM. Specific to Saudi Arabia and global Muslim market.",
     spec: "300–500 GSM · 100% Cotton",

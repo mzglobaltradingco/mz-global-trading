@@ -19,7 +19,7 @@ const homeTextiles = [
   { label: "Kitchen Linen",     href: "/hometextile/kitchenlinen/" },
   { label: "Hospital Linen",    href: "/hometextile/hospitallinen/" },
   { label: "Thermal Blankets",  href: "/hometextile/thermalblankets/" },
-  { label: "Ihram",             href: "/hometextile/ihram/" },
+  { label: "Ihram",             href: "/ihram/" },
 ];
 
 const fabric = [

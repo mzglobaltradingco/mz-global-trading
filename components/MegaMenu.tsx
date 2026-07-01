@@ -269,7 +269,7 @@ const navItems: NavItem[] = [
         },
         {
           heading: "Ihram",
-          href: "/hometextile/ihram/",
+          href: "/ihram/",
           img: "/images/menu/menu-ihram.webp",
           imgAlt: "Pakistan ihram manufacturer — hajj and umrah textile sets wholesale export",
         },

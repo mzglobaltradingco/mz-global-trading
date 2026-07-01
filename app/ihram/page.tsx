@@ -1,4 +1,4 @@
-﻿import { buildMetadata } from "@/lib/metadata";
+import { buildMetadata } from "@/lib/metadata";
 import MegaMenu from "@/components/MegaMenu";
 import Footer from "@/components/Footer";
 import IhramContent from "./IhramContent";
@@ -7,7 +7,7 @@ export const metadata = buildMetadata({
   title: "Ihram Sets Manufacturer Pakistan | MZ Global Trading",
   description:
     "Pakistan ihram manufacturer supplying plain white cotton ihram sets for Hajj and Umrah. Three weave constructions: plain weave, terry, dobby stripe.",
-  canonical: "/hometextile/ihram/",
+  canonical: "/ihram/",
   ogImage: "/images/og/ihram-og.webp",
   ogImageAlt: "Pakistan ihram manufacturer — plain white cotton ihram sets for Hajj and Umrah pilgrims worldwide",
   keywords: [
@@ -49,7 +49,7 @@ export default function IhramPage() {
               itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mzglobaltrading.com/" },
                 { "@type": "ListItem", position: 2, name: "Home Textiles", item: "https://www.mzglobaltrading.com/hometextile/" },
-                { "@type": "ListItem", position: 3, name: "Ihram", item: "https://www.mzglobaltrading.com/hometextile/ihram/" },
+                { "@type": "ListItem", position: 3, name: "Ihram", item: "https://www.mzglobaltrading.com/ihram/" },
               ],
             },
           }),
@@ -135,7 +135,7 @@ export default function IhramPage() {
                 },
               }
             ],
-          }),  
+          }),
         }}
       />
       <MegaMenu />
