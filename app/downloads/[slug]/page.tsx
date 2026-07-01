@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: DocPageProps): Promise<Metada
       },
     },
     openGraph: {
+      type: "website",
       title: `${doc.title} | MZ Global Trading`,
       description: doc.description,
       url,

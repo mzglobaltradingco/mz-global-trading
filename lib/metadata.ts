@@ -57,6 +57,7 @@ export function buildMetadata({
       languages,
     },
     openGraph: {
+      type: "website",
       title,
       description,
       url: englishUrl,
